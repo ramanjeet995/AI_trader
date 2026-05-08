@@ -1,0 +1,32 @@
+name: Swing Trading Scanner
+
+on:
+  # Run every weekday at 9:00 AM ET (13:00 UTC during EDT / summer)
+  schedule:
+    - cron: "0 13 * * 1-5"
+
+  # Also allow manual trigger from GitHub UI anytime
+  workflow_dispatch:
+
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run scanner
+        env:
+          ALPACA_API_KEY: ${{ secrets.ALPACA_API_KEY }}
+          ALPACA_API_SECRET: ${{ secrets.ALPACA_API_SECRET }}
+          ALPACA_PAPER: "true"
+        run: python main.py

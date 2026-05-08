@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(python --version)",
+      "PowerShell(pip show alpaca-trade-api alpaca-py 2>&1)",
+      "PowerShell(cd \"F:\\\\Projects\\\\Canada\\\\New folder\"; $env:PYTHONIOENCODING=\"utf-8\"; python main.py 2>&1)"
+    ]
+  }
+}
