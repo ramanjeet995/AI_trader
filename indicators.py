@@ -39,15 +39,45 @@ def macd(series: pd.Series, fast: int = 12, slow: int = 26, signal: int = 9):
     return macd_line, signal_line, histogram
 
 
+def obv(df: pd.DataFrame) -> pd.Series:
+    """
+    On-Balance Volume — cumulative institutional pressure.
+    Price up day  → add volume
+    Price down day → subtract volume
+    Rising OBV while price rises = confirmed accumulation (big money buying).
+    OBV rising while price flat  = stealth accumulation (big money loading quietly).
+    """
+    direction = df["close"].diff().apply(lambda x: 1 if x > 0 else (-1 if x < 0 else 0))
+    return (direction * df["volume"]).cumsum()
+
+
+def obv_trend(df: pd.DataFrame, period: int = 20) -> str:
+    """Returns 'ACCUMULATION', 'DISTRIBUTION', or 'NEUTRAL' based on OBV slope."""
+    o = obv(df)
+    slope = o.iloc[-1] - o.iloc[-period]
+    price_slope = df["close"].iloc[-1] - df["close"].iloc[-period]
+
+    if slope > 0 and price_slope > 0:
+        return "ACCUMULATION"      # both rising — strong confirmation
+    if slope > 0 and price_slope <= 0:
+        return "STEALTH_BUY"       # OBV rising, price flat — institutions loading
+    if slope < 0 and price_slope < 0:
+        return "DISTRIBUTION"      # both falling — institutions exiting
+    if slope < 0 and price_slope >= 0:
+        return "STEALTH_SELL"      # price rising but OBV falling — weak move
+    return "NEUTRAL"
+
+
 def add_all(df: pd.DataFrame, cfg) -> pd.DataFrame:
     """Attach all indicator columns to df in-place and return it."""
     df = df.copy()
-    df["ema20"]  = ema(df["close"], cfg.EMA_FAST)
-    df["sma50"]  = sma(df["close"], cfg.SMA_MID)
-    df["sma200"] = sma(df["close"], cfg.SMA_SLOW)
-    df["rsi"]    = rsi(df["close"], cfg.RSI_PERIOD)
-    df["atr"]    = atr(df, cfg.ATR_PERIOD)
-    df["atr_pct"] = df["atr"] / df["close"] * 100
+    df["ema20"]    = ema(df["close"], cfg.EMA_FAST)
+    df["sma50"]    = sma(df["close"], cfg.SMA_MID)
+    df["sma200"]   = sma(df["close"], cfg.SMA_SLOW)
+    df["rsi"]      = rsi(df["close"], cfg.RSI_PERIOD)
+    df["atr"]      = atr(df, cfg.ATR_PERIOD)
+    df["atr_pct"]  = df["atr"] / df["close"] * 100
     df["vol_ma20"] = sma(df["volume"], 20)
     df["macd"], df["macd_signal"], df["macd_hist"] = macd(df["close"])
+    df["obv"]      = obv(df)
     return df
