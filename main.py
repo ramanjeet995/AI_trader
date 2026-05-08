@@ -44,6 +44,7 @@ from sentiment import get_sentiment, sentiment_label
 from sector_rotation import analyze as sector_analyze, print_rotation
 from risk import position_size
 from executor import execute, get_open_positions
+from notifier import send_no_setup, send_signals
 
 load_dotenv(Path(__file__).parent / ".env")
 
@@ -260,6 +261,7 @@ def run_scan():
         print("  No setups found. Stay in cash — wait for better conditions.")
         print(f"{'-'*60}\n")
         _print_news_summary(news_summary)
+        send_no_setup(spy_regime.value, rotation["posture"], rotation["sectors"])
         return
 
     signals.sort(key=lambda x: (-x["of_score"], -x["rs"]))
@@ -279,10 +281,13 @@ def run_scan():
         result = execute(s["signal_raw"], s["pos"], trade_client)
         if result["status"] == "PLACED":
             print(f"         ORDER PLACED  id={result['order_id']}")
+            s["order_status"] = f"PLACED — id={result['order_id']}"
         elif result["status"] == "SKIPPED":
             print(f"         SKIPPED: {result['reason']}")
+            s["order_status"] = f"SKIPPED: {result['reason']}"
         else:
             print(f"         ERROR: {result['reason']}")
+            s["order_status"] = f"ERROR: {result['reason']}"
         print()
 
     print(f"{'-'*60}")
@@ -290,6 +295,7 @@ def run_scan():
     print(f"  Max position   : {cfg.MAX_POSITION_PCT*100:.0f}% = ${account_value * cfg.MAX_POSITION_PCT:,.2f}")
     print(f"{'-'*60}\n")
 
+    send_signals(signals, spy_regime.value, rotation["posture"], account_value)
     _print_news_summary(news_summary)
 
 
