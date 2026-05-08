@@ -38,4 +38,5 @@ jobs:
           GMAIL_USER: ${{ secrets.GMAIL_USER }}
           GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
           NOTIFY_EMAIL: "rfgenius95@gmail.com"
-        run: python news_check.py
+          MODE: "NEWS"
+        run: python main.py
