@@ -84,6 +84,8 @@ def patch_volume(bars: dict[str, pd.DataFrame], lookback_days: int) -> int:
     volumes = fetch_volumes(list(bars.keys()), lookback_days)
     patched = 0
     for sym, df in bars.items():
+        # Default: mark as NOT patched. Strategy B will apply the IEX penalty.
+        df.attrs["volume_patched"] = False
         yf_vol = volumes.get(sym)
         if yf_vol is None or yf_vol.empty:
             continue
@@ -96,5 +98,6 @@ def patch_volume(bars: dict[str, pd.DataFrame], lookback_days: int) -> int:
             new_volume = df["volume"].astype(float).values
             new_volume[mask] = replacement.values[mask]
             df["volume"] = new_volume
+            df.attrs["volume_patched"] = True
             patched += 1
     return patched

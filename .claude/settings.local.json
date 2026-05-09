@@ -12,7 +12,8 @@
       "Bash(git -C \"F:/Projects/Canada/New folder\" push)",
       "Bash(rm -f earnings_cache.json)",
       "Bash(python -c \"import transformers, torch; print\\('OK'\\)\")",
-      "Bash(git -C \"F:/Projects/Canada/New folder\" commit -m \"Add 5 quality upgrades: earnings blackout, VIX gate, spread/intraday checks, FinBERT\")"
+      "Bash(git -C \"F:/Projects/Canada/New folder\" commit -m \"Add 5 quality upgrades: earnings blackout, VIX gate, spread/intraday checks, FinBERT\")",
+      "Bash(git -C \"F:/Projects/Canada/New folder\" commit -m \"Fix yfinance failure paths: per-symbol patch flag, no caching of failed earnings fetches\")"
     ]
   }
 }

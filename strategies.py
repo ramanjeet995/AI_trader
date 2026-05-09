@@ -124,11 +124,11 @@ def strategy_b(df: pd.DataFrame, regime: Regime, cfg) -> dict:
         confidence  = max(0.5, min(1.0, (vol_score + tight_score) / 2))
 
         # Volume on IEX is ~3% of total tape — surge signals are unreliable.
-        # Down-weight Strategy B unless we have full-tape volume (SIP feed,
-        # or yfinance volume patching as a free workaround).
-        feed_is_iex   = getattr(cfg, "DATA_FEED", "iex").lower() == "iex"
-        has_full_vol  = getattr(cfg, "USE_YFINANCE_VOLUME", False)
-        if feed_is_iex and not has_full_vol:
+        # Down-weight Strategy B unless this specific symbol's volume was
+        # actually patched from yfinance (full SIP tape) or we're on SIP feed.
+        feed_is_iex      = getattr(cfg, "DATA_FEED", "iex").lower() == "iex"
+        symbol_patched   = bool(df.attrs.get("volume_patched", False))
+        if feed_is_iex and not symbol_patched:
             confidence *= 0.7
 
         result.update({

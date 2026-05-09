@@ -81,7 +81,9 @@ def refresh_cache(symbols: list[str]) -> dict:
     updated = 0
     for sym in symbols:
         entry = cache.get(sym, {})
-        if _is_fresh(entry):
+        # Only treat the entry as fresh if it's BOTH recent AND has a real date.
+        # Otherwise we'd cache a transient yfinance failure for 7 days.
+        if _is_fresh(entry) and entry.get("next_earnings"):
             continue
         next_earn = _fetch_next_earnings(sym)
         cache[sym] = {
