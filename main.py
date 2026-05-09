@@ -40,6 +40,8 @@ from risk import position_size
 from executor import execute, get_open_positions
 from notifier import send_no_setup, send_signals, send
 
+import json
+
 load_dotenv(Path(__file__).parent / ".env")
 
 API_KEY    = os.environ["ALPACA_API_KEY"]
@@ -48,6 +50,24 @@ PAPER      = os.getenv("ALPACA_PAPER", "true").lower() == "true"
 MODE       = os.getenv("MODE", "FULL").upper()
 
 MAX_MARKET_ATR_PCT = 3.0   # pause all trading above this SPY ATR%
+LOG_FILE           = Path(__file__).parent / "scan_log.json"
+MAX_LOG_ENTRIES    = 60    # keep last 60 runs (~1 month of weekdays)
+
+
+# ── Log persistence ───────────────────────────────────────────────────────────
+
+def save_log(entry: dict):
+    """Append scan result to scan_log.json, keep last MAX_LOG_ENTRIES runs."""
+    logs = []
+    if LOG_FILE.exists():
+        try:
+            logs = json.loads(LOG_FILE.read_text())
+        except Exception:
+            logs = []
+    logs.append(entry)
+    logs = logs[-MAX_LOG_ENTRIES:]
+    LOG_FILE.write_text(json.dumps(logs, indent=2, default=str))
+    print(f"  [log] Saved to {LOG_FILE.name}")
 
 
 # ── Shared helpers ────────────────────────────────────────────────────────────
@@ -196,6 +216,14 @@ def run_full_scan():
         print(f"{'-'*60}\n")
         _print_news_summary(news_summary)
         send_no_setup(spy_regime.value, rotation["posture"], rotation["sectors"])
+        save_log({
+            "timestamp": datetime.utcnow().isoformat(),
+            "mode": "FULL", "spy_regime": spy_regime.value,
+            "posture": rotation["posture"], "signals": [],
+            "top_news": [{"symbol": n["symbol"], "sentiment": n["sentiment"],
+                          "score": n["score"], "headlines": n["headlines"]}
+                         for n in news_summary if n["score"] != 0][:10],
+        })
         return
 
     signals.sort(key=lambda x: (-x["of_score"], -x["rs"]))
@@ -226,6 +254,24 @@ def run_full_scan():
     print(f"{'-'*60}\n")
 
     send_signals(signals, spy_regime.value, rotation["posture"], account_value)
+    save_log({
+        "timestamp": datetime.utcnow().isoformat(),
+        "mode": "FULL", "spy_regime": spy_regime.value,
+        "posture": rotation["posture"],
+        "signals": [{
+            "symbol": s["symbol"], "strategy": s["strategy"],
+            "signal": s["signal"], "entry": s["entry"],
+            "stop": s["stop"], "target": s["2R"],
+            "shares": s["shares"], "notional": s["notional"],
+            "risk_$": s["risk_$"], "sentiment": s["sentiment"],
+            "obv": s["obv"], "of_score": s["of_score"],
+            "reason": s["reason"], "order_status": s.get("order_status", ""),
+            "headlines": s["headlines"],
+        } for s in signals],
+        "top_news": [{"symbol": n["symbol"], "sentiment": n["sentiment"],
+                      "score": n["score"], "headlines": n["headlines"]}
+                     for n in news_summary if n["score"] != 0][:10],
+    })
     _print_news_summary(news_summary)
 
 
@@ -351,6 +397,22 @@ def run_news_scan():
         send(f"AI Trader ALERT ({now.strftime('%b %d %H:%M')})", body)
     else:
         print("  No significant news changes. No trades placed.")
+
+    save_log({
+        "timestamp": now.isoformat(),
+        "mode": "NEWS",
+        "signals": [{
+            "symbol": b["symbol"], "strategy": "NEWS", "signal": "BUY",
+            "entry": b["entry"], "stop": b["stop"], "target": b["target"],
+            "shares": b["shares"], "notional": b["notional"],
+            "sentiment": b["sentiment"], "reason": b["reason"],
+            "order_status": b.get("order_status", ""),
+            "headlines": b["headlines"],
+        } for b in bought],
+        "alerts": alerts,
+        "news_snapshot": [{"symbol": r["symbol"], "sentiment": r["label"],
+                           "score": r["score"]} for r in results],
+    })
 
 
 # ── Entry point ───────────────────────────────────────────────────────────────

@@ -37,3 +37,11 @@ jobs:
           GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
           NOTIFY_EMAIL: "rfgenius95@gmail.com"
         run: python main.py
+
+      - name: Commit scan log
+        run: |
+          git config user.name "AI Trader Bot"
+          git config user.email "bot@aitrader.com"
+          git add scan_log.json
+          git diff --staged --quiet || git commit -m "scan log update [skip ci]"
+          git push
