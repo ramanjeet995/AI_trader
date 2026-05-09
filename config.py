@@ -64,7 +64,9 @@ REQUIRE_SECTOR_ALIGNMENT  = True    # only buy stocks whose sector has positive 
 
 # ── Data feed ────────────────────────────────────────────────────────────────
 DATA_FEED = "iex"   # "iex" (free, ~3% of tape) or "sip" (paid, full tape)
-# When IEX, volume-dependent strategies (Strategy B) are down-weighted.
+# When IEX, volume-dependent strategies (Strategy B) are down-weighted —
+# UNLESS we successfully patch volume from yfinance (full SIP tape, free).
+USE_YFINANCE_VOLUME = True
 
 # ── Per-symbol sector classification (used for per-sector position caps) ─────
 TICKER_SECTOR = {

@@ -38,6 +38,7 @@ from sector_rotation import analyze as sector_analyze, print_rotation
 from risk import position_size
 from executor import execute, get_open_positions, get_buying_power
 from notifier import send_no_setup, send_signals, send
+import volume_source
 
 load_dotenv(Path(__file__).parent / ".env")
 
@@ -127,6 +128,12 @@ def fetch_bars(symbols: list[str], data_client) -> dict[str, pd.DataFrame]:
                 result[chunk[0]] = df
         except Exception as e:
             print(f"  [warn] chunk fetch failed ({chunk[0]}...): {e}")
+
+    # Patch volume from yfinance (full SIP tape) if enabled — Alpaca's IEX
+    # volume is ~3% of tape and unreliable for breakout detection.
+    if getattr(cfg, "USE_YFINANCE_VOLUME", False) and result:
+        n = volume_source.patch_volume(result, cfg.LOOKBACK_DAYS)
+        print(f"  [yfinance] patched volume for {n}/{len(result)} symbols")
     return result
 
 

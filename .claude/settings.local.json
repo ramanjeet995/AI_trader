@@ -3,7 +3,13 @@
     "allow": [
       "PowerShell(python --version)",
       "PowerShell(pip show alpaca-trade-api alpaca-py 2>&1)",
-      "PowerShell(cd \"F:\\\\Projects\\\\Canada\\\\New folder\"; $env:PYTHONIOENCODING=\"utf-8\"; python main.py 2>&1)"
+      "PowerShell(cd \"F:\\\\Projects\\\\Canada\\\\New folder\"; $env:PYTHONIOENCODING=\"utf-8\"; python main.py 2>&1)",
+      "Bash(python -c \"import yfinance\")",
+      "Bash(pip install *)",
+      "Bash(python -c ' *)",
+      "Bash(git -C \"F:/Projects/Canada/New folder\" add -A)",
+      "Bash(git -C \"F:/Projects/Canada/New folder\" commit -m \"Patch volume from yfinance \\(full SIP tape\\) — fixes IEX volume blindspot\")",
+      "Bash(git -C \"F:/Projects/Canada/New folder\" push)"
     ]
   }
 }
