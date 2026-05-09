@@ -58,7 +58,43 @@ ACCOUNT_RISK_PCT          = 0.01    # 1% of account per trade
 MAX_POSITION_PCT          = 0.10    # cap any single position at 10% of portfolio
 MAX_CONCURRENT_POSITIONS  = 8       # never hold more than 8 positions at once
 MAX_NEW_PER_DAY           = 3       # never open more than 3 new positions per day
+MAX_POSITIONS_PER_SECTOR  = 3       # cap correlated exposure (tech-heavy watchlist)
+MAX_PORTFOLIO_HEAT_PCT    = 0.05    # cap aggregate open risk at 5% of account
 REQUIRE_SECTOR_ALIGNMENT  = True    # only buy stocks whose sector has positive rotation score
+
+# ── Data feed ────────────────────────────────────────────────────────────────
+DATA_FEED = "iex"   # "iex" (free, ~3% of tape) or "sip" (paid, full tape)
+# When IEX, volume-dependent strategies (Strategy B) are down-weighted.
+
+# ── Per-symbol sector classification (used for per-sector position caps) ─────
+TICKER_SECTOR = {
+    # Tech
+    "AAPL": "Tech", "MSFT": "Tech", "NVDA": "Tech", "AMD": "Tech",
+    "AVGO": "Tech", "QCOM": "Tech", "INTC": "Tech", "TSM": "Tech",
+    "GOOGL": "Tech", "META": "Tech", "AMZN": "Tech", "TSLA": "Tech",
+    "CRM": "Tech", "ORCL": "Tech", "ADBE": "Tech", "NOW": "Tech",
+    "XLK": "Tech", "QQQ": "Tech",
+    # Financials
+    "JPM": "Financials", "GS": "Financials", "BAC": "Financials",
+    "V": "Financials", "MA": "Financials", "AXP": "Financials", "XLF": "Financials",
+    # Healthcare
+    "UNH": "Healthcare", "LLY": "Healthcare", "ABBV": "Healthcare",
+    "JNJ": "Healthcare", "MRK": "Healthcare", "XLV": "Healthcare",
+    # Consumer
+    "COST": "Consumer", "HD": "Consumer", "NKE": "Consumer",
+    "MCD": "Consumer", "SBUX": "Consumer",
+    # Energy
+    "XOM": "Energy", "CVX": "Energy", "OXY": "Energy", "SLB": "Energy",
+    "XLE": "Energy", "USO": "Energy", "UNG": "Energy", "DBO": "Energy",
+    # Metals / Materials
+    "FCX": "Materials", "CLF": "Materials", "AA": "Materials", "XLB": "Materials",
+    "NEM": "Metals", "GOLD": "Metals", "GLD": "Metals", "SLV": "Metals",
+    "GDX": "Metals", "GDXJ": "Metals",
+    # Industrials / Utilities / Real Estate
+    "XLI": "Industrials", "XLU": "Utilities", "XLRE": "Real Estate",
+    # Broad index
+    "SPY": "Index", "IWM": "Index", "DIA": "Index",
+}
 
 # ── Strategy A thresholds (Trend Pullback) ───────────────────────────────────
 STRAT_A_RSI_LOW  = 40

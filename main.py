@@ -166,6 +166,19 @@ def _sector_score(symbol: str, rotation: dict) -> float:
     return 999.0   # not a sector ETF — no penalty
 
 
+def _symbol_sector(symbol: str) -> str:
+    """Map a ticker to its sector bucket (for per-sector position caps)."""
+    return cfg.TICKER_SECTOR.get(symbol, "Other")
+
+
+def _count_sectors(symbols) -> dict[str, int]:
+    counts = {}
+    for sym in symbols:
+        sec = _symbol_sector(sym)
+        counts[sec] = counts.get(sec, 0) + 1
+    return counts
+
+
 # ── FULL SCAN ─────────────────────────────────────────────────────────────────
 
 def run_full_scan():
@@ -312,13 +325,17 @@ def run_full_scan():
 
     new_orders_this_run = 0
     remaining_bp        = buying_power
+    sector_counts       = _count_sectors(open_positions)
+    # Approximate current heat: each open position was sized to target risk
+    open_heat_pct       = len(open_positions) * cfg.ACCOUNT_RISK_PCT
 
     for s in signals:
         capped_note = "  [position-capped]" if s["capped"] else ""
+        sym_sector  = _symbol_sector(s["symbol"])
         print(f"  {s['symbol']:<6}  Strat {s['strategy']} (conf {s['confidence']:.2f})  |  "
               f"Regime: {s['regime']:<7}  |  RS: {s['rs']:>5.2f}  |  OBV: {s['obv']}")
         print(f"         Sentiment: {s['sentiment']:<10}  |  Order Flow: {s['of_score']:+d}/+3"
-              f"  |  Sector score: {s['sector_score']:.1f}")
+              f"  |  Sector score: {s['sector_score']:.1f}  |  Sector: {sym_sector}")
         print(f"         Entry: ${s['entry']:<9.2f} Stop: ${s['stop']:<9.2f} Target (2R): ${s['2R']:.2f}")
         print(f"         Shares: {s['shares']}   Notional: ${s['notional']:,.2f}   "
               f"Risk: ${s['risk_$']:.2f} (target ${s['target_risk']:.2f}){capped_note}")
@@ -340,6 +357,22 @@ def run_full_scan():
             s["order_status"] = "SKIPPED: daily cap"
             print()
             continue
+        # Per-sector cap (avoid correlated tech-heavy concentration)
+        if sector_counts.get(sym_sector, 0) >= cfg.MAX_POSITIONS_PER_SECTOR:
+            print(f"         SKIPPED: sector cap reached ({sym_sector} has "
+                  f"{sector_counts[sym_sector]}/{cfg.MAX_POSITIONS_PER_SECTOR})")
+            s["order_status"] = f"SKIPPED: sector cap ({sym_sector})"
+            print()
+            continue
+        # Portfolio heat cap (limit aggregate open risk)
+        new_heat_pct = s["risk_$"] / account_value if account_value > 0 else 0
+        if open_heat_pct + new_heat_pct > cfg.MAX_PORTFOLIO_HEAT_PCT:
+            print(f"         SKIPPED: would exceed portfolio heat cap "
+                  f"({(open_heat_pct + new_heat_pct)*100:.2f}% > "
+                  f"{cfg.MAX_PORTFOLIO_HEAT_PCT*100:.1f}%)")
+            s["order_status"] = "SKIPPED: portfolio heat cap"
+            print()
+            continue
 
         result = execute(s["signal_raw"], s["pos"], trade_client, remaining_bp=remaining_bp)
         if result["status"] == "PLACED":
@@ -347,6 +380,8 @@ def run_full_scan():
             s["order_status"]    = f"PLACED — id={result['order_id']}"
             remaining_bp         -= result["notional"]
             new_orders_this_run  += 1
+            sector_counts[sym_sector] = sector_counts.get(sym_sector, 0) + 1
+            open_heat_pct        += new_heat_pct
         elif result["status"] == "SKIPPED":
             print(f"         SKIPPED: {result['reason']}")
             s["order_status"] = f"SKIPPED: {result['reason']}"
@@ -358,7 +393,10 @@ def run_full_scan():
     print(f"{'-'*60}")
     print(f"  Risk per trade : {cfg.ACCOUNT_RISK_PCT*100:.0f}% target = ${account_value * cfg.ACCOUNT_RISK_PCT:,.2f}")
     print(f"  Max position   : {cfg.MAX_POSITION_PCT*100:.0f}% = ${account_value * cfg.MAX_POSITION_PCT:,.2f}")
-    print(f"  Concurrent cap : {cfg.MAX_CONCURRENT_POSITIONS}  |  Daily cap: {cfg.MAX_NEW_PER_DAY}")
+    print(f"  Concurrent cap : {cfg.MAX_CONCURRENT_POSITIONS}  |  Daily cap: {cfg.MAX_NEW_PER_DAY}  |  "
+          f"Per-sector cap: {cfg.MAX_POSITIONS_PER_SECTOR}")
+    print(f"  Portfolio heat : {open_heat_pct*100:.2f}% / {cfg.MAX_PORTFOLIO_HEAT_PCT*100:.1f}% max  |  "
+          f"Data feed: {cfg.DATA_FEED.upper()}")
     print(f"{'-'*60}\n")
 
     send_signals(signals, spy_regime.value, rotation["posture"], account_value)
@@ -457,6 +495,8 @@ def run_news_scan():
     results             = []
     new_orders_this_run = 0
     remaining_bp        = buying_power
+    sector_counts       = _count_sectors(open_positions)
+    open_heat_pct       = len(open_positions) * cfg.ACCOUNT_RISK_PCT
 
     for symbol in cfg.WATCHLIST:
         raw = all_bars.get(symbol)
@@ -515,6 +555,15 @@ def run_news_scan():
         if pos["shares"] <= 0:
             continue
 
+        # Per-sector cap
+        sym_sector = _symbol_sector(symbol)
+        if sector_counts.get(sym_sector, 0) >= cfg.MAX_POSITIONS_PER_SECTOR:
+            continue
+        # Portfolio heat cap
+        new_heat_pct = pos["risk_dollars"] / account_value if account_value > 0 else 0
+        if open_heat_pct + new_heat_pct > cfg.MAX_PORTFOLIO_HEAT_PCT:
+            continue
+
         signal_data = {"symbol": symbol, "signal": "BUY",
                        "entry": entry, "stop": stop, "target": target}
         result = execute(signal_data, pos, trade_client, remaining_bp=remaining_bp)
@@ -522,6 +571,8 @@ def run_news_scan():
         if result["status"] == "PLACED":
             remaining_bp        -= result["notional"]
             new_orders_this_run += 1
+            sector_counts[sym_sector] = sector_counts.get(sym_sector, 0) + 1
+            open_heat_pct        += new_heat_pct
 
         bought.append({
             "symbol": symbol, "signal": "BUY",

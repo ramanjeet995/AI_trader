@@ -123,6 +123,11 @@ def strategy_b(df: pd.DataFrame, regime: Regime, cfg) -> dict:
         tight_score = max(0.0, 1.0 - (consol_range / (atr_val * 1.5)))
         confidence  = max(0.5, min(1.0, (vol_score + tight_score) / 2))
 
+        # Volume on IEX is ~3% of total tape — surge signals are unreliable.
+        # Down-weight Strategy B until/unless we move to the SIP feed.
+        if getattr(cfg, "DATA_FEED", "iex").lower() == "iex":
+            confidence *= 0.7
+
         result.update({
             "signal"    : "BUY",
             "confidence": round(confidence, 2),
