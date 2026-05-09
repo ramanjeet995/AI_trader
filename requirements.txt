@@ -2,3 +2,5 @@ alpaca-py
 python-dotenv
 pandas
 yfinance
+transformers
+torch

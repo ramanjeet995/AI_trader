@@ -39,6 +39,9 @@ from risk import position_size
 from executor import execute, get_open_positions, get_buying_power
 from notifier import send_no_setup, send_signals, send
 import volume_source
+import earnings_calendar
+import vix_gate
+import pretrade_check
 
 load_dotenv(Path(__file__).parent / ".env")
 
@@ -231,6 +234,13 @@ def run_full_scan():
     print(f"{'='*60}\n  BIG MONEY SECTOR ROTATION\n{'='*60}\n")
     print_rotation(rotation)
 
+    # VIX-based volatility gate
+    vix_assessment = vix_gate.assess(vix_gate.get_vix(), cfg)
+    print(f"  VIX assessment : {vix_assessment['reason']}\n")
+
+    # Earnings calendar (cached weekly)
+    earnings_cache = earnings_calendar.refresh_cache(cfg.WATCHLIST)
+
     open_positions   = get_open_positions(trade_client)
     new_today_count  = _today_new_position_count(trade_client)
     if open_positions:
@@ -267,6 +277,11 @@ def run_full_scan():
         })
 
         if market_too_volatile or symbol in open_positions:
+            continue
+        # Earnings blackout
+        in_bo, bo_reason = earnings_calendar.in_blackout(
+            symbol, earnings_cache, cfg.EARNINGS_BLACKOUT_DAYS)
+        if in_bo:
             continue
         passed, _ = passes_filters(df, cfg)
         if not passed:
@@ -380,6 +395,35 @@ def run_full_scan():
             s["order_status"] = "SKIPPED: portfolio heat cap"
             print()
             continue
+        # VIX gate
+        if vix_assessment["block"]:
+            print(f"         SKIPPED: {vix_assessment['reason']}")
+            s["order_status"] = f"SKIPPED: VIX gate ({vix_assessment['reason']})"
+            print()
+            continue
+        # Pre-trade: bid-ask spread
+        ok_spread, spread_reason, _ = pretrade_check.check_spread(
+            s["symbol"], data_client, cfg.MAX_BID_ASK_SPREAD_PCT)
+        if not ok_spread:
+            print(f"         SKIPPED: {spread_reason}")
+            s["order_status"] = f"SKIPPED: {spread_reason}"
+            print()
+            continue
+        # Pre-trade: intraday confirmation (didn't gap below signal)
+        ok_gap, gap_reason, _ = pretrade_check.check_intraday_confirmation(
+            s["symbol"], data_client, s["entry"], s["entry"],
+            tolerance_pct=cfg.INTRADAY_GAP_TOLERANCE_PCT)
+        if not ok_gap:
+            print(f"         SKIPPED: {gap_reason}")
+            s["order_status"] = f"SKIPPED: {gap_reason}"
+            print()
+            continue
+        # Apply VIX size factor (halve in elevated vol)
+        if vix_assessment["size_factor"] < 1.0:
+            s["pos"]["shares"]   = max(1, int(s["pos"]["shares"] * vix_assessment["size_factor"]))
+            s["pos"]["notional"] = s["pos"]["shares"] * s["entry"]
+            print(f"         VIX size factor {vix_assessment['size_factor']} applied "
+                  f"-> {s['pos']['shares']} shares")
 
         result = execute(s["signal_raw"], s["pos"], trade_client, remaining_bp=remaining_bp)
         if result["status"] == "PLACED":
@@ -478,6 +522,16 @@ def run_news_scan():
     all_bars_ind = {s: indicators.add_all(df, cfg) for s, df in all_bars.items() if len(df) >= 25}
     rotation     = sector_analyze(all_bars_ind, benchmark_df)
 
+    # VIX gate + earnings cache
+    vix_assessment = vix_gate.assess(vix_gate.get_vix(), cfg)
+    print(f"  VIX: {vix_assessment['reason']}")
+    if vix_assessment["block"]:
+        # If VIX blocks, NEWS mode also blocks new buys
+        safety_block_reason = (safety_block_reason or "") + " | " + vix_assessment["reason"]
+        safety_block_reason = safety_block_reason.strip(" |")
+        print(f"  SAFETY BLOCK (VIX): {vix_assessment['reason']}")
+    earnings_cache = earnings_calendar.refresh_cache(cfg.WATCHLIST)
+
     open_positions = get_open_positions(trade_client)
     held_pnl = {}
     try:
@@ -570,6 +624,25 @@ def run_news_scan():
         new_heat_pct = pos["risk_dollars"] / account_value if account_value > 0 else 0
         if open_heat_pct + new_heat_pct > cfg.MAX_PORTFOLIO_HEAT_PCT:
             continue
+        # Earnings blackout
+        in_bo, _ = earnings_calendar.in_blackout(
+            symbol, earnings_cache, cfg.EARNINGS_BLACKOUT_DAYS)
+        if in_bo:
+            continue
+        # Pre-trade: bid-ask spread + intraday gap
+        ok_spread, _, _ = pretrade_check.check_spread(
+            symbol, data_client, cfg.MAX_BID_ASK_SPREAD_PCT)
+        if not ok_spread:
+            continue
+        ok_gap, _, _ = pretrade_check.check_intraday_confirmation(
+            symbol, data_client, entry, entry,
+            tolerance_pct=cfg.INTRADAY_GAP_TOLERANCE_PCT)
+        if not ok_gap:
+            continue
+        # Apply VIX size factor
+        if vix_assessment["size_factor"] < 1.0:
+            pos["shares"]   = max(1, int(pos["shares"] * vix_assessment["size_factor"]))
+            pos["notional"] = pos["shares"] * entry
 
         signal_data = {"symbol": symbol, "signal": "BUY",
                        "entry": entry, "stop": stop, "target": target}

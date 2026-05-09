@@ -1,0 +1,18 @@
+{
+  "AAPL": {
+    "next_earnings": "2026-07-30",
+    "fetched_at": "2026-05-09T01:00:31.550527"
+  },
+  "NVDA": {
+    "next_earnings": "2026-05-20",
+    "fetched_at": "2026-05-09T01:00:31.614478"
+  },
+  "TSLA": {
+    "next_earnings": "2026-07-22",
+    "fetched_at": "2026-05-09T01:00:31.670390"
+  },
+  "SPY": {
+    "next_earnings": null,
+    "fetched_at": "2026-05-09T01:00:31.888415"
+  }
+}

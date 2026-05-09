@@ -1,20 +1,77 @@
 """
-News sentiment scoring using Alpaca's built-in News API.
-No AI/LLM calls — pure keyword matching with word boundaries
-(so "beat" doesn't match "beaten down", "risk" doesn't match macro headlines).
+News sentiment scoring.
 
-Phrases (with spaces) are matched as substrings. Single words use \\b boundaries.
+Two backends:
+  1. FinBERT (default if cfg.USE_FINBERT and the model loads) — finance-trained
+     BERT, scores each headline as positive/neutral/negative with confidence.
+     Catches nuances like "tepid guidance disappoints despite revenue beat"
+     that pure keyword matching misses.
+  2. Keyword regex with negation handling — fallback when FinBERT unavailable
+     or disabled (faster, no model download).
 
-Score per headline: +1 (bullish), -1 (bearish), 0 (neutral)
-Headlines with NEGATION ("not strong", "no upgrade") are inverted.
 Final score = sum across headlines, clamped to -3 / +3.
 """
 
+import os
 import re
 from datetime import datetime, timedelta
 
 from alpaca.data.historical.news import NewsClient
 from alpaca.data.requests import NewsRequest
+
+import config as cfg
+
+
+# ── FinBERT backend (lazy-loaded) ─────────────────────────────────────────────
+
+_FINBERT_PIPELINE = None
+_FINBERT_TRIED    = False
+
+def _get_finbert():
+    """Lazy-load FinBERT. Returns None if unavailable (caller falls back)."""
+    global _FINBERT_PIPELINE, _FINBERT_TRIED
+    if _FINBERT_TRIED:
+        return _FINBERT_PIPELINE
+    _FINBERT_TRIED = True
+
+    if not getattr(cfg, "USE_FINBERT", False):
+        return None
+    try:
+        from transformers import pipeline
+        _FINBERT_PIPELINE = pipeline(
+            "sentiment-analysis",
+            model="ProsusAI/finbert",
+            tokenizer="ProsusAI/finbert",
+            device=-1,   # CPU
+        )
+        print("  [finbert] model loaded")
+    except Exception as e:
+        print(f"  [finbert] unavailable, using keyword fallback: {e}")
+        _FINBERT_PIPELINE = None
+    return _FINBERT_PIPELINE
+
+
+def _score_with_finbert(headline: str, pipe) -> int:
+    """
+    FinBERT returns label in {positive, neutral, negative} with score (confidence).
+    Map to +1 / 0 / -1, but require confidence > 0.6 to count (avoid noise).
+    """
+    try:
+        result = pipe(headline[:512])  # FinBERT max ~512 tokens
+        if not result:
+            return 0
+        item       = result[0]
+        label      = item.get("label", "neutral").lower()
+        confidence = float(item.get("score", 0.0))
+        if confidence < 0.6:
+            return 0
+        if label == "positive":
+            return 1
+        if label == "negative":
+            return -1
+        return 0
+    except Exception:
+        return 0
 
 
 BULLISH_TERMS = {
@@ -105,12 +162,13 @@ def get_sentiment(symbol: str, news_client: NewsClient, days: int = 3) -> tuple[
 
     total   = 0
     details = []
+    pipe    = _get_finbert()   # None if disabled or load failed
 
     for article in articles:
         headline = article.get("headline", "") if isinstance(article, dict) else (article.headline or "")
         if not headline:
             continue
-        score    = _score_text(headline)
+        score    = _score_with_finbert(headline, pipe) if pipe else _score_text(headline)
         total   += score
         icon     = "+" if score > 0 else ("-" if score < 0 else "~")
         details.append(f"[{icon}] {headline[:80]}")

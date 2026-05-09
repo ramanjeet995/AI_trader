@@ -9,7 +9,10 @@
       "Bash(python -c ' *)",
       "Bash(git -C \"F:/Projects/Canada/New folder\" add -A)",
       "Bash(git -C \"F:/Projects/Canada/New folder\" commit -m \"Patch volume from yfinance \\(full SIP tape\\) — fixes IEX volume blindspot\")",
-      "Bash(git -C \"F:/Projects/Canada/New folder\" push)"
+      "Bash(git -C \"F:/Projects/Canada/New folder\" push)",
+      "Bash(rm -f earnings_cache.json)",
+      "Bash(python -c \"import transformers, torch; print\\('OK'\\)\")",
+      "Bash(git -C \"F:/Projects/Canada/New folder\" commit -m \"Add 5 quality upgrades: earnings blackout, VIX gate, spread/intraday checks, FinBERT\")"
     ]
   }
 }

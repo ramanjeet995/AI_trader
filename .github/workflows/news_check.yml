@@ -33,6 +33,25 @@ jobs:
         with:
           python-version: "3.11"
 
+      - name: Cache pip
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/pip
+          key: pip-${{ hashFiles('requirements.txt') }}
+
+      - name: Cache HuggingFace models (FinBERT)
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/huggingface
+          key: hf-finbert-v1
+
+      - name: Cache earnings calendar
+        uses: actions/cache@v4
+        with:
+          path: earnings_cache.json
+          key: earnings-${{ github.run_id }}
+          restore-keys: earnings-
+
       - name: Install dependencies
         run: pip install -r requirements.txt
 

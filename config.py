@@ -68,6 +68,20 @@ DATA_FEED = "iex"   # "iex" (free, ~3% of tape) or "sip" (paid, full tape)
 # UNLESS we successfully patch volume from yfinance (full SIP tape, free).
 USE_YFINANCE_VOLUME = True
 
+# ── Earnings blackout ────────────────────────────────────────────────────────
+EARNINGS_BLACKOUT_DAYS = 5   # skip signals if earnings within N days
+
+# ── VIX-based volatility gate ────────────────────────────────────────────────
+MAX_VIX             = 28.0    # block all new entries above this
+VIX_HALVE_THRESHOLD = 22.0    # halve position size between this and MAX_VIX
+
+# ── Pre-trade quality checks ─────────────────────────────────────────────────
+MAX_BID_ASK_SPREAD_PCT     = 0.15   # skip if bid-ask spread > 0.15% of mid
+INTRADAY_GAP_TOLERANCE_PCT = 1.0    # skip if today's price gapped >1% below signal
+
+# ── Sentiment backend ────────────────────────────────────────────────────────
+USE_FINBERT = True   # FinBERT (real model) when available; falls back to keyword
+
 # ── Per-symbol sector classification (used for per-sector position caps) ─────
 TICKER_SECTOR = {
     # Tech
