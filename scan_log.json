@@ -97,5 +97,823 @@
         ]
       }
     ]
+  },
+  {
+    "timestamp": "2026-05-09T00:31:24.756773",
+    "mode": "FULL",
+    "spy_regime": "BULL",
+    "posture": "RISK-ON",
+    "signals": [],
+    "top_news": [
+      {
+        "symbol": "AAPL",
+        "sentiment": "POSITIVE",
+        "score": 3,
+        "headlines": [
+          "[~] Trump Could Put These 8 Stocks In The Spotlight For China Trip: Here Are The CEO",
+          "[~] Apple A 'Sleeping Tech Giant' Entering 'Golden Path' In AI Era: Analyst"
+        ]
+      },
+      {
+        "symbol": "MSFT",
+        "sentiment": "POSITIVE",
+        "score": 3,
+        "headlines": [
+          "[~] How Anthropic's Mythos Triggered Trump's AI Regulation U-Turn",
+          "[+] IREN's Next Stop Could Be $100 Thanks To Nvidia Partnership: Bernstein"
+        ]
+      },
+      {
+        "symbol": "AMD",
+        "sentiment": "POSITIVE",
+        "score": 3,
+        "headlines": [
+          "[+] Wall Street Pops The Champagne, Main Street Hits A Record Low: This Week In The ",
+          "[~] SanDisk Did In Months What Nvidia Took 9 Years To Pull Off \u2014 And The Chart Looks"
+        ]
+      },
+      {
+        "symbol": "QCOM",
+        "sentiment": "POSITIVE",
+        "score": 3,
+        "headlines": [
+          "[+] Tigress Financial Maintains Buy on Qualcomm, Raises Price Target to $280",
+          "[+] Daiwa Capital Upgrades Qualcomm to Outperform, Raises Price Target to $225"
+        ]
+      },
+      {
+        "symbol": "TSM",
+        "sentiment": "POSITIVE",
+        "score": 3,
+        "headlines": [
+          "[~] Watching Taiwan Semiconductor Manufacturing; Shares Spike Lower After WSJ Report",
+          "[~] EXCLUSIVE: Nvidia Vs. Alphabet: Benzinga Viewers, Prediction Markets Disagree On"
+        ]
+      },
+      {
+        "symbol": "GOOGL",
+        "sentiment": "POSITIVE",
+        "score": 3,
+        "headlines": [
+          "[~] How Anthropic's Mythos Triggered Trump's AI Regulation U-Turn",
+          "[~] 'Google's Isomorphic Labs to Raise Over $2 Billion in New Funding' - Bloomberg"
+        ]
+      },
+      {
+        "symbol": "AMZN",
+        "sentiment": "POSITIVE",
+        "score": 3,
+        "headlines": [
+          "[~] Coinbase CEO Posts On X \"We experienced an outage at Coinbase last night, which ",
+          "[~] How Anthropic's Mythos Triggered Trump's AI Regulation U-Turn"
+        ]
+      },
+      {
+        "symbol": "QQQ",
+        "sentiment": "POSITIVE",
+        "score": 3,
+        "headlines": [
+          "[~] Jeffrey Gundlach Warns Private Credit Is Echoing Dot-Com, 2008 Tremors",
+          "[+] Nasdaq Tops 29,000 Records, Micron Soars 13%: Stock Market Today"
+        ]
+      },
+      {
+        "symbol": "XLK",
+        "sentiment": "POSITIVE",
+        "score": 3,
+        "headlines": [
+          "[+] Wall Street Pops The Champagne, Main Street Hits A Record Low: This Week In The ",
+          "[+] Nasdaq Tops 29,000 Records, Micron Soars 13%: Stock Market Today"
+        ]
+      },
+      {
+        "symbol": "USO",
+        "sentiment": "POSITIVE",
+        "score": 3,
+        "headlines": [
+          "[+] Fitch Ratings Raises Its Near-Term Oil And European Gas Price Assumptions; Says ",
+          "[~] U.S. Baker Hughes Oil Rig Count +2 To 410; U.S. Baker Hughes NatGas Rig Count -1"
+        ]
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-05-09T00:31:48.709914",
+    "mode": "NEWS",
+    "spy_regime": "BULL",
+    "safety_block": "",
+    "signals": [],
+    "alerts": [],
+    "news_snapshot": [
+      {
+        "symbol": "AMD",
+        "sentiment": "POSITIVE",
+        "score": 3
+      },
+      {
+        "symbol": "QCOM",
+        "sentiment": "POSITIVE",
+        "score": 3
+      },
+      {
+        "symbol": "QQQ",
+        "sentiment": "POSITIVE",
+        "score": 3
+      },
+      {
+        "symbol": "USO",
+        "sentiment": "POSITIVE",
+        "score": 3
+      },
+      {
+        "symbol": "AAPL",
+        "sentiment": "POSITIVE",
+        "score": 2
+      },
+      {
+        "symbol": "MSFT",
+        "sentiment": "POSITIVE",
+        "score": 2
+      },
+      {
+        "symbol": "NVDA",
+        "sentiment": "POSITIVE",
+        "score": 2
+      },
+      {
+        "symbol": "GOOGL",
+        "sentiment": "POSITIVE",
+        "score": 2
+      },
+      {
+        "symbol": "AMZN",
+        "sentiment": "POSITIVE",
+        "score": 2
+      },
+      {
+        "symbol": "SPY",
+        "sentiment": "POSITIVE",
+        "score": 2
+      },
+      {
+        "symbol": "XLK",
+        "sentiment": "POSITIVE",
+        "score": 2
+      },
+      {
+        "symbol": "INTC",
+        "sentiment": "NEUTRAL",
+        "score": 1
+      },
+      {
+        "symbol": "TSM",
+        "sentiment": "NEUTRAL",
+        "score": 1
+      },
+      {
+        "symbol": "TSLA",
+        "sentiment": "NEUTRAL",
+        "score": 1
+      },
+      {
+        "symbol": "GS",
+        "sentiment": "NEUTRAL",
+        "score": 1
+      },
+      {
+        "symbol": "NKE",
+        "sentiment": "NEUTRAL",
+        "score": 1
+      },
+      {
+        "symbol": "SLB",
+        "sentiment": "NEUTRAL",
+        "score": 1
+      },
+      {
+        "symbol": "IWM",
+        "sentiment": "NEUTRAL",
+        "score": 1
+      },
+      {
+        "symbol": "DIA",
+        "sentiment": "NEUTRAL",
+        "score": 1
+      },
+      {
+        "symbol": "XLV",
+        "sentiment": "NEUTRAL",
+        "score": 1
+      },
+      {
+        "symbol": "GLD",
+        "sentiment": "NEUTRAL",
+        "score": 1
+      },
+      {
+        "symbol": "AVGO",
+        "sentiment": "NEUTRAL",
+        "score": 0
+      },
+      {
+        "symbol": "META",
+        "sentiment": "NEUTRAL",
+        "score": 0
+      },
+      {
+        "symbol": "CRM",
+        "sentiment": "NEUTRAL",
+        "score": 0
+      },
+      {
+        "symbol": "ADBE",
+        "sentiment": "NEUTRAL",
+        "score": 0
+      },
+      {
+        "symbol": "NOW",
+        "sentiment": "NEUTRAL",
+        "score": 0
+      },
+      {
+        "symbol": "JPM",
+        "sentiment": "NEUTRAL",
+        "score": 0
+      },
+      {
+        "symbol": "BAC",
+        "sentiment": "NEUTRAL",
+        "score": 0
+      },
+      {
+        "symbol": "V",
+        "sentiment": "NEUTRAL",
+        "score": 0
+      },
+      {
+        "symbol": "MA",
+        "sentiment": "NEUTRAL",
+        "score": 0
+      },
+      {
+        "symbol": "AXP",
+        "sentiment": "NEUTRAL",
+        "score": 0
+      },
+      {
+        "symbol": "UNH",
+        "sentiment": "NEUTRAL",
+        "score": 0
+      },
+      {
+        "symbol": "LLY",
+        "sentiment": "NEUTRAL",
+        "score": 0
+      },
+      {
+        "symbol": "ABBV",
+        "sentiment": "NEUTRAL",
+        "score": 0
+      },
+      {
+        "symbol": "JNJ",
+        "sentiment": "NEUTRAL",
+        "score": 0
+      },
+      {
+        "symbol": "MRK",
+        "sentiment": "NEUTRAL",
+        "score": 0
+      },
+      {
+        "symbol": "COST",
+        "sentiment": "NEUTRAL",
+        "score": 0
+      },
+      {
+        "symbol": "HD",
+        "sentiment": "NEUTRAL",
+        "score": 0
+      },
+      {
+        "symbol": "MCD",
+        "sentiment": "NEUTRAL",
+        "score": 0
+      },
+      {
+        "symbol": "SBUX",
+        "sentiment": "NEUTRAL",
+        "score": 0
+      },
+      {
+        "symbol": "XOM",
+        "sentiment": "NEUTRAL",
+        "score": 0
+      },
+      {
+        "symbol": "CVX",
+        "sentiment": "NEUTRAL",
+        "score": 0
+      },
+      {
+        "symbol": "OXY",
+        "sentiment": "NEUTRAL",
+        "score": 0
+      },
+      {
+        "symbol": "XLF",
+        "sentiment": "NEUTRAL",
+        "score": 0
+      },
+      {
+        "symbol": "XLE",
+        "sentiment": "NEUTRAL",
+        "score": 0
+      },
+      {
+        "symbol": "XLI",
+        "sentiment": "NEUTRAL",
+        "score": 0
+      },
+      {
+        "symbol": "XLB",
+        "sentiment": "NEUTRAL",
+        "score": 0
+      },
+      {
+        "symbol": "XLU",
+        "sentiment": "NEUTRAL",
+        "score": 0
+      },
+      {
+        "symbol": "XLRE",
+        "sentiment": "NEUTRAL",
+        "score": 0
+      },
+      {
+        "symbol": "SLV",
+        "sentiment": "NEUTRAL",
+        "score": 0
+      },
+      {
+        "symbol": "GDX",
+        "sentiment": "NEUTRAL",
+        "score": 0
+      },
+      {
+        "symbol": "GDXJ",
+        "sentiment": "NEUTRAL",
+        "score": 0
+      },
+      {
+        "symbol": "UNG",
+        "sentiment": "NEUTRAL",
+        "score": 0
+      },
+      {
+        "symbol": "DBO",
+        "sentiment": "NEUTRAL",
+        "score": 0
+      },
+      {
+        "symbol": "FCX",
+        "sentiment": "NEUTRAL",
+        "score": 0
+      },
+      {
+        "symbol": "NEM",
+        "sentiment": "NEUTRAL",
+        "score": 0
+      },
+      {
+        "symbol": "GOLD",
+        "sentiment": "NEUTRAL",
+        "score": 0
+      },
+      {
+        "symbol": "CLF",
+        "sentiment": "NEUTRAL",
+        "score": 0
+      },
+      {
+        "symbol": "AA",
+        "sentiment": "NEUTRAL",
+        "score": 0
+      },
+      {
+        "symbol": "ORCL",
+        "sentiment": "NEUTRAL",
+        "score": -1
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-05-09T00:32:32.150884",
+    "mode": "NEWS",
+    "spy_regime": "BULL",
+    "safety_block": "",
+    "signals": [],
+    "alerts": [],
+    "news_snapshot": [
+      {
+        "symbol": "AMD",
+        "sentiment": "POSITIVE",
+        "score": 3
+      },
+      {
+        "symbol": "QCOM",
+        "sentiment": "POSITIVE",
+        "score": 3
+      },
+      {
+        "symbol": "QQQ",
+        "sentiment": "POSITIVE",
+        "score": 3
+      },
+      {
+        "symbol": "USO",
+        "sentiment": "POSITIVE",
+        "score": 3
+      },
+      {
+        "symbol": "AAPL",
+        "sentiment": "POSITIVE",
+        "score": 2
+      },
+      {
+        "symbol": "MSFT",
+        "sentiment": "POSITIVE",
+        "score": 2
+      },
+      {
+        "symbol": "NVDA",
+        "sentiment": "POSITIVE",
+        "score": 2
+      },
+      {
+        "symbol": "GOOGL",
+        "sentiment": "POSITIVE",
+        "score": 2
+      },
+      {
+        "symbol": "AMZN",
+        "sentiment": "POSITIVE",
+        "score": 2
+      },
+      {
+        "symbol": "SPY",
+        "sentiment": "POSITIVE",
+        "score": 2
+      },
+      {
+        "symbol": "XLK",
+        "sentiment": "POSITIVE",
+        "score": 2
+      },
+      {
+        "symbol": "INTC",
+        "sentiment": "NEUTRAL",
+        "score": 1
+      },
+      {
+        "symbol": "TSM",
+        "sentiment": "NEUTRAL",
+        "score": 1
+      },
+      {
+        "symbol": "TSLA",
+        "sentiment": "NEUTRAL",
+        "score": 1
+      },
+      {
+        "symbol": "GS",
+        "sentiment": "NEUTRAL",
+        "score": 1
+      },
+      {
+        "symbol": "NKE",
+        "sentiment": "NEUTRAL",
+        "score": 1
+      },
+      {
+        "symbol": "SLB",
+        "sentiment": "NEUTRAL",
+        "score": 1
+      },
+      {
+        "symbol": "IWM",
+        "sentiment": "NEUTRAL",
+        "score": 1
+      },
+      {
+        "symbol": "DIA",
+        "sentiment": "NEUTRAL",
+        "score": 1
+      },
+      {
+        "symbol": "XLV",
+        "sentiment": "NEUTRAL",
+        "score": 1
+      },
+      {
+        "symbol": "GLD",
+        "sentiment": "NEUTRAL",
+        "score": 1
+      },
+      {
+        "symbol": "AVGO",
+        "sentiment": "NEUTRAL",
+        "score": 0
+      },
+      {
+        "symbol": "META",
+        "sentiment": "NEUTRAL",
+        "score": 0
+      },
+      {
+        "symbol": "CRM",
+        "sentiment": "NEUTRAL",
+        "score": 0
+      },
+      {
+        "symbol": "ADBE",
+        "sentiment": "NEUTRAL",
+        "score": 0
+      },
+      {
+        "symbol": "NOW",
+        "sentiment": "NEUTRAL",
+        "score": 0
+      },
+      {
+        "symbol": "JPM",
+        "sentiment": "NEUTRAL",
+        "score": 0
+      },
+      {
+        "symbol": "BAC",
+        "sentiment": "NEUTRAL",
+        "score": 0
+      },
+      {
+        "symbol": "V",
+        "sentiment": "NEUTRAL",
+        "score": 0
+      },
+      {
+        "symbol": "MA",
+        "sentiment": "NEUTRAL",
+        "score": 0
+      },
+      {
+        "symbol": "AXP",
+        "sentiment": "NEUTRAL",
+        "score": 0
+      },
+      {
+        "symbol": "UNH",
+        "sentiment": "NEUTRAL",
+        "score": 0
+      },
+      {
+        "symbol": "LLY",
+        "sentiment": "NEUTRAL",
+        "score": 0
+      },
+      {
+        "symbol": "ABBV",
+        "sentiment": "NEUTRAL",
+        "score": 0
+      },
+      {
+        "symbol": "JNJ",
+        "sentiment": "NEUTRAL",
+        "score": 0
+      },
+      {
+        "symbol": "MRK",
+        "sentiment": "NEUTRAL",
+        "score": 0
+      },
+      {
+        "symbol": "COST",
+        "sentiment": "NEUTRAL",
+        "score": 0
+      },
+      {
+        "symbol": "HD",
+        "sentiment": "NEUTRAL",
+        "score": 0
+      },
+      {
+        "symbol": "MCD",
+        "sentiment": "NEUTRAL",
+        "score": 0
+      },
+      {
+        "symbol": "SBUX",
+        "sentiment": "NEUTRAL",
+        "score": 0
+      },
+      {
+        "symbol": "XOM",
+        "sentiment": "NEUTRAL",
+        "score": 0
+      },
+      {
+        "symbol": "CVX",
+        "sentiment": "NEUTRAL",
+        "score": 0
+      },
+      {
+        "symbol": "OXY",
+        "sentiment": "NEUTRAL",
+        "score": 0
+      },
+      {
+        "symbol": "XLF",
+        "sentiment": "NEUTRAL",
+        "score": 0
+      },
+      {
+        "symbol": "XLE",
+        "sentiment": "NEUTRAL",
+        "score": 0
+      },
+      {
+        "symbol": "XLI",
+        "sentiment": "NEUTRAL",
+        "score": 0
+      },
+      {
+        "symbol": "XLB",
+        "sentiment": "NEUTRAL",
+        "score": 0
+      },
+      {
+        "symbol": "XLU",
+        "sentiment": "NEUTRAL",
+        "score": 0
+      },
+      {
+        "symbol": "XLRE",
+        "sentiment": "NEUTRAL",
+        "score": 0
+      },
+      {
+        "symbol": "SLV",
+        "sentiment": "NEUTRAL",
+        "score": 0
+      },
+      {
+        "symbol": "GDX",
+        "sentiment": "NEUTRAL",
+        "score": 0
+      },
+      {
+        "symbol": "GDXJ",
+        "sentiment": "NEUTRAL",
+        "score": 0
+      },
+      {
+        "symbol": "UNG",
+        "sentiment": "NEUTRAL",
+        "score": 0
+      },
+      {
+        "symbol": "DBO",
+        "sentiment": "NEUTRAL",
+        "score": 0
+      },
+      {
+        "symbol": "FCX",
+        "sentiment": "NEUTRAL",
+        "score": 0
+      },
+      {
+        "symbol": "NEM",
+        "sentiment": "NEUTRAL",
+        "score": 0
+      },
+      {
+        "symbol": "GOLD",
+        "sentiment": "NEUTRAL",
+        "score": 0
+      },
+      {
+        "symbol": "CLF",
+        "sentiment": "NEUTRAL",
+        "score": 0
+      },
+      {
+        "symbol": "AA",
+        "sentiment": "NEUTRAL",
+        "score": 0
+      },
+      {
+        "symbol": "ORCL",
+        "sentiment": "NEUTRAL",
+        "score": -1
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-05-09T00:32:56.994960",
+    "mode": "FULL",
+    "spy_regime": "BULL",
+    "posture": "RISK-ON",
+    "signals": [],
+    "top_news": [
+      {
+        "symbol": "AAPL",
+        "sentiment": "POSITIVE",
+        "score": 3,
+        "headlines": [
+          "[~] Trump Could Put These 8 Stocks In The Spotlight For China Trip: Here Are The CEO",
+          "[~] Apple A 'Sleeping Tech Giant' Entering 'Golden Path' In AI Era: Analyst"
+        ]
+      },
+      {
+        "symbol": "MSFT",
+        "sentiment": "POSITIVE",
+        "score": 3,
+        "headlines": [
+          "[~] How Anthropic's Mythos Triggered Trump's AI Regulation U-Turn",
+          "[+] IREN's Next Stop Could Be $100 Thanks To Nvidia Partnership: Bernstein"
+        ]
+      },
+      {
+        "symbol": "AMD",
+        "sentiment": "POSITIVE",
+        "score": 3,
+        "headlines": [
+          "[+] Wall Street Pops The Champagne, Main Street Hits A Record Low: This Week In The ",
+          "[~] SanDisk Did In Months What Nvidia Took 9 Years To Pull Off \u2014 And The Chart Looks"
+        ]
+      },
+      {
+        "symbol": "QCOM",
+        "sentiment": "POSITIVE",
+        "score": 3,
+        "headlines": [
+          "[+] Tigress Financial Maintains Buy on Qualcomm, Raises Price Target to $280",
+          "[+] Daiwa Capital Upgrades Qualcomm to Outperform, Raises Price Target to $225"
+        ]
+      },
+      {
+        "symbol": "TSM",
+        "sentiment": "POSITIVE",
+        "score": 3,
+        "headlines": [
+          "[~] Watching Taiwan Semiconductor Manufacturing; Shares Spike Lower After WSJ Report",
+          "[~] EXCLUSIVE: Nvidia Vs. Alphabet: Benzinga Viewers, Prediction Markets Disagree On"
+        ]
+      },
+      {
+        "symbol": "GOOGL",
+        "sentiment": "POSITIVE",
+        "score": 3,
+        "headlines": [
+          "[~] How Anthropic's Mythos Triggered Trump's AI Regulation U-Turn",
+          "[~] 'Google's Isomorphic Labs to Raise Over $2 Billion in New Funding' - Bloomberg"
+        ]
+      },
+      {
+        "symbol": "AMZN",
+        "sentiment": "POSITIVE",
+        "score": 3,
+        "headlines": [
+          "[~] Coinbase CEO Posts On X \"We experienced an outage at Coinbase last night, which ",
+          "[~] How Anthropic's Mythos Triggered Trump's AI Regulation U-Turn"
+        ]
+      },
+      {
+        "symbol": "QQQ",
+        "sentiment": "POSITIVE",
+        "score": 3,
+        "headlines": [
+          "[~] Jeffrey Gundlach Warns Private Credit Is Echoing Dot-Com, 2008 Tremors",
+          "[+] Nasdaq Tops 29,000 Records, Micron Soars 13%: Stock Market Today"
+        ]
+      },
+      {
+        "symbol": "XLK",
+        "sentiment": "POSITIVE",
+        "score": 3,
+        "headlines": [
+          "[+] Wall Street Pops The Champagne, Main Street Hits A Record Low: This Week In The ",
+          "[+] Nasdaq Tops 29,000 Records, Micron Soars 13%: Stock Market Today"
+        ]
+      },
+      {
+        "symbol": "USO",
+        "sentiment": "POSITIVE",
+        "score": 3,
+        "headlines": [
+          "[+] Fitch Ratings Raises Its Near-Term Oil And European Gas Price Assumptions; Says ",
+          "[~] U.S. Baker Hughes Oil Rig Count +2 To 410; U.S. Baker Hughes NatGas Rig Count -1"
+        ]
+      }
+    ]
   }
 ]

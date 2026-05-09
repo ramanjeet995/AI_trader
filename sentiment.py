@@ -1,39 +1,80 @@
 """
 News sentiment scoring using Alpaca's built-in News API.
-No AI/LLM calls — pure keyword matching.
+No AI/LLM calls — pure keyword matching with word boundaries
+(so "beat" doesn't match "beaten down", "risk" doesn't match macro headlines).
+
+Phrases (with spaces) are matched as substrings. Single words use \\b boundaries.
 
 Score per headline: +1 (bullish), -1 (bearish), 0 (neutral)
-Final score = sum of all headlines, clamped to -3 / +3.
+Headlines with NEGATION ("not strong", "no upgrade") are inverted.
+Final score = sum across headlines, clamped to -3 / +3.
 """
 
+import re
 from datetime import datetime, timedelta
-import os
 
 from alpaca.data.historical.news import NewsClient
 from alpaca.data.requests import NewsRequest
 
 
-BULLISH_WORDS = {
-    "beat", "beats", "record", "upgrade", "upgraded", "raised", "raise",
-    "growth", "outperform", "buy", "strong", "surge", "rally", "profit",
-    "revenue", "earnings beat", "above expectations", "positive", "bullish",
-    "partnership", "deal", "contract", "approved", "launch", "expands",
-    "dividend", "buyback", "guidance raised", "upbeat",
+BULLISH_TERMS = {
+    "beat", "beats", "record", "upgrade", "upgraded", "raised", "raises",
+    "growth", "outperform", "outperforms", "surge", "surges", "rally", "rallies",
+    "profit", "profits", "earnings beat", "above expectations", "positive",
+    "bullish", "partnership", "approved", "launch", "launches", "expands",
+    "dividend", "buyback", "guidance raised", "upbeat", "soar", "soars",
+    "jumps", "tops", "exceeds", "strong results", "strong earnings",
 }
 
-BEARISH_WORDS = {
+BEARISH_TERMS = {
     "miss", "misses", "downgrade", "downgraded", "cut", "cuts", "loss",
     "losses", "recall", "fraud", "lawsuit", "investigation", "layoff",
     "layoffs", "below expectations", "negative", "bearish", "decline",
-    "warning", "guidance cut", "disappoints", "weak", "concern", "risk",
-    "debt", "bankruptcy", "fine", "penalty", "probe", "subpoena",
+    "declines", "warning", "guidance cut", "disappoints", "disappointing",
+    "bankruptcy", "fine", "penalty", "probe", "subpoena", "plunge", "plunges",
+    "crashes", "tumbles", "slumps", "delisting", "halt",
 }
+
+# Negators that flip the next 3 words' meaning
+NEGATORS = {"not", "no", "never", "without", "fails", "failed", "fail"}
+
+
+def _build_pattern(term: str) -> re.Pattern:
+    """Single word → \\b...\\b boundary. Phrase (has space) → escaped substring."""
+    if " " in term:
+        return re.compile(re.escape(term), re.IGNORECASE)
+    return re.compile(r"\b" + re.escape(term) + r"\b", re.IGNORECASE)
+
+
+_BULL_PATTERNS = [(t, _build_pattern(t)) for t in BULLISH_TERMS]
+_BEAR_PATTERNS = [(t, _build_pattern(t)) for t in BEARISH_TERMS]
+
+
+def _is_negated(text: str, match_start: int) -> bool:
+    """Check if any negator appears within ~4 words before the match."""
+    prefix      = text[:match_start].lower()
+    prev_words  = re.findall(r"\b\w+\b", prefix)[-4:]
+    return any(w in NEGATORS for w in prev_words)
 
 
 def _score_text(text: str) -> int:
-    text_lower = text.lower()
-    bull = sum(1 for w in BULLISH_WORDS if w in text_lower)
-    bear = sum(1 for w in BEARISH_WORDS if w in text_lower)
+    bull = 0
+    bear = 0
+
+    for term, pat in _BULL_PATTERNS:
+        for m in pat.finditer(text):
+            if _is_negated(text, m.start()):
+                bear += 1
+            else:
+                bull += 1
+
+    for term, pat in _BEAR_PATTERNS:
+        for m in pat.finditer(text):
+            if _is_negated(text, m.start()):
+                bull += 1
+            else:
+                bear += 1
+
     if bull > bear:
         return 1
     if bear > bull:
@@ -52,8 +93,6 @@ def get_sentiment(symbol: str, news_client: NewsClient, days: int = 3) -> tuple[
     try:
         req      = NewsRequest(symbols=symbol, start=start, end=end, limit=20)
         response = news_client.get_news(req)
-        # NewsSet iterates as (key, value) tuples
-        # key='data' holds {'news': [list of dicts]}, key='next_page_token' is None
         articles = []
         for key, data in response:
             if key == "data" and isinstance(data, dict):
@@ -69,12 +108,13 @@ def get_sentiment(symbol: str, news_client: NewsClient, days: int = 3) -> tuple[
 
     for article in articles:
         headline = article.get("headline", "") if isinstance(article, dict) else (article.headline or "")
+        if not headline:
+            continue
         score    = _score_text(headline)
         total   += score
         icon     = "+" if score > 0 else ("-" if score < 0 else "~")
         details.append(f"[{icon}] {headline[:80]}")
 
-    # Clamp to -3 / +3
     clamped = max(-3, min(3, total))
     return clamped, details
 

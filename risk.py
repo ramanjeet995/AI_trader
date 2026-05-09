@@ -4,38 +4,49 @@ Position sizing using the strategy's golden rule:
 
   shares = (account_value × risk_pct) / (entry - stop)
   capped at MAX_POSITION_PCT of portfolio value.
+
+The cap can reduce the trade size, in which case the actual $ at risk is
+LOWER than the target risk_pct. We report the ACTUAL risk, not the target.
 """
+
+import math
 
 
 def position_size(account_value: float, entry: float, stop: float, cfg) -> dict:
     """
-    Returns dict with shares, notional, risk_dollars, and R values.
+    Returns dict with shares, notional, ACTUAL risk_dollars, and R values.
+    Note: risk_dollars reflects what's truly at risk after the position cap.
     """
-    risk_dollars  = account_value * cfg.ACCOUNT_RISK_PCT
+    target_risk   = account_value * cfg.ACCOUNT_RISK_PCT
     stop_distance = abs(entry - stop)
 
-    if stop_distance == 0:
-        return {"shares": 0, "notional": 0, "risk_dollars": 0,
-                "r1_target": entry, "r2_target": entry}
+    if stop_distance == 0 or entry <= 0:
+        return {"shares": 0, "notional": 0,
+                "risk_dollars": 0, "target_risk": target_risk,
+                "r1_target": entry, "r2_target": entry,
+                "capped": False}
 
-    shares = risk_dollars / stop_distance
-
-    # Cap at MAX_POSITION_PCT of portfolio
+    raw_shares   = target_risk / stop_distance
     max_notional = account_value * cfg.MAX_POSITION_PCT
-    notional     = shares * entry
-    if notional > max_notional:
-        shares   = max_notional / entry
-        notional = max_notional
+    capped       = (raw_shares * entry) > max_notional
 
-    shares = int(shares)   # whole shares only
+    if capped:
+        shares = math.floor(max_notional / entry)
+    else:
+        shares = math.floor(raw_shares)
 
-    r1 = round(entry + stop_distance * 1, 2)   # 1R target
-    r2 = round(entry + stop_distance * 2, 2)   # 2R target
+    actual_risk_dollars = shares * stop_distance
+    notional            = shares * entry
+
+    r1 = round(entry + stop_distance * 1, 2)
+    r2 = round(entry + stop_distance * 2, 2)
 
     return {
         "shares"      : shares,
-        "notional"    : round(shares * entry, 2),
-        "risk_dollars": round(risk_dollars, 2),
+        "notional"    : round(notional, 2),
+        "risk_dollars": round(actual_risk_dollars, 2),   # ACTUAL, not target
+        "target_risk" : round(target_risk, 2),
         "r1_target"   : r1,
         "r2_target"   : r2,
+        "capped"      : capped,
     }

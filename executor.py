@@ -2,12 +2,12 @@
 Auto trade executor — places bracket orders on Alpaca.
 
 A bracket order = entry + stop-loss + take-profit in one atomic order.
-Alpaca handles the exit automatically once filled.
 
 Guards:
-  - Already holding the symbol → skip
-  - Market closed → order queued as DAY (fills at open)
-  - Shares = 0 after sizing → skip
+  - Already holding the symbol     → skip
+  - Shares = 0 after sizing        → skip
+  - Notional > available BP        → skip (and decrement remaining BP across loop)
+  - Invalid prices (stop >= entry) → skip
 """
 
 from alpaca.trading.client import TradingClient
@@ -24,27 +24,43 @@ def get_open_positions(trade_client: TradingClient) -> set[str]:
         return set()
 
 
-def execute(signal: dict, pos: dict, trade_client: TradingClient) -> dict:
+def get_buying_power(trade_client: TradingClient) -> float:
+    try:
+        return float(trade_client.get_account().buying_power)
+    except Exception:
+        return 0.0
+
+
+def execute(signal: dict, pos: dict, trade_client: TradingClient,
+            remaining_bp: float | None = None) -> dict:
     """
-    signal : output from strategies.scan()
-    pos    : output from risk.position_size()
-    Returns result dict with status and order id (or error message).
+    signal       : output from strategies.scan() with 'symbol' attached
+    pos          : output from risk.position_size()
+    remaining_bp : if provided, skip if notional > remaining_bp.
+                   Caller should decrement after a successful order.
+
+    Returns {status, order_id?, reason?, notional}
     """
     symbol = signal["symbol"]
     shares = pos["shares"]
     entry  = signal["entry"]
     stop   = signal["stop"]
-    target = signal["target"]
 
     if shares <= 0:
-        return {"status": "SKIPPED", "reason": "position size = 0 shares"}
+        return {"status": "SKIPPED", "reason": "0 shares after sizing", "notional": 0}
 
-    # Use 2R as take-profit for better reward ratio
     take_profit_price = pos["r2_target"]
 
-    # Ensure prices are logically valid for a long order
     if stop >= entry or take_profit_price <= entry:
-        return {"status": "SKIPPED", "reason": f"invalid prices — entry={entry} stop={stop} tp={take_profit_price}"}
+        return {"status": "SKIPPED",
+                "reason": f"invalid prices entry={entry} stop={stop} tp={take_profit_price}",
+                "notional": 0}
+
+    notional = shares * entry
+    if remaining_bp is not None and notional > remaining_bp:
+        return {"status": "SKIPPED",
+                "reason": f"insufficient BP — need ${notional:,.2f}, have ${remaining_bp:,.2f}",
+                "notional": notional}
 
     try:
         order_req = MarketOrderRequest(
@@ -65,6 +81,7 @@ def execute(signal: dict, pos: dict, trade_client: TradingClient) -> dict:
             "entry"   : entry,
             "stop"    : stop,
             "target"  : take_profit_price,
+            "notional": notional,
         }
     except Exception as e:
-        return {"status": "ERROR", "reason": str(e)}
+        return {"status": "ERROR", "reason": str(e), "notional": notional}

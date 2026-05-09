@@ -32,9 +32,13 @@ def passes_filters(df: pd.DataFrame, cfg) -> tuple[bool, str]:
 
 def relative_strength(df: pd.DataFrame, benchmark_df: pd.DataFrame, period: int = 20) -> float:
     """
-    RS = stock's % return over `period` bars divided by benchmark's % return.
-    > 1.0  → outperforming (strong RS)
-    < 1.0  → underperforming
+    RS = (1 + stock_return) / (1 + benchmark_return)
+    > 1.0 → outperforming (strong RS)
+    < 1.0 → underperforming
+    Works correctly in any market direction:
+      - SPY -2%, stock -1% → RS = 0.99/0.98 = 1.01  (correctly flagged outperforming)
+      - SPY +5%, stock +8% → RS = 1.08/1.05 = 1.029 (outperforming)
+      - SPY +5%, stock +2% → RS = 1.02/1.05 = 0.971 (underperforming)
     """
     if len(df) < period + 1 or len(benchmark_df) < period + 1:
         return 1.0
@@ -42,6 +46,4 @@ def relative_strength(df: pd.DataFrame, benchmark_df: pd.DataFrame, period: int 
     stock_ret = df["close"].iloc[-1] / df["close"].iloc[-period] - 1
     bench_ret = benchmark_df["close"].iloc[-1] / benchmark_df["close"].iloc[-period] - 1
 
-    if bench_ret == 0:
-        return 1.0
-    return stock_ret / abs(bench_ret)
+    return (1 + stock_ret) / (1 + bench_ret)

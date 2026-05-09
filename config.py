@@ -54,8 +54,11 @@ MIN_AVG_VOLUME   = 1_000_000   # shares/day
 MIN_ATR_PCT      = 2.0         # ATR as % of price (movement needed)
 
 # ── Risk management ──────────────────────────────────────────────────────────
-ACCOUNT_RISK_PCT  = 0.01       # 1% of account per trade
-MAX_POSITION_PCT  = 0.10       # cap any single position at 10% of portfolio
+ACCOUNT_RISK_PCT          = 0.01    # 1% of account per trade
+MAX_POSITION_PCT          = 0.10    # cap any single position at 10% of portfolio
+MAX_CONCURRENT_POSITIONS  = 8       # never hold more than 8 positions at once
+MAX_NEW_PER_DAY           = 3       # never open more than 3 new positions per day
+REQUIRE_SECTOR_ALIGNMENT  = True    # only buy stocks whose sector has positive rotation score
 
 # ── Strategy A thresholds (Trend Pullback) ───────────────────────────────────
 STRAT_A_RSI_LOW  = 40

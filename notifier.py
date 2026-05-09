@@ -70,11 +70,12 @@ def send_signals(signals: list, spy_regime: str, posture: str, account_value: fl
 
     cards = ""
     for s in signals:
-        color  = "#27ae60" if s["signal"] == "BUY" else "#e74c3c"
+        sig    = s.get("signal", "BUY")
+        color  = "#27ae60" if sig == "BUY" else "#e74c3c"
         status = s.get("order_status", "")
         cards += f"""
         <div style='border:1px solid #ddd;border-radius:6px;padding:12px;margin-bottom:12px'>
-          <h3 style='margin:0;color:{color}'>{s['symbol']} — {s['signal']} (Strategy {s['strategy']})</h3>
+          <h3 style='margin:0;color:{color}'>{s['symbol']} — {sig} (Strategy {s.get('strategy','')})</h3>
           <p style='margin:4px 0;color:#555'>Regime: {s['regime']} &nbsp;|&nbsp; RS: {s['rs']} &nbsp;|&nbsp; OBV: {s['obv']}</p>
           <table style='font-size:13px'>
             <tr><td><b>Entry</b></td><td>${s['entry']:.2f}</td>

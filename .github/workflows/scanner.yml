@@ -1,27 +1,32 @@
-name: Full Scan (9 AM + 4:30 PM ET)
+name: Full Scan (9 AM + 4:30 PM ET, DST-aware)
 
 on:
   schedule:
-    # 9:00 AM ET  = 13:00 UTC (weekdays)
-    - cron: "0 13 * * 1-5"
-    # 4:30 PM ET  = 20:30 UTC (weekdays)
-    - cron: "30 20 * * 1-5"
+    # 9:00 AM ET — fires at both EDT and EST UTC times
+    - cron: "0 13 * * 1-5"   # EDT: 9 AM ET   |  EST: 8 AM ET (script will skip)
+    - cron: "0 14 * * 1-5"   # EDT: 10 AM ET (skip) | EST: 9 AM ET
+    # 4:30 PM ET — same dual-cron approach
+    - cron: "30 20 * * 1-5"  # EDT: 4:30 PM ET  | EST: 3:30 PM ET (skip)
+    - cron: "30 21 * * 1-5"  # EDT: 5:30 PM ET (skip) | EST: 4:30 PM ET
 
-  workflow_dispatch:   # manual trigger from GitHub UI
+  workflow_dispatch:
+    inputs:
+      skip_time_guard:
+        description: "Skip ET time-window check (run anytime)"
+        type: boolean
+        default: true
 
 jobs:
   scan:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
-        env:
-          FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
 
       - name: Set up Python
         uses: actions/setup-python@v5
-        env:
-          FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
         with:
           python-version: "3.11"
 
@@ -36,12 +41,14 @@ jobs:
           GMAIL_USER: ${{ secrets.GMAIL_USER }}
           GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
           NOTIFY_EMAIL: "rfgenius95@gmail.com"
+          SKIP_TIME_GUARD: ${{ inputs.skip_time_guard || 'false' }}
         run: python main.py
 
       - name: Commit scan log
         run: |
           git config user.name "AI Trader Bot"
           git config user.email "bot@aitrader.com"
+          git pull --rebase origin main || true
           git add scan_log.json
           git diff --staged --quiet || git commit -m "scan log update [skip ci]"
           git push
