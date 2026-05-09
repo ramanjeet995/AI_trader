@@ -36,7 +36,7 @@ from order_flow import order_flow_score
 from sentiment import get_sentiment, sentiment_label
 from sector_rotation import analyze as sector_analyze, print_rotation
 from risk import position_size
-from executor import execute, get_open_positions, get_buying_power
+from executor import execute, get_open_positions, get_buying_power, is_market_open
 from notifier import send_no_setup, send_signals, send
 import volume_source
 import earnings_calendar
@@ -243,15 +243,20 @@ def run_full_scan():
 
     open_positions   = get_open_positions(trade_client)
     new_today_count  = _today_new_position_count(trade_client)
+    market_open, mkt_reason = is_market_open(trade_client)
     if open_positions:
         print(f"  Holding ({len(open_positions)}/{cfg.MAX_CONCURRENT_POSITIONS}): {', '.join(open_positions)}")
-    print(f"  New positions today: {new_today_count}/{cfg.MAX_NEW_PER_DAY}\n")
+    print(f"  New positions today: {new_today_count}/{cfg.MAX_NEW_PER_DAY}")
+    print(f"  Market status      : {mkt_reason}\n")
 
     # Hard caps
     can_open_more = (
+        market_open and
         len(open_positions) < cfg.MAX_CONCURRENT_POSITIONS and
         new_today_count    < cfg.MAX_NEW_PER_DAY
     )
+    if not market_open:
+        print(f"  Market closed — scanning for awareness only, no orders.\n")
     if not can_open_more:
         print(f"  Position/daily cap reached — scanning for awareness only, no new orders.\n")
 
@@ -541,7 +546,10 @@ def run_news_scan():
         pass
 
     new_today_count = _today_new_position_count(trade_client)
+    market_open, mkt_reason = is_market_open(trade_client)
+    print(f"  Market status: {mkt_reason}")
     can_open_more = (
+        market_open and
         not safety_block_reason and
         len(open_positions) < cfg.MAX_CONCURRENT_POSITIONS and
         new_today_count    < cfg.MAX_NEW_PER_DAY

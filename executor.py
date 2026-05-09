@@ -31,6 +31,22 @@ def get_buying_power(trade_client: TradingClient) -> float:
         return 0.0
 
 
+def is_market_open(trade_client: TradingClient) -> tuple[bool, str]:
+    """
+    Returns (is_open, reason). Used to skip order placement outside RTH —
+    Alpaca cancels DAY orders submitted past close, and even GTC market
+    orders placed when closed sit in a weird limbo.
+    """
+    try:
+        clock = trade_client.get_clock()
+        if clock.is_open:
+            return True, "market open"
+        return False, f"market closed (next open: {clock.next_open})"
+    except Exception as e:
+        # Fail-safe: assume open if clock check fails (don't silently block)
+        return True, f"clock check failed: {e}"
+
+
 def execute(signal: dict, pos: dict, trade_client: TradingClient,
             remaining_bp: float | None = None) -> dict:
     """
@@ -63,11 +79,13 @@ def execute(signal: dict, pos: dict, trade_client: TradingClient,
                 "notional": notional}
 
     try:
+        # GTC so the take-profit + stop-loss legs survive past session close.
+        # DAY would orphan the position overnight (legs cancel at 4PM ET).
         order_req = MarketOrderRequest(
             symbol        = symbol,
             qty           = shares,
             side          = OrderSide.BUY,
-            time_in_force = TimeInForce.DAY,
+            time_in_force = TimeInForce.GTC,
             order_class   = OrderClass.BRACKET,
             take_profit   = TakeProfitRequest(limit_price=round(take_profit_price, 2)),
             stop_loss     = StopLossRequest(stop_price=round(stop, 2)),

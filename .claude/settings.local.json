@@ -13,7 +13,9 @@
       "Bash(rm -f earnings_cache.json)",
       "Bash(python -c \"import transformers, torch; print\\('OK'\\)\")",
       "Bash(git -C \"F:/Projects/Canada/New folder\" commit -m \"Add 5 quality upgrades: earnings blackout, VIX gate, spread/intraday checks, FinBERT\")",
-      "Bash(git -C \"F:/Projects/Canada/New folder\" commit -m \"Fix yfinance failure paths: per-symbol patch flag, no caching of failed earnings fetches\")"
+      "Bash(git -C \"F:/Projects/Canada/New folder\" commit -m \"Fix yfinance failure paths: per-symbol patch flag, no caching of failed earnings fetches\")",
+      "Bash(SKIP_TIME_GUARD=true MODE=FULL python main.py)",
+      "Bash(git -C \"F:/Projects/Canada/New folder\" commit -m \"Fix orphaned bracket legs: GTC time-in-force + market-hours check before submit\")"
     ]
   }
 }
