@@ -57,7 +57,9 @@ SKIP_TIME_GUARD = os.getenv("SKIP_TIME_GUARD", "false").lower() == "true"
 ET                 = ZoneInfo("America/New_York")
 MAX_MARKET_ATR_PCT = 3.0
 LOG_FILE           = Path(__file__).parent / "scan_log.json"
+LOG_MD_FILE        = Path(__file__).parent / "scan_log.md"
 MAX_LOG_ENTRIES    = 60
+MAX_MD_ENTRIES     = 100   # readable file, keep more history
 
 # Target ET hours for each mode (with ±45-min tolerance)
 FULL_TARGET_ET_HOURS     = [9, 16]            # 9 AM and 4:30 PM (use 16, tolerance covers 16:30)
@@ -100,7 +102,114 @@ def save_log(entry: dict):
     logs.append(entry)
     logs = logs[-MAX_LOG_ENTRIES:]
     LOG_FILE.write_text(json.dumps(logs, indent=2, default=str))
-    print(f"  [log] Saved to {LOG_FILE.name}")
+    _save_human_log(logs[-MAX_MD_ENTRIES:])
+    print(f"  [log] Saved to {LOG_FILE.name} + {LOG_MD_FILE.name}")
+
+
+def _save_human_log(logs: list):
+    """Render the JSON log as a human-readable markdown file. Newest first."""
+    lines = ["# AI Trader — Scan Log", ""]
+    lines.append("Newest scans first. Each entry shows what the scanner found and what it did.")
+    lines.append(f"_Last updated: {datetime.utcnow().strftime('%Y-%m-%d %H:%M UTC')}_")
+    lines.append("")
+
+    for entry in reversed(logs):
+        ts      = entry.get("timestamp", "")[:16].replace("T", " ")
+        mode    = entry.get("mode", "?")
+        regime  = entry.get("spy_regime", "?")
+        posture = entry.get("posture", "")
+        safety  = entry.get("safety_block", "")
+        vix     = entry.get("vix")
+        signals = entry.get("signals") or []
+        forced  = entry.get("force_closed") or []
+        alerts  = entry.get("alerts") or []
+        news    = entry.get("top_news") or entry.get("news_snapshot") or []
+
+        lines.append(f"## {ts} UTC — {mode} scan")
+        # Header line: regime + extras
+        bits = [f"SPY: **{regime}**"]
+        if posture: bits.append(f"Posture: {posture}")
+        if vix is not None: bits.append(f"VIX: {vix:.1f}")
+        if safety: bits.append(f"SAFETY: {safety}")
+        lines.append(" | ".join(bits))
+        lines.append("")
+
+        # Force-closed catalyst positions (CATALYST mode)
+        if forced:
+            lines.append("**Force-closed catalyst positions:**")
+            for fc in forced:
+                age = fc.get("age_days", "?")
+                lines.append(f"- {fc.get('symbol')}: held {age}d → closed at market")
+            lines.append("")
+
+        # Signals
+        if not signals:
+            lines.append("_No setups found._")
+        else:
+            lines.append(f"**{len(signals)} signal(s):**")
+            for s in signals:
+                sym    = s.get("symbol", "?")
+                strat  = s.get("strategy", "?")
+                conf   = s.get("confidence", "")
+                entry  = s.get("entry", 0)
+                stop   = s.get("stop", 0)
+                target = s.get("target") or s.get("2R") or 0
+                shares = s.get("shares", 0)
+                risk   = s.get("risk_$", 0)
+                status = s.get("order_status", "")
+                reason = s.get("reason", "")
+                gap    = s.get("gap_pct")
+                factors = s.get("factors", [])
+
+                # Header line per signal
+                head = f"- **{sym}** ({strat})"
+                if conf != "": head += f" conf={conf}"
+                if gap is not None: head += f" gap={gap:+.1f}%"
+                lines.append(head)
+
+                # Trade levels
+                lines.append(f"    - Entry ${entry} | Stop ${stop} | Target ${target} | "
+                             f"{shares} shares | Risk ${risk:.2f}")
+
+                # Strategy reason or catalyst factors
+                if factors:
+                    lines.append(f"    - Factors: {', '.join(factors)}")
+                if reason:
+                    lines.append(f"    - {reason}")
+                if status:
+                    lines.append(f"    - Order: {status}")
+            lines.append("")
+
+        # Alerts (NEWS mode danger flags)
+        if alerts:
+            lines.append("**Alerts:**")
+            for a in alerts:
+                lines.append(f"- {a}")
+            lines.append("")
+
+        # Top news (FULL mode)
+        if news:
+            top_pos = [n for n in news if n.get("sentiment") == "POSITIVE"][:3]
+            top_neg = [n for n in news if n.get("sentiment") == "NEGATIVE"][:3]
+            if top_pos or top_neg:
+                lines.append("<details><summary>Notable news</summary>")
+                lines.append("")
+                for n in top_pos:
+                    lines.append(f"- ✓ **{n['symbol']}** ({n['sentiment']}, {n['score']:+d})")
+                    for h in n.get("headlines", [])[:1]:
+                        lines.append(f"    - {h}")
+                for n in top_neg:
+                    lines.append(f"- ✗ **{n['symbol']}** ({n['sentiment']}, {n['score']:+d})")
+                    for h in n.get("headlines", [])[:1]:
+                        lines.append(f"    - {h}")
+                lines.append("")
+                lines.append("</details>")
+                lines.append("")
+
+        lines.append("---")
+        lines.append("")
+
+    LOG_MD_FILE.write_text("\n".join(lines), encoding="utf-8")
 
 
 # ── Data fetch ────────────────────────────────────────────────────────────────
