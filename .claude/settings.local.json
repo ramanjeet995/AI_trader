@@ -35,7 +35,8 @@
       "Bash(MODE=FULL python main.py)",
       "Bash(git -C \"F:/Projects/Canada/New folder\" commit -m \"Always scan + log on every run, gate ONLY order placement on time window\")",
       "Bash(git -C \"F:/Projects/Canada/New folder\" commit -m \"Suppress yfinance 404 noise for ETFs \\(they have no earnings to fetch\\)\")",
-      "Bash(git -C \"F:/Projects/Canada/New folder\" commit -m \"Fire crons 7 min early on :53 \\(less congested\\), widen tolerance to 60 min\")"
+      "Bash(git -C \"F:/Projects/Canada/New folder\" commit -m \"Fire crons 7 min early on :53 \\(less congested\\), widen tolerance to 60 min\")",
+      "Bash(git -C \"F:/Projects/Canada/New folder\" commit -m \"Shift FULL scan cron to 9:33 AM ET \\(after market open\\) to avoid pre-market gap risk\")"
     ]
   }
 }

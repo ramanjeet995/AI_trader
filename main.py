@@ -62,7 +62,7 @@ MAX_LOG_ENTRIES    = 60
 MAX_MD_ENTRIES     = 100   # readable file, keep more history
 
 # Target ET hours for each mode (with ±45-min tolerance)
-FULL_TARGET_ET_HOURS     = [9, 16]            # 9 AM and 4:30 PM (use 16, tolerance covers 16:30)
+FULL_TARGET_ET_HOURS     = [9, 16]            # 9:30 AM (post-open) and 4:30 PM (use 9 + 16, tolerance covers :30)
 NEWS_TARGET_ET_HOURS     = [11, 13, 15]
 CATALYST_TARGET_ET_HOURS = [11]               # 11 AM ET (after initial volatility settles)
 TIME_TOLERANCE_MIN       = 60
@@ -81,9 +81,10 @@ def in_target_window(target_hours: list[int]) -> tuple[bool, str]:
     now_et = datetime.now(ET)
     et_str = now_et.strftime("%Y-%m-%d %H:%M ET")
 
+    # 9 → 9:30 AM (market open), 16 → 4:30 PM (market close wind-down), else → :00
     for hour in target_hours:
-        target = now_et.replace(hour=hour, minute=0 if hour != 16 else 30,
-                                 second=0, microsecond=0)
+        minute = 30 if hour in (9, 16) else 0
+        target = now_et.replace(hour=hour, minute=minute, second=0, microsecond=0)
         diff_min = abs((now_et - target).total_seconds()) / 60
         if diff_min <= TIME_TOLERANCE_MIN:
             return True, et_str

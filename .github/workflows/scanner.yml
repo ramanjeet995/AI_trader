@@ -2,12 +2,13 @@ name: Full Scan (9 AM + 4:30 PM ET, DST-aware)
 
 on:
   schedule:
-    # Fire 7 min BEFORE target so GitHub Actions cron delay still lands within
-    # tolerance. :53 minute is far less congested than :00.
-    # 9:00 AM ET target — fire at 8:53 AM ET
-    - cron: "53 12 * * 1-5"  # EDT: 8:53 AM ET  | EST: 7:53 AM ET (skip)
-    - cron: "53 13 * * 1-5"  # EDT: 9:53 AM ET (close enough) | EST: 8:53 AM ET
-    # 4:30 PM ET target — fire at 4:23 PM ET
+    # Fire on off-minute (:33, :23) to avoid the :00 cron queue. We target
+    # JUST AFTER market open (9:30 AM ET) so we have confirmed opening prices
+    # before placing orders — pre-market orders are dangerous (gap risk).
+    # 9:33 AM ET target — fires 3 min after market open
+    - cron: "33 13 * * 1-5"  # EDT: 9:33 AM ET  | EST: 8:33 AM ET (skip)
+    - cron: "33 14 * * 1-5"  # EDT: 10:33 AM ET (within tolerance) | EST: 9:33 AM ET
+    # 4:23 PM ET target — 7 min before close (4:30 PM ET wind-down scan)
     - cron: "23 20 * * 1-5"  # EDT: 4:23 PM ET  | EST: 3:23 PM ET (skip)
     - cron: "23 21 * * 1-5"  # EDT: 5:23 PM ET (skip) | EST: 4:23 PM ET
 
