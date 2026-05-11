@@ -13,7 +13,7 @@
   },
   "SPY": {
     "next_earnings": null,
-    "fetched_at": "2026-05-09T01:08:27.766548"
+    "fetched_at": "2026-05-11T22:58:55.590841"
   },
   "MSFT": {
     "next_earnings": "2026-07-29",
@@ -149,75 +149,75 @@
   },
   "QQQ": {
     "next_earnings": null,
-    "fetched_at": "2026-05-09T01:08:28.104850"
+    "fetched_at": "2026-05-11T22:58:55.923807"
   },
   "IWM": {
     "next_earnings": null,
-    "fetched_at": "2026-05-09T01:08:28.295561"
+    "fetched_at": "2026-05-11T22:58:56.142664"
   },
   "DIA": {
     "next_earnings": null,
-    "fetched_at": "2026-05-09T01:08:28.484980"
+    "fetched_at": "2026-05-11T22:58:56.359620"
   },
   "XLK": {
     "next_earnings": null,
-    "fetched_at": "2026-05-09T01:08:28.699050"
+    "fetched_at": "2026-05-11T22:58:56.585675"
   },
   "XLF": {
     "next_earnings": null,
-    "fetched_at": "2026-05-09T01:08:28.901230"
+    "fetched_at": "2026-05-11T22:58:56.810129"
   },
   "XLE": {
     "next_earnings": null,
-    "fetched_at": "2026-05-09T01:08:29.101859"
+    "fetched_at": "2026-05-11T22:58:57.103006"
   },
   "XLV": {
     "next_earnings": null,
-    "fetched_at": "2026-05-09T01:08:29.291116"
+    "fetched_at": "2026-05-11T22:58:57.327671"
   },
   "XLI": {
     "next_earnings": null,
-    "fetched_at": "2026-05-09T01:08:29.481752"
+    "fetched_at": "2026-05-11T22:58:57.566120"
   },
   "XLB": {
     "next_earnings": null,
-    "fetched_at": "2026-05-09T01:08:29.662094"
+    "fetched_at": "2026-05-11T22:58:57.784325"
   },
   "XLU": {
     "next_earnings": null,
-    "fetched_at": "2026-05-09T01:08:29.862875"
+    "fetched_at": "2026-05-11T22:58:58.070618"
   },
   "XLRE": {
     "next_earnings": null,
-    "fetched_at": "2026-05-09T01:08:30.063846"
+    "fetched_at": "2026-05-11T22:58:58.321209"
   },
   "GLD": {
     "next_earnings": null,
-    "fetched_at": "2026-05-09T01:08:30.264943"
+    "fetched_at": "2026-05-11T22:58:58.535297"
   },
   "SLV": {
     "next_earnings": null,
-    "fetched_at": "2026-05-09T01:08:30.449212"
+    "fetched_at": "2026-05-11T22:58:58.784990"
   },
   "GDX": {
     "next_earnings": null,
-    "fetched_at": "2026-05-09T01:08:30.693055"
+    "fetched_at": "2026-05-11T22:58:58.994510"
   },
   "GDXJ": {
     "next_earnings": null,
-    "fetched_at": "2026-05-09T01:08:30.932755"
+    "fetched_at": "2026-05-11T22:58:59.263091"
   },
   "USO": {
     "next_earnings": null,
-    "fetched_at": "2026-05-09T01:08:31.134698"
+    "fetched_at": "2026-05-11T22:58:59.471239"
   },
   "UNG": {
     "next_earnings": null,
-    "fetched_at": "2026-05-09T01:08:31.323952"
+    "fetched_at": "2026-05-11T22:58:59.690223"
   },
   "DBO": {
     "next_earnings": null,
-    "fetched_at": "2026-05-09T01:08:31.495836"
+    "fetched_at": "2026-05-11T22:58:59.955263"
   },
   "FCX": {
     "next_earnings": "2026-07-22",
@@ -229,7 +229,7 @@
   },
   "GOLD": {
     "next_earnings": null,
-    "fetched_at": "2026-05-09T01:08:31.571006"
+    "fetched_at": "2026-05-11T22:59:00.035151"
   },
   "CLF": {
     "next_earnings": "2026-07-20",

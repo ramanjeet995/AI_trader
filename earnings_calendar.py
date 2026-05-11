@@ -15,6 +15,9 @@ from pathlib import Path
 try:
     import yfinance as yf
     YF_AVAILABLE = True
+    # Suppress yfinance HTTP 404 noise (ETFs have no fundamentals = expected)
+    import logging
+    logging.getLogger("yfinance").setLevel(logging.CRITICAL)
 except ImportError:
     YF_AVAILABLE = False
 

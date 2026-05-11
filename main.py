@@ -306,14 +306,12 @@ def _count_sectors(symbols) -> dict[str, int]:
 
 def run_full_scan():
     in_window, et_str = in_target_window(FULL_TARGET_ET_HOURS)
-    if not in_window:
-        print(f"  Skipping FULL scan — current ET time {et_str} not in target window "
-              f"(target hours: {FULL_TARGET_ET_HOURS} ET ±{TIME_TOLERANCE_MIN}min)")
-        return
-
     print(f"\n{'='*60}")
     print(f"  FULL SCAN  -  {et_str}")
     print(f"{'='*60}\n")
+    if not in_window:
+        print(f"  [!] Out of target window (target: {FULL_TARGET_ET_HOURS} ET ±{TIME_TOLERANCE_MIN}min)")
+        print(f"  Will scan and log normally, but NO ORDERS will be placed.\n")
 
     data_client  = StockHistoricalDataClient(API_KEY, API_SECRET)
     news_client  = NewsClient(API_KEY, API_SECRET)
@@ -362,14 +360,17 @@ def run_full_scan():
     print(f"  New positions today: {new_today_count}/{cfg.MAX_NEW_PER_DAY}")
     print(f"  Market status      : {mkt_reason}\n")
 
-    # Hard caps
+    # Hard caps — time-window check is now a trading gate, not a scan gate
     can_open_more = (
+        in_window and
         market_open and
         len(open_positions) < cfg.MAX_CONCURRENT_POSITIONS and
         new_today_count    < cfg.MAX_NEW_PER_DAY
     )
     if not market_open:
         print(f"  Market closed — scanning for awareness only, no orders.\n")
+    elif not in_window:
+        print(f"  Outside target window — scanning for awareness only, no orders.\n")
     if not can_open_more:
         print(f"  Position/daily cap reached — scanning for awareness only, no new orders.\n")
 
@@ -592,14 +593,12 @@ def run_full_scan():
 
 def run_news_scan():
     in_window, et_str = in_target_window(NEWS_TARGET_ET_HOURS)
-    if not in_window:
-        print(f"  Skipping NEWS scan — current ET time {et_str} not in target window "
-              f"(target hours: {NEWS_TARGET_ET_HOURS} ET ±{TIME_TOLERANCE_MIN}min)")
-        return
-
     print(f"\n{'='*60}")
     print(f"  NEWS SCAN  -  {et_str}")
     print(f"{'='*60}\n")
+    if not in_window:
+        print(f"  [!] Out of target window (target: {NEWS_TARGET_ET_HOURS} ET ±{TIME_TOLERANCE_MIN}min)")
+        print(f"  Will scan and log normally, but NO ORDERS will be placed.\n")
 
     data_client  = StockHistoricalDataClient(API_KEY, API_SECRET)
     news_client  = NewsClient(API_KEY, API_SECRET)
@@ -662,6 +661,7 @@ def run_news_scan():
     market_open, mkt_reason = is_market_open(trade_client)
     print(f"  Market status: {mkt_reason}")
     can_open_more = (
+        in_window and
         market_open and
         not safety_block_reason and
         len(open_positions) < cfg.MAX_CONCURRENT_POSITIONS and
@@ -877,14 +877,12 @@ def _force_exit_stale_catalyst_positions(trade_client: TradingClient, force_days
 
 def run_catalyst_scan():
     in_window, et_str = in_target_window(CATALYST_TARGET_ET_HOURS)
-    if not in_window:
-        print(f"  Skipping CATALYST scan — current ET time {et_str} not in target window "
-              f"(target: {CATALYST_TARGET_ET_HOURS} ET ±{TIME_TOLERANCE_MIN}min)")
-        return
-
     print(f"\n{'='*60}")
     print(f"  CATALYST SCAN  -  {et_str}")
     print(f"{'='*60}\n")
+    if not in_window:
+        print(f"  [!] Out of target window (target: {CATALYST_TARGET_ET_HOURS} ET ±{TIME_TOLERANCE_MIN}min)")
+        print(f"  Will scan and log normally, but NO ORDERS will be placed.\n")
 
     data_client  = StockHistoricalDataClient(API_KEY, API_SECRET)
     news_client  = NewsClient(API_KEY, API_SECRET)
@@ -904,9 +902,11 @@ def run_catalyst_scan():
 
     market_open, mkt_reason = is_market_open(trade_client)
     print(f"  Market status : {mkt_reason}")
+    can_trade_now = market_open and in_window
     if not market_open:
-        print(f"  Market closed — skipping catalyst entries\n")
-        return
+        print(f"  Market closed — will scan for awareness, no orders\n")
+    elif not in_window:
+        print(f"  Outside target window — will scan for awareness, no orders\n")
 
     # Safety gates
     vix_assessment = vix_gate.assess(vix_gate.get_vix(), cfg)
@@ -984,10 +984,20 @@ def run_catalyst_scan():
     # Sort by score desc, then by news_score desc
     candidates.sort(key=lambda c: (-c["score"], -c["news_score"]))
 
-    print(f"\n  {len(candidates)} catalyst setup(s) — placing orders\n")
+    print(f"\n  {len(candidates)} catalyst setup(s) found"
+          f"{' — placing orders' if can_trade_now else ' (logging only, no orders)'}\n")
     placed   = []
 
     for det in candidates:
+        if not can_trade_now:
+            # Log the signal but don't trade
+            placed.append({
+                "symbol": det["symbol"], "strategy": "CATALYST", "signal": "BUY",
+                "factors": det["factors"], "gap_pct": det["gap_pct"],
+                "news_score": det["news_score"], "earn_days_ago": det["earn_days"],
+                "order_status": "NOT_PLACED — outside target window or market closed",
+            })
+            continue
         if cat_orders_this_run >= cfg.CATALYST_MAX_NEW_PER_DAY:
             print(f"  Hit catalyst daily cap ({cfg.CATALYST_MAX_NEW_PER_DAY}) — stopping")
             break

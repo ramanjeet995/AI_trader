@@ -31,7 +31,9 @@
       "Bash(git -C \"F:/Projects/Canada/New folder\" commit -m \"Add CATALYST mode: 11 AM ET event-driven gap-and-go strategy with Day 2 force-exit\")",
       "Bash(git -C \"F:/Projects/Canada/New folder\" commit -m \"Add human-readable scan_log.md alongside JSON log\")",
       "Bash(SKIP_TIME_GUARD=true MODE=CATALYST python main.py)",
-      "Bash(git -C \"F:/Projects/Canada/New folder\" commit -m \"Catalyst: defensively pick yesterday's close by ET date, not blind iloc[-2]\")"
+      "Bash(git -C \"F:/Projects/Canada/New folder\" commit -m \"Catalyst: defensively pick yesterday's close by ET date, not blind iloc[-2]\")",
+      "Bash(MODE=FULL python main.py)",
+      "Bash(git -C \"F:/Projects/Canada/New folder\" commit -m \"Always scan + log on every run, gate ONLY order placement on time window\")"
     ]
   }
 }
