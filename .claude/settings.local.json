@@ -29,7 +29,9 @@
       "Bash(git -C \"F:/Projects/Canada/New folder\" log --pretty=format:\"%h %ad %s\" --date=iso -8)",
       "Bash(python -c \"import strategy_catalyst, config as cfg; det={'current':107.90,'day_low':106.50,'day_high':110.50}; sig=strategy_catalyst.build_signal\\(det,100000,cfg\\); print\\(sig\\)\")",
       "Bash(git -C \"F:/Projects/Canada/New folder\" commit -m \"Add CATALYST mode: 11 AM ET event-driven gap-and-go strategy with Day 2 force-exit\")",
-      "Bash(git -C \"F:/Projects/Canada/New folder\" commit -m \"Add human-readable scan_log.md alongside JSON log\")"
+      "Bash(git -C \"F:/Projects/Canada/New folder\" commit -m \"Add human-readable scan_log.md alongside JSON log\")",
+      "Bash(SKIP_TIME_GUARD=true MODE=CATALYST python main.py)",
+      "Bash(git -C \"F:/Projects/Canada/New folder\" commit -m \"Catalyst: defensively pick yesterday's close by ET date, not blind iloc[-2]\")"
     ]
   }
 }

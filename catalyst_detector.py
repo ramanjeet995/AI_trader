@@ -77,8 +77,24 @@ def detect(
         result["reasons_against"].append("insufficient intraday/daily data")
         return result
 
-    yesterday_close = float(daily_df["close"].iloc[-2]) if len(daily_df) >= 2 else float(daily_df["close"].iloc[-1])
-    current         = float(intraday_df["close"].iloc[-1])
+    # Find yesterday's close defensively — use the most recent daily bar that
+    # is NOT today's date (in ET), to avoid mis-identifying the partial-today
+    # bar (which may or may not exist in Alpaca's response).
+    today_et = datetime.now(ET).date()
+    yesterday_close = None
+    for i in range(len(daily_df) - 1, -1, -1):
+        try:
+            bar_date = pd.to_datetime(daily_df.index[i]).date()
+            if bar_date < today_et:
+                yesterday_close = float(daily_df["close"].iloc[i])
+                break
+        except Exception:
+            continue
+    if yesterday_close is None:
+        # Fallback: assume index[-1] is the prior session
+        yesterday_close = float(daily_df["close"].iloc[-1])
+
+    current = float(intraday_df["close"].iloc[-1])
     day_high        = float(intraday_df["high"].max())
     day_low         = float(intraday_df["low"].min())
     gap_pct         = (current - yesterday_close) / yesterday_close * 100
