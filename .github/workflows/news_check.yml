@@ -53,7 +53,11 @@ jobs:
           restore-keys: earnings-
 
       - name: Install dependencies
-        run: pip install -r requirements.txt
+        run: |
+          # CPU-only torch is ~200MB vs ~900MB for the default CUDA build.
+          pip install --index-url https://download.pytorch.org/whl/cpu torch || \
+            echo "[warn] torch install failed — FinBERT will fall back to keyword sentiment"
+          pip install -r requirements.txt
 
       - name: Run news check
         env:
