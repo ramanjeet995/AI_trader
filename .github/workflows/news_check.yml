@@ -2,15 +2,16 @@ name: News Check (11/1/3 ET, DST-aware)
 
 on:
   schedule:
-    # 11 AM ET
-    - cron: "0 15 * * 1-5"   # EDT: 11 AM ET  | EST: 10 AM ET (skip)
-    - cron: "0 16 * * 1-5"   # EDT: 12 PM (skip) | EST: 11 AM ET
-    # 1 PM ET
-    - cron: "0 17 * * 1-5"   # EDT: 1 PM ET   | EST: 12 PM (skip)
-    - cron: "0 18 * * 1-5"   # EDT: 2 PM (skip) | EST: 1 PM ET
-    # 3 PM ET
-    - cron: "0 19 * * 1-5"   # EDT: 3 PM ET   | EST: 2 PM (skip)
-    - cron: "0 20 * * 1-5"   # EDT: 4 PM (skip) | EST: 3 PM ET
+    # Fire 7 min BEFORE target on the :53 minute (less congested than :00).
+    # 11 AM ET target — fire at 10:53 AM ET
+    - cron: "53 14 * * 1-5"  # EDT: 10:53 AM ET  | EST: 9:53 AM ET (skip)
+    - cron: "53 15 * * 1-5"  # EDT: 11:53 AM (skip) | EST: 10:53 AM ET
+    # 1 PM ET target — fire at 12:53 PM ET
+    - cron: "53 16 * * 1-5"  # EDT: 12:53 PM ET  | EST: 11:53 AM ET (skip)
+    - cron: "53 17 * * 1-5"  # EDT: 1:53 PM (skip) | EST: 12:53 PM ET
+    # 3 PM ET target — fire at 2:53 PM ET
+    - cron: "53 18 * * 1-5"  # EDT: 2:53 PM ET   | EST: 1:53 PM ET (skip)
+    - cron: "53 19 * * 1-5"  # EDT: 3:53 PM (skip) | EST: 2:53 PM ET
 
   workflow_dispatch:
     inputs:

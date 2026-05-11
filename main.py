@@ -65,7 +65,7 @@ MAX_MD_ENTRIES     = 100   # readable file, keep more history
 FULL_TARGET_ET_HOURS     = [9, 16]            # 9 AM and 4:30 PM (use 16, tolerance covers 16:30)
 NEWS_TARGET_ET_HOURS     = [11, 13, 15]
 CATALYST_TARGET_ET_HOURS = [11]               # 11 AM ET (after initial volatility settles)
-TIME_TOLERANCE_MIN       = 45
+TIME_TOLERANCE_MIN       = 60
 
 
 # ── DST-aware schedule guard ─────────────────────────────────────────────────

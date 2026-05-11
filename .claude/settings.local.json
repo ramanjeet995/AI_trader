@@ -34,7 +34,8 @@
       "Bash(git -C \"F:/Projects/Canada/New folder\" commit -m \"Catalyst: defensively pick yesterday's close by ET date, not blind iloc[-2]\")",
       "Bash(MODE=FULL python main.py)",
       "Bash(git -C \"F:/Projects/Canada/New folder\" commit -m \"Always scan + log on every run, gate ONLY order placement on time window\")",
-      "Bash(git -C \"F:/Projects/Canada/New folder\" commit -m \"Suppress yfinance 404 noise for ETFs \\(they have no earnings to fetch\\)\")"
+      "Bash(git -C \"F:/Projects/Canada/New folder\" commit -m \"Suppress yfinance 404 noise for ETFs \\(they have no earnings to fetch\\)\")",
+      "Bash(git -C \"F:/Projects/Canada/New folder\" commit -m \"Fire crons 7 min early on :53 \\(less congested\\), widen tolerance to 60 min\")"
     ]
   }
 }

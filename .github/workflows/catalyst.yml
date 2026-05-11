@@ -2,9 +2,9 @@ name: Catalyst Scan (11 AM ET, DST-aware)
 
 on:
   schedule:
-    # 11 AM ET — after the initial volatility from the open settles
-    - cron: "0 15 * * 1-5"   # EDT: 11 AM ET   | EST: 10 AM ET (skip)
-    - cron: "0 16 * * 1-5"   # EDT: 12 PM (skip) | EST: 11 AM ET
+    # 11 AM ET target — fire at 10:53 AM ET (7 min early, :53 less congested)
+    - cron: "53 14 * * 1-5"  # EDT: 10:53 AM ET  | EST: 9:53 AM ET (skip)
+    - cron: "53 15 * * 1-5"  # EDT: 11:53 AM (skip) | EST: 10:53 AM ET
 
   workflow_dispatch:
     inputs:
