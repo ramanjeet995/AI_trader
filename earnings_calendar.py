@@ -18,12 +18,20 @@ try:
     # Suppress yfinance HTTP 404 noise (ETFs have no fundamentals = expected)
     import logging
     logging.getLogger("yfinance").setLevel(logging.CRITICAL)
+    logging.getLogger("yfinance.scrapers").setLevel(logging.CRITICAL)
 except ImportError:
     YF_AVAILABLE = False
 
 
 CACHE_FILE   = Path(__file__).parent / "earnings_cache.json"
 CACHE_TTL    = timedelta(days=7)
+
+# Tickers known to have no earnings (ETFs / funds). Skip yfinance for these.
+ETF_SYMBOLS = {
+    "SPY", "QQQ", "IWM", "DIA",
+    "XLK", "XLF", "XLE", "XLV", "XLI", "XLB", "XLU", "XLRE",
+    "GLD", "SLV", "GDX", "GDXJ", "USO", "UNG", "DBO",
+}
 
 
 def _load_cache() -> dict:
@@ -56,11 +64,16 @@ def _fetch_next_earnings(symbol: str) -> str | None:
     """Return next earnings date as ISO string, or None if unknown."""
     if not YF_AVAILABLE:
         return None
+    # ETFs don't have earnings — skip the lookup to avoid 404 spam
+    if symbol in ETF_SYMBOLS:
+        return None
     try:
-        t = yf.Ticker(symbol)
-        # .calendar is a dict; 'Earnings Date' is a list of date(s).
-        # Falls back gracefully for ETFs (no earnings) — returns None.
-        cal = t.calendar
+        import io, contextlib
+        # Suppress any stderr noise yfinance prints directly (HTTP 404s etc.)
+        buf = io.StringIO()
+        with contextlib.redirect_stderr(buf):
+            t = yf.Ticker(symbol)
+            cal = t.calendar
         if not cal or "Earnings Date" not in cal:
             return None
         dates = cal["Earnings Date"]
