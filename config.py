@@ -82,6 +82,24 @@ INTRADAY_GAP_TOLERANCE_PCT = 1.0    # skip if today's price gapped >1% below sig
 # ── Sentiment backend ────────────────────────────────────────────────────────
 USE_FINBERT = True   # FinBERT (real model) when available; falls back to keyword
 
+# ── Catalyst trade mode (event-driven, gap-and-go continuation) ──────────────
+# Triggers only when a real catalyst exists. Buys at 11 AM ET on stocks that
+# gapped up overnight and held the gap through the first 90 min of trading.
+# Held 1-2 days max, then force-closed.
+CATALYST_MIN_GAP_PCT             = 3.0    # min gap up % (below = not a real catalyst)
+CATALYST_MAX_GAP_PCT             = 12.0   # max gap up % (above = over-extended, fade risk)
+CATALYST_MIN_NEWS_SCORE          = 2      # need sent_score >= +2
+CATALYST_EARNINGS_LOOKBACK_DAYS  = 2      # earnings within last N days counts as catalyst
+CATALYST_VOLUME_MULT             = 2.0    # vol pace today must be N× normal pace by 11 AM
+CATALYST_MIN_FACTORS             = 3      # need this many factors to fire
+CATALYST_STOP_PCT                = 1.8    # tight stop (% below entry)
+CATALYST_TARGET_PCT              = 4.5    # target % above entry
+CATALYST_SIZE_FACTOR             = 0.5    # half of normal swing risk
+CATALYST_MAX_POSITION_PCT        = 0.05   # cap any catalyst position at 5% of portfolio
+CATALYST_MAX_NEW_PER_DAY         = 2      # max new catalyst trades per day
+CATALYST_FORCE_EXIT_DAYS         = 2      # force-close catalyst positions after N trading days
+CATALYST_ORDER_PREFIX            = "CAT"  # client_order_id prefix to identify catalyst trades
+
 # ── Per-symbol sector classification (used for per-sector position caps) ─────
 TICKER_SECTOR = {
     # Tech

@@ -1,0 +1,74 @@
+name: Catalyst Scan (11 AM ET, DST-aware)
+
+on:
+  schedule:
+    # 11 AM ET — after the initial volatility from the open settles
+    - cron: "0 15 * * 1-5"   # EDT: 11 AM ET   | EST: 10 AM ET (skip)
+    - cron: "0 16 * * 1-5"   # EDT: 12 PM (skip) | EST: 11 AM ET
+
+  workflow_dispatch:
+    inputs:
+      skip_time_guard:
+        description: "Skip ET time-window check (run anytime)"
+        type: boolean
+        default: true
+
+jobs:
+  catalyst:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Cache pip
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/pip
+          key: pip-${{ hashFiles('requirements.txt') }}
+
+      - name: Cache HuggingFace models (FinBERT)
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/huggingface
+          key: hf-finbert-v1
+
+      - name: Cache earnings calendar
+        uses: actions/cache@v4
+        with:
+          path: earnings_cache.json
+          key: earnings-${{ github.run_id }}
+          restore-keys: earnings-
+
+      - name: Install dependencies
+        run: |
+          pip install --index-url https://download.pytorch.org/whl/cpu torch || \
+            echo "[warn] torch install failed — FinBERT will fall back to keyword sentiment"
+          pip install -r requirements.txt
+
+      - name: Run catalyst scan
+        env:
+          ALPACA_API_KEY: ${{ secrets.ALPACA_API_KEY }}
+          ALPACA_API_SECRET: ${{ secrets.ALPACA_API_SECRET }}
+          ALPACA_PAPER: "true"
+          GMAIL_USER: ${{ secrets.GMAIL_USER }}
+          GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
+          NOTIFY_EMAIL: "rfgenius95@gmail.com"
+          MODE: "CATALYST"
+          SKIP_TIME_GUARD: ${{ inputs.skip_time_guard || 'false' }}
+        run: python main.py
+
+      - name: Commit scan log
+        run: |
+          git config user.name "AI Trader Bot"
+          git config user.email "bot@aitrader.com"
+          git pull --rebase origin main || true
+          git add scan_log.json
+          git diff --staged --quiet || git commit -m "catalyst scan log update [skip ci]"
+          git push

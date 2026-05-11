@@ -36,7 +36,10 @@ from order_flow import order_flow_score
 from sentiment import get_sentiment, sentiment_label
 from sector_rotation import analyze as sector_analyze, print_rotation
 from risk import position_size
-from executor import execute, get_open_positions, get_buying_power, is_market_open
+from executor import execute, get_open_positions, get_buying_power, is_market_open, \
+    list_catalyst_positions, close_position
+import catalyst_detector
+import strategy_catalyst
 from notifier import send_no_setup, send_signals, send
 import volume_source
 import earnings_calendar
@@ -57,9 +60,10 @@ LOG_FILE           = Path(__file__).parent / "scan_log.json"
 MAX_LOG_ENTRIES    = 60
 
 # Target ET hours for each mode (with ±45-min tolerance)
-FULL_TARGET_ET_HOURS = [9, 16]            # 9 AM and 4:30 PM (use 16, tolerance covers 16:30)
-NEWS_TARGET_ET_HOURS = [11, 13, 15]
-TIME_TOLERANCE_MIN   = 45
+FULL_TARGET_ET_HOURS     = [9, 16]            # 9 AM and 4:30 PM (use 16, tolerance covers 16:30)
+NEWS_TARGET_ET_HOURS     = [11, 13, 15]
+CATALYST_TARGET_ET_HOURS = [11]               # 11 AM ET (after initial volatility settles)
+TIME_TOLERANCE_MIN       = 45
 
 
 # ── DST-aware schedule guard ─────────────────────────────────────────────────
@@ -721,10 +725,231 @@ def run_news_scan():
     })
 
 
+# ── CATALYST SCAN (event-driven, runs at 11 AM ET) ───────────────────────────
+
+def _days_since_earnings(symbol: str, earnings_cache: dict) -> int | None:
+    """Days since last earnings (0 = today/yesterday). None if unknown."""
+    entry = earnings_cache.get(symbol)
+    if not entry or not entry.get("next_earnings"):
+        return None
+    try:
+        next_date = datetime.fromisoformat(entry["next_earnings"])
+        if next_date.tzinfo:
+            next_date = next_date.replace(tzinfo=None)
+        delta = (next_date - datetime.utcnow()).days
+        # If next earnings is in past, delta is negative — that's days_since
+        if delta < 0:
+            return -delta
+        return None
+    except Exception:
+        return None
+
+
+def _force_exit_stale_catalyst_positions(trade_client: TradingClient, force_days: int) -> list:
+    """Close catalyst positions older than N trading days."""
+    closed = []
+    cats   = list_catalyst_positions(trade_client, cfg.CATALYST_ORDER_PREFIX)
+    today  = datetime.now(ET).date()
+    for c in cats:
+        try:
+            filled = c["filled_at"]
+            if hasattr(filled, "date"):
+                age_days = (today - filled.date()).days
+            else:
+                age_days = 0
+        except Exception:
+            age_days = 0
+        if age_days >= force_days:
+            r = close_position(c["symbol"], trade_client)
+            closed.append({**c, "age_days": age_days, "result": r})
+            print(f"  [force-exit] {c['symbol']} age={age_days}d -> {r['status']}")
+    return closed
+
+
+def run_catalyst_scan():
+    in_window, et_str = in_target_window(CATALYST_TARGET_ET_HOURS)
+    if not in_window:
+        print(f"  Skipping CATALYST scan — current ET time {et_str} not in target window "
+              f"(target: {CATALYST_TARGET_ET_HOURS} ET ±{TIME_TOLERANCE_MIN}min)")
+        return
+
+    print(f"\n{'='*60}")
+    print(f"  CATALYST SCAN  -  {et_str}")
+    print(f"{'='*60}\n")
+
+    data_client  = StockHistoricalDataClient(API_KEY, API_SECRET)
+    news_client  = NewsClient(API_KEY, API_SECRET)
+    trade_client = TradingClient(API_KEY, API_SECRET, paper=PAPER)
+
+    account       = trade_client.get_account()
+    account_value = float(account.portfolio_value)
+    buying_power  = float(account.buying_power)
+    print(f"  Account value : ${account_value:,.2f}")
+    print(f"  Buying power  : ${buying_power:,.2f}\n")
+
+    # Force-exit stale catalyst positions FIRST so we free up slots & BP
+    print(f"  Checking for stale catalyst positions to force-close...")
+    closed = _force_exit_stale_catalyst_positions(trade_client, cfg.CATALYST_FORCE_EXIT_DAYS)
+    if closed:
+        print(f"  Force-closed {len(closed)} catalyst position(s)\n")
+
+    market_open, mkt_reason = is_market_open(trade_client)
+    print(f"  Market status : {mkt_reason}")
+    if not market_open:
+        print(f"  Market closed — skipping catalyst entries\n")
+        return
+
+    # Safety gates
+    vix_assessment = vix_gate.assess(vix_gate.get_vix(), cfg)
+    print(f"  VIX           : {vix_assessment['reason']}")
+    if vix_assessment["block"]:
+        print(f"  SAFETY BLOCK — no catalyst entries\n")
+        return
+
+    # Fetch daily bars (for gap calc + volume baseline)
+    all_symbols = list(set(cfg.WATCHLIST + [cfg.BENCHMARK]))
+    print(f"  Fetching daily bars for {len(all_symbols)} symbols...")
+    all_bars = fetch_bars(all_symbols, data_client)
+
+    benchmark_raw = all_bars.get(cfg.BENCHMARK)
+    if benchmark_raw is None:
+        print("  ERROR: could not fetch SPY"); return
+    benchmark_df = indicators.add_all(benchmark_raw, cfg)
+    spy_regime   = classify(benchmark_df)
+    print(f"  SPY regime    : {spy_regime.value}")
+    if spy_regime == Regime.BEAR:
+        print(f"  Skipping catalyst scan in BEAR regime\n")
+        return
+
+    earnings_cache = earnings_calendar.refresh_cache(cfg.WATCHLIST)
+
+    open_positions  = get_open_positions(trade_client)
+    new_today_count = _today_new_position_count(trade_client)
+    print(f"  Holding ({len(open_positions)}/{cfg.MAX_CONCURRENT_POSITIONS}): "
+          f"{', '.join(sorted(open_positions)) if open_positions else 'nothing'}")
+    print(f"  New positions today: {new_today_count}/{cfg.MAX_NEW_PER_DAY}\n")
+
+    candidates          = []
+    cat_orders_this_run = 0
+    remaining_bp        = buying_power
+
+    print(f"  Scanning {len(cfg.WATCHLIST)} symbols for catalysts...\n")
+    for symbol in cfg.WATCHLIST:
+        if symbol in open_positions:
+            continue
+        if symbol == cfg.BENCHMARK:
+            continue
+        daily_raw = all_bars.get(symbol)
+        if daily_raw is None or len(daily_raw) < 25:
+            continue
+        daily_df = indicators.add_all(daily_raw, cfg)
+
+        # Fetch today's 15-min bars
+        intraday_df = catalyst_detector.fetch_today_intraday(symbol, data_client)
+        if intraday_df is None or intraday_df.empty:
+            continue
+
+        # News sentiment (24h window)
+        news_score, _ = get_sentiment(symbol, news_client, days=1)
+        earn_days_ago = _days_since_earnings(symbol, earnings_cache)
+
+        detection = catalyst_detector.detect(
+            symbol, daily_df, intraday_df, news_score, earn_days_ago, cfg)
+
+        if detection["fires"]:
+            detection["symbol"]     = symbol
+            detection["news_score"] = news_score
+            detection["earn_days"]  = earn_days_ago
+            candidates.append(detection)
+            print(f"  [CATALYST] {symbol}: {', '.join(detection['factors'])}")
+
+    if not candidates:
+        print("\n  No catalyst setups found.")
+        save_log({
+            "timestamp": datetime.utcnow().isoformat(),
+            "mode": "CATALYST", "spy_regime": spy_regime.value,
+            "signals": [], "force_closed": [{"symbol": c["symbol"]} for c in closed],
+        })
+        return
+
+    # Sort by score desc, then by news_score desc
+    candidates.sort(key=lambda c: (-c["score"], -c["news_score"]))
+
+    print(f"\n  {len(candidates)} catalyst setup(s) — placing orders\n")
+    placed   = []
+
+    for det in candidates:
+        if cat_orders_this_run >= cfg.CATALYST_MAX_NEW_PER_DAY:
+            print(f"  Hit catalyst daily cap ({cfg.CATALYST_MAX_NEW_PER_DAY}) — stopping")
+            break
+        if (len(open_positions) + cat_orders_this_run) >= cfg.MAX_CONCURRENT_POSITIONS:
+            print(f"  Concurrent position cap reached — stopping")
+            break
+
+        sig = strategy_catalyst.build_signal(det, account_value, cfg)
+        if not sig.get("valid"):
+            print(f"  {det['symbol']}: SKIP — {sig.get('reason', '')}")
+            continue
+
+        # Apply VIX size factor
+        if vix_assessment["size_factor"] < 1.0:
+            sig["shares"]   = max(1, int(sig["shares"] * vix_assessment["size_factor"]))
+            sig["notional"] = sig["shares"] * sig["entry"]
+
+        notional = sig["notional"]
+        if notional > remaining_bp:
+            print(f"  {det['symbol']}: SKIP — insufficient BP (need ${notional:,.0f}, have ${remaining_bp:,.0f})")
+            continue
+
+        symbol     = det["symbol"]
+        signal_raw = {"symbol": symbol, "signal": "BUY",
+                      "entry": sig["entry"], "stop": sig["stop"],
+                      "target": sig["target"]}
+        pos        = {"shares": sig["shares"], "notional": sig["notional"],
+                      "risk_dollars": sig["risk_dollars"],
+                      "target_risk": sig["target_risk"],
+                      "r1_target": sig["entry"] + (sig["entry"] - sig["stop"]),
+                      "r2_target": sig["target"],
+                      "capped": False}
+        client_id  = f"{cfg.CATALYST_ORDER_PREFIX}-{symbol}-{datetime.utcnow().strftime('%Y%m%d%H%M%S')}"
+
+        result = execute(signal_raw, pos, trade_client,
+                         remaining_bp=remaining_bp, client_order_id=client_id)
+        print(f"  {symbol}: entry=${sig['entry']} stop=${sig['stop']} "
+              f"target=${sig['target']} shares={sig['shares']} "
+              f"risk=${sig['risk_dollars']:.2f} -> {result['status']}")
+
+        placed.append({
+            "symbol": symbol, "strategy": "CATALYST", "signal": "BUY",
+            "entry": sig["entry"], "stop": sig["stop"], "target": sig["target"],
+            "shares": sig["shares"], "notional": sig["notional"],
+            "risk_$": sig["risk_dollars"], "factors": det["factors"],
+            "gap_pct": det["gap_pct"], "news_score": det["news_score"],
+            "earn_days_ago": det["earn_days"],
+            "order_status": f"{result['status']} {result.get('order_id') or result.get('reason','')}".strip(),
+            "client_order_id": client_id,
+        })
+
+        if result["status"] == "PLACED":
+            remaining_bp        -= notional
+            cat_orders_this_run += 1
+
+    print(f"\n  Catalyst scan complete — {cat_orders_this_run} new order(s) placed")
+    save_log({
+        "timestamp": datetime.utcnow().isoformat(),
+        "mode": "CATALYST", "spy_regime": spy_regime.value,
+        "vix": vix_assessment.get("vix"),
+        "signals": placed,
+        "force_closed": [{"symbol": c["symbol"], "age_days": c["age_days"]} for c in closed],
+    })
+
+
 # ── Entry point ───────────────────────────────────────────────────────────────
 
 if __name__ == "__main__":
     if MODE == "NEWS":
         run_news_scan()
+    elif MODE == "CATALYST":
+        run_catalyst_scan()
     else:
         run_full_scan()

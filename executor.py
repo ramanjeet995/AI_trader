@@ -47,8 +47,52 @@ def is_market_open(trade_client: TradingClient) -> tuple[bool, str]:
         return True, f"clock check failed: {e}"
 
 
+def close_position(symbol: str, trade_client: TradingClient) -> dict:
+    """Market-close a position (used for catalyst force-exit on Day 2)."""
+    try:
+        order = trade_client.close_position(symbol)
+        return {"status": "CLOSED", "order_id": str(order.id), "symbol": symbol}
+    except Exception as e:
+        return {"status": "ERROR", "reason": str(e), "symbol": symbol}
+
+
+def list_catalyst_positions(trade_client: TradingClient, prefix: str) -> list[dict]:
+    """
+    Find currently-held positions opened by the catalyst mode (by inspecting
+    historical orders' client_order_id prefix). Returns [{symbol, entry_date}].
+    """
+    try:
+        from alpaca.trading.requests import GetOrdersRequest
+        from alpaca.trading.enums import QueryOrderStatus
+        from datetime import datetime, timedelta
+
+        # Look at last 10 days of filled orders
+        since  = datetime.utcnow() - timedelta(days=10)
+        orders = trade_client.get_orders(GetOrdersRequest(
+            status=QueryOrderStatus.CLOSED, after=since, limit=200,
+        ))
+        cat_orders = [o for o in orders
+                      if o.client_order_id and o.client_order_id.startswith(prefix + "-")
+                      and str(o.side).endswith("BUY")
+                      and str(o.status).endswith("FILLED")]
+
+        held = {p.symbol for p in trade_client.get_all_positions()}
+        out  = []
+        for o in cat_orders:
+            if o.symbol in held:
+                out.append({
+                    "symbol"     : o.symbol,
+                    "filled_at"  : o.filled_at,
+                    "client_id"  : o.client_order_id,
+                })
+        return out
+    except Exception:
+        return []
+
+
 def execute(signal: dict, pos: dict, trade_client: TradingClient,
-            remaining_bp: float | None = None) -> dict:
+            remaining_bp: float | None = None,
+            client_order_id: str | None = None) -> dict:
     """
     signal       : output from strategies.scan() with 'symbol' attached
     pos          : output from risk.position_size()
@@ -81,7 +125,7 @@ def execute(signal: dict, pos: dict, trade_client: TradingClient,
     try:
         # GTC so the take-profit + stop-loss legs survive past session close.
         # DAY would orphan the position overnight (legs cancel at 4PM ET).
-        order_req = MarketOrderRequest(
+        order_kwargs = dict(
             symbol        = symbol,
             qty           = shares,
             side          = OrderSide.BUY,
@@ -90,6 +134,9 @@ def execute(signal: dict, pos: dict, trade_client: TradingClient,
             take_profit   = TakeProfitRequest(limit_price=round(take_profit_price, 2)),
             stop_loss     = StopLossRequest(stop_price=round(stop, 2)),
         )
+        if client_order_id:
+            order_kwargs["client_order_id"] = client_order_id
+        order_req = MarketOrderRequest(**order_kwargs)
         order = trade_client.submit_order(order_req)
         return {
             "status"  : "PLACED",

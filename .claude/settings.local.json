@@ -21,7 +21,14 @@
       "Bash(gh run *)",
       "Bash(curl -s \"https://api.github.com/repos/ramanjeet995/AI_trader/actions/runs?per_page=10\")",
       "Bash(curl -sS \"https://api.github.com/repos/ramanjeet995/AI_trader/actions/runs?per_page=10\")",
-      "Bash(git -C \"F:/Projects/Canada/New folder\" commit -m \"Use CPU-only torch in CI: 4x smaller, faster install, more reliable cron\")"
+      "Bash(git -C \"F:/Projects/Canada/New folder\" commit -m \"Use CPU-only torch in CI: 4x smaller, faster install, more reliable cron\")",
+      "Bash(git -C \"F:/Projects/Canada/New folder\" pull --rebase)",
+      "Bash(git -C \"F:/Projects/Canada/New folder\" log --pretty=format:\"%h %ad %s\" --date=iso -10)",
+      "Bash(git -C \"F:/Projects/Canada/New folder\" stash)",
+      "Bash(git -C \"F:/Projects/Canada/New folder\" stash pop)",
+      "Bash(git -C \"F:/Projects/Canada/New folder\" log --pretty=format:\"%h %ad %s\" --date=iso -8)",
+      "Bash(python -c \"import strategy_catalyst, config as cfg; det={'current':107.90,'day_low':106.50,'day_high':110.50}; sig=strategy_catalyst.build_signal\\(det,100000,cfg\\); print\\(sig\\)\")",
+      "Bash(git -C \"F:/Projects/Canada/New folder\" commit -m \"Add CATALYST mode: 11 AM ET event-driven gap-and-go strategy with Day 2 force-exit\")"
     ]
   }
 }
