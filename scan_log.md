@@ -1,7 +1,23 @@
 # AI Trader — Scan Log
 
 Newest scans first. Each entry shows what the scanner found and what it did.
-_Last updated: 2026-05-12 15:41 UTC_
+_Last updated: 2026-05-12 15:49 UTC_
+
+## 2026-05-12 15:49 UTC — NEWS scan
+SPY: **BULL**
+
+
+_No setups found._
+<details><summary>Notable news</summary>
+
+- ✓ **QCOM** (POSITIVE, +2)
+- ✗ **INTC** (NEGATIVE, -2)
+- ✗ **TSLA** (NEGATIVE, -2)
+- ✗ **QQQ** (NEGATIVE, -2)
+
+</details>
+
+---
 
 ## 2026-05-12 15:41 UTC — FULL scan
 SPY: **BULL** | Posture: RISK-ON | VIX: 18.4 | SPY ATR%: 1.01
