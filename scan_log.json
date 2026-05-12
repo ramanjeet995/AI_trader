@@ -2111,5 +2111,183 @@
         ]
       }
     ]
+  },
+  {
+    "timestamp": "2026-05-12T15:41:58.537030",
+    "mode": "FULL",
+    "spy_regime": "BULL",
+    "posture": "RISK-ON",
+    "vix": 18.3799991607666,
+    "spy_atr_pct": 1.01,
+    "in_window": true,
+    "market_open": true,
+    "data_feed": "iex",
+    "yfinance_patched": "0/60",
+    "sentiment_backend": "finbert",
+    "earnings_cache_size": 40,
+    "open_positions": [],
+    "new_today": 0,
+    "filter_stats": {
+      "scanned": 59,
+      "no_data": 0,
+      "held": 0,
+      "market_volatile": 0,
+      "earnings_blackout": 0,
+      "failed_filters": 50,
+      "obv_distribution": 3,
+      "no_strategy_signal": 6,
+      "of_or_sent_reject": 0,
+      "sector_misalign": 0,
+      "passed_all": 0
+    },
+    "sectors_top3": [
+      {
+        "ticker": "USO",
+        "sector": "Crude Oil",
+        "ret_20d": 17.19,
+        "rs": 3.61,
+        "obv": "ACCUMULATION",
+        "above_ema": "True",
+        "score": 39.08
+      },
+      {
+        "ticker": "XLK",
+        "sector": "Technology",
+        "ret_20d": 15.18,
+        "rs": 3.19,
+        "obv": "ACCUMULATION",
+        "above_ema": "True",
+        "score": 34.85
+      },
+      {
+        "ticker": "SLV",
+        "sector": "Silver",
+        "ret_20d": 5.9,
+        "rs": 1.24,
+        "obv": "STEALTH_SELL",
+        "above_ema": "True",
+        "score": 11.39
+      }
+    ],
+    "sectors_bottom3": [
+      {
+        "ticker": "XLF",
+        "sector": "Financials",
+        "ret_20d": -1.74,
+        "rs": -0.37,
+        "obv": "DISTRIBUTION",
+        "above_ema": "False",
+        "score": -6.66
+      },
+      {
+        "ticker": "XLU",
+        "sector": "Utilities",
+        "ret_20d": -2.13,
+        "rs": -0.45,
+        "obv": "DISTRIBUTION",
+        "above_ema": "False",
+        "score": -7.47
+      },
+      {
+        "ticker": "GLD",
+        "sector": "Gold",
+        "ret_20d": -2.72,
+        "rs": -0.57,
+        "obv": "DISTRIBUTION",
+        "above_ema": "False",
+        "score": -8.71
+      }
+    ],
+    "signals": [],
+    "top_news": [
+      {
+        "symbol": "QCOM",
+        "sentiment": "POSITIVE",
+        "score": 3,
+        "headlines": [
+          "[~] Watching QUALCOMM; Shares See Volume To The Downside, Traders Circulate Substack",
+          "[~] Box CEO Aaron Levie Predicts Huge Consulting Gold Rush As AI Agents 'Rewire' Bus"
+        ]
+      },
+      {
+        "symbol": "AMD",
+        "sentiment": "POSITIVE",
+        "score": 2,
+        "headlines": [
+          "[+] Rackspace Keeps Climbing As AMD Deal And Earnings Fuel Momentum",
+          "[~] Nvidia Isn't The Most Overbought Tech Stock Right Now \u2014 Alphabet, AMD Are"
+        ]
+      },
+      {
+        "symbol": "CRM",
+        "sentiment": "POSITIVE",
+        "score": 2,
+        "headlines": [
+          "[+] Pearson Expands Partnership With Salesforce Over AI, Skills Development Througho",
+          "[~] Box CEO Aaron Levie Predicts Huge Consulting Gold Rush As AI Agents 'Rewire' Bus"
+        ]
+      },
+      {
+        "symbol": "LLY",
+        "sentiment": "POSITIVE",
+        "score": 2,
+        "headlines": [
+          "[~] Watching Eli Lilly; Hearing Zacks Tech Innovator Newsletter Mentions Stock As A ",
+          "[~] Roche, Eli Lilly Alzheimer's Blood Test Cleared In Europe For Earlier Detection"
+        ]
+      },
+      {
+        "symbol": "MRK",
+        "sentiment": "POSITIVE",
+        "score": 2,
+        "headlines": [
+          "[~] Merck Announces New Research From 100+ Abstracts Across 25+ Types Of Cancer From",
+          "[+] Inhibrx Cancer Treatment Shows High Response Rates In Head And Neck Cancer Study"
+        ]
+      },
+      {
+        "symbol": "GOOGL",
+        "sentiment": "NEUTRAL",
+        "score": 1,
+        "headlines": [
+          "[~] Claude Grew 10x Faster Than ChatGPT In April \u2014 Is OpenAI Losing AI Power Users?",
+          "[-] Why Is Broadcom Stock Falling On Tuesday?"
+        ]
+      },
+      {
+        "symbol": "ADBE",
+        "sentiment": "NEUTRAL",
+        "score": 1,
+        "headlines": [
+          "[+] Consumer Tech News (May 4- 8): Big Tech Gain On AI Momentum, Pentagon Awards $50"
+        ]
+      },
+      {
+        "symbol": "JPM",
+        "sentiment": "NEUTRAL",
+        "score": 1,
+        "headlines": [
+          "[~] Live On Bloomberg TV, JPMorgan CEO Jamie Dimon Says Europe, UK Need To Know What",
+          "[~] Live On Bloomberg TV, JPMorgan CEO Jamie Dimon Says Cyber Is Our Biggest Risk"
+        ]
+      },
+      {
+        "symbol": "V",
+        "sentiment": "NEUTRAL",
+        "score": 1,
+        "headlines": [
+          "[+] Truist Securities Maintains Buy on Visa, Raises Price Target to $371",
+          "[~] Elon Musk Joins Trump's China Trip \u2014 Nvidia CEO Jensen Huang Not Invited"
+        ]
+      },
+      {
+        "symbol": "JNJ",
+        "sentiment": "NEUTRAL",
+        "score": 1,
+        "headlines": [
+          "[+] Johnson & Johnson Announces Global Launch Of Shockwave C2 Aero Coronary IVL Cath"
+        ]
+      }
+    ]
   }
 ]

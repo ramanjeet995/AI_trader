@@ -1,7 +1,37 @@
 # AI Trader — Scan Log
 
 Newest scans first. Each entry shows what the scanner found and what it did.
-_Last updated: 2026-05-12 01:04 UTC_
+_Last updated: 2026-05-12 15:41 UTC_
+
+## 2026-05-12 15:41 UTC — FULL scan
+SPY: **BULL** | Posture: RISK-ON | VIX: 18.4 | SPY ATR%: 1.01
+
+**Run context:** Time window: IN · Market: OPEN · Data feed: IEX · yfinance vol: 0/60 · Sentiment: finbert · Earnings dates: 40 cached
+**New positions today:** 0
+
+**Sector rotation:**
+  - Hottest: Crude Oil (USO, +17.2%), Technology (XLK, +15.2%), Silver (SLV, +5.9%)
+  - Coldest: Financials (XLF, -1.7%), Utilities (XLU, -2.1%), Gold (GLD, -2.7%)
+
+**Scan funnel:**
+  - Scanned: 59
+  - Failed price/volume/ATR filter: 50
+  - OBV in distribution: 3
+  - No strategy fired: 6
+
+_No setups found._
+<details><summary>Notable news</summary>
+
+- ✓ **QCOM** (POSITIVE, +3)
+    - [~] Watching QUALCOMM; Shares See Volume To The Downside, Traders Circulate Substack
+- ✓ **AMD** (POSITIVE, +2)
+    - [+] Rackspace Keeps Climbing As AMD Deal And Earnings Fuel Momentum
+- ✓ **CRM** (POSITIVE, +2)
+    - [+] Pearson Expands Partnership With Salesforce Over AI, Skills Development Througho
+
+</details>
+
+---
 
 ## 2026-05-12 01:04 UTC — FULL scan
 SPY: **BULL** | Posture: RISK-ON | VIX: 18.4 | SPY ATR%: 1.01
