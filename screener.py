@@ -17,10 +17,22 @@ def passes_filters(df: pd.DataFrame, cfg) -> tuple[bool, str]:
     """
     last = df.iloc[-1]
 
-    # 1. Volume filter
-    avg_vol = last["vol_ma20"]
-    if pd.isna(avg_vol) or avg_vol < cfg.MIN_AVG_VOLUME:
-        return False, f"volume {avg_vol:,.0f} < {cfg.MIN_AVG_VOLUME:,}"
+    # 1. Volume filter — adapt threshold to data feed reality
+    #    IEX feed shows ~3% of consolidated tape. If yfinance volume patching
+    #    failed (Yahoo blocked the CI runner, etc.), our volume column is raw
+    #    IEX which is ~33x lower than reality. Scale the threshold accordingly
+    #    so we don't reject every liquid name on data-source nonsense.
+    avg_vol      = last["vol_ma20"]
+    is_patched   = bool(df.attrs.get("volume_patched", False))
+    feed_is_iex  = getattr(cfg, "DATA_FEED", "iex").lower() == "iex"
+    if feed_is_iex and not is_patched:
+        # IEX ≈ 3% of tape, so a 1M-shares-real ticker shows ~30K on IEX
+        effective_min = cfg.MIN_AVG_VOLUME / 33.0
+    else:
+        effective_min = cfg.MIN_AVG_VOLUME
+
+    if pd.isna(avg_vol) or avg_vol < effective_min:
+        return False, f"volume {avg_vol:,.0f} < {effective_min:,.0f}"
 
     # 2. ATR% filter
     atr_pct = last["atr_pct"]
