@@ -10,9 +10,18 @@ We compute the actual current ET time and skip if outside the target window.
 """
 
 import os
+import sys
 import json
 from datetime import datetime, timedelta
 from pathlib import Path
+
+# Force UTF-8 stdout on Windows so news headlines with unicode (hyphens,
+# em-dashes, etc.) don't crash the scan. Linux/GitHub Actions is UTF-8 already.
+try:
+    sys.stdout.reconfigure(encoding="utf-8", errors="replace")
+    sys.stderr.reconfigure(encoding="utf-8", errors="replace")
+except Exception:
+    pass
 
 try:
     from zoneinfo import ZoneInfo
@@ -131,9 +140,71 @@ def _save_human_log(logs: list):
         bits = [f"SPY: **{regime}**"]
         if posture: bits.append(f"Posture: {posture}")
         if vix is not None: bits.append(f"VIX: {vix:.1f}")
+        atr  = entry.get("spy_atr_pct")
+        if atr is not None: bits.append(f"SPY ATR%: {atr}")
         if safety: bits.append(f"SAFETY: {safety}")
         lines.append(" | ".join(bits))
         lines.append("")
+
+        # Run-context (data sources, gates, account state)
+        in_win   = entry.get("in_window")
+        mkt_open = entry.get("market_open")
+        feed     = entry.get("data_feed")
+        patched  = entry.get("yfinance_patched")
+        sent_bk  = entry.get("sentiment_backend")
+        earn_n   = entry.get("earnings_cache_size")
+        holds    = entry.get("open_positions") or []
+        new_today = entry.get("new_today")
+        ctx = []
+        if in_win is not None:   ctx.append(f"Time window: {'IN' if in_win else 'OUT'}")
+        if mkt_open is not None: ctx.append(f"Market: {'OPEN' if mkt_open else 'CLOSED'}")
+        if feed:                 ctx.append(f"Data feed: {feed.upper()}")
+        if patched:              ctx.append(f"yfinance vol: {patched}")
+        if sent_bk:              ctx.append(f"Sentiment: {sent_bk}")
+        if earn_n is not None:   ctx.append(f"Earnings dates: {earn_n} cached")
+        if ctx:
+            lines.append("**Run context:** " + " · ".join(ctx))
+        if holds:
+            lines.append(f"**Holding** ({len(holds)}): {', '.join(holds)}")
+        if new_today is not None:
+            lines.append(f"**New positions today:** {new_today}")
+        lines.append("")
+
+        # Sector rotation snapshot
+        top3 = entry.get("sectors_top3") or []
+        bot3 = entry.get("sectors_bottom3") or []
+        if top3 or bot3:
+            lines.append("**Sector rotation:**")
+            if top3:
+                lines.append("  - Hottest: " + ", ".join(
+                    f"{s['sector']} ({s['ticker']}, {s['ret_20d']:+.1f}%)" for s in top3))
+            if bot3:
+                lines.append("  - Coldest: " + ", ".join(
+                    f"{s['sector']} ({s['ticker']}, {s['ret_20d']:+.1f}%)" for s in bot3))
+            lines.append("")
+
+        # Filter funnel (where the 60 symbols got rejected)
+        fs = entry.get("filter_stats") or {}
+        if fs:
+            lines.append("**Scan funnel:**")
+            funnel_order = [
+                ("scanned",            "Scanned"),
+                ("no_data",            "Insufficient data"),
+                ("held",               "Already holding"),
+                ("market_volatile",    "Market too volatile"),
+                ("earnings_blackout",  "Earnings within 5 days"),
+                ("failed_filters",    "Failed price/volume/ATR filter"),
+                ("obv_distribution",   "OBV in distribution"),
+                ("no_strategy_signal", "No strategy fired"),
+                ("of_or_sent_reject",  "Order flow / sentiment block"),
+                ("sector_misalign",    "Sector misaligned"),
+                ("passed_all",         "Passed all gates"),
+            ]
+            for k, label in funnel_order:
+                v = fs.get(k)
+                if v is not None and (k == "scanned" or v > 0):
+                    lines.append(f"  - {label}: {v}")
+            lines.append("")
 
         # Force-closed catalyst positions (CATALYST mode)
         if forced:
@@ -248,9 +319,13 @@ def fetch_bars(symbols: list[str], data_client) -> dict[str, pd.DataFrame]:
 
     # Patch volume from yfinance (full SIP tape) if enabled — Alpaca's IEX
     # volume is ~3% of tape and unreliable for breakout detection.
+    patched_count = 0
     if getattr(cfg, "USE_YFINANCE_VOLUME", False) and result:
-        n = volume_source.patch_volume(result, cfg.LOOKBACK_DAYS)
-        print(f"  [yfinance] patched volume for {n}/{len(result)} symbols")
+        patched_count = volume_source.patch_volume(result, cfg.LOOKBACK_DAYS)
+        print(f"  [yfinance] patched volume for {patched_count}/{len(result)} symbols")
+    # Expose patch count via a module-level variable so save_log can record it
+    globals()["_last_patch_count"] = patched_count
+    globals()["_last_patch_total"] = len(result)
     return result
 
 
@@ -378,12 +453,22 @@ def run_full_scan():
     print(f"  Scanning {len(cfg.WATCHLIST)} stocks...")
     signals      = []
     news_summary = []
+    # Track WHY symbols got rejected (so log shows the funnel)
+    filter_stats = {
+        "scanned": 0, "no_data": 0, "held": 0, "market_volatile": 0,
+        "earnings_blackout": 0, "failed_filters": 0,
+        "obv_distribution": 0, "no_strategy_signal": 0,
+        "of_or_sent_reject": 0, "sector_misalign": 0,
+        "passed_all": 0,
+    }
 
     for symbol in cfg.WATCHLIST:
         if symbol == cfg.BENCHMARK:
             continue
+        filter_stats["scanned"] += 1
         raw = all_bars.get(symbol)
         if raw is None or len(raw) < 60:
+            filter_stats["no_data"] += 1
             continue
         df = indicators.add_all(raw, cfg)
 
@@ -396,37 +481,48 @@ def run_full_scan():
             "headlines": sent_headlines[:2],
         })
 
-        if market_too_volatile or symbol in open_positions:
+        if symbol in open_positions:
+            filter_stats["held"] += 1
+            continue
+        if market_too_volatile:
+            filter_stats["market_volatile"] += 1
             continue
         # Earnings blackout
         in_bo, bo_reason = earnings_calendar.in_blackout(
             symbol, earnings_cache, cfg.EARNINGS_BLACKOUT_DAYS)
         if in_bo:
+            filter_stats["earnings_blackout"] += 1
             continue
         passed, _ = passes_filters(df, cfg)
         if not passed:
+            filter_stats["failed_filters"] += 1
             continue
 
         regime     = classify(df)
         rs         = relative_strength(df, benchmark_df)
         obv_status = indicators.obv_trend(df)
         if obv_status in ("DISTRIBUTION", "STEALTH_SELL"):
+            filter_stats["obv_distribution"] += 1
             continue
 
         signal = scan(df, regime, cfg)
         if signal is None:
+            filter_stats["no_strategy_signal"] += 1
             continue
         signal["symbol"] = symbol
 
         of_score, of_notes = order_flow_score(df)
         if of_score < 0 or sent_score <= -2:
+            filter_stats["of_or_sent_reject"] += 1
             continue
 
         # Sector rotation alignment — symbol's sector must have a non-negative score
         sector_score   = _sector_score(symbol, rotation)
         sector_aligned = sector_score >= 0 or sector_score == 999.0
         if cfg.REQUIRE_SECTOR_ALIGNMENT and not sector_aligned:
+            filter_stats["sector_misalign"] += 1
             continue
+        filter_stats["passed_all"] += 1
 
         pos = position_size(account_value, signal["entry"], signal["stop"], cfg)
         signals.append({
@@ -453,7 +549,19 @@ def run_full_scan():
         save_log({
             "timestamp": datetime.utcnow().isoformat(),
             "mode": "FULL", "spy_regime": spy_regime.value,
-            "posture": rotation["posture"], "signals": [],
+            "posture": rotation["posture"], "vix": vix_assessment.get("vix"),
+            "spy_atr_pct": round(spy_atr_pct, 2),
+            "in_window": in_window, "market_open": market_open,
+            "data_feed": cfg.DATA_FEED,
+            "yfinance_patched": f"{globals().get('_last_patch_count', 0)}/{globals().get('_last_patch_total', 0)}",
+            "sentiment_backend": "finbert" if getattr(cfg, "USE_FINBERT", False) else "keyword",
+            "earnings_cache_size": sum(1 for v in earnings_cache.values() if v.get("next_earnings")),
+            "open_positions": sorted(open_positions),
+            "new_today": new_today_count,
+            "filter_stats": filter_stats,
+            "sectors_top3": rotation["sectors"][:3],
+            "sectors_bottom3": rotation["sectors"][-3:],
+            "signals": [],
             "top_news": [{"symbol": n["symbol"], "sentiment": n["sentiment"],
                           "score": n["score"], "headlines": n["headlines"]}
                          for n in news_summary if n["score"] != 0][:10],
@@ -574,7 +682,18 @@ def run_full_scan():
     save_log({
         "timestamp": datetime.utcnow().isoformat(),
         "mode": "FULL", "spy_regime": spy_regime.value,
-        "posture": rotation["posture"],
+        "posture": rotation["posture"], "vix": vix_assessment.get("vix"),
+        "spy_atr_pct": round(spy_atr_pct, 2),
+        "in_window": in_window, "market_open": market_open,
+        "data_feed": cfg.DATA_FEED,
+        "yfinance_patched": f"{globals().get('_last_patch_count', 0)}/{globals().get('_last_patch_total', 0)}",
+        "sentiment_backend": "finbert" if getattr(cfg, "USE_FINBERT", False) else "keyword",
+        "earnings_cache_size": sum(1 for v in earnings_cache.values() if v.get("next_earnings")),
+        "open_positions": sorted(open_positions),
+        "new_today": new_today_count,
+        "filter_stats": filter_stats,
+        "sectors_top3": rotation["sectors"][:3],
+        "sectors_bottom3": rotation["sectors"][-3:],
         "signals": [{
             "symbol": s["symbol"], "strategy": s["strategy"], "confidence": s["confidence"],
             "signal": s["signal"], "entry": s["entry"], "stop": s["stop"], "target": s["2R"],

@@ -1931,5 +1931,185 @@
         "score": -3
       }
     ]
+  },
+  {
+    "timestamp": "2026-05-12T01:04:30.877050",
+    "mode": "FULL",
+    "spy_regime": "BULL",
+    "posture": "RISK-ON",
+    "vix": 18.3799991607666,
+    "spy_atr_pct": 1.01,
+    "in_window": true,
+    "market_open": false,
+    "data_feed": "iex",
+    "yfinance_patched": "0/60",
+    "sentiment_backend": "finbert",
+    "earnings_cache_size": 40,
+    "open_positions": [],
+    "new_today": 0,
+    "filter_stats": {
+      "scanned": 59,
+      "no_data": 0,
+      "held": 0,
+      "market_volatile": 0,
+      "earnings_blackout": 0,
+      "failed_filters": 50,
+      "obv_distribution": 4,
+      "no_strategy_signal": 5,
+      "of_or_sent_reject": 0,
+      "sector_misalign": 0,
+      "passed_all": 0
+    },
+    "sectors_top3": [
+      {
+        "ticker": "XLK",
+        "sector": "Technology",
+        "ret_20d": 20.28,
+        "rs": 3.14,
+        "obv": "ACCUMULATION",
+        "above_ema": "True",
+        "score": 34.41
+      },
+      {
+        "ticker": "USO",
+        "sector": "Crude Oil",
+        "ret_20d": 12.21,
+        "rs": 1.89,
+        "obv": "ACCUMULATION",
+        "above_ema": "True",
+        "score": 21.9
+      },
+      {
+        "ticker": "UNG",
+        "sector": "Natural Gas",
+        "ret_20d": 6.2,
+        "rs": 0.96,
+        "obv": "ACCUMULATION",
+        "above_ema": "True",
+        "score": 12.6
+      }
+    ],
+    "sectors_bottom3": [
+      {
+        "ticker": "XLF",
+        "sector": "Financials",
+        "ret_20d": -1.14,
+        "rs": -0.18,
+        "obv": "DISTRIBUTION",
+        "above_ema": "False",
+        "score": -4.76
+      },
+      {
+        "ticker": "XLU",
+        "sector": "Utilities",
+        "ret_20d": -2.81,
+        "rs": -0.43,
+        "obv": "DISTRIBUTION",
+        "above_ema": "False",
+        "score": -7.35
+      },
+      {
+        "ticker": "XLV",
+        "sector": "Healthcare",
+        "ret_20d": -3.86,
+        "rs": -0.6,
+        "obv": "DISTRIBUTION",
+        "above_ema": "False",
+        "score": -8.98
+      }
+    ],
+    "signals": [],
+    "top_news": [
+      {
+        "symbol": "NVDA",
+        "sentiment": "POSITIVE",
+        "score": 2,
+        "headlines": [
+          "[~] Trump Says Xi Will Give Him A 'Big, Fat Hug' In China, But What Do Prediction Ma",
+          "[~] Chamath Palihapitiya Says Anthropic Deal Has A Lesson For Elon Musk's $2T SpaceX"
+        ]
+      },
+      {
+        "symbol": "DIA",
+        "sentiment": "POSITIVE",
+        "score": 2,
+        "headlines": [
+          "[+] S&P 500 Tops 7,400 As Copper Hits Record Highs: Stock Market Today",
+          "[~] Cathie Wood Says Wall Street Has It Backwards\u2014Inflation Will 'Surprise' Lower"
+        ]
+      },
+      {
+        "symbol": "AAPL",
+        "sentiment": "NEUTRAL",
+        "score": 1,
+        "headlines": [
+          "[~] Trump Says Xi Will Give Him A 'Big, Fat Hug' In China, But What Do Prediction Ma",
+          "[~] Elon Musk Joins Trump's China Trip \u2014 Nvidia CEO Jensen Huang Not Invited"
+        ]
+      },
+      {
+        "symbol": "MSFT",
+        "sentiment": "NEUTRAL",
+        "score": 1,
+        "headlines": [
+          "[~] Chamath Palihapitiya Says Anthropic Deal Has A Lesson For Elon Musk's $2T SpaceX",
+          "[~] Micron Benefits From Samsung Trouble; Buying Mania Hampered by Rising Oil"
+        ]
+      },
+      {
+        "symbol": "AVGO",
+        "sentiment": "NEUTRAL",
+        "score": 1,
+        "headlines": [
+          "[~] The 'Buzz Lightyear' Market: Why Wall Street Thinks S&P 500 Earnings Will Grow '",
+          "[~] Nvidia, AMD, Broadcom And Now Cerebras: AI Chip Trade Gets A New Name"
+        ]
+      },
+      {
+        "symbol": "QCOM",
+        "sentiment": "NEUTRAL",
+        "score": 1,
+        "headlines": [
+          "[~] EXCLUSIVE: Qualcomm Stock Breaks Records As CEO Heads To China With Trump To Cha",
+          "[~] Elon Musk Joins Trump's China Trip \u2014 Nvidia CEO Jensen Huang Not Invited"
+        ]
+      },
+      {
+        "symbol": "INTC",
+        "sentiment": "NEUTRAL",
+        "score": 1,
+        "headlines": [
+          "[~] 10 Information Technology Stocks With Whale Alerts In Today's Session",
+          "[~] AMD Stock Hits 52-Week High - Here's Why"
+        ]
+      },
+      {
+        "symbol": "TSM",
+        "sentiment": "NEUTRAL",
+        "score": 1,
+        "headlines": [
+          "[~] TSMC Has Been The Market's No\u2011Brainer Trade \u2014 And That Makes It Vulnerable",
+          "[~] CNBC Halftime Report Final Trades: Taiwan Semiconductor Manufacturing, Freeport-"
+        ]
+      },
+      {
+        "symbol": "GOOGL",
+        "sentiment": "NEUTRAL",
+        "score": 1,
+        "headlines": [
+          "[~] Chamath Palihapitiya Says Anthropic Deal Has A Lesson For Elon Musk's $2T SpaceX",
+          "[~] 2 Communication Services Stocks Whale Activity In Today's Session"
+        ]
+      },
+      {
+        "symbol": "META",
+        "sentiment": "NEUTRAL",
+        "score": 1,
+        "headlines": [
+          "[~] Meta Stock Is Trending: A Key Level Just Came Into Play",
+          "[~] 'Meta Sued by California County Over 'Scam' Advertisements' - Bloomberg"
+        ]
+      }
+    ]
   }
 ]
