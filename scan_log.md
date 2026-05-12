@@ -1,7 +1,23 @@
 # AI Trader — Scan Log
 
 Newest scans first. Each entry shows what the scanner found and what it did.
-_Last updated: 2026-05-12 17:00 UTC_
+_Last updated: 2026-05-12 17:03 UTC_
+
+## 2026-05-12 17:03 UTC — NEWS scan
+SPY: **BULL**
+
+
+_No setups found._
+<details><summary>Notable news</summary>
+
+- ✓ **AMD** (POSITIVE, +2)
+- ✗ **AAPL** (NEGATIVE, -2)
+- ✗ **AVGO** (NEGATIVE, -2)
+- ✗ **USO** (NEGATIVE, -2)
+
+</details>
+
+---
 
 ## 2026-05-12 17:00 UTC — CATALYST scan
 SPY: **BULL**
