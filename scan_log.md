@@ -1,7 +1,37 @@
 # AI Trader — Scan Log
 
 Newest scans first. Each entry shows what the scanner found and what it did.
-_Last updated: 2026-05-12 21:46 UTC_
+_Last updated: 2026-05-12 22:39 UTC_
+
+## 2026-05-12 22:39 UTC — FULL scan
+SPY: **BULL** | Posture: RISK-ON | VIX: 18.4 | SPY ATR%: 1.01
+
+**Run context:** Time window: OUT · Market: CLOSED · Data feed: IEX · yfinance vol: 0/60 · Sentiment: finbert · Earnings dates: 40 cached
+**New positions today:** 0
+
+**Sector rotation:**
+  - Hottest: Crude Oil (USO, +17.7%), Technology (XLK, +16.6%), Silver (SLV, +9.3%)
+  - Coldest: Healthcare (XLV, -1.3%), Gold (GLD, -1.7%), Utilities (XLU, -1.8%)
+
+**Scan funnel:**
+  - Scanned: 59
+  - Failed price/volume/ATR filter: 50
+  - OBV in distribution: 3
+  - No strategy fired: 6
+
+_No setups found._
+<details><summary>Notable news</summary>
+
+- ✓ **AMD** (POSITIVE, +3)
+    - [~] Advanced Micro Devices Reports 13F Has Holdings Of 5,714,285 Absci Corporation S
+- ✓ **MSFT** (POSITIVE, +2)
+    - [~] 'Anthropic in Talks to Buy Developer Tools Startup Used by OpenAI, Google'- The 
+- ✓ **CRM** (POSITIVE, +2)
+    - [~] Citigroup Maintains Neutral on Salesforce, Lowers Price Target to $188
+
+</details>
+
+---
 
 ## 2026-05-12 21:46 UTC — FULL scan
 SPY: **BULL** | Posture: RISK-ON | VIX: 18.4 | SPY ATR%: 1.01
