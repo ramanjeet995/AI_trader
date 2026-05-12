@@ -2956,5 +2956,12 @@
         ]
       }
     ]
+  },
+  {
+    "timestamp": "2026-05-12T17:00:11.974879",
+    "mode": "CATALYST",
+    "spy_regime": "BULL",
+    "signals": [],
+    "force_closed": []
   }
 ]
