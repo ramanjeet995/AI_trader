@@ -121,11 +121,17 @@ def _save_human_log(logs: list):
     """Render the JSON log as a human-readable markdown file. Newest first."""
     lines = ["# AI Trader — Scan Log", ""]
     lines.append("Newest scans first. Each entry shows what the scanner found and what it did.")
-    lines.append(f"_Last updated: {datetime.utcnow().strftime('%Y-%m-%d %H:%M UTC')}_")
+    lines.append(f"_Last updated: {datetime.now(ET).strftime('%Y-%m-%d %H:%M ET')}_")
     lines.append("")
 
     for entry in reversed(logs):
-        ts      = entry.get("timestamp", "")[:16].replace("T", " ")
+        # Timestamps are now stored in ET (e.g. "2026-05-12T19:43:00-04:00").
+        # Older entries may be naive UTC — detect by offset suffix and label.
+        raw_ts  = entry.get("timestamp", "")
+        ts_disp = raw_ts[:16].replace("T", " ")
+        # If ET (has -04:00 or -05:00 offset later in string), label "ET";
+        # otherwise older entries were UTC.
+        tz_lbl  = "ET" if ("-04:" in raw_ts or "-05:" in raw_ts) else "UTC"
         mode    = entry.get("mode", "?")
         regime  = entry.get("spy_regime", "?")
         posture = entry.get("posture", "")
@@ -136,7 +142,7 @@ def _save_human_log(logs: list):
         alerts  = entry.get("alerts") or []
         news    = entry.get("top_news") or entry.get("news_snapshot") or []
 
-        lines.append(f"## {ts} UTC — {mode} scan")
+        lines.append(f"## {ts_disp} {tz_lbl} — {mode} scan")
         # Header line: regime + extras
         bits = [f"SPY: **{regime}**"]
         if posture: bits.append(f"Posture: {posture}")
@@ -572,7 +578,7 @@ def run_full_scan():
         _print_news_summary(news_summary)
         send_no_setup(spy_regime.value, rotation["posture"], rotation["sectors"])
         save_log({
-            "timestamp": datetime.utcnow().isoformat(),
+            "timestamp": datetime.now(ET).isoformat(),
             "mode": "FULL", "spy_regime": spy_regime.value,
             "posture": rotation["posture"], "vix": vix_assessment.get("vix"),
             "spy_atr_pct": round(spy_atr_pct, 2),
@@ -708,7 +714,7 @@ def run_full_scan():
 
     send_signals(signals, spy_regime.value, rotation["posture"], account_value)
     save_log({
-        "timestamp": datetime.utcnow().isoformat(),
+        "timestamp": datetime.now(ET).isoformat(),
         "mode": "FULL", "spy_regime": spy_regime.value,
         "posture": rotation["posture"], "vix": vix_assessment.get("vix"),
         "spy_atr_pct": round(spy_atr_pct, 2),
@@ -980,7 +986,7 @@ def run_news_scan():
         print("  No significant news changes. No trades placed.")
 
     save_log({
-        "timestamp": datetime.utcnow().isoformat(),
+        "timestamp": datetime.now(ET).isoformat(),
         "mode": "NEWS",
         "spy_regime": spy_regime.value,
         "safety_block": safety_block_reason or "",
@@ -1149,7 +1155,7 @@ def run_catalyst_scan():
     if not candidates:
         print("\n  No catalyst setups found.")
         save_log({
-            "timestamp": datetime.utcnow().isoformat(),
+            "timestamp": datetime.now(ET).isoformat(),
             "mode": "CATALYST", "spy_regime": spy_regime.value,
             "signals": [], "force_closed": [{"symbol": c["symbol"]} for c in closed],
         })
@@ -1229,7 +1235,7 @@ def run_catalyst_scan():
 
     print(f"\n  Catalyst scan complete — {cat_orders_this_run} new order(s) placed")
     save_log({
-        "timestamp": datetime.utcnow().isoformat(),
+        "timestamp": datetime.now(ET).isoformat(),
         "mode": "CATALYST", "spy_regime": spy_regime.value,
         "vix": vix_assessment.get("vix"),
         "signals": placed,
