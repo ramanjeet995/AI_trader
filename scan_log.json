@@ -3280,5 +3280,315 @@
     "spy_regime": "BULL",
     "signals": [],
     "force_closed": []
+  },
+  {
+    "timestamp": "2026-05-12T18:28:09.444627",
+    "mode": "NEWS",
+    "spy_regime": "BULL",
+    "safety_block": "",
+    "signals": [],
+    "alerts": [],
+    "news_snapshot": [
+      {
+        "symbol": "AMD",
+        "sentiment": "POSITIVE",
+        "score": 3
+      },
+      {
+        "symbol": "ORCL",
+        "sentiment": "POSITIVE",
+        "score": 3
+      },
+      {
+        "symbol": "MSFT",
+        "sentiment": "POSITIVE",
+        "score": 2
+      },
+      {
+        "symbol": "META",
+        "sentiment": "NEUTRAL",
+        "score": 1
+      },
+      {
+        "symbol": "CRM",
+        "sentiment": "NEUTRAL",
+        "score": 1
+      },
+      {
+        "symbol": "V",
+        "sentiment": "NEUTRAL",
+        "score": 1
+      },
+      {
+        "symbol": "LLY",
+        "sentiment": "NEUTRAL",
+        "score": 1
+      },
+      {
+        "symbol": "JNJ",
+        "sentiment": "NEUTRAL",
+        "score": 1
+      },
+      {
+        "symbol": "XOM",
+        "sentiment": "NEUTRAL",
+        "score": 1
+      },
+      {
+        "symbol": "SLB",
+        "sentiment": "NEUTRAL",
+        "score": 1
+      },
+      {
+        "symbol": "SLV",
+        "sentiment": "NEUTRAL",
+        "score": 1
+      },
+      {
+        "symbol": "AA",
+        "sentiment": "NEUTRAL",
+        "score": 1
+      },
+      {
+        "symbol": "AMZN",
+        "sentiment": "NEUTRAL",
+        "score": 0
+      },
+      {
+        "symbol": "TSLA",
+        "sentiment": "NEUTRAL",
+        "score": 0
+      },
+      {
+        "symbol": "ADBE",
+        "sentiment": "NEUTRAL",
+        "score": 0
+      },
+      {
+        "symbol": "NOW",
+        "sentiment": "NEUTRAL",
+        "score": 0
+      },
+      {
+        "symbol": "JPM",
+        "sentiment": "NEUTRAL",
+        "score": 0
+      },
+      {
+        "symbol": "GS",
+        "sentiment": "NEUTRAL",
+        "score": 0
+      },
+      {
+        "symbol": "BAC",
+        "sentiment": "NEUTRAL",
+        "score": 0
+      },
+      {
+        "symbol": "MA",
+        "sentiment": "NEUTRAL",
+        "score": 0
+      },
+      {
+        "symbol": "AXP",
+        "sentiment": "NEUTRAL",
+        "score": 0
+      },
+      {
+        "symbol": "UNH",
+        "sentiment": "NEUTRAL",
+        "score": 0
+      },
+      {
+        "symbol": "ABBV",
+        "sentiment": "NEUTRAL",
+        "score": 0
+      },
+      {
+        "symbol": "MRK",
+        "sentiment": "NEUTRAL",
+        "score": 0
+      },
+      {
+        "symbol": "COST",
+        "sentiment": "NEUTRAL",
+        "score": 0
+      },
+      {
+        "symbol": "HD",
+        "sentiment": "NEUTRAL",
+        "score": 0
+      },
+      {
+        "symbol": "NKE",
+        "sentiment": "NEUTRAL",
+        "score": 0
+      },
+      {
+        "symbol": "MCD",
+        "sentiment": "NEUTRAL",
+        "score": 0
+      },
+      {
+        "symbol": "SBUX",
+        "sentiment": "NEUTRAL",
+        "score": 0
+      },
+      {
+        "symbol": "CVX",
+        "sentiment": "NEUTRAL",
+        "score": 0
+      },
+      {
+        "symbol": "OXY",
+        "sentiment": "NEUTRAL",
+        "score": 0
+      },
+      {
+        "symbol": "QQQ",
+        "sentiment": "NEUTRAL",
+        "score": 0
+      },
+      {
+        "symbol": "DIA",
+        "sentiment": "NEUTRAL",
+        "score": 0
+      },
+      {
+        "symbol": "GDX",
+        "sentiment": "NEUTRAL",
+        "score": 0
+      },
+      {
+        "symbol": "GDXJ",
+        "sentiment": "NEUTRAL",
+        "score": 0
+      },
+      {
+        "symbol": "UNG",
+        "sentiment": "NEUTRAL",
+        "score": 0
+      },
+      {
+        "symbol": "DBO",
+        "sentiment": "NEUTRAL",
+        "score": 0
+      },
+      {
+        "symbol": "FCX",
+        "sentiment": "NEUTRAL",
+        "score": 0
+      },
+      {
+        "symbol": "NEM",
+        "sentiment": "NEUTRAL",
+        "score": 0
+      },
+      {
+        "symbol": "GOLD",
+        "sentiment": "NEUTRAL",
+        "score": 0
+      },
+      {
+        "symbol": "CLF",
+        "sentiment": "NEUTRAL",
+        "score": 0
+      },
+      {
+        "symbol": "NVDA",
+        "sentiment": "NEUTRAL",
+        "score": -1
+      },
+      {
+        "symbol": "IWM",
+        "sentiment": "NEUTRAL",
+        "score": -1
+      },
+      {
+        "symbol": "XLK",
+        "sentiment": "NEUTRAL",
+        "score": -1
+      },
+      {
+        "symbol": "XLF",
+        "sentiment": "NEUTRAL",
+        "score": -1
+      },
+      {
+        "symbol": "XLE",
+        "sentiment": "NEUTRAL",
+        "score": -1
+      },
+      {
+        "symbol": "XLV",
+        "sentiment": "NEUTRAL",
+        "score": -1
+      },
+      {
+        "symbol": "XLI",
+        "sentiment": "NEUTRAL",
+        "score": -1
+      },
+      {
+        "symbol": "XLB",
+        "sentiment": "NEUTRAL",
+        "score": -1
+      },
+      {
+        "symbol": "XLU",
+        "sentiment": "NEUTRAL",
+        "score": -1
+      },
+      {
+        "symbol": "XLRE",
+        "sentiment": "NEUTRAL",
+        "score": -1
+      },
+      {
+        "symbol": "GLD",
+        "sentiment": "NEUTRAL",
+        "score": -1
+      },
+      {
+        "symbol": "AVGO",
+        "sentiment": "NEGATIVE",
+        "score": -2
+      },
+      {
+        "symbol": "QCOM",
+        "sentiment": "NEGATIVE",
+        "score": -2
+      },
+      {
+        "symbol": "GOOGL",
+        "sentiment": "NEGATIVE",
+        "score": -2
+      },
+      {
+        "symbol": "SPY",
+        "sentiment": "NEGATIVE",
+        "score": -2
+      },
+      {
+        "symbol": "USO",
+        "sentiment": "NEGATIVE",
+        "score": -2
+      },
+      {
+        "symbol": "AAPL",
+        "sentiment": "NEGATIVE",
+        "score": -3
+      },
+      {
+        "symbol": "INTC",
+        "sentiment": "NEGATIVE",
+        "score": -3
+      },
+      {
+        "symbol": "TSM",
+        "sentiment": "NEGATIVE",
+        "score": -3
+      }
+    ]
   }
 ]
