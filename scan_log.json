@@ -3273,5 +3273,12 @@
         "score": -3
       }
     ]
+  },
+  {
+    "timestamp": "2026-05-12T17:51:48.896024",
+    "mode": "CATALYST",
+    "spy_regime": "BULL",
+    "signals": [],
+    "force_closed": []
   }
 ]
