@@ -82,6 +82,12 @@ INTRADAY_GAP_TOLERANCE_PCT = 1.0    # skip if today's price gapped >1% below sig
 # ── Sentiment backend ────────────────────────────────────────────────────────
 USE_FINBERT = True   # FinBERT (real model) when available; falls back to keyword
 
+# ── Macro event blackout (CPI, FOMC, NFP, etc.) ──────────────────────────────
+# Block new entries around scheduled macro releases that cause gap risk.
+ENABLE_MACRO_BLACKOUT       = True
+MACRO_BLACKOUT_HOURS_BEFORE = 30    # 30h covers both 8:30 AM (CPI/NFP) and 2 PM (FOMC) events from previous day's morning scan
+MACRO_POST_EVENT_BUFFER_MIN = 60    # block first 60 min after market open on event day
+
 # ── Catalyst trade mode (event-driven, gap-and-go continuation) ──────────────
 # Triggers only when a real catalyst exists. Buys at 11 AM ET on stocks that
 # gapped up overnight and held the gap through the first 90 min of trading.

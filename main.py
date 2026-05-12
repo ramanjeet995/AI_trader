@@ -49,6 +49,7 @@ from executor import execute, get_open_positions, get_buying_power, is_market_op
     list_catalyst_positions, close_position
 import catalyst_detector
 import strategy_catalyst
+import macro_calendar
 from notifier import send_no_setup, send_signals, send
 import volume_source
 import earnings_calendar
@@ -162,6 +163,13 @@ def _save_human_log(logs: list):
         if patched:              ctx.append(f"yfinance vol: {patched}")
         if sent_bk:              ctx.append(f"Sentiment: {sent_bk}")
         if earn_n is not None:   ctx.append(f"Earnings dates: {earn_n} cached")
+        macro_b   = entry.get("macro_blackout")
+        macro_rsn = entry.get("macro_reason")
+        nxt_macro_ev = entry.get("next_macro_event")
+        if macro_b:
+            ctx.append(f"**MACRO BLACKOUT: {macro_rsn}**")
+        elif nxt_macro_ev:
+            ctx.append(f"Next macro: {nxt_macro_ev['name']} in {nxt_macro_ev['days_away']}d")
         if ctx:
             lines.append("**Run context:** " + " · ".join(ctx))
         if holds:
@@ -423,7 +431,21 @@ def run_full_scan():
 
     # VIX-based volatility gate
     vix_assessment = vix_gate.assess(vix_gate.get_vix(), cfg)
-    print(f"  VIX assessment : {vix_assessment['reason']}\n")
+    print(f"  VIX assessment : {vix_assessment['reason']}")
+
+    # Macro event blackout (CPI, FOMC, NFP, etc.)
+    macro_block, macro_reason = False, ""
+    if getattr(cfg, "ENABLE_MACRO_BLACKOUT", True):
+        macro_block, macro_reason = macro_calendar.check_blackout(
+            hours_before=cfg.MACRO_BLACKOUT_HOURS_BEFORE,
+            post_open_buffer_min=cfg.MACRO_POST_EVENT_BUFFER_MIN,
+        )
+    nxt_macro = macro_calendar.next_event()
+    if macro_block:
+        print(f"  Macro blackout : BLOCKED — {macro_reason}")
+    elif nxt_macro:
+        print(f"  Next macro     : {nxt_macro['name']} in {nxt_macro['days_away']}d")
+    print()
 
     # Earnings calendar (cached weekly)
     earnings_cache = earnings_calendar.refresh_cache(cfg.WATCHLIST)
@@ -440,6 +462,7 @@ def run_full_scan():
     can_open_more = (
         in_window and
         market_open and
+        not macro_block and
         len(open_positions) < cfg.MAX_CONCURRENT_POSITIONS and
         new_today_count    < cfg.MAX_NEW_PER_DAY
     )
@@ -447,6 +470,8 @@ def run_full_scan():
         print(f"  Market closed — scanning for awareness only, no orders.\n")
     elif not in_window:
         print(f"  Outside target window — scanning for awareness only, no orders.\n")
+    elif macro_block:
+        print(f"  Macro blackout — scanning for awareness only, no orders.\n")
     if not can_open_more:
         print(f"  Position/daily cap reached — scanning for awareness only, no new orders.\n")
 
@@ -556,6 +581,9 @@ def run_full_scan():
             "yfinance_patched": f"{globals().get('_last_patch_count', 0)}/{globals().get('_last_patch_total', 0)}",
             "sentiment_backend": "finbert" if getattr(cfg, "USE_FINBERT", False) else "keyword",
             "earnings_cache_size": sum(1 for v in earnings_cache.values() if v.get("next_earnings")),
+        "macro_blackout": macro_block,
+        "macro_reason": macro_reason,
+        "next_macro_event": nxt_macro,
             "open_positions": sorted(open_positions),
             "new_today": new_today_count,
             "filter_stats": filter_stats,
@@ -689,6 +717,9 @@ def run_full_scan():
         "yfinance_patched": f"{globals().get('_last_patch_count', 0)}/{globals().get('_last_patch_total', 0)}",
         "sentiment_backend": "finbert" if getattr(cfg, "USE_FINBERT", False) else "keyword",
         "earnings_cache_size": sum(1 for v in earnings_cache.values() if v.get("next_earnings")),
+        "macro_blackout": macro_block,
+        "macro_reason": macro_reason,
+        "next_macro_event": nxt_macro,
         "open_positions": sorted(open_positions),
         "new_today": new_today_count,
         "filter_stats": filter_stats,
@@ -767,6 +798,18 @@ def run_news_scan():
         safety_block_reason = (safety_block_reason or "") + " | " + vix_assessment["reason"]
         safety_block_reason = safety_block_reason.strip(" |")
         print(f"  SAFETY BLOCK (VIX): {vix_assessment['reason']}")
+
+    # Macro event blackout
+    macro_block, macro_reason = False, ""
+    if getattr(cfg, "ENABLE_MACRO_BLACKOUT", True):
+        macro_block, macro_reason = macro_calendar.check_blackout(
+            hours_before=cfg.MACRO_BLACKOUT_HOURS_BEFORE,
+            post_open_buffer_min=cfg.MACRO_POST_EVENT_BUFFER_MIN,
+        )
+    if macro_block:
+        safety_block_reason = ((safety_block_reason or "") + " | macro: " + macro_reason).strip(" |")
+        print(f"  SAFETY BLOCK (macro): {macro_reason}")
+
     earnings_cache = earnings_calendar.refresh_cache(cfg.WATCHLIST)
 
     open_positions = get_open_positions(trade_client)
@@ -1022,7 +1065,7 @@ def run_catalyst_scan():
 
     market_open, mkt_reason = is_market_open(trade_client)
     print(f"  Market status : {mkt_reason}")
-    can_trade_now = market_open and in_window
+    can_trade_now = market_open and in_window and not catalyst_safety_blocked
     if not market_open:
         print(f"  Market closed — will scan for awareness, no orders\n")
     elif not in_window:
@@ -1031,9 +1074,20 @@ def run_catalyst_scan():
     # Safety gates
     vix_assessment = vix_gate.assess(vix_gate.get_vix(), cfg)
     print(f"  VIX           : {vix_assessment['reason']}")
-    if vix_assessment["block"]:
-        print(f"  SAFETY BLOCK — no catalyst entries\n")
-        return
+
+    # Macro blackout — catalyst trades are extra sensitive to macro vol
+    macro_block, macro_reason = False, ""
+    if getattr(cfg, "ENABLE_MACRO_BLACKOUT", True):
+        macro_block, macro_reason = macro_calendar.check_blackout(
+            hours_before=cfg.MACRO_BLACKOUT_HOURS_BEFORE,
+            post_open_buffer_min=cfg.MACRO_POST_EVENT_BUFFER_MIN,
+        )
+    if macro_block:
+        print(f"  Macro blackout: {macro_reason}")
+
+    catalyst_safety_blocked = vix_assessment["block"] or macro_block
+    if catalyst_safety_blocked:
+        print(f"  SAFETY BLOCK — will scan for awareness, no orders\n")
 
     # Fetch daily bars (for gap calc + volume baseline)
     all_symbols = list(set(cfg.WATCHLIST + [cfg.BENCHMARK]))

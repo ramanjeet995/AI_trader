@@ -1,7 +1,37 @@
 # AI Trader — Scan Log
 
 Newest scans first. Each entry shows what the scanner found and what it did.
-_Last updated: 2026-05-12 23:25 UTC_
+_Last updated: 2026-05-12 23:43 UTC_
+
+## 2026-05-12 23:43 UTC — FULL scan
+SPY: **BULL** | Posture: RISK-ON | VIX: 18.4 | SPY ATR%: 1.01
+
+**Run context:** Time window: IN · Market: CLOSED · Data feed: IEX · yfinance vol: 0/60 · Sentiment: finbert · Earnings dates: 40 cached · **MACRO BLACKOUT: PPI releases in 12h 46m**
+**New positions today:** 0
+
+**Sector rotation:**
+  - Hottest: Crude Oil (USO, +17.7%), Technology (XLK, +16.6%), Silver (SLV, +9.3%)
+  - Coldest: Healthcare (XLV, -1.3%), Gold (GLD, -1.7%), Utilities (XLU, -1.8%)
+
+**Scan funnel:**
+  - Scanned: 59
+  - Failed price/volume/ATR filter: 13
+  - OBV in distribution: 14
+  - No strategy fired: 32
+
+_No setups found._
+<details><summary>Notable news</summary>
+
+- ✓ **MSFT** (POSITIVE, +3)
+    - [~] 'Anthropic in Talks to Buy Developer Tools Startup Used by OpenAI, Google'- The 
+- ✓ **NVDA** (POSITIVE, +3)
+    - [~] Hot Inflation Data; Treasury Auction Test Ahead; Trump's Iran Comment Draws Atte
+- ✓ **AMD** (POSITIVE, +3)
+    - [~] Advanced Micro Devices Reports 13F Has Holdings Of 5,714,285 Absci Corporation S
+
+</details>
+
+---
 
 ## 2026-05-12 23:25 UTC — FULL scan
 SPY: **BULL** | Posture: RISK-ON | VIX: 18.4 | SPY ATR%: 1.01
