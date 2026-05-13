@@ -1,18 +1,61 @@
 """
-Auto trade executor — places bracket orders on Alpaca.
+Trade executor — sizes positions, places bracket orders on Alpaca.
 
-A bracket order = entry + stop-loss + take-profit in one atomic order.
+  - position_size(): conviction-aware sizing with dynamic R target
+  - execute(): atomic bracket = entry + stop-loss + take-profit (GTC)
+  - close_position(), list_catalyst_positions(): position lifecycle helpers
+  - is_market_open(): clock check used to skip pre-market submissions
 
-Guards:
+Guards on execute():
   - Already holding the symbol     → skip
   - Shares = 0 after sizing        → skip
-  - Notional > available BP        → skip (and decrement remaining BP across loop)
+  - Notional > available BP        → skip
   - Invalid prices (stop >= entry) → skip
 """
 
+import math
 from alpaca.trading.client import TradingClient
 from alpaca.trading.requests import MarketOrderRequest, TakeProfitRequest, StopLossRequest
 from alpaca.trading.enums import OrderSide, TimeInForce, OrderClass
+
+
+# ─── Position sizing ──────────────────────────────────────────────────────────
+
+def position_size(account_value: float, entry: float, stop: float, cfg,
+                  risk_mult: float = 1.0, target_R: float = 2.0) -> dict:
+    """
+    Calculate share count, stop/target levels for a trade.
+    risk_mult : conviction multiplier on cfg.ACCOUNT_RISK_PCT (1.0 = base)
+    target_R  : R-multiple for take-profit (2.0 = standard 2R, 5.0 = stretch)
+    """
+    target_risk   = account_value * cfg.ACCOUNT_RISK_PCT * risk_mult
+    stop_distance = abs(entry - stop)
+
+    if stop_distance == 0 or entry <= 0:
+        return {"shares": 0, "notional": 0, "risk_dollars": 0,
+                "target_risk": target_risk, "r1_target": entry,
+                "r2_target": entry, "r_target": entry,
+                "target_R": target_R, "capped": False}
+
+    raw_shares   = target_risk / stop_distance
+    max_notional = account_value * cfg.MAX_POSITION_PCT
+    capped       = (raw_shares * entry) > max_notional
+    shares       = math.floor(max_notional / entry if capped else raw_shares)
+
+    return {
+        "shares"      : shares,
+        "notional"    : round(shares * entry, 2),
+        "risk_dollars": round(shares * stop_distance, 2),
+        "target_risk" : round(target_risk, 2),
+        "r1_target"   : round(entry + stop_distance * 1, 2),
+        "r2_target"   : round(entry + stop_distance * 2, 2),
+        "r_target"    : round(entry + stop_distance * target_R, 2),
+        "target_R"    : target_R,
+        "capped"      : capped,
+    }
+
+
+# ─── Position queries ─────────────────────────────────────────────────────────
 
 
 def get_open_positions(trade_client: TradingClient) -> set[str]:

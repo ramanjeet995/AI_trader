@@ -44,7 +44,8 @@
       "Bash(git -C \"F:/Projects/Canada/New folder\" commit -m \"Add macro event blackout: CPI/FOMC/NFP/PPI/PCE 2026 calendar, 30h pre-event block\")",
       "Bash(git -C \"F:/Projects/Canada/New folder\" commit -m \"Aggressive profile for \\\\$5k: curated 34-symbol momentum watchlist, 2%/3R risk, conviction-based sizing \\(only trade 4+/7 factor confluence\\)\")",
       "Bash(git -C \"F:/Projects/Canada/New folder\" commit -m \"Add position_manager: trails stops as price rises \\(let winners run\\), exits on regime flip\")",
-      "Bash(git -C \"F:/Projects/Canada/New folder\" commit -m \"Position manager: persist original stop in state file so R-math stays correct after trailing above entry\")"
+      "Bash(git -C \"F:/Projects/Canada/New folder\" commit -m \"Position manager: persist original stop in state file so R-math stays correct after trailing above entry\")",
+      "Bash(git -C \"F:/Projects/Canada/New folder\" commit -m \"Simplify: 24 files -> 16. Merged screener+pretrade_check -> filters, vix+earnings+macro -> event_gates, risk -> executor, strategy_catalyst -> catalyst_detector. Removed 3 unused test scripts.\")"
     ]
   }
 }

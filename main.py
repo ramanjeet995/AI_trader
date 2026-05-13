@@ -39,24 +39,21 @@ from alpaca.trading.client import TradingClient
 import config as cfg
 import indicators
 from market_structure import classify, Regime
-from screener import passes_filters, relative_strength
+from filters import (passes_filters, relative_strength,
+                     check_spread, check_intraday_confirmation)
+import event_gates
 from strategies import scan
 from order_flow import order_flow_score
 from sentiment import get_sentiment, sentiment_label
 from sector_rotation import analyze as sector_analyze, print_rotation
-from risk import position_size
-from executor import execute, get_open_positions, get_buying_power, is_market_open, \
-    list_catalyst_positions, close_position
+from executor import (execute, get_open_positions, get_buying_power,
+                      is_market_open, list_catalyst_positions, close_position,
+                      position_size)
 import catalyst_detector
-import strategy_catalyst
-import macro_calendar
 import conviction
 import position_manager
 from notifier import send_no_setup, send_signals, send
 import volume_source
-import earnings_calendar
-import vix_gate
-import pretrade_check
 
 load_dotenv(Path(__file__).parent / ".env")
 
@@ -465,17 +462,17 @@ def run_full_scan():
     print_rotation(rotation)
 
     # VIX-based volatility gate
-    vix_assessment = vix_gate.assess(vix_gate.get_vix(), cfg)
+    vix_assessment = event_gates.assess_vix(event_gates.get_vix(), cfg)
     print(f"  VIX assessment : {vix_assessment['reason']}")
 
     # Macro event blackout (CPI, FOMC, NFP, etc.)
     macro_block, macro_reason = False, ""
     if getattr(cfg, "ENABLE_MACRO_BLACKOUT", True):
-        macro_block, macro_reason = macro_calendar.check_blackout(
+        macro_block, macro_reason = event_gates.in_macro_blackout(
             hours_before=cfg.MACRO_BLACKOUT_HOURS_BEFORE,
             post_open_buffer_min=cfg.MACRO_POST_EVENT_BUFFER_MIN,
         )
-    nxt_macro = macro_calendar.next_event()
+    nxt_macro = event_gates.next_macro_event()
     if macro_block:
         print(f"  Macro blackout : BLOCKED — {macro_reason}")
     elif nxt_macro:
@@ -483,7 +480,7 @@ def run_full_scan():
     print()
 
     # Earnings calendar (cached weekly)
-    earnings_cache = earnings_calendar.refresh_cache(cfg.WATCHLIST)
+    earnings_cache = event_gates.refresh_earnings_cache(cfg.WATCHLIST)
 
     open_positions   = get_open_positions(trade_client)
     new_today_count  = _today_new_position_count(trade_client)
@@ -558,7 +555,7 @@ def run_full_scan():
             filter_stats["market_volatile"] += 1
             continue
         # Earnings blackout
-        in_bo, bo_reason = earnings_calendar.in_blackout(
+        in_bo, bo_reason = event_gates.in_earnings_blackout(
             symbol, earnings_cache, cfg.EARNINGS_BLACKOUT_DAYS)
         if in_bo:
             filter_stats["earnings_blackout"] += 1
@@ -734,7 +731,7 @@ def run_full_scan():
             print()
             continue
         # Pre-trade: bid-ask spread
-        ok_spread, spread_reason, _ = pretrade_check.check_spread(
+        ok_spread, spread_reason, _ = check_spread(
             s["symbol"], data_client, cfg.MAX_BID_ASK_SPREAD_PCT)
         if not ok_spread:
             print(f"         SKIPPED: {spread_reason}")
@@ -742,7 +739,7 @@ def run_full_scan():
             print()
             continue
         # Pre-trade: intraday confirmation (didn't gap below signal)
-        ok_gap, gap_reason, _ = pretrade_check.check_intraday_confirmation(
+        ok_gap, gap_reason, _ = check_intraday_confirmation(
             s["symbol"], data_client, s["entry"], s["entry"],
             tolerance_pct=cfg.INTRADAY_GAP_TOLERANCE_PCT)
         if not ok_gap:
@@ -867,7 +864,7 @@ def run_news_scan():
     rotation     = sector_analyze(all_bars_ind, benchmark_df)
 
     # VIX gate + earnings cache
-    vix_assessment = vix_gate.assess(vix_gate.get_vix(), cfg)
+    vix_assessment = event_gates.assess_vix(event_gates.get_vix(), cfg)
     print(f"  VIX: {vix_assessment['reason']}")
     if vix_assessment["block"]:
         # If VIX blocks, NEWS mode also blocks new buys
@@ -878,7 +875,7 @@ def run_news_scan():
     # Macro event blackout
     macro_block, macro_reason = False, ""
     if getattr(cfg, "ENABLE_MACRO_BLACKOUT", True):
-        macro_block, macro_reason = macro_calendar.check_blackout(
+        macro_block, macro_reason = event_gates.in_macro_blackout(
             hours_before=cfg.MACRO_BLACKOUT_HOURS_BEFORE,
             post_open_buffer_min=cfg.MACRO_POST_EVENT_BUFFER_MIN,
         )
@@ -886,7 +883,7 @@ def run_news_scan():
         safety_block_reason = ((safety_block_reason or "") + " | macro: " + macro_reason).strip(" |")
         print(f"  SAFETY BLOCK (macro): {macro_reason}")
 
-    earnings_cache = earnings_calendar.refresh_cache(cfg.WATCHLIST)
+    earnings_cache = event_gates.refresh_earnings_cache(cfg.WATCHLIST)
 
     open_positions = get_open_positions(trade_client)
 
@@ -994,16 +991,16 @@ def run_news_scan():
         if open_heat_pct + new_heat_pct > cfg.MAX_PORTFOLIO_HEAT_PCT:
             continue
         # Earnings blackout
-        in_bo, _ = earnings_calendar.in_blackout(
+        in_bo, _ = event_gates.in_earnings_blackout(
             symbol, earnings_cache, cfg.EARNINGS_BLACKOUT_DAYS)
         if in_bo:
             continue
         # Pre-trade: bid-ask spread + intraday gap
-        ok_spread, _, _ = pretrade_check.check_spread(
+        ok_spread, _, _ = check_spread(
             symbol, data_client, cfg.MAX_BID_ASK_SPREAD_PCT)
         if not ok_spread:
             continue
-        ok_gap, _, _ = pretrade_check.check_intraday_confirmation(
+        ok_gap, _, _ = check_intraday_confirmation(
             symbol, data_client, entry, entry,
             tolerance_pct=cfg.INTRADAY_GAP_TOLERANCE_PCT)
         if not ok_gap:
@@ -1157,13 +1154,13 @@ def run_catalyst_scan():
         print(f"  Outside target window — will scan for awareness, no orders\n")
 
     # Safety gates
-    vix_assessment = vix_gate.assess(vix_gate.get_vix(), cfg)
+    vix_assessment = event_gates.assess_vix(event_gates.get_vix(), cfg)
     print(f"  VIX           : {vix_assessment['reason']}")
 
     # Macro blackout — catalyst trades are extra sensitive to macro vol
     macro_block, macro_reason = False, ""
     if getattr(cfg, "ENABLE_MACRO_BLACKOUT", True):
-        macro_block, macro_reason = macro_calendar.check_blackout(
+        macro_block, macro_reason = event_gates.in_macro_blackout(
             hours_before=cfg.MACRO_BLACKOUT_HOURS_BEFORE,
             post_open_buffer_min=cfg.MACRO_POST_EVENT_BUFFER_MIN,
         )
@@ -1189,7 +1186,7 @@ def run_catalyst_scan():
         print(f"  Skipping catalyst scan in BEAR regime\n")
         return
 
-    earnings_cache = earnings_calendar.refresh_cache(cfg.WATCHLIST)
+    earnings_cache = event_gates.refresh_earnings_cache(cfg.WATCHLIST)
 
     open_positions  = get_open_positions(trade_client)
 
@@ -1270,7 +1267,7 @@ def run_catalyst_scan():
             print(f"  Concurrent position cap reached — stopping")
             break
 
-        sig = strategy_catalyst.build_signal(det, account_value, cfg)
+        sig = catalyst_detector.build_signal(det, account_value, cfg)
         if not sig.get("valid"):
             print(f"  {det['symbol']}: SKIP — {sig.get('reason', '')}")
             continue

@@ -1,19 +1,16 @@
 """
-Catalyst event detector — identifies stocks with real catalysts (earnings,
-big news) that gapped up overnight and are holding their gap by 11 AM ET.
+Catalyst event detector + sizing for event-driven gap-and-go trades.
 
-Trade thesis: 80% of the initial pop happens 9:30-10:00 AM. By 11 AM, the
-stock has either (a) held its gap = continuation likely (PEAD), or
-(b) faded back = "gap and crap." We only buy (a).
+Trade thesis: 80% of the initial pop on earnings/news gaps happens in the
+first 30 min after open. By 11 AM, the stock has either (a) held the gap →
+continuation likely (PEAD), or (b) faded back → "gap and crap." We only buy
+(a).
 
-Multi-factor scoring — needs at least N of:
-  1. Earnings reported in last 2 days
-  2. News sentiment >= +2 (strong positive)
-  3. Gap up between MIN and MAX (3-12% by default)
-  4. Volume in first 90 min >= cfg.CATALYST_VOLUME_MULT * 90-min normal pace
-  5. Price by 11 AM still in upper half of day's range (didn't fade)
+  - detect():       multi-factor scoring on intraday data
+  - build_signal(): tight % stops, smaller position size than swing
 """
 
+import math
 from datetime import datetime, timedelta, time as dtime
 
 try:
@@ -28,6 +25,47 @@ from alpaca.data.timeframe import TimeFrame, TimeFrameUnit
 
 
 ET = ZoneInfo("America/New_York")
+
+
+# ─── Sizing for catalyst trades ───────────────────────────────────────────────
+
+def build_signal(detection: dict, account_value: float, cfg) -> dict:
+    """
+    Build a sized trade from a fired catalyst detection.
+    Tighter % stops (not ATR), smaller positions, fixed % targets — gap stocks
+    are wilder than swing setups.
+    """
+    entry        = detection["current"]
+    pct_stop     = entry * (1 - cfg.CATALYST_STOP_PCT / 100)
+    day_low_stop = detection["day_low"] * 0.995   # 0.5% below today's low
+    stop         = max(pct_stop, day_low_stop)
+    target       = entry * (1 + cfg.CATALYST_TARGET_PCT / 100)
+
+    risk_per_share = entry - stop
+    if risk_per_share <= 0:
+        return {"valid": False, "reason": "bad risk (stop >= entry)"}
+
+    risk_dollars  = account_value * cfg.ACCOUNT_RISK_PCT * cfg.CATALYST_SIZE_FACTOR
+    shares        = math.floor(risk_dollars / risk_per_share)
+    max_notional  = account_value * cfg.CATALYST_MAX_POSITION_PCT
+    if shares * entry > max_notional:
+        shares = math.floor(max_notional / entry)
+    if shares <= 0:
+        return {"valid": False, "reason": "0 shares after sizing"}
+
+    return {
+        "valid"       : True,
+        "entry"       : round(entry, 2),
+        "stop"        : round(stop, 2),
+        "target"      : round(target, 2),
+        "shares"      : shares,
+        "notional"    : round(shares * entry, 2),
+        "risk_dollars": round(shares * risk_per_share, 2),
+        "target_risk" : round(risk_dollars, 2),
+    }
+
+
+# ─── Intraday data fetch ──────────────────────────────────────────────────────
 
 
 def fetch_today_intraday(symbol: str, data_client) -> pd.DataFrame | None:
