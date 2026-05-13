@@ -7437,5 +7437,222 @@
       }
     ],
     "force_closed": []
+  },
+  {
+    "timestamp": "2026-05-13T14:31:33.438757-04:00",
+    "mode": "NEWS",
+    "spy_regime": "BULL",
+    "safety_block": "",
+    "signals": [
+      {
+        "symbol": "GOOGL",
+        "strategy": "NEWS",
+        "signal": "BUY",
+        "entry": 403.32,
+        "stop": 388.36,
+        "target": 433.24,
+        "shares": 74,
+        "notional": 29845.68,
+        "risk_$": 1107.04,
+        "sentiment": "POSITIVE",
+        "reason": "News sentiment +2 + safety stack passed",
+        "order_status": "PLACED f8dc0cf6-6eec-4363-b615-e4e666ab2fd4",
+        "headlines": [
+          "[~] Anthropic Introduces Claude For Small Business",
+          "[~] Trump Lands In China With $16 Trillion Of CEO Power \u2014 And One Big Ask For Xi"
+        ]
+      },
+      {
+        "symbol": "AMZN",
+        "strategy": "NEWS",
+        "signal": "BUY",
+        "entry": 270.27,
+        "stop": 260.1,
+        "target": 290.61,
+        "shares": 111,
+        "notional": 29999.97,
+        "risk_$": 1128.87,
+        "sentiment": "POSITIVE",
+        "reason": "News sentiment +2 + safety stack passed",
+        "order_status": "PLACED e79c0e72-3fa1-4eb1-a930-36e20f2a0b83",
+        "headlines": [
+          "[+] Defense Department Services Provider Gilat Bags Big Military Contracts, Expands ",
+          "[~] Why Is Plug Power Stock Gaining Wednesday?"
+        ]
+      }
+    ],
+    "alerts": [],
+    "news_snapshot": [
+      {
+        "symbol": "SPY",
+        "sentiment": "POSITIVE",
+        "score": 3
+      },
+      {
+        "symbol": "AMD",
+        "sentiment": "POSITIVE",
+        "score": 2
+      },
+      {
+        "symbol": "MRVL",
+        "sentiment": "POSITIVE",
+        "score": 2
+      },
+      {
+        "symbol": "GOOGL",
+        "sentiment": "POSITIVE",
+        "score": 2
+      },
+      {
+        "symbol": "AMZN",
+        "sentiment": "POSITIVE",
+        "score": 2
+      },
+      {
+        "symbol": "NVDA",
+        "sentiment": "NEUTRAL",
+        "score": 1
+      },
+      {
+        "symbol": "SHOP",
+        "sentiment": "NEUTRAL",
+        "score": 1
+      },
+      {
+        "symbol": "FCX",
+        "sentiment": "NEUTRAL",
+        "score": 1
+      },
+      {
+        "symbol": "AVGO",
+        "sentiment": "NEUTRAL",
+        "score": 0
+      },
+      {
+        "symbol": "ARM",
+        "sentiment": "NEUTRAL",
+        "score": 0
+      },
+      {
+        "symbol": "SMCI",
+        "sentiment": "NEUTRAL",
+        "score": 0
+      },
+      {
+        "symbol": "TSLA",
+        "sentiment": "NEUTRAL",
+        "score": 0
+      },
+      {
+        "symbol": "NFLX",
+        "sentiment": "NEUTRAL",
+        "score": 0
+      },
+      {
+        "symbol": "AAPL",
+        "sentiment": "NEUTRAL",
+        "score": 0
+      },
+      {
+        "symbol": "CRM",
+        "sentiment": "NEUTRAL",
+        "score": 0
+      },
+      {
+        "symbol": "NOW",
+        "sentiment": "NEUTRAL",
+        "score": 0
+      },
+      {
+        "symbol": "CRWD",
+        "sentiment": "NEUTRAL",
+        "score": 0
+      },
+      {
+        "symbol": "PLTR",
+        "sentiment": "NEUTRAL",
+        "score": 0
+      },
+      {
+        "symbol": "SNOW",
+        "sentiment": "NEUTRAL",
+        "score": 0
+      },
+      {
+        "symbol": "XOM",
+        "sentiment": "NEUTRAL",
+        "score": 0
+      },
+      {
+        "symbol": "OXY",
+        "sentiment": "NEUTRAL",
+        "score": 0
+      },
+      {
+        "symbol": "FANG",
+        "sentiment": "NEUTRAL",
+        "score": 0
+      },
+      {
+        "symbol": "SLB",
+        "sentiment": "NEUTRAL",
+        "score": 0
+      },
+      {
+        "symbol": "NEM",
+        "sentiment": "NEUTRAL",
+        "score": 0
+      },
+      {
+        "symbol": "GOLD",
+        "sentiment": "NEUTRAL",
+        "score": 0
+      },
+      {
+        "symbol": "GDX",
+        "sentiment": "NEUTRAL",
+        "score": 0
+      },
+      {
+        "symbol": "MARA",
+        "sentiment": "NEUTRAL",
+        "score": 0
+      },
+      {
+        "symbol": "RIOT",
+        "sentiment": "NEUTRAL",
+        "score": 0
+      },
+      {
+        "symbol": "QQQ",
+        "sentiment": "NEUTRAL",
+        "score": 0
+      },
+      {
+        "symbol": "MU",
+        "sentiment": "NEUTRAL",
+        "score": -1
+      },
+      {
+        "symbol": "MSFT",
+        "sentiment": "NEUTRAL",
+        "score": -1
+      },
+      {
+        "symbol": "COIN",
+        "sentiment": "NEUTRAL",
+        "score": -1
+      },
+      {
+        "symbol": "MSTR",
+        "sentiment": "NEUTRAL",
+        "score": -1
+      },
+      {
+        "symbol": "META",
+        "sentiment": "NEGATIVE",
+        "score": -2
+      }
+    ]
   }
 ]
