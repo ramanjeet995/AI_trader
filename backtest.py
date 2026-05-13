@@ -89,11 +89,11 @@ class Position:
             return
         r_mult = (current_price - self.entry_price) / self.stop_distance
         new_stop = self.current_stop
-        if 1.0 <= r_mult < 2.0:
+        if 2.0 <= r_mult < 3.0:
             new_stop = self.entry_price * 1.001
-        elif 2.0 <= r_mult < 3.0:
+        elif 3.0 <= r_mult < 5.0:
             new_stop = self.entry_price + self.stop_distance * 1.0
-        elif r_mult >= 3.0:
+        elif r_mult >= 5.0:
             atr_stop = current_price - 2 * atr if atr and atr > 0 else 0
             r2_floor = self.entry_price + self.stop_distance * 2.0
             new_stop = max(self.current_stop, atr_stop, r2_floor)

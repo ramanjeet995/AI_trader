@@ -11,10 +11,10 @@ Persists original (entry, stop) per symbol in position_state.json so we can
 correctly compute R-multiples even after we've trailed the stop above entry.
 
 Rules (R-multiple based on profit since entry):
-  R < 1.0        : do nothing — let original stop work
-  1.0 <= R < 2.0 : move stop to break-even (lock in winning trade)
-  2.0 <= R < 3.0 : trail stop to entry + 1R (lock in +1R profit)
-  R >= 3.0       : trail stop to max(current - 2*ATR, entry + 2R)
+  R < 2.0        : do nothing — give trade room to develop
+  2.0 <= R < 3.0 : move stop to break-even (lock in winning trade)
+  3.0 <= R < 5.0 : trail stop to entry + 1R (lock in +1R profit)
+  R >= 5.0       : trail stop to max(current - 2*ATR, entry + 2R)
                    → captures trend continuation while protecting gains
 
 If price closed below SMA20 on the daily, tighten stop hard regardless of R
@@ -233,24 +233,24 @@ def _manage_one(position, trade_client, data_client, spy_regime: str, cfg, state
     action   = "hold"
     note     = ""
 
-    if r_multiple < 1.0:
+    if r_multiple < 2.0:
         return {"symbol": symbol, "action": "hold",
                 "r_multiple": round(r_multiple, 2),
                 "current": round(current, 2), "current_stop": round(current_stop, 2)}
 
-    elif 1.0 <= r_multiple < 2.0:
+    elif 2.0 <= r_multiple < 3.0:
         # Move stop to break-even (with tiny buffer above entry to cover slippage/fees)
         new_stop = round(entry * 1.001, 2)
         action   = "breakeven"
         note     = "moved to break-even"
 
-    elif 2.0 <= r_multiple < 3.0:
+    elif 3.0 <= r_multiple < 5.0:
         # Trail at entry + 1R (locks in +1R profit minimum)
         new_stop = round(entry + stop_distance * 1.0, 2)
         action   = "trail_1R"
         note     = "trailed to +1R floor"
 
-    else:  # r_multiple >= 3.0
+    else:  # r_multiple >= 5.0
         # Aggressive trail: max(current - 2*ATR, entry + 2R)
         atr, sma20, latest_close = _get_atr_and_sma20(symbol, data_client)
         candidates = [current_stop, entry + stop_distance * 2.0]

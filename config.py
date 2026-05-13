@@ -67,10 +67,11 @@ REQUIRE_SECTOR_ALIGNMENT  = False   # don't require — sometimes best setup is 
 # Multi-factor confluence required to fire. Each factor passed = 1 point.
 # Only trade when score >= MIN_CONVICTION_TO_TRADE.
 # Position size and target scale with conviction.
-MIN_CONVICTION_TO_TRADE   = 4    # minimum factors needed (out of 7)
+MIN_CONVICTION_TO_TRADE   = 3    # was 4 — lowered, since backtest with sentiment=0 caps at 6/7
 # Target R values are STRETCH targets — most trades exit earlier via trailing
 # stop (position_manager.py). These act as a hard ceiling for parabolic moves.
 CONVICTION_RISK_TIERS = {
+    3: {"risk_mult": 0.75, "target_R": 4.0},   # marginal — 1.5% risk, 4R stretch
     4: {"risk_mult": 1.0,  "target_R": 5.0},   # base — 2% risk, 5R stretch
     5: {"risk_mult": 1.0,  "target_R": 6.0},   # solid — 2% risk, 6R stretch
     6: {"risk_mult": 1.25, "target_R": 8.0},   # strong — 2.5% risk, 8R stretch
@@ -154,12 +155,15 @@ TICKER_SECTOR = {
 }
 
 # ── Strategy A thresholds (Trend Pullback) ───────────────────────────────────
-STRAT_A_RSI_LOW  = 40
-STRAT_A_RSI_HIGH = 55
+# Momentum stocks pull back shallower than slow large-caps. RSI 50-65 catches
+# "buy the dip in a strong uptrend" instead of "catch a falling knife at 40".
+STRAT_A_RSI_LOW  = 50
+STRAT_A_RSI_HIGH = 65
 
 # ── Strategy B thresholds (Breakout) ────────────────────────────────────────
-STRAT_B_CONSOLIDATION_BARS = 10   # bars of tight range before breakout
-STRAT_B_VOLUME_MULT        = 1.5  # volume must be 1.5× its 20-day avg
+# Relaxed for momentum stocks — they rarely consolidate as tightly as slow caps.
+STRAT_B_CONSOLIDATION_BARS = 5    # was 10 — 5 bars is enough for a base
+STRAT_B_VOLUME_MULT        = 1.3  # was 1.5 — slightly easier volume threshold
 
 # ── Strategy C thresholds (Mean Reversion) ──────────────────────────────────
 STRAT_C_RSI_OVERSOLD  = 30

@@ -1,6 +1,806 @@
 {
   "trades": [
     {
+      "symbol": "NEM",
+      "strategy": "B",
+      "conviction": 4,
+      "entry_date": "2023-01-05",
+      "exit_date": "2023-01-05",
+      "entry": 50.55,
+      "exit": 51.21,
+      "stop": 49.23,
+      "target": 62.91,
+      "shares": 29,
+      "pnl": 19.14,
+      "r_multiple": 0.5,
+      "hold_days": 0,
+      "exit_reason": "regime_bear"
+    },
+    {
+      "symbol": "GDX",
+      "strategy": "B",
+      "conviction": 4,
+      "entry_date": "2023-01-05",
+      "exit_date": "2023-01-05",
+      "entry": 30.35,
+      "exit": 30.65,
+      "stop": 29.75,
+      "target": 36.77,
+      "shares": 48,
+      "pnl": 14.4,
+      "r_multiple": 0.5,
+      "hold_days": 0,
+      "exit_reason": "regime_bear"
+    },
+    {
+      "symbol": "AVGO",
+      "strategy": "B",
+      "conviction": 4,
+      "entry_date": "2023-01-09",
+      "exit_date": "2023-01-09",
+      "entry": 59.23,
+      "exit": 56.25,
+      "stop": 56.25,
+      "target": 71.79,
+      "shares": 25,
+      "pnl": -74.5,
+      "r_multiple": -1.0,
+      "hold_days": 0,
+      "exit_reason": "stop"
+    },
+    {
+      "symbol": "SHOP",
+      "strategy": "B",
+      "conviction": 3,
+      "entry_date": "2023-01-17",
+      "exit_date": "2023-01-17",
+      "entry": 39.19,
+      "exit": 38.11,
+      "stop": 38.11,
+      "target": 42.01,
+      "shares": 38,
+      "pnl": -41.04,
+      "r_multiple": -1.0,
+      "hold_days": 0,
+      "exit_reason": "stop"
+    },
+    {
+      "symbol": "XOM",
+      "strategy": "A",
+      "conviction": 5,
+      "entry_date": "2023-01-23",
+      "exit_date": "2023-01-24",
+      "entry": 113.64,
+      "exit": 106.73,
+      "stop": 106.73,
+      "target": 153.07,
+      "shares": 13,
+      "pnl": -89.83,
+      "r_multiple": -1.0,
+      "hold_days": 1,
+      "exit_reason": "stop"
+    },
+    {
+      "symbol": "CRM",
+      "strategy": "B",
+      "conviction": 4,
+      "entry_date": "2023-01-10",
+      "exit_date": "2023-02-17",
+      "entry": 145.81,
+      "exit": 164.05,
+      "stop": 140.43,
+      "target": 180.45,
+      "shares": 10,
+      "pnl": 182.39,
+      "r_multiple": 3.39,
+      "hold_days": 38,
+      "exit_reason": "stop"
+    },
+    {
+      "symbol": "NOW",
+      "strategy": "B",
+      "conviction": 3,
+      "entry_date": "2023-01-13",
+      "exit_date": "2023-02-24",
+      "entry": 81.73,
+      "exit": 85.47,
+      "stop": 78.0,
+      "target": 101.25,
+      "shares": 16,
+      "pnl": 59.74,
+      "r_multiple": 1.0,
+      "hold_days": 42,
+      "exit_reason": "stop"
+    },
+    {
+      "symbol": "NVDA",
+      "strategy": "B",
+      "conviction": 4,
+      "entry_date": "2023-02-24",
+      "exit_date": "2023-03-01",
+      "entry": 23.23,
+      "exit": 22.63,
+      "stop": 22.63,
+      "target": 28.81,
+      "shares": 64,
+      "pnl": -38.08,
+      "r_multiple": -1.0,
+      "hold_days": 5,
+      "exit_reason": "stop"
+    },
+    {
+      "symbol": "SMCI",
+      "strategy": "B",
+      "conviction": 4,
+      "entry_date": "2023-02-27",
+      "exit_date": "2023-03-02",
+      "entry": 9.89,
+      "exit": 9.7,
+      "stop": 9.7,
+      "target": 10.42,
+      "shares": 154,
+      "pnl": -28.64,
+      "r_multiple": -1.0,
+      "hold_days": 3,
+      "exit_reason": "stop"
+    },
+    {
+      "symbol": "FANG",
+      "strategy": "B",
+      "conviction": 4,
+      "entry_date": "2023-03-06",
+      "exit_date": "2023-03-06",
+      "entry": 145.0,
+      "exit": 145.12,
+      "stop": 145.12,
+      "target": 154.96,
+      "shares": 10,
+      "pnl": 1.2,
+      "r_multiple": 0.0,
+      "hold_days": 0,
+      "exit_reason": "stop"
+    },
+    {
+      "symbol": "CRWD",
+      "strategy": "B",
+      "conviction": 4,
+      "entry_date": "2023-03-07",
+      "exit_date": "2023-03-07",
+      "entry": 127.0,
+      "exit": 125.85,
+      "stop": 125.85,
+      "target": 136.29,
+      "shares": 11,
+      "pnl": -12.65,
+      "r_multiple": -1.0,
+      "hold_days": 0,
+      "exit_reason": "stop"
+    },
+    {
+      "symbol": "XOM",
+      "strategy": "A",
+      "conviction": 4,
+      "entry_date": "2023-01-25",
+      "exit_date": "2023-03-07",
+      "entry": 113.23,
+      "exit": 111.61,
+      "stop": 103.82,
+      "target": 163.76,
+      "shares": 10,
+      "pnl": -16.2,
+      "r_multiple": -0.17,
+      "hold_days": 41,
+      "exit_reason": "regime_bear"
+    },
+    {
+      "symbol": "AVGO",
+      "strategy": "B",
+      "conviction": 4,
+      "entry_date": "2023-03-06",
+      "exit_date": "2023-03-07",
+      "entry": 63.5,
+      "exit": 62.51,
+      "stop": 59.49,
+      "target": 82.23,
+      "shares": 23,
+      "pnl": -22.66,
+      "r_multiple": -0.25,
+      "hold_days": 1,
+      "exit_reason": "regime_bear"
+    },
+    {
+      "symbol": "RIOT",
+      "strategy": "B",
+      "conviction": 4,
+      "entry_date": "2023-03-15",
+      "exit_date": "2023-03-15",
+      "entry": 6.82,
+      "exit": 6.46,
+      "stop": 6.46,
+      "target": 9.04,
+      "shares": 215,
+      "pnl": -77.4,
+      "r_multiple": -1.0,
+      "hold_days": 0,
+      "exit_reason": "stop"
+    },
+    {
+      "symbol": "MARA",
+      "strategy": "B",
+      "conviction": 3,
+      "entry_date": "2023-03-15",
+      "exit_date": "2023-03-15",
+      "entry": 7.13,
+      "exit": 6.89,
+      "stop": 6.89,
+      "target": 8.09,
+      "shares": 208,
+      "pnl": -49.92,
+      "r_multiple": -1.0,
+      "hold_days": 0,
+      "exit_reason": "stop"
+    },
+    {
+      "symbol": "GOOGL",
+      "strategy": "B",
+      "conviction": 4,
+      "entry_date": "2023-03-16",
+      "exit_date": "2023-03-16",
+      "entry": 96.2,
+      "exit": 100.32,
+      "stop": 95.0,
+      "target": 101.66,
+      "shares": 15,
+      "pnl": 61.8,
+      "r_multiple": 3.43,
+      "hold_days": 0,
+      "exit_reason": "regime_bear"
+    },
+    {
+      "symbol": "GOOGL",
+      "strategy": "B",
+      "conviction": 4,
+      "entry_date": "2023-03-17",
+      "exit_date": "2023-03-17",
+      "entry": 100.26,
+      "exit": 101.62,
+      "stop": 95.96,
+      "target": 122.12,
+      "shares": 14,
+      "pnl": 19.04,
+      "r_multiple": 0.32,
+      "hold_days": 0,
+      "exit_reason": "regime_bear"
+    },
+    {
+      "symbol": "QQQ",
+      "strategy": "B",
+      "conviction": 3,
+      "entry_date": "2023-03-17",
+      "exit_date": "2023-03-17",
+      "entry": 306.72,
+      "exit": 305.36,
+      "stop": 297.97,
+      "target": 342.17,
+      "shares": 4,
+      "pnl": -5.44,
+      "r_multiple": -0.16,
+      "hold_days": 0,
+      "exit_reason": "regime_bear"
+    },
+    {
+      "symbol": "MARA",
+      "strategy": "B",
+      "conviction": 4,
+      "entry_date": "2023-03-22",
+      "exit_date": "2023-03-22",
+      "entry": 8.88,
+      "exit": 8.42,
+      "stop": 8.42,
+      "target": 11.12,
+      "shares": 165,
+      "pnl": -75.9,
+      "r_multiple": -1.0,
+      "hold_days": 0,
+      "exit_reason": "stop"
+    },
+    {
+      "symbol": "SMCI",
+      "strategy": "B",
+      "conviction": 4,
+      "entry_date": "2023-03-22",
+      "exit_date": "2023-03-22",
+      "entry": 10.89,
+      "exit": 11.25,
+      "stop": 9.92,
+      "target": 15.32,
+      "shares": 108,
+      "pnl": 39.85,
+      "r_multiple": 0.38,
+      "hold_days": 0,
+      "exit_reason": "regime_bear"
+    },
+    {
+      "symbol": "AVGO",
+      "strategy": "A",
+      "conviction": 3,
+      "entry_date": "2023-03-24",
+      "exit_date": "2023-03-24",
+      "entry": 63.8,
+      "exit": 63.62,
+      "stop": 60.08,
+      "target": 79.28,
+      "shares": 19,
+      "pnl": -3.53,
+      "r_multiple": -0.05,
+      "hold_days": 0,
+      "exit_reason": "regime_bear"
+    },
+    {
+      "symbol": "MU",
+      "strategy": "B",
+      "conviction": 4,
+      "entry_date": "2023-03-30",
+      "exit_date": "2023-03-31",
+      "entry": 64.03,
+      "exit": 61.16,
+      "stop": 61.16,
+      "target": 75.44,
+      "shares": 23,
+      "pnl": -66.01,
+      "r_multiple": -1.0,
+      "hold_days": 1,
+      "exit_reason": "stop"
+    },
+    {
+      "symbol": "CRWD",
+      "strategy": "A",
+      "conviction": 4,
+      "entry_date": "2023-03-31",
+      "exit_date": "2023-04-05",
+      "entry": 132.52,
+      "exit": 126.28,
+      "stop": 126.28,
+      "target": 158.92,
+      "shares": 11,
+      "pnl": -68.64,
+      "r_multiple": -1.0,
+      "hold_days": 5,
+      "exit_reason": "stop"
+    },
+    {
+      "symbol": "SNOW",
+      "strategy": "B",
+      "conviction": 4,
+      "entry_date": "2023-04-03",
+      "exit_date": "2023-04-06",
+      "entry": 152.78,
+      "exit": 143.88,
+      "stop": 143.88,
+      "target": 206.34,
+      "shares": 9,
+      "pnl": -80.1,
+      "r_multiple": -1.0,
+      "hold_days": 3,
+      "exit_reason": "stop"
+    },
+    {
+      "symbol": "GOOGL",
+      "strategy": "B",
+      "conviction": 5,
+      "entry_date": "2023-04-10",
+      "exit_date": "2023-04-11",
+      "entry": 106.98,
+      "exit": 105.04,
+      "stop": 105.04,
+      "target": 128.7,
+      "shares": 13,
+      "pnl": -25.22,
+      "r_multiple": -1.0,
+      "hold_days": 1,
+      "exit_reason": "stop"
+    },
+    {
+      "symbol": "NFLX",
+      "strategy": "B",
+      "conviction": 3,
+      "entry_date": "2023-03-27",
+      "exit_date": "2023-04-17",
+      "entry": 32.76,
+      "exit": 32.79,
+      "stop": 31.96,
+      "target": 36.36,
+      "shares": 44,
+      "pnl": 1.44,
+      "r_multiple": 0.04,
+      "hold_days": 21,
+      "exit_reason": "stop"
+    },
+    {
+      "symbol": "MARA",
+      "strategy": "B",
+      "conviction": 5,
+      "entry_date": "2023-04-12",
+      "exit_date": "2023-04-21",
+      "entry": 10.05,
+      "exit": 9.05,
+      "stop": 9.05,
+      "target": 17.31,
+      "shares": 78,
+      "pnl": -78.0,
+      "r_multiple": -1.0,
+      "hold_days": 9,
+      "exit_reason": "stop"
+    },
+    {
+      "symbol": "NOW",
+      "strategy": "A",
+      "conviction": 5,
+      "entry_date": "2023-04-24",
+      "exit_date": "2023-04-25",
+      "entry": 94.8,
+      "exit": 90.03,
+      "stop": 90.03,
+      "target": 122.44,
+      "shares": 14,
+      "pnl": -66.78,
+      "r_multiple": -1.0,
+      "hold_days": 1,
+      "exit_reason": "stop"
+    },
+    {
+      "symbol": "GDX",
+      "strategy": "A",
+      "conviction": 4,
+      "entry_date": "2023-04-26",
+      "exit_date": "2023-05-16",
+      "entry": 34.17,
+      "exit": 32.91,
+      "stop": 32.91,
+      "target": 38.07,
+      "shares": 39,
+      "pnl": -49.14,
+      "r_multiple": -1.0,
+      "hold_days": 20,
+      "exit_reason": "stop"
+    },
+    {
+      "symbol": "NVDA",
+      "strategy": "A",
+      "conviction": 5,
+      "entry_date": "2023-04-18",
+      "exit_date": "2023-05-25",
+      "entry": 27.53,
+      "exit": 33.24,
+      "stop": 25.96,
+      "target": 33.24,
+      "shares": 52,
+      "pnl": 296.76,
+      "r_multiple": 3.63,
+      "hold_days": 37,
+      "exit_reason": "target"
+    },
+    {
+      "symbol": "AMD",
+      "strategy": "B",
+      "conviction": 4,
+      "entry_date": "2023-05-17",
+      "exit_date": "2023-05-25",
+      "entry": 101.79,
+      "exit": 114.18,
+      "stop": 98.94,
+      "target": 114.18,
+      "shares": 13,
+      "pnl": 161.07,
+      "r_multiple": 4.35,
+      "hold_days": 8,
+      "exit_reason": "target"
+    },
+    {
+      "symbol": "AMZN",
+      "strategy": "A",
+      "conviction": 5,
+      "entry_date": "2023-04-11",
+      "exit_date": "2023-07-20",
+      "entry": 100.8,
+      "exit": 129.36,
+      "stop": 95.33,
+      "target": 143.21,
+      "shares": 13,
+      "pnl": 371.31,
+      "r_multiple": 5.22,
+      "hold_days": 100,
+      "exit_reason": "stop"
+    },
+    {
+      "symbol": "SMCI",
+      "strategy": "B",
+      "conviction": 5,
+      "entry_date": "2023-05-26",
+      "exit_date": "2023-08-14",
+      "entry": 21.0,
+      "exit": 24.99,
+      "stop": 17.0,
+      "target": 42.83,
+      "shares": 27,
+      "pnl": 107.87,
+      "r_multiple": 1.0,
+      "hold_days": 80,
+      "exit_reason": "stop"
+    },
+    {
+      "symbol": "NVDA",
+      "strategy": "B",
+      "conviction": 4,
+      "entry_date": "2023-05-26",
+      "exit_date": "2023-08-28",
+      "entry": 37.89,
+      "exit": 46.83,
+      "stop": 31.51,
+      "target": 70.33,
+      "shares": 15,
+      "pnl": 134.17,
+      "r_multiple": 1.4,
+      "hold_days": 94,
+      "exit_reason": "regime_bear"
+    },
+    {
+      "symbol": "FANG",
+      "strategy": "B",
+      "conviction": 5,
+      "entry_date": "2023-07-25",
+      "exit_date": "2023-08-28",
+      "entry": 144.38,
+      "exit": 150.68,
+      "stop": 140.75,
+      "target": 166.65,
+      "shares": 11,
+      "pnl": 69.3,
+      "r_multiple": 1.74,
+      "hold_days": 34,
+      "exit_reason": "regime_bear"
+    },
+    {
+      "symbol": "XOM",
+      "strategy": "A",
+      "conviction": 5,
+      "entry_date": "2023-08-18",
+      "exit_date": "2023-08-28",
+      "entry": 107.64,
+      "exit": 109.16,
+      "stop": 103.79,
+      "target": 136.06,
+      "shares": 15,
+      "pnl": 22.8,
+      "r_multiple": 0.39,
+      "hold_days": 10,
+      "exit_reason": "regime_bear"
+    },
+    {
+      "symbol": "SHOP",
+      "strategy": "B",
+      "conviction": 4,
+      "entry_date": "2023-09-01",
+      "exit_date": "2023-09-18",
+      "entry": 66.68,
+      "exit": 59.43,
+      "stop": 59.43,
+      "target": 101.79,
+      "shares": 15,
+      "pnl": -108.75,
+      "r_multiple": -1.0,
+      "hold_days": 17,
+      "exit_reason": "stop"
+    },
+    {
+      "symbol": "GOOGL",
+      "strategy": "B",
+      "conviction": 4,
+      "entry_date": "2023-08-30",
+      "exit_date": "2023-09-21",
+      "entry": 134.78,
+      "exit": 132.91,
+      "stop": 132.91,
+      "target": 142.87,
+      "shares": 12,
+      "pnl": -22.44,
+      "r_multiple": -1.0,
+      "hold_days": 22,
+      "exit_reason": "stop"
+    },
+    {
+      "symbol": "GDX",
+      "strategy": "A",
+      "conviction": 6,
+      "entry_date": "2023-09-19",
+      "exit_date": "2023-09-26",
+      "entry": 29.84,
+      "exit": 27.88,
+      "stop": 27.88,
+      "target": 44.71,
+      "shares": 56,
+      "pnl": -109.76,
+      "r_multiple": -1.0,
+      "hold_days": 7,
+      "exit_reason": "stop"
+    },
+    {
+      "symbol": "FANG",
+      "strategy": "B",
+      "conviction": 3,
+      "entry_date": "2023-09-28",
+      "exit_date": "2023-09-29",
+      "entry": 157.23,
+      "exit": 154.19,
+      "stop": 154.19,
+      "target": 169.39,
+      "shares": 10,
+      "pnl": -30.4,
+      "r_multiple": -1.0,
+      "hold_days": 1,
+      "exit_reason": "stop"
+    },
+    {
+      "symbol": "CRWD",
+      "strategy": "B",
+      "conviction": 4,
+      "entry_date": "2023-09-01",
+      "exit_date": "2023-10-05",
+      "entry": 163.12,
+      "exit": 165.29,
+      "stop": 153.99,
+      "target": 208.23,
+      "shares": 10,
+      "pnl": 21.7,
+      "r_multiple": 0.24,
+      "hold_days": 34,
+      "exit_reason": "regime_bear"
+    },
+    {
+      "symbol": "CRWD",
+      "strategy": "B",
+      "conviction": 4,
+      "entry_date": "2023-10-09",
+      "exit_date": "2023-10-09",
+      "entry": 176.5,
+      "exit": 181.82,
+      "stop": 170.29,
+      "target": 208.69,
+      "shares": 9,
+      "pnl": 47.88,
+      "r_multiple": 0.86,
+      "hold_days": 0,
+      "exit_reason": "regime_bear"
+    },
+    {
+      "symbol": "SMCI",
+      "strategy": "B",
+      "conviction": 4,
+      "entry_date": "2023-10-11",
+      "exit_date": "2023-10-11",
+      "entry": 31.11,
+      "exit": 30.89,
+      "stop": 29.15,
+      "target": 40.43,
+      "shares": 52,
+      "pnl": -11.65,
+      "r_multiple": -0.11,
+      "hold_days": 0,
+      "exit_reason": "regime_bear"
+    },
+    {
+      "symbol": "CRWD",
+      "strategy": "A",
+      "conviction": 5,
+      "entry_date": "2023-10-24",
+      "exit_date": "2023-10-25",
+      "entry": 181.0,
+      "exit": 175.38,
+      "stop": 171.56,
+      "target": 224.2,
+      "shares": 9,
+      "pnl": -50.58,
+      "r_multiple": -0.6,
+      "hold_days": 1,
+      "exit_reason": "regime_bear"
+    },
+    {
+      "symbol": "PLTR",
+      "strategy": "A",
+      "conviction": 4,
+      "entry_date": "2023-10-25",
+      "exit_date": "2023-10-25",
+      "entry": 16.57,
+      "exit": 15.59,
+      "stop": 15.06,
+      "target": 24.54,
+      "shares": 68,
+      "pnl": -66.64,
+      "r_multiple": -0.65,
+      "hold_days": 0,
+      "exit_reason": "regime_bear"
+    },
+    {
+      "symbol": "MSFT",
+      "strategy": "B",
+      "conviction": 3,
+      "entry_date": "2023-10-26",
+      "exit_date": "2023-10-26",
+      "entry": 340.54,
+      "exit": 333.51,
+      "stop": 333.51,
+      "target": 369.31,
+      "shares": 4,
+      "pnl": -28.12,
+      "r_multiple": -1.0,
+      "hold_days": 0,
+      "exit_reason": "stop"
+    },
+    {
+      "symbol": "MSTR",
+      "strategy": "B",
+      "conviction": 5,
+      "entry_date": "2023-11-03",
+      "exit_date": "2023-12-08",
+      "entry": 44.5,
+      "exit": 59.34,
+      "stop": 43.03,
+      "target": 59.34,
+      "shares": 34,
+      "pnl": 504.63,
+      "r_multiple": 10.11,
+      "hold_days": 35,
+      "exit_reason": "target"
+    },
+    {
+      "symbol": "ARM",
+      "strategy": "B",
+      "conviction": 5,
+      "entry_date": "2023-12-11",
+      "exit_date": "2023-12-12",
+      "entry": 67.26,
+      "exit": 64.04,
+      "stop": 64.04,
+      "target": 86.37,
+      "shares": 27,
+      "pnl": -86.94,
+      "r_multiple": -1.0,
+      "hold_days": 1,
+      "exit_reason": "stop"
+    },
+    {
+      "symbol": "AMD",
+      "strategy": "B",
+      "conviction": 4,
+      "entry_date": "2023-11-02",
+      "exit_date": "2023-12-28",
+      "entry": 107.96,
+      "exit": 148.14,
+      "stop": 100.02,
+      "target": 148.14,
+      "shares": 13,
+      "pnl": 522.34,
+      "r_multiple": 5.06,
+      "hold_days": 56,
+      "exit_reason": "target"
+    },
+    {
+      "symbol": "ARM",
+      "strategy": "B",
+      "conviction": 5,
+      "entry_date": "2023-12-15",
+      "exit_date": "2024-01-03",
+      "entry": 70.5,
+      "exit": 66.77,
+      "stop": 66.77,
+      "target": 94.56,
+      "shares": 26,
+      "pnl": -96.98,
+      "r_multiple": -1.0,
+      "hold_days": 19,
+      "exit_reason": "stop"
+    },
+    {
       "symbol": "COIN",
       "strategy": "A",
       "conviction": 4,
@@ -10,346 +810,762 @@
       "exit": 142.67,
       "stop": 142.67,
       "target": 220.25,
-      "shares": 7,
-      "pnl": -70.0,
+      "shares": 9,
+      "pnl": -90.0,
       "r_multiple": -1.0,
       "hold_days": 6,
       "exit_reason": "stop"
     },
     {
-      "symbol": "SHOP",
+      "symbol": "AMD",
       "strategy": "A",
+      "conviction": 6,
+      "entry_date": "2024-01-08",
+      "exit_date": "2024-01-31",
+      "entry": 140.36,
+      "exit": 166.4,
+      "stop": 132.4,
+      "target": 188.02,
+      "shares": 13,
+      "pnl": 338.48,
+      "r_multiple": 3.27,
+      "hold_days": 23,
+      "exit_reason": "stop"
+    },
+    {
+      "symbol": "MRVL",
+      "strategy": "B",
+      "conviction": 5,
+      "entry_date": "2024-01-19",
+      "exit_date": "2024-02-01",
+      "entry": 69.0,
+      "exit": 66.48,
+      "stop": 66.48,
+      "target": 78.59,
+      "shares": 28,
+      "pnl": -70.56,
+      "r_multiple": -1.0,
+      "hold_days": 13,
+      "exit_reason": "stop"
+    },
+    {
+      "symbol": "MSFT",
+      "strategy": "A",
+      "conviction": 5,
+      "entry_date": "2023-10-31",
+      "exit_date": "2024-04-15",
+      "entry": 338.85,
+      "exit": 414.74,
+      "stop": 321.15,
+      "target": 434.27,
+      "shares": 4,
+      "pnl": 303.57,
+      "r_multiple": 4.29,
+      "hold_days": 167,
+      "exit_reason": "stop"
+    },
+    {
+      "symbol": "META",
+      "strategy": "B",
+      "conviction": 5,
+      "entry_date": "2024-02-05",
+      "exit_date": "2024-04-29",
+      "entry": 469.88,
+      "exit": 432.62,
+      "stop": 402.3,
+      "target": 911.13,
+      "shares": 1,
+      "pnl": -37.26,
+      "r_multiple": -0.55,
+      "hold_days": 84,
+      "exit_reason": "regime_bear"
+    },
+    {
+      "symbol": "AMZN",
+      "strategy": "B",
+      "conviction": 5,
+      "entry_date": "2024-02-05",
+      "exit_date": "2024-04-29",
+      "entry": 170.2,
+      "exit": 180.96,
+      "stop": 160.11,
+      "target": 242.01,
+      "shares": 11,
+      "pnl": 118.36,
+      "r_multiple": 1.07,
+      "hold_days": 84,
+      "exit_reason": "regime_bear"
+    },
+    {
+      "symbol": "GOOGL",
+      "strategy": "A",
+      "conviction": 5,
+      "entry_date": "2024-04-19",
+      "exit_date": "2024-04-29",
+      "entry": 156.2,
+      "exit": 166.15,
+      "stop": 148.1,
+      "target": 203.47,
+      "shares": 12,
+      "pnl": 119.4,
+      "r_multiple": 1.23,
+      "hold_days": 10,
+      "exit_reason": "regime_bear"
+    },
+    {
+      "symbol": "AVGO",
+      "strategy": "B",
       "conviction": 4,
-      "entry_date": "2024-01-05",
-      "exit_date": "2024-01-19",
-      "entry": 73.32,
-      "exit": 76.73,
-      "stop": 69.91,
-      "target": 90.97,
-      "shares": 20,
-      "pnl": 68.2,
-      "r_multiple": 1.0,
+      "entry_date": "2024-05-16",
+      "exit_date": "2024-05-30",
+      "entry": 142.6,
+      "exit": 136.82,
+      "stop": 136.82,
+      "target": 177.62,
+      "shares": 14,
+      "pnl": -80.92,
+      "r_multiple": -1.0,
+      "hold_days": 14,
+      "exit_reason": "stop"
+    },
+    {
+      "symbol": "MRVL",
+      "strategy": "B",
+      "conviction": 4,
+      "entry_date": "2024-05-17",
+      "exit_date": "2024-05-31",
+      "entry": 73.67,
+      "exit": 69.82,
+      "stop": 69.82,
+      "target": 89.38,
+      "shares": 28,
+      "pnl": -107.8,
+      "r_multiple": -1.0,
       "hold_days": 14,
       "exit_reason": "stop"
     },
     {
       "symbol": "MU",
       "strategy": "A",
-      "conviction": 4,
-      "entry_date": "2024-02-05",
-      "exit_date": "2024-02-06",
-      "entry": 86.74,
-      "exit": 83.77,
-      "stop": 83.77,
-      "target": 100.03,
-      "shares": 17,
-      "pnl": -50.49,
-      "r_multiple": -1.0,
-      "hold_days": 1,
+      "conviction": 5,
+      "entry_date": "2024-06-04",
+      "exit_date": "2024-06-27",
+      "entry": 127.35,
+      "exit": 134.9,
+      "stop": 119.8,
+      "target": 178.39,
+      "shares": 15,
+      "pnl": 113.25,
+      "r_multiple": 1.0,
+      "hold_days": 23,
       "exit_reason": "stop"
     },
     {
-      "symbol": "SMCI",
-      "strategy": "A",
+      "symbol": "MARA",
+      "strategy": "B",
       "conviction": 4,
-      "entry_date": "2024-03-25",
-      "exit_date": "2024-04-19",
-      "entry": 97.28,
-      "exit": 84.64,
-      "stop": 84.64,
-      "target": 160.42,
-      "shares": 7,
-      "pnl": -88.45,
+      "entry_date": "2024-07-02",
+      "exit_date": "2024-07-05",
+      "entry": 22.48,
+      "exit": 20.6,
+      "stop": 20.6,
+      "target": 32.36,
+      "shares": 69,
+      "pnl": -129.72,
       "r_multiple": -1.0,
-      "hold_days": 25,
-      "exit_reason": "stop"
-    },
-    {
-      "symbol": "CRWD",
-      "strategy": "A",
-      "conviction": 4,
-      "entry_date": "2024-02-23",
-      "exit_date": "2024-04-29",
-      "entry": 313.78,
-      "exit": 304.04,
-      "stop": 270.43,
-      "target": 513.31,
-      "shares": 2,
-      "pnl": -19.48,
-      "r_multiple": -0.22,
-      "hold_days": 66,
-      "exit_reason": "regime_bear"
-    },
-    {
-      "symbol": "FCX",
-      "strategy": "A",
-      "conviction": 4,
-      "entry_date": "2024-05-31",
-      "exit_date": "2024-06-04",
-      "entry": 52.74,
-      "exit": 50.09,
-      "stop": 50.09,
-      "target": 63.41,
-      "shares": 27,
-      "pnl": -71.55,
-      "r_multiple": -1.0,
-      "hold_days": 4,
+      "hold_days": 3,
       "exit_reason": "stop"
     },
     {
       "symbol": "META",
-      "strategy": "A",
-      "conviction": 4,
-      "entry_date": "2024-07-15",
-      "exit_date": "2024-07-16",
-      "entry": 498.63,
-      "exit": 488.24,
-      "stop": 488.24,
-      "target": 552.02,
-      "shares": 2,
-      "pnl": -20.78,
+      "strategy": "B",
+      "conviction": 5,
+      "entry_date": "2024-07-08",
+      "exit_date": "2024-07-11",
+      "entry": 542.35,
+      "exit": 517.65,
+      "stop": 517.65,
+      "target": 673.47,
+      "shares": 3,
+      "pnl": -74.1,
       "r_multiple": -1.0,
-      "hold_days": 1,
+      "hold_days": 3,
       "exit_reason": "stop"
     },
     {
-      "symbol": "SHOP",
+      "symbol": "GOOGL",
       "strategy": "A",
       "conviction": 5,
-      "entry_date": "2024-06-26",
-      "exit_date": "2024-07-17",
-      "entry": 65.2,
-      "exit": 65.27,
-      "stop": 62.52,
-      "target": 78.34,
-      "shares": 22,
-      "pnl": 1.43,
-      "r_multiple": 0.02,
-      "hold_days": 21,
+      "entry_date": "2024-06-03",
+      "exit_date": "2024-07-18",
+      "entry": 172.54,
+      "exit": 177.33,
+      "stop": 167.75,
+      "target": 201.0,
+      "shares": 11,
+      "pnl": 52.69,
+      "r_multiple": 1.0,
+      "hold_days": 45,
       "exit_reason": "stop"
     },
     {
-      "symbol": "NOW",
+      "symbol": "ARM",
       "strategy": "A",
-      "conviction": 4,
-      "entry_date": "2024-07-11",
-      "exit_date": "2024-07-17",
-      "entry": 149.2,
-      "exit": 149.35,
-      "stop": 144.85,
-      "target": 167.53,
-      "shares": 9,
-      "pnl": 1.34,
-      "r_multiple": 0.03,
-      "hold_days": 6,
-      "exit_reason": "stop"
-    },
-    {
-      "symbol": "NOW",
-      "strategy": "A",
-      "conviction": 4,
-      "entry_date": "2024-07-19",
+      "conviction": 3,
+      "entry_date": "2024-07-22",
       "exit_date": "2024-07-25",
-      "entry": 148.94,
-      "exit": 163.7,
-      "stop": 144.56,
-      "target": 163.7,
-      "shares": 9,
-      "pnl": 132.86,
-      "r_multiple": 3.37,
-      "hold_days": 6,
-      "exit_reason": "target"
+      "entry": 165.47,
+      "exit": 150.7,
+      "stop": 150.7,
+      "target": 214.2,
+      "shares": 7,
+      "pnl": -103.39,
+      "r_multiple": -1.0,
+      "hold_days": 3,
+      "exit_reason": "stop"
     },
     {
       "symbol": "PLTR",
       "strategy": "A",
-      "conviction": 5,
-      "entry_date": "2024-07-26",
+      "conviction": 4,
+      "entry_date": "2024-07-29",
       "exit_date": "2024-08-02",
-      "entry": 27.0,
+      "entry": 27.56,
       "exit": 25.17,
       "stop": 25.17,
-      "target": 35.39,
-      "shares": 55,
-      "pnl": -100.65,
+      "target": 37.23,
+      "shares": 66,
+      "pnl": -157.74,
       "r_multiple": -1.0,
-      "hold_days": 7,
-      "exit_reason": "stop"
-    },
-    {
-      "symbol": "AAPL",
-      "strategy": "A",
-      "conviction": 4,
-      "entry_date": "2024-07-30",
-      "exit_date": "2024-08-05",
-      "entry": 219.19,
-      "exit": 212.47,
-      "stop": 212.47,
-      "target": 247.09,
-      "shares": 6,
-      "pnl": -40.32,
-      "r_multiple": -1.0,
-      "hold_days": 6,
+      "hold_days": 4,
       "exit_reason": "stop"
     },
     {
       "symbol": "GDX",
       "strategy": "A",
       "conviction": 4,
-      "entry_date": "2024-07-30",
+      "entry_date": "2024-05-07",
       "exit_date": "2024-08-05",
-      "entry": 36.87,
-      "exit": 35.54,
-      "stop": 35.54,
-      "target": 42.14,
-      "shares": 40,
-      "pnl": -53.2,
-      "r_multiple": -1.0,
-      "hold_days": 6,
-      "exit_reason": "stop"
-    },
-    {
-      "symbol": "MRVL",
-      "strategy": "A",
-      "conviction": 4,
-      "entry_date": "2024-09-06",
-      "exit_date": "2024-09-06",
-      "entry": 69.5,
-      "exit": 66.37,
-      "stop": 66.37,
-      "target": 87.49,
-      "shares": 20,
-      "pnl": -62.6,
-      "r_multiple": -1.0,
-      "hold_days": 0,
-      "exit_reason": "stop"
-    },
-    {
-      "symbol": "SLB",
-      "strategy": "A",
-      "conviction": 4,
-      "entry_date": "2024-10-17",
-      "exit_date": "2024-10-18",
-      "entry": 43.5,
-      "exit": 42.46,
-      "stop": 42.46,
-      "target": 49.78,
-      "shares": 31,
-      "pnl": -32.24,
-      "r_multiple": -1.0,
-      "hold_days": 1,
-      "exit_reason": "stop"
-    },
-    {
-      "symbol": "SNOW",
-      "strategy": "A",
-      "conviction": 4,
-      "entry_date": "2024-10-18",
-      "exit_date": "2024-11-21",
-      "entry": 120.0,
-      "exit": 163.98,
-      "stop": 110.04,
-      "target": 163.98,
-      "shares": 10,
-      "pnl": 439.8,
-      "r_multiple": 4.42,
-      "hold_days": 34,
-      "exit_reason": "target"
-    },
-    {
-      "symbol": "CRWD",
-      "strategy": "A",
-      "conviction": 4,
-      "entry_date": "2024-12-23",
-      "exit_date": "2024-12-31",
-      "entry": 358.49,
-      "exit": 341.15,
-      "stop": 341.15,
-      "target": 467.99,
-      "shares": 4,
-      "pnl": -69.36,
-      "r_multiple": -1.0,
-      "hold_days": 8,
+      "entry": 34.1,
+      "exit": 34.13,
+      "stop": 31.88,
+      "target": 45.86,
+      "shares": 58,
+      "pnl": 1.98,
+      "r_multiple": 0.02,
+      "hold_days": 90,
       "exit_reason": "stop"
     },
     {
       "symbol": "NOW",
       "strategy": "A",
       "conviction": 4,
-      "entry_date": "2024-12-23",
-      "exit_date": "2025-01-02",
-      "entry": 217.2,
-      "exit": 208.89,
-      "stop": 208.89,
-      "target": 265.05,
-      "shares": 6,
-      "pnl": -49.86,
+      "entry_date": "2024-07-15",
+      "exit_date": "2024-08-13",
+      "entry": 153.39,
+      "exit": 163.76,
+      "stop": 144.85,
+      "target": 185.95,
+      "shares": 13,
+      "pnl": 134.81,
+      "r_multiple": 1.21,
+      "hold_days": 29,
+      "exit_reason": "regime_bear"
+    },
+    {
+      "symbol": "NEM",
+      "strategy": "A",
+      "conviction": 4,
+      "entry_date": "2024-08-07",
+      "exit_date": "2024-08-13",
+      "entry": 48.2,
+      "exit": 49.02,
+      "stop": 44.32,
+      "target": 64.0,
+      "shares": 38,
+      "pnl": 31.16,
+      "r_multiple": 0.21,
+      "hold_days": 6,
+      "exit_reason": "regime_bear"
+    },
+    {
+      "symbol": "XOM",
+      "strategy": "A",
+      "conviction": 4,
+      "entry_date": "2024-08-12",
+      "exit_date": "2024-08-13",
+      "entry": 119.55,
+      "exit": 117.86,
+      "stop": 112.12,
+      "target": 152.5,
+      "shares": 16,
+      "pnl": -27.04,
+      "r_multiple": -0.23,
+      "hold_days": 1,
+      "exit_reason": "regime_bear"
+    },
+    {
+      "symbol": "GDX",
+      "strategy": "B",
+      "conviction": 3,
+      "entry_date": "2024-08-19",
+      "exit_date": "2024-09-03",
+      "entry": 38.22,
+      "exit": 37.12,
+      "stop": 37.12,
+      "target": 43.97,
+      "shares": 49,
+      "pnl": -53.9,
       "r_multiple": -1.0,
-      "hold_days": 10,
+      "hold_days": 15,
       "exit_reason": "stop"
     },
     {
-      "symbol": "AMZN",
+      "symbol": "NFLX",
       "strategy": "A",
+      "conviction": 3,
+      "entry_date": "2024-09-05",
+      "exit_date": "2024-09-06",
+      "entry": 67.31,
+      "exit": 66.43,
+      "stop": 66.43,
+      "target": 74.13,
+      "shares": 28,
+      "pnl": -24.75,
+      "r_multiple": -1.0,
+      "hold_days": 1,
+      "exit_reason": "stop"
+    },
+    {
+      "symbol": "PLTR",
+      "strategy": "A",
+      "conviction": 3,
+      "entry_date": "2024-09-05",
+      "exit_date": "2024-09-16",
+      "entry": 30.24,
+      "exit": 36.87,
+      "stop": 29.02,
+      "target": 36.87,
+      "shares": 60,
+      "pnl": 397.8,
+      "r_multiple": 5.43,
+      "hold_days": 11,
+      "exit_reason": "target"
+    },
+    {
+      "symbol": "NEM",
+      "strategy": "A",
+      "conviction": 3,
+      "entry_date": "2024-09-10",
+      "exit_date": "2024-09-18",
+      "entry": 50.74,
+      "exit": 54.68,
+      "stop": 49.73,
+      "target": 54.68,
+      "shares": 39,
+      "pnl": 153.66,
+      "r_multiple": 3.9,
+      "hold_days": 8,
+      "exit_reason": "target"
+    },
+    {
+      "symbol": "TSLA",
+      "strategy": "B",
+      "conviction": 5,
+      "entry_date": "2024-09-20",
+      "exit_date": "2024-10-02",
+      "entry": 241.52,
+      "exit": 241.76,
+      "stop": 233.32,
+      "target": 307.52,
+      "shares": 8,
+      "pnl": 1.93,
+      "r_multiple": 0.03,
+      "hold_days": 12,
+      "exit_reason": "stop"
+    },
+    {
+      "symbol": "PLTR",
+      "strategy": "B",
       "conviction": 4,
-      "entry_date": "2024-12-31",
-      "exit_date": "2025-01-07",
-      "entry": 222.97,
-      "exit": 222.11,
-      "stop": 216.25,
-      "target": 246.55,
+      "entry_date": "2024-09-17",
+      "exit_date": "2024-10-04",
+      "entry": 37.0,
+      "exit": 39.61,
+      "stop": 35.65,
+      "target": 39.61,
+      "shares": 57,
+      "pnl": 148.77,
+      "r_multiple": 1.93,
+      "hold_days": 17,
+      "exit_reason": "target"
+    },
+    {
+      "symbol": "AMD",
+      "strategy": "B",
+      "conviction": 5,
+      "entry_date": "2024-10-07",
+      "exit_date": "2024-10-10",
+      "entry": 171.08,
+      "exit": 167.04,
+      "stop": 167.04,
+      "target": 194.06,
+      "shares": 12,
+      "pnl": -48.48,
+      "r_multiple": -1.0,
+      "hold_days": 3,
+      "exit_reason": "stop"
+    },
+    {
+      "symbol": "CRWD",
+      "strategy": "B",
+      "conviction": 4,
+      "entry_date": "2024-10-11",
+      "exit_date": "2024-10-25",
+      "entry": 314.92,
+      "exit": 295.78,
+      "stop": 295.78,
+      "target": 410.62,
       "shares": 6,
-      "pnl": -5.16,
-      "r_multiple": -0.13,
+      "pnl": -114.84,
+      "r_multiple": -1.0,
+      "hold_days": 14,
+      "exit_reason": "stop"
+    },
+    {
+      "symbol": "CRM",
+      "strategy": "B",
+      "conviction": 4,
+      "entry_date": "2024-10-03",
+      "exit_date": "2024-10-29",
+      "entry": 278.99,
+      "exit": 297.63,
+      "stop": 275.85,
+      "target": 297.63,
+      "shares": 7,
+      "pnl": 130.48,
+      "r_multiple": 5.94,
+      "hold_days": 26,
+      "exit_reason": "target"
+    },
+    {
+      "symbol": "NOW",
+      "strategy": "A",
+      "conviction": 5,
+      "entry_date": "2024-08-30",
+      "exit_date": "2024-11-07",
+      "entry": 167.35,
+      "exit": 202.73,
+      "stop": 160.17,
+      "target": 202.73,
+      "shares": 11,
+      "pnl": 389.16,
+      "r_multiple": 4.93,
+      "hold_days": 69,
+      "exit_reason": "target"
+    },
+    {
+      "symbol": "ARM",
+      "strategy": "B",
+      "conviction": 3,
+      "entry_date": "2024-11-08",
+      "exit_date": "2024-11-08",
+      "entry": 148.7,
+      "exit": 145.31,
+      "stop": 145.31,
+      "target": 172.01,
+      "shares": 14,
+      "pnl": -47.46,
+      "r_multiple": -1.0,
+      "hold_days": 0,
+      "exit_reason": "stop"
+    },
+    {
+      "symbol": "CRWD",
+      "strategy": "B",
+      "conviction": 4,
+      "entry_date": "2024-11-14",
+      "exit_date": "2024-11-15",
+      "entry": 347.89,
+      "exit": 340.45,
+      "stop": 340.45,
+      "target": 385.03,
+      "shares": 6,
+      "pnl": -44.64,
+      "r_multiple": -1.0,
+      "hold_days": 1,
+      "exit_reason": "stop"
+    },
+    {
+      "symbol": "SNOW",
+      "strategy": "B",
+      "conviction": 4,
+      "entry_date": "2024-11-14",
+      "exit_date": "2024-11-15",
+      "entry": 132.06,
+      "exit": 125.78,
+      "stop": 125.78,
+      "target": 155.48,
+      "shares": 17,
+      "pnl": -106.76,
+      "r_multiple": -1.0,
+      "hold_days": 1,
+      "exit_reason": "stop"
+    },
+    {
+      "symbol": "CRM",
+      "strategy": "B",
+      "conviction": 4,
+      "entry_date": "2024-11-07",
+      "exit_date": "2024-11-19",
+      "entry": 307.5,
+      "exit": 317.82,
+      "stop": 297.18,
+      "target": 355.5,
+      "shares": 7,
+      "pnl": 72.24,
+      "r_multiple": 1.0,
+      "hold_days": 12,
+      "exit_reason": "stop"
+    },
+    {
+      "symbol": "GOOGL",
+      "strategy": "A",
+      "conviction": 5,
+      "entry_date": "2024-11-19",
+      "exit_date": "2024-11-21",
+      "entry": 173.72,
+      "exit": 167.15,
+      "stop": 167.15,
+      "target": 224.2,
+      "shares": 12,
+      "pnl": -78.84,
+      "r_multiple": -1.0,
+      "hold_days": 2,
+      "exit_reason": "stop"
+    },
+    {
+      "symbol": "CRWD",
+      "strategy": "B",
+      "conviction": 4,
+      "entry_date": "2024-11-22",
+      "exit_date": "2024-11-25",
+      "entry": 359.68,
+      "exit": 376.6,
+      "stop": 353.74,
+      "target": 376.6,
+      "shares": 6,
+      "pnl": 101.52,
+      "r_multiple": 2.85,
+      "hold_days": 3,
+      "exit_reason": "target"
+    },
+    {
+      "symbol": "MU",
+      "strategy": "B",
+      "conviction": 3,
+      "entry_date": "2024-11-26",
+      "exit_date": "2024-11-26",
+      "entry": 104.0,
+      "exit": 102.67,
+      "stop": 102.67,
+      "target": 111.72,
+      "shares": 21,
+      "pnl": -27.93,
+      "r_multiple": -1.0,
+      "hold_days": 0,
+      "exit_reason": "stop"
+    },
+    {
+      "symbol": "MRVL",
+      "strategy": "A",
+      "conviction": 5,
+      "entry_date": "2024-11-19",
+      "exit_date": "2024-12-04",
+      "entry": 87.71,
+      "exit": 115.65,
+      "stop": 84.22,
+      "target": 115.65,
+      "shares": 24,
+      "pnl": 670.56,
+      "r_multiple": 8.01,
+      "hold_days": 15,
+      "exit_reason": "target"
+    },
+    {
+      "symbol": "CRWD",
+      "strategy": "A",
+      "conviction": 6,
+      "entry_date": "2024-12-03",
+      "exit_date": "2024-12-18",
+      "entry": 345.0,
+      "exit": 356.81,
+      "stop": 333.19,
+      "target": 455.68,
+      "shares": 6,
+      "pnl": 70.86,
+      "r_multiple": 1.0,
+      "hold_days": 15,
+      "exit_reason": "stop"
+    },
+    {
+      "symbol": "PLTR",
+      "strategy": "B",
+      "conviction": 5,
+      "entry_date": "2024-12-23",
+      "exit_date": "2024-12-30",
+      "entry": 80.65,
+      "exit": 77.04,
+      "stop": 77.04,
+      "target": 101.61,
+      "shares": 29,
+      "pnl": -104.69,
+      "r_multiple": -1.0,
       "hold_days": 7,
+      "exit_reason": "stop"
+    },
+    {
+      "symbol": "NOW",
+      "strategy": "A",
+      "conviction": 5,
+      "entry_date": "2024-12-02",
+      "exit_date": "2025-01-07",
+      "entry": 209.68,
+      "exit": 210.83,
+      "stop": 196.7,
+      "target": 289.03,
+      "shares": 10,
+      "pnl": 11.5,
+      "r_multiple": 0.09,
+      "hold_days": 36,
       "exit_reason": "regime_bear"
+    },
+    {
+      "symbol": "MRVL",
+      "strategy": "B",
+      "conviction": 5,
+      "entry_date": "2024-12-05",
+      "exit_date": "2025-01-07",
+      "entry": 116.6,
+      "exit": 116.23,
+      "stop": 97.73,
+      "target": 240.67,
+      "shares": 8,
+      "pnl": -2.96,
+      "r_multiple": -0.02,
+      "hold_days": 33,
+      "exit_reason": "regime_bear"
+    },
+    {
+      "symbol": "AMZN",
+      "strategy": "B",
+      "conviction": 3,
+      "entry_date": "2025-01-21",
+      "exit_date": "2025-01-28",
+      "entry": 228.9,
+      "exit": 240.1,
+      "stop": 222.4,
+      "target": 240.1,
+      "shares": 10,
+      "pnl": 112.0,
+      "r_multiple": 1.72,
+      "hold_days": 7,
+      "exit_reason": "target"
     },
     {
       "symbol": "FANG",
       "strategy": "A",
+      "conviction": 5,
+      "entry_date": "2025-01-23",
+      "exit_date": "2025-01-28",
+      "entry": 179.08,
+      "exit": 167.56,
+      "stop": 167.56,
+      "target": 237.77,
+      "shares": 13,
+      "pnl": -149.76,
+      "r_multiple": -1.0,
+      "hold_days": 5,
+      "exit_reason": "stop"
+    },
+    {
+      "symbol": "SLB",
+      "strategy": "B",
       "conviction": 4,
-      "entry_date": "2025-01-30",
-      "exit_date": "2025-01-31",
-      "entry": 172.32,
-      "exit": 165.49,
-      "stop": 165.49,
-      "target": 197.71,
-      "shares": 8,
-      "pnl": -54.64,
+      "entry_date": "2025-01-21",
+      "exit_date": "2025-01-29",
+      "entry": 43.95,
+      "exit": 40.81,
+      "stop": 40.81,
+      "target": 57.43,
+      "shares": 54,
+      "pnl": -169.56,
+      "r_multiple": -1.0,
+      "hold_days": 8,
+      "exit_reason": "stop"
+    },
+    {
+      "symbol": "AMZN",
+      "strategy": "B",
+      "conviction": 3,
+      "entry_date": "2025-01-29",
+      "exit_date": "2025-01-30",
+      "entry": 239.02,
+      "exit": 234.04,
+      "stop": 234.04,
+      "target": 254.59,
+      "shares": 9,
+      "pnl": -44.82,
       "r_multiple": -1.0,
       "hold_days": 1,
       "exit_reason": "stop"
     },
     {
       "symbol": "GOOGL",
-      "strategy": "A",
+      "strategy": "B",
       "conviction": 4,
-      "entry_date": "2025-02-07",
-      "exit_date": "2025-02-07",
-      "entry": 191.05,
-      "exit": 186.15,
-      "stop": 186.15,
-      "target": 218.85,
-      "shares": 7,
-      "pnl": -34.3,
-      "r_multiple": -1.0,
-      "hold_days": 0,
+      "entry_date": "2025-02-03",
+      "exit_date": "2025-02-05",
+      "entry": 200.69,
+      "exit": 201.99,
+      "stop": 199.39,
+      "target": 227.17,
+      "shares": 11,
+      "pnl": 14.3,
+      "r_multiple": 1.0,
+      "hold_days": 2,
       "exit_reason": "stop"
     },
     {
-      "symbol": "AMZN",
-      "strategy": "A",
+      "symbol": "CRWD",
+      "strategy": "B",
       "conviction": 4,
-      "entry_date": "2025-02-14",
-      "exit_date": "2025-02-18",
-      "entry": 229.2,
-      "exit": 225.24,
-      "stop": 225.24,
-      "target": 256.02,
-      "shares": 6,
-      "pnl": -23.76,
+      "entry_date": "2025-01-29",
+      "exit_date": "2025-02-21",
+      "entry": 404.35,
+      "exit": 404.75,
+      "stop": 380.46,
+      "target": 549.78,
+      "shares": 5,
+      "pnl": 2.02,
+      "r_multiple": 0.02,
+      "hold_days": 23,
+      "exit_reason": "stop"
+    },
+    {
+      "symbol": "NEM",
+      "strategy": "B",
+      "conviction": 5,
+      "entry_date": "2025-02-06",
+      "exit_date": "2025-02-25",
+      "entry": 44.94,
+      "exit": 43.26,
+      "stop": 43.26,
+      "target": 55.16,
+      "shares": 52,
+      "pnl": -87.36,
       "r_multiple": -1.0,
-      "hold_days": 4,
+      "hold_days": 19,
       "exit_reason": "stop"
     },
     {
@@ -362,1678 +1578,2992 @@
       "exit": 227.9,
       "stop": 227.9,
       "target": 311.54,
-      "shares": 5,
-      "pnl": -69.45,
+      "shares": 9,
+      "pnl": -125.01,
       "r_multiple": -1.0,
       "hold_days": 7,
       "exit_reason": "stop"
+    },
+    {
+      "symbol": "GDX",
+      "strategy": "B",
+      "conviction": 5,
+      "entry_date": "2025-01-31",
+      "exit_date": "2025-03-19",
+      "entry": 39.52,
+      "exit": 45.23,
+      "stop": 37.87,
+      "target": 48.72,
+      "shares": 57,
+      "pnl": 325.47,
+      "r_multiple": 3.46,
+      "hold_days": 47,
+      "exit_reason": "regime_bear"
+    },
+    {
+      "symbol": "AMD",
+      "strategy": "B",
+      "conviction": 4,
+      "entry_date": "2025-03-25",
+      "exit_date": "2025-03-25",
+      "entry": 113.27,
+      "exit": 114.81,
+      "stop": 107.18,
+      "target": 147.2,
+      "shares": 20,
+      "pnl": 30.8,
+      "r_multiple": 0.25,
+      "hold_days": 0,
+      "exit_reason": "regime_bear"
+    },
+    {
+      "symbol": "NOW",
+      "strategy": "B",
+      "conviction": 4,
+      "entry_date": "2025-04-25",
+      "exit_date": "2025-04-30",
+      "entry": 188.8,
+      "exit": 191.0,
+      "stop": 165.12,
+      "target": 300.66,
+      "shares": 6,
+      "pnl": 13.21,
+      "r_multiple": 0.09,
+      "hold_days": 5,
+      "exit_reason": "end_of_test"
+    },
+    {
+      "symbol": "SNOW",
+      "strategy": "B",
+      "conviction": 3,
+      "entry_date": "2025-04-25",
+      "exit_date": "2025-04-30",
+      "entry": 157.8,
+      "exit": 159.49,
+      "stop": 150.31,
+      "target": 192.06,
+      "shares": 14,
+      "pnl": 23.66,
+      "r_multiple": 0.23,
+      "hold_days": 5,
+      "exit_reason": "end_of_test"
     }
   ],
   "equity_curve": [
     [
-      "2024-01-02",
+      "2023-01-03",
       5000.0,
       0
+    ],
+    [
+      "2023-01-04",
+      5000.0,
+      0
+    ],
+    [
+      "2023-01-05",
+      5033.54,
+      0
+    ],
+    [
+      "2023-01-06",
+      5033.54,
+      0
+    ],
+    [
+      "2023-01-09",
+      4959.04,
+      0
+    ],
+    [
+      "2023-01-10",
+      4975.34,
+      1
+    ],
+    [
+      "2023-01-11",
+      4949.94,
+      1
+    ],
+    [
+      "2023-01-12",
+      4996.94,
+      1
+    ],
+    [
+      "2023-01-13",
+      5015.94,
+      2
+    ],
+    [
+      "2023-01-17",
+      4975.22,
+      2
+    ],
+    [
+      "2023-01-18",
+      4938.5,
+      2
+    ],
+    [
+      "2023-01-19",
+      4987.23,
+      2
+    ],
+    [
+      "2023-01-20",
+      5078.51,
+      2
+    ],
+    [
+      "2023-01-23",
+      5115.22,
+      3
+    ],
+    [
+      "2023-01-24",
+      5029.84,
+      2
+    ],
+    [
+      "2023-01-25",
+      5059.89,
+      3
+    ],
+    [
+      "2023-01-26",
+      5240.35,
+      3
+    ],
+    [
+      "2023-01-27",
+      5199.68,
+      3
+    ],
+    [
+      "2023-01-30",
+      5129.35,
+      3
+    ],
+    [
+      "2023-01-31",
+      5226.24,
+      3
+    ],
+    [
+      "2023-02-01",
+      5311.82,
+      3
+    ],
+    [
+      "2023-02-02",
+      5359.99,
+      3
+    ],
+    [
+      "2023-02-03",
+      5270.73,
+      3
+    ],
+    [
+      "2023-02-06",
+      5194.53,
+      3
+    ],
+    [
+      "2023-02-07",
+      5274.46,
+      3
+    ],
+    [
+      "2023-02-08",
+      5250.26,
+      3
+    ],
+    [
+      "2023-02-09",
+      5292.69,
+      3
+    ],
+    [
+      "2023-02-10",
+      5258.78,
+      3
+    ],
+    [
+      "2023-02-13",
+      5294.15,
+      3
+    ],
+    [
+      "2023-02-14",
+      5270.15,
+      3
+    ],
+    [
+      "2023-02-15",
+      5286.24,
+      3
+    ],
+    [
+      "2023-02-16",
+      5220.23,
+      3
+    ],
+    [
+      "2023-02-17",
+      5088.15,
+      2
+    ],
+    [
+      "2023-02-21",
+      5064.17,
+      2
+    ],
+    [
+      "2023-02-22",
+      5075.31,
+      2
+    ],
+    [
+      "2023-02-23",
+      5091.39,
+      2
+    ],
+    [
+      "2023-02-24",
+      5049.41,
+      2
+    ],
+    [
+      "2023-02-27",
+      5096.13,
+      3
+    ],
+    [
+      "2023-02-28",
+      5022.83,
+      3
+    ],
+    [
+      "2023-03-01",
+      5057.18,
+      2
+    ],
+    [
+      "2023-03-02",
+      4985.28,
+      1
+    ],
+    [
+      "2023-03-03",
+      4999.38,
+      1
+    ],
+    [
+      "2023-03-06",
+      5005.8,
+      2
+    ],
+    [
+      "2023-03-07",
+      4953.28,
+      0
+    ],
+    [
+      "2023-03-08",
+      4953.28,
+      0
+    ],
+    [
+      "2023-03-09",
+      4953.28,
+      0
+    ],
+    [
+      "2023-03-10",
+      4953.28,
+      0
+    ],
+    [
+      "2023-03-13",
+      4953.28,
+      0
+    ],
+    [
+      "2023-03-14",
+      4953.28,
+      0
+    ],
+    [
+      "2023-03-15",
+      4825.96,
+      0
+    ],
+    [
+      "2023-03-16",
+      4887.76,
+      0
+    ],
+    [
+      "2023-03-17",
+      4901.36,
+      0
+    ],
+    [
+      "2023-03-20",
+      4901.36,
+      0
+    ],
+    [
+      "2023-03-21",
+      4901.36,
+      0
+    ],
+    [
+      "2023-03-22",
+      4865.31,
+      0
+    ],
+    [
+      "2023-03-23",
+      4865.31,
+      0
+    ],
+    [
+      "2023-03-24",
+      4861.78,
+      0
+    ],
+    [
+      "2023-03-27",
+      4862.26,
+      1
+    ],
+    [
+      "2023-03-28",
+      4844.04,
+      1
+    ],
+    [
+      "2023-03-29",
+      4881.49,
+      1
+    ],
+    [
+      "2023-03-30",
+      4888.03,
+      2
+    ],
+    [
+      "2023-03-31",
+      4926.8,
+      2
+    ],
+    [
+      "2023-04-03",
+      4906.29,
+      3
+    ],
+    [
+      "2023-04-04",
+      4951.84,
+      3
+    ],
+    [
+      "2023-04-05",
+      4735.55,
+      2
+    ],
+    [
+      "2023-04-06",
+      4698.86,
+      1
+    ],
+    [
+      "2023-04-10",
+      4690.34,
+      2
+    ],
+    [
+      "2023-04-11",
+      4657.27,
+      2
+    ],
+    [
+      "2023-04-12",
+      4590.71,
+      3
+    ],
+    [
+      "2023-04-13",
+      4839.28,
+      3
+    ],
+    [
+      "2023-04-14",
+      4842.55,
+      3
+    ],
+    [
+      "2023-04-17",
+      4757.67,
+      2
+    ],
+    [
+      "2023-04-18",
+      4776.86,
+      3
+    ],
+    [
+      "2023-04-19",
+      4737.02,
+      3
+    ],
+    [
+      "2023-04-20",
+      4598.73,
+      3
+    ],
+    [
+      "2023-04-21",
+      4603.8,
+      2
+    ],
+    [
+      "2023-04-24",
+      4587.25,
+      3
+    ],
+    [
+      "2023-04-25",
+      4434.29,
+      2
+    ],
+    [
+      "2023-04-26",
+      4470.04,
+      3
+    ],
+    [
+      "2023-04-27",
+      4567.28,
+      3
+    ],
+    [
+      "2023-04-28",
+      4527.14,
+      3
+    ],
+    [
+      "2023-05-01",
+      4536.68,
+      3
+    ],
+    [
+      "2023-05-02",
+      4572.69,
+      3
+    ],
+    [
+      "2023-05-03",
+      4556.42,
+      3
+    ],
+    [
+      "2023-05-04",
+      4580.86,
+      3
+    ],
+    [
+      "2023-05-05",
+      4649.26,
+      3
+    ],
+    [
+      "2023-05-08",
+      4674.4,
+      3
+    ],
+    [
+      "2023-05-09",
+      4650.22,
+      3
+    ],
+    [
+      "2023-05-10",
+      4703.21,
+      3
+    ],
+    [
+      "2023-05-11",
+      4655.4,
+      3
+    ],
+    [
+      "2023-05-12",
+      4621.18,
+      3
+    ],
+    [
+      "2023-05-15",
+      4677.37,
+      3
+    ],
+    [
+      "2023-05-16",
+      4680.49,
+      2
+    ],
+    [
+      "2023-05-17",
+      4783.45,
+      3
+    ],
+    [
+      "2023-05-18",
+      4950.24,
+      3
+    ],
+    [
+      "2023-05-19",
+      4876.58,
+      3
+    ],
+    [
+      "2023-05-22",
+      4884.22,
+      3
+    ],
+    [
+      "2023-05-23",
+      4860.15,
+      3
+    ],
+    [
+      "2023-05-24",
+      4877.18,
+      3
+    ],
+    [
+      "2023-05-25",
+      5071.76,
+      1
+    ],
+    [
+      "2023-05-26",
+      5178.95,
+      3
+    ],
+    [
+      "2023-05-30",
+      5256.86,
+      3
+    ],
+    [
+      "2023-05-31",
+      5181.26,
+      3
+    ],
+    [
+      "2023-06-01",
+      5257.86,
+      3
+    ],
+    [
+      "2023-06-02",
+      5245.94,
+      3
+    ],
+    [
+      "2023-06-05",
+      5261.89,
+      3
+    ],
+    [
+      "2023-06-06",
+      5296.79,
+      3
+    ],
+    [
+      "2023-06-07",
+      5227.07,
+      3
+    ],
+    [
+      "2023-06-08",
+      5321.19,
+      3
+    ],
+    [
+      "2023-06-09",
+      5334.17,
+      3
+    ],
+    [
+      "2023-06-12",
+      5377.54,
+      3
+    ],
+    [
+      "2023-06-13",
+      5362.9,
+      3
+    ],
+    [
+      "2023-06-14",
+      5398.94,
+      3
+    ],
+    [
+      "2023-06-15",
+      5392.36,
+      3
+    ],
+    [
+      "2023-06-16",
+      5336.38,
+      3
+    ],
+    [
+      "2023-06-20",
+      5334.29,
+      3
+    ],
+    [
+      "2023-06-21",
+      5303.77,
+      3
+    ],
+    [
+      "2023-06-22",
+      5390.31,
+      3
+    ],
+    [
+      "2023-06-23",
+      5339.33,
+      3
+    ],
+    [
+      "2023-06-26",
+      5290.87,
+      3
+    ],
+    [
+      "2023-06-27",
+      5359.69,
+      3
+    ],
+    [
+      "2023-06-28",
+      5372.86,
+      3
+    ],
+    [
+      "2023-06-29",
+      5353.59,
+      3
+    ],
+    [
+      "2023-06-30",
+      5443.73,
+      3
+    ],
+    [
+      "2023-07-03",
+      5443.44,
+      3
+    ],
+    [
+      "2023-07-05",
+      5459.74,
+      3
+    ],
+    [
+      "2023-07-06",
+      5418.2,
+      3
+    ],
+    [
+      "2023-07-07",
+      5468.26,
+      3
+    ],
+    [
+      "2023-07-10",
+      5455.75,
+      3
+    ],
+    [
+      "2023-07-11",
+      5483.33,
+      3
+    ],
+    [
+      "2023-07-12",
+      5547.4,
+      3
+    ],
+    [
+      "2023-07-13",
+      5671.04,
+      3
+    ],
+    [
+      "2023-07-14",
+      5671.95,
+      3
+    ],
+    [
+      "2023-07-17",
+      5690.28,
+      3
+    ],
+    [
+      "2023-07-18",
+      5740.43,
+      3
+    ],
+    [
+      "2023-07-19",
+      5727.29,
+      3
+    ],
+    [
+      "2023-07-20",
+      5624.02,
+      2
+    ],
+    [
+      "2023-07-21",
+      5606.4,
+      2
+    ],
+    [
+      "2023-07-24",
+      5627.74,
+      2
+    ],
+    [
+      "2023-07-25",
+      5694.35,
+      3
+    ],
+    [
+      "2023-07-26",
+      5668.62,
+      3
+    ],
+    [
+      "2023-07-27",
+      5695.25,
+      3
+    ],
+    [
+      "2023-07-28",
+      5741.52,
+      3
+    ],
+    [
+      "2023-07-31",
+      5748.26,
+      3
+    ],
+    [
+      "2023-08-01",
+      5770.78,
+      3
+    ],
+    [
+      "2023-08-02",
+      5676.75,
+      3
+    ],
+    [
+      "2023-08-03",
+      5702.58,
+      3
+    ],
+    [
+      "2023-08-04",
+      5752.39,
+      3
+    ],
+    [
+      "2023-08-07",
+      5804.71,
+      3
+    ],
+    [
+      "2023-08-08",
+      5784.22,
+      3
+    ],
+    [
+      "2023-08-09",
+      5546.67,
+      3
+    ],
+    [
+      "2023-08-10",
+      5565.82,
+      3
+    ],
+    [
+      "2023-08-11",
+      5481.13,
+      3
+    ],
+    [
+      "2023-08-14",
+      5504.44,
+      2
+    ],
+    [
+      "2023-08-15",
+      5490.42,
+      2
+    ],
+    [
+      "2023-08-16",
+      5478.22,
+      2
+    ],
+    [
+      "2023-08-17",
+      5482.58,
+      2
+    ],
+    [
+      "2023-08-18",
+      5523.73,
+      3
+    ],
+    [
+      "2023-08-21",
+      5563.31,
+      3
+    ],
+    [
+      "2023-08-22",
+      5533.03,
+      3
+    ],
+    [
+      "2023-08-23",
+      5539.62,
+      3
+    ],
+    [
+      "2023-08-24",
+      5537.01,
+      3
+    ],
+    [
+      "2023-08-25",
+      5554.28,
+      3
+    ],
+    [
+      "2023-08-28",
+      5592.61,
+      0
+    ],
+    [
+      "2023-08-29",
+      5592.61,
+      0
+    ],
+    [
+      "2023-08-30",
+      5605.81,
+      1
+    ],
+    [
+      "2023-08-31",
+      5609.29,
+      1
+    ],
+    [
+      "2023-09-01",
+      5584.72,
+      3
+    ],
+    [
+      "2023-09-05",
+      5614.39,
+      3
+    ],
+    [
+      "2023-09-06",
+      5606.97,
+      3
+    ],
+    [
+      "2023-09-07",
+      5605.07,
+      3
+    ],
+    [
+      "2023-09-08",
+      5606.46,
+      3
+    ],
+    [
+      "2023-09-11",
+      5678.19,
+      3
+    ],
+    [
+      "2023-09-12",
+      5608.68,
+      3
+    ],
+    [
+      "2023-09-13",
+      5608.37,
+      3
+    ],
+    [
+      "2023-09-14",
+      5659.35,
+      3
+    ],
+    [
+      "2023-09-15",
+      5582.85,
+      3
+    ],
+    [
+      "2023-09-18",
+      5563.52,
+      2
+    ],
+    [
+      "2023-09-19",
+      5522.14,
+      3
+    ],
+    [
+      "2023-09-20",
+      5471.8,
+      3
+    ],
+    [
+      "2023-09-21",
+      5403.44,
+      2
+    ],
+    [
+      "2023-09-22",
+      5401.6,
+      2
+    ],
+    [
+      "2023-09-25",
+      5354.94,
+      2
+    ],
+    [
+      "2023-09-26",
+      5325.26,
+      1
+    ],
+    [
+      "2023-09-27",
+      5350.86,
+      1
+    ],
+    [
+      "2023-09-28",
+      5372.06,
+      2
+    ],
+    [
+      "2023-09-29",
+      5363.86,
+      1
+    ],
+    [
+      "2023-10-02",
+      5385.46,
+      1
+    ],
+    [
+      "2023-10-03",
+      5310.36,
+      1
+    ],
+    [
+      "2023-10-04",
+      5330.56,
+      1
+    ],
+    [
+      "2023-10-05",
+      5342.96,
+      0
+    ],
+    [
+      "2023-10-06",
+      5342.96,
+      0
+    ],
+    [
+      "2023-10-09",
+      5390.84,
+      0
+    ],
+    [
+      "2023-10-10",
+      5390.84,
+      0
+    ],
+    [
+      "2023-10-11",
+      5379.2,
+      0
+    ],
+    [
+      "2023-10-12",
+      5379.2,
+      0
+    ],
+    [
+      "2023-10-13",
+      5379.2,
+      0
+    ],
+    [
+      "2023-10-16",
+      5379.2,
+      0
+    ],
+    [
+      "2023-10-17",
+      5379.2,
+      0
+    ],
+    [
+      "2023-10-18",
+      5379.2,
+      0
+    ],
+    [
+      "2023-10-19",
+      5379.2,
+      0
+    ],
+    [
+      "2023-10-20",
+      5379.2,
+      0
+    ],
+    [
+      "2023-10-23",
+      5379.2,
+      0
+    ],
+    [
+      "2023-10-24",
+      5395.58,
+      1
+    ],
+    [
+      "2023-10-25",
+      5261.98,
+      0
+    ],
+    [
+      "2023-10-26",
+      5233.86,
+      0
+    ],
+    [
+      "2023-10-27",
+      5233.86,
+      0
+    ],
+    [
+      "2023-10-30",
+      5233.86,
+      0
+    ],
+    [
+      "2023-10-31",
+      5230.9,
+      1
+    ],
+    [
+      "2023-11-01",
+      5262.74,
+      1
+    ],
+    [
+      "2023-11-02",
+      5270.05,
+      2
+    ],
+    [
+      "2023-11-03",
+      5375.92,
+      3
+    ],
+    [
+      "2023-11-06",
+      5403.66,
+      3
+    ],
+    [
+      "2023-11-07",
+      5489.08,
+      3
+    ],
+    [
+      "2023-11-08",
+      5504.81,
+      3
+    ],
+    [
+      "2023-11-09",
+      5560.01,
+      3
+    ],
+    [
+      "2023-11-10",
+      5713.61,
+      3
+    ],
+    [
+      "2023-11-13",
+      5663.63,
+      3
+    ],
+    [
+      "2023-11-14",
+      5633.56,
+      3
+    ],
+    [
+      "2023-11-15",
+      5694.95,
+      3
+    ],
+    [
+      "2023-11-16",
+      5687.39,
+      3
+    ],
+    [
+      "2023-11-17",
+      5662.65,
+      3
+    ],
+    [
+      "2023-11-20",
+      5780.7,
+      3
+    ],
+    [
+      "2023-11-21",
+      5679.74,
+      3
+    ],
+    [
+      "2023-11-22",
+      5792.87,
+      3
+    ],
+    [
+      "2023-11-24",
+      5830.61,
+      3
+    ],
+    [
+      "2023-11-27",
+      5755.23,
+      3
+    ],
+    [
+      "2023-11-28",
+      5798.93,
+      3
+    ],
+    [
+      "2023-11-29",
+      5811.63,
+      3
+    ],
+    [
+      "2023-11-30",
+      5746.98,
+      3
+    ],
+    [
+      "2023-12-01",
+      5832.27,
+      3
+    ],
+    [
+      "2023-12-04",
+      5894.96,
+      3
+    ],
+    [
+      "2023-12-05",
+      5954.56,
+      3
+    ],
+    [
+      "2023-12-06",
+      5890.13,
+      3
+    ],
+    [
+      "2023-12-07",
+      6056.36,
+      3
+    ],
+    [
+      "2023-12-08",
+      6152.48,
+      2
+    ],
+    [
+      "2023-12-11",
+      6148.14,
+      3
+    ],
+    [
+      "2023-12-12",
+      6179.11,
+      2
+    ],
+    [
+      "2023-12-13",
+      6186.61,
+      2
+    ],
+    [
+      "2023-12-14",
+      6150.38,
+      2
+    ],
+    [
+      "2023-12-15",
+      6198.31,
+      3
+    ],
+    [
+      "2023-12-18",
+      6146.58,
+      3
+    ],
+    [
+      "2023-12-19",
+      6179.83,
+      3
+    ],
+    [
+      "2023-12-20",
+      6081.65,
+      3
+    ],
+    [
+      "2023-12-21",
+      6223.85,
+      3
+    ],
+    [
+      "2023-12-22",
+      6252.32,
+      3
+    ],
+    [
+      "2023-12-26",
+      6331.29,
+      3
+    ],
+    [
+      "2023-12-27",
+      6385.35,
+      3
+    ],
+    [
+      "2023-12-28",
+      6500.82,
+      2
+    ],
+    [
+      "2023-12-29",
+      6443.41,
+      2
+    ],
+    [
+      "2024-01-02",
+      6260.88,
+      2
     ],
     [
       "2024-01-03",
-      5000.0,
-      0
+      6203.9,
+      1
     ],
     [
       "2024-01-04",
-      5000.0,
-      0
+      6193.26,
+      1
     ],
     [
       "2024-01-05",
-      5032.97,
+      6204.29,
       2
     ],
     [
       "2024-01-08",
-      5134.65,
-      2
+      6356.67,
+      3
     ],
     [
       "2024-01-09",
-      5131.04,
-      2
+      6334.24,
+      3
     ],
     [
       "2024-01-10",
-      5145.94,
-      2
+      6346.5,
+      3
     ],
     [
       "2024-01-11",
-      5089.6,
-      1
+      6269.6,
+      2
     ],
     [
       "2024-01-12",
-      5091.6,
-      1
+      6265.98,
+      2
     ],
     [
       "2024-01-16",
-      5090.0,
-      1
+      6431.52,
+      2
     ],
     [
       "2024-01-17",
-      5070.0,
-      1
+      6446.91,
+      2
     ],
     [
       "2024-01-18",
-      5014.0,
-      1
+      6497.01,
+      2
     ],
     [
       "2024-01-19",
-      4998.2,
-      0
+      6724.73,
+      3
     ],
     [
       "2024-01-22",
-      4998.2,
-      0
+      6610.28,
+      3
     ],
     [
       "2024-01-23",
-      4998.2,
-      0
+      6636.68,
+      3
     ],
     [
       "2024-01-24",
-      4998.2,
-      0
+      6826.67,
+      3
     ],
     [
       "2024-01-25",
-      4998.2,
-      0
+      6798.59,
+      3
     ],
     [
       "2024-01-26",
-      4998.2,
-      0
+      6699.91,
+      3
     ],
     [
       "2024-01-29",
-      4998.2,
-      0
+      6789.41,
+      3
     ],
     [
       "2024-01-30",
-      4998.2,
-      0
+      6673.2,
+      3
     ],
     [
       "2024-01-31",
-      4998.2,
-      0
+      6523.9,
+      2
     ],
     [
       "2024-02-01",
-      4998.2,
-      0
+      6514.54,
+      1
     ],
     [
       "2024-02-02",
-      4998.2,
-      0
+      6544.3,
+      1
     ],
     [
       "2024-02-05",
-      5002.28,
-      1
+      6512.76,
+      3
     ],
     [
       "2024-02-06",
-      4947.71,
-      0
+      6494.67,
+      3
     ],
     [
       "2024-02-07",
-      4947.71,
-      0
+      6558.96,
+      3
     ],
     [
       "2024-02-08",
-      4947.71,
-      0
+      6552.02,
+      3
     ],
     [
       "2024-02-09",
-      4947.71,
-      0
+      6626.6,
+      3
     ],
     [
       "2024-02-12",
-      4947.71,
-      0
+      6583.02,
+      3
     ],
     [
       "2024-02-13",
-      4947.71,
-      0
+      6497.78,
+      3
     ],
     [
       "2024-02-14",
-      4947.71,
-      0
+      6549.36,
+      3
     ],
     [
       "2024-02-15",
-      4947.71,
-      0
+      6535.41,
+      3
     ],
     [
       "2024-02-16",
-      4947.71,
-      0
+      6511.51,
+      3
     ],
     [
       "2024-02-20",
-      4947.71,
-      0
+      6478.13,
+      3
     ],
     [
       "2024-02-21",
-      4947.71,
-      0
+      6488.58,
+      3
     ],
     [
       "2024-02-22",
-      4947.71,
-      0
+      6610.45,
+      3
     ],
     [
       "2024-02-23",
-      4943.13,
-      1
+      6607.62,
+      3
     ],
     [
       "2024-02-26",
-      4962.21,
-      1
+      6591.27,
+      3
     ],
     [
       "2024-02-27",
-      4962.57,
-      1
+      6583.25,
+      3
     ],
     [
       "2024-02-28",
-      4962.03,
-      1
+      6577.0,
+      3
     ],
     [
       "2024-02-29",
-      4968.45,
-      1
+      6646.39,
+      3
     ],
     [
       "2024-03-01",
-      4949.35,
-      1
+      6682.06,
+      3
     ],
     [
       "2024-03-04",
-      4947.77,
-      1
+      6668.59,
+      3
     ],
     [
       "2024-03-05",
-      4915.27,
-      1
+      6573.48,
+      3
     ],
     [
       "2024-03-06",
-      4979.29,
-      1
+      6570.4,
+      3
     ],
     [
       "2024-03-07",
-      4979.51,
-      1
+      6651.11,
+      3
     ],
     [
       "2024-03-08",
-      4965.85,
-      1
+      6617.02,
+      3
     ],
     [
       "2024-03-11",
-      4954.89,
-      1
+      6550.57,
+      3
     ],
     [
       "2024-03-12",
-      4978.69,
-      1
+      6647.5,
+      3
     ],
     [
       "2024-03-13",
-      4984.49,
-      1
+      6655.47,
+      3
     ],
     [
       "2024-03-14",
-      4977.33,
-      1
+      6716.3,
+      3
     ],
     [
       "2024-03-15",
-      4951.45,
-      1
+      6625.74,
+      3
     ],
     [
       "2024-03-18",
-      4962.27,
-      1
+      6642.88,
+      3
     ],
     [
       "2024-03-19",
-      4961.87,
-      1
+      6674.12,
+      3
     ],
     [
       "2024-03-20",
-      4973.89,
-      1
+      6723.43,
+      3
     ],
     [
       "2024-03-21",
-      4979.07,
-      1
+      6742.23,
+      3
     ],
     [
       "2024-03-22",
-      4975.31,
-      1
+      6749.45,
+      3
     ],
     [
       "2024-03-25",
-      5018.7,
-      2
+      6728.61,
+      3
     ],
     [
       "2024-03-26",
-      5016.79,
-      2
+      6701.13,
+      3
     ],
     [
       "2024-03-27",
-      5000.03,
-      2
+      6715.05,
+      3
     ],
     [
       "2024-03-28",
-      4987.43,
-      2
+      6709.98,
+      3
     ],
     [
       "2024-04-01",
-      5004.41,
-      2
+      6737.64,
+      3
     ],
     [
       "2024-04-02",
-      4985.26,
-      2
+      6728.06,
+      3
     ],
     [
       "2024-04-03",
-      4990.2,
-      2
+      6752.39,
+      3
     ],
     [
       "2024-04-04",
-      4928.2,
-      2
+      6719.78,
+      3
     ],
     [
       "2024-04-05",
-      4933.84,
-      2
+      6822.53,
+      3
     ],
     [
       "2024-04-08",
-      4916.64,
-      2
+      6812.04,
+      3
     ],
     [
       "2024-04-09",
-      4893.7,
-      2
+      6821.73,
+      3
     ],
     [
       "2024-04-10",
-      4900.26,
-      2
+      6815.66,
+      3
     ],
     [
       "2024-04-11",
-      4930.92,
-      2
+      6871.77,
+      3
     ],
     [
       "2024-04-12",
-      4886.27,
-      2
+      6804.27,
+      3
     ],
     [
       "2024-04-15",
-      4856.15,
+      6736.37,
       2
     ],
     [
       "2024-04-16",
-      4920.94,
+      6732.6,
       2
     ],
     [
       "2024-04-17",
-      4898.66,
+      6704.57,
       2
     ],
     [
       "2024-04-18",
-      4877.36,
+      6689.54,
       2
     ],
     [
       "2024-04-19",
-      4796.99,
-      1
+      6593.0,
+      3
     ],
     [
       "2024-04-22",
-      4810.01,
-      1
+      6648.54,
+      3
     ],
     [
       "2024-04-23",
-      4831.01,
-      1
+      6712.08,
+      3
     ],
     [
       "2024-04-24",
-      4826.95,
-      1
+      6687.47,
+      3
     ],
     [
       "2024-04-25",
-      4827.75,
-      1
+      6565.67,
+      3
     ],
     [
       "2024-04-26",
-      4839.85,
-      1
+      6824.43,
+      3
     ],
     [
       "2024-04-29",
-      4839.79,
+      6758.9,
       0
     ],
     [
       "2024-04-30",
-      4839.79,
+      6758.9,
       0
     ],
     [
       "2024-05-01",
-      4839.79,
+      6758.9,
       0
     ],
     [
       "2024-05-02",
-      4839.79,
+      6758.9,
       0
     ],
     [
       "2024-05-03",
-      4839.79,
+      6758.9,
       0
     ],
     [
       "2024-05-06",
-      4839.79,
+      6758.9,
       0
     ],
     [
       "2024-05-07",
-      4839.79,
-      0
+      6762.96,
+      1
     ],
     [
       "2024-05-08",
-      4839.79,
-      0
+      6762.38,
+      1
     ],
     [
       "2024-05-09",
-      4839.79,
-      0
+      6831.98,
+      1
     ],
     [
       "2024-05-10",
-      4839.79,
-      0
+      6825.6,
+      1
     ],
     [
       "2024-05-13",
-      4839.79,
-      0
+      6808.2,
+      1
     ],
     [
       "2024-05-14",
-      4839.79,
-      0
+      6834.3,
+      1
     ],
     [
       "2024-05-15",
-      4839.79,
-      0
+      6863.88,
+      1
     ],
     [
       "2024-05-16",
-      4839.79,
-      0
+      6829.96,
+      2
     ],
     [
       "2024-05-17",
-      4839.79,
-      0
+      6827.56,
+      3
     ],
     [
       "2024-05-20",
-      4839.79,
-      0
+      6946.66,
+      3
     ],
     [
       "2024-05-21",
-      4839.79,
-      0
+      6875.16,
+      3
     ],
     [
       "2024-05-22",
-      4839.79,
-      0
+      6790.21,
+      3
     ],
     [
       "2024-05-23",
-      4839.79,
-      0
+      6788.6,
+      3
     ],
     [
       "2024-05-24",
-      4839.79,
-      0
+      6885.03,
+      3
     ],
     [
       "2024-05-28",
-      4839.79,
-      0
+      6986.41,
+      3
     ],
     [
       "2024-05-29",
-      4839.79,
-      0
+      6831.73,
+      3
     ],
     [
       "2024-05-30",
-      4839.79,
-      0
+      6851.7,
+      2
     ],
     [
       "2024-05-31",
-      4839.51,
+      6639.78,
       1
     ],
     [
       "2024-06-03",
-      4820.89,
-      1
+      6658.89,
+      2
     ],
     [
       "2024-06-04",
-      4768.24,
-      0
+      6577.92,
+      3
     ],
     [
       "2024-06-05",
-      4768.24,
-      0
+      6737.17,
+      3
     ],
     [
       "2024-06-06",
-      4768.24,
-      0
+      6767.85,
+      3
     ],
     [
       "2024-06-07",
-      4768.24,
-      0
+      6612.67,
+      3
     ],
     [
       "2024-06-10",
-      4768.24,
-      0
+      6705.34,
+      3
     ],
     [
       "2024-06-11",
-      4768.24,
-      0
+      6710.56,
+      3
     ],
     [
       "2024-06-12",
-      4768.24,
-      0
+      6823.13,
+      3
     ],
     [
       "2024-06-13",
-      4768.24,
-      0
+      6780.75,
+      3
     ],
     [
       "2024-06-14",
-      4768.24,
-      0
+      6787.06,
+      3
     ],
     [
       "2024-06-17",
-      4768.24,
-      0
+      6876.88,
+      3
     ],
     [
       "2024-06-18",
-      4768.24,
-      0
+      6966.53,
+      3
     ],
     [
       "2024-06-20",
-      4768.24,
-      0
+      6890.24,
+      3
     ],
     [
       "2024-06-21",
-      4768.24,
-      0
+      6824.64,
+      3
     ],
     [
       "2024-06-24",
-      4768.24,
-      0
+      6827.26,
+      3
     ],
     [
       "2024-06-25",
-      4768.24,
-      0
+      6888.04,
+      3
     ],
     [
       "2024-06-26",
-      4773.74,
-      1
+      6903.83,
+      3
     ],
     [
       "2024-06-27",
-      4793.98,
-      1
+      6832.54,
+      2
     ],
     [
       "2024-06-28",
-      4786.94,
-      1
+      6779.28,
+      2
     ],
     [
       "2024-07-01",
-      4755.7,
-      1
+      6786.2,
+      2
     ],
     [
       "2024-07-02",
-      4787.16,
-      1
+      6793.65,
+      3
     ],
     [
       "2024-07-03",
-      4801.9,
-      1
+      6794.45,
+      3
     ],
     [
       "2024-07-05",
-      4821.7,
-      1
+      6878.23,
+      2
     ],
     [
       "2024-07-08",
-      4815.31,
-      1
+      6812.01,
+      3
     ],
     [
       "2024-07-09",
-      4788.7,
-      1
+      6814.08,
+      3
     ],
     [
       "2024-07-10",
-      4777.26,
-      1
+      6906.87,
+      3
     ],
     [
       "2024-07-11",
-      4776.31,
+      6854.36,
       2
     ],
     [
       "2024-07-12",
-      4783.9,
+      6853.5,
       2
     ],
     [
       "2024-07-15",
-      4780.85,
+      6859.14,
       3
     ],
     [
       "2024-07-16",
-      4873.52,
-      2
+      6889.21,
+      3
     ],
     [
       "2024-07-17",
-      4750.23,
-      0
+      6744.32,
+      3
     ],
     [
       "2024-07-18",
-      4750.23,
-      0
+      6677.69,
+      2
     ],
     [
       "2024-07-19",
-      4761.95,
-      1
+      6682.17,
+      2
     ],
     [
       "2024-07-22",
-      4771.49,
-      1
+      6685.99,
+      3
     ],
     [
       "2024-07-23",
-      4787.73,
-      1
+      6766.49,
+      3
     ],
     [
       "2024-07-24",
-      4725.36,
-      1
+      6565.5,
+      3
     ],
     [
       "2024-07-25",
-      4883.09,
-      0
+      6710.91,
+      2
     ],
     [
       "2024-07-26",
-      4892.99,
-      1
+      6724.66,
+      2
     ],
     [
       "2024-07-29",
-      4887.49,
-      1
+      6628.03,
+      3
     ],
     [
       "2024-07-30",
-      4849.3,
+      6598.48,
       3
     ],
     [
       "2024-07-31",
-      4936.78,
+      6730.17,
       3
     ],
     [
       "2024-08-01",
-      4843.51,
+      6630.6,
       3
     ],
     [
       "2024-08-02",
-      4770.86,
+      6470.8,
       2
     ],
     [
       "2024-08-05",
-      4688.92,
-      0
+      6310.38,
+      1
     ],
     [
       "2024-08-06",
-      4688.92,
-      0
+      6340.74,
+      1
     ],
     [
       "2024-08-07",
-      4688.92,
-      0
+      6229.0,
+      2
     ],
     [
       "2024-08-08",
-      4688.92,
-      0
+      6330.42,
+      2
     ],
     [
       "2024-08-09",
-      4688.92,
-      0
+      6369.26,
+      2
     ],
     [
       "2024-08-12",
-      4688.92,
-      0
+      6389.91,
+      3
     ],
     [
       "2024-08-13",
-      4688.92,
+      6412.07,
       0
     ],
     [
       "2024-08-14",
-      4688.92,
+      6412.07,
       0
     ],
     [
       "2024-08-15",
-      4688.92,
+      6412.07,
       0
     ],
     [
       "2024-08-16",
-      4688.92,
+      6412.07,
       0
     ],
     [
       "2024-08-19",
-      4688.92,
-      0
+      6461.07,
+      1
     ],
     [
       "2024-08-20",
-      4688.92,
-      0
+      6474.79,
+      1
     ],
     [
       "2024-08-21",
-      4688.92,
-      0
+      6488.02,
+      1
     ],
     [
       "2024-08-22",
-      4688.92,
-      0
+      6439.51,
+      1
     ],
     [
       "2024-08-23",
-      4688.92,
-      0
+      6466.95,
+      1
     ],
     [
       "2024-08-26",
-      4688.92,
-      0
+      6461.56,
+      1
     ],
     [
       "2024-08-27",
-      4688.92,
-      0
+      6461.07,
+      1
     ],
     [
       "2024-08-28",
-      4688.92,
-      0
+      6418.93,
+      1
     ],
     [
       "2024-08-29",
-      4688.92,
-      0
+      6444.41,
+      1
     ],
     [
       "2024-08-30",
-      4688.92,
-      0
+      6471.8,
+      2
     ],
     [
       "2024-09-03",
-      4688.92,
-      0
+      6356.19,
+      1
     ],
     [
       "2024-09-04",
-      4688.92,
-      0
+      6353.93,
+      1
     ],
     [
       "2024-09-05",
-      4688.92,
-      0
+      6379.73,
+      3
     ],
     [
       "2024-09-06",
-      4626.32,
-      0
+      6313.04,
+      2
     ],
     [
       "2024-09-09",
-      4626.32,
-      0
+      6636.42,
+      2
     ],
     [
       "2024-09-10",
-      4626.32,
-      0
+      6677.92,
+      3
     ],
     [
       "2024-09-11",
-      4626.32,
-      0
+      6696.26,
+      3
     ],
     [
       "2024-09-12",
-      4626.32,
-      0
+      6805.69,
+      3
     ],
     [
       "2024-09-13",
-      4626.32,
-      0
+      6863.07,
+      3
     ],
     [
       "2024-09-16",
-      4626.32,
-      0
+      6946.97,
+      2
     ],
     [
       "2024-09-17",
-      4626.32,
-      0
+      6900.26,
+      3
     ],
     [
       "2024-09-18",
-      4626.32,
-      0
+      6967.53,
+      2
     ],
     [
       "2024-09-19",
-      4626.32,
-      0
+      7056.67,
+      2
     ],
     [
       "2024-09-20",
-      4626.32,
-      0
+      7091.44,
+      3
     ],
     [
       "2024-09-23",
-      4626.32,
-      0
+      7202.21,
+      3
     ],
     [
       "2024-09-24",
-      4626.32,
-      0
+      7172.23,
+      3
     ],
     [
       "2024-09-25",
-      4626.32,
-      0
+      7132.91,
+      3
     ],
     [
       "2024-09-26",
-      4626.32,
-      0
+      7098.0,
+      3
     ],
     [
       "2024-09-27",
-      4626.32,
-      0
+      7126.35,
+      3
     ],
     [
       "2024-09-30",
-      4626.32,
-      0
+      7183.95,
+      3
     ],
     [
       "2024-10-01",
-      4626.32,
-      0
+      7053.02,
+      3
     ],
     [
       "2024-10-02",
-      4626.32,
-      0
+      7010.77,
+      2
     ],
     [
       "2024-10-03",
-      4626.32,
-      0
+      7146.47,
+      3
     ],
     [
       "2024-10-04",
-      4626.32,
-      0
+      7274.93,
+      2
     ],
     [
       "2024-10-07",
-      4626.32,
-      0
+      7225.52,
+      3
     ],
     [
       "2024-10-08",
-      4626.32,
-      0
+      7331.81,
+      3
     ],
     [
       "2024-10-09",
-      4626.32,
-      0
+      7321.53,
+      3
     ],
     [
       "2024-10-10",
-      4626.32,
-      0
+      7302.68,
+      2
     ],
     [
       "2024-10-11",
-      4626.32,
-      0
+      7306.64,
+      3
     ],
     [
       "2024-10-14",
-      4626.32,
-      0
+      7286.7,
+      3
     ],
     [
       "2024-10-15",
-      4626.32,
-      0
+      7177.6,
+      3
     ],
     [
       "2024-10-16",
-      4626.32,
-      0
+      7198.75,
+      3
     ],
     [
       "2024-10-17",
-      4641.51,
-      1
+      7221.25,
+      3
     ],
     [
       "2024-10-18",
-      4589.48,
-      1
+      7243.11,
+      3
     ],
     [
       "2024-10-21",
-      4589.68,
-      1
+      7220.46,
+      3
     ],
     [
       "2024-10-22",
-      4549.08,
-      1
+      7192.64,
+      3
     ],
     [
       "2024-10-23",
-      4530.18,
-      1
+      7087.49,
+      3
     ],
     [
       "2024-10-24",
-      4543.28,
-      1
+      7242.4,
+      3
     ],
     [
       "2024-10-25",
-      4554.48,
-      1
+      7203.55,
+      2
     ],
     [
       "2024-10-28",
-      4567.38,
-      1
+      7213.85,
+      2
     ],
     [
       "2024-10-29",
-      4577.98,
+      7258.65,
       1
     ],
     [
       "2024-10-30",
-      4583.98,
+      7251.87,
       1
     ],
     [
       "2024-10-31",
-      4542.28,
+      7214.45,
       1
     ],
     [
       "2024-11-01",
-      4548.98,
+      7237.37,
       1
     ],
     [
       "2024-11-04",
-      4531.48,
+      7261.97,
       1
     ],
     [
       "2024-11-05",
-      4559.08,
+      7298.16,
       1
     ],
     [
       "2024-11-06",
-      4608.28,
+      7349.73,
       1
     ],
     [
       "2024-11-07",
-      4629.48,
+      7414.86,
       1
     ],
     [
       "2024-11-08",
-      4602.98,
+      7445.59,
       1
     ],
     [
       "2024-11-11",
-      4629.08,
+      7584.05,
       1
     ],
     [
       "2024-11-12",
-      4648.68,
+      7579.99,
       1
     ],
     [
       "2024-11-13",
-      4701.38,
+      7583.98,
       1
     ],
     [
       "2024-11-14",
-      4686.78,
-      1
+      7444.88,
+      3
     ],
     [
       "2024-11-15",
-      4653.68,
+      7317.36,
       1
     ],
     [
       "2024-11-18",
-      4668.38,
+      7296.29,
       1
     ],
     [
       "2024-11-19",
-      4696.48,
-      1
+      7357.2,
+      2
     ],
     [
       "2024-11-20",
-      4685.28,
-      1
+      7344.0,
+      2
     ],
     [
       "2024-11-21",
-      5033.88,
-      0
+      7311.96,
+      1
     ],
     [
       "2024-11-22",
-      5033.88,
-      0
+      7377.12,
+      2
     ],
     [
       "2024-11-25",
-      5033.88,
-      0
+      7396.68,
+      1
     ],
     [
       "2024-11-26",
-      5033.88,
-      0
+      7390.35,
+      1
     ],
     [
       "2024-11-27",
-      5033.88,
-      0
+      7317.39,
+      1
     ],
     [
       "2024-11-29",
-      5033.88,
-      0
+      7379.55,
+      1
     ],
     [
       "2024-12-02",
-      5033.88,
-      0
+      7479.69,
+      2
     ],
     [
       "2024-12-03",
-      5033.88,
-      0
+      7504.37,
+      3
     ],
     [
       "2024-12-04",
-      5033.88,
-      0
+      8195.01,
+      2
     ],
     [
       "2024-12-05",
-      5033.88,
-      0
+      8174.43,
+      3
     ],
     [
       "2024-12-06",
-      5033.88,
-      0
+      8181.65,
+      3
     ],
     [
       "2024-12-09",
-      5033.88,
-      0
+      8049.79,
+      3
     ],
     [
       "2024-12-10",
-      5033.88,
-      0
+      8020.76,
+      3
     ],
     [
       "2024-12-11",
-      5033.88,
-      0
+      8194.05,
+      3
     ],
     [
       "2024-12-12",
-      5033.88,
-      0
+      8192.91,
+      3
     ],
     [
       "2024-12-13",
-      5033.88,
-      0
+      8247.47,
+      3
     ],
     [
       "2024-12-16",
-      5033.88,
-      0
+      8418.29,
+      3
     ],
     [
       "2024-12-17",
-      5033.88,
-      0
+      8216.95,
+      3
     ],
     [
       "2024-12-18",
-      5033.88,
-      0
+      7936.07,
+      2
     ],
     [
       "2024-12-19",
-      5033.88,
-      0
+      7994.47,
+      2
     ],
     [
       "2024-12-20",
-      5033.88,
-      0
+      8049.55,
+      2
     ],
     [
       "2024-12-23",
-      5048.63,
-      2
+      8059.61,
+      3
     ],
     [
       "2024-12-24",
-      5086.55,
-      2
+      8160.74,
+      3
     ],
     [
       "2024-12-26",
-      5075.97,
-      2
+      8138.96,
+      3
     ],
     [
       "2024-12-27",
-      5014.43,
-      2
+      7998.2,
+      3
     ],
     [
       "2024-12-30",
-      4975.2,
+      7895.84,
       2
     ],
     [
       "2024-12-31",
-      4911.98,
+      7871.0,
       2
     ],
     [
       "2025-01-02",
-      4898.16,
-      1
+      7884.32,
+      2
     ],
     [
       "2025-01-03",
-      4921.98,
-      1
+      7960.14,
+      2
     ],
     [
       "2025-01-06",
-      4942.5,
-      1
+      7973.34,
+      2
     ],
     [
       "2025-01-07",
-      4909.5,
+      7905.3,
       0
     ],
     [
       "2025-01-08",
-      4909.5,
+      7905.3,
       0
     ],
     [
       "2025-01-10",
-      4909.5,
+      7905.3,
       0
     ],
     [
       "2025-01-13",
-      4909.5,
+      7905.3,
       0
     ],
     [
       "2025-01-14",
-      4909.5,
+      7905.3,
       0
     ],
     [
       "2025-01-15",
-      4909.5,
+      7905.3,
       0
     ],
     [
       "2025-01-16",
-      4909.5,
+      7905.3,
       0
     ],
     [
       "2025-01-17",
-      4909.5,
+      7905.3,
       0
     ],
     [
       "2025-01-21",
-      4909.5,
-      0
+      7912.06,
+      2
     ],
     [
       "2025-01-22",
-      4909.5,
-      0
+      7841.12,
+      2
     ],
     [
       "2025-01-23",
-      4909.5,
-      0
+      7834.97,
+      3
     ],
     [
       "2025-01-24",
-      4909.5,
-      0
+      7797.34,
+      3
     ],
     [
       "2025-01-27",
-      4909.5,
-      0
+      7797.12,
+      3
     ],
     [
       "2025-01-28",
-      4909.5,
-      0
+      7725.52,
+      1
     ],
     [
       "2025-01-29",
-      4909.5,
-      0
+      7644.03,
+      2
     ],
     [
       "2025-01-30",
-      4894.22,
+      7615.76,
       1
     ],
     [
       "2025-01-31",
-      4854.86,
-      0
+      7589.84,
+      2
     ],
     [
       "2025-02-03",
-      4854.86,
-      0
+      7627.48,
+      3
     ],
     [
       "2025-02-04",
-      4854.86,
-      0
+      7760.67,
+      3
     ],
     [
       "2025-02-05",
-      4854.86,
-      0
+      7818.45,
+      2
     ],
     [
       "2025-02-06",
-      4854.86,
-      0
+      7836.91,
+      3
     ],
     [
       "2025-02-07",
-      4820.56,
-      0
+      7824.84,
+      3
     ],
     [
       "2025-02-10",
-      4820.56,
-      0
+      8008.43,
+      3
     ],
     [
       "2025-02-11",
-      4820.56,
-      0
+      7941.95,
+      3
     ],
     [
       "2025-02-12",
-      4820.56,
-      0
+      8064.87,
+      3
     ],
     [
       "2025-02-13",
-      4820.56,
-      0
+      8231.11,
+      3
     ],
     [
       "2025-02-14",
-      4817.44,
-      1
+      8076.53,
+      3
     ],
     [
       "2025-02-18",
-      4796.8,
-      0
+      8171.29,
+      3
     ],
     [
       "2025-02-19",
-      4796.8,
-      0
+      8139.99,
+      3
     ],
     [
       "2025-02-20",
-      4796.8,
-      0
+      8145.25,
+      3
     ],
     [
       "2025-02-21",
-      4796.8,
-      0
+      7762.72,
+      2
     ],
     [
       "2025-02-24",
-      4796.8,
-      0
+      7705.33,
+      2
     ],
     [
       "2025-02-25",
-      4796.8,
-      0
+      7631.14,
+      1
     ],
     [
       "2025-02-26",
-      4796.8,
-      0
+      7658.5,
+      1
     ],
     [
       "2025-02-27",
-      4796.8,
-      0
+      7578.7,
+      1
     ],
     [
       "2025-02-28",
-      4796.8,
-      0
+      7593.52,
+      1
     ],
     [
       "2025-03-03",
-      4778.0,
-      1
+      7559.11,
+      2
     ],
     [
       "2025-03-04",
-      4767.5,
-      1
+      7572.7,
+      2
     ],
     [
       "2025-03-05",
-      4766.55,
-      1
+      7651.93,
+      2
     ],
     [
       "2025-03-06",
-      4764.5,
-      1
+      7628.86,
+      2
     ],
     [
       "2025-03-07",
-      4783.2,
-      1
+      7678.48,
+      2
     ],
     [
       "2025-03-10",
-      4727.35,
-      0
+      7513.54,
+      1
     ],
     [
       "2025-03-11",
-      4727.35,
-      0
+      7589.35,
+      1
     ],
     [
       "2025-03-12",
-      4727.35,
-      0
+      7592.77,
+      1
     ],
     [
       "2025-03-13",
-      4727.35,
-      0
+      7667.44,
+      1
     ],
     [
       "2025-03-14",
-      4727.35,
-      0
+      7691.95,
+      1
     ],
     [
       "2025-03-17",
-      4727.35,
-      0
+      7744.96,
+      1
     ],
     [
       "2025-03-18",
-      4727.35,
-      0
+      7760.92,
+      1
     ],
     [
       "2025-03-19",
-      4727.35,
+      7782.58,
       0
     ],
     [
       "2025-03-20",
-      4727.35,
+      7782.58,
       0
     ],
     [
       "2025-03-21",
-      4727.35,
+      7782.58,
       0
     ],
     [
       "2025-03-24",
-      4727.35,
+      7782.58,
       0
     ],
     [
       "2025-03-25",
-      4727.35,
+      7813.38,
       0
     ],
     [
       "2025-03-26",
-      4727.35,
+      7813.38,
       0
     ],
     [
       "2025-03-27",
-      4727.35,
+      7813.38,
       0
     ],
     [
       "2025-03-28",
-      4727.35,
+      7813.38,
       0
     ],
     [
       "2025-03-31",
-      4727.35,
+      7813.38,
       0
     ],
     [
       "2025-04-01",
-      4727.35,
+      7813.38,
       0
     ],
     [
       "2025-04-02",
-      4727.35,
+      7813.38,
       0
     ],
     [
       "2025-04-03",
-      4727.35,
+      7813.38,
       0
     ],
     [
       "2025-04-04",
-      4727.35,
+      7813.38,
       0
     ],
     [
       "2025-04-07",
-      4727.35,
+      7813.38,
       0
     ],
     [
       "2025-04-08",
-      4727.35,
+      7813.38,
       0
     ],
     [
       "2025-04-09",
-      4727.35,
+      7813.38,
       0
     ],
     [
       "2025-04-10",
-      4727.35,
+      7813.38,
       0
     ],
     [
       "2025-04-11",
-      4727.35,
+      7813.38,
       0
     ],
     [
       "2025-04-14",
-      4727.35,
+      7813.38,
       0
     ],
     [
       "2025-04-15",
-      4727.35,
+      7813.38,
       0
     ],
     [
       "2025-04-16",
-      4727.35,
+      7813.38,
       0
     ],
     [
       "2025-04-17",
-      4727.35,
+      7813.38,
       0
     ],
     [
       "2025-04-21",
-      4727.35,
+      7813.38,
       0
     ],
     [
       "2025-04-22",
-      4727.35,
+      7813.38,
       0
     ],
     [
       "2025-04-23",
-      4727.35,
+      7813.38,
       0
     ],
     [
       "2025-04-24",
-      4727.35,
+      7813.38,
       0
     ],
     [
       "2025-04-25",
-      4727.35,
-      0
+      7823.29,
+      2
     ],
     [
       "2025-04-28",
-      4727.35,
-      0
+      7821.72,
+      2
     ],
     [
       "2025-04-29",
-      4727.35,
-      0
+      7847.72,
+      2
     ],
     [
       "2025-04-30",
-      4727.35,
-      0
+      7850.26,
+      2
     ]
   ]
 }

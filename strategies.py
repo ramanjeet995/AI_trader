@@ -40,17 +40,22 @@ def strategy_a(df: pd.DataFrame, regime: Regime, cfg) -> dict:
     sma50 = last["sma50"]
     rsi   = last["rsi"]
 
-    # Pullback zone: floor at the lower of the two MAs (with 2% buffer below),
-    # ceiling at the higher (with 2% buffer above). Works whether EMA20 > SMA50
-    # (shallow pullback) or EMA20 < SMA50 (deeper pullback).
-    zone_low      = min(sma50, ema20) * 0.98
-    zone_high     = max(sma50, ema20) * 1.02
+    # Tighter pullback zone: only EMA20 ±3% (was full EMA20-SMA50 range).
+    # Momentum stocks rarely pull back to SMA50; if they do, it's a trend break.
+    zone_low      = ema20 * 0.97
+    zone_high     = ema20 * 1.03
     in_pullback   = zone_low <= price <= zone_high
 
     bullish_candle = last["close"] > last["open"]
     rsi_ok         = cfg.STRAT_A_RSI_LOW <= rsi <= cfg.STRAT_A_RSI_HIGH
 
-    if in_pullback and bullish_candle and rsi_ok:
+    # Additional confirmations for momentum stocks:
+    above_sma50    = price > sma50      # uptrend structurally intact
+    # RSI rising = momentum returning after the dip
+    rsi_rising     = (len(df) >= 2 and not pd.isna(df["rsi"].iloc[-2])
+                      and rsi > df["rsi"].iloc[-2])
+
+    if in_pullback and bullish_candle and rsi_ok and above_sma50 and rsi_rising:
         recent_low  = df["low"].iloc[-10:].min()
         recent_high = df["high"].iloc[-20:].max()
 
@@ -72,6 +77,8 @@ def strategy_a(df: pd.DataFrame, regime: Regime, cfg) -> dict:
         if not in_pullback:    reasons.append(f"price {price:.2f} not in [{zone_low:.2f}, {zone_high:.2f}]")
         if not bullish_candle: reasons.append("no bullish candle")
         if not rsi_ok:         reasons.append(f"RSI={rsi:.1f} outside [{cfg.STRAT_A_RSI_LOW},{cfg.STRAT_A_RSI_HIGH}]")
+        if not above_sma50:    reasons.append(f"price below SMA50 ({sma50:.2f}) — trend broken")
+        if not rsi_rising:     reasons.append("RSI not rising")
         result["reason"] = " | ".join(reasons)
 
     return result
@@ -107,7 +114,7 @@ def strategy_b(df: pd.DataFrame, regime: Regime, cfg) -> dict:
     consol_range  = consol_high - consol_low
 
     atr_val  = last["atr"]
-    tight    = consol_range < atr_val * 1.5
+    tight    = consol_range < atr_val * 2.5   # was 1.5 — looser for momentum
     breakout = last["close"] > consol_high
 
     # Volume average EXCLUDING today — so today's surge isn't in its own denominator
