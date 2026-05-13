@@ -8194,5 +8194,196 @@
         "score": -2
       }
     ]
+  },
+  {
+    "timestamp": "2026-05-13T17:50:19.730716-04:00",
+    "mode": "FULL",
+    "spy_regime": "BULL",
+    "posture": "RISK-OFF",
+    "vix": 17.989999771118164,
+    "spy_atr_pct": 1.01,
+    "in_window": false,
+    "market_open": false,
+    "data_feed": "iex",
+    "yfinance_patched": "0/45",
+    "sentiment_backend": "finbert",
+    "earnings_cache_size": 54,
+    "macro_blackout": false,
+    "macro_reason": "",
+    "next_macro_event": {
+      "name": "FOMC",
+      "datetime": "2026-06-17T14:00:00-04:00",
+      "days_away": 34,
+      "hours_away": 836.2
+    },
+    "open_positions": [
+      "AMZN",
+      "GOOGL"
+    ],
+    "new_today": 2,
+    "filter_stats": {
+      "scanned": 33,
+      "no_data": 0,
+      "held": 2,
+      "market_volatile": 0,
+      "earnings_blackout": 0,
+      "failed_filters": 2,
+      "obv_distribution": 11,
+      "no_strategy_signal": 18,
+      "of_or_sent_reject": 0,
+      "sector_misalign": 0,
+      "passed_all": 0
+    },
+    "sectors_top3": [
+      {
+        "ticker": "USO",
+        "sector": "Crude Oil",
+        "ret_20d": 12.89,
+        "rs": 2.22,
+        "obv": "ACCUMULATION",
+        "above_ema": "True",
+        "score": 25.18
+      },
+      {
+        "ticker": "SLV",
+        "sector": "Silver",
+        "ret_20d": 11.39,
+        "rs": 1.96,
+        "obv": "ACCUMULATION",
+        "above_ema": "True",
+        "score": 22.6
+      },
+      {
+        "ticker": "UNG",
+        "sector": "Natural Gas",
+        "ret_20d": 1.95,
+        "rs": 0.34,
+        "obv": "ACCUMULATION",
+        "above_ema": "True",
+        "score": 6.35
+      }
+    ],
+    "sectors_bottom3": [
+      {
+        "ticker": "GLD",
+        "sector": "Gold",
+        "ret_20d": -2.18,
+        "rs": -0.37,
+        "obv": "DISTRIBUTION",
+        "above_ema": "True",
+        "score": -4.75
+      },
+      {
+        "ticker": "XLF",
+        "sector": "Financials",
+        "ret_20d": -2.0,
+        "rs": -0.34,
+        "obv": "DISTRIBUTION",
+        "above_ema": "False",
+        "score": -6.44
+      },
+      {
+        "ticker": "XLU",
+        "sector": "Utilities",
+        "ret_20d": -3.66,
+        "rs": -0.63,
+        "obv": "DISTRIBUTION",
+        "above_ema": "False",
+        "score": -9.29
+      }
+    ],
+    "signals": [],
+    "top_news": [
+      {
+        "symbol": "AMD",
+        "sentiment": "POSITIVE",
+        "score": 3,
+        "headlines": [
+          "[+] Daiwa Capital Downgrades Advanced Micro Devices to Outperform, Raises Price Targ",
+          "[~] 10 Information Technology Stocks Whale Activity In Today's Session"
+        ]
+      },
+      {
+        "symbol": "NVDA",
+        "sentiment": "POSITIVE",
+        "score": 2,
+        "headlines": [
+          "[~] GraniteShares Launches MSTR, Coinbase ETFs As Bitcoin-Fueled Volatility Trade He",
+          "[~] Something Historic Is Quietly Lifting Commodities To Records \u2014 And It's Not Horm"
+        ]
+      },
+      {
+        "symbol": "MRVL",
+        "sentiment": "POSITIVE",
+        "score": 2,
+        "headlines": [
+          "[~] What Is Going On With Marvell Stock On Wednesday?",
+          "[~] Watching Marvell Technology; Hearing Investor Business Daily SwingTrader Buys St"
+        ]
+      },
+      {
+        "symbol": "SHOP",
+        "sentiment": "POSITIVE",
+        "score": 2,
+        "headlines": [
+          "[+] Affirm Unveils Aggressive Expansion Blueprint",
+          "[+] Global-E Says Middle East Demand Is Rebounding"
+        ]
+      },
+      {
+        "symbol": "META",
+        "sentiment": "NEUTRAL",
+        "score": 1,
+        "headlines": [
+          "[~] Something Historic Is Quietly Lifting Commodities To Records \u2014 And It's Not Horm",
+          "[~] Why Nvidia Bulls Are Suddenly Watching Nebius Ahead Of NVDA Earnings"
+        ]
+      },
+      {
+        "symbol": "GOOGL",
+        "sentiment": "NEUTRAL",
+        "score": 1,
+        "headlines": [
+          "[~] Something Historic Is Quietly Lifting Commodities To Records \u2014 And It's Not Horm",
+          "[~] Anthropic Introduces Claude For Small Business"
+        ]
+      },
+      {
+        "symbol": "AMZN",
+        "sentiment": "NEUTRAL",
+        "score": 1,
+        "headlines": [
+          "[-] 'Amazon cuts more jobs months after mass layoffs' - Business Insider",
+          "[~] Something Historic Is Quietly Lifting Commodities To Records \u2014 And It's Not Horm"
+        ]
+      },
+      {
+        "symbol": "MSFT",
+        "sentiment": "NEUTRAL",
+        "score": 1,
+        "headlines": [
+          "[~] Something Historic Is Quietly Lifting Commodities To Records \u2014 And It's Not Horm",
+          "[~] Why Nvidia Bulls Are Suddenly Watching Nebius Ahead Of NVDA Earnings"
+        ]
+      },
+      {
+        "symbol": "CRM",
+        "sentiment": "NEUTRAL",
+        "score": 1,
+        "headlines": [
+          "[~] Citigroup Maintains Neutral on Salesforce, Lowers Price Target to $188",
+          "[+] Pearson Expands Partnership With Salesforce Over AI, Skills Development Througho"
+        ]
+      },
+      {
+        "symbol": "XOM",
+        "sentiment": "NEUTRAL",
+        "score": 1,
+        "headlines": [
+          "[~] Apple, ServiceNow, Netflix And An Energy Stock On CNBC's 'Final Trades'",
+          "[~] CNBC Halftime Report Final Trades: Apple, ServiceNow, Netflix, Exxon Mobil"
+        ]
+      }
+    ]
   }
 ]
