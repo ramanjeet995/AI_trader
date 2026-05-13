@@ -7414,5 +7414,28 @@
         "score": -3
       }
     ]
+  },
+  {
+    "timestamp": "2026-05-13T13:53:09.043739-04:00",
+    "mode": "CATALYST",
+    "spy_regime": "BULL",
+    "vix": 17.989999771118164,
+    "signals": [
+      {
+        "symbol": "MRVL",
+        "strategy": "CATALYST",
+        "signal": "BUY",
+        "factors": [
+          "gap +7.6% in [3.0, 12.0]",
+          "news score +2",
+          "in upper 61% of day's range"
+        ],
+        "gap_pct": 7.64,
+        "news_score": 2,
+        "earn_days_ago": null,
+        "order_status": "NOT_PLACED \u2014 outside target window or market closed"
+      }
+    ],
+    "force_closed": []
   }
 ]
