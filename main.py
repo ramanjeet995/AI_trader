@@ -50,6 +50,7 @@ from executor import execute, get_open_positions, get_buying_power, is_market_op
 import catalyst_detector
 import strategy_catalyst
 import macro_calendar
+import conviction
 from notifier import send_no_setup, send_signals, send
 import volume_source
 import earnings_calendar
@@ -206,13 +207,14 @@ def _save_human_log(logs: list):
                 ("no_data",            "Insufficient data"),
                 ("held",               "Already holding"),
                 ("market_volatile",    "Market too volatile"),
-                ("earnings_blackout",  "Earnings within 5 days"),
+                ("earnings_blackout",  "Earnings within blackout"),
                 ("failed_filters",    "Failed price/volume/ATR filter"),
                 ("obv_distribution",   "OBV in distribution"),
                 ("no_strategy_signal", "No strategy fired"),
                 ("of_or_sent_reject",  "Order flow / sentiment block"),
                 ("sector_misalign",    "Sector misaligned"),
-                ("passed_all",         "Passed all gates"),
+                ("passed_all",         "Passed initial gates"),
+                ("low_conviction",     "Low conviction (<4/7 factors)"),
             ]
             for k, label in funnel_order:
                 v = fs.get(k)
@@ -555,19 +557,44 @@ def run_full_scan():
             continue
         filter_stats["passed_all"] += 1
 
-        pos = position_size(account_value, signal["entry"], signal["stop"], cfg)
+        # ── CONVICTION SCORING — only trade multi-factor confluence ──────────
+        conv = conviction.score(
+            signal=signal,
+            context={
+                "rs": rs, "obv": obv_status, "of_score": of_score,
+                "sent_score": sent_score, "sector_score": sector_score,
+                "vix": vix_assessment.get("vix") or 0,
+                "regime": regime.value,
+            },
+            cfg=cfg,
+        )
+        if not conv["should_trade"]:
+            filter_stats["low_conviction"] = filter_stats.get("low_conviction", 0) + 1
+            continue
+        # Conviction passed — record it on the signal
+        signal["conviction"]      = conv["score"]
+        signal["conv_factors"]    = conv["factors"]
+        signal["risk_mult"]       = conv["risk_mult"]
+        signal["target_R"]        = conv["target_R"]
+
+        pos = position_size(account_value, signal["entry"], signal["stop"], cfg,
+                            risk_mult=conv["risk_mult"], target_R=conv["target_R"])
         signals.append({
             "symbol": symbol, "regime": regime.value, "rs": round(rs, 2),
             "obv": obv_status, "strategy": signal["strategy"],
             "confidence": signal.get("confidence", 0.0), "signal": signal["signal"],
-            "entry": signal["entry"], "stop": signal["stop"], "target": signal["target"],
+            "entry": signal["entry"], "stop": signal["stop"],
+            "target": pos["r_target"],   # dynamic target from conviction
             "shares": pos["shares"], "notional": pos["notional"],
             "risk_$": pos["risk_dollars"], "target_risk": pos["target_risk"],
-            "1R": pos["r1_target"], "2R": pos["r2_target"], "capped": pos["capped"],
+            "1R": pos["r1_target"], "2R": pos["r2_target"],
+            "target_main": pos["r_target"], "target_R": pos["target_R"],
+            "capped": pos["capped"],
             "of_score": of_score, "of_notes": of_notes,
             "sentiment": sent_label, "sent_score": sent_score,
             "headlines": sent_headlines[:2], "reason": signal["reason"],
             "sector_aligned": sector_aligned, "sector_score": sector_score,
+            "conviction": conv["score"], "conv_factors": conv["factors"],
             "pos": pos, "signal_raw": signal,
         })
 
@@ -616,11 +643,17 @@ def run_full_scan():
     for s in signals:
         capped_note = "  [position-capped]" if s["capped"] else ""
         sym_sector  = _symbol_sector(s["symbol"])
+        conv_score  = s.get("conviction", 0)
+        conv_facts  = s.get("conv_factors", [])
+        target_R    = s.get("target_R", 2.0)
         print(f"  {s['symbol']:<6}  Strat {s['strategy']} (conf {s['confidence']:.2f})  |  "
-              f"Regime: {s['regime']:<7}  |  RS: {s['rs']:>5.2f}  |  OBV: {s['obv']}")
-        print(f"         Sentiment: {s['sentiment']:<10}  |  Order Flow: {s['of_score']:+d}/+3"
-              f"  |  Sector score: {s['sector_score']:.1f}  |  Sector: {sym_sector}")
-        print(f"         Entry: ${s['entry']:<9.2f} Stop: ${s['stop']:<9.2f} Target (2R): ${s['2R']:.2f}")
+              f"Conviction: {conv_score}/7  |  Regime: {s['regime']:<7}")
+        print(f"         RS: {s['rs']:.2f}  |  OBV: {s['obv']}  |  "
+              f"Order Flow: {s['of_score']:+d}/+3  |  Sentiment: {s['sentiment']} ({s['sent_score']:+d})")
+        print(f"         Sector: {sym_sector} ({s['sector_score']:.1f})  |  "
+              f"Factors: {', '.join(conv_facts)}")
+        print(f"         Entry: ${s['entry']:<9.2f} Stop: ${s['stop']:<9.2f} "
+              f"Target ({target_R:.1f}R): ${s['target_main']:.2f}")
         print(f"         Shares: {s['shares']}   Notional: ${s['notional']:,.2f}   "
               f"Risk: ${s['risk_$']:.2f} (target ${s['target_risk']:.2f}){capped_note}")
         print(f"         Signal: {s['reason']}")

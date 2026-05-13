@@ -109,7 +109,9 @@ def execute(signal: dict, pos: dict, trade_client: TradingClient,
     if shares <= 0:
         return {"status": "SKIPPED", "reason": "0 shares after sizing", "notional": 0}
 
-    take_profit_price = pos["r2_target"]
+    # Prefer dynamic target (set by conviction-based sizing) if present;
+    # otherwise fall back to fixed 2R target.
+    take_profit_price = pos.get("r_target") or pos["r2_target"]
 
     if stop >= entry or take_profit_price <= entry:
         return {"status": "SKIPPED",

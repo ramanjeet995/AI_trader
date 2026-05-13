@@ -1,39 +1,32 @@
 """
 Central configuration — watchlist, risk parameters, strategy thresholds.
+
+PROFILE: AGGRESSIVE ($5k account)
+  - Concentrated positions (max 3 concurrent, up to 30% each)
+  - 2% account risk per trade
+  - Dynamic targets scaled by conviction (2R / 3R / 4R)
+  - Conviction-based filtering — only trade multi-factor confluence
+  - Curated momentum watchlist (semis, AI, energy, metals, growth)
 """
 
-# ── Hardcoded watchlist (liquid, mid/large cap) ────────────────────────────
+# ── Curated AGGRESSIVE watchlist (high momentum, big movers) ──────────────────
+# Focused on stocks that actually move 3-8% per setup. Removed slow names
+# (utilities, REITs, defensive blue-chips). Added high-momentum themes.
 WATCHLIST = [
-    # Tech / Semiconductors
-    "AAPL", "MSFT", "NVDA", "AMD", "AVGO", "QCOM", "INTC", "TSM",
-    "GOOGL", "META", "AMZN", "TSLA", "CRM", "ORCL", "ADBE", "NOW",
-    # Finance
-    "JPM", "GS", "BAC", "V", "MA", "AXP",
-    # Healthcare
-    "UNH", "LLY", "ABBV", "JNJ", "MRK",
-    # Consumer / Retail
-    "COST", "HD", "NKE", "MCD", "SBUX",
-    # Energy (stocks)
-    "XOM", "CVX", "OXY", "SLB",
-    # Broad market ETFs
-    "SPY", "QQQ", "IWM", "DIA",
-    # Sector ETFs
-    "XLK", "XLF", "XLE", "XLV", "XLI", "XLB", "XLU", "XLRE",
-    # Precious metals ETFs
-    "GLD",   # Gold
-    "SLV",   # Silver
-    "GDX",   # Gold miners
-    "GDXJ",  # Junior gold miners
-    # Commodities / Energy ETFs
-    "USO",   # Crude oil
-    "UNG",   # Natural gas
-    "DBO",   # Oil futures-based
-    # Commodity-linked stocks
-    "FCX",   # Copper / metals (Freeport-McMoRan)
-    "NEM",   # Newmont (gold miner)
-    "GOLD",  # Barrick Gold
-    "CLF",   # Cleveland-Cliffs (steel)
-    "AA",    # Alcoa (aluminum)
+    # AI / Semiconductors (the strongest secular trend)
+    "NVDA", "AVGO", "AMD", "ARM", "MU", "SMCI", "MRVL",
+    # Mega-cap growth
+    "META", "GOOGL", "AMZN", "TSLA", "NFLX", "MSFT", "AAPL",
+    # Software / Cloud high-beta
+    "CRM", "NOW", "CRWD", "PLTR", "SHOP", "SNOW",
+    # Energy momentum
+    "XOM", "OXY", "FANG", "SLB",
+    # Precious metals / commodities
+    "NEM", "GOLD", "FCX", "GDX",
+    # Speculative / crypto-adjacent (high volatility)
+    "COIN", "MARA", "RIOT", "MSTR",
+    # Index proxies for regime detection only
+    "SPY", "QQQ",
 ]
 
 # Market context ticker (benchmark for relative strength)
@@ -53,14 +46,26 @@ ATR_PERIOD = 14
 MIN_AVG_VOLUME   = 1_000_000   # shares/day
 MIN_ATR_PCT      = 2.0         # ATR as % of price (movement needed)
 
-# ── Risk management ──────────────────────────────────────────────────────────
-ACCOUNT_RISK_PCT          = 0.01    # 1% of account per trade
-MAX_POSITION_PCT          = 0.10    # cap any single position at 10% of portfolio
-MAX_CONCURRENT_POSITIONS  = 8       # never hold more than 8 positions at once
-MAX_NEW_PER_DAY           = 3       # never open more than 3 new positions per day
-MAX_POSITIONS_PER_SECTOR  = 3       # cap correlated exposure (tech-heavy watchlist)
-MAX_PORTFOLIO_HEAT_PCT    = 0.05    # cap aggregate open risk at 5% of account
-REQUIRE_SECTOR_ALIGNMENT  = True    # only buy stocks whose sector has positive rotation score
+# ── Risk management (AGGRESSIVE for $5k) ─────────────────────────────────────
+ACCOUNT_RISK_PCT          = 0.02    # 2% of account per trade (was 1%)
+MAX_POSITION_PCT          = 0.30    # cap any single position at 30% (was 10%) — concentrated
+MAX_CONCURRENT_POSITIONS  = 3       # max 3 positions at once (was 8) — focus
+MAX_NEW_PER_DAY           = 2       # max 2 new per day (was 3) — quality not quantity
+MAX_POSITIONS_PER_SECTOR  = 2       # max 2 per sector (was 3) — avoid theme concentration
+MAX_PORTFOLIO_HEAT_PCT    = 0.06    # max 6% aggregate open risk (was 5%)
+REQUIRE_SECTOR_ALIGNMENT  = False   # don't require — sometimes best setup is in a cold sector
+
+# ── Conviction-based position sizing ─────────────────────────────────────────
+# Multi-factor confluence required to fire. Each factor passed = 1 point.
+# Only trade when score >= MIN_CONVICTION_TO_TRADE.
+# Position size and target scale with conviction.
+MIN_CONVICTION_TO_TRADE   = 4    # minimum factors needed (out of 7)
+CONVICTION_RISK_TIERS = {
+    4: {"risk_mult": 1.0, "target_R": 2.5},   # base — 2% account risk, 2.5R target
+    5: {"risk_mult": 1.0, "target_R": 3.0},   # solid — 2% risk, 3R target
+    6: {"risk_mult": 1.25, "target_R": 3.5},  # strong — 2.5% risk, 3.5R target
+    7: {"risk_mult": 1.5, "target_R": 4.0},   # exceptional — 3% risk, 4R target
+}
 
 # ── Data feed ────────────────────────────────────────────────────────────────
 DATA_FEED = "iex"   # "iex" (free, ~3% of tape) or "sip" (paid, full tape)
@@ -69,7 +74,9 @@ DATA_FEED = "iex"   # "iex" (free, ~3% of tape) or "sip" (paid, full tape)
 USE_YFINANCE_VOLUME = True
 
 # ── Earnings blackout ────────────────────────────────────────────────────────
-EARNINGS_BLACKOUT_DAYS = 5   # skip signals if earnings within N days
+# Aggressive: only block 2 days pre. Earnings *moves* are how we make money in
+# CATALYST mode — pre-event blackout still avoids the worst gap risk.
+EARNINGS_BLACKOUT_DAYS = 2   # was 5 — aggressive
 
 # ── VIX-based volatility gate ────────────────────────────────────────────────
 MAX_VIX             = 28.0    # block all new entries above this

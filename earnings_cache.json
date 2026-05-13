@@ -145,11 +145,11 @@
   },
   "SPY": {
     "next_earnings": null,
-    "fetched_at": "2026-05-12T23:55:38.923166"
+    "fetched_at": "2026-05-13T00:18:57.694744"
   },
   "QQQ": {
     "next_earnings": null,
-    "fetched_at": "2026-05-12T23:55:38.923166"
+    "fetched_at": "2026-05-13T00:18:57.694744"
   },
   "IWM": {
     "next_earnings": null,
@@ -201,7 +201,7 @@
   },
   "GDX": {
     "next_earnings": null,
-    "fetched_at": "2026-05-12T23:55:38.923166"
+    "fetched_at": "2026-05-13T00:18:57.351835"
   },
   "GDXJ": {
     "next_earnings": null,
@@ -229,7 +229,7 @@
   },
   "GOLD": {
     "next_earnings": null,
-    "fetched_at": "2026-05-12T23:55:39.254731"
+    "fetched_at": "2026-05-13T00:18:57.351835"
   },
   "CLF": {
     "next_earnings": "2026-07-20",
@@ -238,5 +238,61 @@
   "AA": {
     "next_earnings": "2026-07-15",
     "fetched_at": "2026-05-11T23:02:38.625414"
+  },
+  "ARM": {
+    "next_earnings": "2026-07-29",
+    "fetched_at": "2026-05-13T00:18:56.511238"
+  },
+  "MU": {
+    "next_earnings": "2026-06-24",
+    "fetched_at": "2026-05-13T00:18:56.621411"
+  },
+  "SMCI": {
+    "next_earnings": "2026-08-04",
+    "fetched_at": "2026-05-13T00:18:56.697359"
+  },
+  "MRVL": {
+    "next_earnings": "2026-05-27",
+    "fetched_at": "2026-05-13T00:18:56.805034"
+  },
+  "NFLX": {
+    "next_earnings": "2026-07-16",
+    "fetched_at": "2026-05-13T00:18:56.879436"
+  },
+  "CRWD": {
+    "next_earnings": "2026-06-03",
+    "fetched_at": "2026-05-13T00:18:56.950838"
+  },
+  "PLTR": {
+    "next_earnings": "2026-08-03",
+    "fetched_at": "2026-05-13T00:18:57.034105"
+  },
+  "SHOP": {
+    "next_earnings": "2026-08-05",
+    "fetched_at": "2026-05-13T00:18:57.117750"
+  },
+  "SNOW": {
+    "next_earnings": "2026-05-27",
+    "fetched_at": "2026-05-13T00:18:57.202225"
+  },
+  "FANG": {
+    "next_earnings": "2026-08-03",
+    "fetched_at": "2026-05-13T00:18:57.273814"
+  },
+  "COIN": {
+    "next_earnings": "2026-07-30",
+    "fetched_at": "2026-05-13T00:18:57.428015"
+  },
+  "MARA": {
+    "next_earnings": "2026-07-28",
+    "fetched_at": "2026-05-13T00:18:57.513260"
+  },
+  "RIOT": {
+    "next_earnings": "2026-07-30",
+    "fetched_at": "2026-05-13T00:18:57.622688"
+  },
+  "MSTR": {
+    "next_earnings": "2026-07-30",
+    "fetched_at": "2026-05-13T00:18:57.694744"
   }
 }
