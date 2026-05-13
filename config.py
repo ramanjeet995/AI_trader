@@ -60,11 +60,13 @@ REQUIRE_SECTOR_ALIGNMENT  = False   # don't require — sometimes best setup is 
 # Only trade when score >= MIN_CONVICTION_TO_TRADE.
 # Position size and target scale with conviction.
 MIN_CONVICTION_TO_TRADE   = 4    # minimum factors needed (out of 7)
+# Target R values are STRETCH targets — most trades exit earlier via trailing
+# stop (position_manager.py). These act as a hard ceiling for parabolic moves.
 CONVICTION_RISK_TIERS = {
-    4: {"risk_mult": 1.0, "target_R": 2.5},   # base — 2% account risk, 2.5R target
-    5: {"risk_mult": 1.0, "target_R": 3.0},   # solid — 2% risk, 3R target
-    6: {"risk_mult": 1.25, "target_R": 3.5},  # strong — 2.5% risk, 3.5R target
-    7: {"risk_mult": 1.5, "target_R": 4.0},   # exceptional — 3% risk, 4R target
+    4: {"risk_mult": 1.0,  "target_R": 5.0},   # base — 2% risk, 5R stretch
+    5: {"risk_mult": 1.0,  "target_R": 6.0},   # solid — 2% risk, 6R stretch
+    6: {"risk_mult": 1.25, "target_R": 8.0},   # strong — 2.5% risk, 8R stretch
+    7: {"risk_mult": 1.5,  "target_R": 10.0},  # exceptional — 3% risk, 10R stretch
 }
 
 # ── Data feed ────────────────────────────────────────────────────────────────

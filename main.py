@@ -51,6 +51,7 @@ import catalyst_detector
 import strategy_catalyst
 import macro_calendar
 import conviction
+import position_manager
 from notifier import send_no_setup, send_signals, send
 import volume_source
 import earnings_calendar
@@ -394,6 +395,32 @@ def _count_sectors(symbols) -> dict[str, int]:
     return counts
 
 
+def _manage_positions_and_print(trade_client, data_client, spy_regime: str) -> dict:
+    """Run position manager and print a one-line summary per position."""
+    pm_summary = position_manager.manage_positions(
+        trade_client, data_client, spy_regime=spy_regime, cfg=cfg)
+    if pm_summary["reviewed"] == 0:
+        return pm_summary
+    print(f"  Position manager: reviewed {pm_summary['reviewed']} positions  "
+          f"(break-even: {pm_summary['moved_to_breakeven']}, "
+          f"trailed-1R: {pm_summary['trailed_1R']}, "
+          f"trailed-ATR: {pm_summary['trailed_atr']}, "
+          f"regime-exit: {pm_summary['regime_closed']})")
+    for d in pm_summary.get("details", []):
+        action = d.get("action", "")
+        if action in ("hold", "no_change_needed"):
+            continue
+        sym = d.get("symbol", "?")
+        if action in ("breakeven", "trail_1R", "trail_atr"):
+            print(f"     {sym}: {action} R={d.get('r_multiple','?')}  "
+                  f"stop {d.get('old_stop','?')} -> {d.get('new_stop','?')}")
+        elif action == "regime_exit":
+            print(f"     {sym}: CLOSED — {d.get('reason','')}")
+        elif action in ("no_stop", "replace_failed", "error"):
+            print(f"     {sym}: {action.upper()} — {d.get('error') or d.get('reason','')}")
+    return pm_summary
+
+
 # ── FULL SCAN ─────────────────────────────────────────────────────────────────
 
 def run_full_scan():
@@ -461,6 +488,16 @@ def run_full_scan():
     open_positions   = get_open_positions(trade_client)
     new_today_count  = _today_new_position_count(trade_client)
     market_open, mkt_reason = is_market_open(trade_client)
+
+    # Manage existing positions BEFORE looking for new ones — trail stops,
+    # exit on regime flip.
+    pm_summary = {}
+    if open_positions and market_open:
+        pm_summary = _manage_positions_and_print(trade_client, data_client, spy_regime.value)
+        # Refresh in case any positions got closed by regime exit
+        if pm_summary.get("regime_closed", 0) > 0:
+            open_positions = get_open_positions(trade_client)
+
     if open_positions:
         print(f"  Holding ({len(open_positions)}/{cfg.MAX_CONCURRENT_POSITIONS}): {', '.join(open_positions)}")
     print(f"  New positions today: {new_today_count}/{cfg.MAX_NEW_PER_DAY}")
@@ -852,6 +889,15 @@ def run_news_scan():
     earnings_cache = earnings_calendar.refresh_cache(cfg.WATCHLIST)
 
     open_positions = get_open_positions(trade_client)
+
+    # Manage existing positions BEFORE looking for new news-driven entries
+    pm_summary = {}
+    market_open_pm, _ = is_market_open(trade_client)
+    if open_positions and market_open_pm:
+        pm_summary = _manage_positions_and_print(trade_client, data_client, spy_regime.value)
+        if pm_summary.get("regime_closed", 0) > 0:
+            open_positions = get_open_positions(trade_client)
+
     held_pnl = {}
     try:
         for p in trade_client.get_all_positions():
@@ -1146,6 +1192,12 @@ def run_catalyst_scan():
     earnings_cache = earnings_calendar.refresh_cache(cfg.WATCHLIST)
 
     open_positions  = get_open_positions(trade_client)
+
+    # Manage existing positions (catalyst scan runs midday — good time to trail)
+    if open_positions and market_open:
+        _manage_positions_and_print(trade_client, data_client, spy_regime.value)
+        open_positions = get_open_positions(trade_client)
+
     new_today_count = _today_new_position_count(trade_client)
     print(f"  Holding ({len(open_positions)}/{cfg.MAX_CONCURRENT_POSITIONS}): "
           f"{', '.join(sorted(open_positions)) if open_positions else 'nothing'}")

@@ -42,7 +42,8 @@
       "Bash(git pull *)",
       "Bash(git -C \"F:/Projects/Canada/New folder\" commit -m \"Adapt volume filter for raw IEX data — fixes 'every stock fails liquidity gate' when yfinance is blocked\")",
       "Bash(git -C \"F:/Projects/Canada/New folder\" commit -m \"Add macro event blackout: CPI/FOMC/NFP/PPI/PCE 2026 calendar, 30h pre-event block\")",
-      "Bash(git -C \"F:/Projects/Canada/New folder\" commit -m \"Aggressive profile for \\\\$5k: curated 34-symbol momentum watchlist, 2%/3R risk, conviction-based sizing \\(only trade 4+/7 factor confluence\\)\")"
+      "Bash(git -C \"F:/Projects/Canada/New folder\" commit -m \"Aggressive profile for \\\\$5k: curated 34-symbol momentum watchlist, 2%/3R risk, conviction-based sizing \\(only trade 4+/7 factor confluence\\)\")",
+      "Bash(git -C \"F:/Projects/Canada/New folder\" commit -m \"Add position_manager: trails stops as price rises \\(let winners run\\), exits on regime flip\")"
     ]
   }
 }
