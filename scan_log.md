@@ -1,7 +1,33 @@
 # AI Trader — Scan Log
 
 Newest scans first. Each entry shows what the scanner found and what it did.
-_Last updated: 2026-05-12 20:33 ET_
+_Last updated: 2026-05-12 20:38 ET_
+
+## 2026-05-12 20:38 ET — FULL scan
+SPY: **BULL** | Posture: MIXED | VIX: 18.0 | SPY ATR%: 1.01
+
+**Run context:** Time window: IN · Market: CLOSED · Data feed: IEX · yfinance vol: 0/34 · Sentiment: finbert · Earnings dates: 54 cached · **MACRO BLACKOUT: PPI releases in 11h 51m**
+**New positions today:** 0
+
+**Scan funnel:**
+  - Scanned: 33
+  - Failed price/volume/ATR filter: 2
+  - OBV in distribution: 9
+  - No strategy fired: 22
+
+_No setups found._
+<details><summary>Notable news</summary>
+
+- ✓ **NVDA** (POSITIVE, +3)
+    - [~] Hot Inflation Data; Treasury Auction Test Ahead; Trump's Iran Comment Draws Atte
+- ✓ **AVGO** (POSITIVE, +3)
+    - [~] Jim Cramer Said 'Smell' — AI Stocks Heard 'Sell'
+- ✓ **AMD** (POSITIVE, +3)
+    - [~] Advanced Micro Devices Reports 13F Has Holdings Of 5,714,285 Absci Corporation S
+
+</details>
+
+---
 
 ## 2026-05-12 20:33 ET — FULL scan
 SPY: **BULL** | Posture: MIXED | VIX: 18.0 | SPY ATR%: 1.01

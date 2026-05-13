@@ -2,10 +2,13 @@
 Position manager — trails stops on winning positions so we let winners run.
 
 Runs at the start of every scan (FULL/NEWS/CATALYST). For each open position:
-  - Compute current P&L in R-multiples (R = entry minus original stop)
+  - Compute current P&L in R-multiples (R = entry minus ORIGINAL stop)
   - Ratchet the protective stop-loss order UP based on conviction-aware rules
   - Never lower a stop — only tighten
   - Exit immediately if SPY regime flips to BEAR
+
+Persists original (entry, stop) per symbol in position_state.json so we can
+correctly compute R-multiples even after we've trailed the stop above entry.
 
 Rules (R-multiple based on profit since entry):
   R < 1.0        : do nothing — let original stop work
@@ -18,7 +21,9 @@ If price closed below SMA20 on the daily, tighten stop hard regardless of R
 (trend break warning).
 """
 
+import json
 from datetime import datetime, timedelta
+from pathlib import Path
 
 import pandas as pd
 
@@ -26,6 +31,53 @@ from alpaca.trading.requests import GetOrdersRequest, ReplaceOrderRequest
 from alpaca.trading.enums import QueryOrderStatus
 from alpaca.data.requests import StockLatestTradeRequest, StockBarsRequest
 from alpaca.data.timeframe import TimeFrame
+
+
+STATE_FILE = Path(__file__).parent / "position_state.json"
+
+
+def _load_state() -> dict:
+    if not STATE_FILE.exists():
+        return {}
+    try:
+        return json.loads(STATE_FILE.read_text())
+    except Exception:
+        return {}
+
+
+def _save_state(state: dict):
+    try:
+        STATE_FILE.write_text(json.dumps(state, indent=2, default=str))
+    except Exception:
+        pass
+
+
+def _get_or_set_original(state: dict, symbol: str, entry: float, current_stop: float) -> dict:
+    """
+    Track the original (entry, stop) per symbol so we keep correct R-math
+    after the stop is trailed above entry.
+
+    - First time we see a symbol: record current entry + stop as ORIGINAL.
+    - Already tracked: return saved values.
+    - If saved entry differs significantly (new position in same symbol):
+      reset to new values.
+    """
+    saved = state.get(symbol)
+    if saved and abs(saved.get("entry", 0) - entry) < 0.01:
+        return saved
+    # New or re-entered: record original
+    # Use current_stop as original stop ONLY if it's below entry (sane).
+    # Otherwise (e.g., we caught the position mid-trail), fall back to
+    # 2% below entry as an estimate.
+    original_stop = current_stop if current_stop < entry else round(entry * 0.98, 2)
+    state[symbol] = {"entry": entry, "original_stop": original_stop,
+                     "first_seen": datetime.utcnow().isoformat()}
+    return state[symbol]
+
+
+def _prune_closed(state: dict, held_symbols: set):
+    """Drop state for positions that are no longer open."""
+    return {sym: data for sym, data in state.items() if sym in held_symbols}
 
 
 def _get_current_price(symbol, data_client):
@@ -103,12 +155,18 @@ def manage_positions(trade_client, data_client, spy_regime: str = "", cfg=None) 
         return summary
 
     if not positions:
+        # Still prune state to drop closed positions
+        _save_state({})
         return summary
+
+    state = _load_state()
+    held_symbols = {p.symbol for p in positions}
+    state = _prune_closed(state, held_symbols)
 
     for position in positions:
         symbol = position.symbol
         try:
-            result = _manage_one(position, trade_client, data_client, spy_regime, cfg)
+            result = _manage_one(position, trade_client, data_client, spy_regime, cfg, state)
             summary["reviewed"] += 1
             action = result.get("action", "")
             if   action == "breakeven":   summary["moved_to_breakeven"] += 1
@@ -122,10 +180,13 @@ def manage_positions(trade_client, data_client, spy_regime: str = "", cfg=None) 
             summary["errors"] += 1
             summary["details"].append({"symbol": symbol, "action": "error", "error": str(e)})
 
+    _save_state(state)
     return summary
 
 
-def _manage_one(position, trade_client, data_client, spy_regime: str, cfg) -> dict:
+def _manage_one(position, trade_client, data_client, spy_regime: str, cfg, state: dict = None) -> dict:
+    if state is None:
+        state = {}
     symbol = position.symbol
     entry  = float(position.avg_entry_price)
     qty    = int(float(position.qty))
@@ -155,7 +216,13 @@ def _manage_one(position, trade_client, data_client, spy_regime: str, cfg) -> di
     except (TypeError, AttributeError):
         return {"symbol": symbol, "action": "no_stop", "reason": "stop price unreadable"}
 
-    stop_distance = entry - current_stop   # original 1R distance
+    # Look up or record the ORIGINAL stop distance (the initial 1R unit).
+    # Once we trail the stop above entry, current_stop > entry and the simple
+    # formula (entry - current_stop) becomes negative — so we use the saved
+    # original from state to keep R-math correct.
+    saved = _get_or_set_original(state, symbol, entry, current_stop)
+    original_stop = float(saved["original_stop"])
+    stop_distance = entry - original_stop   # original 1R distance
     if stop_distance <= 0:
         return {"symbol": symbol, "action": "invalid_stop"}
 
