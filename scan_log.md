@@ -1,711 +1,791 @@
-# AI Trader — Scan Log
+# AI Trader — Daily Log
 
-Newest scans first. Each entry shows what the scanner found and what it did.
-_Last updated: 2026-05-12 20:51 ET_
+What the robot saw and did each time it woke up. Newest at top.
+_Last updated: May 12, 2026 at 08:56 PM ET_
 
-## 2026-05-12 20:51 ET — FULL scan
-SPY: **BULL** | Posture: MIXED | VIX: 18.0 | SPY ATR%: 1.01
+## May 12, 08:56 PM ET — Main scan
 
-**Run context:** Time window: IN · Market: CLOSED · Data feed: IEX · yfinance vol: 0/34 · Sentiment: finbert · Earnings dates: 54 cached · **MACRO BLACKOUT: PPI releases in 11h 39m**
-**New positions today:** 0
+**Market check:**
+- Market is going **up** 📈
+- Mood: calm (VIX 18)
+- Investors defensive
+- ⚠ **Important economic news soon — PPI releases in 11h 33m**
 
-**Scan funnel:**
-  - Scanned: 33
-  - Failed price/volume/ATR filter: 2
-  - OBV in distribution: 9
-  - No strategy fired: 22
+**Money flowing into:** Crude Oil (+18%), Silver (+9%), Energy (+3%)
+**Money flowing out of:** Healthcare (-1%), Gold (-2%), Utilities (-2%)
 
-_No setups found._
-<details><summary>Notable news</summary>
+**Looked at 33 stocks:**
+- not enough trading volume: 2
+- smart money quietly selling: 9
+- no buy setup today: 22
 
-- ✓ **NVDA** (POSITIVE, +3)
-    - [~] Hot Inflation Data; Treasury Auction Test Ahead; Trump's Iran Comment Draws Atte
-- ✓ **AVGO** (POSITIVE, +3)
-    - [~] Jim Cramer Said 'Smell' — AI Stocks Heard 'Sell'
-- ✓ **AMD** (POSITIVE, +3)
-    - [~] Advanced Micro Devices Reports 13F Has Holdings Of 5,714,285 Absci Corporation S
+**Result:** No trades today.
+<details><summary>Notable news today</summary>
 
-</details>
-
----
-
-## 2026-05-12 20:38 ET — FULL scan
-SPY: **BULL** | Posture: MIXED | VIX: 18.0 | SPY ATR%: 1.01
-
-**Run context:** Time window: IN · Market: CLOSED · Data feed: IEX · yfinance vol: 0/34 · Sentiment: finbert · Earnings dates: 54 cached · **MACRO BLACKOUT: PPI releases in 11h 51m**
-**New positions today:** 0
-
-**Scan funnel:**
-  - Scanned: 33
-  - Failed price/volume/ATR filter: 2
-  - OBV in distribution: 9
-  - No strategy fired: 22
-
-_No setups found._
-<details><summary>Notable news</summary>
-
-- ✓ **NVDA** (POSITIVE, +3)
-    - [~] Hot Inflation Data; Treasury Auction Test Ahead; Trump's Iran Comment Draws Atte
-- ✓ **AVGO** (POSITIVE, +3)
-    - [~] Jim Cramer Said 'Smell' — AI Stocks Heard 'Sell'
-- ✓ **AMD** (POSITIVE, +3)
-    - [~] Advanced Micro Devices Reports 13F Has Holdings Of 5,714,285 Absci Corporation S
+- ✓ **NVDA** — strong positive news (+3)
+    - _[~] Hot Inflation Data; Treasury Auction Test Ahead; Trump's Iran Comment Draws Atte_
+- ✓ **AVGO** — strong positive news (+3)
+    - _[~] Jim Cramer Said 'Smell' — AI Stocks Heard 'Sell'_
+- ✓ **AMD** — strong positive news (+3)
+    - _[~] Advanced Micro Devices Reports 13F Has Holdings Of 5,714,285 Absci Corporation S_
 
 </details>
 
 ---
 
-## 2026-05-12 20:33 ET — FULL scan
-SPY: **BULL** | Posture: MIXED | VIX: 18.0 | SPY ATR%: 1.01
+## May 12, 08:55 PM ET — Main scan
 
-**Run context:** Time window: IN · Market: CLOSED · Data feed: IEX · yfinance vol: 0/34 · Sentiment: finbert · Earnings dates: 54 cached · **MACRO BLACKOUT: PPI releases in 11h 56m**
-**New positions today:** 0
+**Market check:**
+- Market is going **up** 📈
+- Mood: calm (VIX 18)
+- Investors unsure
+- ⚠ **Important economic news soon — PPI releases in 11h 34m**
 
-**Scan funnel:**
-  - Scanned: 33
-  - Failed price/volume/ATR filter: 2
-  - OBV in distribution: 9
-  - No strategy fired: 22
+**Looked at 33 stocks:**
+- not enough trading volume: 2
+- smart money quietly selling: 9
+- no buy setup today: 22
 
-_No setups found._
-<details><summary>Notable news</summary>
+**Result:** No trades today.
+<details><summary>Notable news today</summary>
 
-- ✓ **NVDA** (POSITIVE, +3)
-    - [~] Hot Inflation Data; Treasury Auction Test Ahead; Trump's Iran Comment Draws Atte
-- ✓ **AVGO** (POSITIVE, +3)
-    - [~] Jim Cramer Said 'Smell' — AI Stocks Heard 'Sell'
-- ✓ **AMD** (POSITIVE, +3)
-    - [~] Advanced Micro Devices Reports 13F Has Holdings Of 5,714,285 Absci Corporation S
-
-</details>
-
----
-
-## 2026-05-12 20:18 ET — FULL scan
-SPY: **BULL** | Posture: MIXED | VIX: 18.0 | SPY ATR%: 1.01
-
-**Run context:** Time window: IN · Market: CLOSED · Data feed: IEX · yfinance vol: 0/34 · Sentiment: finbert · Earnings dates: 54 cached · **MACRO BLACKOUT: PPI releases in 12h 11m**
-**New positions today:** 0
-
-**Scan funnel:**
-  - Scanned: 33
-  - Failed price/volume/ATR filter: 2
-  - OBV in distribution: 9
-  - No strategy fired: 22
-
-_No setups found._
-<details><summary>Notable news</summary>
-
-- ✓ **NVDA** (POSITIVE, +3)
-    - [~] Hot Inflation Data; Treasury Auction Test Ahead; Trump's Iran Comment Draws Atte
-- ✓ **AVGO** (POSITIVE, +3)
-    - [~] Jim Cramer Said 'Smell' — AI Stocks Heard 'Sell'
-- ✓ **AMD** (POSITIVE, +3)
-    - [~] Advanced Micro Devices Reports 13F Has Holdings Of 5,714,285 Absci Corporation S
+- ✓ **NVDA** — strong positive news (+3)
+    - _[~] Hot Inflation Data; Treasury Auction Test Ahead; Trump's Iran Comment Draws Atte_
+- ✓ **AVGO** — strong positive news (+3)
+    - _[~] Jim Cramer Said 'Smell' — AI Stocks Heard 'Sell'_
+- ✓ **AMD** — strong positive news (+3)
+    - _[~] Advanced Micro Devices Reports 13F Has Holdings Of 5,714,285 Absci Corporation S_
 
 </details>
 
 ---
 
-## 2026-05-12 19:55 ET — FULL scan
-SPY: **BULL** | Posture: RISK-ON | VIX: 18.4 | SPY ATR%: 1.01
+## May 12, 08:51 PM ET — Main scan
 
-**Run context:** Time window: IN · Market: CLOSED · Data feed: IEX · yfinance vol: 0/60 · Sentiment: finbert · Earnings dates: 40 cached · **MACRO BLACKOUT: PPI releases in 12h 34m**
-**New positions today:** 0
+**Market check:**
+- Market is going **up** 📈
+- Mood: calm (VIX 18)
+- Investors unsure
+- ⚠ **Important economic news soon — PPI releases in 11h 39m**
 
-**Sector rotation:**
-  - Hottest: Crude Oil (USO, +17.7%), Technology (XLK, +16.6%), Silver (SLV, +9.3%)
-  - Coldest: Healthcare (XLV, -1.3%), Gold (GLD, -1.7%), Utilities (XLU, -1.8%)
+**Looked at 33 stocks:**
+- not enough trading volume: 2
+- smart money quietly selling: 9
+- no buy setup today: 22
 
-**Scan funnel:**
-  - Scanned: 59
-  - Failed price/volume/ATR filter: 13
-  - OBV in distribution: 14
-  - No strategy fired: 32
+**Result:** No trades today.
+<details><summary>Notable news today</summary>
 
-_No setups found._
-<details><summary>Notable news</summary>
-
-- ✓ **MSFT** (POSITIVE, +3)
-    - [~] 'Anthropic in Talks to Buy Developer Tools Startup Used by OpenAI, Google'- The 
-- ✓ **NVDA** (POSITIVE, +3)
-    - [~] Hot Inflation Data; Treasury Auction Test Ahead; Trump's Iran Comment Draws Atte
-- ✓ **AMD** (POSITIVE, +3)
-    - [~] Advanced Micro Devices Reports 13F Has Holdings Of 5,714,285 Absci Corporation S
+- ✓ **NVDA** — strong positive news (+3)
+    - _[~] Hot Inflation Data; Treasury Auction Test Ahead; Trump's Iran Comment Draws Atte_
+- ✓ **AVGO** — strong positive news (+3)
+    - _[~] Jim Cramer Said 'Smell' — AI Stocks Heard 'Sell'_
+- ✓ **AMD** — strong positive news (+3)
+    - _[~] Advanced Micro Devices Reports 13F Has Holdings Of 5,714,285 Absci Corporation S_
 
 </details>
 
 ---
 
-## 2026-05-12 23:51 UTC — FULL scan
-SPY: **BULL** | Posture: RISK-ON | VIX: 18.4 | SPY ATR%: 1.01
+## May 12, 08:38 PM ET — Main scan
 
-**Run context:** Time window: IN · Market: CLOSED · Data feed: IEX · yfinance vol: 0/60 · Sentiment: finbert · Earnings dates: 40 cached · **MACRO BLACKOUT: PPI releases in 12h 38m**
-**New positions today:** 0
+**Market check:**
+- Market is going **up** 📈
+- Mood: calm (VIX 18)
+- Investors unsure
+- ⚠ **Important economic news soon — PPI releases in 11h 51m**
 
-**Sector rotation:**
-  - Hottest: Crude Oil (USO, +17.7%), Technology (XLK, +16.6%), Silver (SLV, +9.3%)
-  - Coldest: Healthcare (XLV, -1.3%), Gold (GLD, -1.7%), Utilities (XLU, -1.8%)
+**Looked at 33 stocks:**
+- not enough trading volume: 2
+- smart money quietly selling: 9
+- no buy setup today: 22
 
-**Scan funnel:**
-  - Scanned: 59
-  - Failed price/volume/ATR filter: 13
-  - OBV in distribution: 14
-  - No strategy fired: 32
+**Result:** No trades today.
+<details><summary>Notable news today</summary>
 
-_No setups found._
-<details><summary>Notable news</summary>
-
-- ✓ **MSFT** (POSITIVE, +3)
-    - [~] 'Anthropic in Talks to Buy Developer Tools Startup Used by OpenAI, Google'- The 
-- ✓ **NVDA** (POSITIVE, +3)
-    - [~] Hot Inflation Data; Treasury Auction Test Ahead; Trump's Iran Comment Draws Atte
-- ✓ **AMD** (POSITIVE, +3)
-    - [~] Advanced Micro Devices Reports 13F Has Holdings Of 5,714,285 Absci Corporation S
+- ✓ **NVDA** — strong positive news (+3)
+    - _[~] Hot Inflation Data; Treasury Auction Test Ahead; Trump's Iran Comment Draws Atte_
+- ✓ **AVGO** — strong positive news (+3)
+    - _[~] Jim Cramer Said 'Smell' — AI Stocks Heard 'Sell'_
+- ✓ **AMD** — strong positive news (+3)
+    - _[~] Advanced Micro Devices Reports 13F Has Holdings Of 5,714,285 Absci Corporation S_
 
 </details>
 
 ---
 
-## 2026-05-12 23:43 UTC — FULL scan
-SPY: **BULL** | Posture: RISK-ON | VIX: 18.4 | SPY ATR%: 1.01
+## May 12, 08:33 PM ET — Main scan
 
-**Run context:** Time window: IN · Market: CLOSED · Data feed: IEX · yfinance vol: 0/60 · Sentiment: finbert · Earnings dates: 40 cached · **MACRO BLACKOUT: PPI releases in 12h 46m**
-**New positions today:** 0
+**Market check:**
+- Market is going **up** 📈
+- Mood: calm (VIX 18)
+- Investors unsure
+- ⚠ **Important economic news soon — PPI releases in 11h 56m**
 
-**Sector rotation:**
-  - Hottest: Crude Oil (USO, +17.7%), Technology (XLK, +16.6%), Silver (SLV, +9.3%)
-  - Coldest: Healthcare (XLV, -1.3%), Gold (GLD, -1.7%), Utilities (XLU, -1.8%)
+**Looked at 33 stocks:**
+- not enough trading volume: 2
+- smart money quietly selling: 9
+- no buy setup today: 22
 
-**Scan funnel:**
-  - Scanned: 59
-  - Failed price/volume/ATR filter: 13
-  - OBV in distribution: 14
-  - No strategy fired: 32
+**Result:** No trades today.
+<details><summary>Notable news today</summary>
 
-_No setups found._
-<details><summary>Notable news</summary>
-
-- ✓ **MSFT** (POSITIVE, +3)
-    - [~] 'Anthropic in Talks to Buy Developer Tools Startup Used by OpenAI, Google'- The 
-- ✓ **NVDA** (POSITIVE, +3)
-    - [~] Hot Inflation Data; Treasury Auction Test Ahead; Trump's Iran Comment Draws Atte
-- ✓ **AMD** (POSITIVE, +3)
-    - [~] Advanced Micro Devices Reports 13F Has Holdings Of 5,714,285 Absci Corporation S
+- ✓ **NVDA** — strong positive news (+3)
+    - _[~] Hot Inflation Data; Treasury Auction Test Ahead; Trump's Iran Comment Draws Atte_
+- ✓ **AVGO** — strong positive news (+3)
+    - _[~] Jim Cramer Said 'Smell' — AI Stocks Heard 'Sell'_
+- ✓ **AMD** — strong positive news (+3)
+    - _[~] Advanced Micro Devices Reports 13F Has Holdings Of 5,714,285 Absci Corporation S_
 
 </details>
 
 ---
 
-## 2026-05-12 23:25 UTC — FULL scan
-SPY: **BULL** | Posture: RISK-ON | VIX: 18.4 | SPY ATR%: 1.01
+## May 12, 08:18 PM ET — Main scan
 
-**Run context:** Time window: IN · Market: CLOSED · Data feed: IEX · yfinance vol: 0/60 · Sentiment: finbert · Earnings dates: 40 cached
-**New positions today:** 0
+**Market check:**
+- Market is going **up** 📈
+- Mood: calm (VIX 18)
+- Investors unsure
+- ⚠ **Important economic news soon — PPI releases in 12h 11m**
 
-**Sector rotation:**
-  - Hottest: Crude Oil (USO, +17.7%), Technology (XLK, +16.6%), Silver (SLV, +9.3%)
-  - Coldest: Healthcare (XLV, -1.3%), Gold (GLD, -1.7%), Utilities (XLU, -1.8%)
+**Looked at 33 stocks:**
+- not enough trading volume: 2
+- smart money quietly selling: 9
+- no buy setup today: 22
 
-**Scan funnel:**
-  - Scanned: 59
-  - Failed price/volume/ATR filter: 13
-  - OBV in distribution: 14
-  - No strategy fired: 32
+**Result:** No trades today.
+<details><summary>Notable news today</summary>
 
-_No setups found._
-<details><summary>Notable news</summary>
-
-- ✓ **MSFT** (POSITIVE, +3)
-    - [~] 'Anthropic in Talks to Buy Developer Tools Startup Used by OpenAI, Google'- The 
-- ✓ **NVDA** (POSITIVE, +3)
-    - [~] Hot Inflation Data; Treasury Auction Test Ahead; Trump's Iran Comment Draws Atte
-- ✓ **AMD** (POSITIVE, +3)
-    - [~] Advanced Micro Devices Reports 13F Has Holdings Of 5,714,285 Absci Corporation S
+- ✓ **NVDA** — strong positive news (+3)
+    - _[~] Hot Inflation Data; Treasury Auction Test Ahead; Trump's Iran Comment Draws Atte_
+- ✓ **AVGO** — strong positive news (+3)
+    - _[~] Jim Cramer Said 'Smell' — AI Stocks Heard 'Sell'_
+- ✓ **AMD** — strong positive news (+3)
+    - _[~] Advanced Micro Devices Reports 13F Has Holdings Of 5,714,285 Absci Corporation S_
 
 </details>
 
 ---
 
-## 2026-05-12 22:39 UTC — FULL scan
-SPY: **BULL** | Posture: RISK-ON | VIX: 18.4 | SPY ATR%: 1.01
+## May 12, 07:55 PM ET — Main scan
 
-**Run context:** Time window: OUT · Market: CLOSED · Data feed: IEX · yfinance vol: 0/60 · Sentiment: finbert · Earnings dates: 40 cached
-**New positions today:** 0
+**Market check:**
+- Market is going **up** 📈
+- Mood: a bit nervous (VIX 18)
+- Investors confident
+- ⚠ **Important economic news soon — PPI releases in 12h 34m**
 
-**Sector rotation:**
-  - Hottest: Crude Oil (USO, +17.7%), Technology (XLK, +16.6%), Silver (SLV, +9.3%)
-  - Coldest: Healthcare (XLV, -1.3%), Gold (GLD, -1.7%), Utilities (XLU, -1.8%)
+**Money flowing into:** Crude Oil (+18%), Technology (+17%), Silver (+9%)
+**Money flowing out of:** Healthcare (-1%), Gold (-2%), Utilities (-2%)
 
-**Scan funnel:**
-  - Scanned: 59
-  - Failed price/volume/ATR filter: 50
-  - OBV in distribution: 3
-  - No strategy fired: 6
+**Looked at 59 stocks:**
+- not enough trading volume: 13
+- smart money quietly selling: 14
+- no buy setup today: 32
 
-_No setups found._
-<details><summary>Notable news</summary>
+**Result:** No trades today.
+<details><summary>Notable news today</summary>
 
-- ✓ **AMD** (POSITIVE, +3)
-    - [~] Advanced Micro Devices Reports 13F Has Holdings Of 5,714,285 Absci Corporation S
-- ✓ **MSFT** (POSITIVE, +2)
-    - [~] 'Anthropic in Talks to Buy Developer Tools Startup Used by OpenAI, Google'- The 
-- ✓ **CRM** (POSITIVE, +2)
-    - [~] Citigroup Maintains Neutral on Salesforce, Lowers Price Target to $188
-
-</details>
-
----
-
-## 2026-05-12 21:46 UTC — FULL scan
-SPY: **BULL** | Posture: RISK-ON | VIX: 18.4 | SPY ATR%: 1.01
-
-**Run context:** Time window: OUT · Market: CLOSED · Data feed: IEX · yfinance vol: 0/60 · Sentiment: finbert · Earnings dates: 40 cached
-**New positions today:** 0
-
-**Sector rotation:**
-  - Hottest: Crude Oil (USO, +17.7%), Technology (XLK, +16.6%), Silver (SLV, +9.3%)
-  - Coldest: Healthcare (XLV, -1.3%), Gold (GLD, -1.7%), Utilities (XLU, -1.8%)
-
-**Scan funnel:**
-  - Scanned: 59
-  - Failed price/volume/ATR filter: 50
-  - OBV in distribution: 3
-  - No strategy fired: 6
-
-_No setups found._
-<details><summary>Notable news</summary>
-
-- ✓ **AMD** (POSITIVE, +3)
-    - [~] Advanced Micro Devices Reports 13F Has Holdings Of 5,714,285 Absci Corporation S
-- ✓ **MSFT** (POSITIVE, +2)
-    - [~] 'Anthropic In Talks to Raise $30B at $900B Valuation'- Bloomberg
-- ✓ **CRM** (POSITIVE, +2)
-    - [~] Citigroup Maintains Neutral on Salesforce, Lowers Price Target to $188
+- ✓ **MSFT** — strong positive news (+3)
+    - _[~] 'Anthropic in Talks to Buy Developer Tools Startup Used by OpenAI, Google'- The _
+- ✓ **NVDA** — strong positive news (+3)
+    - _[~] Hot Inflation Data; Treasury Auction Test Ahead; Trump's Iran Comment Draws Atte_
+- ✓ **AMD** — strong positive news (+3)
+    - _[~] Advanced Micro Devices Reports 13F Has Holdings Of 5,714,285 Absci Corporation S_
 
 </details>
 
 ---
 
-## 2026-05-12 21:10 UTC — NEWS scan
-SPY: **BULL**
+## May 12, 11:51 PM ET — Main scan
 
+**Market check:**
+- Market is going **up** 📈
+- Mood: a bit nervous (VIX 18)
+- Investors confident
+- ⚠ **Important economic news soon — PPI releases in 12h 38m**
 
-_No setups found._
-<details><summary>Notable news</summary>
+**Money flowing into:** Crude Oil (+18%), Technology (+17%), Silver (+9%)
+**Money flowing out of:** Healthcare (-1%), Gold (-2%), Utilities (-2%)
 
-- ✓ **AMD** (POSITIVE, +3)
-- ✓ **ORCL** (POSITIVE, +3)
-- ✓ **MSFT** (POSITIVE, +2)
-- ✗ **AVGO** (NEGATIVE, -2)
-- ✗ **GOOGL** (NEGATIVE, -2)
-- ✗ **XLF** (NEGATIVE, -2)
+**Looked at 59 stocks:**
+- not enough trading volume: 13
+- smart money quietly selling: 14
+- no buy setup today: 32
 
-</details>
+**Result:** No trades today.
+<details><summary>Notable news today</summary>
 
----
-
-## 2026-05-12 20:23 UTC — NEWS scan
-SPY: **BULL**
-
-
-_No setups found._
-<details><summary>Notable news</summary>
-
-- ✓ **AMD** (POSITIVE, +3)
-- ✓ **ORCL** (POSITIVE, +3)
-- ✓ **MSFT** (POSITIVE, +2)
-- ✗ **AVGO** (NEGATIVE, -2)
-- ✗ **GOOGL** (NEGATIVE, -2)
-- ✗ **SPY** (NEGATIVE, -2)
+- ✓ **MSFT** — strong positive news (+3)
+    - _[~] 'Anthropic in Talks to Buy Developer Tools Startup Used by OpenAI, Google'- The _
+- ✓ **NVDA** — strong positive news (+3)
+    - _[~] Hot Inflation Data; Treasury Auction Test Ahead; Trump's Iran Comment Draws Atte_
+- ✓ **AMD** — strong positive news (+3)
+    - _[~] Advanced Micro Devices Reports 13F Has Holdings Of 5,714,285 Absci Corporation S_
 
 </details>
 
 ---
 
-## 2026-05-12 19:25 UTC — NEWS scan
-SPY: **BULL**
+## May 12, 11:43 PM ET — Main scan
 
+**Market check:**
+- Market is going **up** 📈
+- Mood: a bit nervous (VIX 18)
+- Investors confident
+- ⚠ **Important economic news soon — PPI releases in 12h 46m**
 
-_No setups found._
-<details><summary>Notable news</summary>
+**Money flowing into:** Crude Oil (+18%), Technology (+17%), Silver (+9%)
+**Money flowing out of:** Healthcare (-1%), Gold (-2%), Utilities (-2%)
 
-- ✓ **AMD** (POSITIVE, +3)
-- ✓ **ORCL** (POSITIVE, +3)
-- ✓ **MSFT** (POSITIVE, +2)
-- ✗ **AVGO** (NEGATIVE, -2)
-- ✗ **GOOGL** (NEGATIVE, -2)
-- ✗ **XLF** (NEGATIVE, -2)
+**Looked at 59 stocks:**
+- not enough trading volume: 13
+- smart money quietly selling: 14
+- no buy setup today: 32
 
-</details>
+**Result:** No trades today.
+<details><summary>Notable news today</summary>
 
----
-
-## 2026-05-12 18:28 UTC — NEWS scan
-SPY: **BULL**
-
-
-_No setups found._
-<details><summary>Notable news</summary>
-
-- ✓ **AMD** (POSITIVE, +3)
-- ✓ **ORCL** (POSITIVE, +3)
-- ✓ **MSFT** (POSITIVE, +2)
-- ✗ **AVGO** (NEGATIVE, -2)
-- ✗ **QCOM** (NEGATIVE, -2)
-- ✗ **GOOGL** (NEGATIVE, -2)
+- ✓ **MSFT** — strong positive news (+3)
+    - _[~] 'Anthropic in Talks to Buy Developer Tools Startup Used by OpenAI, Google'- The _
+- ✓ **NVDA** — strong positive news (+3)
+    - _[~] Hot Inflation Data; Treasury Auction Test Ahead; Trump's Iran Comment Draws Atte_
+- ✓ **AMD** — strong positive news (+3)
+    - _[~] Advanced Micro Devices Reports 13F Has Holdings Of 5,714,285 Absci Corporation S_
 
 </details>
 
 ---
 
-## 2026-05-12 17:51 UTC — CATALYST scan
-SPY: **BULL**
+## May 12, 11:25 PM ET — Main scan
 
+**Market check:**
+- Market is going **up** 📈
+- Mood: a bit nervous (VIX 18)
+- Investors confident
 
-_No setups found._
----
+**Money flowing into:** Crude Oil (+18%), Technology (+17%), Silver (+9%)
+**Money flowing out of:** Healthcare (-1%), Gold (-2%), Utilities (-2%)
 
-## 2026-05-12 17:03 UTC — NEWS scan
-SPY: **BULL**
+**Looked at 59 stocks:**
+- not enough trading volume: 13
+- smart money quietly selling: 14
+- no buy setup today: 32
 
+**Result:** No trades today.
+<details><summary>Notable news today</summary>
 
-_No setups found._
-<details><summary>Notable news</summary>
-
-- ✓ **AMD** (POSITIVE, +2)
-- ✗ **AAPL** (NEGATIVE, -2)
-- ✗ **AVGO** (NEGATIVE, -2)
-- ✗ **USO** (NEGATIVE, -2)
-
-</details>
-
----
-
-## 2026-05-12 17:00 UTC — CATALYST scan
-SPY: **BULL**
-
-
-_No setups found._
----
-
-## 2026-05-12 16:39 UTC — FULL scan
-SPY: **BULL** | Posture: RISK-ON | VIX: 18.4 | SPY ATR%: 1.02
-
-**Run context:** Time window: OUT · Market: OPEN · Data feed: IEX · yfinance vol: 0/60 · Sentiment: finbert · Earnings dates: 40 cached
-**New positions today:** 0
-
-**Sector rotation:**
-  - Hottest: Crude Oil (USO, +17.2%), Technology (XLK, +14.5%), Silver (SLV, +6.3%)
-  - Coldest: Financials (XLF, -1.3%), Utilities (XLU, -1.9%), Gold (GLD, -2.7%)
-
-**Scan funnel:**
-  - Scanned: 59
-  - Failed price/volume/ATR filter: 50
-  - OBV in distribution: 3
-  - No strategy fired: 6
-
-_No setups found._
-<details><summary>Notable news</summary>
-
-- ✓ **QCOM** (POSITIVE, +3)
-    - [-] Qualcomm Stock Sinks 11%: AI Momentum Hits Profit-Taking Wall Despite $20 Billio
-- ✓ **AMD** (POSITIVE, +2)
-    - [+] Rackspace Keeps Climbing As AMD Deal And Earnings Fuel Momentum
-- ✓ **CRM** (POSITIVE, +2)
-    - [+] Pearson Expands Partnership With Salesforce Over AI, Skills Development Througho
+- ✓ **MSFT** — strong positive news (+3)
+    - _[~] 'Anthropic in Talks to Buy Developer Tools Startup Used by OpenAI, Google'- The _
+- ✓ **NVDA** — strong positive news (+3)
+    - _[~] Hot Inflation Data; Treasury Auction Test Ahead; Trump's Iran Comment Draws Atte_
+- ✓ **AMD** — strong positive news (+3)
+    - _[~] Advanced Micro Devices Reports 13F Has Holdings Of 5,714,285 Absci Corporation S_
 
 </details>
 
 ---
 
-## 2026-05-12 16:01 UTC — FULL scan
-SPY: **BULL** | Posture: RISK-ON | VIX: 18.4 | SPY ATR%: 1.02
+## May 12, 10:39 PM ET — Main scan
 
-**Run context:** Time window: OUT · Market: OPEN · Data feed: IEX · yfinance vol: 0/60 · Sentiment: finbert · Earnings dates: 40 cached
-**New positions today:** 0
+**Market check:**
+- Market is going **up** 📈
+- Mood: a bit nervous (VIX 18)
+- Investors confident
 
-**Sector rotation:**
-  - Hottest: Crude Oil (USO, +17.1%), Technology (XLK, +14.6%), Silver (SLV, +6.0%)
-  - Coldest: Financials (XLF, -1.5%), Utilities (XLU, -2.2%), Gold (GLD, -2.7%)
+**Money flowing into:** Crude Oil (+18%), Technology (+17%), Silver (+9%)
+**Money flowing out of:** Healthcare (-1%), Gold (-2%), Utilities (-2%)
 
-**Scan funnel:**
-  - Scanned: 59
-  - Failed price/volume/ATR filter: 50
-  - OBV in distribution: 3
-  - No strategy fired: 6
+**Looked at 59 stocks:**
+- not enough trading volume: 50
+- smart money quietly selling: 3
+- no buy setup today: 6
 
-_No setups found._
-<details><summary>Notable news</summary>
+**Result:** No trades today.
+<details><summary>Notable news today</summary>
 
-- ✓ **QCOM** (POSITIVE, +3)
-    - [~] Watching QUALCOMM; Shares See Volume To The Downside, Traders Circulate Substack
-- ✓ **AMD** (POSITIVE, +2)
-    - [+] Rackspace Keeps Climbing As AMD Deal And Earnings Fuel Momentum
-- ✓ **CRM** (POSITIVE, +2)
-    - [+] Pearson Expands Partnership With Salesforce Over AI, Skills Development Througho
-
-</details>
-
----
-
-## 2026-05-12 15:49 UTC — NEWS scan
-SPY: **BULL**
-
-
-_No setups found._
-<details><summary>Notable news</summary>
-
-- ✓ **QCOM** (POSITIVE, +2)
-- ✗ **INTC** (NEGATIVE, -2)
-- ✗ **TSLA** (NEGATIVE, -2)
-- ✗ **QQQ** (NEGATIVE, -2)
+- ✓ **AMD** — strong positive news (+3)
+    - _[~] Advanced Micro Devices Reports 13F Has Holdings Of 5,714,285 Absci Corporation S_
+- ✓ **MSFT** — strong positive news (+2)
+    - _[~] 'Anthropic in Talks to Buy Developer Tools Startup Used by OpenAI, Google'- The _
+- ✓ **CRM** — strong positive news (+2)
+    - _[~] Citigroup Maintains Neutral on Salesforce, Lowers Price Target to $188_
 
 </details>
 
 ---
 
-## 2026-05-12 15:41 UTC — FULL scan
-SPY: **BULL** | Posture: RISK-ON | VIX: 18.4 | SPY ATR%: 1.01
+## May 12, 09:46 PM ET — Main scan
 
-**Run context:** Time window: IN · Market: OPEN · Data feed: IEX · yfinance vol: 0/60 · Sentiment: finbert · Earnings dates: 40 cached
-**New positions today:** 0
+**Market check:**
+- Market is going **up** 📈
+- Mood: a bit nervous (VIX 18)
+- Investors confident
 
-**Sector rotation:**
-  - Hottest: Crude Oil (USO, +17.2%), Technology (XLK, +15.2%), Silver (SLV, +5.9%)
-  - Coldest: Financials (XLF, -1.7%), Utilities (XLU, -2.1%), Gold (GLD, -2.7%)
+**Money flowing into:** Crude Oil (+18%), Technology (+17%), Silver (+9%)
+**Money flowing out of:** Healthcare (-1%), Gold (-2%), Utilities (-2%)
 
-**Scan funnel:**
-  - Scanned: 59
-  - Failed price/volume/ATR filter: 50
-  - OBV in distribution: 3
-  - No strategy fired: 6
+**Looked at 59 stocks:**
+- not enough trading volume: 50
+- smart money quietly selling: 3
+- no buy setup today: 6
 
-_No setups found._
-<details><summary>Notable news</summary>
+**Result:** No trades today.
+<details><summary>Notable news today</summary>
 
-- ✓ **QCOM** (POSITIVE, +3)
-    - [~] Watching QUALCOMM; Shares See Volume To The Downside, Traders Circulate Substack
-- ✓ **AMD** (POSITIVE, +2)
-    - [+] Rackspace Keeps Climbing As AMD Deal And Earnings Fuel Momentum
-- ✓ **CRM** (POSITIVE, +2)
-    - [+] Pearson Expands Partnership With Salesforce Over AI, Skills Development Througho
-
-</details>
-
----
-
-## 2026-05-12 01:04 UTC — FULL scan
-SPY: **BULL** | Posture: RISK-ON | VIX: 18.4 | SPY ATR%: 1.01
-
-**Run context:** Time window: IN · Market: CLOSED · Data feed: IEX · yfinance vol: 0/60 · Sentiment: finbert · Earnings dates: 40 cached
-**New positions today:** 0
-
-**Sector rotation:**
-  - Hottest: Technology (XLK, +20.3%), Crude Oil (USO, +12.2%), Natural Gas (UNG, +6.2%)
-  - Coldest: Financials (XLF, -1.1%), Utilities (XLU, -2.8%), Healthcare (XLV, -3.9%)
-
-**Scan funnel:**
-  - Scanned: 59
-  - Failed price/volume/ATR filter: 50
-  - OBV in distribution: 4
-  - No strategy fired: 5
-
-_No setups found._
-<details><summary>Notable news</summary>
-
-- ✓ **NVDA** (POSITIVE, +2)
-    - [~] Trump Says Xi Will Give Him A 'Big, Fat Hug' In China, But What Do Prediction Ma
-- ✓ **DIA** (POSITIVE, +2)
-    - [+] S&P 500 Tops 7,400 As Copper Hits Record Highs: Stock Market Today
+- ✓ **AMD** — strong positive news (+3)
+    - _[~] Advanced Micro Devices Reports 13F Has Holdings Of 5,714,285 Absci Corporation S_
+- ✓ **MSFT** — strong positive news (+2)
+    - _[~] 'Anthropic In Talks to Raise $30B at $900B Valuation'- Bloomberg_
+- ✓ **CRM** — strong positive news (+2)
+    - _[~] Citigroup Maintains Neutral on Salesforce, Lowers Price Target to $188_
 
 </details>
 
 ---
 
-## 2026-05-11 18:33 UTC — NEWS scan
-SPY: **BULL**
+## May 12, 09:10 PM ET — News check
 
+**Market check:**
+- Market is going **up** 📈
 
-_No setups found._
-<details><summary>Notable news</summary>
+**Result:** No trades today.
+<details><summary>Notable news today</summary>
 
-- ✓ **QCOM** (POSITIVE, +2)
-- ✓ **MRK** (POSITIVE, +2)
-- ✗ **NVDA** (NEGATIVE, -2)
-- ✗ **META** (NEGATIVE, -3)
-- ✗ **AMZN** (NEGATIVE, -3)
-
-</details>
-
----
-
-## 2026-05-11 17:22 UTC — NEWS scan
-SPY: **BULL**
-
-
-_No setups found._
-<details><summary>Notable news</summary>
-
-- ✗ **META** (NEGATIVE, -2)
-- ✗ **AMZN** (NEGATIVE, -3)
-- ✗ **TSLA** (NEGATIVE, -3)
+- ✓ **AMD** — strong positive news (+3)
+- ✓ **ORCL** — strong positive news (+3)
+- ✓ **MSFT** — strong positive news (+2)
+- ✗ **AVGO** — negative news (-2)
+- ✗ **GOOGL** — negative news (-2)
+- ✗ **XLF** — negative news (-2)
 
 </details>
 
 ---
 
-## 2026-05-09 01:08 UTC — FULL scan
-SPY: **BULL** | Posture: RISK-ON
+## May 12, 08:23 PM ET — News check
 
+**Market check:**
+- Market is going **up** 📈
 
-_No setups found._
-<details><summary>Notable news</summary>
+**Result:** No trades today.
+<details><summary>Notable news today</summary>
 
-- ✓ **AAPL** (POSITIVE, +3)
-    - [~] Trump Could Put These 8 Stocks In The Spotlight For China Trip: Here Are The CEO
-- ✓ **MSFT** (POSITIVE, +3)
-    - [~] How Anthropic's Mythos Triggered Trump's AI Regulation U-Turn
-- ✓ **AMD** (POSITIVE, +3)
-    - [+] Wall Street Pops The Champagne, Main Street Hits A Record Low: This Week In The 
-
-</details>
-
----
-
-## 2026-05-09 01:06 UTC — FULL scan
-SPY: **BULL** | Posture: RISK-ON
-
-
-_No setups found._
-<details><summary>Notable news</summary>
-
-- ✓ **AAPL** (POSITIVE, +3)
-    - [~] Trump Could Put These 8 Stocks In The Spotlight For China Trip: Here Are The CEO
-- ✓ **MSFT** (POSITIVE, +3)
-    - [~] How Anthropic's Mythos Triggered Trump's AI Regulation U-Turn
-- ✓ **AMD** (POSITIVE, +3)
-    - [+] Wall Street Pops The Champagne, Main Street Hits A Record Low: This Week In The 
+- ✓ **AMD** — strong positive news (+3)
+- ✓ **ORCL** — strong positive news (+3)
+- ✓ **MSFT** — strong positive news (+2)
+- ✗ **AVGO** — negative news (-2)
+- ✗ **GOOGL** — negative news (-2)
+- ✗ **SPY** — negative news (-2)
 
 </details>
 
 ---
 
-## 2026-05-09 01:05 UTC — FULL scan
-SPY: **BULL** | Posture: RISK-ON
+## May 12, 07:25 PM ET — News check
 
+**Market check:**
+- Market is going **up** 📈
 
-_No setups found._
-<details><summary>Notable news</summary>
+**Result:** No trades today.
+<details><summary>Notable news today</summary>
 
-- ✓ **AAPL** (POSITIVE, +3)
-    - [~] Trump Could Put These 8 Stocks In The Spotlight For China Trip: Here Are The CEO
-- ✓ **MSFT** (POSITIVE, +3)
-    - [~] How Anthropic's Mythos Triggered Trump's AI Regulation U-Turn
-- ✓ **AMD** (POSITIVE, +3)
-    - [+] Wall Street Pops The Champagne, Main Street Hits A Record Low: This Week In The 
-
-</details>
-
----
-
-## 2026-05-09 01:05 UTC — FULL scan
-SPY: **BULL** | Posture: RISK-ON
-
-
-_No setups found._
-<details><summary>Notable news</summary>
-
-- ✓ **AAPL** (POSITIVE, +3)
-    - [~] Trump Could Put These 8 Stocks In The Spotlight For China Trip: Here Are The CEO
-- ✓ **MSFT** (POSITIVE, +3)
-    - [~] How Anthropic's Mythos Triggered Trump's AI Regulation U-Turn
-- ✓ **AMD** (POSITIVE, +3)
-    - [+] Wall Street Pops The Champagne, Main Street Hits A Record Low: This Week In The 
+- ✓ **AMD** — strong positive news (+3)
+- ✓ **ORCL** — strong positive news (+3)
+- ✓ **MSFT** — strong positive news (+2)
+- ✗ **AVGO** — negative news (-2)
+- ✗ **GOOGL** — negative news (-2)
+- ✗ **XLF** — negative news (-2)
 
 </details>
 
 ---
 
-## 2026-05-09 00:32 UTC — FULL scan
-SPY: **BULL** | Posture: RISK-ON
+## May 12, 06:28 PM ET — News check
 
+**Market check:**
+- Market is going **up** 📈
 
-_No setups found._
-<details><summary>Notable news</summary>
+**Result:** No trades today.
+<details><summary>Notable news today</summary>
 
-- ✓ **AAPL** (POSITIVE, +3)
-    - [~] Trump Could Put These 8 Stocks In The Spotlight For China Trip: Here Are The CEO
-- ✓ **MSFT** (POSITIVE, +3)
-    - [~] How Anthropic's Mythos Triggered Trump's AI Regulation U-Turn
-- ✓ **AMD** (POSITIVE, +3)
-    - [+] Wall Street Pops The Champagne, Main Street Hits A Record Low: This Week In The 
-
-</details>
-
----
-
-## 2026-05-09 00:32 UTC — NEWS scan
-SPY: **BULL**
-
-
-_No setups found._
-<details><summary>Notable news</summary>
-
-- ✓ **AMD** (POSITIVE, +3)
-- ✓ **QCOM** (POSITIVE, +3)
-- ✓ **QQQ** (POSITIVE, +3)
+- ✓ **AMD** — strong positive news (+3)
+- ✓ **ORCL** — strong positive news (+3)
+- ✓ **MSFT** — strong positive news (+2)
+- ✗ **AVGO** — negative news (-2)
+- ✗ **QCOM** — negative news (-2)
+- ✗ **GOOGL** — negative news (-2)
 
 </details>
 
 ---
 
-## 2026-05-09 00:31 UTC — NEWS scan
-SPY: **BULL**
+## May 12, 05:51 PM ET — Big-news check
 
+**Market check:**
+- Market is going **up** 📈
 
-_No setups found._
-<details><summary>Notable news</summary>
+**Result:** No trades today.
+---
 
-- ✓ **AMD** (POSITIVE, +3)
-- ✓ **QCOM** (POSITIVE, +3)
-- ✓ **QQQ** (POSITIVE, +3)
+## May 12, 05:03 PM ET — News check
+
+**Market check:**
+- Market is going **up** 📈
+
+**Result:** No trades today.
+<details><summary>Notable news today</summary>
+
+- ✓ **AMD** — strong positive news (+2)
+- ✗ **AAPL** — negative news (-2)
+- ✗ **AVGO** — negative news (-2)
+- ✗ **USO** — negative news (-2)
 
 </details>
 
 ---
 
-## 2026-05-09 00:31 UTC — FULL scan
-SPY: **BULL** | Posture: RISK-ON
+## May 12, 05:00 PM ET — Big-news check
 
+**Market check:**
+- Market is going **up** 📈
 
-_No setups found._
-<details><summary>Notable news</summary>
+**Result:** No trades today.
+---
 
-- ✓ **AAPL** (POSITIVE, +3)
-    - [~] Trump Could Put These 8 Stocks In The Spotlight For China Trip: Here Are The CEO
-- ✓ **MSFT** (POSITIVE, +3)
-    - [~] How Anthropic's Mythos Triggered Trump's AI Regulation U-Turn
-- ✓ **AMD** (POSITIVE, +3)
-    - [+] Wall Street Pops The Champagne, Main Street Hits A Record Low: This Week In The 
+## May 12, 04:39 PM ET — Main scan
+
+**Market check:**
+- Market is going **up** 📈
+- Mood: a bit nervous (VIX 18)
+- Investors confident
+
+**Money flowing into:** Crude Oil (+17%), Technology (+15%), Silver (+6%)
+**Money flowing out of:** Financials (-1%), Utilities (-2%), Gold (-3%)
+
+**Looked at 59 stocks:**
+- not enough trading volume: 50
+- smart money quietly selling: 3
+- no buy setup today: 6
+
+**Result:** No trades today.
+<details><summary>Notable news today</summary>
+
+- ✓ **QCOM** — strong positive news (+3)
+    - _[-] Qualcomm Stock Sinks 11%: AI Momentum Hits Profit-Taking Wall Despite $20 Billio_
+- ✓ **AMD** — strong positive news (+2)
+    - _[+] Rackspace Keeps Climbing As AMD Deal And Earnings Fuel Momentum_
+- ✓ **CRM** — strong positive news (+2)
+    - _[+] Pearson Expands Partnership With Salesforce Over AI, Skills Development Througho_
 
 </details>
 
 ---
 
-## 2026-05-09 00:01 UTC — FULL scan
-SPY: **BULL** | Posture: RISK-ON
+## May 12, 04:01 PM ET — Main scan
 
+**Market check:**
+- Market is going **up** 📈
+- Mood: a bit nervous (VIX 18)
+- Investors confident
 
-_No setups found._
-<details><summary>Notable news</summary>
+**Money flowing into:** Crude Oil (+17%), Technology (+15%), Silver (+6%)
+**Money flowing out of:** Financials (-1%), Utilities (-2%), Gold (-3%)
 
-- ✓ **AAPL** (POSITIVE, +3)
-    - [~] Trump Could Put These 8 Stocks In The Spotlight For China Trip: Here Are The CEO
-- ✓ **MSFT** (POSITIVE, +3)
-    - [~] How Anthropic's Mythos Triggered Trump's AI Regulation U-Turn
-- ✓ **NVDA** (POSITIVE, +3)
-    - [~] Tesla China Sales Jump 36% In April As Musk-Led Company Files New Roadster Trade
+**Looked at 59 stocks:**
+- not enough trading volume: 50
+- smart money quietly selling: 3
+- no buy setup today: 6
+
+**Result:** No trades today.
+<details><summary>Notable news today</summary>
+
+- ✓ **QCOM** — strong positive news (+3)
+    - _[~] Watching QUALCOMM; Shares See Volume To The Downside, Traders Circulate Substack_
+- ✓ **AMD** — strong positive news (+2)
+    - _[+] Rackspace Keeps Climbing As AMD Deal And Earnings Fuel Momentum_
+- ✓ **CRM** — strong positive news (+2)
+    - _[+] Pearson Expands Partnership With Salesforce Over AI, Skills Development Througho_
+
+</details>
+
+---
+
+## May 12, 03:49 PM ET — News check
+
+**Market check:**
+- Market is going **up** 📈
+
+**Result:** No trades today.
+<details><summary>Notable news today</summary>
+
+- ✓ **QCOM** — strong positive news (+2)
+- ✗ **INTC** — negative news (-2)
+- ✗ **TSLA** — negative news (-2)
+- ✗ **QQQ** — negative news (-2)
+
+</details>
+
+---
+
+## May 12, 03:41 PM ET — Main scan
+
+**Market check:**
+- Market is going **up** 📈
+- Mood: a bit nervous (VIX 18)
+- Investors confident
+
+**Money flowing into:** Crude Oil (+17%), Technology (+15%), Silver (+6%)
+**Money flowing out of:** Financials (-2%), Utilities (-2%), Gold (-3%)
+
+**Looked at 59 stocks:**
+- not enough trading volume: 50
+- smart money quietly selling: 3
+- no buy setup today: 6
+
+**Result:** No trades today.
+<details><summary>Notable news today</summary>
+
+- ✓ **QCOM** — strong positive news (+3)
+    - _[~] Watching QUALCOMM; Shares See Volume To The Downside, Traders Circulate Substack_
+- ✓ **AMD** — strong positive news (+2)
+    - _[+] Rackspace Keeps Climbing As AMD Deal And Earnings Fuel Momentum_
+- ✓ **CRM** — strong positive news (+2)
+    - _[+] Pearson Expands Partnership With Salesforce Over AI, Skills Development Througho_
+
+</details>
+
+---
+
+## May 12, 01:04 AM ET — Main scan
+
+**Market check:**
+- Market is going **up** 📈
+- Mood: a bit nervous (VIX 18)
+- Investors confident
+
+**Money flowing into:** Technology (+20%), Crude Oil (+12%), Natural Gas (+6%)
+**Money flowing out of:** Financials (-1%), Utilities (-3%), Healthcare (-4%)
+
+**Looked at 59 stocks:**
+- not enough trading volume: 50
+- smart money quietly selling: 4
+- no buy setup today: 5
+
+**Result:** No trades today.
+<details><summary>Notable news today</summary>
+
+- ✓ **NVDA** — strong positive news (+2)
+    - _[~] Trump Says Xi Will Give Him A 'Big, Fat Hug' In China, But What Do Prediction Ma_
+- ✓ **DIA** — strong positive news (+2)
+    - _[+] S&P 500 Tops 7,400 As Copper Hits Record Highs: Stock Market Today_
+
+</details>
+
+---
+
+## May 11, 06:33 PM ET — News check
+
+**Market check:**
+- Market is going **up** 📈
+
+**Result:** No trades today.
+<details><summary>Notable news today</summary>
+
+- ✓ **QCOM** — strong positive news (+2)
+- ✓ **MRK** — strong positive news (+2)
+- ✗ **NVDA** — negative news (-2)
+- ✗ **META** — negative news (-3)
+- ✗ **AMZN** — negative news (-3)
+
+</details>
+
+---
+
+## May 11, 05:22 PM ET — News check
+
+**Market check:**
+- Market is going **up** 📈
+
+**Result:** No trades today.
+<details><summary>Notable news today</summary>
+
+- ✗ **META** — negative news (-2)
+- ✗ **AMZN** — negative news (-3)
+- ✗ **TSLA** — negative news (-3)
+
+</details>
+
+---
+
+## May 09, 01:08 AM ET — Main scan
+
+**Market check:**
+- Market is going **up** 📈
+- Investors confident
+
+**Result:** No trades today.
+<details><summary>Notable news today</summary>
+
+- ✓ **AAPL** — strong positive news (+3)
+    - _[~] Trump Could Put These 8 Stocks In The Spotlight For China Trip: Here Are The CEO_
+- ✓ **MSFT** — strong positive news (+3)
+    - _[~] How Anthropic's Mythos Triggered Trump's AI Regulation U-Turn_
+- ✓ **AMD** — strong positive news (+3)
+    - _[+] Wall Street Pops The Champagne, Main Street Hits A Record Low: This Week In The _
+
+</details>
+
+---
+
+## May 09, 01:06 AM ET — Main scan
+
+**Market check:**
+- Market is going **up** 📈
+- Investors confident
+
+**Result:** No trades today.
+<details><summary>Notable news today</summary>
+
+- ✓ **AAPL** — strong positive news (+3)
+    - _[~] Trump Could Put These 8 Stocks In The Spotlight For China Trip: Here Are The CEO_
+- ✓ **MSFT** — strong positive news (+3)
+    - _[~] How Anthropic's Mythos Triggered Trump's AI Regulation U-Turn_
+- ✓ **AMD** — strong positive news (+3)
+    - _[+] Wall Street Pops The Champagne, Main Street Hits A Record Low: This Week In The _
+
+</details>
+
+---
+
+## May 09, 01:05 AM ET — Main scan
+
+**Market check:**
+- Market is going **up** 📈
+- Investors confident
+
+**Result:** No trades today.
+<details><summary>Notable news today</summary>
+
+- ✓ **AAPL** — strong positive news (+3)
+    - _[~] Trump Could Put These 8 Stocks In The Spotlight For China Trip: Here Are The CEO_
+- ✓ **MSFT** — strong positive news (+3)
+    - _[~] How Anthropic's Mythos Triggered Trump's AI Regulation U-Turn_
+- ✓ **AMD** — strong positive news (+3)
+    - _[+] Wall Street Pops The Champagne, Main Street Hits A Record Low: This Week In The _
+
+</details>
+
+---
+
+## May 09, 01:05 AM ET — Main scan
+
+**Market check:**
+- Market is going **up** 📈
+- Investors confident
+
+**Result:** No trades today.
+<details><summary>Notable news today</summary>
+
+- ✓ **AAPL** — strong positive news (+3)
+    - _[~] Trump Could Put These 8 Stocks In The Spotlight For China Trip: Here Are The CEO_
+- ✓ **MSFT** — strong positive news (+3)
+    - _[~] How Anthropic's Mythos Triggered Trump's AI Regulation U-Turn_
+- ✓ **AMD** — strong positive news (+3)
+    - _[+] Wall Street Pops The Champagne, Main Street Hits A Record Low: This Week In The _
+
+</details>
+
+---
+
+## May 09, 12:32 AM ET — Main scan
+
+**Market check:**
+- Market is going **up** 📈
+- Investors confident
+
+**Result:** No trades today.
+<details><summary>Notable news today</summary>
+
+- ✓ **AAPL** — strong positive news (+3)
+    - _[~] Trump Could Put These 8 Stocks In The Spotlight For China Trip: Here Are The CEO_
+- ✓ **MSFT** — strong positive news (+3)
+    - _[~] How Anthropic's Mythos Triggered Trump's AI Regulation U-Turn_
+- ✓ **AMD** — strong positive news (+3)
+    - _[+] Wall Street Pops The Champagne, Main Street Hits A Record Low: This Week In The _
+
+</details>
+
+---
+
+## May 09, 12:32 AM ET — News check
+
+**Market check:**
+- Market is going **up** 📈
+
+**Result:** No trades today.
+<details><summary>Notable news today</summary>
+
+- ✓ **AMD** — strong positive news (+3)
+- ✓ **QCOM** — strong positive news (+3)
+- ✓ **QQQ** — strong positive news (+3)
+
+</details>
+
+---
+
+## May 09, 12:31 AM ET — News check
+
+**Market check:**
+- Market is going **up** 📈
+
+**Result:** No trades today.
+<details><summary>Notable news today</summary>
+
+- ✓ **AMD** — strong positive news (+3)
+- ✓ **QCOM** — strong positive news (+3)
+- ✓ **QQQ** — strong positive news (+3)
+
+</details>
+
+---
+
+## May 09, 12:31 AM ET — Main scan
+
+**Market check:**
+- Market is going **up** 📈
+- Investors confident
+
+**Result:** No trades today.
+<details><summary>Notable news today</summary>
+
+- ✓ **AAPL** — strong positive news (+3)
+    - _[~] Trump Could Put These 8 Stocks In The Spotlight For China Trip: Here Are The CEO_
+- ✓ **MSFT** — strong positive news (+3)
+    - _[~] How Anthropic's Mythos Triggered Trump's AI Regulation U-Turn_
+- ✓ **AMD** — strong positive news (+3)
+    - _[+] Wall Street Pops The Champagne, Main Street Hits A Record Low: This Week In The _
+
+</details>
+
+---
+
+## May 09, 12:01 AM ET — Main scan
+
+**Market check:**
+- Market is going **up** 📈
+- Investors confident
+
+**Result:** No trades today.
+<details><summary>Notable news today</summary>
+
+- ✓ **AAPL** — strong positive news (+3)
+    - _[~] Trump Could Put These 8 Stocks In The Spotlight For China Trip: Here Are The CEO_
+- ✓ **MSFT** — strong positive news (+3)
+    - _[~] How Anthropic's Mythos Triggered Trump's AI Regulation U-Turn_
+- ✓ **NVDA** — strong positive news (+3)
+    - _[~] Tesla China Sales Jump 36% In April As Musk-Led Company Files New Roadster Trade_
 
 </details>
 

@@ -32,6 +32,14 @@ WATCHLIST = [
 # Market context ticker (benchmark for relative strength)
 BENCHMARK = "SPY"
 
+# Sector ETFs — fetched for big-money rotation analysis only (NOT traded).
+# These tell us which sectors institutions are flowing into vs. out of, even
+# though we trade individual momentum stocks not the ETFs themselves.
+ROTATION_ETFS = [
+    "XLF", "XLE", "XLV", "XLI", "XLB", "XLU", "XLRE",
+    "GLD", "SLV", "USO", "UNG",
+]
+
 # ── Data settings ───────────────────────────────────────────────────────────
 LOOKBACK_DAYS = 200   # calendar days of daily bars to fetch
 

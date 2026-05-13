@@ -117,175 +117,183 @@ def save_log(entry: dict):
 
 
 def _save_human_log(logs: list):
-    """Render the JSON log as a human-readable markdown file. Newest first."""
-    lines = ["# AI Trader — Scan Log", ""]
-    lines.append("Newest scans first. Each entry shows what the scanner found and what it did.")
-    lines.append(f"_Last updated: {datetime.now(ET).strftime('%Y-%m-%d %H:%M ET')}_")
+    """Render scan log in plain English so a non-technical reader can follow."""
+    lines = ["# AI Trader — Daily Log", ""]
+    lines.append("What the robot saw and did each time it woke up. Newest at top.")
+    lines.append(f"_Last updated: {datetime.now(ET).strftime('%b %d, %Y at %I:%M %p ET')}_")
     lines.append("")
 
+    # Plain-English translations
+    MODE_NAMES = {
+        "FULL":     "Main scan",
+        "NEWS":     "News check",
+        "CATALYST": "Big-news check",
+    }
+    REGIME_PLAIN = {
+        "BULL":   "going **up** 📈",
+        "BEAR":   "going **down** 📉",
+        "CHOPPY": "moving sideways",
+    }
+    POSTURE_PLAIN = {
+        "RISK-ON":  "Investors confident",
+        "RISK-OFF": "Investors defensive",
+        "MIXED":    "Investors unsure",
+    }
+    FUNNEL_PLAIN = {
+        "no_data":            "not enough price history",
+        "held":               "already holding",
+        "market_volatile":    "market too jumpy today",
+        "earnings_blackout":  "earnings report too close",
+        "failed_filters":    "not enough trading volume",
+        "obv_distribution":   "smart money quietly selling",
+        "no_strategy_signal": "no buy setup today",
+        "of_or_sent_reject":  "order flow or news was negative",
+        "sector_misalign":    "sector is cold",
+        "low_conviction":     "setup exists but not strong enough",
+    }
+
+    def vix_mood(vix):
+        if vix is None:   return None
+        if vix < 18:      return f"calm (VIX {vix:.0f})"
+        if vix < 25:      return f"a bit nervous (VIX {vix:.0f})"
+        if vix < 30:      return f"worried (VIX {vix:.0f})"
+        return f"scared (VIX {vix:.0f})"
+
     for entry in reversed(logs):
-        # Timestamps are now stored in ET (e.g. "2026-05-12T19:43:00-04:00").
-        # Older entries may be naive UTC — detect by offset suffix and label.
+        # ── Parse and translate the entry ─────────────────────────────────────
         raw_ts  = entry.get("timestamp", "")
-        ts_disp = raw_ts[:16].replace("T", " ")
-        # If ET (has -04:00 or -05:00 offset later in string), label "ET";
-        # otherwise older entries were UTC.
-        tz_lbl  = "ET" if ("-04:" in raw_ts or "-05:" in raw_ts) else "UTC"
-        mode    = entry.get("mode", "?")
-        regime  = entry.get("spy_regime", "?")
-        posture = entry.get("posture", "")
-        safety  = entry.get("safety_block", "")
-        vix     = entry.get("vix")
-        signals = entry.get("signals") or []
-        forced  = entry.get("force_closed") or []
-        alerts  = entry.get("alerts") or []
-        news    = entry.get("top_news") or entry.get("news_snapshot") or []
+        try:
+            dt = datetime.fromisoformat(raw_ts) if raw_ts else None
+            ts_disp = dt.strftime("%b %d, %I:%M %p") if dt else raw_ts[:16]
+        except Exception:
+            ts_disp = raw_ts[:16].replace("T", " ")
 
-        lines.append(f"## {ts_disp} {tz_lbl} — {mode} scan")
-        # Header line: regime + extras
-        bits = [f"SPY: **{regime}**"]
-        if posture: bits.append(f"Posture: {posture}")
-        if vix is not None: bits.append(f"VIX: {vix:.1f}")
-        atr  = entry.get("spy_atr_pct")
-        if atr is not None: bits.append(f"SPY ATR%: {atr}")
-        if safety: bits.append(f"SAFETY: {safety}")
-        lines.append(" | ".join(bits))
-        lines.append("")
+        mode_raw = entry.get("mode", "?")
+        mode     = MODE_NAMES.get(mode_raw, mode_raw)
 
-        # Run-context (data sources, gates, account state)
-        in_win   = entry.get("in_window")
-        mkt_open = entry.get("market_open")
-        feed     = entry.get("data_feed")
-        patched  = entry.get("yfinance_patched")
-        sent_bk  = entry.get("sentiment_backend")
-        earn_n   = entry.get("earnings_cache_size")
-        holds    = entry.get("open_positions") or []
-        new_today = entry.get("new_today")
-        ctx = []
-        if in_win is not None:   ctx.append(f"Time window: {'IN' if in_win else 'OUT'}")
-        if mkt_open is not None: ctx.append(f"Market: {'OPEN' if mkt_open else 'CLOSED'}")
-        if feed:                 ctx.append(f"Data feed: {feed.upper()}")
-        if patched:              ctx.append(f"yfinance vol: {patched}")
-        if sent_bk:              ctx.append(f"Sentiment: {sent_bk}")
-        if earn_n is not None:   ctx.append(f"Earnings dates: {earn_n} cached")
+        regime    = entry.get("spy_regime", "?")
+        posture   = entry.get("posture", "")
+        vix       = entry.get("vix")
         macro_b   = entry.get("macro_blackout")
         macro_rsn = entry.get("macro_reason")
-        nxt_macro_ev = entry.get("next_macro_event")
-        if macro_b:
-            ctx.append(f"**MACRO BLACKOUT: {macro_rsn}**")
-        elif nxt_macro_ev:
-            ctx.append(f"Next macro: {nxt_macro_ev['name']} in {nxt_macro_ev['days_away']}d")
-        if ctx:
-            lines.append("**Run context:** " + " · ".join(ctx))
-        if holds:
-            lines.append(f"**Holding** ({len(holds)}): {', '.join(holds)}")
-        if new_today is not None:
-            lines.append(f"**New positions today:** {new_today}")
+        signals   = entry.get("signals") or []
+        forced    = entry.get("force_closed") or []
+        holds     = entry.get("open_positions") or []
+        news      = entry.get("top_news") or entry.get("news_snapshot") or []
+        fs        = entry.get("filter_stats") or {}
+        top3      = entry.get("sectors_top3") or []
+        bot3      = entry.get("sectors_bottom3") or []
+
+        # ── Header ────────────────────────────────────────────────────────────
+        lines.append(f"## {ts_disp} ET — {mode}")
         lines.append("")
 
-        # Sector rotation snapshot
-        top3 = entry.get("sectors_top3") or []
-        bot3 = entry.get("sectors_bottom3") or []
+        # ── Market check (plain English) ──────────────────────────────────────
+        market_bits = []
+        market_bits.append(f"Market is {REGIME_PLAIN.get(regime, regime)}")
+        if vix is not None:
+            market_bits.append(f"Mood: {vix_mood(vix)}")
+        if posture:
+            market_bits.append(POSTURE_PLAIN.get(posture, posture))
+
+        lines.append("**Market check:**")
+        for b in market_bits:
+            lines.append(f"- {b}")
+        if macro_b and macro_rsn:
+            lines.append(f"- ⚠ **Important economic news soon — {macro_rsn}**")
+        if holds:
+            lines.append(f"- Currently holding: {', '.join(holds)}")
+        lines.append("")
+
+        # ── Sector rotation (plain English) ───────────────────────────────────
         if top3 or bot3:
-            lines.append("**Sector rotation:**")
             if top3:
-                lines.append("  - Hottest: " + ", ".join(
-                    f"{s['sector']} ({s['ticker']}, {s['ret_20d']:+.1f}%)" for s in top3))
+                names = ", ".join(f"{s['sector']} ({s['ret_20d']:+.0f}%)" for s in top3)
+                lines.append(f"**Money flowing into:** {names}")
             if bot3:
-                lines.append("  - Coldest: " + ", ".join(
-                    f"{s['sector']} ({s['ticker']}, {s['ret_20d']:+.1f}%)" for s in bot3))
+                names = ", ".join(f"{s['sector']} ({s['ret_20d']:+.0f}%)" for s in bot3)
+                lines.append(f"**Money flowing out of:** {names}")
             lines.append("")
 
-        # Filter funnel (where the 60 symbols got rejected)
-        fs = entry.get("filter_stats") or {}
-        if fs:
-            lines.append("**Scan funnel:**")
-            funnel_order = [
-                ("scanned",            "Scanned"),
-                ("no_data",            "Insufficient data"),
-                ("held",               "Already holding"),
-                ("market_volatile",    "Market too volatile"),
-                ("earnings_blackout",  "Earnings within blackout"),
-                ("failed_filters",    "Failed price/volume/ATR filter"),
-                ("obv_distribution",   "OBV in distribution"),
-                ("no_strategy_signal", "No strategy fired"),
-                ("of_or_sent_reject",  "Order flow / sentiment block"),
-                ("sector_misalign",    "Sector misaligned"),
-                ("passed_all",         "Passed initial gates"),
-                ("low_conviction",     "Low conviction (<4/7 factors)"),
-            ]
-            for k, label in funnel_order:
-                v = fs.get(k)
-                if v is not None and (k == "scanned" or v > 0):
-                    lines.append(f"  - {label}: {v}")
+        # ── What we did with the watchlist ────────────────────────────────────
+        if fs.get("scanned"):
+            lines.append(f"**Looked at {fs['scanned']} stocks:**")
+            for k, label in FUNNEL_PLAIN.items():
+                v = fs.get(k, 0)
+                if v > 0:
+                    lines.append(f"- {label}: {v}")
+            passed = fs.get("passed_all", 0)
+            low_conv = fs.get("low_conviction", 0)
+            ready = passed - low_conv
+            if ready > 0:
+                lines.append(f"- ✓ **{ready} stocks ready to trade**")
             lines.append("")
 
-        # Force-closed catalyst positions (CATALYST mode)
+        # ── Force-closed catalyst positions ───────────────────────────────────
         if forced:
-            lines.append("**Force-closed catalyst positions:**")
+            lines.append("**Closed positions held too long:**")
             for fc in forced:
                 age = fc.get("age_days", "?")
-                lines.append(f"- {fc.get('symbol')}: held {age}d → closed at market")
+                lines.append(f"- {fc.get('symbol')}: held {age} days, closed at market")
             lines.append("")
 
-        # Signals
+        # ── Trades / signals ──────────────────────────────────────────────────
         if not signals:
-            lines.append("_No setups found._")
+            lines.append("**Result:** No trades today.")
         else:
-            lines.append(f"**{len(signals)} signal(s):**")
+            placed = sum(1 for s in signals if "PLACED" in str(s.get("order_status", "")))
+            skipped = len(signals) - placed
+            if placed > 0:
+                lines.append(f"**Result:** ✓ Bought {placed} stock(s)"
+                             + (f", skipped {skipped}" if skipped else "") + ".")
+            else:
+                lines.append(f"**Result:** Found {len(signals)} setup(s), but didn't buy any.")
+            lines.append("")
             for s in signals:
                 sym    = s.get("symbol", "?")
-                strat  = s.get("strategy", "?")
-                conf   = s.get("confidence", "")
-                entry  = s.get("entry", 0)
-                stop   = s.get("stop", 0)
+                entry_p  = s.get("entry", 0)
+                stop_p   = s.get("stop", 0)
                 target = s.get("target") or s.get("2R") or 0
                 shares = s.get("shares", 0)
                 risk   = s.get("risk_$", 0)
                 status = s.get("order_status", "")
-                reason = s.get("reason", "")
                 gap    = s.get("gap_pct")
-                factors = s.get("factors", [])
+                conv   = s.get("conviction")
+                conv_facts = s.get("conv_factors", [])
 
-                # Header line per signal
-                head = f"- **{sym}** ({strat})"
-                if conf != "": head += f" conf={conf}"
-                if gap is not None: head += f" gap={gap:+.1f}%"
-                lines.append(head)
+                head_extras = []
+                if conv is not None:    head_extras.append(f"conviction {conv}/7")
+                if gap is not None:     head_extras.append(f"gap {gap:+.1f}%")
+                head_str = f" ({', '.join(head_extras)})" if head_extras else ""
 
-                # Trade levels
-                lines.append(f"    - Entry ${entry} | Stop ${stop} | Target ${target} | "
-                             f"{shares} shares | Risk ${risk:.2f}")
+                if "PLACED" in str(status):
+                    lines.append(f"- ✓ **Bought {sym}**{head_str}")
+                elif "SKIPPED" in str(status) or "NOT_PLACED" in str(status):
+                    reason = str(status).replace("SKIPPED:", "").replace("NOT_PLACED —", "").strip()
+                    lines.append(f"- ✗ **Skipped {sym}**{head_str} — {reason}")
+                else:
+                    lines.append(f"- **{sym}**{head_str}")
 
-                # Strategy reason or catalyst factors
-                if factors:
-                    lines.append(f"    - Factors: {', '.join(factors)}")
-                if reason:
-                    lines.append(f"    - {reason}")
-                if status:
-                    lines.append(f"    - Order: {status}")
+                lines.append(f"    - Plan: buy at ${entry_p}, sell-stop at ${stop_p}, "
+                             f"target ${target}")
+                lines.append(f"    - {shares} shares, risking ${risk:.0f}")
+                if conv_facts:
+                    lines.append(f"    - Why: {', '.join(conv_facts)}")
             lines.append("")
 
-        # Alerts (NEWS mode danger flags)
-        if alerts:
-            lines.append("**Alerts:**")
-            for a in alerts:
-                lines.append(f"- {a}")
-            lines.append("")
-
-        # Top news (FULL mode)
+        # ── Notable news ──────────────────────────────────────────────────────
         if news:
             top_pos = [n for n in news if n.get("sentiment") == "POSITIVE"][:3]
             top_neg = [n for n in news if n.get("sentiment") == "NEGATIVE"][:3]
             if top_pos or top_neg:
-                lines.append("<details><summary>Notable news</summary>")
+                lines.append("<details><summary>Notable news today</summary>")
                 lines.append("")
                 for n in top_pos:
-                    lines.append(f"- ✓ **{n['symbol']}** ({n['sentiment']}, {n['score']:+d})")
+                    lines.append(f"- ✓ **{n['symbol']}** — strong positive news ({n['score']:+d})")
                     for h in n.get("headlines", [])[:1]:
-                        lines.append(f"    - {h}")
+                        lines.append(f"    - _{h}_")
                 for n in top_neg:
-                    lines.append(f"- ✗ **{n['symbol']}** ({n['sentiment']}, {n['score']:+d})")
+                    lines.append(f"- ✗ **{n['symbol']}** — negative news ({n['score']:+d})")
                     for h in n.get("headlines", [])[:1]:
                         lines.append(f"    - {h}")
                 lines.append("")
@@ -440,7 +448,7 @@ def run_full_scan():
     print(f"  Buying power   : ${buying_power:,.2f}")
     print(f"  Mode           : {'PAPER' if PAPER else 'LIVE'}\n")
 
-    all_symbols = list(set(cfg.WATCHLIST + [cfg.BENCHMARK]))
+    all_symbols = list(set(cfg.WATCHLIST + [cfg.BENCHMARK] + getattr(cfg, "ROTATION_ETFS", [])))
     print(f"  Fetching bars for {len(all_symbols)} symbols...")
     all_bars = fetch_bars(all_symbols, data_client)
 
@@ -834,7 +842,7 @@ def run_news_scan():
     print(f"  Account value : ${account_value:,.2f}")
     print(f"  Buying power  : ${buying_power:,.2f}\n")
 
-    all_symbols = list(set(cfg.WATCHLIST + [cfg.BENCHMARK]))
+    all_symbols = list(set(cfg.WATCHLIST + [cfg.BENCHMARK] + getattr(cfg, "ROTATION_ETFS", [])))
     print(f"  Fetching bars for {len(all_symbols)} symbols...")
     all_bars = fetch_bars(all_symbols, data_client)
 
@@ -1172,7 +1180,7 @@ def run_catalyst_scan():
         print(f"  SAFETY BLOCK — will scan for awareness, no orders\n")
 
     # Fetch daily bars (for gap calc + volume baseline)
-    all_symbols = list(set(cfg.WATCHLIST + [cfg.BENCHMARK]))
+    all_symbols = list(set(cfg.WATCHLIST + [cfg.BENCHMARK] + getattr(cfg, "ROTATION_ETFS", [])))
     print(f"  Fetching daily bars for {len(all_symbols)} symbols...")
     all_bars = fetch_bars(all_symbols, data_client)
 
