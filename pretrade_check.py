@@ -44,11 +44,16 @@ def check_intraday_confirmation(symbol: str, data_client: StockHistoricalDataCli
                                 yesterday_close: float, signal_entry: float,
                                 tolerance_pct: float = 1.0) -> tuple[bool, str, dict]:
     """
-    Confirms today's current price hasn't gapped meaningfully below the level
-    the signal was generated at. Defends against gap-down opens that invalidate
-    yesterday's setup.
+    Confirms today's current price is still close enough to the signal entry
+    that our calculated stop/target levels still make sense. Rejects in BOTH
+    directions:
+      - gap UP: price drifted above entry → we'd be buying extended; R:R broken
+      - gap DOWN: stop already taken out; trade is invalidated
 
-    ok = today's price >= signal_entry * (1 - tolerance_pct/100)
+    Also protects against stale crons: if the workflow fires 2-3 hours late
+    and the market has moved, this catches it automatically.
+
+    ok = |current - signal_entry| / signal_entry <= tolerance_pct
     """
     try:
         req   = StockLatestTradeRequest(symbol_or_symbols=symbol)
@@ -60,14 +65,16 @@ def check_intraday_confirmation(symbol: str, data_client: StockHistoricalDataCli
         if current <= 0:
             return True, "stale price", {}
 
-        floor = signal_entry * (1 - tolerance_pct / 100.0)
         gap_pct = (current - signal_entry) / signal_entry * 100
         info    = {"current": current, "signal_entry": signal_entry,
                    "gap_pct": round(gap_pct, 2)}
 
-        if current < floor:
-            return False, (f"price ${current:.2f} dropped >{tolerance_pct}% "
-                           f"from signal ${signal_entry:.2f} ({gap_pct:+.1f}%)"), info
+        # Bidirectional check
+        if abs(gap_pct) > tolerance_pct:
+            direction = "above" if gap_pct > 0 else "below"
+            return False, (f"price ${current:.2f} is {abs(gap_pct):.1f}% {direction} "
+                           f"signal ${signal_entry:.2f} (max {tolerance_pct}%) — "
+                           f"trade levels no longer valid"), info
         return True, f"price ${current:.2f} ({gap_pct:+.1f}% from signal)", info
     except Exception as e:
         return True, f"intraday check failed: {e}", {}
