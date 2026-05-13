@@ -47,7 +47,9 @@
       "Bash(git -C \"F:/Projects/Canada/New folder\" commit -m \"Position manager: persist original stop in state file so R-math stays correct after trailing above entry\")",
       "Bash(git -C \"F:/Projects/Canada/New folder\" commit -m \"Simplify: 24 files -> 16. Merged screener+pretrade_check -> filters, vix+earnings+macro -> event_gates, risk -> executor, strategy_catalyst -> catalyst_detector. Removed 3 unused test scripts.\")",
       "Bash(git -C \"F:/Projects/Canada/New folder\" commit -m \"Rewrite scan_log.md in plain English: 'Market going up', 'smart money quietly selling', etc. + restore sector rotation data fetch\")",
-      "Bash(git -C \"F:/Projects/Canada/New folder\" commit -m \"Add Raspberry Pi setup script: native cron beats GitHub Actions 2-hour delays\")"
+      "Bash(git -C \"F:/Projects/Canada/New folder\" commit -m \"Add Raspberry Pi setup script: native cron beats GitHub Actions 2-hour delays\")",
+      "Bash(python backtest.py 2024-01-01 2025-05-01)",
+      "Bash(git -C \"F:/Projects/Canada/New folder\" commit -m \"Add backtest module + run 16-month historical test: -5.45% return, 21.7% win rate. System lacks edge as configured. Strategy B and C never fired.\")"
     ]
   }
 }
