@@ -8576,5 +8576,218 @@
         ]
       }
     ]
+  },
+  {
+    "timestamp": "2026-05-14T11:42:09.842206-04:00",
+    "mode": "FULL",
+    "spy_regime": "BULL",
+    "posture": "RISK-OFF",
+    "vix": 17.8700008392334,
+    "spy_atr_pct": 0.99,
+    "in_window": false,
+    "market_open": true,
+    "data_feed": "iex",
+    "yfinance_patched": "0/45",
+    "sentiment_backend": "finbert",
+    "earnings_cache_size": 54,
+    "macro_blackout": false,
+    "macro_reason": "",
+    "next_macro_event": {
+      "name": "FOMC",
+      "datetime": "2026-06-17T14:00:00-04:00",
+      "days_away": 34,
+      "hours_away": 818.3
+    },
+    "open_positions": [
+      "AMZN",
+      "GOOGL"
+    ],
+    "new_today": 0,
+    "filter_stats": {
+      "scanned": 33,
+      "no_data": 0,
+      "held": 2,
+      "market_volatile": 0,
+      "earnings_blackout": 0,
+      "failed_filters": 2,
+      "obv_distribution": 11,
+      "no_strategy_signal": 17,
+      "of_or_sent_reject": 0,
+      "sector_misalign": 0,
+      "passed_all": 1
+    },
+    "sectors_top3": [
+      {
+        "ticker": "USO",
+        "sector": "Crude Oil",
+        "ret_20d": 21.65,
+        "rs": 4.01,
+        "obv": "ACCUMULATION",
+        "above_ema": "True",
+        "score": 43.14
+      },
+      {
+        "ticker": "XLE",
+        "sector": "Energy",
+        "ret_20d": 5.09,
+        "rs": 0.94,
+        "obv": "ACCUMULATION",
+        "above_ema": "True",
+        "score": 12.44
+      },
+      {
+        "ticker": "SLV",
+        "sector": "Silver",
+        "ret_20d": 4.62,
+        "rs": 0.86,
+        "obv": "ACCUMULATION",
+        "above_ema": "True",
+        "score": 11.58
+      }
+    ],
+    "sectors_bottom3": [
+      {
+        "ticker": "XLF",
+        "sector": "Financials",
+        "ret_20d": -2.05,
+        "rs": -0.38,
+        "obv": "DISTRIBUTION",
+        "above_ema": "False",
+        "score": -6.8
+      },
+      {
+        "ticker": "GLD",
+        "sector": "Gold",
+        "ret_20d": -3.5,
+        "rs": -0.65,
+        "obv": "DISTRIBUTION",
+        "above_ema": "True",
+        "score": -7.49
+      },
+      {
+        "ticker": "XLU",
+        "sector": "Utilities",
+        "ret_20d": -3.2,
+        "rs": -0.59,
+        "obv": "DISTRIBUTION",
+        "above_ema": "False",
+        "score": -8.93
+      }
+    ],
+    "signals": [
+      {
+        "symbol": "SLB",
+        "strategy": "A",
+        "confidence": 1.0,
+        "signal": "BUY",
+        "entry": 55.52,
+        "stop": 52.23,
+        "target": 62.1,
+        "shares": 536,
+        "notional": 29758.72,
+        "risk_$": 1763.44,
+        "sentiment": "NEUTRAL",
+        "obv": "ACCUMULATION",
+        "of_score": 0,
+        "sector_score": 999.0,
+        "reason": "Pullback zone [52.87-56.14] | RSI=57.5 | bullish candle",
+        "order_status": "SKIPPED: position/daily cap",
+        "headlines": [
+          "[+] Bernstein Maintains Outperform on SLB, Raises Price Target to $71"
+        ]
+      }
+    ],
+    "top_news": [
+      {
+        "symbol": "NVDA",
+        "sentiment": "POSITIVE",
+        "score": 3,
+        "headlines": [
+          "[~] What Is Going On With Marvell Tech Stock On Thursday?",
+          "[~] Recent Report Shows That Rep. John McGuire Bought Up to $45K Worth of Apple Stoc"
+        ]
+      },
+      {
+        "symbol": "AMD",
+        "sentiment": "POSITIVE",
+        "score": 3,
+        "headlines": [
+          "[~] Arm Holdings Tech Rally Takes Breather As Investors Weigh Supply Chain Risks",
+          "[+] Micron Rallied 90% In A Month \u2014 These 10 Small\u2011Cap Stocks Blew Past It"
+        ]
+      },
+      {
+        "symbol": "ARM",
+        "sentiment": "NEGATIVE",
+        "score": -2,
+        "headlines": [
+          "[~] Arm Holdings Tech Rally Takes Breather As Investors Weigh Supply Chain Risks",
+          "[~] SoftBank Could Turn OpenAI Into Rocket Fuel For Stargate And Robotics"
+        ]
+      },
+      {
+        "symbol": "MU",
+        "sentiment": "NEGATIVE",
+        "score": -2,
+        "headlines": [
+          "[+] Micron Rallied 90% In A Month \u2014 These 10 Small\u2011Cap Stocks Blew Past It",
+          "[~] What's Going On With Sandisk Stock Thursday?"
+        ]
+      },
+      {
+        "symbol": "MRVL",
+        "sentiment": "POSITIVE",
+        "score": 2,
+        "headlines": [
+          "[~] What Is Going On With Marvell Tech Stock On Thursday?",
+          "[~] Market-Moving News for May 14th"
+        ]
+      },
+      {
+        "symbol": "META",
+        "sentiment": "NEGATIVE",
+        "score": -3,
+        "headlines": [
+          "[~] What Is Going On With Marvell Tech Stock On Thursday?",
+          "[-] Trump Library Land Deal Worth $300 Million In Miami Triggers Lawsuit, Allegation"
+        ]
+      },
+      {
+        "symbol": "GOOGL",
+        "sentiment": "POSITIVE",
+        "score": 3,
+        "headlines": [
+          "[~] What Is Going On With Marvell Tech Stock On Thursday?",
+          "[+] Anthropic forms $200 million partnership with the Gates Foundation"
+        ]
+      },
+      {
+        "symbol": "AMZN",
+        "sentiment": "NEUTRAL",
+        "score": 1,
+        "headlines": [
+          "[+] Anthropic forms $200 million partnership with the Gates Foundation",
+          "[~] Alibaba Is Morphing Into A Microsoft\u2011Amazon\u2011Nvidia Mashup As China's AI Wave Acc"
+        ]
+      },
+      {
+        "symbol": "NFLX",
+        "sentiment": "NEGATIVE",
+        "score": -2,
+        "headlines": [
+          "[-] What's Going On With Netflix Stock?",
+          "[~] $1000 Invested In Netflix 20 Years Ago Would Be Worth This Much Today"
+        ]
+      },
+      {
+        "symbol": "MSFT",
+        "sentiment": "NEUTRAL",
+        "score": 1,
+        "headlines": [
+          "[+] Anthropic forms $200 million partnership with the Gates Foundation",
+          "[~] Recent Report Shows That Rep. John McGuire Bought Up to $45K Worth of Apple Stoc"
+        ]
+      }
+    ]
   }
 ]
