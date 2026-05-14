@@ -9223,5 +9223,43 @@
         "score": -3
       }
     ]
+  },
+  {
+    "timestamp": "2026-05-14T13:29:29.601609-04:00",
+    "mode": "CATALYST",
+    "spy_regime": "BULL",
+    "vix": 17.8700008392334,
+    "signals": [
+      {
+        "symbol": "COIN",
+        "strategy": "CATALYST",
+        "signal": "BUY",
+        "factors": [
+          "gap +7.0% in [3.0, 12.0]",
+          "news score +2",
+          "volume pace 2.0x normal",
+          "in upper 77% of day's range"
+        ],
+        "gap_pct": 7.01,
+        "news_score": 2,
+        "earn_days_ago": null,
+        "order_status": "NOT_PLACED \u2014 outside target window or market closed"
+      },
+      {
+        "symbol": "AVGO",
+        "strategy": "CATALYST",
+        "signal": "BUY",
+        "factors": [
+          "gap +3.9% in [3.0, 12.0]",
+          "news score +3",
+          "in upper 71% of day's range"
+        ],
+        "gap_pct": 3.88,
+        "news_score": 3,
+        "earn_days_ago": null,
+        "order_status": "NOT_PLACED \u2014 outside target window or market closed"
+      }
+    ],
+    "force_closed": []
   }
 ]
