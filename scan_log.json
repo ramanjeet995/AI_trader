@@ -9993,5 +9993,240 @@
         "score": -2
       }
     ]
+  },
+  {
+    "timestamp": "2026-05-14T17:41:50.343818-04:00",
+    "mode": "FULL",
+    "spy_regime": "BULL",
+    "posture": "RISK-ON",
+    "vix": 17.8700008392334,
+    "spy_atr_pct": 1.0,
+    "in_window": false,
+    "market_open": false,
+    "data_feed": "iex",
+    "yfinance_patched": "0/45",
+    "sentiment_backend": "finbert",
+    "earnings_cache_size": 54,
+    "macro_blackout": false,
+    "macro_reason": "",
+    "next_macro_event": {
+      "name": "FOMC",
+      "datetime": "2026-06-17T14:00:00-04:00",
+      "days_away": 33,
+      "hours_away": 812.3
+    },
+    "open_positions": [
+      "AMZN",
+      "GOOGL"
+    ],
+    "new_today": 0,
+    "filter_stats": {
+      "scanned": 33,
+      "no_data": 0,
+      "held": 2,
+      "market_volatile": 0,
+      "earnings_blackout": 0,
+      "failed_filters": 2,
+      "obv_distribution": 11,
+      "no_strategy_signal": 16,
+      "of_or_sent_reject": 0,
+      "sector_misalign": 0,
+      "passed_all": 2
+    },
+    "sectors_top3": [
+      {
+        "ticker": "USO",
+        "sector": "Crude Oil",
+        "ret_20d": 23.2,
+        "rs": 4.33,
+        "obv": "ACCUMULATION",
+        "above_ema": "True",
+        "score": 46.3
+      },
+      {
+        "ticker": "XLE",
+        "sector": "Energy",
+        "ret_20d": 5.63,
+        "rs": 1.05,
+        "obv": "ACCUMULATION",
+        "above_ema": "True",
+        "score": 13.51
+      },
+      {
+        "ticker": "UNG",
+        "sector": "Natural Gas",
+        "ret_20d": 2.81,
+        "rs": 0.53,
+        "obv": "ACCUMULATION",
+        "above_ema": "True",
+        "score": 8.25
+      }
+    ],
+    "sectors_bottom3": [
+      {
+        "ticker": "XLF",
+        "sector": "Financials",
+        "ret_20d": -2.2,
+        "rs": -0.41,
+        "obv": "DISTRIBUTION",
+        "above_ema": "False",
+        "score": -7.11
+      },
+      {
+        "ticker": "XLU",
+        "sector": "Utilities",
+        "ret_20d": -2.69,
+        "rs": -0.5,
+        "obv": "DISTRIBUTION",
+        "above_ema": "False",
+        "score": -8.02
+      },
+      {
+        "ticker": "GLD",
+        "sector": "Gold",
+        "ret_20d": -4.19,
+        "rs": -0.78,
+        "obv": "DISTRIBUTION",
+        "above_ema": "False",
+        "score": -10.83
+      }
+    ],
+    "signals": [
+      {
+        "symbol": "MRVL",
+        "strategy": "B",
+        "confidence": 0.35,
+        "signal": "BUY",
+        "entry": 182.55,
+        "stop": 180.47,
+        "target": 186.71,
+        "shares": 163,
+        "notional": 29755.65,
+        "risk_$": 339.04,
+        "sentiment": "POSITIVE",
+        "obv": "ACCUMULATION",
+        "of_score": 3,
+        "sector_score": 999.0,
+        "reason": "Breakout above 182.29 | vol 1.5x prior 20d avg",
+        "order_status": "SKIPPED: position/daily cap",
+        "headlines": [
+          "[+] RBC Capital Maintains Outperform on Marvell Technology, Raises Price Target to $",
+          "[~] What Is Going On With Marvell Tech Stock On Thursday?"
+        ]
+      },
+      {
+        "symbol": "SLB",
+        "strategy": "A",
+        "confidence": 0.88,
+        "signal": "BUY",
+        "entry": 55.76,
+        "stop": 52.23,
+        "target": 62.82,
+        "shares": 535,
+        "notional": 29831.6,
+        "risk_$": 1888.55,
+        "sentiment": "NEUTRAL",
+        "obv": "ACCUMULATION",
+        "of_score": 0,
+        "sector_score": 999.0,
+        "reason": "Pullback zone [52.90-56.17] | RSI=58.4 | bullish candle",
+        "order_status": "SKIPPED: position/daily cap",
+        "headlines": [
+          "No recent news"
+        ]
+      }
+    ],
+    "top_news": [
+      {
+        "symbol": "AVGO",
+        "sentiment": "NEUTRAL",
+        "score": 1,
+        "headlines": [
+          "[~] S&P 500 Hits Record 7,500, Dow Crosses 50,000 As Cisco, Nvidia Power AI Rally: S",
+          "[+] Broadcom Surges On New Data Center Framework: Wall Street Vastly Underestimating"
+        ]
+      },
+      {
+        "symbol": "ARM",
+        "sentiment": "NEGATIVE",
+        "score": -2,
+        "headlines": [
+          "[~] Arm Holdings Tech Rally Takes Breather As Investors Weigh Supply Chain Risks",
+          "[~] SoftBank Could Turn OpenAI Into Rocket Fuel For Stargate And Robotics"
+        ]
+      },
+      {
+        "symbol": "MU",
+        "sentiment": "NEGATIVE",
+        "score": -2,
+        "headlines": [
+          "[+] Micron Rallied 90% In A Month \u2014 These 10 Small\u2011Cap Stocks Blew Past It",
+          "[~] What's Going On With Sandisk Stock Thursday?"
+        ]
+      },
+      {
+        "symbol": "MRVL",
+        "sentiment": "POSITIVE",
+        "score": 3,
+        "headlines": [
+          "[+] RBC Capital Maintains Outperform on Marvell Technology, Raises Price Target to $",
+          "[~] What Is Going On With Marvell Tech Stock On Thursday?"
+        ]
+      },
+      {
+        "symbol": "META",
+        "sentiment": "NEUTRAL",
+        "score": -1,
+        "headlines": [
+          "[~] Trump's Trading Disclosure Shows Activity In Nvidia, AMD, Microsoft, Oracle And ",
+          "[+] Nebius Jumps After Expanding Meta Deal, Lifting Power Targets"
+        ]
+      },
+      {
+        "symbol": "GOOGL",
+        "sentiment": "POSITIVE",
+        "score": 2,
+        "headlines": [
+          "[~] Trump's Trading Disclosure Shows Activity In Nvidia, AMD, Microsoft, Oracle And ",
+          "[-] OpenAI-Apple Relationship Deteriorates As OpenAI Prepares Legal Case"
+        ]
+      },
+      {
+        "symbol": "AMZN",
+        "sentiment": "NEUTRAL",
+        "score": -1,
+        "headlines": [
+          "[~] Trump's Trading Disclosure Shows Activity In Nvidia, AMD, Microsoft, Oracle And ",
+          "[~] Trump Vs. NFL: Netflix Lands More Games After President's Streaming Criticism"
+        ]
+      },
+      {
+        "symbol": "TSLA",
+        "sentiment": "NEUTRAL",
+        "score": -1,
+        "headlines": [
+          "[~] 'SpaceX IPO prospectus could land as soon as next week, sources say'- CNBC",
+          "[~] xAI Rolls Out Grok Build Coding Agent"
+        ]
+      },
+      {
+        "symbol": "NFLX",
+        "sentiment": "NEUTRAL",
+        "score": -1,
+        "headlines": [
+          "[~] Trump's Trading Disclosure Shows Activity In Nvidia, AMD, Microsoft, Oracle And ",
+          "[~] Trump Vs. NFL: Netflix Lands More Games After President's Streaming Criticism"
+        ]
+      },
+      {
+        "symbol": "MSFT",
+        "sentiment": "POSITIVE",
+        "score": 2,
+        "headlines": [
+          "[~] 'OpenAI brings codex to your phone' - Axios",
+          "[-] 'Microsoft starts canceling Claude Code licenses' - The Verge"
+        ]
+      }
+    ]
   }
 ]
