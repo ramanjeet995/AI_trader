@@ -10463,5 +10463,218 @@
         ]
       }
     ]
+  },
+  {
+    "timestamp": "2026-05-15T11:37:24.079565-04:00",
+    "mode": "FULL",
+    "spy_regime": "BULL",
+    "posture": "RISK-ON",
+    "vix": 17.260000228881836,
+    "spy_atr_pct": 1.03,
+    "in_window": false,
+    "market_open": true,
+    "data_feed": "iex",
+    "yfinance_patched": "0/45",
+    "sentiment_backend": "finbert",
+    "earnings_cache_size": 54,
+    "macro_blackout": false,
+    "macro_reason": "",
+    "next_macro_event": {
+      "name": "FOMC",
+      "datetime": "2026-06-17T14:00:00-04:00",
+      "days_away": 33,
+      "hours_away": 794.4
+    },
+    "open_positions": [
+      "AMZN",
+      "GOOGL"
+    ],
+    "new_today": 0,
+    "filter_stats": {
+      "scanned": 33,
+      "no_data": 0,
+      "held": 2,
+      "market_volatile": 0,
+      "earnings_blackout": 0,
+      "failed_filters": 2,
+      "obv_distribution": 10,
+      "no_strategy_signal": 18,
+      "of_or_sent_reject": 0,
+      "sector_misalign": 0,
+      "passed_all": 1
+    },
+    "sectors_top3": [
+      {
+        "ticker": "USO",
+        "sector": "Crude Oil",
+        "ret_20d": 20.92,
+        "rs": 4.53,
+        "obv": "ACCUMULATION",
+        "above_ema": "True",
+        "score": 48.26
+      },
+      {
+        "ticker": "XLE",
+        "sector": "Energy",
+        "ret_20d": 7.07,
+        "rs": 1.53,
+        "obv": "ACCUMULATION",
+        "above_ema": "True",
+        "score": 18.3
+      },
+      {
+        "ticker": "UNG",
+        "sector": "Natural Gas",
+        "ret_20d": 4.15,
+        "rs": 0.9,
+        "obv": "ACCUMULATION",
+        "above_ema": "True",
+        "score": 11.98
+      }
+    ],
+    "sectors_bottom3": [
+      {
+        "ticker": "XLB",
+        "sector": "Materials",
+        "ret_20d": -3.44,
+        "rs": -0.74,
+        "obv": "DISTRIBUTION",
+        "above_ema": "False",
+        "score": -10.43
+      },
+      {
+        "ticker": "XLU",
+        "sector": "Utilities",
+        "ret_20d": -3.5,
+        "rs": -0.76,
+        "obv": "DISTRIBUTION",
+        "above_ema": "False",
+        "score": -10.57
+      },
+      {
+        "ticker": "GLD",
+        "sector": "Gold",
+        "ret_20d": -5.62,
+        "rs": -1.22,
+        "obv": "DISTRIBUTION",
+        "above_ema": "False",
+        "score": -15.15
+      }
+    ],
+    "signals": [
+      {
+        "symbol": "FANG",
+        "strategy": "A",
+        "confidence": 0.97,
+        "signal": "BUY",
+        "entry": 203.53,
+        "stop": 184.84,
+        "target": 240.91,
+        "shares": 132,
+        "notional": 26865.96,
+        "risk_$": 2467.08,
+        "sentiment": "NEUTRAL",
+        "obv": "ACCUMULATION",
+        "of_score": 2,
+        "sector_score": 999.0,
+        "reason": "Pullback zone [191.75-203.61] | RSI=57.8 | bullish candle",
+        "order_status": "SKIPPED: position/daily cap",
+        "headlines": [
+          "No recent news"
+        ]
+      }
+    ],
+    "top_news": [
+      {
+        "symbol": "NVDA",
+        "sentiment": "NEGATIVE",
+        "score": -3,
+        "headlines": [
+          "[-] The Great Chip Letdown: Why The Trump-Xi Summit Just Tanked NVIDIA And Intel",
+          "[-] Rising Oil And Yields Getting In The Way Of Dual Market Manias"
+        ]
+      },
+      {
+        "symbol": "AMD",
+        "sentiment": "NEUTRAL",
+        "score": -1,
+        "headlines": [
+          "[-] Chip Stocks Fall As Inflation Fears Trigger Profit-Taking",
+          "[~] Trump's Trading Disclosure Shows Activity In Nvidia, AMD, Microsoft, Oracle And "
+        ]
+      },
+      {
+        "symbol": "ARM",
+        "sentiment": "NEUTRAL",
+        "score": -1,
+        "headlines": [
+          "[~] The Bond Market Just Fired A Warning Shot At The AI Rally \u2014 Fed Rate Hike Ahead",
+          "[~] Arm Holdings Tech Rally Takes Breather As Investors Weigh Supply Chain Risks"
+        ]
+      },
+      {
+        "symbol": "SMCI",
+        "sentiment": "NEGATIVE",
+        "score": -2,
+        "headlines": [
+          "[-] Chip Stocks Fall As Inflation Fears Trigger Profit-Taking",
+          "[~] Why Is SMCI Stock Surging On Thursday?"
+        ]
+      },
+      {
+        "symbol": "MRVL",
+        "sentiment": "POSITIVE",
+        "score": 2,
+        "headlines": [
+          "[~] The Bond Market Just Fired A Warning Shot At The AI Rally \u2014 Fed Rate Hike Ahead",
+          "[-] Chip Stocks Fall As Inflation Fears Trigger Profit-Taking"
+        ]
+      },
+      {
+        "symbol": "META",
+        "sentiment": "NEGATIVE",
+        "score": -3,
+        "headlines": [
+          "[-] Rising Oil And Yields Getting In The Way Of Dual Market Manias",
+          "[~] Bill Ackman Catches Another Falling Magnificent Seven Knife \u2014 Will It Work This "
+        ]
+      },
+      {
+        "symbol": "GOOGL",
+        "sentiment": "NEGATIVE",
+        "score": -3,
+        "headlines": [
+          "[~] Bill Ackman Catches Another Falling Magnificent Seven Knife \u2014 Will It Work This ",
+          "[~] Bill Ackman Buys Microsoft Stock, Calls It Compellingly Cheap"
+        ]
+      },
+      {
+        "symbol": "AMZN",
+        "sentiment": "NEGATIVE",
+        "score": -3,
+        "headlines": [
+          "[-] Rising Oil And Yields Getting In The Way Of Dual Market Manias",
+          "[~] Bill Ackman Catches Another Falling Magnificent Seven Knife \u2014 Will It Work This "
+        ]
+      },
+      {
+        "symbol": "TSLA",
+        "sentiment": "NEGATIVE",
+        "score": -3,
+        "headlines": [
+          "[-] Rising Oil And Yields Getting In The Way Of Dual Market Manias",
+          "[-] SpaceX IPO Prospectus Could Reportedly Drop Next Week\u2014Here's A Peek Into What In"
+        ]
+      },
+      {
+        "symbol": "NFLX",
+        "sentiment": "NEUTRAL",
+        "score": -1,
+        "headlines": [
+          "[~] Guggenheim Reiterates Buy on Netflix, Maintains $120 Price Target",
+          "[~] Trump's Trading Disclosure Shows Activity In Nvidia, AMD, Microsoft, Oracle And "
+        ]
+      }
+    ]
   }
 ]
