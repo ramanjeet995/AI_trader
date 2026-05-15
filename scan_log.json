@@ -1,104 +1,5 @@
 [
   {
-    "timestamp": "2026-05-09T00:01:01.410509",
-    "mode": "FULL",
-    "spy_regime": "BULL",
-    "posture": "RISK-ON",
-    "signals": [],
-    "top_news": [
-      {
-        "symbol": "AAPL",
-        "sentiment": "POSITIVE",
-        "score": 3,
-        "headlines": [
-          "[~] Trump Could Put These 8 Stocks In The Spotlight For China Trip: Here Are The CEO",
-          "[~] Apple A 'Sleeping Tech Giant' Entering 'Golden Path' In AI Era: Analyst"
-        ]
-      },
-      {
-        "symbol": "MSFT",
-        "sentiment": "POSITIVE",
-        "score": 3,
-        "headlines": [
-          "[~] How Anthropic's Mythos Triggered Trump's AI Regulation U-Turn",
-          "[+] IREN's Next Stop Could Be $100 Thanks To Nvidia Partnership: Bernstein"
-        ]
-      },
-      {
-        "symbol": "NVDA",
-        "sentiment": "POSITIVE",
-        "score": 3,
-        "headlines": [
-          "[~] Tesla China Sales Jump 36% In April As Musk-Led Company Files New Roadster Trade",
-          "[~] SanDisk Did In Months What Nvidia Took 9 Years To Pull Off \u2014 And The Chart Looks"
-        ]
-      },
-      {
-        "symbol": "AMD",
-        "sentiment": "POSITIVE",
-        "score": 3,
-        "headlines": [
-          "[+] Wall Street Pops The Champagne, Main Street Hits A Record Low: This Week In The ",
-          "[~] SanDisk Did In Months What Nvidia Took 9 Years To Pull Off \u2014 And The Chart Looks"
-        ]
-      },
-      {
-        "symbol": "QCOM",
-        "sentiment": "POSITIVE",
-        "score": 3,
-        "headlines": [
-          "[+] Tigress Financial Maintains Buy on Qualcomm, Raises Price Target to $280",
-          "[+] Daiwa Capital Upgrades Qualcomm to Outperform, Raises Price Target to $225"
-        ]
-      },
-      {
-        "symbol": "INTC",
-        "sentiment": "POSITIVE",
-        "score": 3,
-        "headlines": [
-          "[+] Nasdaq Tops 29,000 Records, Micron Soars 13%: Stock Market Today",
-          "[~] Semiconductors Just Hit a 25-Year High and These Three Stocks Still Have Room to"
-        ]
-      },
-      {
-        "symbol": "TSM",
-        "sentiment": "POSITIVE",
-        "score": 3,
-        "headlines": [
-          "[~] Watching Taiwan Semiconductor Manufacturing; Shares Spike Lower After WSJ Report",
-          "[~] EXCLUSIVE: Nvidia Vs. Alphabet: Benzinga Viewers, Prediction Markets Disagree On"
-        ]
-      },
-      {
-        "symbol": "GOOGL",
-        "sentiment": "POSITIVE",
-        "score": 3,
-        "headlines": [
-          "[~] How Anthropic's Mythos Triggered Trump's AI Regulation U-Turn",
-          "[+] 'Google's Isomorphic Labs to Raise Over $2 Billion in New Funding' - Bloomberg"
-        ]
-      },
-      {
-        "symbol": "META",
-        "sentiment": "POSITIVE",
-        "score": 3,
-        "headlines": [
-          "[+] Deal Dispatch: J.M. Smucker Considers Strategic Review, Meta Buys Assured Robot ",
-          "[~] Semiconductors Just Hit a 25-Year High and These Three Stocks Still Have Room to"
-        ]
-      },
-      {
-        "symbol": "AMZN",
-        "sentiment": "POSITIVE",
-        "score": 3,
-        "headlines": [
-          "[~] Coinbase CEO Posts On X \"We experienced an outage at Coinbase last night, which ",
-          "[~] How Anthropic's Mythos Triggered Trump's AI Regulation U-Turn"
-        ]
-      }
-    ]
-  },
-  {
     "timestamp": "2026-05-09T00:31:24.756773",
     "mode": "FULL",
     "spy_regime": "BULL",
@@ -10664,6 +10565,219 @@
         "headlines": [
           "[-] Rising Oil And Yields Getting In The Way Of Dual Market Manias",
           "[-] SpaceX IPO Prospectus Could Reportedly Drop Next Week\u2014Here's A Peek Into What In"
+        ]
+      },
+      {
+        "symbol": "NFLX",
+        "sentiment": "NEUTRAL",
+        "score": -1,
+        "headlines": [
+          "[~] Guggenheim Reiterates Buy on Netflix, Maintains $120 Price Target",
+          "[~] Trump's Trading Disclosure Shows Activity In Nvidia, AMD, Microsoft, Oracle And "
+        ]
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-05-15T12:20:21.561665-04:00",
+    "mode": "FULL",
+    "spy_regime": "BULL",
+    "posture": "RISK-ON",
+    "vix": 17.260000228881836,
+    "spy_atr_pct": 1.04,
+    "in_window": false,
+    "market_open": true,
+    "data_feed": "iex",
+    "yfinance_patched": "0/45",
+    "sentiment_backend": "finbert",
+    "earnings_cache_size": 54,
+    "macro_blackout": false,
+    "macro_reason": "",
+    "next_macro_event": {
+      "name": "FOMC",
+      "datetime": "2026-06-17T14:00:00-04:00",
+      "days_away": 33,
+      "hours_away": 793.7
+    },
+    "open_positions": [
+      "AMZN",
+      "GOOGL"
+    ],
+    "new_today": 0,
+    "filter_stats": {
+      "scanned": 33,
+      "no_data": 0,
+      "held": 2,
+      "market_volatile": 0,
+      "earnings_blackout": 0,
+      "failed_filters": 2,
+      "obv_distribution": 10,
+      "no_strategy_signal": 18,
+      "of_or_sent_reject": 0,
+      "sector_misalign": 0,
+      "passed_all": 1
+    },
+    "sectors_top3": [
+      {
+        "ticker": "USO",
+        "sector": "Crude Oil",
+        "ret_20d": 21.57,
+        "rs": 4.87,
+        "obv": "ACCUMULATION",
+        "above_ema": "True",
+        "score": 51.66
+      },
+      {
+        "ticker": "XLE",
+        "sector": "Energy",
+        "ret_20d": 7.24,
+        "rs": 1.63,
+        "obv": "ACCUMULATION",
+        "above_ema": "True",
+        "score": 19.33
+      },
+      {
+        "ticker": "UNG",
+        "sector": "Natural Gas",
+        "ret_20d": 4.1,
+        "rs": 0.93,
+        "obv": "ACCUMULATION",
+        "above_ema": "True",
+        "score": 12.26
+      }
+    ],
+    "sectors_bottom3": [
+      {
+        "ticker": "XLU",
+        "sector": "Utilities",
+        "ret_20d": -3.41,
+        "rs": -0.77,
+        "obv": "DISTRIBUTION",
+        "above_ema": "False",
+        "score": -10.7
+      },
+      {
+        "ticker": "XLB",
+        "sector": "Materials",
+        "ret_20d": -3.42,
+        "rs": -0.77,
+        "obv": "DISTRIBUTION",
+        "above_ema": "False",
+        "score": -10.71
+      },
+      {
+        "ticker": "GLD",
+        "sector": "Gold",
+        "ret_20d": -5.86,
+        "rs": -1.32,
+        "obv": "DISTRIBUTION",
+        "above_ema": "False",
+        "score": -16.23
+      }
+    ],
+    "signals": [
+      {
+        "symbol": "FANG",
+        "strategy": "A",
+        "confidence": 0.96,
+        "signal": "BUY",
+        "entry": 202.89,
+        "stop": 184.84,
+        "target": 238.99,
+        "shares": 136,
+        "notional": 27593.04,
+        "risk_$": 2454.8,
+        "sentiment": "NEUTRAL",
+        "obv": "ACCUMULATION",
+        "of_score": 2,
+        "sector_score": 999.0,
+        "reason": "Pullback zone [191.69-203.54] | RSI=57.2 | bullish candle",
+        "order_status": "SKIPPED: position/daily cap",
+        "headlines": [
+          "No recent news"
+        ]
+      }
+    ],
+    "top_news": [
+      {
+        "symbol": "NVDA",
+        "sentiment": "NEGATIVE",
+        "score": -3,
+        "headlines": [
+          "[~] Innovative AI-Themed ETF Arrives With New Filing By ProShares",
+          "[-] Why Is AMD Stock Falling Friday?"
+        ]
+      },
+      {
+        "symbol": "AMD",
+        "sentiment": "NEGATIVE",
+        "score": -2,
+        "headlines": [
+          "[-] Why Is AMD Stock Falling Friday?",
+          "[-] Chip Stocks Fall As Inflation Fears Trigger Profit-Taking"
+        ]
+      },
+      {
+        "symbol": "ARM",
+        "sentiment": "NEUTRAL",
+        "score": -1,
+        "headlines": [
+          "[~] The Bond Market Just Fired A Warning Shot At The AI Rally \u2014 Fed Rate Hike Ahead",
+          "[~] Arm Holdings Tech Rally Takes Breather As Investors Weigh Supply Chain Risks"
+        ]
+      },
+      {
+        "symbol": "SMCI",
+        "sentiment": "NEGATIVE",
+        "score": -2,
+        "headlines": [
+          "[-] Chip Stocks Fall As Inflation Fears Trigger Profit-Taking",
+          "[~] Why Is SMCI Stock Surging On Thursday?"
+        ]
+      },
+      {
+        "symbol": "MRVL",
+        "sentiment": "POSITIVE",
+        "score": 2,
+        "headlines": [
+          "[~] The Bond Market Just Fired A Warning Shot At The AI Rally \u2014 Fed Rate Hike Ahead",
+          "[-] Chip Stocks Fall As Inflation Fears Trigger Profit-Taking"
+        ]
+      },
+      {
+        "symbol": "META",
+        "sentiment": "NEGATIVE",
+        "score": -3,
+        "headlines": [
+          "[-] Rising Oil And Yields Getting In The Way Of Dual Market Manias",
+          "[~] Bill Ackman Catches Another Falling Magnificent Seven Knife \u2014 Will It Work This "
+        ]
+      },
+      {
+        "symbol": "GOOGL",
+        "sentiment": "NEGATIVE",
+        "score": -3,
+        "headlines": [
+          "[~] Innovative AI-Themed ETF Arrives With New Filing By ProShares",
+          "[~] Bill Ackman Posts On X \"We sold Google and bought Microsoft. ...\""
+        ]
+      },
+      {
+        "symbol": "AMZN",
+        "sentiment": "NEGATIVE",
+        "score": -3,
+        "headlines": [
+          "[~] OpenAI Announces Preview Rollout Of Personal Finance Integration In ChatGPT Usin",
+          "[-] Rising Oil And Yields Getting In The Way Of Dual Market Manias"
+        ]
+      },
+      {
+        "symbol": "TSLA",
+        "sentiment": "NEGATIVE",
+        "score": -3,
+        "headlines": [
+          "[~] Inside SpaceX's Starship V3 Before Tuesday's Debut: Three Things To Watch",
+          "[-] Rising Oil And Yields Getting In The Way Of Dual Market Manias"
         ]
       },
       {

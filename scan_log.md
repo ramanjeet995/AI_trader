@@ -1,7 +1,46 @@
 # AI Trader — Daily Log
 
 What the robot saw and did each time it woke up. Newest at top.
-_Last updated: May 15, 2026 at 11:37 AM ET_
+_Last updated: May 15, 2026 at 12:20 PM ET_
+
+## May 15, 12:20 PM ET — Main scan
+
+**Market check:**
+- Market is going **up** 📈
+- Mood: calm (VIX 17)
+- Investors confident
+- Currently holding: AMZN, GOOGL
+
+**Money flowing into:** Crude Oil (+22%), Energy (+7%), Natural Gas (+4%)
+**Money flowing out of:** Utilities (-3%), Materials (-3%), Gold (-6%)
+
+**Looked at 33 stocks:**
+- already holding: 2
+- not enough trading volume: 2
+- smart money quietly selling: 10
+- no buy setup today: 18
+- ✓ **1 stocks ready to trade**
+
+**Result:** Found 1 setup(s), but didn't buy any.
+
+- ✗ **Skipped FANG** — position/daily cap
+    - Plan: buy at $202.89, sell-stop at $184.84, target $238.99
+    - 136 shares, risking $2455
+
+<details><summary>Notable news today</summary>
+
+- ✓ **MRVL** — strong positive news (+2)
+    - _[~] The Bond Market Just Fired A Warning Shot At The AI Rally — Fed Rate Hike Ahead_
+- ✗ **NVDA** — negative news (-3)
+    - [~] Innovative AI-Themed ETF Arrives With New Filing By ProShares
+- ✗ **AMD** — negative news (-2)
+    - [-] Why Is AMD Stock Falling Friday?
+- ✗ **SMCI** — negative news (-2)
+    - [-] Chip Stocks Fall As Inflation Fears Trigger Profit-Taking
+
+</details>
+
+---
 
 ## May 15, 11:37 AM ET — Main scan
 
@@ -1386,26 +1425,6 @@ _Last updated: May 15, 2026 at 11:37 AM ET_
     - _[~] How Anthropic's Mythos Triggered Trump's AI Regulation U-Turn_
 - ✓ **AMD** — strong positive news (+3)
     - _[+] Wall Street Pops The Champagne, Main Street Hits A Record Low: This Week In The _
-
-</details>
-
----
-
-## May 09, 12:01 AM ET — Main scan
-
-**Market check:**
-- Market is going **up** 📈
-- Investors confident
-
-**Result:** No trades today.
-<details><summary>Notable news today</summary>
-
-- ✓ **AAPL** — strong positive news (+3)
-    - _[~] Trump Could Put These 8 Stocks In The Spotlight For China Trip: Here Are The CEO_
-- ✓ **MSFT** — strong positive news (+3)
-    - _[~] How Anthropic's Mythos Triggered Trump's AI Regulation U-Turn_
-- ✓ **NVDA** — strong positive news (+3)
-    - _[~] Tesla China Sales Jump 36% In April As Musk-Led Company Files New Roadster Trade_
 
 </details>
 
