@@ -1,104 +1,5 @@
 [
   {
-    "timestamp": "2026-05-09T01:08:35.238936",
-    "mode": "FULL",
-    "spy_regime": "BULL",
-    "posture": "RISK-ON",
-    "signals": [],
-    "top_news": [
-      {
-        "symbol": "AAPL",
-        "sentiment": "POSITIVE",
-        "score": 3,
-        "headlines": [
-          "[~] Trump Could Put These 8 Stocks In The Spotlight For China Trip: Here Are The CEO",
-          "[~] Apple A 'Sleeping Tech Giant' Entering 'Golden Path' In AI Era: Analyst"
-        ]
-      },
-      {
-        "symbol": "MSFT",
-        "sentiment": "POSITIVE",
-        "score": 3,
-        "headlines": [
-          "[~] How Anthropic's Mythos Triggered Trump's AI Regulation U-Turn",
-          "[+] IREN's Next Stop Could Be $100 Thanks To Nvidia Partnership: Bernstein"
-        ]
-      },
-      {
-        "symbol": "AMD",
-        "sentiment": "POSITIVE",
-        "score": 3,
-        "headlines": [
-          "[+] Wall Street Pops The Champagne, Main Street Hits A Record Low: This Week In The ",
-          "[~] SanDisk Did In Months What Nvidia Took 9 Years To Pull Off \u2014 And The Chart Looks"
-        ]
-      },
-      {
-        "symbol": "QCOM",
-        "sentiment": "POSITIVE",
-        "score": 3,
-        "headlines": [
-          "[+] Tigress Financial Maintains Buy on Qualcomm, Raises Price Target to $280",
-          "[+] Daiwa Capital Upgrades Qualcomm to Outperform, Raises Price Target to $225"
-        ]
-      },
-      {
-        "symbol": "TSM",
-        "sentiment": "POSITIVE",
-        "score": 3,
-        "headlines": [
-          "[~] Watching Taiwan Semiconductor Manufacturing; Shares Spike Lower After WSJ Report",
-          "[~] EXCLUSIVE: Nvidia Vs. Alphabet: Benzinga Viewers, Prediction Markets Disagree On"
-        ]
-      },
-      {
-        "symbol": "GOOGL",
-        "sentiment": "POSITIVE",
-        "score": 3,
-        "headlines": [
-          "[~] How Anthropic's Mythos Triggered Trump's AI Regulation U-Turn",
-          "[~] 'Google's Isomorphic Labs to Raise Over $2 Billion in New Funding' - Bloomberg"
-        ]
-      },
-      {
-        "symbol": "AMZN",
-        "sentiment": "POSITIVE",
-        "score": 3,
-        "headlines": [
-          "[~] Coinbase CEO Posts On X \"We experienced an outage at Coinbase last night, which ",
-          "[~] How Anthropic's Mythos Triggered Trump's AI Regulation U-Turn"
-        ]
-      },
-      {
-        "symbol": "QQQ",
-        "sentiment": "POSITIVE",
-        "score": 3,
-        "headlines": [
-          "[~] Jeffrey Gundlach Warns Private Credit Is Echoing Dot-Com, 2008 Tremors",
-          "[+] Nasdaq Tops 29,000 Records, Micron Soars 13%: Stock Market Today"
-        ]
-      },
-      {
-        "symbol": "XLK",
-        "sentiment": "POSITIVE",
-        "score": 3,
-        "headlines": [
-          "[+] Wall Street Pops The Champagne, Main Street Hits A Record Low: This Week In The ",
-          "[+] Nasdaq Tops 29,000 Records, Micron Soars 13%: Stock Market Today"
-        ]
-      },
-      {
-        "symbol": "USO",
-        "sentiment": "POSITIVE",
-        "score": 3,
-        "headlines": [
-          "[+] Fitch Ratings Raises Its Near-Term Oil And European Gas Price Assumptions; Says ",
-          "[~] U.S. Baker Hughes Oil Rig Count +2 To 410; U.S. Baker Hughes NatGas Rig Count -1"
-        ]
-      }
-    ]
-  },
-  {
     "timestamp": "2026-05-11T17:22:24.161478",
     "mode": "NEWS",
     "spy_regime": "BULL",
@@ -10641,6 +10542,241 @@
         "symbol": "QQQ",
         "sentiment": "NEGATIVE",
         "score": -3
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-05-15T17:36:21.127273-04:00",
+    "mode": "FULL",
+    "spy_regime": "BULL",
+    "posture": "RISK-ON",
+    "vix": 17.260000228881836,
+    "spy_atr_pct": 1.04,
+    "in_window": false,
+    "market_open": false,
+    "data_feed": "iex",
+    "yfinance_patched": "0/45",
+    "sentiment_backend": "finbert",
+    "earnings_cache_size": 54,
+    "macro_blackout": false,
+    "macro_reason": "",
+    "next_macro_event": {
+      "name": "FOMC",
+      "datetime": "2026-06-17T14:00:00-04:00",
+      "days_away": 32,
+      "hours_away": 788.4
+    },
+    "open_positions": [
+      "AMZN",
+      "GOOGL",
+      "PLTR"
+    ],
+    "new_today": 1,
+    "filter_stats": {
+      "scanned": 33,
+      "no_data": 0,
+      "held": 3,
+      "market_volatile": 0,
+      "earnings_blackout": 0,
+      "failed_filters": 2,
+      "obv_distribution": 11,
+      "no_strategy_signal": 14,
+      "of_or_sent_reject": 1,
+      "sector_misalign": 0,
+      "passed_all": 2
+    },
+    "sectors_top3": [
+      {
+        "ticker": "USO",
+        "sector": "Crude Oil",
+        "ret_20d": 22.15,
+        "rs": 5.18,
+        "obv": "ACCUMULATION",
+        "above_ema": "True",
+        "score": 54.79
+      },
+      {
+        "ticker": "XLE",
+        "sector": "Energy",
+        "ret_20d": 7.94,
+        "rs": 1.86,
+        "obv": "ACCUMULATION",
+        "above_ema": "True",
+        "score": 21.58
+      },
+      {
+        "ticker": "UNG",
+        "sector": "Natural Gas",
+        "ret_20d": 4.47,
+        "rs": 1.05,
+        "obv": "ACCUMULATION",
+        "above_ema": "True",
+        "score": 13.46
+      }
+    ],
+    "sectors_bottom3": [
+      {
+        "ticker": "XLB",
+        "sector": "Materials",
+        "ret_20d": -3.7,
+        "rs": -0.87,
+        "obv": "DISTRIBUTION",
+        "above_ema": "False",
+        "score": -11.66
+      },
+      {
+        "ticker": "XLU",
+        "sector": "Utilities",
+        "ret_20d": -4.08,
+        "rs": -0.95,
+        "obv": "DISTRIBUTION",
+        "above_ema": "False",
+        "score": -12.54
+      },
+      {
+        "ticker": "GLD",
+        "sector": "Gold",
+        "ret_20d": -5.59,
+        "rs": -1.31,
+        "obv": "DISTRIBUTION",
+        "above_ema": "False",
+        "score": -16.08
+      }
+    ],
+    "signals": [
+      {
+        "symbol": "FANG",
+        "strategy": "A",
+        "confidence": 0.98,
+        "signal": "BUY",
+        "entry": 203.43,
+        "stop": 184.84,
+        "target": 240.61,
+        "shares": 132,
+        "notional": 26852.76,
+        "risk_$": 2453.88,
+        "sentiment": "NEUTRAL",
+        "obv": "ACCUMULATION",
+        "of_score": 2,
+        "sector_score": 999.0,
+        "reason": "Pullback zone [191.74-203.60] | RSI=57.7 | bullish candle",
+        "order_status": "SKIPPED: position/daily cap",
+        "headlines": [
+          "No recent news"
+        ]
+      },
+      {
+        "symbol": "OXY",
+        "strategy": "B",
+        "confidence": 0.35,
+        "signal": "BUY",
+        "entry": 59.62,
+        "stop": 56.7,
+        "target": 65.46,
+        "shares": 494,
+        "notional": 29452.28,
+        "risk_$": 1442.48,
+        "sentiment": "NEUTRAL",
+        "obv": "ACCUMULATION",
+        "of_score": 3,
+        "sector_score": 999.0,
+        "reason": "Breakout above 57.27 | vol 1.3x prior 20d avg",
+        "order_status": "SKIPPED: position/daily cap",
+        "headlines": [
+          "[~] Trump's Trading Disclosure Shows Activity In Nvidia, AMD, Microsoft, Oracle And "
+        ]
+      }
+    ],
+    "top_news": [
+      {
+        "symbol": "NVDA",
+        "sentiment": "NEGATIVE",
+        "score": -3,
+        "headlines": [
+          "[~] Elliott Investment Management Sells Stake In BILL Holdings; FS KKR Capital; NVID",
+          "[~] Third Point Decreases Stake In Amazon To 1,940,000 Shares; APi Group To 2,030,00"
+        ]
+      },
+      {
+        "symbol": "AVGO",
+        "sentiment": "POSITIVE",
+        "score": 2,
+        "headlines": [
+          "[~] Third Point Takes New Stake In Alphabet Inc With 175,000 Shares; ASML With 12,00",
+          "[~] Tiger Global Management Increases Stake In Applied Materials From 897,500 To 1,6"
+        ]
+      },
+      {
+        "symbol": "AMD",
+        "sentiment": "NEGATIVE",
+        "score": -3,
+        "headlines": [
+          "[-] Appaloosa Management Decreases Stake In Advanced Micro Devices To 221,400 Shares",
+          "[~] 10 Information Technology Stocks Whale Activity In Today's Session"
+        ]
+      },
+      {
+        "symbol": "ARM",
+        "sentiment": "NEUTRAL",
+        "score": -1,
+        "headlines": [
+          "[~] The Bond Market Just Fired A Warning Shot At The AI Rally \u2014 Fed Rate Hike Ahead",
+          "[~] Arm Holdings Tech Rally Takes Breather As Investors Weigh Supply Chain Risks"
+        ]
+      },
+      {
+        "symbol": "MU",
+        "sentiment": "NEUTRAL",
+        "score": -1,
+        "headlines": [
+          "[-] Appaloosa Management Decreases Stake In Lam Research Decreases Stake To 382,500 ",
+          "[-] Nasdaq 100 Drops, Intel Crashes 7% On Rate-Hike Panic: Stock Market Today"
+        ]
+      },
+      {
+        "symbol": "SMCI",
+        "sentiment": "NEGATIVE",
+        "score": -2,
+        "headlines": [
+          "[-] Chip Stocks Fall As Inflation Fears Trigger Profit-Taking",
+          "[~] Why Is SMCI Stock Surging On Thursday?"
+        ]
+      },
+      {
+        "symbol": "MRVL",
+        "sentiment": "POSITIVE",
+        "score": 3,
+        "headlines": [
+          "[+] TD Cowen Maintains Hold on Marvell Technology, Raises Price Target to $190",
+          "[~] Watching Marvell Technology; Hearing IBD Swingtrader Sells Stock"
+        ]
+      },
+      {
+        "symbol": "META",
+        "sentiment": "NEGATIVE",
+        "score": -3,
+        "headlines": [
+          "[~] Third Point Takes New Stake In Alphabet Inc With 175,000 Shares; ASML With 12,00",
+          "[~] ValueAct Capital Decreases Stake In Amazon To 2,884,600 Shares; BlackRock To 546"
+        ]
+      },
+      {
+        "symbol": "GOOGL",
+        "sentiment": "NEGATIVE",
+        "score": -3,
+        "headlines": [
+          "[~] Third Point Takes New Stake In Alphabet Inc With 175,000 Shares; ASML With 12,00",
+          "[~] Berkshire Hathaway Increases Stake In Alphabet Inc. To 57,835,013 Shares; Lennar"
+        ]
+      },
+      {
+        "symbol": "AMZN",
+        "sentiment": "NEGATIVE",
+        "score": -2,
+        "headlines": [
+          "[~] ValueAct Capital Decreases Stake In Amazon To 2,884,600 Shares; BlackRock To 546",
+          "[~] Berkshire Hathaway Sells Position In Amazon; Atlanta Braves Holdings; Charter Co"
+        ]
       }
     ]
   }

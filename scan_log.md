@@ -1,7 +1,52 @@
 # AI Trader — Daily Log
 
 What the robot saw and did each time it woke up. Newest at top.
-_Last updated: May 15, 2026 at 04:46 PM ET_
+_Last updated: May 15, 2026 at 05:36 PM ET_
+
+## May 15, 05:36 PM ET — Main scan
+
+**Market check:**
+- Market is going **up** 📈
+- Mood: calm (VIX 17)
+- Investors confident
+- Currently holding: AMZN, GOOGL, PLTR
+
+**Money flowing into:** Crude Oil (+22%), Energy (+8%), Natural Gas (+4%)
+**Money flowing out of:** Materials (-4%), Utilities (-4%), Gold (-6%)
+
+**Looked at 33 stocks:**
+- already holding: 3
+- not enough trading volume: 2
+- smart money quietly selling: 11
+- no buy setup today: 14
+- order flow or news was negative: 1
+- ✓ **2 stocks ready to trade**
+
+**Result:** Found 2 setup(s), but didn't buy any.
+
+- ✗ **Skipped FANG** — position/daily cap
+    - Plan: buy at $203.43, sell-stop at $184.84, target $240.61
+    - 132 shares, risking $2454
+- ✗ **Skipped OXY** — position/daily cap
+    - Plan: buy at $59.62, sell-stop at $56.7, target $65.46
+    - 494 shares, risking $1442
+
+<details><summary>Notable news today</summary>
+
+- ✓ **AVGO** — strong positive news (+2)
+    - _[~] Third Point Takes New Stake In Alphabet Inc With 175,000 Shares; ASML With 12,00_
+- ✓ **MRVL** — strong positive news (+3)
+    - _[+] TD Cowen Maintains Hold on Marvell Technology, Raises Price Target to $190_
+- ✗ **NVDA** — negative news (-3)
+    - [~] Elliott Investment Management Sells Stake In BILL Holdings; FS KKR Capital; NVID
+- ✗ **AMD** — negative news (-3)
+    - [-] Appaloosa Management Decreases Stake In Advanced Micro Devices To 221,400 Shares
+- ✗ **SMCI** — negative news (-2)
+    - [-] Chip Stocks Fall As Inflation Fears Trigger Profit-Taking
+
+</details>
+
+---
 
 ## May 15, 04:46 PM ET — News check
 
@@ -1383,26 +1428,6 @@ _Last updated: May 15, 2026 at 04:46 PM ET_
 - ✗ **META** — negative news (-2)
 - ✗ **AMZN** — negative news (-3)
 - ✗ **TSLA** — negative news (-3)
-
-</details>
-
----
-
-## May 09, 01:08 AM ET — Main scan
-
-**Market check:**
-- Market is going **up** 📈
-- Investors confident
-
-**Result:** No trades today.
-<details><summary>Notable news today</summary>
-
-- ✓ **AAPL** — strong positive news (+3)
-    - _[~] Trump Could Put These 8 Stocks In The Spotlight For China Trip: Here Are The CEO_
-- ✓ **MSFT** — strong positive news (+3)
-    - _[~] How Anthropic's Mythos Triggered Trump's AI Regulation U-Turn_
-- ✓ **AMD** — strong positive news (+3)
-    - _[+] Wall Street Pops The Champagne, Main Street Hits A Record Low: This Week In The _
 
 </details>
 
