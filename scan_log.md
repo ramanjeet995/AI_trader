@@ -1,7 +1,15 @@
 # AI Trader — Daily Log
 
 What the robot saw and did each time it woke up. Newest at top.
-_Last updated: May 15, 2026 at 12:47 PM ET_
+_Last updated: May 15, 2026 at 01:17 PM ET_
+
+## May 15, 01:17 PM ET — Big-news check
+
+**Market check:**
+- Market is going **up** 📈
+
+**Result:** No trades today.
+---
 
 ## May 15, 12:47 PM ET — News check
 
@@ -1398,22 +1406,6 @@ _Last updated: May 15, 2026 at 12:47 PM ET_
     - _[~] How Anthropic's Mythos Triggered Trump's AI Regulation U-Turn_
 - ✓ **AMD** — strong positive news (+3)
     - _[+] Wall Street Pops The Champagne, Main Street Hits A Record Low: This Week In The _
-
-</details>
-
----
-
-## May 09, 12:32 AM ET — News check
-
-**Market check:**
-- Market is going **up** 📈
-
-**Result:** No trades today.
-<details><summary>Notable news today</summary>
-
-- ✓ **AMD** — strong positive news (+3)
-- ✓ **QCOM** — strong positive news (+3)
-- ✓ **QQQ** — strong positive news (+3)
 
 </details>
 
