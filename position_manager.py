@@ -11,11 +11,13 @@ Persists original (entry, stop) per symbol in position_state.json so we can
 correctly compute R-multiples even after we've trailed the stop above entry.
 
 Rules (R-multiple based on profit since entry):
-  R < 2.0        : do nothing — give trade room to develop
-  2.0 <= R < 3.0 : move stop to break-even (lock in winning trade)
+  R < 1.0        : do nothing — give trade room to develop
+  1.0 <= R < 2.0 : move stop to break-even (was +2R, but 52% of trades never
+                   reached +2R — moving to +1R prevents green-to-red reversals)
+  2.0 <= R < 3.0 : trail stop to entry + 0.5R (lock in half-R profit)
   3.0 <= R < 5.0 : trail stop to entry + 1R (lock in +1R profit)
-  R >= 5.0       : trail stop to max(current - 2*ATR, entry + 2R)
-                   → captures trend continuation while protecting gains
+  R >= 5.0       : trail stop to max(current - 1.5*ATR, entry + 2R)
+                   → tighter ATR trail (was 2x) for trend continuation
 
 If price closed below SMA20 on the daily, tighten stop hard regardless of R
 (trend break warning).
@@ -142,9 +144,10 @@ def manage_positions(trade_client, data_client, spy_regime: str = "", cfg=None) 
     Returns summary dict for logging.
     """
     summary = {
-        "reviewed": 0, "moved_to_breakeven": 0, "trailed_1R": 0,
-        "trailed_atr": 0, "regime_closed": 0, "no_stop": 0,
-        "no_change": 0, "errors": 0, "details": [],
+        "reviewed": 0, "moved_to_breakeven": 0, "trailed_half_R": 0,
+        "trailed_1R": 0, "trailed_atr": 0, "regime_closed": 0,
+        "time_stopped": 0, "no_stop": 0, "no_change": 0, "errors": 0,
+        "details": [],
     }
 
     try:
@@ -170,9 +173,11 @@ def manage_positions(trade_client, data_client, spy_regime: str = "", cfg=None) 
             summary["reviewed"] += 1
             action = result.get("action", "")
             if   action == "breakeven":   summary["moved_to_breakeven"] += 1
+            elif action == "trail_half_R": summary["trailed_half_R"] += 1
             elif action == "trail_1R":    summary["trailed_1R"] += 1
             elif action == "trail_atr":   summary["trailed_atr"] += 1
             elif action == "regime_exit": summary["regime_closed"] += 1
+            elif action == "time_stop":   summary["time_stopped"] += 1
             elif action == "no_stop":     summary["no_stop"] += 1
             elif action in ("hold", "no_change_needed"): summary["no_change"] += 1
             summary["details"].append(result)
@@ -182,6 +187,9 @@ def manage_positions(trade_client, data_client, spy_regime: str = "", cfg=None) 
 
     _save_state(state)
     return summary
+
+
+MAX_HOLD_DAYS = 20   # Force-close positions held longer than this (dead money)
 
 
 def _manage_one(position, trade_client, data_client, spy_regime: str, cfg, state: dict = None) -> dict:
@@ -200,6 +208,20 @@ def _manage_one(position, trade_client, data_client, spy_regime: str, cfg, state
                     "reason": "SPY flipped to BEAR — closing all longs"}
         except Exception as e:
             return {"symbol": symbol, "action": "regime_exit_failed", "error": str(e)}
+
+    # ─── Time stop — close positions that go nowhere in MAX_HOLD_DAYS ────────
+    saved = state.get(symbol)
+    if saved and saved.get("first_seen"):
+        try:
+            first_seen = datetime.fromisoformat(saved["first_seen"])
+            hold_days = (datetime.utcnow() - first_seen).days
+            if hold_days >= MAX_HOLD_DAYS:
+                trade_client.close_position(symbol)
+                return {"symbol": symbol, "action": "time_stop",
+                        "reason": f"held {hold_days} days — force-closing dead money",
+                        "hold_days": hold_days}
+        except Exception:
+            pass   # If we can't parse date, skip time stop — don't block normal management
 
     # ─── Get current price and protective stop order ─────────────────────────
     current = _get_current_price(symbol, data_client)
@@ -233,16 +255,23 @@ def _manage_one(position, trade_client, data_client, spy_regime: str, cfg, state
     action   = "hold"
     note     = ""
 
-    if r_multiple < 2.0:
+    if r_multiple < 1.0:
         return {"symbol": symbol, "action": "hold",
                 "r_multiple": round(r_multiple, 2),
                 "current": round(current, 2), "current_stop": round(current_stop, 2)}
 
-    elif 2.0 <= r_multiple < 3.0:
-        # Move stop to break-even (with tiny buffer above entry to cover slippage/fees)
+    elif 1.0 <= r_multiple < 2.0:
+        # Break-even at +1R (was +2R). Most trades never reached +2R before
+        # reversing — this stops the bleed from green-to-red.
         new_stop = round(entry * 1.001, 2)
         action   = "breakeven"
-        note     = "moved to break-even"
+        note     = "moved to break-even at +1R"
+
+    elif 2.0 <= r_multiple < 3.0:
+        # Lock in half-R (new tier — preserves some profit while giving room)
+        new_stop = round(entry + stop_distance * 0.5, 2)
+        action   = "trail_half_R"
+        note     = "trailed to +0.5R floor"
 
     elif 3.0 <= r_multiple < 5.0:
         # Trail at entry + 1R (locks in +1R profit minimum)
@@ -251,11 +280,11 @@ def _manage_one(position, trade_client, data_client, spy_regime: str, cfg, state
         note     = "trailed to +1R floor"
 
     else:  # r_multiple >= 5.0
-        # Aggressive trail: max(current - 2*ATR, entry + 2R)
+        # Tighter ATR trail: 1.5x ATR (was 2x) — captures more of the move
         atr, sma20, latest_close = _get_atr_and_sma20(symbol, data_client)
         candidates = [current_stop, entry + stop_distance * 2.0]
         if atr is not None:
-            candidates.append(current - 2 * atr)
+            candidates.append(current - 1.5 * atr)
         # Trend break warning: if today closed below SMA20, tighten harder
         if sma20 is not None and latest_close is not None and latest_close < sma20:
             # Tighten to recent price minus 1*ATR if ATR known, else trail at +2R

@@ -20,6 +20,7 @@ from alpaca.data.historical.news import NewsClient
 from alpaca.data.requests import NewsRequest
 
 import config as cfg
+from analyst_ratings import analyst_score as _analyst_score
 
 
 # ── FinBERT backend (lazy-loaded) ─────────────────────────────────────────────
@@ -142,6 +143,12 @@ def _score_text(text: str) -> int:
 def get_sentiment(symbol: str, news_client: NewsClient, days: int = 3) -> tuple[int, list[str]]:
     """
     Fetch last `days` days of news for symbol, score each headline.
+
+    Score has two components:
+      1. Base sentiment (FinBERT or keyword): clamped -3 to +3
+      2. Analyst rating bonus (upgrades/downgrades weighted by firm tier): -5 to +5
+
+    Combined score clamped to -5 / +5.
     Returns (clamped_score, list_of_headline_summaries).
     """
     start = datetime.utcnow() - timedelta(days=days)
@@ -160,26 +167,40 @@ def get_sentiment(symbol: str, news_client: NewsClient, days: int = 3) -> tuple[
     if not articles:
         return 0, ["No recent news"]
 
-    total   = 0
-    details = []
-    pipe    = _get_finbert()   # None if disabled or load failed
+    base_total = 0
+    details    = []
+    raw_headlines = []
+    pipe       = _get_finbert()   # None if disabled or load failed
 
     for article in articles:
         headline = article.get("headline", "") if isinstance(article, dict) else (article.headline or "")
         if not headline:
             continue
-        score    = _score_with_finbert(headline, pipe) if pipe else _score_text(headline)
-        total   += score
-        icon     = "+" if score > 0 else ("-" if score < 0 else "~")
+        raw_headlines.append(headline)
+        score      = _score_with_finbert(headline, pipe) if pipe else _score_text(headline)
+        base_total += score
+        icon        = "+" if score > 0 else ("-" if score < 0 else "~")
         details.append(f"[{icon}] {headline[:80]}")
 
-    clamped = max(-3, min(3, total))
-    return clamped, details
+    base_clamped = max(-3, min(3, base_total))
+
+    # Analyst rating bonus — upgrades/downgrades from reputable firms
+    analyst_bonus, analyst_details = _analyst_score(raw_headlines)
+    if analyst_details:
+        for ad in analyst_details:
+            details.append(f"[ANALYST] {ad}")
+
+    combined = max(-5, min(5, base_clamped + analyst_bonus))
+    return combined, details
 
 
 def sentiment_label(score: int) -> str:
+    if score >= 4:
+        return "STRONG_POSITIVE"
     if score >= 2:
         return "POSITIVE"
+    if score <= -4:
+        return "STRONG_NEGATIVE"
     if score <= -2:
         return "NEGATIVE"
     return "NEUTRAL"

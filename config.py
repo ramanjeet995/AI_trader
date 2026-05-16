@@ -76,6 +76,7 @@ CONVICTION_RISK_TIERS = {
     5: {"risk_mult": 1.0,  "target_R": 6.0},   # solid — 2% risk, 6R stretch
     6: {"risk_mult": 1.25, "target_R": 8.0},   # strong — 2.5% risk, 8R stretch
     7: {"risk_mult": 1.5,  "target_R": 10.0},  # exceptional — 3% risk, 10R stretch
+    8: {"risk_mult": 1.5,  "target_R": 10.0},  # perfect storm — same as 7 (don't over-lever)
 }
 
 # ── Data feed ────────────────────────────────────────────────────────────────
@@ -153,6 +154,27 @@ TICKER_SECTOR = {
     # Broad index
     "SPY": "Index", "IWM": "Index", "DIA": "Index",
 }
+
+# ── Options trading (hybrid mode) ────────────────────────────────────────────
+# Strategy B (breakout) and Catalyst mode use call options for leverage.
+# Strategy A (pullback) stays as stocks — needs time, theta kills options.
+OPTIONS_ENABLED            = False    # master switch (disabled — stocks compound better at $5k)
+OPTIONS_STRATEGIES         = ["B"]    # which strategies route to options
+OPTIONS_USE_FOR_CATALYST   = True     # catalyst mode uses options too
+OPTIONS_MAX_CONTRACTS      = 2        # hard cap per trade on $5k account
+OPTIONS_EXPIRY_MIN_DAYS    = 10       # min DTE for breakout options
+OPTIONS_EXPIRY_MAX_DAYS    = 45       # max DTE — wide enough to always catch a monthly expiry
+OPTIONS_CATALYST_EXPIRY_MIN = 3       # min DTE for catalyst (shorter hold)
+OPTIONS_CATALYST_EXPIRY_MAX = 21      # max DTE for catalyst — catches nearest weekly or monthly
+OPTIONS_TARGET_DELTA       = 0.60     # target delta for breakout calls
+OPTIONS_CATALYST_DELTA     = 0.70     # higher delta for catalyst (less time)
+OPTIONS_MIN_OPEN_INTEREST  = 50       # skip illiquid contracts (weeklies have lower OI)
+OPTIONS_MAX_SPREAD_PCT     = 0.10     # max bid-ask spread as % of mid price
+OPTIONS_RISK_PCT           = 0.05     # 5% of account per option trade (higher than stock 2% because max loss = premium)
+OPTIONS_PREMIUM_STOP_PCT   = 0.50     # sell if premium drops to 50% of entry
+OPTIONS_BREAKOUT_TARGET_PCT = 1.00    # sell at 100% gain for breakouts
+OPTIONS_CATALYST_TARGET_PCT = 0.80    # sell at 80% gain for catalyst
+OPTIONS_EXPIRY_WARN_DAYS   = 5        # exit before this many DTE (gamma risk)
 
 # ── Strategy A thresholds (Trend Pullback) ───────────────────────────────────
 # Momentum stocks pull back shallower than slow large-caps. RSI 50-65 catches

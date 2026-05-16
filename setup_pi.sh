@@ -93,7 +93,7 @@ cat > "$INSTALL_DIR/push_log.sh" << 'EOF'
 #!/bin/bash
 # Pushes scan log updates to GitHub after each run.
 cd "$(dirname "$0")"
-git add scan_log.json scan_log.md earnings_cache.json position_state.json 2>/dev/null || true
+git add scan_log.json scan_log.md earnings_cache.json position_state.json discovered_watchlist.json 2>/dev/null || true
 git diff --staged --quiet 2>/dev/null && exit 0
 git -c user.name="AI Trader Pi" -c user.email="pi@local" commit -m "scan log update [skip ci]" >/dev/null 2>&1
 git push >/dev/null 2>&1

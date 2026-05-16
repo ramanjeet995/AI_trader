@@ -52,8 +52,11 @@ from executor import (execute, get_open_positions, get_buying_power,
 import catalyst_detector
 import conviction
 import position_manager
+import options_executor
 from notifier import send_no_setup, send_signals, send
 import volume_source
+import discovery
+from analyst_ratings import analyst_score as get_analyst_score
 
 load_dotenv(Path(__file__).parent / ".env")
 
@@ -183,6 +186,8 @@ def _save_human_log(logs: list):
         fs        = entry.get("filter_stats") or {}
         top3      = entry.get("sectors_top3") or []
         bot3      = entry.get("sectors_bottom3") or []
+        disc_new  = entry.get("discovered") or []
+        disc_all  = entry.get("discovered_watchlist") or []
 
         # ── Header ────────────────────────────────────────────────────────────
         lines.append(f"## {ts_disp} ET — {mode}")
@@ -213,6 +218,13 @@ def _save_human_log(logs: list):
             if bot3:
                 names = ", ".join(f"{s['sector']} ({s['ret_20d']:+.0f}%)" for s in bot3)
                 lines.append(f"**Money flowing out of:** {names}")
+            lines.append("")
+
+        # ── Hot stock discovery ────────────────────────────────────────────────
+        if disc_new:
+            lines.append(f"**Hot stocks discovered today:** {', '.join(disc_new)}")
+            if disc_all:
+                lines.append(f"**Full discovery list ({len(disc_all)}):** {', '.join(disc_all)}")
             lines.append("")
 
         # ── What we did with the watchlist ────────────────────────────────────
@@ -400,29 +412,68 @@ def _count_sectors(symbols) -> dict[str, int]:
     return counts
 
 
+def _load_option_state() -> dict:
+    """Load persistent option position state from disk."""
+    state_file = Path(__file__).parent / "option_position_state.json"
+    if state_file.exists():
+        try:
+            return json.loads(state_file.read_text())
+        except Exception:
+            pass
+    return {}
+
+
+def _save_option_state(state: dict):
+    state_file = Path(__file__).parent / "option_position_state.json"
+    state_file.write_text(json.dumps(state, indent=2, default=str))
+
+
 def _manage_positions_and_print(trade_client, data_client, spy_regime: str) -> dict:
     """Run position manager and print a one-line summary per position."""
     pm_summary = position_manager.manage_positions(
         trade_client, data_client, spy_regime=spy_regime, cfg=cfg)
-    if pm_summary["reviewed"] == 0:
+    if pm_summary["reviewed"] == 0 and not cfg.OPTIONS_ENABLED:
         return pm_summary
-    print(f"  Position manager: reviewed {pm_summary['reviewed']} positions  "
-          f"(break-even: {pm_summary['moved_to_breakeven']}, "
-          f"trailed-1R: {pm_summary['trailed_1R']}, "
-          f"trailed-ATR: {pm_summary['trailed_atr']}, "
-          f"regime-exit: {pm_summary['regime_closed']})")
-    for d in pm_summary.get("details", []):
-        action = d.get("action", "")
-        if action in ("hold", "no_change_needed"):
-            continue
-        sym = d.get("symbol", "?")
-        if action in ("breakeven", "trail_1R", "trail_atr"):
-            print(f"     {sym}: {action} R={d.get('r_multiple','?')}  "
-                  f"stop {d.get('old_stop','?')} -> {d.get('new_stop','?')}")
-        elif action == "regime_exit":
-            print(f"     {sym}: CLOSED — {d.get('reason','')}")
-        elif action in ("no_stop", "replace_failed", "error"):
-            print(f"     {sym}: {action.upper()} — {d.get('error') or d.get('reason','')}")
+    if pm_summary["reviewed"] > 0:
+        print(f"  Position manager: reviewed {pm_summary['reviewed']} stock positions  "
+              f"(break-even: {pm_summary['moved_to_breakeven']}, "
+              f"trail-0.5R: {pm_summary.get('trailed_half_R', 0)}, "
+              f"trailed-1R: {pm_summary['trailed_1R']}, "
+              f"trailed-ATR: {pm_summary['trailed_atr']}, "
+              f"time-stop: {pm_summary.get('time_stopped', 0)}, "
+              f"regime-exit: {pm_summary['regime_closed']})")
+        for d in pm_summary.get("details", []):
+            action = d.get("action", "")
+            if action in ("hold", "no_change_needed"):
+                continue
+            sym = d.get("symbol", "?")
+            if action in ("breakeven", "trail_half_R", "trail_1R", "trail_atr"):
+                print(f"     {sym}: {action} R={d.get('r_multiple','?')}  "
+                      f"stop {d.get('old_stop','?')} -> {d.get('new_stop','?')}")
+            elif action == "regime_exit":
+                print(f"     {sym}: CLOSED — {d.get('reason','')}")
+            elif action == "time_stop":
+                print(f"     {sym}: TIME STOP — {d.get('reason','')}")
+            elif action in ("no_stop", "replace_failed", "error"):
+                print(f"     {sym}: {action.upper()} — {d.get('error') or d.get('reason','')}")
+
+    # Options position management
+    if cfg.OPTIONS_ENABLED:
+        opt_state = _load_option_state()
+        if opt_state:
+            opt_summary = options_executor.manage_option_positions(
+                trade_client, opt_state)
+            _save_option_state(opt_state)
+            if opt_summary["reviewed"] > 0:
+                print(f"  Options manager: reviewed {opt_summary['reviewed']} option positions  "
+                      f"(exited: {opt_summary['exited']}, held: {opt_summary['held']})")
+                for d in opt_summary.get("details", []):
+                    sym = d.get("symbol", "?")
+                    if d.get("action") == "closed":
+                        print(f"     {sym}: CLOSED — {d.get('reason','')}  P&L: {d.get('pnl_pct','')}")
+                    elif d.get("action") == "hold":
+                        print(f"     {sym}: holding  P&L: {d.get('pnl_pct','')}  DTE: {d.get('dte','')}")
+
     return pm_summary
 
 
@@ -448,8 +499,28 @@ def run_full_scan():
     print(f"  Buying power   : ${buying_power:,.2f}")
     print(f"  Mode           : {'PAPER' if PAPER else 'LIVE'}\n")
 
-    all_symbols = list(set(cfg.WATCHLIST + [cfg.BENCHMARK] + getattr(cfg, "ROTATION_ETFS", [])))
-    print(f"  Fetching bars for {len(all_symbols)} symbols...")
+    # ── Hot stock discovery: find today's big movers with positive sentiment ───
+    print(f"  Running hot stock discovery...")
+    discovered_new = discovery.discover_stocks(
+        data_client, news_client, cfg.WATCHLIST,
+        get_sentiment, sentiment_label, cfg,
+        api_key=API_KEY, api_secret=API_SECRET,
+    )
+    if discovered_new:
+        disc_data = discovery.update_discovered_watchlist(
+            discovered_new, cfg.WATCHLIST, cfg.TICKER_SECTOR)
+        print(f"  Discovered watchlist: {len(disc_data)} stocks "
+              f"({len(discovered_new)} new/refreshed this scan)")
+    else:
+        disc_data = discovery.load_discovered()
+        print(f"  No new discoveries. Existing discovered: {len(disc_data)}")
+
+    # Merge discovered stocks into the scan watchlist
+    discovered_symbols = discovery.get_discovered_symbols()
+    scan_watchlist = list(dict.fromkeys(cfg.WATCHLIST + discovered_symbols))  # dedupe, preserve order
+
+    all_symbols = list(set(scan_watchlist + [cfg.BENCHMARK] + getattr(cfg, "ROTATION_ETFS", [])))
+    print(f"  Fetching bars for {len(all_symbols)} symbols ({len(discovered_symbols)} discovered)...")
     all_bars = fetch_bars(all_symbols, data_client)
 
     benchmark_raw = all_bars.get(cfg.BENCHMARK)
@@ -525,7 +596,7 @@ def run_full_scan():
     if not can_open_more:
         print(f"  Position/daily cap reached — scanning for awareness only, no new orders.\n")
 
-    print(f"  Scanning {len(cfg.WATCHLIST)} stocks...")
+    print(f"  Scanning {len(scan_watchlist)} stocks ({len(discovered_symbols)} discovered)...")
     signals      = []
     news_summary = []
     # Track WHY symbols got rejected (so log shows the funnel)
@@ -537,7 +608,7 @@ def run_full_scan():
         "passed_all": 0,
     }
 
-    for symbol in cfg.WATCHLIST:
+    for symbol in scan_watchlist:
         if symbol == cfg.BENCHMARK:
             continue
         filter_stats["scanned"] += 1
@@ -549,9 +620,13 @@ def run_full_scan():
 
         sent_score, sent_headlines = get_sentiment(symbol, news_client)
         sent_label = sentiment_label(sent_score)
+        # Extract analyst rating score from raw headlines (for conviction factor)
+        raw_headlines = [h[4:] for h in sent_headlines if h.startswith(("[+]", "[-]", "[~]"))]
+        a_score, a_details = get_analyst_score(raw_headlines)
         last       = df.iloc[-1]
         news_summary.append({
             "symbol": symbol, "sentiment": sent_label, "score": sent_score,
+            "analyst_score": a_score,
             "rsi": round(last["rsi"], 1) if not pd.isna(last["rsi"]) else None,
             "headlines": sent_headlines[:2],
         })
@@ -604,7 +679,8 @@ def run_full_scan():
             signal=signal,
             context={
                 "rs": rs, "obv": obv_status, "of_score": of_score,
-                "sent_score": sent_score, "sector_score": sector_score,
+                "sent_score": sent_score, "analyst_score": a_score,
+                "sector_score": sector_score,
                 "vix": vix_assessment.get("vix") or 0,
                 "regime": regime.value,
             },
@@ -621,6 +697,9 @@ def run_full_scan():
 
         pos = position_size(account_value, signal["entry"], signal["stop"], cfg,
                             risk_mult=conv["risk_mult"], target_R=conv["target_R"])
+        if pos["shares"] <= 0:
+            filter_stats["low_conviction"] = filter_stats.get("low_conviction", 0) + 1
+            continue
         signals.append({
             "symbol": symbol, "regime": regime.value, "rs": round(rs, 2),
             "obv": obv_status, "strategy": signal["strategy"],
@@ -664,6 +743,8 @@ def run_full_scan():
             "filter_stats": filter_stats,
             "sectors_top3": rotation["sectors"][:3],
             "sectors_bottom3": rotation["sectors"][-3:],
+            "discovered": [d["symbol"] for d in discovered_new],
+            "discovered_watchlist": discovered_symbols,
             "signals": [],
             "top_news": [{"symbol": n["symbol"], "sentiment": n["sentiment"],
                           "score": n["score"], "headlines": n["headlines"]}
@@ -759,9 +840,58 @@ def run_full_scan():
         if vix_assessment["size_factor"] < 1.0:
             s["pos"]["shares"]   = max(1, int(s["pos"]["shares"] * vix_assessment["size_factor"]))
             s["pos"]["notional"] = s["pos"]["shares"] * s["entry"]
+            # Sync the flat copies so logs/email match actual order
+            s["shares"]  = s["pos"]["shares"]
+            s["notional"] = s["pos"]["notional"]
             print(f"         VIX size factor {vix_assessment['size_factor']} applied "
                   f"-> {s['pos']['shares']} shares")
 
+        # Route to options or stocks based on strategy
+        use_options = (cfg.OPTIONS_ENABLED
+                       and s.get("strategy") in cfg.OPTIONS_STRATEGIES)
+        if use_options:
+            contract = options_executor.select_contract(
+                s["symbol"], s["entry"], s["strategy"], trade_client)
+            if contract:
+                quote = options_executor.get_option_quote(contract["occ_symbol"], trade_client)
+                if quote and quote["ask"] > 0:
+                    opt_size = options_executor.options_position_size(
+                        account_value, quote["ask"], cfg,
+                        risk_mult=s.get("risk_mult", 1.0))
+                    if opt_size["contracts"] > 0:
+                        result = options_executor.execute_option(
+                            contract, opt_size, trade_client,
+                            remaining_bp=remaining_bp)
+                        if result["status"] == "PLACED":
+                            print(f"         OPTION ORDER PLACED  {contract['occ_symbol']}  "
+                                  f"{opt_size['contracts']} contracts  premium=${opt_size['total_premium']:.2f}")
+                            s["order_status"] = (f"OPTION PLACED — {contract['occ_symbol']} "
+                                                  f"x{opt_size['contracts']} id={result['order_id']}")
+                            s["order_type"] = "OPTION"
+                            # Save option state for position management
+                            opt_state = _load_option_state()
+                            opt_state[contract["occ_symbol"]] = {
+                                "entry_premium": opt_size["total_premium"],
+                                "entry_date": datetime.now(ET).isoformat(),
+                                "expiry": contract["expiry"],
+                                "strategy": s.get("strategy", "B"),
+                                "underlying": s["symbol"],
+                            }
+                            _save_option_state(opt_state)
+                            remaining_bp -= opt_size["total_premium"]
+                            new_orders_this_run += 1
+                            sector_counts[sym_sector] = sector_counts.get(sym_sector, 0) + 1
+                            open_heat_pct += new_heat_pct
+                            print()
+                            continue
+                    else:
+                        print(f"         Options: 0 contracts after sizing, falling back to stock")
+                else:
+                    print(f"         Options: no quote available, falling back to stock")
+            else:
+                print(f"         Options: no suitable contract, falling back to stock")
+
+        # Stock execution (default, or options fallback)
         result = execute(s["signal_raw"], s["pos"], trade_client, remaining_bp=remaining_bp)
         if result["status"] == "PLACED":
             print(f"         ORDER PLACED  id={result['order_id']}")
@@ -806,6 +936,8 @@ def run_full_scan():
         "filter_stats": filter_stats,
         "sectors_top3": rotation["sectors"][:3],
         "sectors_bottom3": rotation["sectors"][-3:],
+        "discovered": [d["symbol"] for d in discovered_new],
+        "discovered_watchlist": discovered_symbols,
         "signals": [{
             "symbol": s["symbol"], "strategy": s["strategy"], "confidence": s["confidence"],
             "signal": s["signal"], "entry": s["entry"], "stop": s["stop"], "target": s["2R"],
@@ -1153,14 +1285,6 @@ def run_catalyst_scan():
     if closed:
         print(f"  Force-closed {len(closed)} catalyst position(s)\n")
 
-    market_open, mkt_reason = is_market_open(trade_client)
-    print(f"  Market status : {mkt_reason}")
-    can_trade_now = market_open and in_window and not catalyst_safety_blocked
-    if not market_open:
-        print(f"  Market closed — will scan for awareness, no orders\n")
-    elif not in_window:
-        print(f"  Outside target window — will scan for awareness, no orders\n")
-
     # Safety gates
     vix_assessment = event_gates.assess_vix(event_gates.get_vix(), cfg)
     print(f"  VIX           : {vix_assessment['reason']}")
@@ -1178,6 +1302,14 @@ def run_catalyst_scan():
     catalyst_safety_blocked = vix_assessment["block"] or macro_block
     if catalyst_safety_blocked:
         print(f"  SAFETY BLOCK — will scan for awareness, no orders\n")
+
+    market_open, mkt_reason = is_market_open(trade_client)
+    print(f"  Market status : {mkt_reason}")
+    can_trade_now = market_open and in_window and not catalyst_safety_blocked
+    if not market_open:
+        print(f"  Market closed — will scan for awareness, no orders\n")
+    elif not in_window:
+        print(f"  Outside target window — will scan for awareness, no orders\n")
 
     # Fetch daily bars (for gap calc + volume baseline)
     all_symbols = list(set(cfg.WATCHLIST + [cfg.BENCHMARK] + getattr(cfg, "ROTATION_ETFS", [])))
@@ -1302,26 +1434,74 @@ def run_catalyst_scan():
                       "capped": False}
         client_id  = f"{cfg.CATALYST_ORDER_PREFIX}-{symbol}-{datetime.utcnow().strftime('%Y%m%d%H%M%S')}"
 
-        result = execute(signal_raw, pos, trade_client,
-                         remaining_bp=remaining_bp, client_order_id=client_id)
-        print(f"  {symbol}: entry=${sig['entry']} stop=${sig['stop']} "
-              f"target=${sig['target']} shares={sig['shares']} "
-              f"risk=${sig['risk_dollars']:.2f} -> {result['status']}")
+        # Options routing for catalyst mode
+        opt_placed = False
+        if cfg.OPTIONS_ENABLED and cfg.OPTIONS_USE_FOR_CATALYST:
+            contract = options_executor.select_contract(
+                symbol, sig["entry"], "CATALYST", trade_client)
+            if contract:
+                quote = options_executor.get_option_quote(contract["occ_symbol"], trade_client)
+                if quote and quote["ask"] > 0:
+                    opt_size = options_executor.options_position_size(
+                        account_value, quote["ask"], cfg)
+                    if opt_size["contracts"] > 0:
+                        result = options_executor.execute_option(
+                            contract, opt_size, trade_client,
+                            remaining_bp=remaining_bp,
+                            client_order_id=client_id)
+                        print(f"  {symbol}: OPTION {contract['occ_symbol']} "
+                              f"x{opt_size['contracts']} premium=${opt_size['total_premium']:.2f} "
+                              f"-> {result['status']}")
+                        opt_placed = result["status"] == "PLACED"
+                        placed.append({
+                            "symbol": symbol, "strategy": "CATALYST", "signal": "BUY",
+                            "entry": sig["entry"], "stop": sig["stop"], "target": sig["target"],
+                            "order_type": "OPTION",
+                            "occ_symbol": contract["occ_symbol"],
+                            "contracts": opt_size["contracts"],
+                            "premium": opt_size["total_premium"],
+                            "factors": det["factors"],
+                            "gap_pct": det["gap_pct"], "news_score": det["news_score"],
+                            "earn_days_ago": det["earn_days"],
+                            "order_status": f"{result['status']} {result.get('order_id') or result.get('reason','')}".strip(),
+                            "client_order_id": client_id,
+                        })
+                        if opt_placed:
+                            # Save option state for position management
+                            opt_state = _load_option_state()
+                            opt_state[contract["occ_symbol"]] = {
+                                "entry_premium": opt_size["total_premium"],
+                                "entry_date": datetime.now(ET).isoformat(),
+                                "expiry": contract["expiry"],
+                                "strategy": "CATALYST",
+                                "underlying": symbol,
+                            }
+                            _save_option_state(opt_state)
+                            remaining_bp -= opt_size["total_premium"]
+                            cat_orders_this_run += 1
 
-        placed.append({
-            "symbol": symbol, "strategy": "CATALYST", "signal": "BUY",
-            "entry": sig["entry"], "stop": sig["stop"], "target": sig["target"],
-            "shares": sig["shares"], "notional": sig["notional"],
-            "risk_$": sig["risk_dollars"], "factors": det["factors"],
-            "gap_pct": det["gap_pct"], "news_score": det["news_score"],
-            "earn_days_ago": det["earn_days"],
-            "order_status": f"{result['status']} {result.get('order_id') or result.get('reason','')}".strip(),
-            "client_order_id": client_id,
-        })
+        # Stock fallback (or if options disabled/unavailable)
+        if not opt_placed:
+            result = execute(signal_raw, pos, trade_client,
+                             remaining_bp=remaining_bp, client_order_id=client_id)
+            print(f"  {symbol}: entry=${sig['entry']} stop=${sig['stop']} "
+                  f"target=${sig['target']} shares={sig['shares']} "
+                  f"risk=${sig['risk_dollars']:.2f} -> {result['status']}")
 
-        if result["status"] == "PLACED":
-            remaining_bp        -= notional
-            cat_orders_this_run += 1
+            placed.append({
+                "symbol": symbol, "strategy": "CATALYST", "signal": "BUY",
+                "entry": sig["entry"], "stop": sig["stop"], "target": sig["target"],
+                "shares": sig["shares"], "notional": sig["notional"],
+                "risk_$": sig["risk_dollars"], "factors": det["factors"],
+                "gap_pct": det["gap_pct"], "news_score": det["news_score"],
+                "earn_days_ago": det["earn_days"],
+                "order_status": f"{result['status']} {result.get('order_id') or result.get('reason','')}".strip(),
+                "client_order_id": client_id,
+            })
+
+            if result["status"] == "PLACED":
+                remaining_bp        -= notional
+                cat_orders_this_run += 1
 
     print(f"\n  Catalyst scan complete — {cat_orders_this_run} new order(s) placed")
     save_log({

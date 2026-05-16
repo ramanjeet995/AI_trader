@@ -39,6 +39,16 @@ except Exception:
 import pandas as pd
 import yfinance as yf
 
+import os
+import time
+
+# Load .env for Alpaca API keys (needed for historical news)
+try:
+    from dotenv import load_dotenv
+    load_dotenv()
+except ImportError:
+    pass
+
 import config as cfg
 import indicators
 from market_structure import classify, Regime
@@ -48,12 +58,135 @@ from order_flow import order_flow_score
 from sector_rotation import analyze as sector_analyze
 from conviction import score as conviction_score
 from event_gates import in_macro_blackout, assess_vix
+from analyst_ratings import analyst_score as get_analyst_score
 
 
 START_DATE      = "2024-01-01"
 END_DATE        = "2025-12-31"
 INITIAL_CAPITAL = 5000.0
 COST_PER_TRADE  = 0.0   # set non-zero to model spreads/fees
+
+# Options backtest config
+OPTIONS_BACKTEST        = False   # disabled — stocks compound better at $5k
+OPTIONS_DTE             = 30      # longer DTE = less theta decay per day
+OPTIONS_OTM_PCT         = 0.02    # strike 2% OTM (higher delta, more $ per move)
+OPTIONS_RISK_PCT_BT     = 0.05    # 5% of account per option trade
+OPTIONS_PREMIUM_STOP    = 0.50    # cut at 50% loss
+OPTIONS_PROFIT_TARGET   = 1.00    # take profits at 100% gain
+OPTIONS_MAX_HOLD        = 10      # max 10 days
+OPTIONS_MAX_CONTRACTS   = 2       # max contracts per trade
+OPTIONS_MIN_CONVICTION  = 4       # only use options on high-conviction breakouts
+RISK_FREE_RATE          = 0.045   # approximate risk-free rate
+
+
+# ── Black-Scholes option pricing ────────────────────────────────────────────
+
+from scipy.stats import norm as _norm
+
+def _bs_call_price(S, K, T, r, sigma):
+    """
+    Black-Scholes call option price.
+    S: stock price, K: strike, T: time to expiry (years),
+    r: risk-free rate, sigma: annualized volatility.
+    """
+    if T <= 0 or sigma <= 0 or S <= 0 or K <= 0:
+        return max(S - K, 0)  # intrinsic only
+    d1 = (math.log(S / K) + (r + 0.5 * sigma**2) * T) / (sigma * math.sqrt(T))
+    d2 = d1 - sigma * math.sqrt(T)
+    return S * _norm.cdf(d1) - K * math.exp(-r * T) * _norm.cdf(d2)
+
+
+def _bs_delta(S, K, T, r, sigma):
+    """Black-Scholes call delta."""
+    if T <= 0 or sigma <= 0:
+        return 1.0 if S > K else 0.0
+    d1 = (math.log(S / K) + (r + 0.5 * sigma**2) * T) / (sigma * math.sqrt(T))
+    return _norm.cdf(d1)
+
+
+def _historical_vol(df, window=20):
+    """Annualized historical volatility from daily close prices."""
+    if len(df) < window + 1:
+        return 0.30  # default 30%
+    returns = df["close"].pct_change().dropna().tail(window)
+    if len(returns) < 5:
+        return 0.30
+    return float(returns.std() * math.sqrt(252))
+
+
+# ── Option position for backtest ────────────────────────────────────────────
+
+class OptionPosition:
+    """Simulated call option position for backtesting."""
+    def __init__(self, symbol, entry_date, stock_entry, strike, expiry_date,
+                 entry_premium, contracts, conviction, strategy, sigma):
+        self.symbol         = symbol
+        self.entry_date     = entry_date
+        self.stock_entry    = stock_entry
+        self.strike         = strike
+        self.expiry_date    = expiry_date
+        self.entry_premium  = entry_premium   # per-share premium
+        self.contracts      = contracts
+        self.total_cost     = entry_premium * 100 * contracts
+        self.conviction     = conviction
+        self.strategy       = strategy
+        self.sigma          = sigma           # entry vol for repricing
+        self.exit_date      = None
+        self.exit_premium   = None
+        self.exit_reason    = None
+        self.asset_type     = "OPTION"
+
+    @property
+    def is_open(self):
+        return self.exit_date is None
+
+    def current_premium(self, stock_price, today):
+        """Reprice the option using Black-Scholes with entry vol."""
+        dte = (self.expiry_date - today).days if hasattr(today, 'date') else \
+              (self.expiry_date - today.date()).days if hasattr(today, 'date') else 0
+        T = max(dte, 0) / 365.0
+        return _bs_call_price(stock_price, self.strike, T, RISK_FREE_RATE, self.sigma)
+
+    def current_value(self, stock_price, today):
+        """Total market value of the position."""
+        return self.current_premium(stock_price, today) * 100 * self.contracts
+
+    def close(self, date, stock_price, reason):
+        self.exit_date    = date
+        self.exit_premium = self.current_premium(stock_price, date)
+        self.exit_reason  = reason
+
+    @property
+    def pnl_dollars(self):
+        if not self.exit_date:
+            return 0.0
+        return (self.exit_premium - self.entry_premium) * 100 * self.contracts
+
+    @property
+    def r_multiple(self):
+        """R-multiple where 1R = total premium paid (max loss)."""
+        if not self.exit_date or self.total_cost <= 0:
+            return 0.0
+        return self.pnl_dollars / self.total_cost
+
+    @property
+    def hold_days(self):
+        if not self.exit_date:
+            return 0
+        return (self.exit_date - self.entry_date).days
+
+    # Compatibility with stock Position for reporting
+    @property
+    def entry_price(self):
+        return self.stock_entry
+
+    @property
+    def exit_price(self):
+        return self.stock_entry  # not directly meaningful for options
+
+    @property
+    def shares(self):
+        return self.contracts  # for trade count reporting
 
 
 # ── Position state ───────────────────────────────────────────────────────────
@@ -84,17 +217,35 @@ class Position:
         return self.entry_price - self.original_stop
 
     def update_trailing_stop(self, current_price, atr):
-        """End-of-day trailing stop update (matches live position_manager.py logic)."""
+        """
+        End-of-day trailing stop update.
+
+        FIX #1: Move to break-even at +1R instead of +2R.
+        52% of trades were hitting full -1R stops because they never reached
+        +2R. Moving to break-even at +1R turns many -1R losses into ~0R exits.
+
+        Tiers:
+          R < 1.0        : hold — give trade room
+          1.0 <= R < 2.0 : move stop to break-even (was 2R before)
+          2.0 <= R < 3.0 : trail to entry + 0.5R (lock in half-R)
+          3.0 <= R < 5.0 : trail to entry + 1R
+          R >= 5.0       : trail at max(current - 1.5*ATR, entry + 2R)
+        """
         if self.stop_distance <= 0:
             return
         r_mult = (current_price - self.entry_price) / self.stop_distance
         new_stop = self.current_stop
-        if 2.0 <= r_mult < 3.0:
+        if 1.0 <= r_mult < 2.0:
+            # Break-even at +1R (was +2R) — stops the bleed from green-to-red
             new_stop = self.entry_price * 1.001
+        elif 2.0 <= r_mult < 3.0:
+            # Lock in half-R (new tier)
+            new_stop = self.entry_price + self.stop_distance * 0.5
         elif 3.0 <= r_mult < 5.0:
             new_stop = self.entry_price + self.stop_distance * 1.0
         elif r_mult >= 5.0:
-            atr_stop = current_price - 2 * atr if atr and atr > 0 else 0
+            # Tighter ATR trail: 1.5x ATR instead of 2x
+            atr_stop = current_price - 1.5 * atr if atr and atr > 0 else 0
             r2_floor = self.entry_price + self.stop_distance * 2.0
             new_stop = max(self.current_stop, atr_stop, r2_floor)
         self.current_stop = max(self.current_stop, new_stop)
@@ -151,6 +302,154 @@ def fetch_history(symbols, start, end):
     return out
 
 
+# ── Historical news pre-fetch & sentiment cache ─────────────────────────────
+
+NEWS_CACHE_FILE = Path(__file__).parent / "backtest_news_cache.json"
+
+
+def _load_news_cache() -> dict:
+    if NEWS_CACHE_FILE.exists():
+        try:
+            return json.loads(NEWS_CACHE_FILE.read_text())
+        except Exception:
+            pass
+    return {}
+
+
+def _save_news_cache(cache: dict):
+    NEWS_CACHE_FILE.write_text(json.dumps(cache, default=str))
+
+
+def fetch_historical_news(symbols: list[str], start: str, end: str) -> dict:
+    """
+    Pre-fetch all news headlines from Alpaca for each symbol across the date
+    range. Returns {symbol: {YYYY-MM-DD: [headline, ...]}} dict.
+
+    Caches results to disk so subsequent runs don't re-fetch.
+    Rate-limited: ~3 calls/sec to stay within Alpaca free tier limits.
+    """
+    api_key    = os.environ.get("ALPACA_API_KEY")
+    api_secret = os.environ.get("ALPACA_API_SECRET")
+    if not api_key or not api_secret:
+        print("  ⚠ No Alpaca API keys — skipping historical news (sentiment=0)")
+        return {}
+
+    from alpaca.data.historical.news import NewsClient
+    from alpaca.data.requests import NewsRequest
+
+    cache = _load_news_cache()
+    news_client = NewsClient(api_key, api_secret)
+    start_dt = datetime.strptime(start, "%Y-%m-%d")
+    end_dt   = datetime.strptime(end, "%Y-%m-%d")
+
+    fetched = 0
+    skipped = 0
+    for sym in symbols:
+        if sym in (cfg.BENCHMARK, "SPY", "QQQ"):
+            continue  # skip index proxies
+        if sym not in cache:
+            cache[sym] = {}
+
+        # Fetch in monthly chunks
+        chunk_start = start_dt
+        while chunk_start < end_dt:
+            chunk_end = min(chunk_start + timedelta(days=30), end_dt)
+            cache_key = f"{chunk_start.strftime('%Y-%m')}"
+
+            if cache_key in cache[sym]:
+                skipped += 1
+                chunk_start = chunk_end
+                continue
+
+            try:
+                req = NewsRequest(
+                    symbols=sym,
+                    start=chunk_start.strftime("%Y-%m-%dT00:00:00Z"),
+                    end=chunk_end.strftime("%Y-%m-%dT23:59:59Z"),
+                    limit=50,
+                )
+                response = news_client.get_news(req)
+                headlines_by_date = {}
+                for key, data in response:
+                    if key == "data" and isinstance(data, dict):
+                        for article in data.get("news", []):
+                            if isinstance(article, dict):
+                                headline = article.get("headline", "")
+                                created = article.get("created_at", "")
+                            else:
+                                headline = getattr(article, "headline", "")
+                                created = getattr(article, "created_at", "")
+                            if headline and created:
+                                # created_at can be datetime or string
+                                if hasattr(created, "strftime"):
+                                    day_str = created.strftime("%Y-%m-%d")
+                                else:
+                                    day_str = str(created)[:10]
+                                headlines_by_date.setdefault(day_str, []).append(headline)
+
+                cache[sym][cache_key] = headlines_by_date
+                fetched += 1
+
+                # Rate limit: ~3 calls/sec
+                if fetched % 3 == 0:
+                    time.sleep(1.1)
+                # Save every 50 fetches
+                if fetched % 50 == 0:
+                    _save_news_cache(cache)
+                    print(f"    ... fetched {fetched} chunks, {skipped} cached")
+            except Exception as e:
+                # On error, store empty dict so we don't retry
+                cache[sym][cache_key] = {}
+                fetched += 1
+                if "too many" in str(e).lower() or "429" in str(e):
+                    time.sleep(5)  # back off on rate limit
+
+            chunk_start = chunk_end
+
+    _save_news_cache(cache)
+    print(f"  News: {fetched} new API calls, {skipped} from cache")
+    return cache
+
+
+def _get_cached_sentiment(news_cache: dict, symbol: str, date) -> tuple[int, int]:
+    """
+    Look up cached news for symbol around the given date (3-day window).
+    Returns (sent_score, analyst_score) using the same scoring as live.
+    """
+    if not news_cache or symbol not in news_cache:
+        return 0, 0
+
+    # Collect headlines from date and 2 days prior (same as live 3-day window)
+    headlines = []
+    for offset in range(3):
+        check_date = date - timedelta(days=offset)
+        day_str = check_date.strftime("%Y-%m-%d") if hasattr(check_date, 'strftime') else str(check_date)[:10]
+        month_key = day_str[:7]
+        month_data = news_cache.get(symbol, {}).get(month_key, {})
+        if isinstance(month_data, dict):
+            headlines.extend(month_data.get(day_str, []))
+
+    if not headlines:
+        return 0, 0
+
+    # Score using FinBERT/keyword (same as live)
+    try:
+        from sentiment import _get_finbert, _score_with_finbert, _score_text
+        pipe = _get_finbert()
+        base_total = 0
+        for h in headlines:
+            base_total += _score_with_finbert(h, pipe) if pipe else _score_text(h)
+        base_clamped = max(-3, min(3, base_total))
+    except Exception:
+        base_clamped = 0
+
+    # Analyst score
+    a_score, _ = get_analyst_score(headlines)
+    sent_score = max(-5, min(5, base_clamped + a_score))
+
+    return sent_score, a_score
+
+
 # ── Main backtest loop ───────────────────────────────────────────────────────
 
 def run_backtest(start_date=START_DATE, end_date=END_DATE):
@@ -184,12 +483,35 @@ def run_backtest(start_date=START_DATE, end_date=END_DATE):
 
     print(f"  Trading days: {len(trade_dates)}\n")
 
+    # Fetch historical news for sentiment scoring
+    print(f"  Fetching historical news...")
+    news_cache = fetch_historical_news(cfg.WATCHLIST, start_date, end_date)
+
     # State
     capital            = INITIAL_CAPITAL
     open_positions     = []   # list of Position
     closed_positions   = []
     equity_curve       = []   # list of (date, equity, num_positions)
     pending_signals    = []   # signals generated yesterday, to fill at today's open
+
+    # FIX #2: Bear market cooldown — after SPY flips to BEAR, require N
+    # consecutive BULL days before re-entering. Prevents whipsawing in
+    # choppy bear markets (2022: 15 consecutive losses, 10 whipsaws).
+    BEAR_COOLDOWN_DAYS  = 5
+    bear_cooldown_left  = 0     # days remaining before new entries allowed
+    last_regime         = None  # track regime transitions
+
+    # FIX #3: Losing streak throttle — after N consecutive losses, halve
+    # position size. After 2N, pause entirely. Prevents the -15 streak.
+    STREAK_HALVE     = 3   # halve size after 3 consecutive losses
+    STREAK_PAUSE     = 6   # pause new entries after 6 consecutive losses
+    PAUSE_DAYS       = 3   # stay paused for 3 trading days
+    consec_losses    = 0
+    pause_days_left  = 0
+
+    # FIX #4: Time stop — close trades that go nowhere in N days.
+    # Dead money in sideways markets. Frees capital for better setups.
+    MAX_HOLD_DAYS    = 20
 
     # Precompute indicators on the full history for each symbol
     print(f"  Precomputing indicators...")
@@ -217,7 +539,40 @@ def run_backtest(start_date=START_DATE, end_date=END_DATE):
             gap_pct = (today_open - sig["entry"]) / sig["entry"] * 100
             if abs(gap_pct) > 2.0:
                 continue
-            # Open position at today's open
+
+            # HYBRID: Strategy B with high conviction → try options, fall back to stock
+            if OPTIONS_BACKTEST and sig["strategy"] == "B" and sig["conviction"] >= OPTIONS_MIN_CONVICTION:
+                # Calculate historical volatility for BS pricing
+                df_slice = bars_ind[sym].loc[:today]
+                sigma = _historical_vol(df_slice)
+                strike = round(today_open * (1 + OPTIONS_OTM_PCT), 2)
+                expiry_date = today + timedelta(days=OPTIONS_DTE)
+                T = OPTIONS_DTE / 365.0
+                premium = _bs_call_price(today_open, strike, T, RISK_FREE_RATE, sigma)
+
+                if premium > 0:
+                    account_value = capital + sum(
+                        _position_value(p, bars_ind, today) if isinstance(p, Position)
+                        else p.current_value(float(bars_ind[p.symbol].loc[today, "close"]), today)
+                            if p.symbol in bars_ind and today in bars_ind[p.symbol].index
+                            else p.total_cost
+                        for p in open_positions
+                    )
+                    max_risk = account_value * OPTIONS_RISK_PCT_BT * sig.get("risk_mult", 1.0)
+                    cost_per = premium * 100
+                    contracts = min(math.floor(max_risk / cost_per), OPTIONS_MAX_CONTRACTS) if cost_per > 0 else 0
+
+                    if contracts > 0 and cost_per * contracts <= capital:
+                        opt = OptionPosition(
+                            symbol=sym, entry_date=today, stock_entry=today_open,
+                            strike=strike, expiry_date=expiry_date,
+                            entry_premium=premium, contracts=contracts,
+                            conviction=sig["conviction"], strategy="B", sigma=sigma)
+                        open_positions.append(opt)
+                        capital -= opt.total_cost
+                        continue  # skip stock fallback
+
+            # Stock position (default, or options fallback)
             shares = sig["shares"]
             if shares <= 0 or shares * today_open > capital:
                 continue
@@ -240,6 +595,52 @@ def run_backtest(start_date=START_DATE, end_date=END_DATE):
             today_close = float(bar["close"])
             atr         = float(bar.get("atr", 0) or 0)
 
+            # ── Option position management ──────────────────────────────────
+            if isinstance(pos, OptionPosition):
+                current_val = pos.current_value(today_close, today)
+                pct_change  = (current_val - pos.total_cost) / pos.total_cost if pos.total_cost > 0 else 0
+                hold_days   = (today - pos.entry_date).days
+                dte         = (pos.expiry_date - today).days if hasattr(today, 'date') else 0
+
+                exit_reason = None
+                # Premium stop: cut at 50% loss
+                if pct_change <= -OPTIONS_PREMIUM_STOP:
+                    exit_reason = "option_premium_stop"
+                # Profit target: take at 100% gain
+                elif pct_change >= OPTIONS_PROFIT_TARGET:
+                    exit_reason = "option_target"
+                # Time stop for options (shorter than stocks)
+                elif hold_days >= OPTIONS_MAX_HOLD:
+                    exit_reason = "option_time_stop"
+                # Expiry risk: exit if <= 3 DTE
+                elif dte <= 3:
+                    exit_reason = "option_expiry_risk"
+
+                if exit_reason:
+                    pos.close(today, today_close, exit_reason)
+                    capital += current_val  # return whatever value remains
+                    open_positions.remove(pos)
+                    closed_positions.append(pos)
+                    if pos.pnl_dollars <= 0:
+                        consec_losses += 1
+                    else:
+                        consec_losses = 0
+                continue  # skip stock management for option positions
+
+            # ── Stock position management ───────────────────────────────────
+            # FIX #4: Time stop — close positions that go nowhere in N days
+            hold_days = (today - pos.entry_date).days
+            if hold_days >= MAX_HOLD_DAYS:
+                pos.close(today, today_close, "time_stop")
+                capital += pos.shares * today_close
+                open_positions.remove(pos)
+                closed_positions.append(pos)
+                if pos.pnl_dollars <= 0:
+                    consec_losses += 1
+                else:
+                    consec_losses = 0
+                continue
+
             # Check stop hit (uses current_stop after any trailing)
             if today_low <= pos.current_stop:
                 exit_price = pos.current_stop
@@ -247,16 +648,16 @@ def run_backtest(start_date=START_DATE, end_date=END_DATE):
                 capital += pos.shares * exit_price
                 open_positions.remove(pos)
                 closed_positions.append(pos)
+                # FIX #3: Track consecutive losses for streak throttle
+                if pos.pnl_dollars <= 0:
+                    consec_losses += 1
+                    if consec_losses >= STREAK_PAUSE:
+                        pause_days_left = PAUSE_DAYS
+                else:
+                    consec_losses = 0
                 continue
-            # Check target hit
-            if today_high >= pos.target:
-                exit_price = pos.target
-                pos.close(today, exit_price, "target")
-                capital += pos.shares * exit_price
-                open_positions.remove(pos)
-                closed_positions.append(pos)
-                continue
-            # No exit — update trailing stop using today's close
+            # No hard target — trail stop up and let winners run.
+            # position_manager.py does this live; here we replicate EOD.
             pos.update_trailing_stop(today_close, atr)
 
         # 3. Check regime — if SPY went BEAR, exit all positions at close
@@ -266,10 +667,27 @@ def run_backtest(start_date=START_DATE, end_date=END_DATE):
             for pos in list(open_positions):
                 if pos.symbol in bars_ind and today in bars_ind[pos.symbol].index:
                     exit_price = float(bars_ind[pos.symbol].loc[today, "close"])
-                    pos.close(today, exit_price, "regime_bear")
-                    capital += pos.shares * exit_price
+                    if isinstance(pos, OptionPosition):
+                        pos.close(today, exit_price, "regime_bear")
+                        capital += pos.current_value(exit_price, today)
+                    else:
+                        pos.close(today, exit_price, "regime_bear")
+                        capital += pos.shares * exit_price
                     open_positions.remove(pos)
                     closed_positions.append(pos)
+                    # FIX #3: Track consecutive losses
+                    if pos.pnl_dollars <= 0:
+                        consec_losses += 1
+                    else:
+                        consec_losses = 0
+
+        # FIX #2: Bear cooldown — when regime flips to BEAR, set cooldown.
+        # Decrement each day. Block new entries while cooldown > 0.
+        if spy_regime == Regime.BEAR and last_regime != Regime.BEAR:
+            bear_cooldown_left = BEAR_COOLDOWN_DAYS   # just entered bear
+        elif spy_regime != Regime.BEAR and bear_cooldown_left > 0:
+            bear_cooldown_left -= 1   # recovering — count down
+        last_regime = spy_regime
 
         # 4. Skip new entries if macro blackout for this date
         macro_blocked, _ = in_macro_blackout(
@@ -291,6 +709,19 @@ def run_backtest(start_date=START_DATE, end_date=END_DATE):
             vix_val = None
         vix_assessment = assess_vix(vix_val, cfg)
         if vix_assessment["block"]:
+            equity = capital + sum(_position_value(p, bars_ind, today) for p in open_positions)
+            equity_curve.append((today, equity, len(open_positions)))
+            continue
+
+        # FIX #2: Bear cooldown — skip new entries while in cooldown
+        if bear_cooldown_left > 0:
+            equity = capital + sum(_position_value(p, bars_ind, today) for p in open_positions)
+            equity_curve.append((today, equity, len(open_positions)))
+            continue
+
+        # FIX #3: Losing streak pause — skip new entries entirely
+        if pause_days_left > 0:
+            pause_days_left -= 1
             equity = capital + sum(_position_value(p, bars_ind, today) for p in open_positions)
             equity_curve.append((today, equity, len(open_positions)))
             continue
@@ -335,12 +766,20 @@ def run_backtest(start_date=START_DATE, end_date=END_DATE):
             if of < 0:
                 continue
             sec_score = next((r["score"] for r in rotation["sectors"] if r["ticker"] == sym), 999.0)
-            # Skip sentiment factor (no historical data) — pass 0
+            # Historical sentiment — use cached news if available, else 0
+            # (keyword scorer without FinBERT hurts more than helps —
+            #  set USE_NEWS_IN_BACKTEST=True to enable once FinBERT installed)
+            USE_NEWS_IN_BACKTEST = False
+            if USE_NEWS_IN_BACKTEST:
+                sent_score, a_score = _get_cached_sentiment(news_cache, sym, today)
+            else:
+                sent_score, a_score = 0, 0
             conv = conviction_score(
                 signal=signal,
-                context={"rs": rs, "obv": obv, "of_score": of, "sent_score": 0,
-                         "sector_score": sec_score, "vix": vix_val or 0,
-                         "regime": regime.value},
+                context={"rs": rs, "obv": obv, "of_score": of,
+                         "sent_score": sent_score, "analyst_score": a_score,
+                         "sector_score": sec_score,
+                         "vix": vix_val or 0, "regime": regime.value},
                 cfg=cfg,
             )
             if not conv["should_trade"]:
@@ -353,9 +792,13 @@ def run_backtest(start_date=START_DATE, end_date=END_DATE):
                                      target_R=conv["target_R"])
             if pos_info["shares"] <= 0:
                 continue
+            # FIX #3: Losing streak throttle — halve size after N consecutive losses
+            shares_adj = pos_info["shares"]
+            if consec_losses >= STREAK_HALVE:
+                shares_adj = max(1, shares_adj // 2)
             candidates_today.append({
                 "symbol": sym, "entry": signal["entry"], "stop": signal["stop"],
-                "target": pos_info["r_target"], "shares": pos_info["shares"],
+                "target": pos_info["r_target"], "shares": shares_adj,
                 "conviction": conv["score"], "target_R": conv["target_R"],
                 "strategy": signal["strategy"],
             })
@@ -382,7 +825,10 @@ def run_backtest(start_date=START_DATE, end_date=END_DATE):
         if sym in bars_ind and len(bars_ind[sym]) > 0:
             exit_price = float(bars_ind[sym].iloc[-1]["close"])
             pos.close(trade_dates[-1], exit_price, "end_of_test")
-            capital += pos.shares * exit_price
+            if isinstance(pos, OptionPosition):
+                capital += pos.current_value(exit_price, trade_dates[-1])
+            else:
+                capital += pos.shares * exit_price
             closed_positions.append(pos)
     open_positions = []
 
@@ -392,7 +838,13 @@ def run_backtest(start_date=START_DATE, end_date=END_DATE):
 
 
 def _position_value(pos, bars_ind, today):
-    """Current market value of an open position."""
+    """Current market value of an open position (stock or option)."""
+    if isinstance(pos, OptionPosition):
+        if pos.symbol in bars_ind and today in bars_ind[pos.symbol].index:
+            price = float(bars_ind[pos.symbol].loc[today, "close"])
+            return pos.current_value(price, today)
+        return pos.total_cost  # fallback: assume entry value
+    # Stock position
     if pos.symbol in bars_ind and today in bars_ind[pos.symbol].index:
         price = float(bars_ind[pos.symbol].loc[today, "close"])
         return pos.shares * price
@@ -449,22 +901,56 @@ def _print_results(trades, equity_curve, initial):
         reasons[t.exit_reason] = reasons.get(t.exit_reason, 0) + 1
     print(f"  Exit reasons:")
     for r, n in sorted(reasons.items(), key=lambda x: -x[1]):
-        print(f"    {r:<15} {n}")
+        print(f"    {r:<25} {n}")
+
+    # Stock vs Option breakdown
+    stock_trades  = [t for t in trades if isinstance(t, Position)]
+    option_trades = [t for t in trades if isinstance(t, OptionPosition)]
+    if option_trades:
+        print(f"\n  {'─'*40}")
+        print(f"  STOCK vs OPTION breakdown:")
+        for label, subset in [("Stocks", stock_trades), ("Options", option_trades)]:
+            if not subset:
+                continue
+            sw = [t for t in subset if t.pnl_dollars > 0]
+            sl = [t for t in subset if t.pnl_dollars <= 0]
+            wr = 100 * len(sw) / len(subset)
+            pnl = sum(t.pnl_dollars for t in subset)
+            avg_r = sum(t.r_multiple for t in subset) / len(subset)
+            print(f"    {label:8}: {len(subset):>3} trades, WR={wr:.0f}%, "
+                  f"avg R={avg_r:+.2f}, total P&L=${pnl:+,.0f}")
     print()
 
 
 def _save_results(trades, equity_curve):
-    out = {
-        "trades": [{
+    trade_records = []
+    for t in trades:
+        rec = {
             "symbol": t.symbol, "strategy": t.strategy, "conviction": t.conviction,
             "entry_date": t.entry_date.strftime("%Y-%m-%d"),
             "exit_date": t.exit_date.strftime("%Y-%m-%d") if t.exit_date else None,
-            "entry": round(t.entry_price, 2), "exit": round(t.exit_price, 2) if t.exit_price else None,
-            "stop": round(t.original_stop, 2), "target": round(t.target, 2),
-            "shares": t.shares, "pnl": round(t.pnl_dollars, 2),
+            "pnl": round(t.pnl_dollars, 2),
             "r_multiple": round(t.r_multiple, 2), "hold_days": t.hold_days,
             "exit_reason": t.exit_reason,
-        } for t in trades],
+        }
+        if isinstance(t, OptionPosition):
+            rec["asset_type"]     = "OPTION"
+            rec["strike"]         = t.strike
+            rec["entry_premium"]  = round(t.entry_premium, 2)
+            rec["exit_premium"]   = round(t.exit_premium, 2) if t.exit_premium else None
+            rec["contracts"]      = t.contracts
+            rec["total_cost"]     = round(t.total_cost, 2)
+        else:
+            rec["asset_type"]     = "STOCK"
+            rec["entry"]          = round(t.entry_price, 2)
+            rec["exit"]           = round(t.exit_price, 2) if t.exit_price else None
+            rec["stop"]           = round(t.original_stop, 2)
+            rec["target"]         = round(t.target, 2)
+            rec["shares"]         = t.shares
+        trade_records.append(rec)
+
+    out = {
+        "trades": trade_records,
         "equity_curve": [(d.strftime("%Y-%m-%d"), round(eq, 2), n) for d, eq, n in equity_curve],
     }
     Path("backtest_results.json").write_text(json.dumps(out, indent=2, default=str))

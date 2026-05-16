@@ -1,8 +1,10 @@
 """
-Trade executor — sizes positions, places bracket orders on Alpaca.
+Trade executor — sizes positions, places OTO orders on Alpaca.
 
   - position_size(): conviction-aware sizing with dynamic R target
-  - execute(): atomic bracket = entry + stop-loss + take-profit (GTC)
+  - execute(): market buy + attached stop-loss (no take-profit ceiling).
+    Exits are managed by position_manager.py which trails stops as price
+    rises — letting winners run instead of capping at a fixed target.
   - close_position(), list_catalyst_positions(): position lifecycle helpers
   - is_market_open(): clock check used to skip pre-market submissions
 
@@ -15,7 +17,7 @@ Guards on execute():
 
 import math
 from alpaca.trading.client import TradingClient
-from alpaca.trading.requests import MarketOrderRequest, TakeProfitRequest, StopLossRequest
+from alpaca.trading.requests import MarketOrderRequest, StopLossRequest
 from alpaca.trading.enums import OrderSide, TimeInForce, OrderClass
 
 
@@ -137,8 +139,12 @@ def execute(signal: dict, pos: dict, trade_client: TradingClient,
             remaining_bp: float | None = None,
             client_order_id: str | None = None) -> dict:
     """
+    Place a market buy with an attached stop-loss (OTO = one-triggers-other).
+    NO take-profit ceiling — position_manager.py trails the stop up as
+    the trade moves in our favor, letting winners run.
+
     signal       : output from strategies.scan() with 'symbol' attached
-    pos          : output from risk.position_size()
+    pos          : output from position_size()
     remaining_bp : if provided, skip if notional > remaining_bp.
                    Caller should decrement after a successful order.
 
@@ -152,13 +158,9 @@ def execute(signal: dict, pos: dict, trade_client: TradingClient,
     if shares <= 0:
         return {"status": "SKIPPED", "reason": "0 shares after sizing", "notional": 0}
 
-    # Prefer dynamic target (set by conviction-based sizing) if present;
-    # otherwise fall back to fixed 2R target.
-    take_profit_price = pos.get("r_target") or pos["r2_target"]
-
-    if stop >= entry or take_profit_price <= entry:
+    if stop >= entry:
         return {"status": "SKIPPED",
-                "reason": f"invalid prices entry={entry} stop={stop} tp={take_profit_price}",
+                "reason": f"invalid prices entry={entry} stop={stop}",
                 "notional": 0}
 
     notional = shares * entry
@@ -168,15 +170,16 @@ def execute(signal: dict, pos: dict, trade_client: TradingClient,
                 "notional": notional}
 
     try:
-        # GTC so the take-profit + stop-loss legs survive past session close.
-        # DAY would orphan the position overnight (legs cancel at 4PM ET).
+        # OTO: market buy triggers a GTC stop-loss sell.
+        # No take-profit leg — position_manager.py trails the stop upward
+        # as the trade moves in our favor (break-even → +1R → ATR trail).
+        # This removes the hard ceiling that was capping winners.
         order_kwargs = dict(
             symbol        = symbol,
             qty           = shares,
             side          = OrderSide.BUY,
             time_in_force = TimeInForce.GTC,
-            order_class   = OrderClass.BRACKET,
-            take_profit   = TakeProfitRequest(limit_price=round(take_profit_price, 2)),
+            order_class   = OrderClass.OTO,
             stop_loss     = StopLossRequest(stop_price=round(stop, 2)),
         )
         if client_order_id:
@@ -190,7 +193,6 @@ def execute(signal: dict, pos: dict, trade_client: TradingClient,
             "shares"  : shares,
             "entry"   : entry,
             "stop"    : stop,
-            "target"  : take_profit_price,
             "notional": notional,
         }
     except Exception as e:
