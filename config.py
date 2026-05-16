@@ -17,8 +17,8 @@ WATCHLIST = [
     "NVDA", "AVGO", "AMD", "ARM", "MU", "SMCI", "MRVL",
     # Mega-cap growth
     "META", "GOOGL", "AMZN", "TSLA", "NFLX", "MSFT", "AAPL",
-    # Software / Cloud high-beta
-    "CRM", "NOW", "CRWD", "PLTR", "SHOP", "SNOW",
+    # Software / Cloud / Networking high-beta
+    "CRM", "NOW", "CRWD", "PLTR", "SHOP", "SNOW", "CSCO", "PANW", "ANET",
     # Energy momentum
     "XOM", "OXY", "FANG", "SLB",
     # Precious metals / commodities
@@ -132,6 +132,7 @@ TICKER_SECTOR = {
     "AVGO": "Tech", "QCOM": "Tech", "INTC": "Tech", "TSM": "Tech",
     "GOOGL": "Tech", "META": "Tech", "AMZN": "Tech", "TSLA": "Tech",
     "CRM": "Tech", "ORCL": "Tech", "ADBE": "Tech", "NOW": "Tech",
+    "CSCO": "Tech", "PANW": "Tech", "ANET": "Tech",
     "XLK": "Tech", "QQQ": "Tech",
     # Financials
     "JPM": "Financials", "GS": "Financials", "BAC": "Financials",
