@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-05-12T17:00:11.974879",
-    "mode": "CATALYST",
-    "spy_regime": "BULL",
-    "signals": [],
-    "force_closed": []
-  },
-  {
     "timestamp": "2026-05-12T17:03:39.993245",
     "mode": "NEWS",
     "spy_regime": "BULL",
@@ -10184,6 +10177,208 @@
       },
       {
         "symbol": "NVDA",
+        "sentiment": "NEGATIVE",
+        "score": -2
+      },
+      {
+        "symbol": "QQQ",
+        "sentiment": "NEGATIVE",
+        "score": -2
+      },
+      {
+        "symbol": "MU",
+        "sentiment": "NEGATIVE",
+        "score": -3
+      },
+      {
+        "symbol": "GOOGL",
+        "sentiment": "NEGATIVE",
+        "score": -3
+      },
+      {
+        "symbol": "AMZN",
+        "sentiment": "NEGATIVE",
+        "score": -3
+      },
+      {
+        "symbol": "TSLA",
+        "sentiment": "NEGATIVE",
+        "score": -3
+      },
+      {
+        "symbol": "META",
+        "sentiment": "STRONG_NEGATIVE",
+        "score": -4
+      },
+      {
+        "symbol": "MSFT",
+        "sentiment": "STRONG_NEGATIVE",
+        "score": -4
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-05-18T16:59:21.955550-04:00",
+    "mode": "NEWS",
+    "spy_regime": "BULL",
+    "safety_block": "",
+    "signals": [],
+    "alerts": [
+      "DANGER \u2014 GOOGL held position has NEGATIVE news!",
+      "  [-] Following Buffett: Greg Abel Cuts Berkshire Holdings Dating Back To 2011  \u2014 But ",
+      "  [-] Elon Musk's Courtroom Loss To OpenAI Puts ETFs With Microsoft, Nvidia Exposure B",
+      "DANGER \u2014 AMZN held position has NEGATIVE news!",
+      "  [-] Following Buffett: Greg Abel Cuts Berkshire Holdings Dating Back To 2011  \u2014 But ",
+      "  [-] Dan Loeb Dumps Microsoft, Slashes Nvidia And Rail Stocks In Sweeping Q1 Portfoli"
+    ],
+    "news_snapshot": [
+      {
+        "symbol": "CRWD",
+        "sentiment": "STRONG_POSITIVE",
+        "score": 4
+      },
+      {
+        "symbol": "NFLX",
+        "sentiment": "POSITIVE",
+        "score": 2
+      },
+      {
+        "symbol": "SPY",
+        "sentiment": "POSITIVE",
+        "score": 2
+      },
+      {
+        "symbol": "AVGO",
+        "sentiment": "NEUTRAL",
+        "score": 1
+      },
+      {
+        "symbol": "ARM",
+        "sentiment": "NEUTRAL",
+        "score": 1
+      },
+      {
+        "symbol": "CRM",
+        "sentiment": "NEUTRAL",
+        "score": 1
+      },
+      {
+        "symbol": "SHOP",
+        "sentiment": "NEUTRAL",
+        "score": 1
+      },
+      {
+        "symbol": "COIN",
+        "sentiment": "NEUTRAL",
+        "score": 1
+      },
+      {
+        "symbol": "MARA",
+        "sentiment": "NEUTRAL",
+        "score": 1
+      },
+      {
+        "symbol": "AMD",
+        "sentiment": "NEUTRAL",
+        "score": 0
+      },
+      {
+        "symbol": "SMCI",
+        "sentiment": "NEUTRAL",
+        "score": 0
+      },
+      {
+        "symbol": "NOW",
+        "sentiment": "NEUTRAL",
+        "score": 0
+      },
+      {
+        "symbol": "SNOW",
+        "sentiment": "NEUTRAL",
+        "score": 0
+      },
+      {
+        "symbol": "PANW",
+        "sentiment": "NEUTRAL",
+        "score": 0
+      },
+      {
+        "symbol": "ANET",
+        "sentiment": "NEUTRAL",
+        "score": 0
+      },
+      {
+        "symbol": "XOM",
+        "sentiment": "NEUTRAL",
+        "score": 0
+      },
+      {
+        "symbol": "FANG",
+        "sentiment": "NEUTRAL",
+        "score": 0
+      },
+      {
+        "symbol": "SLB",
+        "sentiment": "NEUTRAL",
+        "score": 0
+      },
+      {
+        "symbol": "NEM",
+        "sentiment": "NEUTRAL",
+        "score": 0
+      },
+      {
+        "symbol": "GOLD",
+        "sentiment": "NEUTRAL",
+        "score": 0
+      },
+      {
+        "symbol": "FCX",
+        "sentiment": "NEUTRAL",
+        "score": 0
+      },
+      {
+        "symbol": "GDX",
+        "sentiment": "NEUTRAL",
+        "score": 0
+      },
+      {
+        "symbol": "RIOT",
+        "sentiment": "NEUTRAL",
+        "score": 0
+      },
+      {
+        "symbol": "MRVL",
+        "sentiment": "NEUTRAL",
+        "score": -1
+      },
+      {
+        "symbol": "PLTR",
+        "sentiment": "NEUTRAL",
+        "score": -1
+      },
+      {
+        "symbol": "CSCO",
+        "sentiment": "NEUTRAL",
+        "score": -1
+      },
+      {
+        "symbol": "OXY",
+        "sentiment": "NEUTRAL",
+        "score": -1
+      },
+      {
+        "symbol": "MSTR",
+        "sentiment": "NEUTRAL",
+        "score": -1
+      },
+      {
+        "symbol": "NVDA",
+        "sentiment": "NEGATIVE",
+        "score": -2
+      },
+      {
+        "symbol": "AAPL",
         "sentiment": "NEGATIVE",
         "score": -2
       },
