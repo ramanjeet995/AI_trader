@@ -1,183 +1,5 @@
 [
   {
-    "timestamp": "2026-05-12T16:01:29.580466",
-    "mode": "FULL",
-    "spy_regime": "BULL",
-    "posture": "RISK-ON",
-    "vix": 18.3799991607666,
-    "spy_atr_pct": 1.02,
-    "in_window": false,
-    "market_open": true,
-    "data_feed": "iex",
-    "yfinance_patched": "0/60",
-    "sentiment_backend": "finbert",
-    "earnings_cache_size": 40,
-    "open_positions": [],
-    "new_today": 0,
-    "filter_stats": {
-      "scanned": 59,
-      "no_data": 0,
-      "held": 0,
-      "market_volatile": 0,
-      "earnings_blackout": 0,
-      "failed_filters": 50,
-      "obv_distribution": 3,
-      "no_strategy_signal": 6,
-      "of_or_sent_reject": 0,
-      "sector_misalign": 0,
-      "passed_all": 0
-    },
-    "sectors_top3": [
-      {
-        "ticker": "USO",
-        "sector": "Crude Oil",
-        "ret_20d": 17.09,
-        "rs": 3.65,
-        "obv": "ACCUMULATION",
-        "above_ema": "True",
-        "score": 39.51
-      },
-      {
-        "ticker": "XLK",
-        "sector": "Technology",
-        "ret_20d": 14.56,
-        "rs": 3.11,
-        "obv": "ACCUMULATION",
-        "above_ema": "True",
-        "score": 34.1
-      },
-      {
-        "ticker": "SLV",
-        "sector": "Silver",
-        "ret_20d": 5.98,
-        "rs": 1.28,
-        "obv": "STEALTH_SELL",
-        "above_ema": "True",
-        "score": 11.78
-      }
-    ],
-    "sectors_bottom3": [
-      {
-        "ticker": "XLF",
-        "sector": "Financials",
-        "ret_20d": -1.46,
-        "rs": -0.31,
-        "obv": "DISTRIBUTION",
-        "above_ema": "False",
-        "score": -6.11
-      },
-      {
-        "ticker": "XLU",
-        "sector": "Utilities",
-        "ret_20d": -2.19,
-        "rs": -0.47,
-        "obv": "DISTRIBUTION",
-        "above_ema": "False",
-        "score": -7.69
-      },
-      {
-        "ticker": "GLD",
-        "sector": "Gold",
-        "ret_20d": -2.74,
-        "rs": -0.58,
-        "obv": "DISTRIBUTION",
-        "above_ema": "False",
-        "score": -8.85
-      }
-    ],
-    "signals": [],
-    "top_news": [
-      {
-        "symbol": "QCOM",
-        "sentiment": "POSITIVE",
-        "score": 3,
-        "headlines": [
-          "[~] Watching QUALCOMM; Shares See Volume To The Downside, Traders Circulate Substack",
-          "[~] Box CEO Aaron Levie Predicts Huge Consulting Gold Rush As AI Agents 'Rewire' Bus"
-        ]
-      },
-      {
-        "symbol": "AMD",
-        "sentiment": "POSITIVE",
-        "score": 2,
-        "headlines": [
-          "[+] Rackspace Keeps Climbing As AMD Deal And Earnings Fuel Momentum",
-          "[~] Nvidia Isn't The Most Overbought Tech Stock Right Now \u2014 Alphabet, AMD Are"
-        ]
-      },
-      {
-        "symbol": "CRM",
-        "sentiment": "POSITIVE",
-        "score": 2,
-        "headlines": [
-          "[+] Pearson Expands Partnership With Salesforce Over AI, Skills Development Througho",
-          "[~] Box CEO Aaron Levie Predicts Huge Consulting Gold Rush As AI Agents 'Rewire' Bus"
-        ]
-      },
-      {
-        "symbol": "LLY",
-        "sentiment": "POSITIVE",
-        "score": 2,
-        "headlines": [
-          "[~] Watching Eli Lilly; Hearing Zacks Tech Innovator Newsletter Mentions Stock As A ",
-          "[~] Roche, Eli Lilly Alzheimer's Blood Test Cleared In Europe For Earlier Detection"
-        ]
-      },
-      {
-        "symbol": "MRK",
-        "sentiment": "POSITIVE",
-        "score": 2,
-        "headlines": [
-          "[~] Merck Announces New Research From 100+ Abstracts Across 25+ Types Of Cancer From",
-          "[+] Inhibrx Cancer Treatment Shows High Response Rates In Head And Neck Cancer Study"
-        ]
-      },
-      {
-        "symbol": "GOOGL",
-        "sentiment": "NEUTRAL",
-        "score": 1,
-        "headlines": [
-          "[~] 'Alphabet Offers Eight-Tranche Deal in Its Debut Yen Bond Sale' - Bloomberg",
-          "[~] Claude Grew 10x Faster Than ChatGPT In April \u2014 Is OpenAI Losing AI Power Users?"
-        ]
-      },
-      {
-        "symbol": "ADBE",
-        "sentiment": "NEUTRAL",
-        "score": 1,
-        "headlines": [
-          "[+] Consumer Tech News (May 4- 8): Big Tech Gain On AI Momentum, Pentagon Awards $50"
-        ]
-      },
-      {
-        "symbol": "JPM",
-        "sentiment": "NEUTRAL",
-        "score": 1,
-        "headlines": [
-          "[~] Live On Bloomberg TV, JPMorgan CEO Jamie Dimon Says Europe, UK Need To Know What",
-          "[~] Live On Bloomberg TV, JPMorgan CEO Jamie Dimon Says Cyber Is Our Biggest Risk"
-        ]
-      },
-      {
-        "symbol": "V",
-        "sentiment": "NEUTRAL",
-        "score": 1,
-        "headlines": [
-          "[+] Truist Securities Maintains Buy on Visa, Raises Price Target to $371",
-          "[~] Elon Musk Joins Trump's China Trip \u2014 Nvidia CEO Jensen Huang Not Invited"
-        ]
-      },
-      {
-        "symbol": "JNJ",
-        "sentiment": "NEUTRAL",
-        "score": 1,
-        "headlines": [
-          "[+] Johnson & Johnson Announces Global Launch Of Shockwave C2 Aero Coronary IVL Cath"
-        ]
-      }
-    ]
-  },
-  {
     "timestamp": "2026-05-12T16:39:13.114865",
     "mode": "FULL",
     "spy_regime": "BULL",
@@ -10172,6 +9994,208 @@
       },
       {
         "symbol": "TSLA",
+        "sentiment": "NEGATIVE",
+        "score": -3
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-05-18T15:19:30.581349-04:00",
+    "mode": "NEWS",
+    "spy_regime": "BULL",
+    "safety_block": "",
+    "signals": [],
+    "alerts": [
+      "DANGER \u2014 GOOGL held position has NEGATIVE news!",
+      "  [-] Dan Loeb Dumps Microsoft, Slashes Nvidia And Rail Stocks In Sweeping Q1 Portfoli",
+      "  [-] What's Going On With Alphabet Stock Monday?",
+      "DANGER \u2014 AMZN held position has NEGATIVE news!",
+      "  [-] Dan Loeb Dumps Microsoft, Slashes Nvidia And Rail Stocks In Sweeping Q1 Portfoli",
+      "  [-] Semi And Options Mania Collide With Bond Rout Ahead Of Earnings From Nvidia, Hom"
+    ],
+    "news_snapshot": [
+      {
+        "symbol": "CRWD",
+        "sentiment": "STRONG_POSITIVE",
+        "score": 4
+      },
+      {
+        "symbol": "AVGO",
+        "sentiment": "POSITIVE",
+        "score": 2
+      },
+      {
+        "symbol": "AMD",
+        "sentiment": "POSITIVE",
+        "score": 2
+      },
+      {
+        "symbol": "NVDA",
+        "sentiment": "NEUTRAL",
+        "score": 1
+      },
+      {
+        "symbol": "ARM",
+        "sentiment": "NEUTRAL",
+        "score": 1
+      },
+      {
+        "symbol": "NFLX",
+        "sentiment": "NEUTRAL",
+        "score": 1
+      },
+      {
+        "symbol": "CRM",
+        "sentiment": "NEUTRAL",
+        "score": 1
+      },
+      {
+        "symbol": "SHOP",
+        "sentiment": "NEUTRAL",
+        "score": 1
+      },
+      {
+        "symbol": "COIN",
+        "sentiment": "NEUTRAL",
+        "score": 1
+      },
+      {
+        "symbol": "MARA",
+        "sentiment": "NEUTRAL",
+        "score": 1
+      },
+      {
+        "symbol": "SPY",
+        "sentiment": "NEUTRAL",
+        "score": 1
+      },
+      {
+        "symbol": "SMCI",
+        "sentiment": "NEUTRAL",
+        "score": 0
+      },
+      {
+        "symbol": "MRVL",
+        "sentiment": "NEUTRAL",
+        "score": 0
+      },
+      {
+        "symbol": "NOW",
+        "sentiment": "NEUTRAL",
+        "score": 0
+      },
+      {
+        "symbol": "SNOW",
+        "sentiment": "NEUTRAL",
+        "score": 0
+      },
+      {
+        "symbol": "PANW",
+        "sentiment": "NEUTRAL",
+        "score": 0
+      },
+      {
+        "symbol": "ANET",
+        "sentiment": "NEUTRAL",
+        "score": 0
+      },
+      {
+        "symbol": "XOM",
+        "sentiment": "NEUTRAL",
+        "score": 0
+      },
+      {
+        "symbol": "OXY",
+        "sentiment": "NEUTRAL",
+        "score": 0
+      },
+      {
+        "symbol": "FANG",
+        "sentiment": "NEUTRAL",
+        "score": 0
+      },
+      {
+        "symbol": "SLB",
+        "sentiment": "NEUTRAL",
+        "score": 0
+      },
+      {
+        "symbol": "NEM",
+        "sentiment": "NEUTRAL",
+        "score": 0
+      },
+      {
+        "symbol": "FCX",
+        "sentiment": "NEUTRAL",
+        "score": 0
+      },
+      {
+        "symbol": "GDX",
+        "sentiment": "NEUTRAL",
+        "score": 0
+      },
+      {
+        "symbol": "RIOT",
+        "sentiment": "NEUTRAL",
+        "score": 0
+      },
+      {
+        "symbol": "AAPL",
+        "sentiment": "NEUTRAL",
+        "score": -1
+      },
+      {
+        "symbol": "PLTR",
+        "sentiment": "NEUTRAL",
+        "score": -1
+      },
+      {
+        "symbol": "CSCO",
+        "sentiment": "NEUTRAL",
+        "score": -1
+      },
+      {
+        "symbol": "GOLD",
+        "sentiment": "NEUTRAL",
+        "score": -1
+      },
+      {
+        "symbol": "MSTR",
+        "sentiment": "NEUTRAL",
+        "score": -1
+      },
+      {
+        "symbol": "QQQ",
+        "sentiment": "NEGATIVE",
+        "score": -2
+      },
+      {
+        "symbol": "MU",
+        "sentiment": "NEGATIVE",
+        "score": -3
+      },
+      {
+        "symbol": "META",
+        "sentiment": "NEGATIVE",
+        "score": -3
+      },
+      {
+        "symbol": "GOOGL",
+        "sentiment": "NEGATIVE",
+        "score": -3
+      },
+      {
+        "symbol": "AMZN",
+        "sentiment": "NEGATIVE",
+        "score": -3
+      },
+      {
+        "symbol": "TSLA",
+        "sentiment": "NEGATIVE",
+        "score": -3
+      },
+      {
+        "symbol": "MSFT",
         "sentiment": "NEGATIVE",
         "score": -3
       }
