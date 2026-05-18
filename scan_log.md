@@ -1,7 +1,25 @@
 # AI Trader — Daily Log
 
 What the robot saw and did each time it woke up. Newest at top.
-_Last updated: May 18, 2026 at 01:21 PM ET_
+_Last updated: May 18, 2026 at 01:25 PM ET_
+
+## May 18, 01:25 PM ET — News check
+
+**Market check:**
+- Market is going **up** 📈
+
+**Result:** No trades today.
+<details><summary>Notable news today</summary>
+
+- ✓ **CRWD** — strong positive news (+3)
+- ✓ **NVDA** — strong positive news (+2)
+- ✗ **AMD** — negative news (-2)
+- ✗ **META** — negative news (-2)
+- ✗ **GOOGL** — negative news (-2)
+
+</details>
+
+---
 
 ## May 18, 01:21 PM ET — Big-news check
 
@@ -1426,33 +1444,6 @@ _Last updated: May 18, 2026 at 01:21 PM ET_
     - _[+] Rackspace Keeps Climbing As AMD Deal And Earnings Fuel Momentum_
 - ✓ **CRM** — strong positive news (+2)
     - _[+] Pearson Expands Partnership With Salesforce Over AI, Skills Development Througho_
-
-</details>
-
----
-
-## May 12, 01:04 AM ET — Main scan
-
-**Market check:**
-- Market is going **up** 📈
-- Mood: a bit nervous (VIX 18)
-- Investors confident
-
-**Money flowing into:** Technology (+20%), Crude Oil (+12%), Natural Gas (+6%)
-**Money flowing out of:** Financials (-1%), Utilities (-3%), Healthcare (-4%)
-
-**Looked at 59 stocks:**
-- not enough trading volume: 50
-- smart money quietly selling: 4
-- no buy setup today: 5
-
-**Result:** No trades today.
-<details><summary>Notable news today</summary>
-
-- ✓ **NVDA** — strong positive news (+2)
-    - _[~] Trump Says Xi Will Give Him A 'Big, Fat Hug' In China, But What Do Prediction Ma_
-- ✓ **DIA** — strong positive news (+2)
-    - _[+] S&P 500 Tops 7,400 As Copper Hits Record Highs: Stock Market Today_
 
 </details>
 
