@@ -1,7 +1,21 @@
 # AI Trader — Daily Log
 
 What the robot saw and did each time it woke up. Newest at top.
-_Last updated: May 15, 2026 at 06:16 PM ET_
+_Last updated: May 18, 2026 at 01:21 PM ET_
+
+## May 18, 01:21 PM ET — Big-news check
+
+**Market check:**
+- Market is going **up** 📈
+- Mood: a bit nervous (VIX 18)
+
+**Result:** ✓ Bought 1 stock(s).
+
+- ✓ **Bought CRWD** (gap +3.1%)
+    - Plan: buy at $0, sell-stop at $0, target $0
+    - 0 shares, risking $0
+
+---
 
 ## May 15, 06:16 PM ET — Main scan
 
@@ -1439,24 +1453,6 @@ _Last updated: May 15, 2026 at 06:16 PM ET_
     - _[~] Trump Says Xi Will Give Him A 'Big, Fat Hug' In China, But What Do Prediction Ma_
 - ✓ **DIA** — strong positive news (+2)
     - _[+] S&P 500 Tops 7,400 As Copper Hits Record Highs: Stock Market Today_
-
-</details>
-
----
-
-## May 11, 06:33 PM ET — News check
-
-**Market check:**
-- Market is going **up** 📈
-
-**Result:** No trades today.
-<details><summary>Notable news today</summary>
-
-- ✓ **QCOM** — strong positive news (+2)
-- ✓ **MRK** — strong positive news (+2)
-- ✗ **NVDA** — negative news (-2)
-- ✗ **META** — negative news (-3)
-- ✗ **AMZN** — negative news (-3)
 
 </details>
 
