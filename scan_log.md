@@ -1,7 +1,21 @@
 # AI Trader — Daily Log
 
 What the robot saw and did each time it woke up. Newest at top.
-_Last updated: May 18, 2026 at 01:25 PM ET_
+_Last updated: May 18, 2026 at 01:49 PM ET_
+
+## May 18, 01:49 PM ET — Big-news check
+
+**Market check:**
+- Market is going **up** 📈
+- Mood: a bit nervous (VIX 18)
+
+**Result:** ✓ Bought 1 stock(s).
+
+- ✓ **Bought CRWD** (gap +3.3%)
+    - Plan: buy at $0, sell-stop at $0, target $0
+    - 0 shares, risking $0
+
+---
 
 ## May 18, 01:25 PM ET — News check
 
@@ -1415,35 +1429,6 @@ _Last updated: May 18, 2026 at 01:25 PM ET_
 - ✗ **INTC** — negative news (-2)
 - ✗ **TSLA** — negative news (-2)
 - ✗ **QQQ** — negative news (-2)
-
-</details>
-
----
-
-## May 12, 03:41 PM ET — Main scan
-
-**Market check:**
-- Market is going **up** 📈
-- Mood: a bit nervous (VIX 18)
-- Investors confident
-
-**Money flowing into:** Crude Oil (+17%), Technology (+15%), Silver (+6%)
-**Money flowing out of:** Financials (-2%), Utilities (-2%), Gold (-3%)
-
-**Looked at 59 stocks:**
-- not enough trading volume: 50
-- smart money quietly selling: 3
-- no buy setup today: 6
-
-**Result:** No trades today.
-<details><summary>Notable news today</summary>
-
-- ✓ **QCOM** — strong positive news (+3)
-    - _[~] Watching QUALCOMM; Shares See Volume To The Downside, Traders Circulate Substack_
-- ✓ **AMD** — strong positive news (+2)
-    - _[+] Rackspace Keeps Climbing As AMD Deal And Earnings Fuel Momentum_
-- ✓ **CRM** — strong positive news (+2)
-    - _[+] Pearson Expands Partnership With Salesforce Over AI, Skills Development Througho_
 
 </details>
 
