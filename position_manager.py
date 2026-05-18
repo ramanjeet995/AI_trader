@@ -11,13 +11,12 @@ Persists original (entry, stop) per symbol in position_state.json so we can
 correctly compute R-multiples even after we've trailed the stop above entry.
 
 Rules (R-multiple based on profit since entry):
-  R < 1.0        : do nothing — give trade room to develop
-  1.0 <= R < 2.0 : move stop to break-even (was +2R, but 52% of trades never
-                   reached +2R — moving to +1R prevents green-to-red reversals)
-  2.0 <= R < 3.0 : trail stop to entry + 0.5R (lock in half-R profit)
+  R < 1.5        : do nothing — give trade room to develop
+  1.5 <= R < 3.0 : move stop to break-even (delayed from +1R to +1.5R to let
+                   winners develop — prevents premature shakeouts)
   3.0 <= R < 5.0 : trail stop to entry + 1R (lock in +1R profit)
-  R >= 5.0       : trail stop to max(current - 1.5*ATR, entry + 2R)
-                   → tighter ATR trail (was 2x) for trend continuation
+  R >= 5.0       : trail stop to max(current - 1.5*ATR, entry + 2.5R)
+                   → tighter ATR trail for trend continuation
 
 If price closed below SMA20 on the daily, tighten stop hard regardless of R
 (trend break warning).
@@ -144,7 +143,7 @@ def manage_positions(trade_client, data_client, spy_regime: str = "", cfg=None) 
     Returns summary dict for logging.
     """
     summary = {
-        "reviewed": 0, "moved_to_breakeven": 0, "trailed_half_R": 0,
+        "reviewed": 0, "moved_to_breakeven": 0,
         "trailed_1R": 0, "trailed_atr": 0, "regime_closed": 0,
         "time_stopped": 0, "no_stop": 0, "no_change": 0, "errors": 0,
         "details": [],
@@ -173,7 +172,6 @@ def manage_positions(trade_client, data_client, spy_regime: str = "", cfg=None) 
             summary["reviewed"] += 1
             action = result.get("action", "")
             if   action == "breakeven":   summary["moved_to_breakeven"] += 1
-            elif action == "trail_half_R": summary["trailed_half_R"] += 1
             elif action == "trail_1R":    summary["trailed_1R"] += 1
             elif action == "trail_atr":   summary["trailed_atr"] += 1
             elif action == "regime_exit": summary["regime_closed"] += 1
@@ -255,23 +253,17 @@ def _manage_one(position, trade_client, data_client, spy_regime: str, cfg, state
     action   = "hold"
     note     = ""
 
-    if r_multiple < 1.0:
+    if r_multiple < 1.5:
         return {"symbol": symbol, "action": "hold",
                 "r_multiple": round(r_multiple, 2),
                 "current": round(current, 2), "current_stop": round(current_stop, 2)}
 
-    elif 1.0 <= r_multiple < 2.0:
-        # Break-even at +1R (was +2R). Most trades never reached +2R before
-        # reversing — this stops the bleed from green-to-red.
+    elif 1.5 <= r_multiple < 3.0:
+        # Break-even at +1.5R — delayed from +1R to let winners develop.
+        # Prevents premature shakeouts on trades that need room to run.
         new_stop = round(entry * 1.001, 2)
         action   = "breakeven"
-        note     = "moved to break-even at +1R"
-
-    elif 2.0 <= r_multiple < 3.0:
-        # Lock in half-R (new tier — preserves some profit while giving room)
-        new_stop = round(entry + stop_distance * 0.5, 2)
-        action   = "trail_half_R"
-        note     = "trailed to +0.5R floor"
+        note     = "moved to break-even at +1.5R"
 
     elif 3.0 <= r_multiple < 5.0:
         # Trail at entry + 1R (locks in +1R profit minimum)
@@ -280,14 +272,13 @@ def _manage_one(position, trade_client, data_client, spy_regime: str, cfg, state
         note     = "trailed to +1R floor"
 
     else:  # r_multiple >= 5.0
-        # Tighter ATR trail: 1.5x ATR (was 2x) — captures more of the move
+        # Tighter ATR trail: 1.5x ATR — captures more of the move
         atr, sma20, latest_close = _get_atr_and_sma20(symbol, data_client)
-        candidates = [current_stop, entry + stop_distance * 2.0]
+        candidates = [current_stop, entry + stop_distance * 2.5]
         if atr is not None:
             candidates.append(current - 1.5 * atr)
         # Trend break warning: if today closed below SMA20, tighten harder
         if sma20 is not None and latest_close is not None and latest_close < sma20:
-            # Tighten to recent price minus 1*ATR if ATR known, else trail at +2R
             if atr is not None:
                 candidates.append(current - 1 * atr)
             note = " (trend break: closed below SMA20)"

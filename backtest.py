@@ -225,28 +225,25 @@ class Position:
         +2R. Moving to break-even at +1R turns many -1R losses into ~0R exits.
 
         Tiers:
-          R < 1.0        : hold — give trade room
-          1.0 <= R < 2.0 : move stop to break-even (was 2R before)
-          2.0 <= R < 3.0 : trail to entry + 0.5R (lock in half-R)
-          3.0 <= R < 5.0 : trail to entry + 1R
-          R >= 5.0       : trail at max(current - 1.5*ATR, entry + 2R)
+          R < 1.5        : hold — give trade room to develop
+          1.5 <= R < 3.0 : move stop to break-even
+          3.0 <= R < 5.0 : trail to entry + 1R (lock in +1R profit)
+          R >= 5.0       : trail at max(current - 1.5*ATR, entry + 2.5R)
         """
         if self.stop_distance <= 0:
             return
         r_mult = (current_price - self.entry_price) / self.stop_distance
         new_stop = self.current_stop
-        if 1.0 <= r_mult < 2.0:
-            # Break-even at +1R (was +2R) — stops the bleed from green-to-red
+        if 1.5 <= r_mult < 3.0:
+            # Break-even at +1.5R — gives winners room to develop
             new_stop = self.entry_price * 1.001
-        elif 2.0 <= r_mult < 3.0:
-            # Lock in half-R (new tier)
-            new_stop = self.entry_price + self.stop_distance * 0.5
         elif 3.0 <= r_mult < 5.0:
+            # Lock in +1R profit
             new_stop = self.entry_price + self.stop_distance * 1.0
         elif r_mult >= 5.0:
-            # Tighter ATR trail: 1.5x ATR instead of 2x
+            # Tighter ATR trail: 1.5x ATR for trend continuation
             atr_stop = current_price - 1.5 * atr if atr and atr > 0 else 0
-            r2_floor = self.entry_price + self.stop_distance * 2.0
+            r2_floor = self.entry_price + self.stop_distance * 2.5
             new_stop = max(self.current_stop, atr_stop, r2_floor)
         self.current_stop = max(self.current_stop, new_stop)
 

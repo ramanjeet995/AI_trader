@@ -55,12 +55,12 @@ MIN_AVG_VOLUME   = 1_000_000   # shares/day
 MIN_ATR_PCT      = 2.0         # ATR as % of price (movement needed)
 
 # ── Risk management (AGGRESSIVE for $5k) ─────────────────────────────────────
-ACCOUNT_RISK_PCT          = 0.02    # 2% of account per trade (was 1%)
-MAX_POSITION_PCT          = 0.30    # cap any single position at 30% (was 10%) — concentrated
-MAX_CONCURRENT_POSITIONS  = 3       # max 3 positions at once (was 8) — focus
-MAX_NEW_PER_DAY           = 2       # max 2 new per day (was 3) — quality not quantity
+ACCOUNT_RISK_PCT          = 0.02    # 2% of account per trade
+MAX_POSITION_PCT          = 0.40    # cap any single position at 40% — allow bigger bets
+MAX_CONCURRENT_POSITIONS  = 3       # max 3 positions at once — focus on quality
+MAX_NEW_PER_DAY           = 2       # max 2 new per day — quality not quantity
 MAX_POSITIONS_PER_SECTOR  = 2       # max 2 per sector (was 3) — avoid theme concentration
-MAX_PORTFOLIO_HEAT_PCT    = 0.06    # max 6% aggregate open risk (was 5%)
+MAX_PORTFOLIO_HEAT_PCT    = 0.08    # max 8% aggregate open risk — let winners ride
 REQUIRE_SECTOR_ALIGNMENT  = False   # don't require — sometimes best setup is in a cold sector
 
 # ── Conviction-based position sizing ─────────────────────────────────────────
@@ -71,12 +71,12 @@ MIN_CONVICTION_TO_TRADE   = 3    # was 4 — lowered, since backtest with sentim
 # Target R values are STRETCH targets — most trades exit earlier via trailing
 # stop (position_manager.py). These act as a hard ceiling for parabolic moves.
 CONVICTION_RISK_TIERS = {
-    3: {"risk_mult": 0.75, "target_R": 4.0},   # marginal — 1.5% risk, 4R stretch
-    4: {"risk_mult": 1.0,  "target_R": 5.0},   # base — 2% risk, 5R stretch
-    5: {"risk_mult": 1.0,  "target_R": 6.0},   # solid — 2% risk, 6R stretch
-    6: {"risk_mult": 1.25, "target_R": 8.0},   # strong — 2.5% risk, 8R stretch
-    7: {"risk_mult": 1.5,  "target_R": 10.0},  # exceptional — 3% risk, 10R stretch
-    8: {"risk_mult": 1.5,  "target_R": 10.0},  # perfect storm — same as 7 (don't over-lever)
+    3: {"risk_mult": 0.75, "target_R": 5.0},   # marginal — 1.5% risk
+    4: {"risk_mult": 1.0,  "target_R": 6.0},   # base — 2% risk
+    5: {"risk_mult": 1.25, "target_R": 7.0},   # solid — 2.5% risk
+    6: {"risk_mult": 1.5,  "target_R": 9.0},   # strong — 3% risk
+    7: {"risk_mult": 2.0,  "target_R": 12.0},  # exceptional — 4% risk, big bet
+    8: {"risk_mult": 2.0,  "target_R": 12.0},  # perfect storm — same as 7
 }
 
 # ── Data feed ────────────────────────────────────────────────────────────────
@@ -185,8 +185,8 @@ STRAT_A_RSI_HIGH = 65
 
 # ── Strategy B thresholds (Breakout) ────────────────────────────────────────
 # Relaxed for momentum stocks — they rarely consolidate as tightly as slow caps.
-STRAT_B_CONSOLIDATION_BARS = 5    # was 10 — 5 bars is enough for a base
-STRAT_B_VOLUME_MULT        = 1.3  # was 1.5 — slightly easier volume threshold
+STRAT_B_CONSOLIDATION_BARS = 3    # was 5 — momentum stocks barely consolidate
+STRAT_B_VOLUME_MULT        = 1.2  # was 1.3 — catch more breakouts
 
 # ── Strategy C thresholds (Mean Reversion) ──────────────────────────────────
 STRAT_C_RSI_OVERSOLD  = 30
