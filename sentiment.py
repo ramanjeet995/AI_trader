@@ -204,3 +204,66 @@ def sentiment_label(score: int) -> str:
     if score <= -2:
         return "NEGATIVE"
     return "NEUTRAL"
+
+
+# ── Buy-the-Rumor / Sell-the-News classification ────────────────────────────
+# Anticipatory (hype) headlines signal upcoming catalysts — price runs up on
+# expectation. Confirmatory (event) headlines mean the catalyst arrived —
+# smart money sells into the news. We buy hype and exit on confirmation.
+
+HYPE_PATTERNS = [
+    re.compile(p, re.IGNORECASE) for p in [
+        r"\b(?:set to|about to|expected to|planning to|preparing to)\b",
+        r"\b(?:rumor|rumour|rumored|rumoured)\b",
+        r"\b(?:upcoming|imminent|anticipated|awaiting)\b",
+        r"\b(?:will (?:announce|launch|release|unveil|report|reveal))\b",
+        r"\b(?:could (?:announce|launch|release|unveil|report))\b",
+        r"\b(?:may (?:announce|launch|release|unveil|report))\b",
+        r"\b(?:poised to|gearing up|in talks|exploring|considers)\b",
+        r"\b(?:is developing|is working on|is building)\b",
+        r"\b(?:eyes|mulls|weighs|seeks|aims to|targets)\b",
+        r"\b(?:pipeline|roadmap|preview|teaser|sneak peek)\b",
+        r"\b(?:ahead of|before|pre-)\b.*\b(?:earnings|launch|event|announcement)\b",
+    ]
+]
+
+EVENT_PATTERNS = [
+    re.compile(p, re.IGNORECASE) for p in [
+        r"\b(?:announced|announces|announcement)\b",
+        r"\b(?:launched|launches|launch(?:ed|es)?)\b",
+        r"\b(?:released|releases|officially)\b",
+        r"\b(?:confirmed|confirms|confirmation)\b",
+        r"\b(?:reported|reports) (?:earnings|revenue|results|profit|loss)\b",
+        r"\b(?:delivered|posted|beat|missed|met) (?:earnings|expectations|estimates)\b",
+        r"\b(?:revealed|unveil(?:ed|s)|debut(?:ed|s)?)\b",
+        r"\b(?:closed|completed|finalized|signed) (?:deal|acquisition|merger|agreement)\b",
+        r"\b(?:approved|granted|received) (?:FDA|regulatory|approval)\b",
+        r"\bIPO (?:priced|opened|began)\b",
+        r"\b(?:earnings|results) (?:are in|just dropped|out)\b",
+    ]
+]
+
+
+def classify_news_phase(headlines: list[str]) -> str:
+    """
+    Classify a batch of headlines as 'hype', 'event', or 'neutral'.
+    - 'hype'  = anticipatory news, price likely to run up (buy signal)
+    - 'event' = the catalyst happened, smart money sells (exit signal)
+    - 'neutral' = neither pattern detected
+    """
+    hype_count = 0
+    event_count = 0
+    for headline in headlines:
+        for pat in HYPE_PATTERNS:
+            if pat.search(headline):
+                hype_count += 1
+                break
+        for pat in EVENT_PATTERNS:
+            if pat.search(headline):
+                event_count += 1
+                break
+    if event_count > 0 and event_count >= hype_count:
+        return "event"
+    if hype_count > 0:
+        return "hype"
+    return "neutral"

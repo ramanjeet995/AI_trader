@@ -44,7 +44,7 @@ from filters import (passes_filters, relative_strength,
 import event_gates
 from strategies import scan
 from order_flow import order_flow_score
-from sentiment import get_sentiment, sentiment_label
+from sentiment import get_sentiment, sentiment_label, classify_news_phase
 from sector_rotation import analyze as sector_analyze, print_rotation
 from executor import (execute, get_open_positions, get_buying_power,
                       is_market_open, list_catalyst_positions, close_position,
@@ -1126,10 +1126,12 @@ def run_news_scan():
         label = sentiment_label(sent_score)
         last  = df.iloc[-1]
 
+        raw_hl = [h.lstrip("[+-~] ") for h in headlines]
+        news_phase_tag = classify_news_phase(raw_hl)
         results.append({
             "symbol": symbol, "label": label, "score": sent_score,
             "headlines": headlines[:2], "held": symbol in open_positions,
-            "pnl": held_pnl.get(symbol),
+            "pnl": held_pnl.get(symbol), "news_phase": news_phase_tag,
         })
 
         # ALERT: held stock with negative news
@@ -1137,6 +1139,25 @@ def run_news_scan():
             alerts.append(f"DANGER — {symbol} held position has NEGATIVE news!")
             for h in headlines[:2]:
                 alerts.append(f"  {h}")
+
+        # ── SELL-THE-NEWS: exit held positions when the catalyst arrives ──
+        # "Buy the rumor, sell the news" — if we detect confirmatory news
+        # (event happened) on a stock we're holding in profit, close it
+        # before the post-event fade.
+        if symbol in open_positions and market_open:
+            raw_headlines = [h.lstrip("[+-~] ") for h in headlines]
+            news_phase = classify_news_phase(raw_headlines)
+            pnl = held_pnl.get(symbol, 0)
+            if news_phase == "event" and pnl > 0:
+                alerts.append(f"SELL-THE-NEWS — {symbol} event confirmed, taking profit (P&L: ${pnl:+,.2f})")
+                for h in headlines[:2]:
+                    alerts.append(f"  {h}")
+                result = close_position(symbol, trade_client)
+                if result.get("status") == "CLOSED":
+                    open_positions.discard(symbol)
+                    alerts.append(f"  ✓ Closed {symbol} — sell the news")
+                else:
+                    alerts.append(f"  ✗ Failed to close {symbol}: {result.get('reason')}")
 
         # BUY only with full safety stack
         if not can_open_more:
@@ -1201,6 +1222,11 @@ def run_news_scan():
             pos["shares"]   = max(1, int(pos["shares"] * vix_assessment["size_factor"]))
             pos["notional"] = pos["shares"] * entry
 
+        # Classify news phase — "hype" = buy the rumor (anticipatory catalyst)
+        raw_headlines = [h.lstrip("[+-~] ") for h in headlines]
+        news_phase = classify_news_phase(raw_headlines)
+        hype_tag = " [HYPE]" if news_phase == "hype" else ""
+
         signal_data = {"symbol": symbol, "signal": "BUY",
                        "entry": entry, "stop": stop, "target": target}
         result = execute(signal_data, pos, trade_client, remaining_bp=remaining_bp)
@@ -1221,10 +1247,11 @@ def run_news_scan():
             "regime": spy_regime.value, "rs": 0, "obv": obv_status, "strategy": "NEWS",
             "1R": pos["r1_target"], "2R": pos["r2_target"],
             "of_score": 0, "of_notes": [], "sent_score": sent_score,
-            "reason": f"News sentiment {sent_score:+d} + safety stack passed",
+            "news_phase": news_phase,
+            "reason": f"News sentiment {sent_score:+d}{hype_tag} + safety stack passed",
             "pos": pos, "signal_raw": signal_data,
         })
-        print(f"  [BUY] {symbol}  score={sent_score:+d}  entry=${entry}  "
+        print(f"  [BUY] {symbol}  score={sent_score:+d}{hype_tag}  entry=${entry}  "
               f"stop=${stop}  target=${target}  -> {result['status']}")
 
     if alerts:
@@ -1240,7 +1267,9 @@ def run_news_scan():
         icon     = "+" if r["label"] == "POSITIVE" else ("-" if r["label"] == "NEGATIVE" else "~")
         held_tag = "  [HOLDING]" if r["held"] else ""
         pnl_tag  = f"  P&L: ${r['pnl']:+.2f}" if r["pnl"] is not None else ""
-        print(f"  [{icon}] {r['symbol']:<6} {r['label']:<12} {r['score']:+d}{held_tag}{pnl_tag}")
+        phase    = r.get("news_phase", "")
+        phase_tag = f"  [{phase.upper()}]" if phase in ("hype", "event") else ""
+        print(f"  [{icon}] {r['symbol']:<6} {r['label']:<12} {r['score']:+d}{held_tag}{pnl_tag}{phase_tag}")
     print()
 
     if bought:
