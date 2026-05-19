@@ -1,137 +1,5 @@
 [
   {
-    "timestamp": "2026-05-12T20:33:56.887071-04:00",
-    "mode": "FULL",
-    "spy_regime": "BULL",
-    "posture": "MIXED",
-    "vix": 17.989999771118164,
-    "spy_atr_pct": 1.01,
-    "in_window": true,
-    "market_open": false,
-    "data_feed": "iex",
-    "yfinance_patched": "0/34",
-    "sentiment_backend": "finbert",
-    "earnings_cache_size": 54,
-    "macro_blackout": true,
-    "macro_reason": "PPI releases in 11h 56m",
-    "next_macro_event": {
-      "name": "FOMC",
-      "datetime": "2026-06-17T14:00:00-04:00",
-      "days_away": 35,
-      "hours_away": 857.4
-    },
-    "open_positions": [],
-    "new_today": 0,
-    "filter_stats": {
-      "scanned": 33,
-      "no_data": 0,
-      "held": 0,
-      "market_volatile": 0,
-      "earnings_blackout": 0,
-      "failed_filters": 2,
-      "obv_distribution": 9,
-      "no_strategy_signal": 22,
-      "of_or_sent_reject": 0,
-      "sector_misalign": 0,
-      "passed_all": 0
-    },
-    "sectors_top3": [],
-    "sectors_bottom3": [],
-    "signals": [],
-    "top_news": [
-      {
-        "symbol": "NVDA",
-        "sentiment": "POSITIVE",
-        "score": 3,
-        "headlines": [
-          "[~] Hot Inflation Data; Treasury Auction Test Ahead; Trump's Iran Comment Draws Atte",
-          "[~] Jim Cramer Said 'Smell' \u2014 AI Stocks Heard 'Sell'"
-        ]
-      },
-      {
-        "symbol": "AVGO",
-        "sentiment": "POSITIVE",
-        "score": 3,
-        "headlines": [
-          "[~] Jim Cramer Said 'Smell' \u2014 AI Stocks Heard 'Sell'",
-          "[+] Citigroup Maintains Buy on Broadcom, Raises Price Target to $500"
-        ]
-      },
-      {
-        "symbol": "AMD",
-        "sentiment": "POSITIVE",
-        "score": 3,
-        "headlines": [
-          "[~] Advanced Micro Devices Reports 13F Has Holdings Of 5,714,285 Absci Corporation S",
-          "[~] Jim Cramer Said 'Smell' \u2014 AI Stocks Heard 'Sell'"
-        ]
-      },
-      {
-        "symbol": "META",
-        "sentiment": "POSITIVE",
-        "score": 3,
-        "headlines": [
-          "[~] Hot Inflation Data; Treasury Auction Test Ahead; Trump's Iran Comment Draws Atte",
-          "[~] 'Meta offers rival AI chatbots free access to WhatsApp for a month' - Reuters"
-        ]
-      },
-      {
-        "symbol": "MSFT",
-        "sentiment": "POSITIVE",
-        "score": 3,
-        "headlines": [
-          "[~] 'Anthropic in Talks to Buy Developer Tools Startup Used by OpenAI, Google'- The ",
-          "[~] 'Anthropic In Talks to Raise $30B at $900B Valuation'- Bloomberg"
-        ]
-      },
-      {
-        "symbol": "AMZN",
-        "sentiment": "POSITIVE",
-        "score": 2,
-        "headlines": [
-          "[~] 'Anthropic in Talks to Buy Developer Tools Startup Used by OpenAI, Google'- The ",
-          "[~] 'Anthropic In Talks to Raise $30B at $900B Valuation'- Bloomberg"
-        ]
-      },
-      {
-        "symbol": "TSLA",
-        "sentiment": "POSITIVE",
-        "score": 2,
-        "headlines": [
-          "[~] SpaceX Could Become A $30 Trillion Monster, Ron Baron Says \u2014 And He Wants $1 Bil",
-          "[~] Elon Musk Says SpaceX Is Considering Several Locations Domestically And Internat"
-        ]
-      },
-      {
-        "symbol": "AAPL",
-        "sentiment": "POSITIVE",
-        "score": 2,
-        "headlines": [
-          "[~] 'Apple Plans Customizable Camera for Pros, Siri Design Changes in iOS 27' - Bloo",
-          "[~] Hot Inflation Data; Treasury Auction Test Ahead; Trump's Iran Comment Draws Atte"
-        ]
-      },
-      {
-        "symbol": "COIN",
-        "sentiment": "POSITIVE",
-        "score": 2,
-        "headlines": [
-          "[~] North Korea Sources Stole 60% Of All Hacked Crypto In 2025. The Trend Continues ",
-          "[~] Michael Saylor Says CLARITY Act Will Unlock STRC 'Adoption,' But Prediction Mark"
-        ]
-      },
-      {
-        "symbol": "QQQ",
-        "sentiment": "POSITIVE",
-        "score": 2,
-        "headlines": [
-          "[~] Hot Inflation Data; Treasury Auction Test Ahead; Trump's Iran Comment Draws Atte",
-          "[~] Sticky Inflation And Fed Rate Hike Fears Put These ETFs In The Spotlight"
-        ]
-      }
-    ]
-  },
-  {
     "timestamp": "2026-05-12T20:38:52.412188-04:00",
     "mode": "FULL",
     "spy_regime": "BULL",
@@ -9571,6 +9439,246 @@
         "shares": 239,
         "notional": 38863.79,
         "risk_$": 607.06,
+        "sentiment": "NEUTRAL",
+        "obv": "ACCUMULATION",
+        "of_score": 3,
+        "sector_score": 999.0,
+        "reason": "Breakout above 161.69 | vol 1.8x prior 20d avg",
+        "order_status": "SKIPPED: position/daily cap",
+        "headlines": [
+          "[~] If You Invested $100 In Exxon Mobil Stock 5 Years Ago, You Would Have This Much ",
+          "[-] Nasdaq 100 Drops Over 1%, Oil Tops $106 On Iran Impasse: Stock Market Today"
+        ]
+      },
+      {
+        "symbol": "SNOW",
+        "strategy": "B",
+        "confidence": 0.35,
+        "signal": "BUY",
+        "entry": 169.53,
+        "stop": 163.62,
+        "target": 181.35,
+        "shares": 229,
+        "notional": 38822.37,
+        "risk_$": 1353.39,
+        "sentiment": "STRONG_POSITIVE",
+        "obv": "ACCUMULATION",
+        "of_score": 1,
+        "sector_score": 999.0,
+        "reason": "Breakout above 165.27 | vol 1.8x prior 20d avg",
+        "order_status": "SKIPPED: position/daily cap",
+        "headlines": [
+          "[+] Snowflake Stock Is Rising Despite Weak Macro Backdrop",
+          "[+] The Forgotten AI Trade Is Back: Software ETFs Outpace QQQ As ServiceNow, Salesfo"
+        ]
+      }
+    ],
+    "top_news": [
+      {
+        "symbol": "NVDA",
+        "sentiment": "POSITIVE",
+        "score": 2,
+        "headlines": [
+          "[~] Palantir, Robinhood Power GraniteShares' New Yield-Focused ETFs With Monthly Pay",
+          "[~] NVIDIA And Google Cloud Empower The Next Wave Of AI Builders"
+        ]
+      },
+      {
+        "symbol": "AVGO",
+        "sentiment": "NEUTRAL",
+        "score": 1,
+        "headlines": [
+          "[~] Chip Stocks Just Hit A Record Overbought Level: History Shows The Aftermath Is R",
+          "[-] Nasdaq 100 Falls 1% As 30-Year Yields Spike To 19-Year Highs: Stock Market Today"
+        ]
+      },
+      {
+        "symbol": "AMD",
+        "sentiment": "POSITIVE",
+        "score": 2,
+        "headlines": [
+          "[~] AI Trade Faces Make-Or-Break Moment \u2013 Only Nvidia Earnings Will Tell",
+          "[-] Nasdaq 100 Falls 1% As 30-Year Yields Spike To 19-Year Highs: Stock Market Today"
+        ]
+      },
+      {
+        "symbol": "ARM",
+        "sentiment": "NEUTRAL",
+        "score": 1,
+        "headlines": [
+          "[~] 10 Information Technology Stocks Whale Activity In Today's Session",
+          "[~] Stanley Druckenmiller Dumps Amazon And Alphabet While Loading Up On Commodities,"
+        ]
+      },
+      {
+        "symbol": "MU",
+        "sentiment": "STRONG_POSITIVE",
+        "score": 4,
+        "headlines": [
+          "[-] Nasdaq 100 Falls 1% As 30-Year Yields Spike To 19-Year Highs: Stock Market Today",
+          "[~] Chamath Flags AI Compute Crunch: 8 Stocks To Watch"
+        ]
+      },
+      {
+        "symbol": "MRVL",
+        "sentiment": "NEUTRAL",
+        "score": 1,
+        "headlines": [
+          "[-] Nasdaq 100 Falls 1% As 30-Year Yields Spike To 19-Year Highs: Stock Market Today",
+          "[~] AMD Takes A Piece, Amazon Doubles Down: The New Marvell Mania"
+        ]
+      },
+      {
+        "symbol": "META",
+        "sentiment": "STRONG_NEGATIVE",
+        "score": -4,
+        "headlines": [
+          "[~] Bill Ackman's Alphabet Sale Has Cost $641 Million \u2014 Will His New Mag 7 Pick Save",
+          "[~] AI Trade Faces Make-Or-Break Moment \u2013 Only Nvidia Earnings Will Tell"
+        ]
+      },
+      {
+        "symbol": "GOOGL",
+        "sentiment": "POSITIVE",
+        "score": 2,
+        "headlines": [
+          "[~] NVIDIA And Google Cloud Empower The Next Wave Of AI Builders",
+          "[~] Bill Ackman's Alphabet Sale Has Cost $641 Million \u2014 Will His New Mag 7 Pick Save"
+        ]
+      },
+      {
+        "symbol": "AMZN",
+        "sentiment": "NEGATIVE",
+        "score": -3,
+        "headlines": [
+          "[~] Bill Ackman's Alphabet Sale Has Cost $641 Million \u2014 Will His New Mag 7 Pick Save",
+          "[~] AI Trade Faces Make-Or-Break Moment \u2013 Only Nvidia Earnings Will Tell"
+        ]
+      },
+      {
+        "symbol": "TSLA",
+        "sentiment": "NEGATIVE",
+        "score": -3,
+        "headlines": [
+          "[~] Palantir, Robinhood Power GraniteShares' New Yield-Focused ETFs With Monthly Pay",
+          "[+] Elon Musk Says Tesla Robotaxis Could Go Widespread This Year, But Prediction Mar"
+        ]
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-05-19T18:42:25.703310-04:00",
+    "mode": "FULL",
+    "spy_regime": "BULL",
+    "posture": "RISK-OFF",
+    "vix": 17.81999969482422,
+    "spy_atr_pct": 1.04,
+    "in_window": false,
+    "market_open": false,
+    "data_feed": "iex",
+    "yfinance_patched": "0/49",
+    "sentiment_backend": "finbert",
+    "earnings_cache_size": 57,
+    "macro_blackout": false,
+    "macro_reason": "",
+    "next_macro_event": {
+      "name": "FOMC",
+      "datetime": "2026-06-17T14:00:00-04:00",
+      "days_away": 28,
+      "hours_away": 691.3
+    },
+    "open_positions": [
+      "MU",
+      "PLTR"
+    ],
+    "new_today": 2,
+    "filter_stats": {
+      "scanned": 37,
+      "no_data": 0,
+      "held": 2,
+      "market_volatile": 0,
+      "earnings_blackout": 1,
+      "failed_filters": 3,
+      "obv_distribution": 12,
+      "no_strategy_signal": 17,
+      "of_or_sent_reject": 0,
+      "sector_misalign": 0,
+      "passed_all": 2
+    },
+    "sectors_top3": [
+      {
+        "ticker": "USO",
+        "sector": "Crude Oil",
+        "ret_20d": 18.19,
+        "rs": 5.72,
+        "obv": "ACCUMULATION",
+        "above_ema": "True",
+        "score": 60.24
+      },
+      {
+        "ticker": "UNG",
+        "sector": "Natural Gas",
+        "ret_20d": 8.68,
+        "rs": 2.73,
+        "obv": "ACCUMULATION",
+        "above_ema": "True",
+        "score": 30.3
+      },
+      {
+        "ticker": "XLE",
+        "sector": "Energy",
+        "ret_20d": 8.38,
+        "rs": 2.64,
+        "obv": "ACCUMULATION",
+        "above_ema": "True",
+        "score": 29.39
+      }
+    ],
+    "sectors_bottom3": [
+      {
+        "ticker": "SLV",
+        "sector": "Silver",
+        "ret_20d": -4.92,
+        "rs": -1.55,
+        "obv": "STEALTH_BUY",
+        "above_ema": "False",
+        "score": -14.47
+      },
+      {
+        "ticker": "XLB",
+        "sector": "Materials",
+        "ret_20d": -5.39,
+        "rs": -1.7,
+        "obv": "DISTRIBUTION",
+        "above_ema": "False",
+        "score": -19.97
+      },
+      {
+        "ticker": "GLD",
+        "sector": "Gold",
+        "ret_20d": -5.45,
+        "rs": -1.72,
+        "obv": "DISTRIBUTION",
+        "above_ema": "False",
+        "score": -20.15
+      }
+    ],
+    "discovered": [],
+    "discovered_watchlist": [
+      "AGYS"
+    ],
+    "signals": [
+      {
+        "symbol": "XOM",
+        "strategy": "B",
+        "confidence": 0.35,
+        "signal": "BUY",
+        "entry": 162.61,
+        "stop": 160.07,
+        "target": 167.69,
+        "shares": 238,
+        "notional": 38701.18,
+        "risk_$": 604.52,
         "sentiment": "NEUTRAL",
         "obv": "ACCUMULATION",
         "of_score": 3,
