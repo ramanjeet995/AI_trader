@@ -1,185 +1,5 @@
 [
   {
-    "timestamp": "2026-05-12T23:25:51.337516",
-    "mode": "FULL",
-    "spy_regime": "BULL",
-    "posture": "RISK-ON",
-    "vix": 18.3799991607666,
-    "spy_atr_pct": 1.01,
-    "in_window": true,
-    "market_open": false,
-    "data_feed": "iex",
-    "yfinance_patched": "0/60",
-    "sentiment_backend": "finbert",
-    "earnings_cache_size": 40,
-    "open_positions": [],
-    "new_today": 0,
-    "filter_stats": {
-      "scanned": 59,
-      "no_data": 0,
-      "held": 0,
-      "market_volatile": 0,
-      "earnings_blackout": 0,
-      "failed_filters": 13,
-      "obv_distribution": 14,
-      "no_strategy_signal": 32,
-      "of_or_sent_reject": 0,
-      "sector_misalign": 0,
-      "passed_all": 0
-    },
-    "sectors_top3": [
-      {
-        "ticker": "USO",
-        "sector": "Crude Oil",
-        "ret_20d": 17.71,
-        "rs": 3.22,
-        "obv": "ACCUMULATION",
-        "above_ema": "True",
-        "score": 35.24
-      },
-      {
-        "ticker": "XLK",
-        "sector": "Technology",
-        "ret_20d": 16.63,
-        "rs": 3.03,
-        "obv": "ACCUMULATION",
-        "above_ema": "True",
-        "score": 33.28
-      },
-      {
-        "ticker": "SLV",
-        "sector": "Silver",
-        "ret_20d": 9.3,
-        "rs": 1.69,
-        "obv": "ACCUMULATION",
-        "above_ema": "True",
-        "score": 19.94
-      }
-    ],
-    "sectors_bottom3": [
-      {
-        "ticker": "XLV",
-        "sector": "Healthcare",
-        "ret_20d": -1.32,
-        "rs": -0.24,
-        "obv": "DISTRIBUTION",
-        "above_ema": "True",
-        "score": -3.4
-      },
-      {
-        "ticker": "GLD",
-        "sector": "Gold",
-        "ret_20d": -1.7,
-        "rs": -0.31,
-        "obv": "DISTRIBUTION",
-        "above_ema": "True",
-        "score": -4.1
-      },
-      {
-        "ticker": "XLU",
-        "sector": "Utilities",
-        "ret_20d": -1.76,
-        "rs": -0.32,
-        "obv": "DISTRIBUTION",
-        "above_ema": "False",
-        "score": -6.2
-      }
-    ],
-    "signals": [],
-    "top_news": [
-      {
-        "symbol": "MSFT",
-        "sentiment": "POSITIVE",
-        "score": 3,
-        "headlines": [
-          "[~] 'Anthropic in Talks to Buy Developer Tools Startup Used by OpenAI, Google'- The ",
-          "[~] 'Anthropic In Talks to Raise $30B at $900B Valuation'- Bloomberg"
-        ]
-      },
-      {
-        "symbol": "NVDA",
-        "sentiment": "POSITIVE",
-        "score": 3,
-        "headlines": [
-          "[~] Hot Inflation Data; Treasury Auction Test Ahead; Trump's Iran Comment Draws Atte",
-          "[~] Jim Cramer Said 'Smell' \u2014 AI Stocks Heard 'Sell'"
-        ]
-      },
-      {
-        "symbol": "AMD",
-        "sentiment": "POSITIVE",
-        "score": 3,
-        "headlines": [
-          "[~] Advanced Micro Devices Reports 13F Has Holdings Of 5,714,285 Absci Corporation S",
-          "[~] Jim Cramer Said 'Smell' \u2014 AI Stocks Heard 'Sell'"
-        ]
-      },
-      {
-        "symbol": "AVGO",
-        "sentiment": "POSITIVE",
-        "score": 3,
-        "headlines": [
-          "[~] Jim Cramer Said 'Smell' \u2014 AI Stocks Heard 'Sell'",
-          "[+] Citigroup Maintains Buy on Broadcom, Raises Price Target to $500"
-        ]
-      },
-      {
-        "symbol": "TSM",
-        "sentiment": "POSITIVE",
-        "score": 3,
-        "headlines": [
-          "[+] Double Mania Drives Market; Bombing a Love Tap? Strong Jobs Report Raises Specte",
-          "[+] Qualcomm Stock Sinks 11%: AI Momentum Hits Profit-Taking Wall Despite $20 Billio"
-        ]
-      },
-      {
-        "symbol": "META",
-        "sentiment": "POSITIVE",
-        "score": 3,
-        "headlines": [
-          "[~] Hot Inflation Data; Treasury Auction Test Ahead; Trump's Iran Comment Draws Atte",
-          "[~] 'Meta offers rival AI chatbots free access to WhatsApp for a month' - Reuters"
-        ]
-      },
-      {
-        "symbol": "ORCL",
-        "sentiment": "POSITIVE",
-        "score": 3,
-        "headlines": [
-          "[+] Oppenheimer Maintains Outperform on Oracle, Raises Price Target to $235",
-          "[~] 10 Information Technology Stocks Whale Activity In Today's Session"
-        ]
-      },
-      {
-        "symbol": "AAPL",
-        "sentiment": "POSITIVE",
-        "score": 2,
-        "headlines": [
-          "[~] 'Apple Plans Customizable Camera for Pros, Siri Design Changes in iOS 27' - Bloo",
-          "[~] Hot Inflation Data; Treasury Auction Test Ahead; Trump's Iran Comment Draws Atte"
-        ]
-      },
-      {
-        "symbol": "INTC",
-        "sentiment": "POSITIVE",
-        "score": 2,
-        "headlines": [
-          "[~] SanDisk, Micron Stocks Plummet As Korea Shockwave Batters The Great Memory Boom",
-          "[~] Nasdaq 100 Dips On Hot CPI, Sandisk And Micron Tumble 9%: Stock Market Today"
-        ]
-      },
-      {
-        "symbol": "AMZN",
-        "sentiment": "POSITIVE",
-        "score": 2,
-        "headlines": [
-          "[~] 'Anthropic in Talks to Buy Developer Tools Startup Used by OpenAI, Google'- The ",
-          "[~] 'Anthropic In Talks to Raise $30B at $900B Valuation'- Bloomberg"
-        ]
-      }
-    ]
-  },
-  {
     "timestamp": "2026-05-12T23:43:13.495620",
     "mode": "FULL",
     "spy_regime": "BULL",
@@ -9553,5 +9373,200 @@
       }
     ],
     "force_closed": []
+  },
+  {
+    "timestamp": "2026-05-19T14:29:59.040916-04:00",
+    "mode": "NEWS",
+    "spy_regime": "BULL",
+    "safety_block": "",
+    "signals": [],
+    "alerts": [],
+    "news_snapshot": [
+      {
+        "symbol": "MU",
+        "sentiment": "STRONG_POSITIVE",
+        "score": 5
+      },
+      {
+        "symbol": "CRWD",
+        "sentiment": "STRONG_POSITIVE",
+        "score": 5
+      },
+      {
+        "symbol": "NVDA",
+        "sentiment": "POSITIVE",
+        "score": 3
+      },
+      {
+        "symbol": "SNOW",
+        "sentiment": "POSITIVE",
+        "score": 3
+      },
+      {
+        "symbol": "PANW",
+        "sentiment": "POSITIVE",
+        "score": 3
+      },
+      {
+        "symbol": "AVGO",
+        "sentiment": "POSITIVE",
+        "score": 2
+      },
+      {
+        "symbol": "MSTR",
+        "sentiment": "POSITIVE",
+        "score": 2
+      },
+      {
+        "symbol": "MRVL",
+        "sentiment": "NEUTRAL",
+        "score": 1
+      },
+      {
+        "symbol": "NFLX",
+        "sentiment": "NEUTRAL",
+        "score": 1
+      },
+      {
+        "symbol": "NOW",
+        "sentiment": "NEUTRAL",
+        "score": 1
+      },
+      {
+        "symbol": "AMD",
+        "sentiment": "NEUTRAL",
+        "score": 0
+      },
+      {
+        "symbol": "ARM",
+        "sentiment": "NEUTRAL",
+        "score": 0
+      },
+      {
+        "symbol": "SMCI",
+        "sentiment": "NEUTRAL",
+        "score": 0
+      },
+      {
+        "symbol": "GOOGL",
+        "sentiment": "NEUTRAL",
+        "score": 0
+      },
+      {
+        "symbol": "AAPL",
+        "sentiment": "NEUTRAL",
+        "score": 0
+      },
+      {
+        "symbol": "CRM",
+        "sentiment": "NEUTRAL",
+        "score": 0
+      },
+      {
+        "symbol": "PLTR",
+        "sentiment": "NEUTRAL",
+        "score": 0
+      },
+      {
+        "symbol": "SHOP",
+        "sentiment": "NEUTRAL",
+        "score": 0
+      },
+      {
+        "symbol": "ANET",
+        "sentiment": "NEUTRAL",
+        "score": 0
+      },
+      {
+        "symbol": "XOM",
+        "sentiment": "NEUTRAL",
+        "score": 0
+      },
+      {
+        "symbol": "FANG",
+        "sentiment": "NEUTRAL",
+        "score": 0
+      },
+      {
+        "symbol": "SLB",
+        "sentiment": "NEUTRAL",
+        "score": 0
+      },
+      {
+        "symbol": "NEM",
+        "sentiment": "NEUTRAL",
+        "score": 0
+      },
+      {
+        "symbol": "GOLD",
+        "sentiment": "NEUTRAL",
+        "score": 0
+      },
+      {
+        "symbol": "FCX",
+        "sentiment": "NEUTRAL",
+        "score": 0
+      },
+      {
+        "symbol": "RIOT",
+        "sentiment": "NEUTRAL",
+        "score": 0
+      },
+      {
+        "symbol": "TSLA",
+        "sentiment": "NEUTRAL",
+        "score": -1
+      },
+      {
+        "symbol": "CSCO",
+        "sentiment": "NEUTRAL",
+        "score": -1
+      },
+      {
+        "symbol": "OXY",
+        "sentiment": "NEUTRAL",
+        "score": -1
+      },
+      {
+        "symbol": "GDX",
+        "sentiment": "NEUTRAL",
+        "score": -1
+      },
+      {
+        "symbol": "COIN",
+        "sentiment": "NEUTRAL",
+        "score": -1
+      },
+      {
+        "symbol": "SPY",
+        "sentiment": "NEGATIVE",
+        "score": -2
+      },
+      {
+        "symbol": "QQQ",
+        "sentiment": "NEGATIVE",
+        "score": -2
+      },
+      {
+        "symbol": "META",
+        "sentiment": "NEGATIVE",
+        "score": -3
+      },
+      {
+        "symbol": "AMZN",
+        "sentiment": "NEGATIVE",
+        "score": -3
+      },
+      {
+        "symbol": "MSFT",
+        "sentiment": "NEGATIVE",
+        "score": -3
+      },
+      {
+        "symbol": "MARA",
+        "sentiment": "NEGATIVE",
+        "score": -3
+      }
+    ]
   }
 ]
