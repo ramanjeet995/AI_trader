@@ -3,6 +3,25 @@
 What the robot saw and did each time it woke up. Newest at top.
 _Last updated: May 19, 2026 at 10:56 AM ET_
 
+## May 19, 10:56 AM ET — News check
+
+**Market check:**
+- Market is going **up** 📈
+
+**Result:** No trades today.
+<details><summary>Notable news today</summary>
+
+- ✓ **AVGO** — strong positive news (+3)
+- ✓ **MSTR** — strong positive news (+3)
+- ✓ **MRVL** — strong positive news (+2)
+- ✗ **GOOGL** — negative news (-3)
+- ✗ **AMZN** — negative news (-3)
+- ✗ **TSLA** — negative news (-3)
+
+</details>
+
+---
+
 ## May 19, 10:56 AM ET — Big-news check
 
 **Market check:**
@@ -1423,25 +1442,6 @@ _Last updated: May 19, 2026 at 10:56 AM ET_
 - ✗ **AVGO** — negative news (-2)
 - ✗ **GOOGL** — negative news (-2)
 - ✗ **XLF** — negative news (-2)
-
-</details>
-
----
-
-## May 12, 06:28 PM ET — News check
-
-**Market check:**
-- Market is going **up** 📈
-
-**Result:** No trades today.
-<details><summary>Notable news today</summary>
-
-- ✓ **AMD** — strong positive news (+3)
-- ✓ **ORCL** — strong positive news (+3)
-- ✓ **MSFT** — strong positive news (+2)
-- ✗ **AVGO** — negative news (-2)
-- ✗ **QCOM** — negative news (-2)
-- ✗ **GOOGL** — negative news (-2)
 
 </details>
 
