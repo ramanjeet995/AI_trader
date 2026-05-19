@@ -1,315 +1,5 @@
 [
   {
-    "timestamp": "2026-05-12T17:03:39.993245",
-    "mode": "NEWS",
-    "spy_regime": "BULL",
-    "safety_block": "",
-    "signals": [],
-    "alerts": [],
-    "news_snapshot": [
-      {
-        "symbol": "AMD",
-        "sentiment": "POSITIVE",
-        "score": 2
-      },
-      {
-        "symbol": "MSFT",
-        "sentiment": "NEUTRAL",
-        "score": 1
-      },
-      {
-        "symbol": "QCOM",
-        "sentiment": "NEUTRAL",
-        "score": 1
-      },
-      {
-        "symbol": "GOOGL",
-        "sentiment": "NEUTRAL",
-        "score": 1
-      },
-      {
-        "symbol": "AMZN",
-        "sentiment": "NEUTRAL",
-        "score": 1
-      },
-      {
-        "symbol": "CRM",
-        "sentiment": "NEUTRAL",
-        "score": 1
-      },
-      {
-        "symbol": "ORCL",
-        "sentiment": "NEUTRAL",
-        "score": 1
-      },
-      {
-        "symbol": "JPM",
-        "sentiment": "NEUTRAL",
-        "score": 1
-      },
-      {
-        "symbol": "V",
-        "sentiment": "NEUTRAL",
-        "score": 1
-      },
-      {
-        "symbol": "LLY",
-        "sentiment": "NEUTRAL",
-        "score": 1
-      },
-      {
-        "symbol": "JNJ",
-        "sentiment": "NEUTRAL",
-        "score": 1
-      },
-      {
-        "symbol": "MRK",
-        "sentiment": "NEUTRAL",
-        "score": 1
-      },
-      {
-        "symbol": "XOM",
-        "sentiment": "NEUTRAL",
-        "score": 1
-      },
-      {
-        "symbol": "SLB",
-        "sentiment": "NEUTRAL",
-        "score": 1
-      },
-      {
-        "symbol": "QQQ",
-        "sentiment": "NEUTRAL",
-        "score": 1
-      },
-      {
-        "symbol": "DIA",
-        "sentiment": "NEUTRAL",
-        "score": 1
-      },
-      {
-        "symbol": "SLV",
-        "sentiment": "NEUTRAL",
-        "score": 1
-      },
-      {
-        "symbol": "AA",
-        "sentiment": "NEUTRAL",
-        "score": 1
-      },
-      {
-        "symbol": "TSLA",
-        "sentiment": "NEUTRAL",
-        "score": 0
-      },
-      {
-        "symbol": "ADBE",
-        "sentiment": "NEUTRAL",
-        "score": 0
-      },
-      {
-        "symbol": "NOW",
-        "sentiment": "NEUTRAL",
-        "score": 0
-      },
-      {
-        "symbol": "GS",
-        "sentiment": "NEUTRAL",
-        "score": 0
-      },
-      {
-        "symbol": "BAC",
-        "sentiment": "NEUTRAL",
-        "score": 0
-      },
-      {
-        "symbol": "MA",
-        "sentiment": "NEUTRAL",
-        "score": 0
-      },
-      {
-        "symbol": "AXP",
-        "sentiment": "NEUTRAL",
-        "score": 0
-      },
-      {
-        "symbol": "UNH",
-        "sentiment": "NEUTRAL",
-        "score": 0
-      },
-      {
-        "symbol": "ABBV",
-        "sentiment": "NEUTRAL",
-        "score": 0
-      },
-      {
-        "symbol": "COST",
-        "sentiment": "NEUTRAL",
-        "score": 0
-      },
-      {
-        "symbol": "HD",
-        "sentiment": "NEUTRAL",
-        "score": 0
-      },
-      {
-        "symbol": "NKE",
-        "sentiment": "NEUTRAL",
-        "score": 0
-      },
-      {
-        "symbol": "MCD",
-        "sentiment": "NEUTRAL",
-        "score": 0
-      },
-      {
-        "symbol": "SBUX",
-        "sentiment": "NEUTRAL",
-        "score": 0
-      },
-      {
-        "symbol": "CVX",
-        "sentiment": "NEUTRAL",
-        "score": 0
-      },
-      {
-        "symbol": "OXY",
-        "sentiment": "NEUTRAL",
-        "score": 0
-      },
-      {
-        "symbol": "IWM",
-        "sentiment": "NEUTRAL",
-        "score": 0
-      },
-      {
-        "symbol": "GLD",
-        "sentiment": "NEUTRAL",
-        "score": 0
-      },
-      {
-        "symbol": "GDX",
-        "sentiment": "NEUTRAL",
-        "score": 0
-      },
-      {
-        "symbol": "GDXJ",
-        "sentiment": "NEUTRAL",
-        "score": 0
-      },
-      {
-        "symbol": "UNG",
-        "sentiment": "NEUTRAL",
-        "score": 0
-      },
-      {
-        "symbol": "DBO",
-        "sentiment": "NEUTRAL",
-        "score": 0
-      },
-      {
-        "symbol": "FCX",
-        "sentiment": "NEUTRAL",
-        "score": 0
-      },
-      {
-        "symbol": "NEM",
-        "sentiment": "NEUTRAL",
-        "score": 0
-      },
-      {
-        "symbol": "GOLD",
-        "sentiment": "NEUTRAL",
-        "score": 0
-      },
-      {
-        "symbol": "CLF",
-        "sentiment": "NEUTRAL",
-        "score": 0
-      },
-      {
-        "symbol": "NVDA",
-        "sentiment": "NEUTRAL",
-        "score": -1
-      },
-      {
-        "symbol": "INTC",
-        "sentiment": "NEUTRAL",
-        "score": -1
-      },
-      {
-        "symbol": "META",
-        "sentiment": "NEUTRAL",
-        "score": -1
-      },
-      {
-        "symbol": "SPY",
-        "sentiment": "NEUTRAL",
-        "score": -1
-      },
-      {
-        "symbol": "XLK",
-        "sentiment": "NEUTRAL",
-        "score": -1
-      },
-      {
-        "symbol": "XLF",
-        "sentiment": "NEUTRAL",
-        "score": -1
-      },
-      {
-        "symbol": "XLE",
-        "sentiment": "NEUTRAL",
-        "score": -1
-      },
-      {
-        "symbol": "XLV",
-        "sentiment": "NEUTRAL",
-        "score": -1
-      },
-      {
-        "symbol": "XLI",
-        "sentiment": "NEUTRAL",
-        "score": -1
-      },
-      {
-        "symbol": "XLB",
-        "sentiment": "NEUTRAL",
-        "score": -1
-      },
-      {
-        "symbol": "XLU",
-        "sentiment": "NEUTRAL",
-        "score": -1
-      },
-      {
-        "symbol": "XLRE",
-        "sentiment": "NEUTRAL",
-        "score": -1
-      },
-      {
-        "symbol": "AAPL",
-        "sentiment": "NEGATIVE",
-        "score": -2
-      },
-      {
-        "symbol": "AVGO",
-        "sentiment": "NEGATIVE",
-        "score": -2
-      },
-      {
-        "symbol": "USO",
-        "sentiment": "NEGATIVE",
-        "score": -2
-      },
-      {
-        "symbol": "TSM",
-        "sentiment": "NEGATIVE",
-        "score": -3
-      }
-    ]
-  },
-  {
     "timestamp": "2026-05-12T17:51:48.896024",
     "mode": "CATALYST",
     "spy_regime": "BULL",
@@ -10416,6 +10106,203 @@
         "symbol": "MSFT",
         "sentiment": "STRONG_NEGATIVE",
         "score": -4
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-05-19T09:35:38.763130-04:00",
+    "mode": "FULL",
+    "spy_regime": "BULL",
+    "posture": "RISK-ON",
+    "vix": 17.81999969482422,
+    "spy_atr_pct": 1.01,
+    "in_window": true,
+    "market_open": true,
+    "data_feed": "iex",
+    "yfinance_patched": "0/49",
+    "sentiment_backend": "finbert",
+    "earnings_cache_size": 57,
+    "macro_blackout": false,
+    "macro_reason": "",
+    "next_macro_event": {
+      "name": "FOMC",
+      "datetime": "2026-06-17T14:00:00-04:00",
+      "days_away": 29,
+      "hours_away": 700.4
+    },
+    "open_positions": [
+      "AMZN",
+      "GOOGL",
+      "PLTR"
+    ],
+    "new_today": 0,
+    "filter_stats": {
+      "scanned": 37,
+      "no_data": 0,
+      "held": 3,
+      "market_volatile": 0,
+      "earnings_blackout": 1,
+      "failed_filters": 4,
+      "obv_distribution": 14,
+      "no_strategy_signal": 15,
+      "of_or_sent_reject": 0,
+      "sector_misalign": 0,
+      "passed_all": 0
+    },
+    "sectors_top3": [
+      {
+        "ticker": "USO",
+        "sector": "Crude Oil",
+        "ret_20d": 18.35,
+        "rs": 5.65,
+        "obv": "ACCUMULATION",
+        "above_ema": "True",
+        "score": 59.5
+      },
+      {
+        "ticker": "UNG",
+        "sector": "Natural Gas",
+        "ret_20d": 6.94,
+        "rs": 2.14,
+        "obv": "ACCUMULATION",
+        "above_ema": "True",
+        "score": 24.37
+      },
+      {
+        "ticker": "XLE",
+        "sector": "Energy",
+        "ret_20d": 6.93,
+        "rs": 2.13,
+        "obv": "ACCUMULATION",
+        "above_ema": "True",
+        "score": 24.35
+      }
+    ],
+    "sectors_bottom3": [
+      {
+        "ticker": "SLV",
+        "sector": "Silver",
+        "ret_20d": -5.24,
+        "rs": -1.61,
+        "obv": "STEALTH_BUY",
+        "above_ema": "False",
+        "score": -15.12
+      },
+      {
+        "ticker": "XLB",
+        "sector": "Materials",
+        "ret_20d": -5.0,
+        "rs": -1.54,
+        "obv": "DISTRIBUTION",
+        "above_ema": "False",
+        "score": -18.38
+      },
+      {
+        "ticker": "GLD",
+        "sector": "Gold",
+        "ret_20d": -5.51,
+        "rs": -1.69,
+        "obv": "DISTRIBUTION",
+        "above_ema": "False",
+        "score": -19.95
+      }
+    ],
+    "discovered": [
+      "AGYS"
+    ],
+    "discovered_watchlist": [
+      "AGYS"
+    ],
+    "signals": [],
+    "top_news": [
+      {
+        "symbol": "MU",
+        "sentiment": "POSITIVE",
+        "score": 3,
+        "headlines": [
+          "[+] Citigroup Maintains Buy on Micron Technology, Raises Price Target to $840",
+          "[+] Melius Research Maintains Buy on Micron Technology, Raises Price Target to $1100"
+        ]
+      },
+      {
+        "symbol": "AVGO",
+        "sentiment": "POSITIVE",
+        "score": 2,
+        "headlines": [
+          "[~] What's Going On With Broadcom Stock Tuesday?",
+          "[+] LSEG And Broadcom Sign New Five-Year Agreement Centered On VMware Cloud Foundati"
+        ]
+      },
+      {
+        "symbol": "MRVL",
+        "sentiment": "POSITIVE",
+        "score": 2,
+        "headlines": [
+          "[+] Evercore ISI Group Maintains Outperform on Marvell Technology, Raises Price Targ",
+          "[-] Micron Stock's Worst 2-Day Drop In A Year: Is The Chip Bubble Bursting?"
+        ]
+      },
+      {
+        "symbol": "NFLX",
+        "sentiment": "POSITIVE",
+        "score": 2,
+        "headlines": [
+          "[+] Netflix Defies Market Sell-Off As BofA Reaffirms Bullish Outlook, NFL Streaming ",
+          "[~] B of A Securities Reiterates Buy on Netflix, Maintains $125 Price Target"
+        ]
+      },
+      {
+        "symbol": "CRWD",
+        "sentiment": "STRONG_POSITIVE",
+        "score": 5,
+        "headlines": [
+          "[+] Barclays Maintains Overweight on CrowdStrike Holdings, Raises Price Target to $6",
+          "[+] CrowdStrike Has Strong AI Security Momentum: Analyst"
+        ]
+      },
+      {
+        "symbol": "AMD",
+        "sentiment": "STRONG_POSITIVE",
+        "score": 4,
+        "headlines": [
+          "[~] What's Going On With AMD Stock Tuesday?",
+          "[+] Evercore ISI Group Maintains Outperform on Advanced Micro Devices, Raises Price "
+        ]
+      },
+      {
+        "symbol": "AGYS",
+        "sentiment": "STRONG_POSITIVE",
+        "score": 4,
+        "headlines": [
+          "[+] Agilysys Stock Soars After Q4 Double Beat, Strong Guidance",
+          "[~] 12 Information Technology Stocks Moving In Tuesday's Pre-Market Session"
+        ]
+      },
+      {
+        "symbol": "ARM",
+        "sentiment": "NEUTRAL",
+        "score": 1,
+        "headlines": [
+          "[~] Stanley Druckenmiller Dumps Amazon And Alphabet While Loading Up On Commodities,",
+          "[~] This Ross Stores Analyst Begins Coverage On A Bullish Note; Here Are Top 5 Initi"
+        ]
+      },
+      {
+        "symbol": "SHOP",
+        "sentiment": "NEUTRAL",
+        "score": 1,
+        "headlines": [
+          "[+] AI Shake-Up Hits Salesforce: Analyst Sees Growth Reset"
+        ]
+      },
+      {
+        "symbol": "SNOW",
+        "sentiment": "NEUTRAL",
+        "score": 1,
+        "headlines": [
+          "[~] Citizens Reiterates Market Outperform on Snowflake, Maintains $325 Price Target",
+          "[ANALYST] Citi reiterate buy (+1) Tier-1"
+        ]
       }
     ]
   }

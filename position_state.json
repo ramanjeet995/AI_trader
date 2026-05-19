@@ -1,0 +1,17 @@
+{
+  "AMZN": {
+    "entry": 270.156306,
+    "original_stop": 261.0,
+    "first_seen": "2026-05-19T13:33:34.901634"
+  },
+  "GOOGL": {
+    "entry": 403.48,
+    "original_stop": 388.36,
+    "first_seen": "2026-05-19T13:33:35.066751"
+  },
+  "PLTR": {
+    "entry": 135.501009,
+    "original_stop": 126.43,
+    "first_seen": "2026-05-19T13:33:35.236411"
+  }
+}
