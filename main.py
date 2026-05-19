@@ -44,7 +44,7 @@ from filters import (passes_filters, relative_strength,
 import event_gates
 from strategies import scan
 from order_flow import order_flow_score
-from sentiment import get_sentiment, sentiment_label, classify_news_phase
+from sentiment import get_sentiment, sentiment_label, classify_news_phase, classify_ma_role
 from sector_rotation import analyze as sector_analyze, print_rotation
 from executor import (execute, get_open_positions, get_buying_power,
                       is_market_open, list_catalyst_positions, close_position,
@@ -1128,10 +1128,12 @@ def run_news_scan():
 
         raw_hl = [h.lstrip("[+-~] ") for h in headlines]
         news_phase_tag = classify_news_phase(raw_hl)
+        ma_role_tag = classify_ma_role(symbol, raw_hl)
         results.append({
             "symbol": symbol, "label": label, "score": sent_score,
             "headlines": headlines[:2], "held": symbol in open_positions,
             "pnl": held_pnl.get(symbol), "news_phase": news_phase_tag,
+            "ma_role": ma_role_tag,
         })
 
         # ALERT: held stock with negative news
@@ -1159,10 +1161,30 @@ def run_news_scan():
                 else:
                     alerts.append(f"  ✗ Failed to close {symbol}: {result.get('reason')}")
 
+            # ── M&A EXIT: if we're the acquirer, sell (price usually drops) ──
+            ma_role = classify_ma_role(symbol, raw_headlines)
+            if ma_role == "acquirer":
+                alerts.append(f"M&A ALERT — {symbol} is ACQUIRING another company — selling (acquirers drop)")
+                for h in headlines[:2]:
+                    alerts.append(f"  {h}")
+                result = close_position(symbol, trade_client)
+                if result.get("status") == "CLOSED":
+                    open_positions.discard(symbol)
+                    alerts.append(f"  ✓ Closed {symbol} — acquirer exit")
+                else:
+                    alerts.append(f"  ✗ Failed to close {symbol}: {result.get('reason')}")
+
+        # ── M&A TARGET: takeover targets are strong buy signals ──
+        raw_hl_buy = [h.lstrip("[+-~] ") for h in headlines]
+        ma_role_buy = classify_ma_role(symbol, raw_hl_buy)
+        is_ma_target = (ma_role_buy == "target")
+
         # BUY only with full safety stack
         if not can_open_more:
             continue
-        if sent_score < 2 or symbol in open_positions:
+        # M&A targets get a lower sentiment threshold (takeover premium is the edge)
+        min_sent = 0 if is_ma_target else 2
+        if sent_score < min_sent or symbol in open_positions:
             continue
         if (len(open_positions) + new_orders_this_run) >= cfg.MAX_CONCURRENT_POSITIONS:
             continue
@@ -1269,7 +1291,9 @@ def run_news_scan():
         pnl_tag  = f"  P&L: ${r['pnl']:+.2f}" if r["pnl"] is not None else ""
         phase    = r.get("news_phase", "")
         phase_tag = f"  [{phase.upper()}]" if phase in ("hype", "event") else ""
-        print(f"  [{icon}] {r['symbol']:<6} {r['label']:<12} {r['score']:+d}{held_tag}{pnl_tag}{phase_tag}")
+        ma       = r.get("ma_role", "")
+        ma_tag   = f"  [M&A-{ma.upper()}]" if ma in ("acquirer", "target") else ""
+        print(f"  [{icon}] {r['symbol']:<6} {r['label']:<12} {r['score']:+d}{held_tag}{pnl_tag}{phase_tag}{ma_tag}")
     print()
 
     if bought:

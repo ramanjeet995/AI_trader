@@ -267,3 +267,58 @@ def classify_news_phase(headlines: list[str]) -> str:
     if hype_count > 0:
         return "hype"
     return "neutral"
+
+
+# ── M&A detection (acquirer vs target) ──────────────────────────────────────
+# When company A buys company B:
+#   - Target (B) gaps UP to the offer price → buy on rumor
+#   - Acquirer (A) usually DROPS → sell if holding
+#
+# We detect whether the SYMBOL we're analyzing is the acquirer or target
+# by checking headline phrasing relative to the symbol.
+
+ACQUIRER_PATTERNS = [
+    re.compile(p, re.IGNORECASE) for p in [
+        r"\b(?:to acquire|acquiring|acquires|to buy|buying|buys|bids? for)\b",
+        r"\b(?:to purchase|purchasing|purchases)\b",
+        r"\b(?:takeover (?:bid|offer)|hostile bid|merger agreement)\b",
+        r"\b(?:in talks to (?:buy|acquire))\b",
+        r"\b(?:offers to buy|makes offer for)\b",
+    ]
+]
+
+TARGET_PATTERNS = [
+    re.compile(p, re.IGNORECASE) for p in [
+        r"\b(?:to be acquired|being acquired|acquisition target)\b",
+        r"\b(?:buyout|takeover target|takeover offer)\b",
+        r"\b(?:receives? (?:bid|offer|takeover))\b",
+        r"\b(?:(?:bought|acquired|purchased) by)\b",
+        r"\b(?:in talks to (?:be (?:bought|acquired|sold)))\b",
+        r"\b(?:agrees to (?:be (?:bought|acquired))|agrees to (?:sale|merger))\b",
+        r"\b(?:deal to sell itself|exploring (?:sale|strategic alternatives))\b",
+    ]
+]
+
+
+def classify_ma_role(symbol: str, headlines: list[str]) -> str:
+    """
+    Determine if a symbol is the acquirer or target in M&A news.
+    Returns 'acquirer', 'target', or 'none'.
+
+    Acquirer → stock usually drops (spending cash, taking on debt)
+    Target   → stock usually jumps (premium over market price)
+    """
+    sym_upper = symbol.upper()
+    for headline in headlines:
+        # Only check headlines that mention our symbol
+        if sym_upper not in headline.upper():
+            continue
+        # Check if symbol appears BEFORE the acquisition verb (= acquirer)
+        # or AFTER / in context of being bought (= target)
+        for pat in TARGET_PATTERNS:
+            if pat.search(headline):
+                return "target"
+        for pat in ACQUIRER_PATTERNS:
+            if pat.search(headline):
+                return "acquirer"
+    return "none"
