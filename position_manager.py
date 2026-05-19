@@ -139,7 +139,9 @@ def _find_protective_stop(symbol, trade_client):
             if ("stop" in type_str) and "sell" in side_str:
                 return o
 
-        # Not found in OPEN — check ALL with nested legs (bracket children)
+        # Not found in OPEN — check ALL with nested legs (bracket children).
+        # Bracket stop legs have status like "OrderStatus.HELD" so we use
+        # substring matching (not exact match) for the status check.
         orders = trade_client.get_orders(GetOrdersRequest(
             status=QueryOrderStatus.ALL, symbols=[symbol], limit=10, nested=True
         ))
@@ -150,7 +152,8 @@ def _find_protective_stop(symbol, trade_client):
                 leg_type = str(leg.type).lower()
                 leg_side = str(leg.side).lower()
                 leg_stat = str(leg.status).lower()
-                if ("stop" in leg_type) and "sell" in leg_side and leg_stat in ("new", "held", "accepted"):
+                if ("stop" in leg_type) and ("sell" in leg_side) and \
+                   ("new" in leg_stat or "held" in leg_stat or "accepted" in leg_stat):
                     return leg
         return None
     except Exception:
