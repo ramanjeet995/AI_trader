@@ -62,6 +62,7 @@ MAX_NEW_PER_DAY           = 2       # max 2 new per day — quality not quantity
 MAX_POSITIONS_PER_SECTOR  = 2       # max 2 per sector (was 3) — avoid theme concentration
 MAX_PORTFOLIO_HEAT_PCT    = 0.08    # max 8% aggregate open risk — let winners ride
 REQUIRE_SECTOR_ALIGNMENT  = False   # don't require — sometimes best setup is in a cold sector
+REPLACE_WORST_LOSER       = True    # when at max positions, close worst loser for better setup
 
 # ── Conviction-based position sizing ─────────────────────────────────────────
 # Multi-factor confluence required to fire. Each factor passed = 1 point.

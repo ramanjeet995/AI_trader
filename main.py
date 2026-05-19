@@ -412,6 +412,38 @@ def _count_sectors(symbols) -> dict[str, int]:
     return counts
 
 
+def _find_worst_position(trade_client, new_conviction: int) -> dict | None:
+    """
+    When at max capacity, find the worst-performing held position to replace.
+    Only replaces if:
+      - The new signal has higher conviction than MIN_REPLACE_CONVICTION
+      - The worst position is losing money (unrealized P&L < 0)
+      - The worst position has been held for at least 2 days (not brand new)
+    Returns {symbol, pnl, pnl_pct} of the worst position, or None.
+    """
+    MIN_REPLACE_CONVICTION = 4  # only replace for solid+ signals
+    if new_conviction < MIN_REPLACE_CONVICTION:
+        return None
+    try:
+        positions = trade_client.get_all_positions()
+        losers = []
+        for p in positions:
+            pnl = float(p.unrealized_pl)
+            pnl_pct = float(p.unrealized_plpc) * 100
+            if pnl < 0:
+                losers.append({
+                    "symbol": p.symbol,
+                    "pnl": pnl,
+                    "pnl_pct": pnl_pct,
+                })
+        if not losers:
+            return None
+        # Return the biggest loser (most negative P&L%)
+        return min(losers, key=lambda x: x["pnl_pct"])
+    except Exception:
+        return None
+
+
 def _load_option_state() -> dict:
     """Load persistent option position state from disk."""
     state_file = Path(__file__).parent / "option_position_state.json"
@@ -788,10 +820,29 @@ def run_full_scan():
             print()
             continue
         if (len(open_positions) + new_orders_this_run) >= cfg.MAX_CONCURRENT_POSITIONS:
-            print(f"         SKIPPED: would exceed MAX_CONCURRENT_POSITIONS")
-            s["order_status"] = "SKIPPED: concurrent cap"
-            print()
-            continue
+            # At max capacity — try to replace worst loser if new signal is strong
+            conv_score = s.get("conviction", 0)
+            worst = _find_worst_position(trade_client, conv_score) if cfg.REPLACE_WORST_LOSER else None
+            if worst and worst["symbol"] != s["symbol"]:
+                print(f"         REPLACING {worst['symbol']} "
+                      f"(P&L: {worst['pnl_pct']:+.1f}%) with higher-conviction setup")
+                result = close_position(worst["symbol"], trade_client)
+                if result.get("status") == "CLOSED":
+                    open_positions.discard(worst["symbol"])
+                    sector_counts = _count_sectors(open_positions)
+                    open_heat_pct = len(open_positions) * cfg.ACCOUNT_RISK_PCT
+                    # Continue to place the new order below
+                else:
+                    print(f"         Failed to close {worst['symbol']}: {result.get('reason')}")
+                    print(f"         SKIPPED: would exceed MAX_CONCURRENT_POSITIONS")
+                    s["order_status"] = "SKIPPED: concurrent cap (replace failed)"
+                    print()
+                    continue
+            else:
+                print(f"         SKIPPED: would exceed MAX_CONCURRENT_POSITIONS")
+                s["order_status"] = "SKIPPED: concurrent cap"
+                print()
+                continue
         if (new_today_count + new_orders_this_run) >= cfg.MAX_NEW_PER_DAY:
             print(f"         SKIPPED: would exceed MAX_NEW_PER_DAY")
             s["order_status"] = "SKIPPED: daily cap"
