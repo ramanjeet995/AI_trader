@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-05-12T17:51:48.896024",
-    "mode": "CATALYST",
-    "spy_regime": "BULL",
-    "signals": [],
-    "force_closed": []
-  },
-  {
     "timestamp": "2026-05-12T18:28:09.444627",
     "mode": "NEWS",
     "spy_regime": "BULL",
@@ -10305,5 +10298,35 @@
         ]
       }
     ]
+  },
+  {
+    "timestamp": "2026-05-19T10:56:37.667373-04:00",
+    "mode": "CATALYST",
+    "spy_regime": "BULL",
+    "vix": 17.81999969482422,
+    "signals": [
+      {
+        "symbol": "SNOW",
+        "strategy": "CATALYST",
+        "signal": "BUY",
+        "entry": 170.23,
+        "stop": 169.38,
+        "target": 177.89,
+        "shares": 28,
+        "notional": 4766.44,
+        "risk_$": 23.83,
+        "factors": [
+          "gap +3.6% in [3.0, 12.0]",
+          "news score +2",
+          "volume pace 3.3x normal"
+        ],
+        "gap_pct": 3.65,
+        "news_score": 2,
+        "earn_days_ago": null,
+        "order_status": "PLACED b44900ed-cf07-4934-be6e-c80147f07642",
+        "client_order_id": "CAT-SNOW-20260519145637"
+      }
+    ],
+    "force_closed": []
   }
 ]
