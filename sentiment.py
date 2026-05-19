@@ -230,10 +230,10 @@ HYPE_PATTERNS = [
 EVENT_PATTERNS = [
     re.compile(p, re.IGNORECASE) for p in [
         r"\b(?:announced|announces|announcement)\b",
-        r"\b(?:launched|launches|launch(?:ed|es)?)\b",
+        r"\b(?:launched|launches)\b",
         r"\b(?:released|releases|officially)\b",
         r"\b(?:confirmed|confirms|confirmation)\b",
-        r"\b(?:reported|reports) (?:earnings|revenue|results|profit|loss)\b",
+        r"\b(?:reported|reports) (?:earnings|revenue|results|profit|loss|record)\b",
         r"\b(?:delivered|posted|beat|missed|met) (?:earnings|expectations|estimates)\b",
         r"\b(?:revealed|unveil(?:ed|s)|debut(?:ed|s)?)\b",
         r"\b(?:closed|completed|finalized|signed) (?:deal|acquisition|merger|agreement)\b",
