@@ -1,7 +1,21 @@
 # AI Trader — Daily Log
 
 What the robot saw and did each time it woke up. Newest at top.
-_Last updated: May 19, 2026 at 01:26 PM ET_
+_Last updated: May 19, 2026 at 01:31 PM ET_
+
+## May 19, 01:31 PM ET — Big-news check
+
+**Market check:**
+- Market is going **up** 📈
+- Mood: calm (VIX 18)
+
+**Result:** ✓ Bought 1 stock(s).
+
+- ✓ **Bought MRVL** (gap +6.9%)
+    - Plan: buy at $0, sell-stop at $0, target $0
+    - 0 shares, risking $0
+
+---
 
 ## May 19, 01:26 PM ET — Main scan
 
@@ -1450,25 +1464,6 @@ _Last updated: May 19, 2026 at 01:26 PM ET_
     - _[~] 'Anthropic In Talks to Raise $30B at $900B Valuation'- Bloomberg_
 - ✓ **CRM** — strong positive news (+2)
     - _[~] Citigroup Maintains Neutral on Salesforce, Lowers Price Target to $188_
-
-</details>
-
----
-
-## May 12, 09:10 PM ET — News check
-
-**Market check:**
-- Market is going **up** 📈
-
-**Result:** No trades today.
-<details><summary>Notable news today</summary>
-
-- ✓ **AMD** — strong positive news (+3)
-- ✓ **ORCL** — strong positive news (+3)
-- ✓ **MSFT** — strong positive news (+2)
-- ✗ **AVGO** — negative news (-2)
-- ✗ **GOOGL** — negative news (-2)
-- ✗ **XLF** — negative news (-2)
 
 </details>
 
