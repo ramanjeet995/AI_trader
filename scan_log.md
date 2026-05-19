@@ -1,281 +1,27 @@
 # AI Trader — Daily Log
 
 What the robot saw and did each time it woke up. Newest at top.
-_Last updated: May 19, 2026 at 06:42 PM ET_
+_Last updated: May 19, 2026 at 12:55 PM ET_
 
-## May 19, 06:42 PM ET — Main scan
-
-**Market check:**
-- Market is going **up** 📈
-- Mood: calm (VIX 18)
-- Investors defensive
-- Currently holding: MU, PLTR
-
-**Money flowing into:** Crude Oil (+18%), Natural Gas (+9%), Energy (+8%)
-**Money flowing out of:** Silver (-5%), Materials (-5%), Gold (-5%)
-
-**Looked at 37 stocks:**
-- already holding: 2
-- earnings report too close: 1
-- not enough trading volume: 3
-- smart money quietly selling: 12
-- no buy setup today: 17
-- ✓ **2 stocks ready to trade**
-
-**Result:** Found 2 setup(s), but didn't buy any.
-
-- ✗ **Skipped XOM** — position/daily cap
-    - Plan: buy at $162.61, sell-stop at $160.07, target $167.69
-    - 238 shares, risking $605
-- ✗ **Skipped SNOW** — position/daily cap
-    - Plan: buy at $169.53, sell-stop at $163.62, target $181.35
-    - 229 shares, risking $1353
-
-<details><summary>Notable news today</summary>
-
-- ✓ **NVDA** — strong positive news (+2)
-    - _[~] Palantir, Robinhood Power GraniteShares' New Yield-Focused ETFs With Monthly Pay_
-- ✓ **AMD** — strong positive news (+2)
-    - _[~] AI Trade Faces Make-Or-Break Moment – Only Nvidia Earnings Will Tell_
-- ✓ **GOOGL** — strong positive news (+2)
-    - _[~] NVIDIA And Google Cloud Empower The Next Wave Of AI Builders_
-- ✗ **AMZN** — negative news (-3)
-    - [~] Bill Ackman's Alphabet Sale Has Cost $641 Million — Will His New Mag 7 Pick Save
-- ✗ **TSLA** — negative news (-3)
-    - [~] Palantir, Robinhood Power GraniteShares' New Yield-Focused ETFs With Monthly Pay
-
-</details>
-
----
-
-## May 19, 05:51 PM ET — Main scan
+## May 19, 12:55 PM ET — News check
 
 **Market check:**
 - Market is going **up** 📈
-- Mood: calm (VIX 18)
-- Investors defensive
-- Currently holding: MU, PLTR
-
-**Money flowing into:** Crude Oil (+18%), Natural Gas (+9%), Energy (+8%)
-**Money flowing out of:** Silver (-5%), Materials (-5%), Gold (-5%)
-
-**Looked at 37 stocks:**
-- already holding: 2
-- earnings report too close: 1
-- not enough trading volume: 3
-- smart money quietly selling: 12
-- no buy setup today: 17
-- ✓ **2 stocks ready to trade**
-
-**Result:** Found 2 setup(s), but didn't buy any.
-
-- ✗ **Skipped XOM** — position/daily cap
-    - Plan: buy at $162.61, sell-stop at $160.07, target $167.69
-    - 239 shares, risking $607
-- ✗ **Skipped SNOW** — position/daily cap
-    - Plan: buy at $169.53, sell-stop at $163.62, target $181.35
-    - 229 shares, risking $1353
-
-<details><summary>Notable news today</summary>
-
-- ✓ **NVDA** — strong positive news (+2)
-    - _[~] Palantir, Robinhood Power GraniteShares' New Yield-Focused ETFs With Monthly Pay_
-- ✓ **AMD** — strong positive news (+2)
-    - _[~] AI Trade Faces Make-Or-Break Moment – Only Nvidia Earnings Will Tell_
-- ✓ **GOOGL** — strong positive news (+2)
-    - _[~] NVIDIA And Google Cloud Empower The Next Wave Of AI Builders_
-- ✗ **AMZN** — negative news (-3)
-    - [~] Bill Ackman's Alphabet Sale Has Cost $641 Million — Will His New Mag 7 Pick Save
-- ✗ **TSLA** — negative news (-3)
-    - [~] Palantir, Robinhood Power GraniteShares' New Yield-Focused ETFs With Monthly Pay
-
-</details>
-
----
-
-## May 19, 05:09 PM ET — News check
-
-**Market check:**
-- Market is going **up** 📈
-
-**Result:** No trades today.
-<details><summary>Notable news today</summary>
-
-- ✓ **PANW** — strong positive news (+3)
-- ✓ **NVDA** — strong positive news (+2)
-- ✓ **AMD** — strong positive news (+2)
-- ✗ **META** — negative news (-2)
-- ✗ **MSFT** — negative news (-2)
-- ✗ **MARA** — negative news (-3)
-
-</details>
-
----
-
-## May 19, 04:22 PM ET — News check
-
-**Market check:**
-- Market is going **up** 📈
-
-**Result:** No trades today.
-<details><summary>Notable news today</summary>
-
-- ✓ **PANW** — strong positive news (+3)
-- ✓ **GOOGL** — strong positive news (+2)
-- ✓ **MSTR** — strong positive news (+2)
-- ✗ **AMZN** — negative news (-2)
-- ✗ **MSFT** — negative news (-2)
-- ✗ **META** — negative news (-3)
-
-</details>
-
----
-
-## May 19, 03:31 PM ET — News check
-
-**Market check:**
-- Market is going **up** 📈
-
-**Result:** No trades today.
-<details><summary>Notable news today</summary>
-
-- ✓ **PANW** — strong positive news (+3)
-- ✓ **NVDA** — strong positive news (+2)
-- ✓ **MSTR** — strong positive news (+2)
-- ✗ **AMZN** — negative news (-2)
-- ✗ **META** — negative news (-3)
-- ✗ **MSFT** — negative news (-3)
-
-</details>
-
----
-
-## May 19, 02:29 PM ET — News check
-
-**Market check:**
-- Market is going **up** 📈
-
-**Result:** No trades today.
-<details><summary>Notable news today</summary>
-
-- ✓ **NVDA** — strong positive news (+3)
-- ✓ **SNOW** — strong positive news (+3)
-- ✓ **PANW** — strong positive news (+3)
-- ✗ **SPY** — negative news (-2)
-- ✗ **QQQ** — negative news (-2)
-- ✗ **META** — negative news (-3)
-
-</details>
-
----
-
-## May 19, 01:55 PM ET — Big-news check
-
-**Market check:**
-- Market is going **up** 📈
-- Mood: calm (VIX 18)
 
 **Result:** ✓ Bought 1 stock(s).
 
-- ✓ **Bought MRVL** (gap +6.4%)
-    - Plan: buy at $0, sell-stop at $0, target $0
-    - 0 shares, risking $0
+- ✓ **Bought MU**
+    - Plan: buy at $712.19, sell-stop at $637.67, target $861.23
+    - 26 shares, risking $1938
 
----
-
-## May 19, 01:34 PM ET — News check
-
-**Market check:**
-- Market is going **up** 📈
-
-**Result:** No trades today.
 <details><summary>Notable news today</summary>
 
-- ✓ **NVDA** — strong positive news (+3)
 - ✓ **AVGO** — strong positive news (+3)
 - ✓ **SNOW** — strong positive news (+3)
+- ✓ **MSTR** — strong positive news (+3)
 - ✗ **AMZN** — negative news (-2)
-- ✗ **SPY** — negative news (-2)
+- ✗ **QQQ** — negative news (-2)
 - ✗ **META** — negative news (-3)
-
-</details>
-
----
-
-## May 19, 01:31 PM ET — Big-news check
-
-**Market check:**
-- Market is going **up** 📈
-- Mood: calm (VIX 18)
-
-**Result:** ✓ Bought 1 stock(s).
-
-- ✓ **Bought MRVL** (gap +6.9%)
-    - Plan: buy at $0, sell-stop at $0, target $0
-    - 0 shares, risking $0
-
----
-
-## May 19, 01:26 PM ET — Main scan
-
-**Market check:**
-- Market is going **up** 📈
-- Mood: calm (VIX 18)
-- Investors defensive
-- Currently holding: MU, PLTR
-
-**Money flowing into:** Crude Oil (+18%), Natural Gas (+8%), Energy (+8%)
-**Money flowing out of:** Silver (-4%), Materials (-5%), Gold (-5%)
-
-**Looked at 37 stocks:**
-- already holding: 2
-- earnings report too close: 1
-- not enough trading volume: 3
-- smart money quietly selling: 12
-- no buy setup today: 18
-- order flow or news was negative: 1
-
-**Result:** No trades today.
-<details><summary>Notable news today</summary>
-
-- ✓ **NVDA** — strong positive news (+3)
-    - _[~] Semi Mania Takes A Breather On China Fear And Seagate Comment, But Nvidia Can Re_
-- ✓ **SNOW** — strong positive news (+3)
-    - _[+] The Forgotten AI Trade Is Back: Software ETFs Outpace QQQ As ServiceNow, Salesfo_
-- ✓ **AVGO** — strong positive news (+2)
-    - _[~] Chamath Flags AI Compute Crunch: 8 Stocks To Watch_
-
-</details>
-
----
-
-## May 19, 12:38 PM ET — Main scan
-
-**Market check:**
-- Market is going **up** 📈
-- Mood: calm (VIX 18)
-- Investors defensive
-- Currently holding: PLTR
-
-**Money flowing into:** Crude Oil (+18%), Energy (+8%), Natural Gas (+7%)
-**Money flowing out of:** Silver (-4%), Materials (-5%), Gold (-5%)
-
-**Looked at 37 stocks:**
-- already holding: 1
-- earnings report too close: 1
-- not enough trading volume: 3
-- smart money quietly selling: 12
-- no buy setup today: 20
-
-**Result:** No trades today.
-<details><summary>Notable news today</summary>
-
-- ✓ **NVDA** — strong positive news (+2)
-    - _[~] Chamath Flags AI Compute Crunch: 8 Stocks To Watch_
-- ✓ **AVGO** — strong positive news (+2)
-    - _[~] Chamath Flags AI Compute Crunch: 8 Stocks To Watch_
-- ✓ **MRVL** — strong positive news (+2)
-    - _[~] AMD Takes A Piece, Amazon Doubles Down: The New Marvell Mania_
 
 </details>
 
@@ -1432,6 +1178,275 @@ _Last updated: May 19, 2026 at 06:42 PM ET_
     - _[~] Jim Cramer Said 'Smell' — AI Stocks Heard 'Sell'_
 - ✓ **AMD** — strong positive news (+3)
     - _[~] Advanced Micro Devices Reports 13F Has Holdings Of 5,714,285 Absci Corporation S_
+
+</details>
+
+---
+
+## May 12, 08:33 PM ET — Main scan
+
+**Market check:**
+- Market is going **up** 📈
+- Mood: calm (VIX 18)
+- Investors unsure
+- ⚠ **Important economic news soon — PPI releases in 11h 56m**
+
+**Looked at 33 stocks:**
+- not enough trading volume: 2
+- smart money quietly selling: 9
+- no buy setup today: 22
+
+**Result:** No trades today.
+<details><summary>Notable news today</summary>
+
+- ✓ **NVDA** — strong positive news (+3)
+    - _[~] Hot Inflation Data; Treasury Auction Test Ahead; Trump's Iran Comment Draws Atte_
+- ✓ **AVGO** — strong positive news (+3)
+    - _[~] Jim Cramer Said 'Smell' — AI Stocks Heard 'Sell'_
+- ✓ **AMD** — strong positive news (+3)
+    - _[~] Advanced Micro Devices Reports 13F Has Holdings Of 5,714,285 Absci Corporation S_
+
+</details>
+
+---
+
+## May 12, 08:18 PM ET — Main scan
+
+**Market check:**
+- Market is going **up** 📈
+- Mood: calm (VIX 18)
+- Investors unsure
+- ⚠ **Important economic news soon — PPI releases in 12h 11m**
+
+**Looked at 33 stocks:**
+- not enough trading volume: 2
+- smart money quietly selling: 9
+- no buy setup today: 22
+
+**Result:** No trades today.
+<details><summary>Notable news today</summary>
+
+- ✓ **NVDA** — strong positive news (+3)
+    - _[~] Hot Inflation Data; Treasury Auction Test Ahead; Trump's Iran Comment Draws Atte_
+- ✓ **AVGO** — strong positive news (+3)
+    - _[~] Jim Cramer Said 'Smell' — AI Stocks Heard 'Sell'_
+- ✓ **AMD** — strong positive news (+3)
+    - _[~] Advanced Micro Devices Reports 13F Has Holdings Of 5,714,285 Absci Corporation S_
+
+</details>
+
+---
+
+## May 12, 07:55 PM ET — Main scan
+
+**Market check:**
+- Market is going **up** 📈
+- Mood: a bit nervous (VIX 18)
+- Investors confident
+- ⚠ **Important economic news soon — PPI releases in 12h 34m**
+
+**Money flowing into:** Crude Oil (+18%), Technology (+17%), Silver (+9%)
+**Money flowing out of:** Healthcare (-1%), Gold (-2%), Utilities (-2%)
+
+**Looked at 59 stocks:**
+- not enough trading volume: 13
+- smart money quietly selling: 14
+- no buy setup today: 32
+
+**Result:** No trades today.
+<details><summary>Notable news today</summary>
+
+- ✓ **MSFT** — strong positive news (+3)
+    - _[~] 'Anthropic in Talks to Buy Developer Tools Startup Used by OpenAI, Google'- The _
+- ✓ **NVDA** — strong positive news (+3)
+    - _[~] Hot Inflation Data; Treasury Auction Test Ahead; Trump's Iran Comment Draws Atte_
+- ✓ **AMD** — strong positive news (+3)
+    - _[~] Advanced Micro Devices Reports 13F Has Holdings Of 5,714,285 Absci Corporation S_
+
+</details>
+
+---
+
+## May 12, 11:51 PM ET — Main scan
+
+**Market check:**
+- Market is going **up** 📈
+- Mood: a bit nervous (VIX 18)
+- Investors confident
+- ⚠ **Important economic news soon — PPI releases in 12h 38m**
+
+**Money flowing into:** Crude Oil (+18%), Technology (+17%), Silver (+9%)
+**Money flowing out of:** Healthcare (-1%), Gold (-2%), Utilities (-2%)
+
+**Looked at 59 stocks:**
+- not enough trading volume: 13
+- smart money quietly selling: 14
+- no buy setup today: 32
+
+**Result:** No trades today.
+<details><summary>Notable news today</summary>
+
+- ✓ **MSFT** — strong positive news (+3)
+    - _[~] 'Anthropic in Talks to Buy Developer Tools Startup Used by OpenAI, Google'- The _
+- ✓ **NVDA** — strong positive news (+3)
+    - _[~] Hot Inflation Data; Treasury Auction Test Ahead; Trump's Iran Comment Draws Atte_
+- ✓ **AMD** — strong positive news (+3)
+    - _[~] Advanced Micro Devices Reports 13F Has Holdings Of 5,714,285 Absci Corporation S_
+
+</details>
+
+---
+
+## May 12, 11:43 PM ET — Main scan
+
+**Market check:**
+- Market is going **up** 📈
+- Mood: a bit nervous (VIX 18)
+- Investors confident
+- ⚠ **Important economic news soon — PPI releases in 12h 46m**
+
+**Money flowing into:** Crude Oil (+18%), Technology (+17%), Silver (+9%)
+**Money flowing out of:** Healthcare (-1%), Gold (-2%), Utilities (-2%)
+
+**Looked at 59 stocks:**
+- not enough trading volume: 13
+- smart money quietly selling: 14
+- no buy setup today: 32
+
+**Result:** No trades today.
+<details><summary>Notable news today</summary>
+
+- ✓ **MSFT** — strong positive news (+3)
+    - _[~] 'Anthropic in Talks to Buy Developer Tools Startup Used by OpenAI, Google'- The _
+- ✓ **NVDA** — strong positive news (+3)
+    - _[~] Hot Inflation Data; Treasury Auction Test Ahead; Trump's Iran Comment Draws Atte_
+- ✓ **AMD** — strong positive news (+3)
+    - _[~] Advanced Micro Devices Reports 13F Has Holdings Of 5,714,285 Absci Corporation S_
+
+</details>
+
+---
+
+## May 12, 11:25 PM ET — Main scan
+
+**Market check:**
+- Market is going **up** 📈
+- Mood: a bit nervous (VIX 18)
+- Investors confident
+
+**Money flowing into:** Crude Oil (+18%), Technology (+17%), Silver (+9%)
+**Money flowing out of:** Healthcare (-1%), Gold (-2%), Utilities (-2%)
+
+**Looked at 59 stocks:**
+- not enough trading volume: 13
+- smart money quietly selling: 14
+- no buy setup today: 32
+
+**Result:** No trades today.
+<details><summary>Notable news today</summary>
+
+- ✓ **MSFT** — strong positive news (+3)
+    - _[~] 'Anthropic in Talks to Buy Developer Tools Startup Used by OpenAI, Google'- The _
+- ✓ **NVDA** — strong positive news (+3)
+    - _[~] Hot Inflation Data; Treasury Auction Test Ahead; Trump's Iran Comment Draws Atte_
+- ✓ **AMD** — strong positive news (+3)
+    - _[~] Advanced Micro Devices Reports 13F Has Holdings Of 5,714,285 Absci Corporation S_
+
+</details>
+
+---
+
+## May 12, 10:39 PM ET — Main scan
+
+**Market check:**
+- Market is going **up** 📈
+- Mood: a bit nervous (VIX 18)
+- Investors confident
+
+**Money flowing into:** Crude Oil (+18%), Technology (+17%), Silver (+9%)
+**Money flowing out of:** Healthcare (-1%), Gold (-2%), Utilities (-2%)
+
+**Looked at 59 stocks:**
+- not enough trading volume: 50
+- smart money quietly selling: 3
+- no buy setup today: 6
+
+**Result:** No trades today.
+<details><summary>Notable news today</summary>
+
+- ✓ **AMD** — strong positive news (+3)
+    - _[~] Advanced Micro Devices Reports 13F Has Holdings Of 5,714,285 Absci Corporation S_
+- ✓ **MSFT** — strong positive news (+2)
+    - _[~] 'Anthropic in Talks to Buy Developer Tools Startup Used by OpenAI, Google'- The _
+- ✓ **CRM** — strong positive news (+2)
+    - _[~] Citigroup Maintains Neutral on Salesforce, Lowers Price Target to $188_
+
+</details>
+
+---
+
+## May 12, 09:46 PM ET — Main scan
+
+**Market check:**
+- Market is going **up** 📈
+- Mood: a bit nervous (VIX 18)
+- Investors confident
+
+**Money flowing into:** Crude Oil (+18%), Technology (+17%), Silver (+9%)
+**Money flowing out of:** Healthcare (-1%), Gold (-2%), Utilities (-2%)
+
+**Looked at 59 stocks:**
+- not enough trading volume: 50
+- smart money quietly selling: 3
+- no buy setup today: 6
+
+**Result:** No trades today.
+<details><summary>Notable news today</summary>
+
+- ✓ **AMD** — strong positive news (+3)
+    - _[~] Advanced Micro Devices Reports 13F Has Holdings Of 5,714,285 Absci Corporation S_
+- ✓ **MSFT** — strong positive news (+2)
+    - _[~] 'Anthropic In Talks to Raise $30B at $900B Valuation'- Bloomberg_
+- ✓ **CRM** — strong positive news (+2)
+    - _[~] Citigroup Maintains Neutral on Salesforce, Lowers Price Target to $188_
+
+</details>
+
+---
+
+## May 12, 09:10 PM ET — News check
+
+**Market check:**
+- Market is going **up** 📈
+
+**Result:** No trades today.
+<details><summary>Notable news today</summary>
+
+- ✓ **AMD** — strong positive news (+3)
+- ✓ **ORCL** — strong positive news (+3)
+- ✓ **MSFT** — strong positive news (+2)
+- ✗ **AVGO** — negative news (-2)
+- ✗ **GOOGL** — negative news (-2)
+- ✗ **XLF** — negative news (-2)
+
+</details>
+
+---
+
+## May 12, 08:23 PM ET — News check
+
+**Market check:**
+- Market is going **up** 📈
+
+**Result:** No trades today.
+<details><summary>Notable news today</summary>
+
+- ✓ **AMD** — strong positive news (+3)
+- ✓ **ORCL** — strong positive news (+3)
+- ✓ **MSFT** — strong positive news (+2)
+- ✗ **AVGO** — negative news (-2)
+- ✗ **GOOGL** — negative news (-2)
+- ✗ **SPY** — negative news (-2)
 
 </details>
 
