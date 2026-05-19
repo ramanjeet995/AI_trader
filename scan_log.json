@@ -1,315 +1,5 @@
 [
   {
-    "timestamp": "2026-05-12T19:25:28.966535",
-    "mode": "NEWS",
-    "spy_regime": "BULL",
-    "safety_block": "",
-    "signals": [],
-    "alerts": [],
-    "news_snapshot": [
-      {
-        "symbol": "AMD",
-        "sentiment": "POSITIVE",
-        "score": 3
-      },
-      {
-        "symbol": "ORCL",
-        "sentiment": "POSITIVE",
-        "score": 3
-      },
-      {
-        "symbol": "MSFT",
-        "sentiment": "POSITIVE",
-        "score": 2
-      },
-      {
-        "symbol": "META",
-        "sentiment": "NEUTRAL",
-        "score": 1
-      },
-      {
-        "symbol": "CRM",
-        "sentiment": "NEUTRAL",
-        "score": 1
-      },
-      {
-        "symbol": "V",
-        "sentiment": "NEUTRAL",
-        "score": 1
-      },
-      {
-        "symbol": "LLY",
-        "sentiment": "NEUTRAL",
-        "score": 1
-      },
-      {
-        "symbol": "JNJ",
-        "sentiment": "NEUTRAL",
-        "score": 1
-      },
-      {
-        "symbol": "XOM",
-        "sentiment": "NEUTRAL",
-        "score": 1
-      },
-      {
-        "symbol": "SLB",
-        "sentiment": "NEUTRAL",
-        "score": 1
-      },
-      {
-        "symbol": "SLV",
-        "sentiment": "NEUTRAL",
-        "score": 1
-      },
-      {
-        "symbol": "AA",
-        "sentiment": "NEUTRAL",
-        "score": 1
-      },
-      {
-        "symbol": "AMZN",
-        "sentiment": "NEUTRAL",
-        "score": 0
-      },
-      {
-        "symbol": "TSLA",
-        "sentiment": "NEUTRAL",
-        "score": 0
-      },
-      {
-        "symbol": "ADBE",
-        "sentiment": "NEUTRAL",
-        "score": 0
-      },
-      {
-        "symbol": "NOW",
-        "sentiment": "NEUTRAL",
-        "score": 0
-      },
-      {
-        "symbol": "JPM",
-        "sentiment": "NEUTRAL",
-        "score": 0
-      },
-      {
-        "symbol": "GS",
-        "sentiment": "NEUTRAL",
-        "score": 0
-      },
-      {
-        "symbol": "BAC",
-        "sentiment": "NEUTRAL",
-        "score": 0
-      },
-      {
-        "symbol": "MA",
-        "sentiment": "NEUTRAL",
-        "score": 0
-      },
-      {
-        "symbol": "AXP",
-        "sentiment": "NEUTRAL",
-        "score": 0
-      },
-      {
-        "symbol": "UNH",
-        "sentiment": "NEUTRAL",
-        "score": 0
-      },
-      {
-        "symbol": "ABBV",
-        "sentiment": "NEUTRAL",
-        "score": 0
-      },
-      {
-        "symbol": "MRK",
-        "sentiment": "NEUTRAL",
-        "score": 0
-      },
-      {
-        "symbol": "COST",
-        "sentiment": "NEUTRAL",
-        "score": 0
-      },
-      {
-        "symbol": "HD",
-        "sentiment": "NEUTRAL",
-        "score": 0
-      },
-      {
-        "symbol": "NKE",
-        "sentiment": "NEUTRAL",
-        "score": 0
-      },
-      {
-        "symbol": "MCD",
-        "sentiment": "NEUTRAL",
-        "score": 0
-      },
-      {
-        "symbol": "SBUX",
-        "sentiment": "NEUTRAL",
-        "score": 0
-      },
-      {
-        "symbol": "CVX",
-        "sentiment": "NEUTRAL",
-        "score": 0
-      },
-      {
-        "symbol": "OXY",
-        "sentiment": "NEUTRAL",
-        "score": 0
-      },
-      {
-        "symbol": "DIA",
-        "sentiment": "NEUTRAL",
-        "score": 0
-      },
-      {
-        "symbol": "GDX",
-        "sentiment": "NEUTRAL",
-        "score": 0
-      },
-      {
-        "symbol": "GDXJ",
-        "sentiment": "NEUTRAL",
-        "score": 0
-      },
-      {
-        "symbol": "UNG",
-        "sentiment": "NEUTRAL",
-        "score": 0
-      },
-      {
-        "symbol": "DBO",
-        "sentiment": "NEUTRAL",
-        "score": 0
-      },
-      {
-        "symbol": "FCX",
-        "sentiment": "NEUTRAL",
-        "score": 0
-      },
-      {
-        "symbol": "NEM",
-        "sentiment": "NEUTRAL",
-        "score": 0
-      },
-      {
-        "symbol": "GOLD",
-        "sentiment": "NEUTRAL",
-        "score": 0
-      },
-      {
-        "symbol": "CLF",
-        "sentiment": "NEUTRAL",
-        "score": 0
-      },
-      {
-        "symbol": "NVDA",
-        "sentiment": "NEUTRAL",
-        "score": -1
-      },
-      {
-        "symbol": "QQQ",
-        "sentiment": "NEUTRAL",
-        "score": -1
-      },
-      {
-        "symbol": "IWM",
-        "sentiment": "NEUTRAL",
-        "score": -1
-      },
-      {
-        "symbol": "XLK",
-        "sentiment": "NEUTRAL",
-        "score": -1
-      },
-      {
-        "symbol": "XLE",
-        "sentiment": "NEUTRAL",
-        "score": -1
-      },
-      {
-        "symbol": "XLV",
-        "sentiment": "NEUTRAL",
-        "score": -1
-      },
-      {
-        "symbol": "XLI",
-        "sentiment": "NEUTRAL",
-        "score": -1
-      },
-      {
-        "symbol": "XLB",
-        "sentiment": "NEUTRAL",
-        "score": -1
-      },
-      {
-        "symbol": "XLU",
-        "sentiment": "NEUTRAL",
-        "score": -1
-      },
-      {
-        "symbol": "XLRE",
-        "sentiment": "NEUTRAL",
-        "score": -1
-      },
-      {
-        "symbol": "GLD",
-        "sentiment": "NEUTRAL",
-        "score": -1
-      },
-      {
-        "symbol": "AVGO",
-        "sentiment": "NEGATIVE",
-        "score": -2
-      },
-      {
-        "symbol": "GOOGL",
-        "sentiment": "NEGATIVE",
-        "score": -2
-      },
-      {
-        "symbol": "XLF",
-        "sentiment": "NEGATIVE",
-        "score": -2
-      },
-      {
-        "symbol": "USO",
-        "sentiment": "NEGATIVE",
-        "score": -2
-      },
-      {
-        "symbol": "AAPL",
-        "sentiment": "NEGATIVE",
-        "score": -3
-      },
-      {
-        "symbol": "QCOM",
-        "sentiment": "NEGATIVE",
-        "score": -3
-      },
-      {
-        "symbol": "INTC",
-        "sentiment": "NEGATIVE",
-        "score": -3
-      },
-      {
-        "symbol": "TSM",
-        "sentiment": "NEGATIVE",
-        "score": -3
-      },
-      {
-        "symbol": "SPY",
-        "sentiment": "NEGATIVE",
-        "score": -3
-      }
-    ]
-  },
-  {
     "timestamp": "2026-05-12T20:23:34.779859",
     "mode": "NEWS",
     "spy_regime": "BULL",
@@ -10211,6 +9901,200 @@
         "symbol": "MSFT",
         "sentiment": "STRONG_NEGATIVE",
         "score": -4
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-05-19T12:38:36.787855-04:00",
+    "mode": "FULL",
+    "spy_regime": "BULL",
+    "posture": "RISK-OFF",
+    "vix": 17.81999969482422,
+    "spy_atr_pct": 1.04,
+    "in_window": false,
+    "market_open": true,
+    "data_feed": "iex",
+    "yfinance_patched": "0/49",
+    "sentiment_backend": "finbert",
+    "earnings_cache_size": 57,
+    "macro_blackout": false,
+    "macro_reason": "",
+    "next_macro_event": {
+      "name": "FOMC",
+      "datetime": "2026-06-17T14:00:00-04:00",
+      "days_away": 29,
+      "hours_away": 697.4
+    },
+    "open_positions": [
+      "PLTR"
+    ],
+    "new_today": 1,
+    "filter_stats": {
+      "scanned": 37,
+      "no_data": 0,
+      "held": 1,
+      "market_volatile": 0,
+      "earnings_blackout": 1,
+      "failed_filters": 3,
+      "obv_distribution": 12,
+      "no_strategy_signal": 20,
+      "of_or_sent_reject": 0,
+      "sector_misalign": 0,
+      "passed_all": 0
+    },
+    "sectors_top3": [
+      {
+        "ticker": "USO",
+        "sector": "Crude Oil",
+        "ret_20d": 17.57,
+        "rs": 5.35,
+        "obv": "ACCUMULATION",
+        "above_ema": "True",
+        "score": 56.54
+      },
+      {
+        "ticker": "XLE",
+        "sector": "Energy",
+        "ret_20d": 8.16,
+        "rs": 2.49,
+        "obv": "ACCUMULATION",
+        "above_ema": "True",
+        "score": 27.88
+      },
+      {
+        "ticker": "UNG",
+        "sector": "Natural Gas",
+        "ret_20d": 7.31,
+        "rs": 2.23,
+        "obv": "ACCUMULATION",
+        "above_ema": "True",
+        "score": 25.26
+      }
+    ],
+    "sectors_bottom3": [
+      {
+        "ticker": "SLV",
+        "sector": "Silver",
+        "ret_20d": -4.1,
+        "rs": -1.25,
+        "obv": "STEALTH_BUY",
+        "above_ema": "False",
+        "score": -11.49
+      },
+      {
+        "ticker": "XLB",
+        "sector": "Materials",
+        "ret_20d": -4.9,
+        "rs": -1.49,
+        "obv": "DISTRIBUTION",
+        "above_ema": "False",
+        "score": -17.93
+      },
+      {
+        "ticker": "GLD",
+        "sector": "Gold",
+        "ret_20d": -4.9,
+        "rs": -1.49,
+        "obv": "DISTRIBUTION",
+        "above_ema": "False",
+        "score": -17.94
+      }
+    ],
+    "discovered": [],
+    "discovered_watchlist": [
+      "AGYS"
+    ],
+    "signals": [],
+    "top_news": [
+      {
+        "symbol": "NVDA",
+        "sentiment": "POSITIVE",
+        "score": 2,
+        "headlines": [
+          "[~] Chamath Flags AI Compute Crunch: 8 Stocks To Watch",
+          "[~] Why A 5.18% Treasury Yield Could Matter More Than Nvidia Earnings"
+        ]
+      },
+      {
+        "symbol": "AVGO",
+        "sentiment": "POSITIVE",
+        "score": 2,
+        "headlines": [
+          "[~] Chamath Flags AI Compute Crunch: 8 Stocks To Watch",
+          "[~] What's Going On With Broadcom Stock Tuesday?"
+        ]
+      },
+      {
+        "symbol": "MRVL",
+        "sentiment": "POSITIVE",
+        "score": 2,
+        "headlines": [
+          "[~] AMD Takes A Piece, Amazon Doubles Down: The New Marvell Mania",
+          "[+] Evercore ISI Group Maintains Outperform on Marvell Technology, Raises Price Targ"
+        ]
+      },
+      {
+        "symbol": "GOOGL",
+        "sentiment": "POSITIVE",
+        "score": 2,
+        "headlines": [
+          "[~] Chamath Flags AI Compute Crunch: 8 Stocks To Watch",
+          "[+] Apple Unveils AI Push Beyond Siri With Smart Writing, Accessibility Features"
+        ]
+      },
+      {
+        "symbol": "NFLX",
+        "sentiment": "POSITIVE",
+        "score": 2,
+        "headlines": [
+          "[+] Netflix Defies Market Sell-Off As BofA Reaffirms Bullish Outlook, NFL Streaming ",
+          "[~] B of A Securities Reiterates Buy on Netflix, Maintains $125 Price Target"
+        ]
+      },
+      {
+        "symbol": "SNOW",
+        "sentiment": "POSITIVE",
+        "score": 2,
+        "headlines": [
+          "[+] Waystar, Bakkt, Snowflake And Other Big Stocks Moving Higher On Tuesday",
+          "[~] Citizens Reiterates Market Outperform on Snowflake, Maintains $325 Price Target"
+        ]
+      },
+      {
+        "symbol": "MU",
+        "sentiment": "STRONG_POSITIVE",
+        "score": 5,
+        "headlines": [
+          "[~] Chamath Flags AI Compute Crunch: 8 Stocks To Watch",
+          "[+] Micron, SanDisk Stocks Meet The Bond Time Bomb: 30-Year Yields Hit 19-Year Highs"
+        ]
+      },
+      {
+        "symbol": "CRWD",
+        "sentiment": "STRONG_POSITIVE",
+        "score": 5,
+        "headlines": [
+          "[~] CrowdStrike Shares Hit All-Time High: What's Driving The Move?",
+          "[~] TD Cowen Maintains Buy on CrowdStrike Holdings, Raises Price Target to $625"
+        ]
+      },
+      {
+        "symbol": "AGYS",
+        "sentiment": "STRONG_POSITIVE",
+        "score": 5,
+        "headlines": [
+          "[~] Gold Falls 1%; Amer Sports Earnings Top Views",
+          "[+] Waystar, Bakkt, Snowflake And Other Big Stocks Moving Higher On Tuesday"
+        ]
+      },
+      {
+        "symbol": "AMD",
+        "sentiment": "STRONG_POSITIVE",
+        "score": 4,
+        "headlines": [
+          "[~] Chamath Flags AI Compute Crunch: 8 Stocks To Watch",
+          "[~] $1000 Invested In Advanced Micro Devices 15 Years Ago Would Be Worth This Much T"
+        ]
       }
     ]
   }
