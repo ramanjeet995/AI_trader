@@ -23,6 +23,8 @@ WATCHLIST = [
     "XOM", "OXY", "FANG", "SLB",
     # Precious metals / commodities
     "NEM", "GOLD", "FCX", "GDX",
+    # Space / SpaceX supply chain (IPO hype play)
+    "RDW",
     # Speculative / crypto-adjacent (high volatility)
     "COIN", "MARA", "RIOT", "MSTR",
     # Index proxies for regime detection only
@@ -151,6 +153,8 @@ TICKER_SECTOR = {
     "FCX": "Materials", "CLF": "Materials", "AA": "Materials", "XLB": "Materials",
     "NEM": "Metals", "GOLD": "Metals", "GLD": "Metals", "SLV": "Metals",
     "GDX": "Metals", "GDXJ": "Metals",
+    # Space / Defense
+    "RDW": "Space",
     # Industrials / Utilities / Real Estate
     "XLI": "Industrials", "XLU": "Utilities", "XLRE": "Real Estate",
     # Broad index
