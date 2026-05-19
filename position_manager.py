@@ -121,17 +121,35 @@ def _get_atr_and_sma20(symbol, data_client, period: int = 14):
 
 
 def _find_protective_stop(symbol, trade_client):
-    """Find the active stop-loss order for this symbol (from bracket child)."""
+    """Find the active stop-loss order for this symbol (from bracket or OTO child).
+
+    Bracket leg stops show as HELD (not OPEN) until the take-profit leg is
+    canceled, so we must search both OPEN and ALL statuses, and also check
+    nested legs on parent orders.
+    """
     try:
-        orders = trade_client.get_orders(GetOrdersRequest(
-            status=QueryOrderStatus.OPEN, symbols=[symbol], limit=20
-        ))
-        for o in orders:
-            type_str = str(o.type).lower()
-            side_str = str(o.side).lower()
-            # Looking for SELL STOP or SELL STOP_LIMIT (the protective leg)
-            if ("stop" in type_str) and "sell" in side_str:
-                return o
+        # First: check OPEN orders (works for OTO stop children)
+        for status in [QueryOrderStatus.OPEN, QueryOrderStatus.ALL]:
+            orders = trade_client.get_orders(GetOrdersRequest(
+                status=status, symbols=[symbol], limit=20, nested=True
+            ))
+            for o in orders:
+                # Check the order itself
+                type_str = str(o.type).lower()
+                side_str = str(o.side).lower()
+                stat_str = str(o.status).lower()
+                if ("stop" in type_str) and "sell" in side_str and stat_str in ("new", "held", "accepted"):
+                    return o
+                # Check nested legs (bracket children)
+                if hasattr(o, 'legs') and o.legs:
+                    for leg in o.legs:
+                        leg_type = str(leg.type).lower()
+                        leg_side = str(leg.side).lower()
+                        leg_stat = str(leg.status).lower()
+                        if ("stop" in leg_type) and "sell" in leg_side and leg_stat in ("new", "held", "accepted"):
+                            return leg
+            # If found in OPEN, no need to check ALL
+            break
         return None
     except Exception:
         return None
