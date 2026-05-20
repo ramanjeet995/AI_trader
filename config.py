@@ -15,16 +15,22 @@ PROFILE: AGGRESSIVE ($5k account)
 WATCHLIST = [
     # AI / Semiconductors (the strongest secular trend)
     "NVDA", "AVGO", "AMD", "ARM", "MU", "SMCI", "MRVL",
+    # AI infrastructure / data center / cooling
+    "DELL", "HPE", "VRT", "CLS", "CEG",
     # Mega-cap growth
     "META", "GOOGL", "AMZN", "TSLA", "NFLX", "MSFT", "AAPL",
-    # Software / Cloud / Networking high-beta
-    "CRM", "NOW", "CRWD", "PLTR", "SHOP", "SNOW", "CSCO", "PANW", "ANET",
+    # Software / Cloud / Networking / Voice AI high-beta
+    "CRM", "NOW", "CRWD", "PLTR", "SHOP", "SNOW", "CSCO", "PANW", "ANET", "SOUN",
     # Energy momentum
     "XOM", "OXY", "FANG", "SLB",
     # Precious metals / commodities
     "NEM", "GOLD", "FCX", "GDX",
     # Space / SpaceX supply chain (IPO hype play — June 12, 2026)
     "RDW", "RKLB", "ASTS", "LUNR", "PL",
+    # Quantum computing (extreme volatility, 10%+ daily swings)
+    "IONQ", "RGTI", "QBTS",
+    # Defense / drones
+    "KTOS",
     # Speculative / crypto-adjacent (high volatility)
     "COIN", "MARA", "RIOT", "MSTR",
     # Index proxies for regime detection only
@@ -153,7 +159,15 @@ TICKER_SECTOR = {
     "FCX": "Materials", "CLF": "Materials", "AA": "Materials", "XLB": "Materials",
     "NEM": "Metals", "GOLD": "Metals", "GLD": "Metals", "SLV": "Metals",
     "GDX": "Metals", "GDXJ": "Metals",
-    # Space / Defense
+    # AI Infrastructure / Data Center
+    "DELL": "Tech", "HPE": "Tech", "VRT": "Tech", "CLS": "Tech", "SOUN": "Tech",
+    # Nuclear / Energy
+    "CEG": "Energy",
+    # Quantum Computing
+    "IONQ": "Quantum", "RGTI": "Quantum", "QBTS": "Quantum",
+    # Defense
+    "KTOS": "Defense",
+    # Space
     "RDW": "Space", "RKLB": "Space", "ASTS": "Space", "LUNR": "Space", "PL": "Space",
     # Industrials / Utilities / Real Estate
     "XLI": "Industrials", "XLU": "Utilities", "XLRE": "Real Estate",
