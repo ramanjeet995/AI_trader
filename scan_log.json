@@ -1,193 +1,5 @@
 [
   {
-    "timestamp": "2026-05-12T23:43:13.495620",
-    "mode": "FULL",
-    "spy_regime": "BULL",
-    "posture": "RISK-ON",
-    "vix": 18.3799991607666,
-    "spy_atr_pct": 1.01,
-    "in_window": true,
-    "market_open": false,
-    "data_feed": "iex",
-    "yfinance_patched": "0/60",
-    "sentiment_backend": "finbert",
-    "earnings_cache_size": 40,
-    "macro_blackout": true,
-    "macro_reason": "PPI releases in 12h 46m",
-    "next_macro_event": {
-      "name": "FOMC",
-      "datetime": "2026-06-17T14:00:00-04:00",
-      "days_away": 35,
-      "hours_away": 858.3
-    },
-    "open_positions": [],
-    "new_today": 0,
-    "filter_stats": {
-      "scanned": 59,
-      "no_data": 0,
-      "held": 0,
-      "market_volatile": 0,
-      "earnings_blackout": 0,
-      "failed_filters": 13,
-      "obv_distribution": 14,
-      "no_strategy_signal": 32,
-      "of_or_sent_reject": 0,
-      "sector_misalign": 0,
-      "passed_all": 0
-    },
-    "sectors_top3": [
-      {
-        "ticker": "USO",
-        "sector": "Crude Oil",
-        "ret_20d": 17.71,
-        "rs": 3.22,
-        "obv": "ACCUMULATION",
-        "above_ema": "True",
-        "score": 35.24
-      },
-      {
-        "ticker": "XLK",
-        "sector": "Technology",
-        "ret_20d": 16.63,
-        "rs": 3.03,
-        "obv": "ACCUMULATION",
-        "above_ema": "True",
-        "score": 33.28
-      },
-      {
-        "ticker": "SLV",
-        "sector": "Silver",
-        "ret_20d": 9.3,
-        "rs": 1.69,
-        "obv": "ACCUMULATION",
-        "above_ema": "True",
-        "score": 19.94
-      }
-    ],
-    "sectors_bottom3": [
-      {
-        "ticker": "XLV",
-        "sector": "Healthcare",
-        "ret_20d": -1.32,
-        "rs": -0.24,
-        "obv": "DISTRIBUTION",
-        "above_ema": "True",
-        "score": -3.4
-      },
-      {
-        "ticker": "GLD",
-        "sector": "Gold",
-        "ret_20d": -1.7,
-        "rs": -0.31,
-        "obv": "DISTRIBUTION",
-        "above_ema": "True",
-        "score": -4.1
-      },
-      {
-        "ticker": "XLU",
-        "sector": "Utilities",
-        "ret_20d": -1.76,
-        "rs": -0.32,
-        "obv": "DISTRIBUTION",
-        "above_ema": "False",
-        "score": -6.2
-      }
-    ],
-    "signals": [],
-    "top_news": [
-      {
-        "symbol": "MSFT",
-        "sentiment": "POSITIVE",
-        "score": 3,
-        "headlines": [
-          "[~] 'Anthropic in Talks to Buy Developer Tools Startup Used by OpenAI, Google'- The ",
-          "[~] 'Anthropic In Talks to Raise $30B at $900B Valuation'- Bloomberg"
-        ]
-      },
-      {
-        "symbol": "NVDA",
-        "sentiment": "POSITIVE",
-        "score": 3,
-        "headlines": [
-          "[~] Hot Inflation Data; Treasury Auction Test Ahead; Trump's Iran Comment Draws Atte",
-          "[~] Jim Cramer Said 'Smell' \u2014 AI Stocks Heard 'Sell'"
-        ]
-      },
-      {
-        "symbol": "AMD",
-        "sentiment": "POSITIVE",
-        "score": 3,
-        "headlines": [
-          "[~] Advanced Micro Devices Reports 13F Has Holdings Of 5,714,285 Absci Corporation S",
-          "[~] Jim Cramer Said 'Smell' \u2014 AI Stocks Heard 'Sell'"
-        ]
-      },
-      {
-        "symbol": "AVGO",
-        "sentiment": "POSITIVE",
-        "score": 3,
-        "headlines": [
-          "[~] Jim Cramer Said 'Smell' \u2014 AI Stocks Heard 'Sell'",
-          "[+] Citigroup Maintains Buy on Broadcom, Raises Price Target to $500"
-        ]
-      },
-      {
-        "symbol": "TSM",
-        "sentiment": "POSITIVE",
-        "score": 3,
-        "headlines": [
-          "[+] Double Mania Drives Market; Bombing a Love Tap? Strong Jobs Report Raises Specte",
-          "[+] Qualcomm Stock Sinks 11%: AI Momentum Hits Profit-Taking Wall Despite $20 Billio"
-        ]
-      },
-      {
-        "symbol": "META",
-        "sentiment": "POSITIVE",
-        "score": 3,
-        "headlines": [
-          "[~] Hot Inflation Data; Treasury Auction Test Ahead; Trump's Iran Comment Draws Atte",
-          "[~] 'Meta offers rival AI chatbots free access to WhatsApp for a month' - Reuters"
-        ]
-      },
-      {
-        "symbol": "ORCL",
-        "sentiment": "POSITIVE",
-        "score": 3,
-        "headlines": [
-          "[+] Oppenheimer Maintains Outperform on Oracle, Raises Price Target to $235",
-          "[~] 10 Information Technology Stocks Whale Activity In Today's Session"
-        ]
-      },
-      {
-        "symbol": "AAPL",
-        "sentiment": "POSITIVE",
-        "score": 2,
-        "headlines": [
-          "[~] 'Apple Plans Customizable Camera for Pros, Siri Design Changes in iOS 27' - Bloo",
-          "[~] Hot Inflation Data; Treasury Auction Test Ahead; Trump's Iran Comment Draws Atte"
-        ]
-      },
-      {
-        "symbol": "INTC",
-        "sentiment": "POSITIVE",
-        "score": 2,
-        "headlines": [
-          "[~] SanDisk, Micron Stocks Plummet As Korea Shockwave Batters The Great Memory Boom",
-          "[~] Nasdaq 100 Dips On Hot CPI, Sandisk And Micron Tumble 9%: Stock Market Today"
-        ]
-      },
-      {
-        "symbol": "AMZN",
-        "sentiment": "POSITIVE",
-        "score": 2,
-        "headlines": [
-          "[~] 'Anthropic in Talks to Buy Developer Tools Startup Used by OpenAI, Google'- The ",
-          "[~] 'Anthropic In Talks to Raise $30B at $900B Valuation'- Bloomberg"
-        ]
-      }
-    ]
-  },
-  {
     "timestamp": "2026-05-12T23:51:22.013291",
     "mode": "FULL",
     "spy_regime": "BULL",
@@ -9913,5 +9725,202 @@
       }
     ],
     "cpu_temp": "82.3\u00b0C"
+  },
+  {
+    "timestamp": "2026-05-20T12:35:40.712908-04:00",
+    "mode": "FULL",
+    "spy_regime": "BULL",
+    "posture": "RISK-OFF",
+    "vix": 18.059999465942383,
+    "spy_atr_pct": 1.04,
+    "in_window": false,
+    "market_open": true,
+    "data_feed": "iex",
+    "yfinance_patched": "0/65",
+    "sentiment_backend": "finbert",
+    "earnings_cache_size": 71,
+    "macro_blackout": false,
+    "macro_reason": "",
+    "next_macro_event": {
+      "name": "FOMC",
+      "datetime": "2026-06-17T14:00:00-04:00",
+      "days_away": 28,
+      "hours_away": 673.4
+    },
+    "open_positions": [
+      "MU",
+      "PANW",
+      "PLTR"
+    ],
+    "new_today": 2,
+    "filter_stats": {
+      "scanned": 53,
+      "no_data": 0,
+      "held": 3,
+      "market_volatile": 0,
+      "earnings_blackout": 0,
+      "failed_filters": 5,
+      "obv_distribution": 15,
+      "no_strategy_signal": 30,
+      "of_or_sent_reject": 0,
+      "sector_misalign": 0,
+      "passed_all": 0
+    },
+    "sectors_top3": [
+      {
+        "ticker": "UNG",
+        "sector": "Natural Gas",
+        "ret_20d": 9.81,
+        "rs": 2.29,
+        "obv": "ACCUMULATION",
+        "above_ema": "True",
+        "score": 25.87
+      },
+      {
+        "ticker": "USO",
+        "sector": "Crude Oil",
+        "ret_20d": 8.08,
+        "rs": 1.88,
+        "obv": "ACCUMULATION",
+        "above_ema": "True",
+        "score": 21.83
+      },
+      {
+        "ticker": "XLE",
+        "sector": "Energy",
+        "ret_20d": 5.81,
+        "rs": 1.35,
+        "obv": "ACCUMULATION",
+        "above_ema": "True",
+        "score": 16.55
+      }
+    ],
+    "sectors_bottom3": [
+      {
+        "ticker": "XLI",
+        "sector": "Industrials",
+        "ret_20d": -1.85,
+        "rs": -0.43,
+        "obv": "DISTRIBUTION",
+        "above_ema": "False",
+        "score": -7.31
+      },
+      {
+        "ticker": "GLD",
+        "sector": "Gold",
+        "ret_20d": -3.55,
+        "rs": -0.83,
+        "obv": "DISTRIBUTION",
+        "above_ema": "False",
+        "score": -11.28
+      },
+      {
+        "ticker": "XLB",
+        "sector": "Materials",
+        "ret_20d": -4.55,
+        "rs": -1.06,
+        "obv": "DISTRIBUTION",
+        "above_ema": "False",
+        "score": -13.6
+      }
+    ],
+    "discovered": [],
+    "discovered_watchlist": [
+      "AGYS",
+      "TATT"
+    ],
+    "signals": [],
+    "top_news": [
+      {
+        "symbol": "DELL",
+        "sentiment": "POSITIVE",
+        "score": 3,
+        "headlines": [
+          "[~] Ross Gerber Says 'Pay Attention' To Nvidia And Micron As Jensen Huang Predicts A",
+          "[+] B of A Securities Maintains Buy on Dell Technologies, Raises Price Target to $28"
+        ]
+      },
+      {
+        "symbol": "LUNR",
+        "sentiment": "POSITIVE",
+        "score": 3,
+        "headlines": [
+          "[~] Space Stocks Are Back In Orbit As SpaceX IPO Hype Builds",
+          "[~] 10 Industrials Stocks Whale Activity In Today's Session"
+        ]
+      },
+      {
+        "symbol": "ARM",
+        "sentiment": "POSITIVE",
+        "score": 2,
+        "headlines": [
+          "[+] TAT Technologies Posts Upbeat Q1 Earnings, Joins Roivant Sciences, Immunitybio A",
+          "[~] 10 Information Technology Stocks Whale Activity In Today's Session"
+        ]
+      },
+      {
+        "symbol": "NFLX",
+        "sentiment": "POSITIVE",
+        "score": 2,
+        "headlines": [
+          "[~] Netflix Expands Consumer Products Footprint With Strategic Confectionery And Toy",
+          "[+] Netflix Defies Market Sell-Off As BofA Reaffirms Bullish Outlook, NFL Streaming "
+        ]
+      },
+      {
+        "symbol": "CRM",
+        "sentiment": "POSITIVE",
+        "score": 2,
+        "headlines": [
+          "[+] Informatica Deepens Strategic Partnership With Google Cloud, Bringing Headless D",
+          "[~] TTEC's TTEC Digital To Join The Newly Launched Salesforce Forward Deployed Engin"
+        ]
+      },
+      {
+        "symbol": "MU",
+        "sentiment": "STRONG_POSITIVE",
+        "score": 5,
+        "headlines": [
+          "[+] Forget About Micron: The Hottest US Semiconductor Stock Is Already Up 100% This ",
+          "[+] Micron At JPM Conference Says Financial Outlook Has Strengthened Since Last Earn"
+        ]
+      },
+      {
+        "symbol": "MRVL",
+        "sentiment": "STRONG_POSITIVE",
+        "score": 5,
+        "headlines": [
+          "[~] Why Is Marvell Stock Gaining Wednesday?",
+          "[~] What's Going On With POET Stock On Wednesday?"
+        ]
+      },
+      {
+        "symbol": "GOOGL",
+        "sentiment": "STRONG_POSITIVE",
+        "score": 5,
+        "headlines": [
+          "[~] Why Is Marvell Stock Gaining Wednesday?",
+          "[~] CWU Says Google AI Workers To Enter Recognition Talks With Management; Google De"
+        ]
+      },
+      {
+        "symbol": "CRWD",
+        "sentiment": "STRONG_POSITIVE",
+        "score": 5,
+        "headlines": [
+          "[+] Morgan Stanley Maintains Overweight on CrowdStrike Holdings, Raises Price Target",
+          "[+] Cantor Fitzgerald Maintains Overweight on CrowdStrike Holdings, Raises Price Tar"
+        ]
+      },
+      {
+        "symbol": "PANW",
+        "sentiment": "STRONG_POSITIVE",
+        "score": 5,
+        "headlines": [
+          "[+] Morgan Stanley Maintains Overweight on Palo Alto Networks, Raises Price Target t",
+          "[~] CrowdStrike To Rally Around 7%? Here Are 10 Top Analyst Forecasts For Wednesday"
+        ]
+      }
+    ]
   }
 ]

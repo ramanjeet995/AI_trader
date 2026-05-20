@@ -1,7 +1,38 @@
 # AI Trader — Daily Log
 
 What the robot saw and did each time it woke up. Newest at top.
-_Last updated: May 20, 2026 at 10:57 AM ET_
+_Last updated: May 20, 2026 at 12:35 PM ET_
+
+## May 20, 12:35 PM ET — Main scan
+
+**Market check:**
+- Market is going **up** 📈
+- Mood: a bit nervous (VIX 18)
+- Investors defensive
+- Currently holding: MU, PANW, PLTR
+
+**Money flowing into:** Natural Gas (+10%), Crude Oil (+8%), Energy (+6%)
+**Money flowing out of:** Industrials (-2%), Gold (-4%), Materials (-5%)
+
+**Looked at 53 stocks:**
+- already holding: 3
+- not enough trading volume: 5
+- smart money quietly selling: 15
+- no buy setup today: 30
+
+**Result:** No trades today.
+<details><summary>Notable news today</summary>
+
+- ✓ **DELL** — strong positive news (+3)
+    - _[~] Ross Gerber Says 'Pay Attention' To Nvidia And Micron As Jensen Huang Predicts A_
+- ✓ **LUNR** — strong positive news (+3)
+    - _[~] Space Stocks Are Back In Orbit As SpaceX IPO Hype Builds_
+- ✓ **ARM** — strong positive news (+2)
+    - _[+] TAT Technologies Posts Upbeat Q1 Earnings, Joins Roivant Sciences, Immunitybio A_
+
+</details>
+
+---
 
 ## May 20, 10:57 AM ET — News check
 
@@ -1404,36 +1435,6 @@ _Last updated: May 20, 2026 at 10:57 AM ET_
 - Mood: a bit nervous (VIX 18)
 - Investors confident
 - ⚠ **Important economic news soon — PPI releases in 12h 38m**
-
-**Money flowing into:** Crude Oil (+18%), Technology (+17%), Silver (+9%)
-**Money flowing out of:** Healthcare (-1%), Gold (-2%), Utilities (-2%)
-
-**Looked at 59 stocks:**
-- not enough trading volume: 13
-- smart money quietly selling: 14
-- no buy setup today: 32
-
-**Result:** No trades today.
-<details><summary>Notable news today</summary>
-
-- ✓ **MSFT** — strong positive news (+3)
-    - _[~] 'Anthropic in Talks to Buy Developer Tools Startup Used by OpenAI, Google'- The _
-- ✓ **NVDA** — strong positive news (+3)
-    - _[~] Hot Inflation Data; Treasury Auction Test Ahead; Trump's Iran Comment Draws Atte_
-- ✓ **AMD** — strong positive news (+3)
-    - _[~] Advanced Micro Devices Reports 13F Has Holdings Of 5,714,285 Absci Corporation S_
-
-</details>
-
----
-
-## May 12, 11:43 PM ET — Main scan
-
-**Market check:**
-- Market is going **up** 📈
-- Mood: a bit nervous (VIX 18)
-- Investors confident
-- ⚠ **Important economic news soon — PPI releases in 12h 46m**
 
 **Money flowing into:** Crude Oil (+18%), Technology (+17%), Silver (+9%)
 **Money flowing out of:** Healthcare (-1%), Gold (-2%), Utilities (-2%)
