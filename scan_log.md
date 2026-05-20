@@ -1,7 +1,21 @@
 # AI Trader — Daily Log
 
 What the robot saw and did each time it woke up. Newest at top.
-_Last updated: May 20, 2026 at 09:36 AM ET_
+_Last updated: May 20, 2026 at 10:56 AM ET_
+
+## May 20, 10:56 AM ET — Big-news check
+
+**Market check:**
+- Market is going **up** 📈
+- Mood: a bit nervous (VIX 18)
+
+**Result:** ✓ Bought 1 stock(s).
+
+- ✓ **Bought MRVL** (gap +7.5%)
+    - Plan: buy at $189.42, sell-stop at $186.01, target $197.94
+    - 25 shares, risking $85
+
+---
 
 ## May 20, 09:36 AM ET — Main scan
 
@@ -1447,35 +1461,6 @@ _Last updated: May 20, 2026 at 09:36 AM ET_
     - _[~] Hot Inflation Data; Treasury Auction Test Ahead; Trump's Iran Comment Draws Atte_
 - ✓ **AMD** — strong positive news (+3)
     - _[~] Advanced Micro Devices Reports 13F Has Holdings Of 5,714,285 Absci Corporation S_
-
-</details>
-
----
-
-## May 12, 10:39 PM ET — Main scan
-
-**Market check:**
-- Market is going **up** 📈
-- Mood: a bit nervous (VIX 18)
-- Investors confident
-
-**Money flowing into:** Crude Oil (+18%), Technology (+17%), Silver (+9%)
-**Money flowing out of:** Healthcare (-1%), Gold (-2%), Utilities (-2%)
-
-**Looked at 59 stocks:**
-- not enough trading volume: 50
-- smart money quietly selling: 3
-- no buy setup today: 6
-
-**Result:** No trades today.
-<details><summary>Notable news today</summary>
-
-- ✓ **AMD** — strong positive news (+3)
-    - _[~] Advanced Micro Devices Reports 13F Has Holdings Of 5,714,285 Absci Corporation S_
-- ✓ **MSFT** — strong positive news (+2)
-    - _[~] 'Anthropic in Talks to Buy Developer Tools Startup Used by OpenAI, Google'- The _
-- ✓ **CRM** — strong positive news (+2)
-    - _[~] Citigroup Maintains Neutral on Salesforce, Lowers Price Target to $188_
 
 </details>
 
