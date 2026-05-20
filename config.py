@@ -23,8 +23,8 @@ WATCHLIST = [
     "XOM", "OXY", "FANG", "SLB",
     # Precious metals / commodities
     "NEM", "GOLD", "FCX", "GDX",
-    # Space / SpaceX supply chain (IPO hype play)
-    "RDW",
+    # Space / SpaceX supply chain (IPO hype play — June 12, 2026)
+    "RDW", "RKLB", "ASTS", "LUNR", "PL",
     # Speculative / crypto-adjacent (high volatility)
     "COIN", "MARA", "RIOT", "MSTR",
     # Index proxies for regime detection only
@@ -154,7 +154,7 @@ TICKER_SECTOR = {
     "NEM": "Metals", "GOLD": "Metals", "GLD": "Metals", "SLV": "Metals",
     "GDX": "Metals", "GDXJ": "Metals",
     # Space / Defense
-    "RDW": "Space",
+    "RDW": "Space", "RKLB": "Space", "ASTS": "Space", "LUNR": "Space", "PL": "Space",
     # Industrials / Utilities / Real Estate
     "XLI": "Industrials", "XLU": "Utilities", "XLRE": "Real Estate",
     # Broad index
