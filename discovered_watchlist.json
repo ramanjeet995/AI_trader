@@ -6,5 +6,13 @@
     "price": 91.25,
     "sentiment": "STRONG_POSITIVE",
     "reason": "Up +30.0% today, sentiment STRONG_POSITIVE (+4)"
+  },
+  "TATT": {
+    "added": "2026-05-20T09:33:19.033048-04:00",
+    "last_seen": "2026-05-20T09:33:19.033048-04:00",
+    "gain_pct": 19.3,
+    "price": 39.0,
+    "sentiment": "NEUTRAL",
+    "reason": "Up +19.3% today, sentiment NEUTRAL (+1)"
   }
 }

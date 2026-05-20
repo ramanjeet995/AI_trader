@@ -1,185 +1,5 @@
 [
   {
-    "timestamp": "2026-05-12T21:46:21.705538",
-    "mode": "FULL",
-    "spy_regime": "BULL",
-    "posture": "RISK-ON",
-    "vix": 18.3799991607666,
-    "spy_atr_pct": 1.01,
-    "in_window": false,
-    "market_open": false,
-    "data_feed": "iex",
-    "yfinance_patched": "0/60",
-    "sentiment_backend": "finbert",
-    "earnings_cache_size": 40,
-    "open_positions": [],
-    "new_today": 0,
-    "filter_stats": {
-      "scanned": 59,
-      "no_data": 0,
-      "held": 0,
-      "market_volatile": 0,
-      "earnings_blackout": 0,
-      "failed_filters": 50,
-      "obv_distribution": 3,
-      "no_strategy_signal": 6,
-      "of_or_sent_reject": 0,
-      "sector_misalign": 0,
-      "passed_all": 0
-    },
-    "sectors_top3": [
-      {
-        "ticker": "USO",
-        "sector": "Crude Oil",
-        "ret_20d": 17.71,
-        "rs": 3.22,
-        "obv": "ACCUMULATION",
-        "above_ema": "True",
-        "score": 35.24
-      },
-      {
-        "ticker": "XLK",
-        "sector": "Technology",
-        "ret_20d": 16.63,
-        "rs": 3.03,
-        "obv": "ACCUMULATION",
-        "above_ema": "True",
-        "score": 33.28
-      },
-      {
-        "ticker": "SLV",
-        "sector": "Silver",
-        "ret_20d": 9.3,
-        "rs": 1.69,
-        "obv": "ACCUMULATION",
-        "above_ema": "True",
-        "score": 19.94
-      }
-    ],
-    "sectors_bottom3": [
-      {
-        "ticker": "XLV",
-        "sector": "Healthcare",
-        "ret_20d": -1.32,
-        "rs": -0.24,
-        "obv": "DISTRIBUTION",
-        "above_ema": "True",
-        "score": -3.4
-      },
-      {
-        "ticker": "GLD",
-        "sector": "Gold",
-        "ret_20d": -1.7,
-        "rs": -0.31,
-        "obv": "DISTRIBUTION",
-        "above_ema": "True",
-        "score": -4.1
-      },
-      {
-        "ticker": "XLU",
-        "sector": "Utilities",
-        "ret_20d": -1.76,
-        "rs": -0.32,
-        "obv": "DISTRIBUTION",
-        "above_ema": "False",
-        "score": -6.2
-      }
-    ],
-    "signals": [],
-    "top_news": [
-      {
-        "symbol": "AMD",
-        "sentiment": "POSITIVE",
-        "score": 3,
-        "headlines": [
-          "[~] Advanced Micro Devices Reports 13F Has Holdings Of 5,714,285 Absci Corporation S",
-          "[~] Jim Cramer Said 'Smell' \u2014 AI Stocks Heard 'Sell'"
-        ]
-      },
-      {
-        "symbol": "MSFT",
-        "sentiment": "POSITIVE",
-        "score": 2,
-        "headlines": [
-          "[~] 'Anthropic In Talks to Raise $30B at $900B Valuation'- Bloomberg",
-          "[~] Hot Inflation Data; Treasury Auction Test Ahead; Trump's Iran Comment Draws Atte"
-        ]
-      },
-      {
-        "symbol": "CRM",
-        "sentiment": "POSITIVE",
-        "score": 2,
-        "headlines": [
-          "[~] Citigroup Maintains Neutral on Salesforce, Lowers Price Target to $188",
-          "[+] Pearson Expands Partnership With Salesforce Over AI, Skills Development Througho"
-        ]
-      },
-      {
-        "symbol": "ORCL",
-        "sentiment": "POSITIVE",
-        "score": 2,
-        "headlines": [
-          "[+] Oppenheimer Maintains Outperform on Oracle, Raises Price Target to $235",
-          "[~] 10 Information Technology Stocks Whale Activity In Today's Session"
-        ]
-      },
-      {
-        "symbol": "V",
-        "sentiment": "POSITIVE",
-        "score": 2,
-        "headlines": [
-          "[+] Commerce Bancshares Announces Visa's Acceptance Of Class B-2 Common Stock And In",
-          "[+] Truist Securities Maintains Buy on Visa, Raises Price Target to $371"
-        ]
-      },
-      {
-        "symbol": "LLY",
-        "sentiment": "POSITIVE",
-        "score": 2,
-        "headlines": [
-          "[~] Watching Eli Lilly; Hearing Zacks Tech Innovator Newsletter Mentions Stock As A ",
-          "[~] Roche, Eli Lilly Alzheimer's Blood Test Cleared In Europe For Earlier Detection"
-        ]
-      },
-      {
-        "symbol": "MRK",
-        "sentiment": "POSITIVE",
-        "score": 2,
-        "headlines": [
-          "[~] Merck Announces New Research From 100+ Abstracts Across 25+ Types Of Cancer From",
-          "[+] Inhibrx Cancer Treatment Shows High Response Rates In Head And Neck Cancer Study"
-        ]
-      },
-      {
-        "symbol": "QCOM",
-        "sentiment": "NEUTRAL",
-        "score": 1,
-        "headlines": [
-          "[-] SOXL Tumbles As Micron, SanDisk Drag Semis Lower; SOXS Spikes On Memory Shockwav",
-          "[-] SanDisk, Micron Stocks Plummet As Korea Shockwave Batters The Great Memory Boom"
-        ]
-      },
-      {
-        "symbol": "META",
-        "sentiment": "NEUTRAL",
-        "score": 1,
-        "headlines": [
-          "[~] Hot Inflation Data; Treasury Auction Test Ahead; Trump's Iran Comment Draws Atte",
-          "[~] 'Meta offers rival AI chatbots free access to WhatsApp for a month' - Reuters"
-        ]
-      },
-      {
-        "symbol": "TSLA",
-        "sentiment": "NEUTRAL",
-        "score": 1,
-        "headlines": [
-          "[+] Elon Musk Says SpaceX Is Considering Several Locations Domestically And Internat",
-          "[~] Hot Inflation Data; Treasury Auction Test Ahead; Trump's Iran Comment Draws Atte"
-        ]
-      }
-    ]
-  },
-  {
     "timestamp": "2026-05-12T22:39:44.221597",
     "mode": "FULL",
     "spy_regime": "BULL",
@@ -9932,5 +9752,204 @@
         ]
       }
     ]
+  },
+  {
+    "timestamp": "2026-05-20T09:36:25.677591-04:00",
+    "mode": "FULL",
+    "spy_regime": "BULL",
+    "posture": "RISK-OFF",
+    "vix": 18.059999465942383,
+    "spy_atr_pct": 0.98,
+    "in_window": true,
+    "market_open": true,
+    "data_feed": "iex",
+    "yfinance_patched": "0/65",
+    "sentiment_backend": "finbert",
+    "earnings_cache_size": 71,
+    "macro_blackout": false,
+    "macro_reason": "",
+    "next_macro_event": {
+      "name": "FOMC",
+      "datetime": "2026-06-17T14:00:00-04:00",
+      "days_away": 28,
+      "hours_away": 676.4
+    },
+    "open_positions": [
+      "MU",
+      "PLTR"
+    ],
+    "new_today": 0,
+    "filter_stats": {
+      "scanned": 53,
+      "no_data": 0,
+      "held": 2,
+      "market_volatile": 0,
+      "earnings_blackout": 0,
+      "failed_filters": 5,
+      "obv_distribution": 17,
+      "no_strategy_signal": 29,
+      "of_or_sent_reject": 0,
+      "sector_misalign": 0,
+      "passed_all": 0
+    },
+    "sectors_top3": [
+      {
+        "ticker": "UNG",
+        "sector": "Natural Gas",
+        "ret_20d": 11.29,
+        "rs": 2.98,
+        "obv": "ACCUMULATION",
+        "above_ema": "True",
+        "score": 32.79
+      },
+      {
+        "ticker": "USO",
+        "sector": "Crude Oil",
+        "ret_20d": 10.86,
+        "rs": 2.87,
+        "obv": "ACCUMULATION",
+        "above_ema": "True",
+        "score": 31.68
+      },
+      {
+        "ticker": "XLE",
+        "sector": "Energy",
+        "ret_20d": 7.54,
+        "rs": 1.99,
+        "obv": "ACCUMULATION",
+        "above_ema": "True",
+        "score": 22.9
+      }
+    ],
+    "sectors_bottom3": [
+      {
+        "ticker": "XLI",
+        "sector": "Industrials",
+        "ret_20d": -3.19,
+        "rs": -0.84,
+        "obv": "DISTRIBUTION",
+        "above_ema": "False",
+        "score": -11.42
+      },
+      {
+        "ticker": "GLD",
+        "sector": "Gold",
+        "ret_20d": -4.34,
+        "rs": -1.15,
+        "obv": "DISTRIBUTION",
+        "above_ema": "False",
+        "score": -14.47
+      },
+      {
+        "ticker": "XLB",
+        "sector": "Materials",
+        "ret_20d": -5.6,
+        "rs": -1.48,
+        "obv": "DISTRIBUTION",
+        "above_ema": "False",
+        "score": -17.78
+      }
+    ],
+    "discovered": [
+      "TATT"
+    ],
+    "discovered_watchlist": [
+      "AGYS",
+      "TATT"
+    ],
+    "signals": [],
+    "top_news": [
+      {
+        "symbol": "DELL",
+        "sentiment": "POSITIVE",
+        "score": 3,
+        "headlines": [
+          "[~] Ross Gerber Says 'Pay Attention' To Nvidia And Micron As Jensen Huang Predicts A",
+          "[+] B of A Securities Maintains Buy on Dell Technologies, Raises Price Target to $28"
+        ]
+      },
+      {
+        "symbol": "LUNR",
+        "sentiment": "POSITIVE",
+        "score": 3,
+        "headlines": [
+          "[~] 10 Industrials Stocks Whale Activity In Today's Session",
+          "[+] Cantor Fitzgerald Maintains Overweight on Intuitive Machines, Raises Price Targe"
+        ]
+      },
+      {
+        "symbol": "NFLX",
+        "sentiment": "POSITIVE",
+        "score": 2,
+        "headlines": [
+          "[~] Netflix Expands Consumer Products Footprint With Strategic Confectionery And Toy",
+          "[+] Netflix Defies Market Sell-Off As BofA Reaffirms Bullish Outlook, NFL Streaming "
+        ]
+      },
+      {
+        "symbol": "MU",
+        "sentiment": "STRONG_POSITIVE",
+        "score": 5,
+        "headlines": [
+          "[~] What Is Going On With Micron Stock On Wednesday?",
+          "[~] Watching Micron Technology; Shares See Volume To The Upside, Company Now Present"
+        ]
+      },
+      {
+        "symbol": "CRWD",
+        "sentiment": "STRONG_POSITIVE",
+        "score": 5,
+        "headlines": [
+          "[+] Cantor Fitzgerald Maintains Overweight on CrowdStrike Holdings, Raises Price Tar",
+          "[~] CrowdStrike To Rally Around 7%? Here Are 10 Top Analyst Forecasts For Wednesday"
+        ]
+      },
+      {
+        "symbol": "PANW",
+        "sentiment": "STRONG_POSITIVE",
+        "score": 5,
+        "headlines": [
+          "[~] CrowdStrike To Rally Around 7%? Here Are 10 Top Analyst Forecasts For Wednesday",
+          "[+] Stifel Maintains Buy on Palo Alto Networks, Raises Price Target to $275"
+        ]
+      },
+      {
+        "symbol": "AGYS",
+        "sentiment": "STRONG_POSITIVE",
+        "score": 5,
+        "headlines": [
+          "[~] Gold Falls 1%; Amer Sports Earnings Top Views",
+          "[+] Waystar, Bakkt, Snowflake And Other Big Stocks Moving Higher On Tuesday"
+        ]
+      },
+      {
+        "symbol": "AMD",
+        "sentiment": "STRONG_POSITIVE",
+        "score": 4,
+        "headlines": [
+          "[~] What's Going On With AMD Stock Wednesday?",
+          "[~] What's Going On With Taiwan Semiconductor Stock Wednesday?"
+        ]
+      },
+      {
+        "symbol": "SNOW",
+        "sentiment": "STRONG_POSITIVE",
+        "score": 4,
+        "headlines": [
+          "[+] Zeta Global Momentum Score Surges As It Joins Snowflake-Led OSI Push To Standard",
+          "[+] Snowflake Stock Is Rising Despite Weak Macro Backdrop"
+        ]
+      },
+      {
+        "symbol": "FANG",
+        "sentiment": "STRONG_POSITIVE",
+        "score": 4,
+        "headlines": [
+          "[+] Citigroup Maintains Buy on Diamondback Energy, Raises Price Target to $245",
+          "[ANALYST] Citi pt raise (+3) Tier-1"
+        ]
+      }
+    ],
+    "cpu_temp": "80.8\u00b0C"
   }
 ]

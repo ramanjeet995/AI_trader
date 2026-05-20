@@ -1,7 +1,41 @@
 # AI Trader — Daily Log
 
 What the robot saw and did each time it woke up. Newest at top.
-_Last updated: May 19, 2026 at 04:25 PM ET_
+_Last updated: May 20, 2026 at 09:36 AM ET_
+
+## May 20, 09:36 AM ET — Main scan
+
+**Market check:**
+- Market is going **up** 📈
+- Mood: a bit nervous (VIX 18)
+- Investors defensive
+- Currently holding: MU, PLTR
+
+**Money flowing into:** Natural Gas (+11%), Crude Oil (+11%), Energy (+8%)
+**Money flowing out of:** Industrials (-3%), Gold (-4%), Materials (-6%)
+
+**Hot stocks discovered today:** TATT
+**Full discovery list (2):** AGYS, TATT
+
+**Looked at 53 stocks:**
+- already holding: 2
+- not enough trading volume: 5
+- smart money quietly selling: 17
+- no buy setup today: 29
+
+**Result:** No trades today.
+<details><summary>Notable news today</summary>
+
+- ✓ **DELL** — strong positive news (+3)
+    - _[~] Ross Gerber Says 'Pay Attention' To Nvidia And Micron As Jensen Huang Predicts A_
+- ✓ **LUNR** — strong positive news (+3)
+    - _[~] 10 Industrials Stocks Whale Activity In Today's Session_
+- ✓ **NFLX** — strong positive news (+2)
+    - _[~] Netflix Expands Consumer Products Footprint With Strategic Confectionery And Toy_
+
+</details>
+
+---
 
 ## May 19, 04:25 PM ET — Main scan
 
@@ -1440,35 +1474,6 @@ _Last updated: May 19, 2026 at 04:25 PM ET_
     - _[~] Advanced Micro Devices Reports 13F Has Holdings Of 5,714,285 Absci Corporation S_
 - ✓ **MSFT** — strong positive news (+2)
     - _[~] 'Anthropic in Talks to Buy Developer Tools Startup Used by OpenAI, Google'- The _
-- ✓ **CRM** — strong positive news (+2)
-    - _[~] Citigroup Maintains Neutral on Salesforce, Lowers Price Target to $188_
-
-</details>
-
----
-
-## May 12, 09:46 PM ET — Main scan
-
-**Market check:**
-- Market is going **up** 📈
-- Mood: a bit nervous (VIX 18)
-- Investors confident
-
-**Money flowing into:** Crude Oil (+18%), Technology (+17%), Silver (+9%)
-**Money flowing out of:** Healthcare (-1%), Gold (-2%), Utilities (-2%)
-
-**Looked at 59 stocks:**
-- not enough trading volume: 50
-- smart money quietly selling: 3
-- no buy setup today: 6
-
-**Result:** No trades today.
-<details><summary>Notable news today</summary>
-
-- ✓ **AMD** — strong positive news (+3)
-    - _[~] Advanced Micro Devices Reports 13F Has Holdings Of 5,714,285 Absci Corporation S_
-- ✓ **MSFT** — strong positive news (+2)
-    - _[~] 'Anthropic In Talks to Raise $30B at $900B Valuation'- Bloomberg_
 - ✓ **CRM** — strong positive news (+2)
     - _[~] Citigroup Maintains Neutral on Salesforce, Lowers Price Target to $188_
 
