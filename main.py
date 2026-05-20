@@ -105,7 +105,20 @@ def in_target_window(target_hours: list[int]) -> tuple[bool, str]:
 
 # ── Log persistence ───────────────────────────────────────────────────────────
 
+def _cpu_temp() -> str | None:
+    """Read Raspberry Pi CPU temperature. Returns e.g. '42.3°C' or None."""
+    try:
+        raw = Path("/sys/class/thermal/thermal_zone0/temp").read_text().strip()
+        return f"{int(raw) / 1000:.1f}°C"
+    except Exception:
+        return None
+
+
 def save_log(entry: dict):
+    temp = _cpu_temp()
+    if temp:
+        entry["cpu_temp"] = temp
+        print(f"  [pi] CPU temp: {temp}")
     logs = []
     if LOG_FILE.exists():
         try:
