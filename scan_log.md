@@ -1,7 +1,21 @@
 # AI Trader — Daily Log
 
 What the robot saw and did each time it woke up. Newest at top.
-_Last updated: May 20, 2026 at 01:40 PM ET_
+_Last updated: May 20, 2026 at 01:47 PM ET_
+
+## May 20, 01:47 PM ET — Big-news check
+
+**Market check:**
+- Market is going **up** 📈
+- Mood: a bit nervous (VIX 18)
+
+**Result:** ✓ Bought 1 stock(s).
+
+- ✓ **Bought CRWD** (gap +4.2%)
+    - Plan: buy at $0, sell-stop at $0, target $0
+    - 0 shares, risking $0
+
+---
 
 ## May 20, 01:40 PM ET — Main scan
 
@@ -1422,36 +1436,6 @@ _Last updated: May 20, 2026 at 01:40 PM ET_
     - _[~] Hot Inflation Data; Treasury Auction Test Ahead; Trump's Iran Comment Draws Atte_
 - ✓ **AVGO** — strong positive news (+3)
     - _[~] Jim Cramer Said 'Smell' — AI Stocks Heard 'Sell'_
-- ✓ **AMD** — strong positive news (+3)
-    - _[~] Advanced Micro Devices Reports 13F Has Holdings Of 5,714,285 Absci Corporation S_
-
-</details>
-
----
-
-## May 12, 07:55 PM ET — Main scan
-
-**Market check:**
-- Market is going **up** 📈
-- Mood: a bit nervous (VIX 18)
-- Investors confident
-- ⚠ **Important economic news soon — PPI releases in 12h 34m**
-
-**Money flowing into:** Crude Oil (+18%), Technology (+17%), Silver (+9%)
-**Money flowing out of:** Healthcare (-1%), Gold (-2%), Utilities (-2%)
-
-**Looked at 59 stocks:**
-- not enough trading volume: 13
-- smart money quietly selling: 14
-- no buy setup today: 32
-
-**Result:** No trades today.
-<details><summary>Notable news today</summary>
-
-- ✓ **MSFT** — strong positive news (+3)
-    - _[~] 'Anthropic in Talks to Buy Developer Tools Startup Used by OpenAI, Google'- The _
-- ✓ **NVDA** — strong positive news (+3)
-    - _[~] Hot Inflation Data; Treasury Auction Test Ahead; Trump's Iran Comment Draws Atte_
 - ✓ **AMD** — strong positive news (+3)
     - _[~] Advanced Micro Devices Reports 13F Has Holdings Of 5,714,285 Absci Corporation S_
 
