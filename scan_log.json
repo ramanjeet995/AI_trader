@@ -1,196 +1,5 @@
 [
   {
-    "timestamp": "2026-05-13T18:42:52.037414-04:00",
-    "mode": "FULL",
-    "spy_regime": "BULL",
-    "posture": "RISK-OFF",
-    "vix": 17.989999771118164,
-    "spy_atr_pct": 1.01,
-    "in_window": false,
-    "market_open": false,
-    "data_feed": "iex",
-    "yfinance_patched": "0/45",
-    "sentiment_backend": "finbert",
-    "earnings_cache_size": 54,
-    "macro_blackout": false,
-    "macro_reason": "",
-    "next_macro_event": {
-      "name": "FOMC",
-      "datetime": "2026-06-17T14:00:00-04:00",
-      "days_away": 34,
-      "hours_away": 835.3
-    },
-    "open_positions": [
-      "AMZN",
-      "GOOGL"
-    ],
-    "new_today": 2,
-    "filter_stats": {
-      "scanned": 33,
-      "no_data": 0,
-      "held": 2,
-      "market_volatile": 0,
-      "earnings_blackout": 0,
-      "failed_filters": 2,
-      "obv_distribution": 11,
-      "no_strategy_signal": 18,
-      "of_or_sent_reject": 0,
-      "sector_misalign": 0,
-      "passed_all": 0
-    },
-    "sectors_top3": [
-      {
-        "ticker": "USO",
-        "sector": "Crude Oil",
-        "ret_20d": 12.89,
-        "rs": 2.22,
-        "obv": "ACCUMULATION",
-        "above_ema": "True",
-        "score": 25.18
-      },
-      {
-        "ticker": "SLV",
-        "sector": "Silver",
-        "ret_20d": 11.39,
-        "rs": 1.96,
-        "obv": "ACCUMULATION",
-        "above_ema": "True",
-        "score": 22.6
-      },
-      {
-        "ticker": "UNG",
-        "sector": "Natural Gas",
-        "ret_20d": 1.95,
-        "rs": 0.34,
-        "obv": "ACCUMULATION",
-        "above_ema": "True",
-        "score": 6.35
-      }
-    ],
-    "sectors_bottom3": [
-      {
-        "ticker": "GLD",
-        "sector": "Gold",
-        "ret_20d": -2.18,
-        "rs": -0.37,
-        "obv": "DISTRIBUTION",
-        "above_ema": "True",
-        "score": -4.75
-      },
-      {
-        "ticker": "XLF",
-        "sector": "Financials",
-        "ret_20d": -2.0,
-        "rs": -0.34,
-        "obv": "DISTRIBUTION",
-        "above_ema": "False",
-        "score": -6.44
-      },
-      {
-        "ticker": "XLU",
-        "sector": "Utilities",
-        "ret_20d": -3.66,
-        "rs": -0.63,
-        "obv": "DISTRIBUTION",
-        "above_ema": "False",
-        "score": -9.29
-      }
-    ],
-    "signals": [],
-    "top_news": [
-      {
-        "symbol": "AMD",
-        "sentiment": "POSITIVE",
-        "score": 3,
-        "headlines": [
-          "[+] Daiwa Capital Downgrades Advanced Micro Devices to Outperform, Raises Price Targ",
-          "[~] 10 Information Technology Stocks Whale Activity In Today's Session"
-        ]
-      },
-      {
-        "symbol": "NVDA",
-        "sentiment": "POSITIVE",
-        "score": 2,
-        "headlines": [
-          "[~] GraniteShares Launches MSTR, Coinbase ETFs As Bitcoin-Fueled Volatility Trade He",
-          "[~] Something Historic Is Quietly Lifting Commodities To Records \u2014 And It's Not Horm"
-        ]
-      },
-      {
-        "symbol": "MRVL",
-        "sentiment": "POSITIVE",
-        "score": 2,
-        "headlines": [
-          "[~] What Is Going On With Marvell Stock On Wednesday?",
-          "[~] Watching Marvell Technology; Hearing Investor Business Daily SwingTrader Buys St"
-        ]
-      },
-      {
-        "symbol": "SHOP",
-        "sentiment": "POSITIVE",
-        "score": 2,
-        "headlines": [
-          "[+] Affirm Unveils Aggressive Expansion Blueprint",
-          "[+] Global-E Says Middle East Demand Is Rebounding"
-        ]
-      },
-      {
-        "symbol": "META",
-        "sentiment": "NEUTRAL",
-        "score": 1,
-        "headlines": [
-          "[~] Something Historic Is Quietly Lifting Commodities To Records \u2014 And It's Not Horm",
-          "[~] Why Nvidia Bulls Are Suddenly Watching Nebius Ahead Of NVDA Earnings"
-        ]
-      },
-      {
-        "symbol": "GOOGL",
-        "sentiment": "NEUTRAL",
-        "score": 1,
-        "headlines": [
-          "[~] Something Historic Is Quietly Lifting Commodities To Records \u2014 And It's Not Horm",
-          "[~] Anthropic Introduces Claude For Small Business"
-        ]
-      },
-      {
-        "symbol": "AMZN",
-        "sentiment": "NEUTRAL",
-        "score": 1,
-        "headlines": [
-          "[-] 'Amazon cuts more jobs months after mass layoffs' - Business Insider",
-          "[~] Something Historic Is Quietly Lifting Commodities To Records \u2014 And It's Not Horm"
-        ]
-      },
-      {
-        "symbol": "MSFT",
-        "sentiment": "NEUTRAL",
-        "score": 1,
-        "headlines": [
-          "[~] Something Historic Is Quietly Lifting Commodities To Records \u2014 And It's Not Horm",
-          "[~] Why Nvidia Bulls Are Suddenly Watching Nebius Ahead Of NVDA Earnings"
-        ]
-      },
-      {
-        "symbol": "CRM",
-        "sentiment": "NEUTRAL",
-        "score": 1,
-        "headlines": [
-          "[~] Citigroup Maintains Neutral on Salesforce, Lowers Price Target to $188",
-          "[+] Pearson Expands Partnership With Salesforce Over AI, Skills Development Througho"
-        ]
-      },
-      {
-        "symbol": "XOM",
-        "sentiment": "NEUTRAL",
-        "score": 1,
-        "headlines": [
-          "[~] Apple, ServiceNow, Netflix And An Energy Stock On CNBC's 'Final Trades'",
-          "[~] CNBC Halftime Report Final Trades: Apple, ServiceNow, Netflix, Exxon Mobil"
-        ]
-      }
-    ]
-  },
-  {
     "timestamp": "2026-05-14T11:42:09.842206-04:00",
     "mode": "FULL",
     "spy_regime": "BULL",
@@ -10926,6 +10735,292 @@
         "shares": 576,
         "notional": 12695.04,
         "risk_$": 2499.84,
+        "sentiment": "POSITIVE",
+        "obv": "ACCUMULATION",
+        "of_score": 3,
+        "sector_score": 999.0,
+        "reason": "Breakout above 17.88 | vol 4.0x prior 20d avg",
+        "order_status": "SKIPPED: position/daily cap",
+        "headlines": [
+          "[~] 12 Information Technology Stocks Moving In Thursday's Intraday Session",
+          "[~] Trump Admin To Take Quantum Stakes \u2014 D-Wave, Rigetti, IonQ Stocks Pop"
+        ]
+      },
+      {
+        "symbol": "IONQ",
+        "strategy": "B",
+        "confidence": 0.35,
+        "signal": "BUY",
+        "entry": 58.87,
+        "stop": 52.2,
+        "target": 72.21,
+        "shares": 375,
+        "notional": 22076.25,
+        "risk_$": 2501.25,
+        "sentiment": "NEUTRAL",
+        "obv": "ACCUMULATION",
+        "of_score": 3,
+        "sector_score": 999.0,
+        "reason": "Breakout above 52.73 | vol 2.3x prior 20d avg",
+        "order_status": "SKIPPED: position/daily cap",
+        "headlines": [
+          "[~] 10 Information Technology Stocks With Whale Alerts In Today's Session",
+          "[~] Trump Admin To Take Quantum Stakes \u2014 D-Wave, Rigetti, IonQ Stocks Pop"
+        ]
+      },
+      {
+        "symbol": "ASTS",
+        "strategy": "B",
+        "confidence": 0.35,
+        "signal": "BUY",
+        "entry": 96.2,
+        "stop": 91.64,
+        "target": 105.32,
+        "shares": 416,
+        "notional": 40019.2,
+        "risk_$": 1896.96,
+        "sentiment": "POSITIVE",
+        "obv": "ACCUMULATION",
+        "of_score": 3,
+        "sector_score": 999.0,
+        "reason": "Breakout above 92.57 | vol 1.4x prior 20d avg",
+        "order_status": "SKIPPED: position/daily cap",
+        "headlines": [
+          "[+] AST SpaceMobile Rally Gains Momentum With Defiance's New 2X Leveraged Fund",
+          "[+] Lumentum, AST SpaceMobile Stocks Get Their 2X Funds As Traders Chase AI And Spac"
+        ]
+      }
+    ],
+    "top_news": [
+      {
+        "symbol": "NVDA",
+        "sentiment": "STRONG_POSITIVE",
+        "score": 5,
+        "headlines": [
+          "[+] A New Chipmaker Just Topped Micron's 2026 Return, Thanks To Nvidia",
+          "[+] Nvidia's Outlook Following Strong Q1 Earnings"
+        ]
+      },
+      {
+        "symbol": "AMD",
+        "sentiment": "NEUTRAL",
+        "score": -1,
+        "headlines": [
+          "[~] 'Amkor working with AMD on advanced packaging after acquiring more land in Arizo",
+          "[~] Nvidia Says 'Demand Has Gone Parabolic' \u2014 Here's Why, Plus 5 AI Stocks To Watch"
+        ]
+      },
+      {
+        "symbol": "ARM",
+        "sentiment": "POSITIVE",
+        "score": 2,
+        "headlines": [
+          "[+] A New Chipmaker Just Topped Micron's 2026 Return, Thanks To Nvidia",
+          "[+] Advance Auto Parts Posts Upbeat Q1 Earnings, Joins IBM, Ralph Lauren And Other B"
+        ]
+      },
+      {
+        "symbol": "MRVL",
+        "sentiment": "STRONG_POSITIVE",
+        "score": 5,
+        "headlines": [
+          "[~] Nvidia Says 'Demand Has Gone Parabolic' \u2014 Here's Why, Plus 5 AI Stocks To Watch",
+          "[+] Citigroup Maintains Buy on Marvell Technology, Raises Price Target to $215"
+        ]
+      },
+      {
+        "symbol": "DELL",
+        "sentiment": "STRONG_POSITIVE",
+        "score": 4,
+        "headlines": [
+          "[+] Morgan Stanley Maintains Underweight on Dell Technologies, Raises Price Target t",
+          "[~] 10 Information Technology Stocks With Whale Alerts In Today's Session"
+        ]
+      },
+      {
+        "symbol": "HPE",
+        "sentiment": "STRONG_POSITIVE",
+        "score": 4,
+        "headlines": [
+          "[~] If You Invested $100 In Hewlett Packard Stock 5 Years Ago, You Would Have This M",
+          "[+] Morgan Stanley Maintains Equal-Weight on Hewlett Packard, Raises Price Target to"
+        ]
+      },
+      {
+        "symbol": "VRT",
+        "sentiment": "STRONG_POSITIVE",
+        "score": 5,
+        "headlines": [
+          "[~] A Manufacturing Boom Is Here: Is The Driver Trump's Tariffs Or AI?",
+          "[+] Oppenheimer Maintains Outperform on Vertiv Holdings, Raises Price Target to $353"
+        ]
+      },
+      {
+        "symbol": "META",
+        "sentiment": "STRONG_NEGATIVE",
+        "score": -5,
+        "headlines": [
+          "[~] UPDATED: Meta's Andy Stone Posts On X \"WhatsApp cannot access people's encrypted",
+          "[-] Attorney General Paxton Files Landmark Lawsuit Against Meta and WhatsApp for Lyi"
+        ]
+      },
+      {
+        "symbol": "GOOGL",
+        "sentiment": "NEGATIVE",
+        "score": -2,
+        "headlines": [
+          "[-] 'Waymo halts freeway rides after robotaxis struggle in construction zones'- Tech",
+          "[~] Buffett Bet Big On Visa, Mastercard Stocks 15 Years Ago: Here's How Much Those P"
+        ]
+      },
+      {
+        "symbol": "AMZN",
+        "sentiment": "NEGATIVE",
+        "score": -3,
+        "headlines": [
+          "[~] 'OpenAI Held $1 Billion Revenue Lead Over Anthropic in First Quarter' - The Info",
+          "[~] Watching Amazon; Hearing IBD Swingtrader Buys Stock"
+        ]
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-05-21T18:46:56.323565-04:00",
+    "mode": "FULL",
+    "spy_regime": "BULL",
+    "posture": "RISK-OFF",
+    "vix": 17.440000534057617,
+    "spy_atr_pct": 1.03,
+    "in_window": false,
+    "market_open": false,
+    "data_feed": "iex",
+    "yfinance_patched": "0/65",
+    "sentiment_backend": "finbert",
+    "earnings_cache_size": 71,
+    "macro_blackout": false,
+    "macro_reason": "",
+    "next_macro_event": {
+      "name": "FOMC",
+      "datetime": "2026-06-17T14:00:00-04:00",
+      "days_away": 26,
+      "hours_away": 643.2
+    },
+    "open_positions": [
+      "MU",
+      "PANW",
+      "PLTR"
+    ],
+    "new_today": 0,
+    "filter_stats": {
+      "scanned": 53,
+      "no_data": 0,
+      "held": 3,
+      "market_volatile": 0,
+      "earnings_blackout": 0,
+      "failed_filters": 5,
+      "obv_distribution": 16,
+      "no_strategy_signal": 25,
+      "of_or_sent_reject": 0,
+      "sector_misalign": 0,
+      "passed_all": 4
+    },
+    "sectors_top3": [
+      {
+        "ticker": "UNG",
+        "sector": "Natural Gas",
+        "ret_20d": 9.99,
+        "rs": 2.48,
+        "obv": "ACCUMULATION",
+        "above_ema": "True",
+        "score": 27.82
+      },
+      {
+        "ticker": "USO",
+        "sector": "Crude Oil",
+        "ret_20d": 7.66,
+        "rs": 1.9,
+        "obv": "ACCUMULATION",
+        "above_ema": "True",
+        "score": 22.02
+      },
+      {
+        "ticker": "XLE",
+        "sector": "Energy",
+        "ret_20d": 3.96,
+        "rs": 0.98,
+        "obv": "ACCUMULATION",
+        "above_ema": "True",
+        "score": 12.83
+      }
+    ],
+    "sectors_bottom3": [
+      {
+        "ticker": "XLI",
+        "sector": "Industrials",
+        "ret_20d": -1.14,
+        "rs": -0.28,
+        "obv": "DISTRIBUTION",
+        "above_ema": "False",
+        "score": -5.82
+      },
+      {
+        "ticker": "XLB",
+        "sector": "Materials",
+        "ret_20d": -3.68,
+        "rs": -0.91,
+        "obv": "DISTRIBUTION",
+        "above_ema": "False",
+        "score": -12.14
+      },
+      {
+        "ticker": "GLD",
+        "sector": "Gold",
+        "ret_20d": -3.7,
+        "rs": -0.92,
+        "obv": "DISTRIBUTION",
+        "above_ema": "False",
+        "score": -12.2
+      }
+    ],
+    "discovered": [],
+    "discovered_watchlist": [
+      "AGYS",
+      "TATT"
+    ],
+    "signals": [
+      {
+        "symbol": "QBTS",
+        "strategy": "B",
+        "confidence": 0.44,
+        "signal": "BUY",
+        "entry": 25.72,
+        "stop": 19.84,
+        "target": 37.48,
+        "shares": 511,
+        "notional": 13142.92,
+        "risk_$": 3004.68,
+        "sentiment": "POSITIVE",
+        "obv": "ACCUMULATION",
+        "of_score": 3,
+        "sector_score": 999.0,
+        "reason": "Breakout above 20.05 | vol 2.5x prior 20d avg",
+        "order_status": "SKIPPED: position/daily cap",
+        "headlines": [
+          "[~] 12 Information Technology Stocks Moving In Thursday's Intraday Session",
+          "[~] Trump Admin To Take Quantum Stakes \u2014 D-Wave, Rigetti, IonQ Stocks Pop"
+        ]
+      },
+      {
+        "symbol": "RGTI",
+        "strategy": "B",
+        "confidence": 0.39,
+        "signal": "BUY",
+        "entry": 22.04,
+        "stop": 17.7,
+        "target": 30.72,
+        "shares": 577,
+        "notional": 12717.08,
+        "risk_$": 2504.18,
         "sentiment": "POSITIVE",
         "obv": "ACCUMULATION",
         "of_score": 3,
