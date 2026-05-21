@@ -1,28 +1,5 @@
 [
   {
-    "timestamp": "2026-05-13T13:53:09.043739-04:00",
-    "mode": "CATALYST",
-    "spy_regime": "BULL",
-    "vix": 17.989999771118164,
-    "signals": [
-      {
-        "symbol": "MRVL",
-        "strategy": "CATALYST",
-        "signal": "BUY",
-        "factors": [
-          "gap +7.6% in [3.0, 12.0]",
-          "news score +2",
-          "in upper 61% of day's range"
-        ],
-        "gap_pct": 7.64,
-        "news_score": 2,
-        "earn_days_ago": null,
-        "order_status": "NOT_PLACED \u2014 outside target window or market closed"
-      }
-    ],
-    "force_closed": []
-  },
-  {
     "timestamp": "2026-05-13T14:31:33.438757-04:00",
     "mode": "NEWS",
     "spy_regime": "BULL",
@@ -10642,5 +10619,42 @@
         "score": -3
       }
     ]
+  },
+  {
+    "timestamp": "2026-05-21T13:48:35.466171-04:00",
+    "mode": "CATALYST",
+    "spy_regime": "BULL",
+    "vix": 17.440000534057617,
+    "signals": [
+      {
+        "symbol": "DELL",
+        "strategy": "CATALYST",
+        "signal": "BUY",
+        "factors": [
+          "gap +3.0% in [3.0, 12.0]",
+          "news score +4",
+          "in upper 92% of day's range"
+        ],
+        "gap_pct": 3.01,
+        "news_score": 4,
+        "earn_days_ago": null,
+        "order_status": "NOT_PLACED \u2014 outside target window or market closed"
+      },
+      {
+        "symbol": "VRT",
+        "strategy": "CATALYST",
+        "signal": "BUY",
+        "factors": [
+          "gap +4.1% in [3.0, 12.0]",
+          "news score +3",
+          "in upper 84% of day's range"
+        ],
+        "gap_pct": 4.06,
+        "news_score": 3,
+        "earn_days_ago": null,
+        "order_status": "NOT_PLACED \u2014 outside target window or market closed"
+      }
+    ],
+    "force_closed": []
   }
 ]
