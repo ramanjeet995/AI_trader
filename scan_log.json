@@ -1,191 +1,5 @@
 [
   {
-    "timestamp": "2026-05-13T12:02:08.913473-04:00",
-    "mode": "FULL",
-    "spy_regime": "BULL",
-    "posture": "RISK-OFF",
-    "vix": 17.989999771118164,
-    "spy_atr_pct": 0.98,
-    "in_window": false,
-    "market_open": true,
-    "data_feed": "iex",
-    "yfinance_patched": "0/45",
-    "sentiment_backend": "finbert",
-    "earnings_cache_size": 54,
-    "macro_blackout": false,
-    "macro_reason": "",
-    "next_macro_event": {
-      "name": "FOMC",
-      "datetime": "2026-06-17T14:00:00-04:00",
-      "days_away": 35,
-      "hours_away": 842.0
-    },
-    "open_positions": [],
-    "new_today": 0,
-    "filter_stats": {
-      "scanned": 33,
-      "no_data": 0,
-      "held": 0,
-      "market_volatile": 0,
-      "earnings_blackout": 0,
-      "failed_filters": 2,
-      "obv_distribution": 11,
-      "no_strategy_signal": 20,
-      "of_or_sent_reject": 0,
-      "sector_misalign": 0,
-      "passed_all": 0
-    },
-    "sectors_top3": [
-      {
-        "ticker": "USO",
-        "sector": "Crude Oil",
-        "ret_20d": 13.91,
-        "rs": 2.55,
-        "obv": "ACCUMULATION",
-        "above_ema": "True",
-        "score": 28.5
-      },
-      {
-        "ticker": "SLV",
-        "sector": "Silver",
-        "ret_20d": 12.94,
-        "rs": 2.37,
-        "obv": "ACCUMULATION",
-        "above_ema": "True",
-        "score": 26.71
-      },
-      {
-        "ticker": "UNG",
-        "sector": "Natural Gas",
-        "ret_20d": 2.55,
-        "rs": 0.47,
-        "obv": "ACCUMULATION",
-        "above_ema": "True",
-        "score": 7.68
-      }
-    ],
-    "sectors_bottom3": [
-      {
-        "ticker": "GLD",
-        "sector": "Gold",
-        "ret_20d": -2.04,
-        "rs": -0.37,
-        "obv": "DISTRIBUTION",
-        "above_ema": "True",
-        "score": -4.74
-      },
-      {
-        "ticker": "XLF",
-        "sector": "Financials",
-        "ret_20d": -1.96,
-        "rs": -0.36,
-        "obv": "DISTRIBUTION",
-        "above_ema": "False",
-        "score": -6.59
-      },
-      {
-        "ticker": "XLU",
-        "sector": "Utilities",
-        "ret_20d": -3.79,
-        "rs": -0.69,
-        "obv": "DISTRIBUTION",
-        "above_ema": "False",
-        "score": -9.94
-      }
-    ],
-    "signals": [],
-    "top_news": [
-      {
-        "symbol": "AMD",
-        "sentiment": "POSITIVE",
-        "score": 3,
-        "headlines": [
-          "[+] Micron Just Got A New $950 Price Tag: BofA Raised 4 Other AI Chip Stocks Too",
-          "[~] 2026's Biggest IPO So Far: AI Chipmaker Cerebras Targets $4.8 Billion Raise, But"
-        ]
-      },
-      {
-        "symbol": "MRVL",
-        "sentiment": "POSITIVE",
-        "score": 2,
-        "headlines": [
-          "[~] What Is Going On With Marvell Stock On Wednesday?",
-          "[~] Watching Marvell Technology; Hearing Investor Business Daily SwingTrader Buys St"
-        ]
-      },
-      {
-        "symbol": "SMCI",
-        "sentiment": "NEUTRAL",
-        "score": 1,
-        "headlines": [
-          "[~] Jim Cramer Said 'Smell' \u2014 AI Stocks Heard 'Sell'",
-          "[~] $100 Invested In Super Micro Computer 10 Years Ago Would Be Worth This Much Toda"
-        ]
-      },
-      {
-        "symbol": "GOOGL",
-        "sentiment": "NEUTRAL",
-        "score": 1,
-        "headlines": [
-          "[+] Micron Just Got A New $950 Price Tag: BofA Raised 4 Other AI Chip Stocks Too",
-          "[~] UPDATE: Watching Alphabet; Hearing Investor Business Daily SwingTrader Buys Stoc"
-        ]
-      },
-      {
-        "symbol": "CRM",
-        "sentiment": "NEUTRAL",
-        "score": 1,
-        "headlines": [
-          "[~] Citigroup Maintains Neutral on Salesforce, Lowers Price Target to $188",
-          "[+] Pearson Expands Partnership With Salesforce Over AI, Skills Development Througho"
-        ]
-      },
-      {
-        "symbol": "XOM",
-        "sentiment": "NEUTRAL",
-        "score": 1,
-        "headlines": [
-          "[~] Apple, ServiceNow, Netflix And An Energy Stock On CNBC's 'Final Trades'",
-          "[~] CNBC Halftime Report Final Trades: Apple, ServiceNow, Netflix, Exxon Mobil"
-        ]
-      },
-      {
-        "symbol": "FANG",
-        "sentiment": "NEUTRAL",
-        "score": 1,
-        "headlines": [
-          "[+] Bernstein Maintains Outperform on Diamondback Energy, Raises Price Target to $24"
-        ]
-      },
-      {
-        "symbol": "SLB",
-        "sentiment": "NEUTRAL",
-        "score": 1,
-        "headlines": [
-          "[+] Bernstein Maintains Outperform on SLB, Raises Price Target to $71"
-        ]
-      },
-      {
-        "symbol": "FCX",
-        "sentiment": "NEUTRAL",
-        "score": 1,
-        "headlines": [
-          "[+] Copper Prices Hit Record High As AI Data Center Boom Fuels Global Supply Crunch,",
-          "[~] Taiwan Semiconductor, Freeport-McMoRan And More On CNBC's 'Final Trades'"
-        ]
-      },
-      {
-        "symbol": "ARM",
-        "sentiment": "NEUTRAL",
-        "score": -1,
-        "headlines": [
-          "[~] 'Arm, SoftBank Tried to Buy Cerebras in 11th Hour' - Bloomberg",
-          "[~] Jim Cramer Said 'Smell' \u2014 AI Stocks Heard 'Sell'"
-        ]
-      }
-    ]
-  },
-  {
     "timestamp": "2026-05-13T12:40:55.456371-04:00",
     "mode": "FULL",
     "spy_regime": "BULL",
@@ -10360,6 +10174,291 @@
         "headlines": [
           "[-] Semi Mania Resumes Ahead of Nvidia Earnings On Samsung Woes And Tankers Exiting ",
           "[-] S&P 500 Rebounds Ahead Of Nvidia's Print, Oil Sinks 5% On Iran Truce Hopes: Stoc"
+        ]
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-05-21T12:25:53.424445-04:00",
+    "mode": "FULL",
+    "spy_regime": "BULL",
+    "posture": "RISK-OFF",
+    "vix": 17.440000534057617,
+    "spy_atr_pct": 1.0,
+    "in_window": false,
+    "market_open": true,
+    "data_feed": "iex",
+    "yfinance_patched": "0/65",
+    "sentiment_backend": "finbert",
+    "earnings_cache_size": 71,
+    "macro_blackout": false,
+    "macro_reason": "",
+    "next_macro_event": {
+      "name": "FOMC",
+      "datetime": "2026-06-17T14:00:00-04:00",
+      "days_away": 27,
+      "hours_away": 649.6
+    },
+    "open_positions": [
+      "MU",
+      "PANW",
+      "PLTR"
+    ],
+    "new_today": 0,
+    "filter_stats": {
+      "scanned": 53,
+      "no_data": 0,
+      "held": 3,
+      "market_volatile": 0,
+      "earnings_blackout": 0,
+      "failed_filters": 5,
+      "obv_distribution": 16,
+      "no_strategy_signal": 25,
+      "of_or_sent_reject": 0,
+      "sector_misalign": 0,
+      "passed_all": 4
+    },
+    "sectors_top3": [
+      {
+        "ticker": "UNG",
+        "sector": "Natural Gas",
+        "ret_20d": 11.93,
+        "rs": 3.42,
+        "obv": "ACCUMULATION",
+        "above_ema": "True",
+        "score": 37.25
+      },
+      {
+        "ticker": "USO",
+        "sector": "Crude Oil",
+        "ret_20d": 11.23,
+        "rs": 3.22,
+        "obv": "ACCUMULATION",
+        "above_ema": "True",
+        "score": 35.24
+      },
+      {
+        "ticker": "XLE",
+        "sector": "Energy",
+        "ret_20d": 4.94,
+        "rs": 1.42,
+        "obv": "ACCUMULATION",
+        "above_ema": "True",
+        "score": 17.18
+      }
+    ],
+    "sectors_bottom3": [
+      {
+        "ticker": "XLI",
+        "sector": "Industrials",
+        "ret_20d": -1.82,
+        "rs": -0.52,
+        "obv": "DISTRIBUTION",
+        "above_ema": "False",
+        "score": -8.22
+      },
+      {
+        "ticker": "GLD",
+        "sector": "Gold",
+        "ret_20d": -4.25,
+        "rs": -1.22,
+        "obv": "DISTRIBUTION",
+        "above_ema": "False",
+        "score": -15.19
+      },
+      {
+        "ticker": "XLB",
+        "sector": "Materials",
+        "ret_20d": -4.35,
+        "rs": -1.25,
+        "obv": "DISTRIBUTION",
+        "above_ema": "False",
+        "score": -15.49
+      }
+    ],
+    "discovered": [],
+    "discovered_watchlist": [
+      "AGYS",
+      "TATT"
+    ],
+    "signals": [
+      {
+        "symbol": "RGTI",
+        "strategy": "B",
+        "confidence": 0.38,
+        "signal": "BUY",
+        "entry": 21.16,
+        "stop": 17.7,
+        "target": 28.08,
+        "shares": 719,
+        "notional": 15214.04,
+        "risk_$": 2487.74,
+        "sentiment": "POSITIVE",
+        "obv": "ACCUMULATION",
+        "of_score": 3,
+        "sector_score": 999.0,
+        "reason": "Breakout above 17.88 | vol 2.6x prior 20d avg",
+        "order_status": "SKIPPED: position/daily cap",
+        "headlines": [
+          "[~] Trump Admin To Take Quantum Stakes \u2014 D-Wave, Rigetti, IonQ Stocks Pop",
+          "[+] Advance Auto Parts Posts Upbeat Q1 Earnings, Joins IBM, Ralph Lauren And Other B"
+        ]
+      },
+      {
+        "symbol": "GOOGL",
+        "strategy": "A",
+        "confidence": 0.5,
+        "signal": "BUY",
+        "entry": 389.13,
+        "stop": 378.95,
+        "target": 409.49,
+        "shares": 102,
+        "notional": 39691.26,
+        "risk_$": 1038.36,
+        "sentiment": "NEUTRAL",
+        "obv": "ACCUMULATION",
+        "of_score": 2,
+        "sector_score": 999.0,
+        "reason": "Pullback zone [368.91-391.73] | RSI=62.9 | bullish candle",
+        "order_status": "SKIPPED: position/daily cap",
+        "headlines": [
+          "[-] 'White House Postpones AI EO Signing Ceremony' - Axios",
+          "[~] 'Anthropic Is in Talks to Use Microsoft's AI Chips' - The Information"
+        ]
+      },
+      {
+        "symbol": "IONQ",
+        "strategy": "B",
+        "confidence": 0.35,
+        "signal": "BUY",
+        "entry": 59.19,
+        "stop": 52.2,
+        "target": 73.17,
+        "shares": 356,
+        "notional": 21071.64,
+        "risk_$": 2488.44,
+        "sentiment": "NEUTRAL",
+        "obv": "ACCUMULATION",
+        "of_score": 3,
+        "sector_score": 999.0,
+        "reason": "Breakout above 52.73 | vol 1.4x prior 20d avg",
+        "order_status": "SKIPPED: position/daily cap",
+        "headlines": [
+          "[~] Trump Admin To Take Quantum Stakes \u2014 D-Wave, Rigetti, IonQ Stocks Pop",
+          "[~] Why Are Infleqtion, D-Wave Quantum, Rigetti Computing Shares Surging In Thursday"
+        ]
+      },
+      {
+        "symbol": "QBTS",
+        "strategy": "B",
+        "confidence": 0.35,
+        "signal": "BUY",
+        "entry": 24.26,
+        "stop": 19.84,
+        "target": 33.1,
+        "shares": 676,
+        "notional": 16399.76,
+        "risk_$": 2987.92,
+        "sentiment": "POSITIVE",
+        "obv": "ACCUMULATION",
+        "of_score": 3,
+        "sector_score": 999.0,
+        "reason": "Breakout above 20.05 | vol 1.4x prior 20d avg",
+        "order_status": "SKIPPED: position/daily cap",
+        "headlines": [
+          "[~] Trump Admin To Take Quantum Stakes \u2014 D-Wave, Rigetti, IonQ Stocks Pop",
+          "[+] Advance Auto Parts Posts Upbeat Q1 Earnings, Joins IBM, Ralph Lauren And Other B"
+        ]
+      }
+    ],
+    "top_news": [
+      {
+        "symbol": "NVDA",
+        "sentiment": "STRONG_POSITIVE",
+        "score": 5,
+        "headlines": [
+          "[+] CoreWeave Gains As GF Securities Sees AI Infrastructure Boom Driving Growth",
+          "[~] Elon Musk's Biographer Says 'Space Is The Next AI' As SpaceX Pitches $28.5 Trill"
+        ]
+      },
+      {
+        "symbol": "AVGO",
+        "sentiment": "POSITIVE",
+        "score": 2,
+        "headlines": [
+          "[~] What's Going On With Broadcom Stock Thursday?",
+          "[~] Just 10 Stocks Now Make Up Over Of S&P 500\u2014Surpassing Dot-Com Bubble Levels"
+        ]
+      },
+      {
+        "symbol": "AMD",
+        "sentiment": "NEUTRAL",
+        "score": -1,
+        "headlines": [
+          "[-] What's Going On With Taiwan Semiconductor Stock Thursday?",
+          "[~] AMD Plans To Invest Billions In Taiwan For AI Chips"
+        ]
+      },
+      {
+        "symbol": "ARM",
+        "sentiment": "NEUTRAL",
+        "score": 1,
+        "headlines": [
+          "[+] Advance Auto Parts Posts Upbeat Q1 Earnings, Joins IBM, Ralph Lauren And Other B",
+          "[-] Jim Cramer Likes ARM 'Very Much' As Stock Jumps 3% Premarket, But Calls Post-Nvi"
+        ]
+      },
+      {
+        "symbol": "MU",
+        "sentiment": "POSITIVE",
+        "score": 3,
+        "headlines": [
+          "[~] What Is Going On With Micron Stock On Thursday?",
+          "[~] Understanding Micron Technology's Position In Semiconductors &amp; Semiconductor"
+        ]
+      },
+      {
+        "symbol": "MRVL",
+        "sentiment": "STRONG_POSITIVE",
+        "score": 5,
+        "headlines": [
+          "[+] Citigroup Maintains Buy on Marvell Technology, Raises Price Target to $215",
+          "[~] 10 Information Technology Stocks With Whale Alerts In Today's Session"
+        ]
+      },
+      {
+        "symbol": "DELL",
+        "sentiment": "STRONG_POSITIVE",
+        "score": 5,
+        "headlines": [
+          "[+] Morgan Stanley Maintains Underweight on Dell Technologies, Raises Price Target t",
+          "[~] 10 Information Technology Stocks With Whale Alerts In Today's Session"
+        ]
+      },
+      {
+        "symbol": "HPE",
+        "sentiment": "STRONG_POSITIVE",
+        "score": 4,
+        "headlines": [
+          "[+] Morgan Stanley Maintains Equal-Weight on Hewlett Packard, Raises Price Target to",
+          "[ANALYST] Morgan Stanley pt raise (+3) Tier-1"
+        ]
+      },
+      {
+        "symbol": "VRT",
+        "sentiment": "STRONG_POSITIVE",
+        "score": 4,
+        "headlines": [
+          "[+] Oppenheimer Maintains Outperform on Vertiv Holdings, Raises Price Target to $353",
+          "[~] 10 Industrials Stocks Whale Activity In Today's Session"
+        ]
+      },
+      {
+        "symbol": "CEG",
+        "sentiment": "NEUTRAL",
+        "score": -1,
+        "headlines": [
+          "[-] Dan Loeb Dumps Microsoft, Slashes Nvidia And Rail Stocks In Sweeping Q1 Portfoli"
         ]
       }
     ]
