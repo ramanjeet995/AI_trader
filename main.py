@@ -203,7 +203,9 @@ def _save_human_log(logs: list):
         disc_all  = entry.get("discovered_watchlist") or []
 
         # ── Header ────────────────────────────────────────────────────────────
-        lines.append(f"## {ts_disp} ET — {mode}")
+        cpu_temp = entry.get("cpu_temp", "")
+        temp_str = f" | Pi: {cpu_temp}" if cpu_temp else ""
+        lines.append(f"## {ts_disp} ET — {mode}{temp_str}")
         lines.append("")
 
         # ── Market check (plain English) ──────────────────────────────────────
