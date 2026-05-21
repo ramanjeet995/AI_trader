@@ -1,7 +1,24 @@
 # AI Trader — Daily Log
 
 What the robot saw and did each time it woke up. Newest at top.
-_Last updated: May 21, 2026 at 01:13 PM ET_
+_Last updated: May 21, 2026 at 01:24 PM ET_
+
+## May 21, 01:24 PM ET — Big-news check
+
+**Market check:**
+- Market is going **up** 📈
+- Mood: calm (VIX 17)
+
+**Result:** ✓ Bought 2 stock(s).
+
+- ✓ **Bought MRVL** (gap +3.3%)
+    - Plan: buy at $0, sell-stop at $0, target $0
+    - 0 shares, risking $0
+- ✓ **Bought VRT** (gap +4.0%)
+    - Plan: buy at $0, sell-stop at $0, target $0
+    - 0 shares, risking $0
+
+---
 
 ## May 21, 01:13 PM ET — Main scan
 
@@ -1423,19 +1440,5 @@ _Last updated: May 21, 2026 at 01:13 PM ET_
 - ✗ **QQQ** — negative news (-2)
 
 </details>
-
----
-
-## May 13, 01:05 PM ET — Big-news check
-
-**Market check:**
-- Market is going **up** 📈
-- Mood: calm (VIX 18)
-
-**Result:** ✓ Bought 1 stock(s).
-
-- ✓ **Bought MRVL** (gap +7.5%)
-    - Plan: buy at $0, sell-stop at $0, target $0
-    - 0 shares, risking $0
 
 ---

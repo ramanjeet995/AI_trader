@@ -1,28 +1,5 @@
 [
   {
-    "timestamp": "2026-05-13T13:05:34.700138-04:00",
-    "mode": "CATALYST",
-    "spy_regime": "BULL",
-    "vix": 17.989999771118164,
-    "signals": [
-      {
-        "symbol": "MRVL",
-        "strategy": "CATALYST",
-        "signal": "BUY",
-        "factors": [
-          "gap +7.5% in [3.0, 12.0]",
-          "news score +2",
-          "in upper 59% of day's range"
-        ],
-        "gap_pct": 7.51,
-        "news_score": 2,
-        "earn_days_ago": null,
-        "order_status": "NOT_PLACED \u2014 outside target window or market closed"
-      }
-    ],
-    "force_closed": []
-  },
-  {
     "timestamp": "2026-05-13T13:08:21.613033-04:00",
     "mode": "NEWS",
     "spy_regime": "BULL",
@@ -10538,5 +10515,42 @@
         ]
       }
     ]
+  },
+  {
+    "timestamp": "2026-05-21T13:24:48.218362-04:00",
+    "mode": "CATALYST",
+    "spy_regime": "BULL",
+    "vix": 17.440000534057617,
+    "signals": [
+      {
+        "symbol": "MRVL",
+        "strategy": "CATALYST",
+        "signal": "BUY",
+        "factors": [
+          "gap +3.3% in [3.0, 12.0]",
+          "news score +4",
+          "in upper 74% of day's range"
+        ],
+        "gap_pct": 3.27,
+        "news_score": 4,
+        "earn_days_ago": null,
+        "order_status": "NOT_PLACED \u2014 outside target window or market closed"
+      },
+      {
+        "symbol": "VRT",
+        "strategy": "CATALYST",
+        "signal": "BUY",
+        "factors": [
+          "gap +4.0% in [3.0, 12.0]",
+          "news score +3",
+          "in upper 83% of day's range"
+        ],
+        "gap_pct": 4.04,
+        "news_score": 3,
+        "earn_days_ago": null,
+        "order_status": "NOT_PLACED \u2014 outside target window or market closed"
+      }
+    ],
+    "force_closed": []
   }
 ]
