@@ -1,7 +1,53 @@
 # AI Trader — Daily Log
 
 What the robot saw and did each time it woke up. Newest at top.
-_Last updated: May 21, 2026 at 05:20 PM ET_
+_Last updated: May 21, 2026 at 05:54 PM ET_
+
+## May 21, 05:54 PM ET — Main scan
+
+**Market check:**
+- Market is going **up** 📈
+- Mood: calm (VIX 17)
+- Investors defensive
+- Currently holding: MU, PANW, PLTR
+
+**Money flowing into:** Natural Gas (+10%), Crude Oil (+8%), Energy (+4%)
+**Money flowing out of:** Industrials (-1%), Materials (-4%), Gold (-4%)
+
+**Looked at 53 stocks:**
+- already holding: 3
+- not enough trading volume: 5
+- smart money quietly selling: 16
+- no buy setup today: 25
+- ✓ **4 stocks ready to trade**
+
+**Result:** Found 4 setup(s), but didn't buy any.
+
+- ✗ **Skipped QBTS** — position/daily cap
+    - Plan: buy at $25.72, sell-stop at $19.84, target $37.48
+    - 510 shares, risking $2999
+- ✗ **Skipped RGTI** — position/daily cap
+    - Plan: buy at $22.04, sell-stop at $17.7, target $30.72
+    - 576 shares, risking $2500
+- ✗ **Skipped IONQ** — position/daily cap
+    - Plan: buy at $58.87, sell-stop at $52.2, target $72.21
+    - 375 shares, risking $2501
+- ✗ **Skipped ASTS** — position/daily cap
+    - Plan: buy at $96.2, sell-stop at $91.64, target $105.32
+    - 416 shares, risking $1897
+
+<details><summary>Notable news today</summary>
+
+- ✓ **ARM** — strong positive news (+2)
+    - _[+] A New Chipmaker Just Topped Micron's 2026 Return, Thanks To Nvidia_
+- ✗ **GOOGL** — negative news (-2)
+    - [-] 'Waymo halts freeway rides after robotaxis struggle in construction zones'- Tech
+- ✗ **AMZN** — negative news (-3)
+    - [~] 'OpenAI Held $1 Billion Revenue Lead Over Anthropic in First Quarter' - The Info
+
+</details>
+
+---
 
 ## May 21, 05:20 PM ET — News check
 
@@ -1386,37 +1432,6 @@ _Last updated: May 21, 2026 at 05:20 PM ET_
 ---
 
 ## May 13, 06:42 PM ET — Main scan
-
-**Market check:**
-- Market is going **up** 📈
-- Mood: calm (VIX 18)
-- Investors defensive
-- Currently holding: AMZN, GOOGL
-
-**Money flowing into:** Crude Oil (+13%), Silver (+11%), Natural Gas (+2%)
-**Money flowing out of:** Gold (-2%), Financials (-2%), Utilities (-4%)
-
-**Looked at 33 stocks:**
-- already holding: 2
-- not enough trading volume: 2
-- smart money quietly selling: 11
-- no buy setup today: 18
-
-**Result:** No trades today.
-<details><summary>Notable news today</summary>
-
-- ✓ **AMD** — strong positive news (+3)
-    - _[+] Daiwa Capital Downgrades Advanced Micro Devices to Outperform, Raises Price Targ_
-- ✓ **NVDA** — strong positive news (+2)
-    - _[~] GraniteShares Launches MSTR, Coinbase ETFs As Bitcoin-Fueled Volatility Trade He_
-- ✓ **MRVL** — strong positive news (+2)
-    - _[~] What Is Going On With Marvell Stock On Wednesday?_
-
-</details>
-
----
-
-## May 13, 05:50 PM ET — Main scan
 
 **Market check:**
 - Market is going **up** 📈
