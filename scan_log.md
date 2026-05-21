@@ -1,7 +1,26 @@
 # AI Trader — Daily Log
 
 What the robot saw and did each time it woke up. Newest at top.
-_Last updated: May 21, 2026 at 01:24 PM ET_
+_Last updated: May 21, 2026 at 01:27 PM ET_
+
+## May 21, 01:27 PM ET — News check
+
+**Market check:**
+- Market is going **up** 📈
+
+**Result:** No trades today.
+<details><summary>Notable news today</summary>
+
+- ✓ **VRT** — strong positive news (+3)
+- ✓ **RGTI** — strong positive news (+3)
+- ✓ **QBTS** — strong positive news (+3)
+- ✗ **RKLB** — negative news (-2)
+- ✗ **META** — negative news (-3)
+- ✗ **AMZN** — negative news (-3)
+
+</details>
+
+---
 
 ## May 21, 01:24 PM ET — Big-news check
 
@@ -1422,23 +1441,5 @@ _Last updated: May 21, 2026 at 01:24 PM ET_
 - ✓ **Bought MRVL** (gap +7.6%)
     - Plan: buy at $0, sell-stop at $0, target $0
     - 0 shares, risking $0
-
----
-
-## May 13, 01:08 PM ET — News check
-
-**Market check:**
-- Market is going **up** 📈
-
-**Result:** No trades today.
-<details><summary>Notable news today</summary>
-
-- ✓ **SPY** — strong positive news (+3)
-- ✓ **MRVL** — strong positive news (+2)
-- ✗ **META** — negative news (-2)
-- ✗ **AAPL** — negative news (-2)
-- ✗ **QQQ** — negative news (-2)
-
-</details>
 
 ---
