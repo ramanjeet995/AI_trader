@@ -103,6 +103,42 @@ def in_target_window(target_hours: list[int]) -> tuple[bool, str]:
     return False, et_str
 
 
+# ── Benchmark comparison (portfolio vs S&P 500) ─────────────────────────────
+
+BASELINE_FILE = Path(__file__).parent / "benchmark_baseline.json"
+
+def _load_baseline() -> dict | None:
+    if not BASELINE_FILE.exists():
+        return None
+    try:
+        return json.loads(BASELINE_FILE.read_text())
+    except Exception:
+        return None
+
+
+def _benchmark_comparison(account_value: float, spy_price: float) -> dict | None:
+    """Compare portfolio return vs SPY return since baseline date."""
+    baseline = _load_baseline()
+    if not baseline:
+        return None
+    try:
+        port_return = ((account_value / baseline["account_value"]) - 1) * 100
+        spy_return = ((spy_price / baseline["spy_price"]) - 1) * 100
+        alpha = port_return - spy_return
+        return {
+            "start_date": baseline["start_date"],
+            "portfolio_pct": round(port_return, 2),
+            "spy_pct": round(spy_return, 2),
+            "alpha_pct": round(alpha, 2),
+            "account_start": baseline["account_value"],
+            "account_now": round(account_value, 2),
+            "spy_start": baseline["spy_price"],
+            "spy_now": round(spy_price, 2),
+        }
+    except Exception:
+        return None
+
+
 # ── Log persistence ───────────────────────────────────────────────────────────
 
 def _cpu_temp() -> str | None:
@@ -114,11 +150,18 @@ def _cpu_temp() -> str | None:
         return None
 
 
-def save_log(entry: dict):
+def save_log(entry: dict, account_value: float = 0, spy_price: float = 0):
     temp = _cpu_temp()
     if temp:
         entry["cpu_temp"] = temp
         print(f"  [pi] CPU temp: {temp}")
+    # Benchmark comparison vs S&P 500
+    if account_value > 0 and spy_price > 0:
+        bench = _benchmark_comparison(account_value, spy_price)
+        if bench:
+            entry["benchmark"] = bench
+            print(f"  [benchmark] Us: {bench['portfolio_pct']:+.2f}%  SPY: {bench['spy_pct']:+.2f}%  "
+                  f"Alpha: {bench['alpha_pct']:+.2f}%")
     logs = []
     if LOG_FILE.exists():
         try:
@@ -138,6 +181,27 @@ def _save_human_log(logs: list):
     lines.append("What the robot saw and did each time it woke up. Newest at top.")
     lines.append(f"_Last updated: {datetime.now(ET).strftime('%b %d, %Y at %I:%M %p ET')}_")
     lines.append("")
+
+    # Show latest benchmark comparison at the top
+    latest_bench = None
+    for entry in reversed(logs):
+        if entry.get("benchmark"):
+            latest_bench = entry["benchmark"]
+            break
+    if latest_bench:
+        port = latest_bench["portfolio_pct"]
+        spy = latest_bench["spy_pct"]
+        alpha = latest_bench["alpha_pct"]
+        port_icon = "📈" if port >= 0 else "📉"
+        spy_icon = "📈" if spy >= 0 else "📉"
+        alpha_icon = "✅" if alpha > 0 else "❌"
+        lines.append(f"### Performance since {latest_bench['start_date']}")
+        lines.append(f"| | Return | Value |")
+        lines.append(f"|---|---|---|")
+        lines.append(f"| {port_icon} **Our Portfolio** | **{port:+.2f}%** | ${latest_bench['account_now']:,.2f} |")
+        lines.append(f"| {spy_icon} S&P 500 (SPY) | {spy:+.2f}% | ${latest_bench['spy_now']:.2f} |")
+        lines.append(f"| {alpha_icon} **Alpha** | **{alpha:+.2f}%** | {'Beating' if alpha > 0 else 'Behind'} the market |")
+        lines.append("")
 
     # Plain-English translations
     MODE_NAMES = {
@@ -223,6 +287,11 @@ def _save_human_log(logs: list):
             lines.append(f"- ⚠ **Important economic news soon — {macro_rsn}**")
         if holds:
             lines.append(f"- Currently holding: {', '.join(holds)}")
+        bench = entry.get("benchmark")
+        if bench:
+            alpha = bench["alpha_pct"]
+            lines.append(f"- Scoreboard: Us **{bench['portfolio_pct']:+.2f}%** vs S&P 500 {bench['spy_pct']:+.2f}% "
+                         f"({'**beating**' if alpha > 0 else 'behind'} by {abs(alpha):.2f}%)")
         lines.append("")
 
         # ── Sector rotation (plain English) ───────────────────────────────────
@@ -575,6 +644,7 @@ def run_full_scan():
         print("  ERROR: could not fetch SPY"); return
     benchmark_df = indicators.add_all(benchmark_raw, cfg)
     spy_regime   = classify(benchmark_df)
+    spy_price    = float(benchmark_df["close"].iloc[-1])
 
     spy_atr_pct          = benchmark_df["atr_pct"].iloc[-1]
     market_too_volatile  = spy_atr_pct > MAX_MARKET_ATR_PCT
@@ -798,7 +868,7 @@ def run_full_scan():
             "top_news": [{"symbol": n["symbol"], "sentiment": n["sentiment"],
                           "score": n["score"], "headlines": n["headlines"]}
                          for n in news_summary if n["score"] != 0][:10],
-        })
+        }, account_value=account_value, spy_price=spy_price)
         return
 
     # Sort by confidence × order-flow × RS — best setup first
@@ -1025,7 +1095,7 @@ def run_full_scan():
         "top_news": [{"symbol": n["symbol"], "sentiment": n["sentiment"],
                       "score": n["score"], "headlines": n["headlines"]}
                      for n in news_summary if n["score"] != 0][:10],
-    })
+    }, account_value=account_value, spy_price=spy_price)
     _print_news_summary(news_summary)
 
 
@@ -1059,6 +1129,7 @@ def run_news_scan():
         print("  ERROR: could not fetch SPY"); return
     benchmark_df = indicators.add_all(benchmark_raw, cfg)
     spy_regime   = classify(benchmark_df)
+    spy_price    = float(benchmark_df["close"].iloc[-1])
     spy_atr_pct  = benchmark_df["atr_pct"].iloc[-1]
     market_too_volatile = spy_atr_pct > MAX_MARKET_ATR_PCT
 
@@ -1345,7 +1416,7 @@ def run_news_scan():
         "alerts": alerts,
         "news_snapshot": [{"symbol": r["symbol"], "sentiment": r["label"],
                            "score": r["score"]} for r in results],
-    })
+    }, account_value=account_value, spy_price=spy_price)
 
 
 # ── CATALYST SCAN (event-driven, runs at 11 AM ET) ───────────────────────────
@@ -1450,6 +1521,7 @@ def run_catalyst_scan():
         print("  ERROR: could not fetch SPY"); return
     benchmark_df = indicators.add_all(benchmark_raw, cfg)
     spy_regime   = classify(benchmark_df)
+    spy_price    = float(benchmark_df["close"].iloc[-1])
     print(f"  SPY regime    : {spy_regime.value}")
     if spy_regime == Regime.BEAR:
         print(f"  Skipping catalyst scan in BEAR regime\n")
@@ -1509,7 +1581,7 @@ def run_catalyst_scan():
             "timestamp": datetime.now(ET).isoformat(),
             "mode": "CATALYST", "spy_regime": spy_regime.value,
             "signals": [], "force_closed": [{"symbol": c["symbol"]} for c in closed],
-        })
+        }, account_value=account_value, spy_price=spy_price)
         return
 
     # Sort by score desc, then by news_score desc
@@ -1644,7 +1716,7 @@ def run_catalyst_scan():
         "vix": vix_assessment.get("vix"),
         "signals": placed,
         "force_closed": [{"symbol": c["symbol"], "age_days": c["age_days"]} for c in closed],
-    })
+    }, account_value=account_value, spy_price=spy_price)
 
 
 # ── Entry point ───────────────────────────────────────────────────────────────
