@@ -1,189 +1,5 @@
 [
   {
-    "timestamp": "2026-05-14T14:26:28.037136-04:00",
-    "mode": "NEWS",
-    "spy_regime": "BULL",
-    "safety_block": "",
-    "signals": [],
-    "alerts": [
-      "DANGER \u2014 AMZN held position has NEGATIVE news!",
-      "  [~] Why Is Fiserv Stock Gaining Thursday?",
-      "  [+] Cisco Adds to AI Fever; Optimism About Trump's China Visit; 30-Year Bond Over 5%"
-    ],
-    "news_snapshot": [
-      {
-        "symbol": "AVGO",
-        "sentiment": "POSITIVE",
-        "score": 3
-      },
-      {
-        "symbol": "GOOGL",
-        "sentiment": "POSITIVE",
-        "score": 2
-      },
-      {
-        "symbol": "COIN",
-        "sentiment": "POSITIVE",
-        "score": 2
-      },
-      {
-        "symbol": "QQQ",
-        "sentiment": "POSITIVE",
-        "score": 2
-      },
-      {
-        "symbol": "MU",
-        "sentiment": "NEUTRAL",
-        "score": 1
-      },
-      {
-        "symbol": "MRVL",
-        "sentiment": "NEUTRAL",
-        "score": 1
-      },
-      {
-        "symbol": "MSFT",
-        "sentiment": "NEUTRAL",
-        "score": 1
-      },
-      {
-        "symbol": "CRWD",
-        "sentiment": "NEUTRAL",
-        "score": 1
-      },
-      {
-        "symbol": "SHOP",
-        "sentiment": "NEUTRAL",
-        "score": 1
-      },
-      {
-        "symbol": "MSTR",
-        "sentiment": "NEUTRAL",
-        "score": 1
-      },
-      {
-        "symbol": "NVDA",
-        "sentiment": "NEUTRAL",
-        "score": 0
-      },
-      {
-        "symbol": "TSLA",
-        "sentiment": "NEUTRAL",
-        "score": 0
-      },
-      {
-        "symbol": "CRM",
-        "sentiment": "NEUTRAL",
-        "score": 0
-      },
-      {
-        "symbol": "NOW",
-        "sentiment": "NEUTRAL",
-        "score": 0
-      },
-      {
-        "symbol": "PLTR",
-        "sentiment": "NEUTRAL",
-        "score": 0
-      },
-      {
-        "symbol": "SNOW",
-        "sentiment": "NEUTRAL",
-        "score": 0
-      },
-      {
-        "symbol": "OXY",
-        "sentiment": "NEUTRAL",
-        "score": 0
-      },
-      {
-        "symbol": "FANG",
-        "sentiment": "NEUTRAL",
-        "score": 0
-      },
-      {
-        "symbol": "SLB",
-        "sentiment": "NEUTRAL",
-        "score": 0
-      },
-      {
-        "symbol": "NEM",
-        "sentiment": "NEUTRAL",
-        "score": 0
-      },
-      {
-        "symbol": "GOLD",
-        "sentiment": "NEUTRAL",
-        "score": 0
-      },
-      {
-        "symbol": "FCX",
-        "sentiment": "NEUTRAL",
-        "score": 0
-      },
-      {
-        "symbol": "GDX",
-        "sentiment": "NEUTRAL",
-        "score": 0
-      },
-      {
-        "symbol": "MARA",
-        "sentiment": "NEUTRAL",
-        "score": 0
-      },
-      {
-        "symbol": "RIOT",
-        "sentiment": "NEUTRAL",
-        "score": 0
-      },
-      {
-        "symbol": "AMD",
-        "sentiment": "NEUTRAL",
-        "score": -1
-      },
-      {
-        "symbol": "ARM",
-        "sentiment": "NEUTRAL",
-        "score": -1
-      },
-      {
-        "symbol": "SMCI",
-        "sentiment": "NEUTRAL",
-        "score": -1
-      },
-      {
-        "symbol": "META",
-        "sentiment": "NEUTRAL",
-        "score": -1
-      },
-      {
-        "symbol": "NFLX",
-        "sentiment": "NEUTRAL",
-        "score": -1
-      },
-      {
-        "symbol": "AAPL",
-        "sentiment": "NEUTRAL",
-        "score": -1
-      },
-      {
-        "symbol": "XOM",
-        "sentiment": "NEUTRAL",
-        "score": -1
-      },
-      {
-        "symbol": "AMZN",
-        "sentiment": "NEGATIVE",
-        "score": -2
-      },
-      {
-        "symbol": "SPY",
-        "sentiment": "NEGATIVE",
-        "score": -2
-      }
-    ]
-  },
-  {
     "timestamp": "2026-05-14T15:25:31.851617-04:00",
     "mode": "NEWS",
     "spy_regime": "BULL",
@@ -11630,6 +11446,372 @@
       "account_now": 101708.61,
       "spy_start": 742.91,
       "spy_now": 747.12
+    }
+  },
+  {
+    "timestamp": "2026-05-22T16:26:32.892666-04:00",
+    "mode": "FULL",
+    "spy_regime": "BULL",
+    "posture": "RISK-OFF",
+    "vix": 16.760000228881836,
+    "spy_atr_pct": 1.01,
+    "in_window": true,
+    "market_open": false,
+    "data_feed": "iex",
+    "yfinance_patched": "0/68",
+    "sentiment_backend": "finbert",
+    "earnings_cache_size": 73,
+    "macro_blackout": false,
+    "macro_reason": "",
+    "next_macro_event": {
+      "name": "FOMC",
+      "datetime": "2026-06-17T14:00:00-04:00",
+      "days_away": 25,
+      "hours_away": 621.6
+    },
+    "open_positions": [
+      "CRWD",
+      "MU",
+      "PANW",
+      "PLTR",
+      "SLB"
+    ],
+    "new_today": 2,
+    "filter_stats": {
+      "scanned": 56,
+      "no_data": 0,
+      "held": 5,
+      "market_volatile": 0,
+      "earnings_blackout": 0,
+      "failed_filters": 6,
+      "obv_distribution": 16,
+      "no_strategy_signal": 22,
+      "of_or_sent_reject": 0,
+      "sector_misalign": 0,
+      "passed_all": 7
+    },
+    "sectors_top3": [
+      {
+        "ticker": "XLE",
+        "sector": "Energy",
+        "ret_20d": 4.67,
+        "rs": 1.09,
+        "obv": "ACCUMULATION",
+        "above_ema": "True",
+        "score": 13.94
+      },
+      {
+        "ticker": "XLV",
+        "sector": "Healthcare",
+        "ret_20d": 4.49,
+        "rs": 1.05,
+        "obv": "ACCUMULATION",
+        "above_ema": "True",
+        "score": 13.52
+      },
+      {
+        "ticker": "UNG",
+        "sector": "Natural Gas",
+        "ret_20d": 4.39,
+        "rs": 1.03,
+        "obv": "ACCUMULATION",
+        "above_ema": "False",
+        "score": 11.28
+      }
+    ],
+    "sectors_bottom3": [
+      {
+        "ticker": "XLI",
+        "sector": "Industrials",
+        "ret_20d": -0.43,
+        "rs": -0.1,
+        "obv": "DISTRIBUTION",
+        "above_ema": "False",
+        "score": -4.02
+      },
+      {
+        "ticker": "XLB",
+        "sector": "Materials",
+        "ret_20d": -2.88,
+        "rs": -0.67,
+        "obv": "DISTRIBUTION",
+        "above_ema": "False",
+        "score": -9.75
+      },
+      {
+        "ticker": "GLD",
+        "sector": "Gold",
+        "ret_20d": -3.72,
+        "rs": -0.87,
+        "obv": "DISTRIBUTION",
+        "above_ema": "False",
+        "score": -11.73
+      }
+    ],
+    "discovered": [],
+    "discovered_watchlist": [
+      "AGYS",
+      "TATT",
+      "AKTX"
+    ],
+    "signals": [
+      {
+        "symbol": "RDW",
+        "strategy": "B",
+        "confidence": 0.35,
+        "signal": "BUY",
+        "entry": 17.46,
+        "stop": 15.23,
+        "target": 21.92,
+        "shares": 1129,
+        "notional": 19712.34,
+        "risk_$": 2517.67,
+        "sentiment": "NEUTRAL",
+        "obv": "ACCUMULATION",
+        "of_score": 3,
+        "sector_score": 999.0,
+        "reason": "Breakout above 15.38 | vol 1.6x prior 20d avg",
+        "order_status": "SKIPPED: market/daily cap",
+        "headlines": [
+          "[~] 3 Under-the-Radar Space Stocks to Buy Before the SpaceX IPO",
+          "[~] 10 Industrials Stocks With Whale Alerts In Today's Session"
+        ]
+      },
+      {
+        "symbol": "LUNR",
+        "strategy": "B",
+        "confidence": 0.35,
+        "signal": "BUY",
+        "entry": 38.26,
+        "stop": 34.6,
+        "target": 45.58,
+        "shares": 658,
+        "notional": 25175.08,
+        "risk_$": 2408.28,
+        "sentiment": "NEUTRAL",
+        "obv": "ACCUMULATION",
+        "of_score": 3,
+        "sector_score": 999.0,
+        "reason": "Breakout above 34.95 | vol 1.4x prior 20d avg",
+        "order_status": "SKIPPED: market/daily cap",
+        "headlines": [
+          "[+] Zoom Upbeat Q1 Results, Joins Lionsgate Studios, Ross Stores And Other Big Stock",
+          "[~] Space Stocks Are Back In Orbit As SpaceX IPO Hype Builds"
+        ]
+      },
+      {
+        "symbol": "ASTS",
+        "strategy": "B",
+        "confidence": 0.35,
+        "signal": "BUY",
+        "entry": 105.88,
+        "stop": 96.57,
+        "target": 124.5,
+        "shares": 237,
+        "notional": 25093.56,
+        "risk_$": 2206.47,
+        "sentiment": "POSITIVE",
+        "obv": "ACCUMULATION",
+        "of_score": 3,
+        "sector_score": 999.0,
+        "reason": "Breakout above 97.55 | vol 1.4x prior 20d avg",
+        "order_status": "SKIPPED: market/daily cap",
+        "headlines": [
+          "[~] 8 Communication Services Stocks With Whale Alerts In Today's Session",
+          "[+] Zoom Upbeat Q1 Results, Joins Lionsgate Studios, Ross Stores And Other Big Stock"
+        ]
+      },
+      {
+        "symbol": "DELL",
+        "strategy": "B",
+        "confidence": 0.35,
+        "signal": "BUY",
+        "entry": 295.23,
+        "stop": 251.81,
+        "target": 382.07,
+        "shares": 85,
+        "notional": 25094.55,
+        "risk_$": 3690.7,
+        "sentiment": "STRONG_POSITIVE",
+        "obv": "ACCUMULATION",
+        "of_score": 3,
+        "sector_score": 999.0,
+        "reason": "Breakout above 254.35 | vol 2.4x prior 20d avg",
+        "order_status": "SKIPPED: market/daily cap",
+        "headlines": [
+          "[~] Nvidia Powers 52% Of Sovereign AI Projects \u2014 So Who's Really Sovereign?",
+          "[~] Dell Technologies Stock Hits 52-Week High - Here's Why"
+        ]
+      },
+      {
+        "symbol": "HPE",
+        "strategy": "B",
+        "confidence": 0.35,
+        "signal": "BUY",
+        "entry": 37.58,
+        "stop": 33.66,
+        "target": 45.42,
+        "shares": 670,
+        "notional": 25178.6,
+        "risk_$": 2626.4,
+        "sentiment": "STRONG_POSITIVE",
+        "obv": "ACCUMULATION",
+        "of_score": 3,
+        "sector_score": 999.0,
+        "reason": "Breakout above 34.00 | vol 2.2x prior 20d avg",
+        "order_status": "SKIPPED: market/daily cap",
+        "headlines": [
+          "[~] Nvidia Powers 52% Of Sovereign AI Projects \u2014 So Who's Really Sovereign?",
+          "[~] If You Invested $100 In Hewlett Packard Stock 5 Years Ago, You Would Have This M"
+        ]
+      },
+      {
+        "symbol": "PL",
+        "strategy": "B",
+        "confidence": 0.35,
+        "signal": "BUY",
+        "entry": 44.34,
+        "stop": 43.13,
+        "target": 46.76,
+        "shares": 568,
+        "notional": 25185.12,
+        "risk_$": 687.28,
+        "sentiment": "NEUTRAL",
+        "obv": "ACCUMULATION",
+        "of_score": 3,
+        "sector_score": 999.0,
+        "reason": "Breakout above 43.56 | vol 2.0x prior 20d avg",
+        "order_status": "SKIPPED: market/daily cap",
+        "headlines": [
+          "[~] 3 Under-the-Radar Space Stocks to Buy Before the SpaceX IPO",
+          "[~] Space Stocks Are Back In Orbit As SpaceX IPO Hype Builds"
+        ]
+      },
+      {
+        "symbol": "NOK",
+        "strategy": "B",
+        "confidence": 0.35,
+        "signal": "BUY",
+        "entry": 15.46,
+        "stop": 14.07,
+        "target": 18.24,
+        "shares": 1629,
+        "notional": 25184.34,
+        "risk_$": 2264.31,
+        "sentiment": "NEUTRAL",
+        "obv": "ACCUMULATION",
+        "of_score": 2,
+        "sector_score": 999.0,
+        "reason": "Breakout above 14.21 | vol 1.3x prior 20d avg",
+        "order_status": "SKIPPED: market/daily cap",
+        "headlines": [
+          "[~] What's Going On With Nokia Stock Friday?",
+          "[~] Nvidia Just Opened A $1.9 Billion Position In A Critical AI Supplier"
+        ]
+      }
+    ],
+    "top_news": [
+      {
+        "symbol": "NVDA",
+        "sentiment": "NEUTRAL",
+        "score": 1,
+        "headlines": [
+          "[+] EXCLUSIVE: SpaceX Frenzy Sends New ETF Past $1 Billion In Just Weeks \u2014 TEMA CEO ",
+          "[~] Eight Weeks Up, And Even A Hawkish Fed Can't Stop It: This Week On Wall Street"
+        ]
+      },
+      {
+        "symbol": "AMD",
+        "sentiment": "POSITIVE",
+        "score": 3,
+        "headlines": [
+          "[~] EXCLUSIVE | Webull CEO: Retail AI Trade Moves Beyond Stocks Like AMD, Micron, Nv",
+          "[+] USTR Greer Says No Immediate Tariffs Coming On Semiconductors, But Important To "
+        ]
+      },
+      {
+        "symbol": "ARM",
+        "sentiment": "POSITIVE",
+        "score": 2,
+        "headlines": [
+          "[+] A New Chipmaker Just Topped Micron's 2026 Return, Thanks To Nvidia",
+          "[+] Advance Auto Parts Posts Upbeat Q1 Earnings, Joins IBM, Ralph Lauren And Other B"
+        ]
+      },
+      {
+        "symbol": "MU",
+        "sentiment": "NEUTRAL",
+        "score": -1,
+        "headlines": [
+          "[~] EXCLUSIVE | Webull CEO: Retail AI Trade Moves Beyond Stocks Like AMD, Micron, Nv",
+          "[-] Micron CEO Sees Memory Chip Shortage Lasting Beyond 2026"
+        ]
+      },
+      {
+        "symbol": "MRVL",
+        "sentiment": "STRONG_POSITIVE",
+        "score": 5,
+        "headlines": [
+          "[~] What Is Going On With Marvell Stock On Friday?",
+          "[+] Stifel Maintains Buy on Marvell Technology, Raises Price Target to $210"
+        ]
+      },
+      {
+        "symbol": "DELL",
+        "sentiment": "STRONG_POSITIVE",
+        "score": 5,
+        "headlines": [
+          "[~] Nvidia Powers 52% Of Sovereign AI Projects \u2014 So Who's Really Sovereign?",
+          "[~] Dell Technologies Stock Hits 52-Week High - Here's Why"
+        ]
+      },
+      {
+        "symbol": "HPE",
+        "sentiment": "STRONG_POSITIVE",
+        "score": 4,
+        "headlines": [
+          "[~] Nvidia Powers 52% Of Sovereign AI Projects \u2014 So Who's Really Sovereign?",
+          "[~] If You Invested $100 In Hewlett Packard Stock 5 Years Ago, You Would Have This M"
+        ]
+      },
+      {
+        "symbol": "VRT",
+        "sentiment": "STRONG_POSITIVE",
+        "score": 5,
+        "headlines": [
+          "[~] A Manufacturing Boom Is Here: Is The Driver Trump's Tariffs Or AI?",
+          "[+] Oppenheimer Maintains Outperform on Vertiv Holdings, Raises Price Target to $353"
+        ]
+      },
+      {
+        "symbol": "APLD",
+        "sentiment": "STRONG_POSITIVE",
+        "score": 5,
+        "headlines": [
+          "[-] Applied Digital Shares Slump Friday Despite Landmark AI Campus Lease",
+          "[+] Lake Street Maintains Buy on Applied Digital, Raises Price Target to $70"
+        ]
+      },
+      {
+        "symbol": "META",
+        "sentiment": "NEGATIVE",
+        "score": -3,
+        "headlines": [
+          "[~] Meta's $125 Billion AI Bet Might Be The Capex Trap Of The Decade",
+          "[-] Iran Optimism Drives Semi Mania, Potential Short Squeeze Ahead"
+        ]
+      }
+    ],
+    "cpu_temp": "50.1\u00b0C",
+    "benchmark": {
+      "start_date": "2026-05-21",
+      "portfolio_pct": 0.56,
+      "spy_pct": 0.37,
+      "alpha_pct": 0.19,
+      "account_start": 100196.86,
+      "account_now": 100754.79,
+      "spy_start": 742.91,
+      "spy_now": 745.67
     }
   }
 ]
