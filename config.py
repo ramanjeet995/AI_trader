@@ -63,12 +63,12 @@ MIN_AVG_VOLUME   = 1_000_000   # shares/day
 MIN_ATR_PCT      = 2.0         # ATR as % of price (movement needed)
 
 # ── Risk management (AGGRESSIVE for $5k) ─────────────────────────────────────
-ACCOUNT_RISK_PCT          = 0.02    # 2% of account per trade
-MAX_POSITION_PCT          = 0.40    # cap any single position at 40% — allow bigger bets
-MAX_CONCURRENT_POSITIONS  = 3       # max 3 positions at once — focus on quality
-MAX_NEW_PER_DAY           = 2       # max 2 new per day — quality not quantity
-MAX_POSITIONS_PER_SECTOR  = 2       # max 2 per sector (was 3) — avoid theme concentration
-MAX_PORTFOLIO_HEAT_PCT    = 0.08    # max 8% aggregate open risk — let winners ride
+ACCOUNT_RISK_PCT          = 0.025   # 2.5% of account per trade
+MAX_POSITION_PCT          = 0.25    # cap any single position at 25%
+MAX_CONCURRENT_POSITIONS  = 5       # max 5 positions — diversified but focused
+MAX_NEW_PER_DAY           = 3       # max 3 new per day
+MAX_POSITIONS_PER_SECTOR  = 2       # max 2 per sector — avoid theme concentration
+MAX_PORTFOLIO_HEAT_PCT    = 0.12    # max 12% aggregate open risk
 REQUIRE_SECTOR_ALIGNMENT  = False   # don't require — sometimes best setup is in a cold sector
 REPLACE_WORST_LOSER       = True    # when at max positions, close worst loser for better setup
 

@@ -1,12 +1,29 @@
 {
   "trades": [
     {
+      "symbol": "HPE",
+      "strategy": "A",
+      "conviction": 5,
+      "entry_date": "2024-01-04",
+      "exit_date": "2024-01-09",
+      "pnl": -35.77,
+      "r_multiple": -1.0,
+      "hold_days": 5,
+      "exit_reason": "stop",
+      "asset_type": "STOCK",
+      "entry": 17.04,
+      "exit": 16.55,
+      "stop": 16.55,
+      "target": 20.47,
+      "shares": 73
+    },
+    {
       "symbol": "COIN",
       "strategy": "A",
       "conviction": 4,
       "entry_date": "2024-01-05",
       "exit_date": "2024-01-11",
-      "pnl": -70.0,
+      "pnl": -80.0,
       "r_multiple": -1.0,
       "hold_days": 6,
       "exit_reason": "stop",
@@ -15,7 +32,24 @@
       "exit": 142.67,
       "stop": 142.67,
       "target": 233.18,
-      "shares": 7
+      "shares": 8
+    },
+    {
+      "symbol": "MRVL",
+      "strategy": "B",
+      "conviction": 4,
+      "entry_date": "2024-01-12",
+      "exit_date": "2024-01-17",
+      "pnl": -36.9,
+      "r_multiple": -1.0,
+      "hold_days": 5,
+      "exit_reason": "stop",
+      "asset_type": "STOCK",
+      "entry": 65.87,
+      "exit": 63.82,
+      "stop": 63.82,
+      "target": 78.17,
+      "shares": 18
     },
     {
       "symbol": "AMD",
@@ -23,7 +57,7 @@
       "conviction": 6,
       "entry_date": "2024-01-08",
       "exit_date": "2024-01-29",
-      "pnl": 524.58,
+      "pnl": 337.23,
       "r_multiple": 4.71,
       "hold_days": 21,
       "exit_reason": "time_stop",
@@ -32,7 +66,24 @@
       "exit": 177.83,
       "stop": 132.4,
       "target": 194.2,
-      "shares": 14
+      "shares": 9
+    },
+    {
+      "symbol": "MU",
+      "strategy": "A",
+      "conviction": 6,
+      "entry_date": "2024-01-08",
+      "exit_date": "2024-01-29",
+      "pnl": 77.7,
+      "r_multiple": 1.26,
+      "hold_days": 21,
+      "exit_reason": "time_stop",
+      "asset_type": "STOCK",
+      "entry": 83.89,
+      "exit": 89.07,
+      "stop": 79.77,
+      "target": 116.57,
+      "shares": 15
     },
     {
       "symbol": "CRWD",
@@ -40,7 +91,7 @@
       "conviction": 4,
       "entry_date": "2024-01-10",
       "exit_date": "2024-01-30",
-      "pnl": 158.88,
+      "pnl": 105.92,
       "r_multiple": 1.67,
       "hold_days": 20,
       "exit_reason": "time_stop",
@@ -49,24 +100,109 @@
       "exit": 301.35,
       "stop": 259.02,
       "target": 362.27,
-      "shares": 6
+      "shares": 4
+    },
+    {
+      "symbol": "ANET",
+      "strategy": "B",
+      "conviction": 4,
+      "entry_date": "2024-01-19",
+      "exit_date": "2024-01-31",
+      "pnl": 0.59,
+      "r_multiple": 0.04,
+      "hold_days": 12,
+      "exit_reason": "stop",
+      "asset_type": "STOCK",
+      "entry": 65.15,
+      "exit": 65.22,
+      "stop": 63.66,
+      "target": 68.77,
+      "shares": 9
+    },
+    {
+      "symbol": "MRVL",
+      "strategy": "B",
+      "conviction": 5,
+      "entry_date": "2024-01-19",
+      "exit_date": "2024-02-01",
+      "pnl": -22.68,
+      "r_multiple": -1.0,
+      "hold_days": 13,
+      "exit_reason": "stop",
+      "asset_type": "STOCK",
+      "entry": 69.0,
+      "exit": 66.48,
+      "stop": 66.48,
+      "target": 80.32,
+      "shares": 9
     },
     {
       "symbol": "SMCI",
       "strategy": "B",
-      "conviction": 3,
-      "entry_date": "2024-01-31",
+      "conviction": 5,
+      "entry_date": "2024-02-02",
       "exit_date": "2024-02-16",
-      "pnl": 1557.56,
-      "r_multiple": 33.54,
-      "hold_days": 16,
+      "pnl": 796.3,
+      "r_multiple": 7.61,
+      "hold_days": 14,
       "exit_reason": "stop",
       "asset_type": "STOCK",
-      "entry": 50.33,
+      "entry": 59.25,
       "exit": 92.43,
-      "stop": 49.08,
-      "target": 62.4,
-      "shares": 37
+      "stop": 54.89,
+      "target": 82.57,
+      "shares": 24
+    },
+    {
+      "symbol": "LUNR",
+      "strategy": "B",
+      "conviction": 3,
+      "entry_date": "2024-01-30",
+      "exit_date": "2024-02-20",
+      "pnl": 3505.06,
+      "r_multiple": 36.05,
+      "hold_days": 21,
+      "exit_reason": "time_stop",
+      "asset_type": "STOCK",
+      "entry": 3.06,
+      "exit": 10.99,
+      "stop": 2.84,
+      "target": 4.1,
+      "shares": 442
+    },
+    {
+      "symbol": "VRT",
+      "strategy": "B",
+      "conviction": 5,
+      "entry_date": "2024-02-02",
+      "exit_date": "2024-02-20",
+      "pnl": 1.38,
+      "r_multiple": 0.02,
+      "hold_days": 18,
+      "exit_reason": "stop",
+      "asset_type": "STOCK",
+      "entry": 60.07,
+      "exit": 60.13,
+      "stop": 57.02,
+      "target": 76.54,
+      "shares": 23
+    },
+    {
+      "symbol": "DELL",
+      "strategy": "A",
+      "conviction": 3,
+      "entry_date": "2024-02-20",
+      "exit_date": "2024-02-20",
+      "pnl": -60.96,
+      "r_multiple": -1.0,
+      "hold_days": 0,
+      "exit_reason": "stop",
+      "asset_type": "STOCK",
+      "entry": 83.88,
+      "exit": 81.34,
+      "stop": 81.34,
+      "target": 98.56,
+      "shares": 24
     },
     {
       "symbol": "META",
@@ -86,38 +222,21 @@
       "shares": 2
     },
     {
-      "symbol": "AMZN",
+      "symbol": "RGTI",
       "strategy": "B",
       "conviction": 5,
-      "entry_date": "2024-02-05",
-      "exit_date": "2024-02-26",
-      "pnl": 54.36,
-      "r_multiple": 0.45,
-      "hold_days": 21,
-      "exit_reason": "time_stop",
-      "asset_type": "STOCK",
-      "entry": 170.2,
-      "exit": 174.73,
-      "stop": 160.11,
-      "target": 253.71,
-      "shares": 12
-    },
-    {
-      "symbol": "CRM",
-      "strategy": "B",
-      "conviction": 4,
-      "entry_date": "2024-03-01",
-      "exit_date": "2024-03-05",
-      "pnl": 2.76,
-      "r_multiple": 0.05,
-      "hold_days": 4,
+      "entry_date": "2024-02-27",
+      "exit_date": "2024-03-04",
+      "pnl": -272.37,
+      "r_multiple": -1.0,
+      "hold_days": 6,
       "exit_reason": "stop",
       "asset_type": "STOCK",
-      "entry": 307.0,
-      "exit": 307.31,
-      "stop": 300.79,
-      "target": 357.0,
-      "shares": 9
+      "entry": 1.89,
+      "exit": 1.68,
+      "stop": 1.68,
+      "target": 3.12,
+      "shares": 1297
     },
     {
       "symbol": "AVGO",
@@ -125,7 +244,7 @@
       "conviction": 4,
       "entry_date": "2024-02-23",
       "exit_date": "2024-03-08",
-      "pnl": 2.88,
+      "pnl": 2.36,
       "r_multiple": 0.03,
       "hold_days": 14,
       "exit_reason": "stop",
@@ -134,7 +253,7 @@
       "exit": 130.97,
       "stop": 126.29,
       "target": 155.69,
-      "shares": 22
+      "shares": 18
     },
     {
       "symbol": "MRVL",
@@ -142,7 +261,7 @@
       "conviction": 4,
       "entry_date": "2024-03-07",
       "exit_date": "2024-03-08",
-      "pnl": 2.92,
+      "pnl": 2.44,
       "r_multiple": 0.04,
       "hold_days": 1,
       "exit_reason": "stop",
@@ -151,7 +270,92 @@
       "exit": 81.26,
       "stop": 79.29,
       "target": 93.85,
-      "shares": 36
+      "shares": 30
+    },
+    {
+      "symbol": "CLS",
+      "strategy": "B",
+      "conviction": 5,
+      "entry_date": "2024-02-23",
+      "exit_date": "2024-03-11",
+      "pnl": 107.16,
+      "r_multiple": 1.0,
+      "hold_days": 17,
+      "exit_reason": "stop",
+      "asset_type": "STOCK",
+      "entry": 41.7,
+      "exit": 43.58,
+      "stop": 39.82,
+      "target": 55.42,
+      "shares": 57
+    },
+    {
+      "symbol": "CRWD",
+      "strategy": "A",
+      "conviction": 4,
+      "entry_date": "2024-02-23",
+      "exit_date": "2024-03-14",
+      "pnl": 74.05,
+      "r_multiple": 0.34,
+      "hold_days": 20,
+      "exit_reason": "time_stop",
+      "asset_type": "STOCK",
+      "entry": 313.78,
+      "exit": 328.59,
+      "stop": 270.43,
+      "target": 553.79,
+      "shares": 5
+    },
+    {
+      "symbol": "QBTS",
+      "strategy": "B",
+      "conviction": 4,
+      "entry_date": "2024-03-13",
+      "exit_date": "2024-03-15",
+      "pnl": -205.39,
+      "r_multiple": -1.0,
+      "hold_days": 2,
+      "exit_reason": "stop",
+      "asset_type": "STOCK",
+      "entry": 2.19,
+      "exit": 2.0,
+      "stop": 2.0,
+      "target": 3.47,
+      "shares": 1081
+    },
+    {
+      "symbol": "ANET",
+      "strategy": "B",
+      "conviction": 3,
+      "entry_date": "2024-03-15",
+      "exit_date": "2024-03-15",
+      "pnl": 2.08,
+      "r_multiple": 0.0,
+      "hold_days": 0,
+      "exit_reason": "stop",
+      "asset_type": "STOCK",
+      "entry": 69.79,
+      "exit": 69.86,
+      "stop": 69.86,
+      "target": 76.7,
+      "shares": 32
+    },
+    {
+      "symbol": "ANET",
+      "strategy": "B",
+      "conviction": 4,
+      "entry_date": "2024-03-19",
+      "exit_date": "2024-03-19",
+      "pnl": -8.96,
+      "r_multiple": -1.0,
+      "hold_days": 0,
+      "exit_reason": "stop",
+      "asset_type": "STOCK",
+      "entry": 71.0,
+      "exit": 70.72,
+      "stop": 70.72,
+      "target": 81.99,
+      "shares": 32
     },
     {
       "symbol": "CRM",
@@ -159,7 +363,7 @@
       "conviction": 5,
       "entry_date": "2024-03-11",
       "exit_date": "2024-04-01",
-      "pnl": -3.42,
+      "pnl": -2.66,
       "r_multiple": -0.04,
       "hold_days": 21,
       "exit_reason": "time_stop",
@@ -168,24 +372,24 @@
       "exit": 302.26,
       "stop": 291.84,
       "target": 399.36,
-      "shares": 9
+      "shares": 7
     },
     {
-      "symbol": "MU",
+      "symbol": "PL",
       "strategy": "B",
-      "conviction": 5,
-      "entry_date": "2024-04-02",
-      "exit_date": "2024-04-02",
-      "pnl": -35.28,
-      "r_multiple": -1.0,
-      "hold_days": 0,
+      "conviction": 3,
+      "entry_date": "2024-03-20",
+      "exit_date": "2024-04-01",
+      "pnl": 2.31,
+      "r_multiple": 0.02,
+      "hold_days": 12,
       "exit_reason": "stop",
       "asset_type": "STOCK",
-      "entry": 122.71,
-      "exit": 121.24,
-      "stop": 121.24,
-      "target": 145.72,
-      "shares": 24
+      "entry": 2.34,
+      "exit": 2.34,
+      "stop": 2.22,
+      "target": 3.06,
+      "shares": 989
     },
     {
       "symbol": "FCX",
@@ -193,7 +397,7 @@
       "conviction": 4,
       "entry_date": "2024-03-14",
       "exit_date": "2024-04-03",
-      "pnl": 278.24,
+      "pnl": 319.68,
       "r_multiple": 1.78,
       "hold_days": 20,
       "exit_reason": "time_stop",
@@ -202,41 +406,58 @@
       "exit": 49.61,
       "stop": 40.37,
       "target": 61.65,
-      "shares": 47
+      "shares": 54
     },
     {
       "symbol": "MU",
-      "strategy": "B",
-      "conviction": 5,
-      "entry_date": "2024-04-04",
-      "exit_date": "2024-04-04",
-      "pnl": -93.61,
-      "r_multiple": -1.0,
-      "hold_days": 0,
-      "exit_reason": "stop",
-      "asset_type": "STOCK",
-      "entry": 130.18,
-      "exit": 126.11,
-      "stop": 126.11,
-      "target": 141.31,
-      "shares": 23
-    },
-    {
-      "symbol": "SMCI",
       "strategy": "A",
-      "conviction": 4,
-      "entry_date": "2024-03-25",
-      "exit_date": "2024-04-15",
-      "pnl": -99.0,
-      "r_multiple": -0.71,
-      "hold_days": 21,
+      "conviction": 5,
+      "entry_date": "2024-03-20",
+      "exit_date": "2024-04-09",
+      "pnl": 663.36,
+      "r_multiple": 4.94,
+      "hold_days": 20,
       "exit_reason": "time_stop",
       "asset_type": "STOCK",
-      "entry": 97.28,
-      "exit": 88.28,
-      "stop": 84.64,
-      "target": 173.05,
-      "shares": 11
+      "entry": 94.99,
+      "exit": 122.63,
+      "stop": 89.4,
+      "target": 126.2,
+      "shares": 24
+    },
+    {
+      "symbol": "DELL",
+      "strategy": "B",
+      "conviction": 4,
+      "entry_date": "2024-04-04",
+      "exit_date": "2024-04-12",
+      "pnl": -226.8,
+      "r_multiple": -1.0,
+      "hold_days": 8,
+      "exit_reason": "stop",
+      "asset_type": "STOCK",
+      "entry": 129.85,
+      "exit": 118.51,
+      "stop": 118.51,
+      "target": 189.0,
+      "shares": 20
+    },
+    {
+      "symbol": "SLB",
+      "strategy": "A",
+      "conviction": 4,
+      "entry_date": "2024-04-11",
+      "exit_date": "2024-04-12",
+      "pnl": -77.55,
+      "r_multiple": -1.0,
+      "hold_days": 1,
+      "exit_reason": "stop",
+      "asset_type": "STOCK",
+      "entry": 54.3,
+      "exit": 52.65,
+      "stop": 52.65,
+      "target": 63.5,
+      "shares": 47
     },
     {
       "symbol": "FCX",
@@ -244,7 +465,7 @@
       "conviction": 5,
       "entry_date": "2024-04-04",
       "exit_date": "2024-04-16",
-      "pnl": -98.4,
+      "pnl": -85.28,
       "r_multiple": -1.0,
       "hold_days": 12,
       "exit_reason": "stop",
@@ -253,58 +474,126 @@
       "exit": 48.35,
       "stop": 48.35,
       "target": 58.43,
-      "shares": 60
+      "shares": 52
+    },
+    {
+      "symbol": "NFLX",
+      "strategy": "A",
+      "conviction": 4,
+      "entry_date": "2024-04-12",
+      "exit_date": "2024-04-19",
+      "pnl": -130.52,
+      "r_multiple": -1.0,
+      "hold_days": 7,
+      "exit_reason": "stop",
+      "asset_type": "STOCK",
+      "entry": 62.82,
+      "exit": 59.56,
+      "stop": 59.56,
+      "target": 82.8,
+      "shares": 40
+    },
+    {
+      "symbol": "VRT",
+      "strategy": "A",
+      "conviction": 5,
+      "entry_date": "2024-04-17",
+      "exit_date": "2024-04-19",
+      "pnl": -70.28,
+      "r_multiple": -1.0,
+      "hold_days": 2,
+      "exit_reason": "stop",
+      "asset_type": "STOCK",
+      "entry": 83.16,
+      "exit": 78.14,
+      "stop": 78.14,
+      "target": 111.9,
+      "shares": 14
+    },
+    {
+      "symbol": "CEG",
+      "strategy": "A",
+      "conviction": 5,
+      "entry_date": "2024-04-17",
+      "exit_date": "2024-04-19",
+      "pnl": -49.86,
+      "r_multiple": -1.0,
+      "hold_days": 2,
+      "exit_reason": "stop",
+      "asset_type": "STOCK",
+      "entry": 187.92,
+      "exit": 179.61,
+      "stop": 179.61,
+      "target": 235.93,
+      "shares": 6
     },
     {
       "symbol": "GOOGL",
       "strategy": "A",
       "conviction": 5,
-      "entry_date": "2024-04-08",
+      "entry_date": "2024-04-19",
       "exit_date": "2024-04-29",
-      "pnl": 254.03,
-      "r_multiple": 2.08,
-      "hold_days": 21,
-      "exit_reason": "time_stop",
-      "asset_type": "STOCK",
-      "entry": 152.78,
-      "exit": 166.15,
-      "stop": 146.34,
-      "target": 195.62,
-      "shares": 19
-    },
-    {
-      "symbol": "OXY",
-      "strategy": "A",
-      "conviction": 5,
-      "entry_date": "2024-04-23",
-      "exit_date": "2024-04-29",
-      "pnl": 33.6,
-      "r_multiple": 0.9,
-      "hold_days": 6,
+      "pnl": 69.65,
+      "r_multiple": 1.23,
+      "hold_days": 10,
       "exit_reason": "regime_bear",
       "asset_type": "STOCK",
-      "entry": 66.63,
-      "exit": 68.23,
-      "stop": 64.85,
-      "target": 82.05,
-      "shares": 21
+      "entry": 156.2,
+      "exit": 166.15,
+      "stop": 148.1,
+      "target": 211.38,
+      "shares": 7
     },
     {
       "symbol": "GDX",
       "strategy": "A",
       "conviction": 5,
-      "entry_date": "2024-04-24",
+      "entry_date": "2024-04-25",
       "exit_date": "2024-04-29",
-      "pnl": 83.6,
-      "r_multiple": 1.92,
-      "hold_days": 5,
+      "pnl": 58.32,
+      "r_multiple": 1.28,
+      "hold_days": 4,
       "exit_reason": "regime_bear",
       "asset_type": "STOCK",
-      "entry": 32.87,
+      "entry": 33.15,
       "exit": 34.77,
       "stop": 31.88,
-      "target": 41.24,
-      "shares": 44
+      "target": 41.8,
+      "shares": 36
+    },
+    {
+      "symbol": "NEM",
+      "strategy": "B",
+      "conviction": 5,
+      "entry_date": "2024-04-26",
+      "exit_date": "2024-04-29",
+      "pnl": -26.46,
+      "r_multiple": -0.2,
+      "hold_days": 3,
+      "exit_reason": "regime_bear",
+      "asset_type": "STOCK",
+      "entry": 43.24,
+      "exit": 42.26,
+      "stop": 38.35,
+      "target": 78.83,
+      "shares": 27
+    },
+    {
+      "symbol": "RKLB",
+      "strategy": "B",
+      "conviction": 4,
+      "entry_date": "2024-05-15",
+      "exit_date": "2024-05-15",
+      "pnl": -96.3,
+      "r_multiple": -1.0,
+      "hold_days": 0,
+      "exit_reason": "stop",
+      "asset_type": "STOCK",
+      "entry": 4.6,
+      "exit": 4.42,
+      "stop": 4.42,
+      "target": 5.4,
+      "shares": 535
     },
     {
       "symbol": "ANET",
@@ -312,7 +601,7 @@
       "conviction": 4,
       "entry_date": "2024-05-13",
       "exit_date": "2024-05-23",
-      "pnl": -135.23,
+      "pnl": -139.73,
       "r_multiple": -1.0,
       "hold_days": 10,
       "exit_reason": "stop",
@@ -321,7 +610,7 @@
       "exit": 73.51,
       "stop": 73.51,
       "target": 108.51,
-      "shares": 30
+      "shares": 31
     },
     {
       "symbol": "CRWD",
@@ -329,7 +618,7 @@
       "conviction": 4,
       "entry_date": "2024-05-15",
       "exit_date": "2024-05-30",
-      "pnl": 3.0,
+      "pnl": 2.33,
       "r_multiple": 0.04,
       "hold_days": 15,
       "exit_reason": "stop",
@@ -338,24 +627,58 @@
       "exit": 333.54,
       "stop": 324.23,
       "target": 361.47,
-      "shares": 9
+      "shares": 7
     },
     {
-      "symbol": "ARM",
+      "symbol": "AVGO",
       "strategy": "B",
       "conviction": 4,
-      "entry_date": "2024-05-29",
-      "exit_date": "2024-05-31",
-      "pnl": -127.67,
+      "entry_date": "2024-05-16",
+      "exit_date": "2024-05-30",
+      "pnl": -98.26,
       "r_multiple": -1.0,
-      "hold_days": 2,
+      "hold_days": 14,
       "exit_reason": "stop",
       "asset_type": "STOCK",
-      "entry": 123.7,
-      "exit": 116.19,
-      "stop": 116.19,
-      "target": 177.44,
+      "entry": 142.6,
+      "exit": 136.82,
+      "stop": 136.82,
+      "target": 184.42,
       "shares": 17
+    },
+    {
+      "symbol": "PANW",
+      "strategy": "A",
+      "conviction": 5,
+      "entry_date": "2024-05-24",
+      "exit_date": "2024-05-30",
+      "pnl": -61.39,
+      "r_multiple": -1.0,
+      "hold_days": 6,
+      "exit_reason": "stop",
+      "asset_type": "STOCK",
+      "entry": 155.75,
+      "exit": 146.98,
+      "stop": 146.98,
+      "target": 216.9,
+      "shares": 7
+    },
+    {
+      "symbol": "DELL",
+      "strategy": "B",
+      "conviction": 4,
+      "entry_date": "2024-05-16",
+      "exit_date": "2024-05-31",
+      "pnl": 2.26,
+      "r_multiple": 0.01,
+      "hold_days": 15,
+      "exit_reason": "stop",
+      "asset_type": "STOCK",
+      "entry": 150.5,
+      "exit": 150.65,
+      "stop": 133.55,
+      "target": 242.82,
+      "shares": 15
     },
     {
       "symbol": "NVDA",
@@ -363,7 +686,7 @@
       "conviction": 5,
       "entry_date": "2024-05-24",
       "exit_date": "2024-06-13",
-      "pnl": 528.38,
+      "pnl": 276.77,
       "r_multiple": 2.68,
       "hold_days": 20,
       "exit_reason": "time_stop",
@@ -372,7 +695,24 @@
       "exit": 129.61,
       "stop": 95.06,
       "target": 164.98,
-      "shares": 21
+      "shares": 11
+    },
+    {
+      "symbol": "HPE",
+      "strategy": "A",
+      "conviction": 4,
+      "entry_date": "2024-06-04",
+      "exit_date": "2024-06-21",
+      "pnl": 386.82,
+      "r_multiple": 4.13,
+      "hold_days": 17,
+      "exit_reason": "stop",
+      "asset_type": "STOCK",
+      "entry": 17.85,
+      "exit": 20.78,
+      "stop": 17.14,
+      "target": 22.81,
+      "shares": 132
     },
     {
       "symbol": "GOOGL",
@@ -380,7 +720,7 @@
       "conviction": 5,
       "entry_date": "2024-06-03",
       "exit_date": "2024-06-24",
-      "pnl": 113.56,
+      "pnl": 86.84,
       "r_multiple": 1.39,
       "hold_days": 21,
       "exit_reason": "time_stop",
@@ -389,24 +729,41 @@
       "exit": 179.22,
       "stop": 167.75,
       "target": 205.75,
-      "shares": 17
+      "shares": 13
     },
     {
-      "symbol": "CRWD",
-      "strategy": "B",
-      "conviction": 4,
-      "entry_date": "2024-06-11",
-      "exit_date": "2024-07-01",
-      "pnl": 96.45,
-      "r_multiple": 0.73,
+      "symbol": "MU",
+      "strategy": "A",
+      "conviction": 5,
+      "entry_date": "2024-06-04",
+      "exit_date": "2024-06-24",
+      "pnl": 209.88,
+      "r_multiple": 1.54,
       "hold_days": 20,
       "exit_reason": "time_stop",
       "asset_type": "STOCK",
-      "entry": 372.86,
-      "exit": 392.15,
-      "stop": 346.42,
-      "target": 543.47,
-      "shares": 5
+      "entry": 127.35,
+      "exit": 139.01,
+      "stop": 119.8,
+      "target": 186.76,
+      "shares": 18
+    },
+    {
+      "symbol": "PL",
+      "strategy": "B",
+      "conviction": 4,
+      "entry_date": "2024-06-24",
+      "exit_date": "2024-06-25",
+      "pnl": -117.18,
+      "r_multiple": -1.0,
+      "hold_days": 1,
+      "exit_reason": "stop",
+      "asset_type": "STOCK",
+      "entry": 1.99,
+      "exit": 1.9,
+      "stop": 1.9,
+      "target": 2.46,
+      "shares": 1302
     },
     {
       "symbol": "AVGO",
@@ -414,7 +771,7 @@
       "conviction": 3,
       "entry_date": "2024-06-14",
       "exit_date": "2024-07-05",
-      "pnl": 9.87,
+      "pnl": 16.45,
       "r_multiple": 0.08,
       "hold_days": 21,
       "exit_reason": "time_stop",
@@ -423,24 +780,24 @@
       "exit": 170.33,
       "stop": 149.07,
       "target": 262.05,
-      "shares": 6
+      "shares": 10
     },
     {
-      "symbol": "META",
-      "strategy": "A",
-      "conviction": 5,
-      "entry_date": "2024-07-03",
-      "exit_date": "2024-07-12",
-      "pnl": 3.04,
-      "r_multiple": 0.03,
-      "hold_days": 9,
+      "symbol": "TSLA",
+      "strategy": "B",
+      "conviction": 4,
+      "entry_date": "2024-07-10",
+      "exit_date": "2024-07-11",
+      "pnl": -59.5,
+      "r_multiple": -1.0,
+      "hold_days": 1,
       "exit_reason": "stop",
       "asset_type": "STOCK",
-      "entry": 506.37,
-      "exit": 506.88,
-      "stop": 487.47,
-      "target": 663.71,
-      "shares": 6
+      "entry": 262.8,
+      "exit": 256.85,
+      "stop": 256.85,
+      "target": 295.21,
+      "shares": 10
     },
     {
       "symbol": "PLTR",
@@ -448,7 +805,7 @@
       "conviction": 6,
       "entry_date": "2024-06-25",
       "exit_date": "2024-07-15",
-      "pnl": 590.81,
+      "pnl": 473.55,
       "r_multiple": 2.61,
       "hold_days": 20,
       "exit_reason": "time_stop",
@@ -457,7 +814,75 @@
       "exit": 28.67,
       "stop": 22.43,
       "target": 39.73,
-      "shares": 131
+      "shares": 105
+    },
+    {
+      "symbol": "AAPL",
+      "strategy": "A",
+      "conviction": 4,
+      "entry_date": "2024-06-25",
+      "exit_date": "2024-07-15",
+      "pnl": 303.0,
+      "r_multiple": 1.33,
+      "hold_days": 20,
+      "exit_reason": "time_stop",
+      "asset_type": "STOCK",
+      "entry": 209.15,
+      "exit": 234.4,
+      "stop": 190.23,
+      "target": 315.6,
+      "shares": 12
+    },
+    {
+      "symbol": "SHOP",
+      "strategy": "A",
+      "conviction": 5,
+      "entry_date": "2024-06-26",
+      "exit_date": "2024-07-16",
+      "pnl": 176.28,
+      "r_multiple": 1.69,
+      "hold_days": 20,
+      "exit_reason": "time_stop",
+      "asset_type": "STOCK",
+      "entry": 65.2,
+      "exit": 69.72,
+      "stop": 62.52,
+      "target": 80.6,
+      "shares": 39
+    },
+    {
+      "symbol": "GDX",
+      "strategy": "B",
+      "conviction": 4,
+      "entry_date": "2024-07-17",
+      "exit_date": "2024-07-18",
+      "pnl": -69.84,
+      "r_multiple": -1.0,
+      "hold_days": 1,
+      "exit_reason": "stop",
+      "asset_type": "STOCK",
+      "entry": 39.16,
+      "exit": 38.19,
+      "stop": 38.19,
+      "target": 45.82,
+      "shares": 72
+    },
+    {
+      "symbol": "SLB",
+      "strategy": "B",
+      "conviction": 4,
+      "entry_date": "2024-07-22",
+      "exit_date": "2024-07-23",
+      "pnl": -26.95,
+      "r_multiple": -1.0,
+      "hold_days": 1,
+      "exit_reason": "stop",
+      "asset_type": "STOCK",
+      "entry": 49.34,
+      "exit": 48.85,
+      "stop": 48.85,
+      "target": 54.59,
+      "shares": 55
     },
     {
       "symbol": "MARA",
@@ -465,7 +890,7 @@
       "conviction": 4,
       "entry_date": "2024-07-16",
       "exit_date": "2024-07-24",
-      "pnl": -155.76,
+      "pnl": -247.8,
       "r_multiple": -1.0,
       "hold_days": 8,
       "exit_reason": "stop",
@@ -474,7 +899,24 @@
       "exit": 20.71,
       "stop": 20.71,
       "target": 47.8,
-      "shares": 44
+      "shares": 70
+    },
+    {
+      "symbol": "AAPL",
+      "strategy": "A",
+      "conviction": 6,
+      "entry_date": "2024-07-24",
+      "exit_date": "2024-07-24",
+      "pnl": -47.4,
+      "r_multiple": -1.0,
+      "hold_days": 0,
+      "exit_reason": "stop",
+      "asset_type": "STOCK",
+      "entry": 224.0,
+      "exit": 220.05,
+      "stop": 220.05,
+      "target": 269.65,
+      "shares": 12
     },
     {
       "symbol": "RIOT",
@@ -482,7 +924,7 @@
       "conviction": 3,
       "entry_date": "2024-07-16",
       "exit_date": "2024-08-01",
-      "pnl": -125.58,
+      "pnl": -198.03,
       "r_multiple": -1.0,
       "hold_days": 16,
       "exit_reason": "stop",
@@ -491,7 +933,24 @@
       "exit": 9.82,
       "stop": 9.82,
       "target": 19.78,
-      "shares": 78
+      "shares": 123
+    },
+    {
+      "symbol": "RKLB",
+      "strategy": "A",
+      "conviction": 6,
+      "entry_date": "2024-07-26",
+      "exit_date": "2024-08-01",
+      "pnl": -77.4,
+      "r_multiple": -1.0,
+      "hold_days": 6,
+      "exit_reason": "stop",
+      "asset_type": "STOCK",
+      "entry": 5.34,
+      "exit": 5.04,
+      "stop": 5.04,
+      "target": 7.14,
+      "shares": 258
     },
     {
       "symbol": "PLTR",
@@ -499,7 +958,7 @@
       "conviction": 4,
       "entry_date": "2024-07-29",
       "exit_date": "2024-08-02",
-      "pnl": -207.93,
+      "pnl": -119.5,
       "r_multiple": -1.0,
       "hold_days": 4,
       "exit_reason": "stop",
@@ -508,41 +967,58 @@
       "exit": 25.17,
       "stop": 25.17,
       "target": 39.24,
-      "shares": 87
+      "shares": 50
     },
     {
       "symbol": "NOW",
       "strategy": "A",
       "conviction": 4,
-      "entry_date": "2024-07-15",
+      "entry_date": "2024-07-16",
       "exit_date": "2024-08-05",
-      "pnl": 63.01,
-      "r_multiple": 0.34,
-      "hold_days": 21,
+      "pnl": 45.63,
+      "r_multiple": 0.31,
+      "hold_days": 20,
       "exit_reason": "time_stop",
       "asset_type": "STOCK",
-      "entry": 153.39,
+      "entry": 153.57,
       "exit": 156.25,
       "stop": 144.85,
-      "target": 192.8,
-      "shares": 22
+      "target": 205.89,
+      "shares": 17
+    },
+    {
+      "symbol": "ASTS",
+      "strategy": "B",
+      "conviction": 5,
+      "entry_date": "2024-07-26",
+      "exit_date": "2024-08-13",
+      "pnl": 271.32,
+      "r_multiple": 1.41,
+      "hold_days": 18,
+      "exit_reason": "regime_bear",
+      "asset_type": "STOCK",
+      "entry": 16.97,
+      "exit": 20.96,
+      "stop": 14.15,
+      "target": 34.07,
+      "shares": 68
     },
     {
       "symbol": "NEM",
       "strategy": "A",
       "conviction": 4,
-      "entry_date": "2024-08-07",
+      "entry_date": "2024-08-09",
       "exit_date": "2024-08-13",
-      "pnl": 41.0,
-      "r_multiple": 0.21,
-      "hold_days": 6,
+      "pnl": 55.44,
+      "r_multiple": 0.29,
+      "hold_days": 4,
       "exit_reason": "regime_bear",
       "asset_type": "STOCK",
-      "entry": 48.2,
+      "entry": 48.03,
       "exit": 49.02,
-      "stop": 44.32,
-      "target": 67.28,
-      "shares": 50
+      "stop": 44.58,
+      "target": 66.49,
+      "shares": 56
     },
     {
       "symbol": "PLTR",
@@ -550,7 +1026,7 @@
       "conviction": 4,
       "entry_date": "2024-08-12",
       "exit_date": "2024-08-13",
-      "pnl": 18.53,
+      "pnl": 14.96,
       "r_multiple": 0.15,
       "hold_days": 1,
       "exit_reason": "regime_bear",
@@ -559,7 +1035,58 @@
       "exit": 30.39,
       "stop": 29.08,
       "target": 35.59,
-      "shares": 109
+      "shares": 88
+    },
+    {
+      "symbol": "XOM",
+      "strategy": "A",
+      "conviction": 4,
+      "entry_date": "2024-08-12",
+      "exit_date": "2024-08-13",
+      "pnl": -37.18,
+      "r_multiple": -0.23,
+      "hold_days": 1,
+      "exit_reason": "regime_bear",
+      "asset_type": "STOCK",
+      "entry": 119.55,
+      "exit": 117.86,
+      "stop": 112.12,
+      "target": 159.23,
+      "shares": 22
+    },
+    {
+      "symbol": "SOUN",
+      "strategy": "B",
+      "conviction": 4,
+      "entry_date": "2024-08-22",
+      "exit_date": "2024-08-22",
+      "pnl": -124.5,
+      "r_multiple": -1.0,
+      "hold_days": 0,
+      "exit_reason": "stop",
+      "asset_type": "STOCK",
+      "entry": 5.4,
+      "exit": 5.15,
+      "stop": 5.15,
+      "target": 6.62,
+      "shares": 498
+    },
+    {
+      "symbol": "DELL",
+      "strategy": "B",
+      "conviction": 4,
+      "entry_date": "2024-09-03",
+      "exit_date": "2024-09-03",
+      "pnl": -34.76,
+      "r_multiple": -1.0,
+      "hold_days": 0,
+      "exit_reason": "stop",
+      "asset_type": "STOCK",
+      "entry": 114.88,
+      "exit": 113.3,
+      "stop": 113.3,
+      "target": 128.98,
+      "shares": 22
     },
     {
       "symbol": "NFLX",
@@ -567,7 +1094,7 @@
       "conviction": 3,
       "entry_date": "2024-09-05",
       "exit_date": "2024-09-06",
-      "pnl": -42.43,
+      "pnl": -16.8,
       "r_multiple": -1.0,
       "hold_days": 1,
       "exit_reason": "stop",
@@ -576,7 +1103,24 @@
       "exit": 66.43,
       "stop": 66.43,
       "target": 75.67,
-      "shares": 48
+      "shares": 19
+    },
+    {
+      "symbol": "TSLA",
+      "strategy": "B",
+      "conviction": 4,
+      "entry_date": "2024-09-06",
+      "exit_date": "2024-09-06",
+      "pnl": -63.0,
+      "r_multiple": -1.0,
+      "hold_days": 0,
+      "exit_reason": "stop",
+      "asset_type": "STOCK",
+      "entry": 232.6,
+      "exit": 220.0,
+      "stop": 220.0,
+      "target": 291.19,
+      "shares": 5
     },
     {
       "symbol": "NOW",
@@ -584,7 +1128,7 @@
       "conviction": 5,
       "entry_date": "2024-08-30",
       "exit_date": "2024-09-19",
-      "pnl": 313.46,
+      "pnl": 247.47,
       "r_multiple": 2.3,
       "hold_days": 20,
       "exit_reason": "time_stop",
@@ -593,41 +1137,58 @@
       "exit": 183.85,
       "stop": 160.17,
       "target": 208.81,
-      "shares": 19
-    },
-    {
-      "symbol": "NOW",
-      "strategy": "B",
-      "conviction": 5,
-      "entry_date": "2024-09-20",
-      "exit_date": "2024-09-25",
-      "pnl": -106.99,
-      "r_multiple": -1.0,
-      "hold_days": 5,
-      "exit_reason": "stop",
-      "asset_type": "STOCK",
-      "entry": 184.08,
-      "exit": 178.14,
-      "stop": 178.14,
-      "target": 223.82,
-      "shares": 18
+      "shares": 15
     },
     {
       "symbol": "PLTR",
-      "strategy": "B",
-      "conviction": 5,
-      "entry_date": "2024-09-10",
-      "exit_date": "2024-09-30",
-      "pnl": 126.67,
-      "r_multiple": 0.59,
+      "strategy": "A",
+      "conviction": 3,
+      "entry_date": "2024-09-05",
+      "exit_date": "2024-09-25",
+      "pnl": 288.96,
+      "r_multiple": 5.64,
       "hold_days": 20,
       "exit_reason": "time_stop",
       "asset_type": "STOCK",
-      "entry": 34.81,
-      "exit": 37.2,
-      "stop": 30.73,
-      "target": 61.69,
-      "shares": 53
+      "entry": 30.24,
+      "exit": 37.12,
+      "stop": 29.02,
+      "target": 38.44,
+      "shares": 42
+    },
+    {
+      "symbol": "NEM",
+      "strategy": "A",
+      "conviction": 3,
+      "entry_date": "2024-09-10",
+      "exit_date": "2024-09-30",
+      "pnl": 70.46,
+      "r_multiple": 2.68,
+      "hold_days": 20,
+      "exit_reason": "time_stop",
+      "asset_type": "STOCK",
+      "entry": 50.74,
+      "exit": 53.45,
+      "stop": 49.73,
+      "target": 55.67,
+      "shares": 26
+    },
+    {
+      "symbol": "AMZN",
+      "strategy": "B",
+      "conviction": 4,
+      "entry_date": "2024-09-12",
+      "exit_date": "2024-09-30",
+      "pnl": 1.29,
+      "r_multiple": 0.03,
+      "hold_days": 18,
+      "exit_reason": "stop",
+      "asset_type": "STOCK",
+      "entry": 184.8,
+      "exit": 184.98,
+      "stop": 178.7,
+      "target": 219.44,
+      "shares": 7
     },
     {
       "symbol": "TSLA",
@@ -635,7 +1196,7 @@
       "conviction": 5,
       "entry_date": "2024-09-20",
       "exit_date": "2024-10-02",
-      "pnl": 3.38,
+      "pnl": 2.66,
       "r_multiple": 0.03,
       "hold_days": 12,
       "exit_reason": "stop",
@@ -644,7 +1205,41 @@
       "exit": 241.76,
       "stop": 233.32,
       "target": 318.12,
-      "shares": 14
+      "shares": 11
+    },
+    {
+      "symbol": "NFLX",
+      "strategy": "A",
+      "conviction": 4,
+      "entry_date": "2024-09-13",
+      "exit_date": "2024-10-03",
+      "pnl": 50.9,
+      "r_multiple": 1.04,
+      "hold_days": 20,
+      "exit_reason": "time_stop",
+      "asset_type": "STOCK",
+      "entry": 68.0,
+      "exit": 70.68,
+      "stop": 65.42,
+      "target": 88.24,
+      "shares": 19
+    },
+    {
+      "symbol": "AMD",
+      "strategy": "B",
+      "conviction": 5,
+      "entry_date": "2024-10-07",
+      "exit_date": "2024-10-10",
+      "pnl": -95.36,
+      "r_multiple": -1.0,
+      "hold_days": 3,
+      "exit_reason": "stop",
+      "asset_type": "STOCK",
+      "entry": 171.08,
+      "exit": 165.12,
+      "stop": 165.12,
+      "target": 211.36,
+      "shares": 16
     },
     {
       "symbol": "MU",
@@ -652,7 +1247,7 @@
       "conviction": 4,
       "entry_date": "2024-09-27",
       "exit_date": "2024-10-17",
-      "pnl": 17.05,
+      "pnl": 29.45,
       "r_multiple": 0.1,
       "hold_days": 20,
       "exit_reason": "time_stop",
@@ -661,7 +1256,7 @@
       "exit": 112.05,
       "stop": 95.22,
       "target": 197.84,
-      "shares": 11
+      "shares": 19
     },
     {
       "symbol": "NOW",
@@ -669,7 +1264,7 @@
       "conviction": 5,
       "entry_date": "2024-10-01",
       "exit_date": "2024-10-21",
-      "pnl": 75.05,
+      "pnl": 59.25,
       "r_multiple": 0.55,
       "hold_days": 20,
       "exit_reason": "time_stop",
@@ -678,7 +1273,7 @@
       "exit": 183.67,
       "stop": 172.54,
       "target": 223.26,
-      "shares": 19
+      "shares": 15
     },
     {
       "symbol": "CRM",
@@ -686,7 +1281,7 @@
       "conviction": 4,
       "entry_date": "2024-10-03",
       "exit_date": "2024-10-23",
-      "pnl": 65.28,
+      "pnl": 48.96,
       "r_multiple": 1.38,
       "hold_days": 20,
       "exit_reason": "time_stop",
@@ -695,7 +1290,7 @@
       "exit": 284.43,
       "stop": 275.06,
       "target": 306.0,
-      "shares": 12
+      "shares": 9
     },
     {
       "symbol": "AVGO",
@@ -703,7 +1298,7 @@
       "conviction": 5,
       "entry_date": "2024-10-22",
       "exit_date": "2024-10-24",
-      "pnl": -133.38,
+      "pnl": -112.32,
       "r_multiple": -1.0,
       "hold_days": 2,
       "exit_reason": "stop",
@@ -712,24 +1307,24 @@
       "exit": 171.64,
       "stop": 171.64,
       "target": 238.44,
-      "shares": 19
+      "shares": 16
     },
     {
       "symbol": "CRWD",
-      "strategy": "A",
-      "conviction": 6,
-      "entry_date": "2024-10-25",
+      "strategy": "B",
+      "conviction": 4,
+      "entry_date": "2024-10-11",
       "exit_date": "2024-10-25",
-      "pnl": -108.68,
+      "pnl": -153.12,
       "r_multiple": -1.0,
-      "hold_days": 0,
+      "hold_days": 14,
       "exit_reason": "stop",
       "asset_type": "STOCK",
-      "entry": 305.22,
-      "exit": 295.34,
-      "stop": 295.34,
-      "target": 386.64,
-      "shares": 11
+      "entry": 314.92,
+      "exit": 295.78,
+      "stop": 295.78,
+      "target": 429.76,
+      "shares": 8
     },
     {
       "symbol": "RIOT",
@@ -737,7 +1332,7 @@
       "conviction": 5,
       "entry_date": "2024-10-25",
       "exit_date": "2024-10-25",
-      "pnl": -121.68,
+      "pnl": -102.6,
       "r_multiple": -1.0,
       "hold_days": 0,
       "exit_reason": "stop",
@@ -746,41 +1341,75 @@
       "exit": 9.87,
       "stop": 9.87,
       "target": 12.43,
-      "shares": 338
+      "shares": 285
     },
     {
-      "symbol": "ARM",
+      "symbol": "IONQ",
+      "strategy": "B",
+      "conviction": 5,
+      "entry_date": "2024-10-18",
+      "exit_date": "2024-10-29",
+      "pnl": 785.29,
+      "r_multiple": 10.36,
+      "hold_days": 11,
+      "exit_reason": "stop",
+      "asset_type": "STOCK",
+      "entry": 12.56,
+      "exit": 16.08,
+      "stop": 12.22,
+      "target": 14.46,
+      "shares": 223
+    },
+    {
+      "symbol": "SOUN",
+      "strategy": "B",
+      "conviction": 4,
+      "entry_date": "2024-10-29",
+      "exit_date": "2024-10-31",
+      "pnl": -128.7,
+      "r_multiple": -1.0,
+      "hold_days": 2,
+      "exit_reason": "stop",
+      "asset_type": "STOCK",
+      "entry": 6.01,
+      "exit": 5.35,
+      "stop": 5.35,
+      "target": 10.74,
+      "shares": 195
+    },
+    {
+      "symbol": "DELL",
       "strategy": "B",
       "conviction": 3,
-      "entry_date": "2024-11-08",
-      "exit_date": "2024-11-08",
-      "pnl": -41.0,
+      "entry_date": "2024-10-31",
+      "exit_date": "2024-10-31",
+      "pnl": -76.12,
       "r_multiple": -1.0,
       "hold_days": 0,
       "exit_reason": "stop",
       "asset_type": "STOCK",
-      "entry": 148.7,
-      "exit": 144.6,
-      "stop": 144.6,
-      "target": 180.9,
-      "shares": 10
+      "entry": 127.0,
+      "exit": 123.54,
+      "stop": 123.54,
+      "target": 158.7,
+      "shares": 22
     },
     {
-      "symbol": "CRWD",
+      "symbol": "CLS",
       "strategy": "B",
-      "conviction": 4,
-      "entry_date": "2024-11-14",
-      "exit_date": "2024-11-15",
-      "pnl": -29.76,
-      "r_multiple": -1.0,
-      "hold_days": 1,
-      "exit_reason": "stop",
+      "conviction": 6,
+      "entry_date": "2024-10-25",
+      "exit_date": "2024-11-14",
+      "pnl": 500.8,
+      "r_multiple": 1.16,
+      "hold_days": 20,
+      "exit_reason": "time_stop",
       "asset_type": "STOCK",
-      "entry": 347.89,
-      "exit": 340.45,
-      "stop": 340.45,
-      "target": 392.46,
-      "shares": 4
+      "entry": 67.96,
+      "exit": 80.48,
+      "stop": 57.13,
+      "target": 165.23,
+      "shares": 40
     },
     {
       "symbol": "PLTR",
@@ -788,7 +1417,7 @@
       "conviction": 4,
       "entry_date": "2024-11-18",
       "exit_date": "2024-11-18",
-      "pnl": -54.0,
+      "pnl": -101.52,
       "r_multiple": -1.0,
       "hold_days": 0,
       "exit_reason": "stop",
@@ -797,7 +1426,7 @@
       "exit": 62.76,
       "stop": 62.76,
       "target": 83.83,
-      "shares": 25
+      "shares": 47
     },
     {
       "symbol": "PANW",
@@ -805,7 +1434,7 @@
       "conviction": 5,
       "entry_date": "2024-10-30",
       "exit_date": "2024-11-19",
-      "pnl": 106.74,
+      "pnl": 177.9,
       "r_multiple": 2.29,
       "hold_days": 20,
       "exit_reason": "time_stop",
@@ -814,41 +1443,41 @@
       "exit": 194.03,
       "stop": 177.0,
       "target": 222.6,
-      "shares": 9
+      "shares": 15
     },
     {
-      "symbol": "PANW",
+      "symbol": "GOOGL",
+      "strategy": "A",
+      "conviction": 5,
+      "entry_date": "2024-11-19",
+      "exit_date": "2024-11-21",
+      "pnl": -111.69,
+      "r_multiple": -1.0,
+      "hold_days": 2,
+      "exit_reason": "stop",
+      "asset_type": "STOCK",
+      "entry": 173.72,
+      "exit": 167.15,
+      "stop": 167.15,
+      "target": 232.35,
+      "shares": 17
+    },
+    {
+      "symbol": "CLS",
       "strategy": "B",
       "conviction": 5,
       "entry_date": "2024-11-22",
       "exit_date": "2024-11-22",
-      "pnl": -13.36,
+      "pnl": -133.96,
       "r_multiple": -1.0,
       "hold_days": 0,
       "exit_reason": "stop",
       "asset_type": "STOCK",
-      "entry": 196.32,
-      "exit": 195.48,
-      "stop": 195.48,
-      "target": 222.44,
-      "shares": 16
-    },
-    {
-      "symbol": "MU",
-      "strategy": "B",
-      "conviction": 3,
-      "entry_date": "2024-11-26",
-      "exit_date": "2024-11-26",
-      "pnl": -42.56,
-      "r_multiple": -1.0,
-      "hold_days": 0,
-      "exit_reason": "stop",
-      "asset_type": "STOCK",
-      "entry": 104.0,
-      "exit": 102.67,
-      "stop": 102.67,
-      "target": 113.53,
-      "shares": 32
+      "entry": 91.73,
+      "exit": 87.79,
+      "stop": 87.79,
+      "target": 116.99,
+      "shares": 34
     },
     {
       "symbol": "MRVL",
@@ -856,7 +1485,7 @@
       "conviction": 5,
       "entry_date": "2024-11-07",
       "exit_date": "2024-11-27",
-      "pnl": -29.16,
+      "pnl": -53.46,
       "r_multiple": -0.35,
       "hold_days": 20,
       "exit_reason": "time_stop",
@@ -865,41 +1494,143 @@
       "exit": 90.1,
       "stop": 87.11,
       "target": 115.27,
-      "shares": 18
+      "shares": 33
     },
     {
-      "symbol": "CRM",
+      "symbol": "VRT",
       "strategy": "B",
-      "conviction": 5,
-      "entry_date": "2024-11-22",
-      "exit_date": "2024-12-03",
-      "pnl": -134.64,
+      "conviction": 4,
+      "entry_date": "2024-11-20",
+      "exit_date": "2024-11-27",
+      "pnl": -290.6,
       "r_multiple": -1.0,
-      "hold_days": 11,
+      "hold_days": 7,
       "exit_reason": "stop",
       "asset_type": "STOCK",
-      "entry": 338.95,
-      "exit": 323.99,
-      "stop": 323.99,
-      "target": 418.31,
+      "entry": 140.6,
+      "exit": 126.07,
+      "stop": 126.07,
+      "target": 230.16,
+      "shares": 20
+    },
+    {
+      "symbol": "IONQ",
+      "strategy": "B",
+      "conviction": 5,
+      "entry_date": "2024-11-08",
+      "exit_date": "2024-11-29",
+      "pnl": 1036.7,
+      "r_multiple": 2.94,
+      "hold_days": 21,
+      "exit_reason": "time_stop",
+      "asset_type": "STOCK",
+      "entry": 21.69,
+      "exit": 36.5,
+      "stop": 16.66,
+      "target": 60.26,
+      "shares": 70
+    },
+    {
+      "symbol": "SOUN",
+      "strategy": "B",
+      "conviction": 5,
+      "entry_date": "2024-12-02",
+      "exit_date": "2024-12-03",
+      "pnl": -141.12,
+      "r_multiple": -1.0,
+      "hold_days": 1,
+      "exit_reason": "stop",
+      "asset_type": "STOCK",
+      "entry": 9.2,
+      "exit": 8.78,
+      "stop": 8.78,
+      "target": 13.02,
+      "shares": 336
+    },
+    {
+      "symbol": "PL",
+      "strategy": "B",
+      "conviction": 4,
+      "entry_date": "2024-11-26",
+      "exit_date": "2024-12-05",
+      "pnl": 185.15,
+      "r_multiple": 1.0,
+      "hold_days": 9,
+      "exit_reason": "stop",
+      "asset_type": "STOCK",
+      "entry": 3.73,
+      "exit": 3.96,
+      "stop": 3.5,
+      "target": 5.46,
+      "shares": 805
+    },
+    {
+      "symbol": "CRWD",
+      "strategy": "A",
+      "conviction": 6,
+      "entry_date": "2024-12-03",
+      "exit_date": "2024-12-10",
+      "pnl": 3.1,
+      "r_multiple": 0.03,
+      "hold_days": 7,
+      "exit_reason": "stop",
+      "asset_type": "STOCK",
+      "entry": 345.0,
+      "exit": 345.34,
+      "stop": 333.19,
+      "target": 469.29,
       "shares": 9
+    },
+    {
+      "symbol": "AVGO",
+      "strategy": "B",
+      "conviction": 3,
+      "entry_date": "2024-12-09",
+      "exit_date": "2024-12-10",
+      "pnl": -90.27,
+      "r_multiple": -1.0,
+      "hold_days": 1,
+      "exit_reason": "stop",
+      "asset_type": "STOCK",
+      "entry": 178.95,
+      "exit": 173.64,
+      "stop": 173.64,
+      "target": 208.98,
+      "shares": 17
     },
     {
       "symbol": "PANW",
       "strategy": "A",
-      "conviction": 5,
-      "entry_date": "2024-11-27",
-      "exit_date": "2024-12-17",
-      "pnl": 70.16,
-      "r_multiple": 0.39,
-      "hold_days": 20,
-      "exit_reason": "time_stop",
+      "conviction": 4,
+      "entry_date": "2024-12-12",
+      "exit_date": "2024-12-18",
+      "pnl": -145.28,
+      "r_multiple": -1.0,
+      "hold_days": 6,
+      "exit_reason": "stop",
       "asset_type": "STOCK",
-      "entry": 196.85,
-      "exit": 201.24,
-      "stop": 185.72,
-      "target": 285.56,
+      "entry": 198.55,
+      "exit": 189.47,
+      "stop": 189.47,
+      "target": 257.65,
       "shares": 16
+    },
+    {
+      "symbol": "META",
+      "strategy": "B",
+      "conviction": 3,
+      "entry_date": "2024-12-04",
+      "exit_date": "2024-12-20",
+      "pnl": -122.05,
+      "r_multiple": -1.0,
+      "hold_days": 16,
+      "exit_reason": "stop",
+      "asset_type": "STOCK",
+      "entry": 612.96,
+      "exit": 588.55,
+      "stop": 588.55,
+      "target": 739.15,
+      "shares": 5
     },
     {
       "symbol": "NOW",
@@ -907,7 +1638,7 @@
       "conviction": 5,
       "entry_date": "2024-12-02",
       "exit_date": "2024-12-23",
-      "pnl": 55.8,
+      "pnl": 111.61,
       "r_multiple": 0.61,
       "hold_days": 21,
       "exit_reason": "time_stop",
@@ -916,24 +1647,7 @@
       "exit": 217.65,
       "stop": 196.7,
       "target": 302.22,
-      "shares": 7
-    },
-    {
-      "symbol": "MRVL",
-      "strategy": "B",
-      "conviction": 5,
-      "entry_date": "2024-12-05",
-      "exit_date": "2024-12-26",
-      "pnl": -4.45,
-      "r_multiple": -0.05,
-      "hold_days": 21,
-      "exit_reason": "time_stop",
-      "asset_type": "STOCK",
-      "entry": 116.6,
-      "exit": 115.71,
-      "stop": 97.73,
-      "target": 261.09,
-      "shares": 5
+      "shares": 14
     },
     {
       "symbol": "PLTR",
@@ -941,7 +1655,7 @@
       "conviction": 5,
       "entry_date": "2024-12-23",
       "exit_date": "2024-12-30",
-      "pnl": -153.2,
+      "pnl": -72.77,
       "r_multiple": -1.0,
       "hold_days": 7,
       "exit_reason": "stop",
@@ -950,7 +1664,75 @@
       "exit": 76.82,
       "stop": 76.82,
       "target": 106.66,
-      "shares": 40
+      "shares": 19
+    },
+    {
+      "symbol": "GOOGL",
+      "strategy": "B",
+      "conviction": 3,
+      "entry_date": "2024-12-11",
+      "exit_date": "2024-12-31",
+      "pnl": 67.83,
+      "r_multiple": 0.37,
+      "hold_days": 20,
+      "exit_reason": "time_stop",
+      "asset_type": "STOCK",
+      "entry": 185.31,
+      "exit": 189.3,
+      "stop": 174.5,
+      "target": 238.52,
+      "shares": 17
+    },
+    {
+      "symbol": "CRWD",
+      "strategy": "A",
+      "conviction": 4,
+      "entry_date": "2024-12-23",
+      "exit_date": "2024-12-31",
+      "pnl": -69.36,
+      "r_multiple": -1.0,
+      "hold_days": 8,
+      "exit_reason": "stop",
+      "asset_type": "STOCK",
+      "entry": 358.49,
+      "exit": 341.15,
+      "stop": 341.15,
+      "target": 489.13,
+      "shares": 4
+    },
+    {
+      "symbol": "NFLX",
+      "strategy": "A",
+      "conviction": 4,
+      "entry_date": "2024-12-23",
+      "exit_date": "2025-01-02",
+      "pnl": -57.15,
+      "r_multiple": -1.0,
+      "hold_days": 10,
+      "exit_reason": "stop",
+      "asset_type": "STOCK",
+      "entry": 91.34,
+      "exit": 87.77,
+      "stop": 87.77,
+      "target": 109.68,
+      "shares": 16
+    },
+    {
+      "symbol": "LUNR",
+      "strategy": "B",
+      "conviction": 4,
+      "entry_date": "2025-01-06",
+      "exit_date": "2025-01-07",
+      "pnl": -182.21,
+      "r_multiple": -1.0,
+      "hold_days": 1,
+      "exit_reason": "stop",
+      "asset_type": "STOCK",
+      "entry": 22.12,
+      "exit": 20.79,
+      "stop": 20.79,
+      "target": 28.49,
+      "shares": 137
     },
     {
       "symbol": "AMZN",
@@ -958,7 +1740,7 @@
       "conviction": 6,
       "entry_date": "2024-12-24",
       "exit_date": "2025-01-07",
-      "pnl": -67.62,
+      "pnl": -62.79,
       "r_multiple": -0.46,
       "hold_days": 14,
       "exit_reason": "regime_bear",
@@ -967,7 +1749,24 @@
       "exit": 222.11,
       "stop": 216.54,
       "target": 301.74,
-      "shares": 14
+      "shares": 13
+    },
+    {
+      "symbol": "RKLB",
+      "strategy": "B",
+      "conviction": 4,
+      "entry_date": "2025-01-06",
+      "exit_date": "2025-01-07",
+      "pnl": -108.16,
+      "r_multiple": -0.44,
+      "hold_days": 1,
+      "exit_reason": "regime_bear",
+      "asset_type": "STOCK",
+      "entry": 28.99,
+      "exit": 27.95,
+      "stop": 26.61,
+      "target": 41.52,
+      "shares": 104
     },
     {
       "symbol": "ANET",
@@ -975,7 +1774,7 @@
       "conviction": 5,
       "entry_date": "2025-01-07",
       "exit_date": "2025-01-07",
-      "pnl": -118.8,
+      "pnl": -110.0,
       "r_multiple": -0.82,
       "hold_days": 0,
       "exit_reason": "regime_bear",
@@ -984,7 +1783,7 @@
       "exit": 115.29,
       "stop": 114.33,
       "target": 151.53,
-      "shares": 27
+      "shares": 25
     },
     {
       "symbol": "NOW",
@@ -1001,6 +1800,23 @@
       "exit": 230.86,
       "stop": 230.86,
       "target": 253.4,
+      "shares": 6
+    },
+    {
+      "symbol": "AMZN",
+      "strategy": "B",
+      "conviction": 3,
+      "entry_date": "2025-01-29",
+      "exit_date": "2025-01-30",
+      "pnl": -29.88,
+      "r_multiple": -1.0,
+      "hold_days": 1,
+      "exit_reason": "stop",
+      "asset_type": "STOCK",
+      "entry": 239.02,
+      "exit": 234.04,
+      "stop": 234.04,
+      "target": 258.7,
       "shares": 6
     },
     {
@@ -1026,7 +1842,7 @@
       "conviction": 4,
       "entry_date": "2025-01-29",
       "exit_date": "2025-02-18",
-      "pnl": 102.02,
+      "pnl": 153.03,
       "r_multiple": 2.14,
       "hold_days": 20,
       "exit_reason": "time_stop",
@@ -1035,24 +1851,7 @@
       "exit": 455.36,
       "stop": 380.46,
       "target": 578.0,
-      "shares": 2
-    },
-    {
-      "symbol": "NEM",
-      "strategy": "B",
-      "conviction": 5,
-      "entry_date": "2025-01-31",
-      "exit_date": "2025-02-20",
-      "pnl": 165.6,
-      "r_multiple": 2.4,
-      "hold_days": 20,
-      "exit_reason": "time_stop",
-      "asset_type": "STOCK",
-      "entry": 43.49,
-      "exit": 48.09,
-      "stop": 41.57,
-      "target": 53.73,
-      "shares": 36
+      "shares": 3
     },
     {
       "symbol": "PANW",
@@ -1060,7 +1859,7 @@
       "conviction": 5,
       "entry_date": "2025-02-19",
       "exit_date": "2025-02-20",
-      "pnl": -117.0,
+      "pnl": -109.2,
       "r_multiple": -1.0,
       "hold_days": 1,
       "exit_reason": "stop",
@@ -1069,24 +1868,75 @@
       "exit": 200.39,
       "stop": 200.39,
       "target": 263.51,
-      "shares": 15
+      "shares": 14
     },
     {
       "symbol": "NEM",
       "strategy": "B",
       "conviction": 5,
-      "entry_date": "2025-02-21",
-      "exit_date": "2025-02-21",
-      "pnl": -2.01,
-      "r_multiple": -1.0,
-      "hold_days": 0,
+      "entry_date": "2025-02-06",
+      "exit_date": "2025-02-24",
+      "pnl": 1.44,
+      "r_multiple": 0.03,
+      "hold_days": 18,
       "exit_reason": "stop",
       "asset_type": "STOCK",
-      "entry": 47.46,
-      "exit": 47.43,
-      "stop": 47.43,
-      "target": 52.71,
-      "shares": 67
+      "entry": 44.94,
+      "exit": 44.98,
+      "stop": 43.26,
+      "target": 56.86,
+      "shares": 32
+    },
+    {
+      "symbol": "DELL",
+      "strategy": "B",
+      "conviction": 4,
+      "entry_date": "2025-02-19",
+      "exit_date": "2025-02-24",
+      "pnl": -70.5,
+      "r_multiple": -1.0,
+      "hold_days": 5,
+      "exit_reason": "stop",
+      "asset_type": "STOCK",
+      "entry": 118.81,
+      "exit": 115.99,
+      "stop": 115.99,
+      "target": 146.44,
+      "shares": 25
+    },
+    {
+      "symbol": "PLTR",
+      "strategy": "B",
+      "conviction": 4,
+      "entry_date": "2025-02-05",
+      "exit_date": "2025-02-25",
+      "pnl": -97.58,
+      "r_multiple": -0.8,
+      "hold_days": 20,
+      "exit_reason": "time_stop",
+      "asset_type": "STOCK",
+      "entry": 101.78,
+      "exit": 87.84,
+      "stop": 84.37,
+      "target": 220.59,
+      "shares": 7
+    },
+    {
+      "symbol": "GDX",
+      "strategy": "B",
+      "conviction": 5,
+      "entry_date": "2025-02-06",
+      "exit_date": "2025-02-25",
+      "pnl": -45.15,
+      "r_multiple": -1.0,
+      "hold_days": 19,
+      "exit_reason": "stop",
+      "asset_type": "STOCK",
+      "entry": 41.07,
+      "exit": 39.78,
+      "stop": 39.78,
+      "target": 49.86,
+      "shares": 35
     },
     {
       "symbol": "GDX",
@@ -1094,7 +1944,7 @@
       "conviction": 5,
       "entry_date": "2025-02-27",
       "exit_date": "2025-02-28",
-      "pnl": -84.53,
+      "pnl": -37.45,
       "r_multiple": -1.0,
       "hold_days": 1,
       "exit_reason": "stop",
@@ -1103,7 +1953,7 @@
       "exit": 39.13,
       "stop": 39.13,
       "target": 52.97,
-      "shares": 79
+      "shares": 35
     },
     {
       "symbol": "AAPL",
@@ -1128,7 +1978,7 @@
       "conviction": 4,
       "entry_date": "2025-03-11",
       "exit_date": "2025-03-11",
-      "pnl": -36.68,
+      "pnl": -31.44,
       "r_multiple": -1.0,
       "hold_days": 0,
       "exit_reason": "stop",
@@ -1137,7 +1987,7 @@
       "exit": 109.3,
       "stop": 109.3,
       "target": 126.8,
-      "shares": 14
+      "shares": 12
     },
     {
       "symbol": "SLB",
@@ -1145,7 +1995,7 @@
       "conviction": 4,
       "entry_date": "2025-03-10",
       "exit_date": "2025-03-19",
-      "pnl": -5.46,
+      "pnl": -4.76,
       "r_multiple": -0.08,
       "hold_days": 9,
       "exit_reason": "regime_bear",
@@ -1154,24 +2004,24 @@
       "exit": 41.08,
       "stop": 39.57,
       "target": 52.17,
-      "shares": 39
+      "shares": 34
     },
     {
       "symbol": "GDX",
       "strategy": "B",
       "conviction": 4,
-      "entry_date": "2025-03-14",
+      "entry_date": "2025-03-17",
       "exit_date": "2025-03-19",
-      "pnl": 52.2,
-      "r_multiple": 0.69,
-      "hold_days": 5,
+      "pnl": 43.84,
+      "r_multiple": 1.8,
+      "hold_days": 2,
       "exit_reason": "regime_bear",
       "asset_type": "STOCK",
-      "entry": 43.78,
+      "entry": 43.86,
       "exit": 45.23,
-      "stop": 41.69,
-      "target": 52.33,
-      "shares": 36
+      "stop": 43.1,
+      "target": 46.88,
+      "shares": 32
     },
     {
       "symbol": "MU",
@@ -1179,7 +2029,7 @@
       "conviction": 3,
       "entry_date": "2025-03-17",
       "exit_date": "2025-03-19",
-      "pnl": 15.0,
+      "pnl": 14.0,
       "r_multiple": 0.26,
       "hold_days": 2,
       "exit_reason": "regime_bear",
@@ -1188,24 +2038,92 @@
       "exit": 102.06,
       "stop": 97.14,
       "target": 119.04,
-      "shares": 15
+      "shares": 14
     },
     {
-      "symbol": "COIN",
+      "symbol": "KTOS",
       "strategy": "B",
       "conviction": 4,
-      "entry_date": "2025-05-09",
-      "exit_date": "2025-05-09",
-      "pnl": -36.75,
+      "entry_date": "2025-03-18",
+      "exit_date": "2025-03-19",
+      "pnl": 47.96,
+      "r_multiple": 1.02,
+      "hold_days": 1,
+      "exit_reason": "regime_bear",
+      "asset_type": "STOCK",
+      "entry": 31.47,
+      "exit": 32.56,
+      "stop": 30.4,
+      "target": 40.83,
+      "shares": 44
+    },
+    {
+      "symbol": "ASTS",
+      "strategy": "B",
+      "conviction": 4,
+      "entry_date": "2025-05-05",
+      "exit_date": "2025-05-06",
+      "pnl": -186.94,
+      "r_multiple": -1.0,
+      "hold_days": 1,
+      "exit_reason": "stop",
+      "asset_type": "STOCK",
+      "entry": 25.92,
+      "exit": 24.2,
+      "stop": 24.2,
+      "target": 39.74,
+      "shares": 109
+    },
+    {
+      "symbol": "LUNR",
+      "strategy": "B",
+      "conviction": 4,
+      "entry_date": "2025-05-05",
+      "exit_date": "2025-05-06",
+      "pnl": -150.35,
+      "r_multiple": -1.0,
+      "hold_days": 1,
+      "exit_reason": "stop",
+      "asset_type": "STOCK",
+      "entry": 9.12,
+      "exit": 8.64,
+      "stop": 8.64,
+      "target": 13.26,
+      "shares": 310
+    },
+    {
+      "symbol": "QQQ",
+      "strategy": "B",
+      "conviction": 4,
+      "entry_date": "2025-05-20",
+      "exit_date": "2025-05-20",
+      "pnl": -13.8,
       "r_multiple": -1.0,
       "hold_days": 0,
       "exit_reason": "stop",
       "asset_type": "STOCK",
-      "entry": 204.52,
-      "exit": 202.07,
-      "stop": 202.07,
-      "target": 233.08,
-      "shares": 15
+      "entry": 519.47,
+      "exit": 516.71,
+      "stop": 516.71,
+      "target": 553.81,
+      "shares": 5
+    },
+    {
+      "symbol": "VRT",
+      "strategy": "B",
+      "conviction": 4,
+      "entry_date": "2025-05-02",
+      "exit_date": "2025-05-22",
+      "pnl": 302.7,
+      "r_multiple": 1.44,
+      "hold_days": 20,
+      "exit_reason": "time_stop",
+      "asset_type": "STOCK",
+      "entry": 94.11,
+      "exit": 104.2,
+      "stop": 87.12,
+      "target": 125.13,
+      "shares": 30
     },
     {
       "symbol": "ANET",
@@ -1213,7 +2131,7 @@
       "conviction": 3,
       "entry_date": "2025-05-02",
       "exit_date": "2025-05-22",
-      "pnl": 65.74,
+      "pnl": 110.72,
       "r_multiple": 0.47,
       "hold_days": 20,
       "exit_reason": "time_stop",
@@ -1222,58 +2140,41 @@
       "exit": 92.56,
       "stop": 81.73,
       "target": 118.39,
-      "shares": 19
+      "shares": 32
     },
     {
-      "symbol": "CRM",
-      "strategy": "A",
-      "conviction": 3,
-      "entry_date": "2025-05-23",
-      "exit_date": "2025-05-27",
-      "pnl": -70.74,
-      "r_multiple": -1.0,
-      "hold_days": 4,
-      "exit_reason": "stop",
-      "asset_type": "STOCK",
-      "entry": 279.0,
-      "exit": 271.14,
-      "stop": 271.14,
-      "target": 344.82,
-      "shares": 9
-    },
-    {
-      "symbol": "OXY",
+      "symbol": "CEG",
       "strategy": "B",
       "conviction": 4,
-      "entry_date": "2025-05-09",
-      "exit_date": "2025-05-29",
-      "pnl": -39.27,
-      "r_multiple": -0.2,
+      "entry_date": "2025-05-07",
+      "exit_date": "2025-05-27",
+      "pnl": 317.0,
+      "r_multiple": 1.08,
       "hold_days": 20,
       "exit_reason": "time_stop",
       "asset_type": "STOCK",
-      "entry": 41.97,
-      "exit": 41.46,
-      "stop": 39.45,
-      "target": 53.38,
-      "shares": 77
+      "entry": 277.36,
+      "exit": 309.06,
+      "stop": 248.13,
+      "target": 427.96,
+      "shares": 10
     },
     {
-      "symbol": "CRWD",
+      "symbol": "SOUN",
       "strategy": "B",
-      "conviction": 4,
+      "conviction": 5,
       "entry_date": "2025-05-28",
-      "exit_date": "2025-05-29",
-      "pnl": -105.93,
+      "exit_date": "2025-05-30",
+      "pnl": -283.02,
       "r_multiple": -1.0,
-      "hold_days": 1,
+      "hold_days": 2,
       "exit_reason": "stop",
       "asset_type": "STOCK",
-      "entry": 472.98,
-      "exit": 455.33,
-      "stop": 455.33,
-      "target": 573.56,
-      "shares": 6
+      "entry": 11.13,
+      "exit": 10.07,
+      "stop": 10.07,
+      "target": 18.47,
+      "shares": 267
     },
     {
       "symbol": "NVDA",
@@ -1281,7 +2182,7 @@
       "conviction": 4,
       "entry_date": "2025-05-30",
       "exit_date": "2025-05-30",
-      "pnl": -31.24,
+      "pnl": -56.8,
       "r_multiple": -1.0,
       "hold_days": 0,
       "exit_reason": "stop",
@@ -1290,7 +2191,24 @@
       "exit": 135.88,
       "stop": 135.88,
       "target": 159.05,
-      "shares": 11
+      "shares": 20
+    },
+    {
+      "symbol": "CRWD",
+      "strategy": "B",
+      "conviction": 3,
+      "entry_date": "2025-05-27",
+      "exit_date": "2025-06-04",
+      "pnl": -107.04,
+      "r_multiple": -1.0,
+      "hold_days": 8,
+      "exit_reason": "stop",
+      "asset_type": "STOCK",
+      "entry": 464.0,
+      "exit": 446.16,
+      "stop": 446.16,
+      "target": 502.74,
+      "shares": 6
     },
     {
       "symbol": "PLTR",
@@ -1298,7 +2216,7 @@
       "conviction": 4,
       "entry_date": "2025-06-02",
       "exit_date": "2025-06-04",
-      "pnl": -53.18,
+      "pnl": -101.53,
       "r_multiple": -1.0,
       "hold_days": 2,
       "exit_reason": "stop",
@@ -1307,7 +2225,41 @@
       "exit": 126.6,
       "stop": 126.6,
       "target": 162.86,
-      "shares": 11
+      "shares": 21
+    },
+    {
+      "symbol": "RIOT",
+      "strategy": "B",
+      "conviction": 5,
+      "entry_date": "2025-06-05",
+      "exit_date": "2025-06-05",
+      "pnl": -98.25,
+      "r_multiple": -1.0,
+      "hold_days": 0,
+      "exit_reason": "stop",
+      "asset_type": "STOCK",
+      "entry": 9.65,
+      "exit": 9.0,
+      "stop": 9.0,
+      "target": 13.0,
+      "shares": 150
+    },
+    {
+      "symbol": "RDW",
+      "strategy": "B",
+      "conviction": 5,
+      "entry_date": "2025-05-28",
+      "exit_date": "2025-06-17",
+      "pnl": 90.3,
+      "r_multiple": 0.24,
+      "hold_days": 20,
+      "exit_reason": "time_stop",
+      "asset_type": "STOCK",
+      "entry": 16.0,
+      "exit": 16.7,
+      "stop": 13.07,
+      "target": 35.95,
+      "shares": 129
     },
     {
       "symbol": "PANW",
@@ -1315,7 +2267,7 @@
       "conviction": 3,
       "entry_date": "2025-06-02",
       "exit_date": "2025-06-23",
-      "pnl": 89.44,
+      "pnl": 156.52,
       "r_multiple": 2.66,
       "hold_days": 21,
       "exit_reason": "time_stop",
@@ -1324,24 +2276,7 @@
       "exit": 203.32,
       "stop": 187.94,
       "target": 214.82,
-      "shares": 8
-    },
-    {
-      "symbol": "META",
-      "strategy": "B",
-      "conviction": 5,
-      "entry_date": "2025-06-03",
-      "exit_date": "2025-06-23",
-      "pnl": 54.16,
-      "r_multiple": 1.1,
-      "hold_days": 20,
-      "exit_reason": "time_stop",
-      "asset_type": "STOCK",
-      "entry": 671.45,
-      "exit": 698.53,
-      "stop": 646.79,
-      "target": 839.67,
-      "shares": 2
+      "shares": 14
     },
     {
       "symbol": "MRVL",
@@ -1349,7 +2284,7 @@
       "conviction": 5,
       "entry_date": "2025-06-05",
       "exit_date": "2025-06-25",
-      "pnl": 199.18,
+      "pnl": 181.86,
       "r_multiple": 1.97,
       "hold_days": 20,
       "exit_reason": "time_stop",
@@ -1358,7 +2293,58 @@
       "exit": 75.93,
       "stop": 62.87,
       "target": 90.31,
-      "shares": 23
+      "shares": 21
+    },
+    {
+      "symbol": "PL",
+      "strategy": "B",
+      "conviction": 5,
+      "entry_date": "2025-06-06",
+      "exit_date": "2025-06-26",
+      "pnl": 14.4,
+      "r_multiple": 0.08,
+      "hold_days": 20,
+      "exit_reason": "time_stop",
+      "asset_type": "STOCK",
+      "entry": 5.9,
+      "exit": 6.06,
+      "stop": 3.99,
+      "target": 19.75,
+      "shares": 90
+    },
+    {
+      "symbol": "MU",
+      "strategy": "B",
+      "conviction": 4,
+      "entry_date": "2025-06-06",
+      "exit_date": "2025-06-26",
+      "pnl": 232.96,
+      "r_multiple": 3.44,
+      "hold_days": 20,
+      "exit_reason": "time_stop",
+      "asset_type": "STOCK",
+      "entry": 108.08,
+      "exit": 126.0,
+      "stop": 102.87,
+      "target": 126.81,
+      "shares": 13
+    },
+    {
+      "symbol": "ARM",
+      "strategy": "B",
+      "conviction": 4,
+      "entry_date": "2025-06-18",
+      "exit_date": "2025-07-01",
+      "pnl": 217.93,
+      "r_multiple": 3.8,
+      "hold_days": 13,
+      "exit_reason": "stop",
+      "asset_type": "STOCK",
+      "entry": 145.16,
+      "exit": 156.63,
+      "stop": 142.14,
+      "target": 160.2,
+      "shares": 19
     },
     {
       "symbol": "AMD",
@@ -1366,7 +2352,7 @@
       "conviction": 5,
       "entry_date": "2025-06-26",
       "exit_date": "2025-07-01",
-      "pnl": -197.11,
+      "pnl": -179.97,
       "r_multiple": -1.0,
       "hold_days": 5,
       "exit_reason": "stop",
@@ -1375,7 +2361,7 @@
       "exit": 137.4,
       "stop": 137.4,
       "target": 185.4,
-      "shares": 23
+      "shares": 21
     },
     {
       "symbol": "NVDA",
@@ -1383,7 +2369,7 @@
       "conviction": 4,
       "entry_date": "2025-06-24",
       "exit_date": "2025-07-14",
-      "pnl": 407.22,
+      "pnl": 370.2,
       "r_multiple": 3.02,
       "hold_days": 20,
       "exit_reason": "time_stop",
@@ -1392,7 +2378,7 @@
       "exit": 164.07,
       "stop": 139.44,
       "target": 172.55,
-      "shares": 22
+      "shares": 20
     },
     {
       "symbol": "SHOP",
@@ -1400,7 +2386,7 @@
       "conviction": 5,
       "entry_date": "2025-07-15",
       "exit_date": "2025-07-15",
-      "pnl": -43.74,
+      "pnl": -42.12,
       "r_multiple": -1.0,
       "hold_days": 0,
       "exit_reason": "stop",
@@ -1409,7 +2395,24 @@
       "exit": 115.37,
       "stop": 115.37,
       "target": 126.33,
-      "shares": 27
+      "shares": 26
+    },
+    {
+      "symbol": "FCX",
+      "strategy": "B",
+      "conviction": 5,
+      "entry_date": "2025-06-27",
+      "exit_date": "2025-07-17",
+      "pnl": 25.16,
+      "r_multiple": 0.15,
+      "hold_days": 20,
+      "exit_reason": "time_stop",
+      "asset_type": "STOCK",
+      "entry": 44.09,
+      "exit": 44.46,
+      "stop": 41.69,
+      "target": 63.85,
+      "shares": 68
     },
     {
       "symbol": "NFLX",
@@ -1417,7 +2420,7 @@
       "conviction": 3,
       "entry_date": "2025-07-07",
       "exit_date": "2025-07-18",
-      "pnl": -119.73,
+      "pnl": -211.83,
       "r_multiple": -1.0,
       "hold_days": 11,
       "exit_reason": "stop",
@@ -1426,7 +2429,7 @@
       "exit": 120.29,
       "stop": 120.29,
       "target": 176.87,
-      "shares": 13
+      "shares": 23
     },
     {
       "symbol": "NVDA",
@@ -1434,7 +2437,7 @@
       "conviction": 5,
       "entry_date": "2025-07-16",
       "exit_date": "2025-07-22",
-      "pnl": -87.3,
+      "pnl": -82.45,
       "r_multiple": -1.0,
       "hold_days": 6,
       "exit_reason": "stop",
@@ -1443,7 +2446,24 @@
       "exit": 166.21,
       "stop": 166.21,
       "target": 202.13,
-      "shares": 18
+      "shares": 17
+    },
+    {
+      "symbol": "COIN",
+      "strategy": "B",
+      "conviction": 4,
+      "entry_date": "2025-07-21",
+      "exit_date": "2025-07-22",
+      "pnl": -96.25,
+      "r_multiple": -1.0,
+      "hold_days": 1,
+      "exit_reason": "stop",
+      "asset_type": "STOCK",
+      "entry": 425.55,
+      "exit": 411.8,
+      "stop": 411.8,
+      "target": 467.66,
+      "shares": 7
     },
     {
       "symbol": "CRWD",
@@ -1451,7 +2471,7 @@
       "conviction": 5,
       "entry_date": "2025-07-03",
       "exit_date": "2025-07-23",
-      "pnl": -192.35,
+      "pnl": -230.82,
       "r_multiple": -0.89,
       "hold_days": 20,
       "exit_reason": "time_stop",
@@ -1460,7 +2480,7 @@
       "exit": 461.52,
       "stop": 456.89,
       "target": 770.57,
-      "shares": 5
+      "shares": 6
     },
     {
       "symbol": "GDX",
@@ -1468,7 +2488,7 @@
       "conviction": 3,
       "entry_date": "2025-07-23",
       "exit_date": "2025-07-24",
-      "pnl": -39.15,
+      "pnl": -35.1,
       "r_multiple": -1.0,
       "hold_days": 1,
       "exit_reason": "stop",
@@ -1477,58 +2497,92 @@
       "exit": 52.82,
       "stop": 52.82,
       "target": 62.78,
-      "shares": 29
+      "shares": 26
     },
     {
-      "symbol": "AMD",
+      "symbol": "CLS",
       "strategy": "B",
       "conviction": 5,
-      "entry_date": "2025-07-29",
-      "exit_date": "2025-08-06",
-      "pnl": -87.3,
+      "entry_date": "2025-07-24",
+      "exit_date": "2025-07-24",
+      "pnl": -73.52,
       "r_multiple": -1.0,
-      "hold_days": 8,
+      "hold_days": 0,
       "exit_reason": "stop",
       "asset_type": "STOCK",
-      "entry": 175.21,
-      "exit": 165.51,
-      "stop": 165.51,
-      "target": 230.71,
-      "shares": 9
+      "entry": 172.05,
+      "exit": 162.86,
+      "stop": 162.86,
+      "target": 210.3,
+      "shares": 8
     },
     {
-      "symbol": "SMCI",
+      "symbol": "IONQ",
+      "strategy": "A",
+      "conviction": 4,
+      "entry_date": "2025-07-24",
+      "exit_date": "2025-07-29",
+      "pnl": -81.18,
+      "r_multiple": -1.0,
+      "hold_days": 5,
+      "exit_reason": "stop",
+      "asset_type": "STOCK",
+      "entry": 42.89,
+      "exit": 40.43,
+      "stop": 40.43,
+      "target": 60.38,
+      "shares": 33
+    },
+    {
+      "symbol": "CEG",
       "strategy": "B",
-      "conviction": 5,
-      "entry_date": "2025-07-29",
-      "exit_date": "2025-08-06",
-      "pnl": -92.16,
+      "conviction": 4,
+      "entry_date": "2025-08-05",
+      "exit_date": "2025-08-05",
+      "pnl": -6.24,
       "r_multiple": -1.0,
-      "hold_days": 8,
+      "hold_days": 0,
       "exit_reason": "stop",
       "asset_type": "STOCK",
-      "entry": 59.73,
-      "exit": 53.97,
-      "stop": 53.97,
-      "target": 102.61,
-      "shares": 16
+      "entry": 352.03,
+      "exit": 350.47,
+      "stop": 350.47,
+      "target": 381.41,
+      "shares": 4
     },
     {
-      "symbol": "NEM",
+      "symbol": "DELL",
       "strategy": "A",
       "conviction": 5,
-      "entry_date": "2025-07-22",
-      "exit_date": "2025-08-11",
-      "pnl": 337.2,
-      "r_multiple": 1.5,
+      "entry_date": "2025-07-18",
+      "exit_date": "2025-08-07",
+      "pnl": 207.6,
+      "r_multiple": 1.48,
       "hold_days": 20,
       "exit_reason": "time_stop",
       "asset_type": "STOCK",
-      "entry": 60.44,
-      "exit": 68.87,
-      "stop": 54.82,
-      "target": 95.14,
-      "shares": 40
+      "entry": 125.28,
+      "exit": 133.93,
+      "stop": 119.45,
+      "target": 154.89,
+      "shares": 24
+    },
+    {
+      "symbol": "CEG",
+      "strategy": "A",
+      "conviction": 5,
+      "entry_date": "2025-08-13",
+      "exit_date": "2025-08-19",
+      "pnl": -167.88,
+      "r_multiple": -1.0,
+      "hold_days": 6,
+      "exit_reason": "stop",
+      "asset_type": "STOCK",
+      "entry": 339.77,
+      "exit": 318.78,
+      "stop": 318.78,
+      "target": 477.1,
+      "shares": 8
     },
     {
       "symbol": "NVDA",
@@ -1536,7 +2590,7 @@
       "conviction": 5,
       "entry_date": "2025-08-19",
       "exit_date": "2025-08-20",
-      "pnl": -140.93,
+      "pnl": -132.64,
       "r_multiple": -1.0,
       "hold_days": 1,
       "exit_reason": "stop",
@@ -1545,23 +2599,125 @@
       "exit": 174.14,
       "stop": 174.14,
       "target": 237.1,
-      "shares": 17
+      "shares": 16
     },
     {
-      "symbol": "TSLA",
-      "strategy": "A",
-      "conviction": 5,
-      "entry_date": "2025-08-19",
-      "exit_date": "2025-09-08",
-      "pnl": 63.66,
-      "r_multiple": 0.32,
+      "symbol": "GDX",
+      "strategy": "B",
+      "conviction": 4,
+      "entry_date": "2025-08-05",
+      "exit_date": "2025-08-25",
+      "pnl": 146.9,
+      "r_multiple": 2.72,
       "hold_days": 20,
       "exit_reason": "time_stop",
       "asset_type": "STOCK",
-      "entry": 335.79,
-      "exit": 346.4,
-      "stop": 302.44,
-      "target": 564.2,
+      "entry": 54.61,
+      "exit": 60.26,
+      "stop": 52.53,
+      "target": 69.4,
+      "shares": 26
+    },
+    {
+      "symbol": "SOUN",
+      "strategy": "B",
+      "conviction": 5,
+      "entry_date": "2025-08-11",
+      "exit_date": "2025-09-02",
+      "pnl": -33.88,
+      "r_multiple": -0.09,
+      "hold_days": 22,
+      "exit_reason": "time_stop",
+      "asset_type": "STOCK",
+      "entry": 13.64,
+      "exit": 13.42,
+      "stop": 11.18,
+      "target": 30.14,
+      "shares": 154
+    },
+    {
+      "symbol": "RKLB",
+      "strategy": "B",
+      "conviction": 4,
+      "entry_date": "2025-08-26",
+      "exit_date": "2025-09-03",
+      "pnl": -209.4,
+      "r_multiple": -1.0,
+      "hold_days": 8,
+      "exit_reason": "stop",
+      "asset_type": "STOCK",
+      "entry": 47.73,
+      "exit": 44.24,
+      "stop": 44.24,
+      "target": 65.1,
+      "shares": 60
+    },
+    {
+      "symbol": "NEM",
+      "strategy": "B",
+      "conviction": 5,
+      "entry_date": "2025-09-03",
+      "exit_date": "2025-09-04",
+      "pnl": -96.14,
+      "r_multiple": -1.0,
+      "hold_days": 1,
+      "exit_reason": "stop",
+      "asset_type": "STOCK",
+      "entry": 76.3,
+      "exit": 73.77,
+      "stop": 73.77,
+      "target": 90.49,
+      "shares": 38
+    },
+    {
+      "symbol": "HPE",
+      "strategy": "B",
+      "conviction": 4,
+      "entry_date": "2025-09-05",
+      "exit_date": "2025-09-05",
+      "pnl": -21.35,
+      "r_multiple": -1.0,
+      "hold_days": 0,
+      "exit_reason": "stop",
+      "asset_type": "STOCK",
+      "entry": 23.16,
+      "exit": 22.81,
+      "stop": 22.81,
+      "target": 25.26,
+      "shares": 61
+    },
+    {
+      "symbol": "KTOS",
+      "strategy": "A",
+      "conviction": 6,
+      "entry_date": "2025-08-21",
+      "exit_date": "2025-09-10",
+      "pnl": 65.36,
+      "r_multiple": 0.19,
+      "hold_days": 20,
+      "exit_reason": "time_stop",
+      "asset_type": "STOCK",
+      "entry": 64.14,
+      "exit": 65.66,
+      "stop": 56.29,
+      "target": 136.09,
+      "shares": 43
+    },
+    {
+      "symbol": "AMZN",
+      "strategy": "B",
+      "conviction": 3,
+      "entry_date": "2025-09-05",
+      "exit_date": "2025-09-10",
+      "pnl": -34.2,
+      "r_multiple": -1.0,
+      "hold_days": 5,
+      "exit_reason": "stop",
+      "asset_type": "STOCK",
+      "entry": 235.19,
+      "exit": 229.49,
+      "stop": 229.49,
+      "target": 266.63,
       "shares": 6
     },
     {
@@ -1570,7 +2726,7 @@
       "conviction": 6,
       "entry_date": "2025-08-22",
       "exit_date": "2025-09-11",
-      "pnl": 513.82,
+      "pnl": 469.14,
       "r_multiple": 5.08,
       "hold_days": 20,
       "exit_reason": "time_stop",
@@ -1579,58 +2735,92 @@
       "exit": 153.04,
       "stop": 126.3,
       "target": 183.6,
-      "shares": 23
+      "shares": 21
     },
     {
-      "symbol": "SNOW",
-      "strategy": "B",
-      "conviction": 4,
-      "entry_date": "2025-08-29",
+      "symbol": "SLB",
+      "strategy": "A",
+      "conviction": 6,
+      "entry_date": "2025-09-11",
       "exit_date": "2025-09-18",
-      "pnl": -44.46,
-      "r_multiple": -0.41,
-      "hold_days": 20,
-      "exit_reason": "time_stop",
-      "asset_type": "STOCK",
-      "entry": 236.93,
-      "exit": 222.11,
-      "stop": 200.51,
-      "target": 483.94,
-      "shares": 3
-    },
-    {
-      "symbol": "GDX",
-      "strategy": "B",
-      "conviction": 5,
-      "entry_date": "2025-09-09",
-      "exit_date": "2025-09-18",
-      "pnl": 3.25,
-      "r_multiple": 0.05,
-      "hold_days": 9,
+      "pnl": -148.23,
+      "r_multiple": -1.0,
+      "hold_days": 7,
       "exit_reason": "stop",
       "asset_type": "STOCK",
-      "entry": 67.65,
-      "exit": 67.72,
-      "stop": 66.2,
-      "target": 74.52,
-      "shares": 48
+      "entry": 36.03,
+      "exit": 34.2,
+      "stop": 34.2,
+      "target": 53.8,
+      "shares": 81
+    },
+    {
+      "symbol": "MU",
+      "strategy": "B",
+      "conviction": 5,
+      "entry_date": "2025-09-08",
+      "exit_date": "2025-09-19",
+      "pnl": 297.69,
+      "r_multiple": 4.03,
+      "hold_days": 11,
+      "exit_reason": "stop",
+      "asset_type": "STOCK",
+      "entry": 130.55,
+      "exit": 160.32,
+      "stop": 123.17,
+      "target": 188.77,
+      "shares": 10
+    },
+    {
+      "symbol": "PANW",
+      "strategy": "B",
+      "conviction": 5,
+      "entry_date": "2025-09-22",
+      "exit_date": "2025-09-23",
+      "pnl": -28.95,
+      "r_multiple": -1.0,
+      "hold_days": 1,
+      "exit_reason": "stop",
+      "asset_type": "STOCK",
+      "entry": 206.89,
+      "exit": 204.96,
+      "stop": 204.96,
+      "target": 230.8,
+      "shares": 15
     },
     {
       "symbol": "GOOGL",
       "strategy": "B",
       "conviction": 5,
-      "entry_date": "2025-09-22",
-      "exit_date": "2025-09-22",
-      "pnl": -38.74,
+      "entry_date": "2025-09-04",
+      "exit_date": "2025-09-24",
+      "pnl": 209.88,
+      "r_multiple": 1.02,
+      "hold_days": 20,
+      "exit_reason": "time_stop",
+      "asset_type": "STOCK",
+      "entry": 229.65,
+      "exit": 247.14,
+      "stop": 212.5,
+      "target": 357.78,
+      "shares": 12
+    },
+    {
+      "symbol": "IONQ",
+      "strategy": "B",
+      "conviction": 5,
+      "entry_date": "2025-09-24",
+      "exit_date": "2025-09-24",
+      "pnl": -115.21,
       "r_multiple": -1.0,
       "hold_days": 0,
       "exit_reason": "stop",
       "asset_type": "STOCK",
-      "entry": 254.43,
-      "exit": 251.45,
-      "stop": 251.45,
-      "target": 277.61,
-      "shares": 13
+      "entry": 75.25,
+      "exit": 72.44,
+      "stop": 72.44,
+      "target": 94.04,
+      "shares": 41
     },
     {
       "symbol": "TSLA",
@@ -1638,7 +2828,7 @@
       "conviction": 5,
       "entry_date": "2025-09-12",
       "exit_date": "2025-10-02",
-      "pnl": 585.54,
+      "pnl": 520.48,
       "r_multiple": 4.05,
       "hold_days": 20,
       "exit_reason": "time_stop",
@@ -1647,7 +2837,7 @@
       "exit": 436.0,
       "stop": 354.86,
       "target": 466.46,
-      "shares": 9
+      "shares": 8
     },
     {
       "symbol": "CRWD",
@@ -1655,7 +2845,7 @@
       "conviction": 4,
       "entry_date": "2025-09-19",
       "exit_date": "2025-10-09",
-      "pnl": 30.39,
+      "pnl": 50.65,
       "r_multiple": 0.2,
       "hold_days": 20,
       "exit_reason": "time_stop",
@@ -1664,58 +2854,41 @@
       "exit": 509.13,
       "stop": 449.46,
       "target": 821.65,
-      "shares": 3
+      "shares": 5
     },
     {
-      "symbol": "AMD",
+      "symbol": "MRVL",
       "strategy": "B",
       "conviction": 4,
-      "entry_date": "2025-10-03",
+      "entry_date": "2025-09-26",
       "exit_date": "2025-10-10",
-      "pnl": 1008.96,
-      "r_multiple": 5.99,
-      "hold_days": 7,
+      "pnl": 167.52,
+      "r_multiple": 2.96,
+      "hold_days": 14,
       "exit_reason": "stop",
       "asset_type": "STOCK",
-      "entry": 170.68,
-      "exit": 218.73,
-      "stop": 162.66,
-      "target": 212.15,
-      "shares": 21
+      "entry": 82.47,
+      "exit": 87.12,
+      "stop": 80.9,
+      "target": 101.27,
+      "shares": 36
     },
     {
-      "symbol": "AAPL",
+      "symbol": "CEG",
       "strategy": "B",
-      "conviction": 4,
-      "entry_date": "2025-09-23",
-      "exit_date": "2025-10-13",
-      "pnl": -106.86,
-      "r_multiple": -0.68,
-      "hold_days": 20,
-      "exit_reason": "time_stop",
-      "asset_type": "STOCK",
-      "entry": 255.88,
-      "exit": 247.66,
-      "stop": 243.84,
-      "target": 329.52,
-      "shares": 13
-    },
-    {
-      "symbol": "ARM",
-      "strategy": "B",
-      "conviction": 4,
-      "entry_date": "2025-10-14",
-      "exit_date": "2025-10-14",
-      "pnl": -32.01,
+      "conviction": 5,
+      "entry_date": "2025-10-10",
+      "exit_date": "2025-10-10",
+      "pnl": -66.16,
       "r_multiple": -1.0,
       "hold_days": 0,
       "exit_reason": "stop",
       "asset_type": "STOCK",
-      "entry": 171.6,
-      "exit": 170.14,
-      "stop": 170.14,
-      "target": 182.74,
-      "shares": 22
+      "entry": 381.0,
+      "exit": 372.73,
+      "stop": 372.73,
+      "target": 456.73,
+      "shares": 8
     },
     {
       "symbol": "NVDA",
@@ -1723,7 +2896,7 @@
       "conviction": 5,
       "entry_date": "2025-10-14",
       "exit_date": "2025-10-15",
-      "pnl": -102.0,
+      "pnl": -86.7,
       "r_multiple": -1.0,
       "hold_days": 1,
       "exit_reason": "stop",
@@ -1732,58 +2905,92 @@
       "exit": 179.67,
       "stop": 179.67,
       "target": 248.87,
-      "shares": 20
+      "shares": 17
     },
     {
-      "symbol": "GDX",
-      "strategy": "B",
-      "conviction": 4,
-      "entry_date": "2025-10-16",
-      "exit_date": "2025-10-17",
-      "pnl": -87.17,
-      "r_multiple": -1.0,
-      "hold_days": 1,
-      "exit_reason": "stop",
-      "asset_type": "STOCK",
-      "entry": 82.46,
-      "exit": 78.67,
-      "stop": 78.67,
-      "target": 98.27,
-      "shares": 23
-    },
-    {
-      "symbol": "AMD",
-      "strategy": "B",
-      "conviction": 3,
-      "entry_date": "2025-10-16",
-      "exit_date": "2025-10-17",
-      "pnl": -35.28,
-      "r_multiple": -1.0,
-      "hold_days": 1,
-      "exit_reason": "stop",
-      "asset_type": "STOCK",
-      "entry": 236.29,
-      "exit": 231.88,
-      "stop": 231.88,
-      "target": 272.2,
-      "shares": 8
-    },
-    {
-      "symbol": "PLTR",
+      "symbol": "CLS",
       "strategy": "A",
-      "conviction": 3,
-      "entry_date": "2025-10-15",
-      "exit_date": "2025-11-04",
-      "pnl": 118.11,
-      "r_multiple": 0.72,
+      "conviction": 6,
+      "entry_date": "2025-09-26",
+      "exit_date": "2025-10-16",
+      "pnl": 415.32,
+      "r_multiple": 1.69,
       "hold_days": 20,
       "exit_reason": "time_stop",
       "asset_type": "STOCK",
-      "entry": 181.65,
-      "exit": 190.74,
-      "stop": 169.06,
-      "target": 233.14,
-      "shares": 13
+      "entry": 245.25,
+      "exit": 279.86,
+      "stop": 224.73,
+      "target": 423.83,
+      "shares": 12
+    },
+    {
+      "symbol": "RGTI",
+      "strategy": "B",
+      "conviction": 5,
+      "entry_date": "2025-10-14",
+      "exit_date": "2025-10-16",
+      "pnl": -366.1,
+      "r_multiple": -1.0,
+      "hold_days": 2,
+      "exit_reason": "stop",
+      "asset_type": "STOCK",
+      "entry": 54.85,
+      "exit": 48.64,
+      "stop": 48.64,
+      "target": 98.8,
+      "shares": 59
+    },
+    {
+      "symbol": "RKLB",
+      "strategy": "B",
+      "conviction": 5,
+      "entry_date": "2025-10-06",
+      "exit_date": "2025-10-27",
+      "pnl": 472.77,
+      "r_multiple": 1.85,
+      "hold_days": 21,
+      "exit_reason": "time_stop",
+      "asset_type": "STOCK",
+      "entry": 56.87,
+      "exit": 65.62,
+      "stop": 52.12,
+      "target": 84.44,
+      "shares": 54
+    },
+    {
+      "symbol": "MU",
+      "strategy": "B",
+      "conviction": 4,
+      "entry_date": "2025-10-17",
+      "exit_date": "2025-11-06",
+      "pnl": 624.8,
+      "r_multiple": 5.0,
+      "hold_days": 20,
+      "exit_reason": "time_stop",
+      "asset_type": "STOCK",
+      "entry": 199.28,
+      "exit": 238.33,
+      "stop": 191.47,
+      "target": 268.89,
+      "shares": 16
+    },
+    {
+      "symbol": "RGTI",
+      "strategy": "A",
+      "conviction": 4,
+      "entry_date": "2025-10-28",
+      "exit_date": "2025-11-07",
+      "pnl": -324.74,
+      "r_multiple": -1.0,
+      "hold_days": 10,
+      "exit_reason": "stop",
+      "asset_type": "STOCK",
+      "entry": 40.04,
+      "exit": 33.8,
+      "stop": 33.8,
+      "target": 78.88,
+      "shares": 52
     },
     {
       "symbol": "SNOW",
@@ -1791,7 +2998,7 @@
       "conviction": 4,
       "entry_date": "2025-10-20",
       "exit_date": "2025-11-10",
-      "pnl": 173.18,
+      "pnl": 321.62,
       "r_multiple": 1.65,
       "hold_days": 21,
       "exit_reason": "time_stop",
@@ -1800,24 +3007,7 @@
       "exit": 268.51,
       "stop": 228.76,
       "target": 312.62,
-      "shares": 7
-    },
-    {
-      "symbol": "CSCO",
-      "strategy": "A",
-      "conviction": 4,
-      "entry_date": "2025-10-20",
-      "exit_date": "2025-11-10",
-      "pnl": 45.31,
-      "r_multiple": 0.49,
-      "hold_days": 21,
-      "exit_reason": "time_stop",
-      "asset_type": "STOCK",
-      "entry": 70.12,
-      "exit": 72.09,
-      "stop": 66.14,
-      "target": 94.07,
-      "shares": 23
+      "shares": 13
     },
     {
       "symbol": "MU",
@@ -1825,7 +3015,7 @@
       "conviction": 5,
       "entry_date": "2025-11-11",
       "exit_date": "2025-11-11",
-      "pnl": -65.85,
+      "pnl": -57.07,
       "r_multiple": -1.0,
       "hold_days": 0,
       "exit_reason": "stop",
@@ -1834,7 +3024,41 @@
       "exit": 243.95,
       "stop": 243.95,
       "target": 318.75,
+      "shares": 13
+    },
+    {
+      "symbol": "PANW",
+      "strategy": "A",
+      "conviction": 5,
+      "entry_date": "2025-11-11",
+      "exit_date": "2025-11-13",
+      "pnl": -174.9,
+      "r_multiple": -1.0,
+      "hold_days": 2,
+      "exit_reason": "stop",
+      "asset_type": "STOCK",
+      "entry": 216.94,
+      "exit": 205.28,
+      "stop": 205.28,
+      "target": 295.36,
       "shares": 15
+    },
+    {
+      "symbol": "GOOGL",
+      "strategy": "B",
+      "conviction": 4,
+      "entry_date": "2025-10-28",
+      "exit_date": "2025-11-17",
+      "pnl": 183.96,
+      "r_multiple": 1.44,
+      "hold_days": 20,
+      "exit_reason": "time_stop",
+      "asset_type": "STOCK",
+      "entry": 269.69,
+      "exit": 285.02,
+      "stop": 259.06,
+      "target": 330.53,
+      "shares": 12
     },
     {
       "symbol": "SLB",
@@ -1842,7 +3066,7 @@
       "conviction": 3,
       "entry_date": "2025-11-14",
       "exit_date": "2025-11-18",
-      "pnl": -111.18,
+      "pnl": -94.86,
       "r_multiple": -1.0,
       "hold_days": 4,
       "exit_reason": "stop",
@@ -1851,7 +3075,7 @@
       "exit": 35.42,
       "stop": 35.42,
       "target": 40.76,
-      "shares": 109
+      "shares": 93
     },
     {
       "symbol": "AMD",
@@ -1859,7 +3083,7 @@
       "conviction": 5,
       "entry_date": "2025-11-11",
       "exit_date": "2025-11-19",
-      "pnl": -211.97,
+      "pnl": -269.78,
       "r_multiple": -1.0,
       "hold_days": 8,
       "exit_reason": "stop",
@@ -1868,7 +3092,7 @@
       "exit": 222.39,
       "stop": 222.39,
       "target": 395.11,
-      "shares": 11
+      "shares": 14
     },
     {
       "symbol": "CSCO",
@@ -1876,7 +3100,7 @@
       "conviction": 3,
       "entry_date": "2025-11-14",
       "exit_date": "2025-12-04",
-      "pnl": 44.84,
+      "pnl": 50.74,
       "r_multiple": 0.38,
       "hold_days": 20,
       "exit_reason": "time_stop",
@@ -1885,7 +3109,24 @@
       "exit": 77.76,
       "stop": 73.47,
       "target": 96.93,
-      "shares": 38
+      "shares": 43
+    },
+    {
+      "symbol": "CRWD",
+      "strategy": "B",
+      "conviction": 3,
+      "entry_date": "2025-12-04",
+      "exit_date": "2025-12-04",
+      "pnl": -48.72,
+      "r_multiple": -1.0,
+      "hold_days": 0,
+      "exit_reason": "stop",
+      "asset_type": "STOCK",
+      "entry": 523.91,
+      "exit": 515.79,
+      "stop": 515.79,
+      "target": 566.07,
+      "shares": 6
     },
     {
       "symbol": "MRVL",
@@ -1893,7 +3134,7 @@
       "conviction": 4,
       "entry_date": "2025-12-04",
       "exit_date": "2025-12-08",
-      "pnl": -84.37,
+      "pnl": -214.17,
       "r_multiple": -1.0,
       "hold_days": 4,
       "exit_reason": "stop",
@@ -1902,7 +3143,7 @@
       "exit": 92.92,
       "stop": 92.92,
       "target": 143.88,
-      "shares": 13
+      "shares": 33
     },
     {
       "symbol": "AVGO",
@@ -1910,7 +3151,7 @@
       "conviction": 3,
       "entry_date": "2025-12-09",
       "exit_date": "2025-12-11",
-      "pnl": 3.59,
+      "pnl": 3.19,
       "r_multiple": 0.04,
       "hold_days": 2,
       "exit_reason": "stop",
@@ -1919,7 +3160,7 @@
       "exit": 399.15,
       "stop": 389.59,
       "target": 458.65,
-      "shares": 9
+      "shares": 8
     },
     {
       "symbol": "FANG",
@@ -1927,7 +3168,7 @@
       "conviction": 4,
       "entry_date": "2025-12-02",
       "exit_date": "2025-12-15",
-      "pnl": -49.44,
+      "pnl": -86.52,
       "r_multiple": -1.0,
       "hold_days": 13,
       "exit_reason": "stop",
@@ -1936,7 +3177,24 @@
       "exit": 151.88,
       "stop": 151.88,
       "target": 181.84,
-      "shares": 12
+      "shares": 21
+    },
+    {
+      "symbol": "LUNR",
+      "strategy": "B",
+      "conviction": 4,
+      "entry_date": "2025-12-05",
+      "exit_date": "2025-12-26",
+      "pnl": 1030.82,
+      "r_multiple": 3.49,
+      "hold_days": 21,
+      "exit_reason": "time_stop",
+      "asset_type": "STOCK",
+      "entry": 11.27,
+      "exit": 15.25,
+      "stop": 10.13,
+      "target": 19.02,
+      "shares": 259
     },
     {
       "symbol": "CRM",
@@ -1961,7 +3219,7 @@
       "conviction": 4,
       "entry_date": "2025-12-16",
       "exit_date": "2025-12-30",
-      "pnl": -110.64,
+      "pnl": -82.98,
       "r_multiple": -1.0,
       "hold_days": 14,
       "exit_reason": "stop",
@@ -1970,7 +3228,24 @@
       "exit": 458.38,
       "stop": 458.38,
       "target": 576.89,
-      "shares": 8
+      "shares": 6
+    },
+    {
+      "symbol": "CSCO",
+      "strategy": "A",
+      "conviction": 4,
+      "entry_date": "2025-12-16",
+      "exit_date": "2025-12-30",
+      "pnl": -28.7,
+      "r_multiple": -0.22,
+      "hold_days": 14,
+      "exit_reason": "end_of_test",
+      "asset_type": "STOCK",
+      "entry": 78.11,
+      "exit": 77.41,
+      "stop": 74.89,
+      "target": 98.41,
+      "shares": 41
     }
   ],
   "equity_curve": [
@@ -1986,2498 +3261,2498 @@
     ],
     [
       "2024-01-04",
-      5000.0,
-      0
+      4997.08,
+      1
     ],
     [
       "2024-01-05",
-      5009.17,
-      1
+      5019.97,
+      2
     ],
     [
       "2024-01-08",
-      5128.73,
-      2
+      5171.92,
+      4
     ],
     [
       "2024-01-09",
-      5119.84,
-      2
-    ],
-    [
-      "2024-01-10",
-      5147.88,
+      5030.49,
       3
     ],
     [
+      "2024-01-10",
+      5032.84,
+      4
+    ],
+    [
       "2024-01-11",
-      5095.14,
-      2
+      4984.27,
+      3
     ],
     [
       "2024-01-12",
-      5067.68,
-      2
+      4948.03,
+      4
     ],
     [
       "2024-01-16",
-      5255.84,
-      2
+      5099.83,
+      4
     ],
     [
       "2024-01-17",
-      5215.74,
-      2
+      5022.07,
+      3
     ],
     [
       "2024-01-18",
-      5291.78,
-      2
+      5095.03,
+      3
     ],
     [
       "2024-01-19",
-      5498.2,
-      2
+      5294.39,
+      5
     ],
     [
       "2024-01-22",
-      5462.22,
-      2
+      5296.59,
+      5
     ],
     [
       "2024-01-23",
-      5457.24,
-      2
+      5261.69,
+      5
     ],
     [
       "2024-01-24",
-      5613.48,
-      2
+      5386.89,
+      5
     ],
     [
       "2024-01-25",
-      5601.12,
-      2
+      5378.64,
+      5
     ],
     [
       "2024-01-26",
-      5539.1,
-      2
+      5303.39,
+      5
     ],
     [
       "2024-01-29",
-      5609.38,
-      1
+      5395.9,
+      3
     ],
     [
       "2024-01-30",
-      5613.46,
-      0
+      5542.47,
+      3
     ],
     [
       "2024-01-31",
-      5710.62,
-      1
+      5675.31,
+      2
     ],
     [
       "2024-02-01",
-      5910.02,
+      5624.55,
       1
     ],
     [
       "2024-02-02",
-      5895.7,
-      1
+      5647.91,
+      3
     ],
     [
       "2024-02-05",
-      6185.84,
-      3
+      5795.07,
+      4
     ],
     [
       "2024-02-06",
-      6230.03,
-      3
+      5755.2,
+      4
     ],
     [
       "2024-02-07",
-      6283.77,
-      3
+      5773.99,
+      4
     ],
     [
       "2024-02-08",
-      6329.59,
-      3
+      5954.52,
+      4
     ],
     [
       "2024-02-09",
-      6537.6,
-      3
+      6629.6,
+      4
     ],
     [
       "2024-02-12",
-      6634.92,
-      3
+      6796.13,
+      4
     ],
     [
       "2024-02-13",
-      6641.34,
-      3
+      6784.45,
+      4
     ],
     [
       "2024-02-14",
-      7025.26,
-      3
+      7005.5,
+      4
     ],
     [
       "2024-02-15",
-      7489.37,
-      3
+      8034.53,
+      4
     ],
     [
       "2024-02-16",
-      7169.62,
-      2
-    ],
-    [
-      "2024-02-20",
-      7137.32,
-      2
-    ],
-    [
-      "2024-02-21",
-      7148.0,
-      2
-    ],
-    [
-      "2024-02-22",
-      7256.08,
-      2
-    ],
-    [
-      "2024-02-23",
-      7230.4,
+      8098.89,
       3
     ],
     [
-      "2024-02-26",
-      7250.77,
+      "2024-02-20",
+      9591.61,
       1
+    ],
+    [
+      "2024-02-21",
+      9584.17,
+      1
+    ],
+    [
+      "2024-02-22",
+      9620.37,
+      1
+    ],
+    [
+      "2024-02-23",
+      9510.73,
+      4
+    ],
+    [
+      "2024-02-26",
+      9652.62,
+      3
     ],
     [
       "2024-02-27",
-      7222.39,
-      1
+      9552.48,
+      4
     ],
     [
       "2024-02-28",
-      7207.41,
-      1
+      9737.57,
+      4
     ],
     [
       "2024-02-29",
-      7231.76,
-      1
+      9683.59,
+      4
     ],
     [
       "2024-03-01",
-      7537.78,
-      2
+      9945.42,
+      4
     ],
     [
       "2024-03-04",
-      7524.41,
-      2
+      9819.02,
+      3
     ],
     [
       "2024-03-05",
-      7327.5,
-      1
+      9552.56,
+      3
     ],
     [
       "2024-03-06",
-      7343.45,
-      1
+      9806.6,
+      3
     ],
     [
       "2024-03-07",
-      7609.63,
-      2
+      10036.76,
+      4
     ],
     [
       "2024-03-08",
-      7257.66,
-      0
-    ],
-    [
-      "2024-03-11",
-      7287.9,
-      1
-    ],
-    [
-      "2024-03-12",
-      7293.48,
-      1
-    ],
-    [
-      "2024-03-13",
-      7276.02,
-      1
-    ],
-    [
-      "2024-03-14",
-      7246.39,
+      9640.16,
       2
     ],
     [
+      "2024-03-11",
+      9492.64,
+      2
+    ],
+    [
+      "2024-03-12",
+      9556.48,
+      2
+    ],
+    [
+      "2024-03-13",
+      9535.78,
+      3
+    ],
+    [
+      "2024-03-14",
+      9369.47,
+      3
+    ],
+    [
       "2024-03-15",
-      7226.11,
+      9313.42,
       2
     ],
     [
       "2024-03-18",
-      7275.62,
+      9349.66,
       2
     ],
     [
       "2024-03-19",
-      7277.03,
+      9339.18,
       2
     ],
     [
       "2024-03-20",
-      7397.66,
-      2
+      9571.67,
+      4
     ],
     [
       "2024-03-21",
-      7429.26,
-      2
+      9976.11,
+      4
     ],
     [
       "2024-03-22",
-      7370.1,
-      2
+      9839.73,
+      4
     ],
     [
       "2024-03-25",
-      7443.5,
-      3
+      10106.24,
+      4
     ],
     [
       "2024-03-26",
-      7392.79,
-      3
+      10131.01,
+      4
     ],
     [
       "2024-03-27",
-      7404.84,
-      3
+      10212.32,
+      4
     ],
     [
       "2024-03-28",
-      7442.04,
-      3
+      10239.84,
+      4
     ],
     [
       "2024-04-01",
-      7496.16,
+      10212.6,
       2
     ],
     [
       "2024-04-02",
-      7480.27,
+      10232.1,
       2
     ],
     [
       "2024-04-03",
-      7544.3,
+      10424.76,
       1
     ],
     [
       "2024-04-04",
-      7338.75,
-      2
+      10234.76,
+      3
     ],
     [
       "2024-04-05",
-      7345.19,
-      2
+      10348.8,
+      3
     ],
     [
       "2024-04-08",
-      7394.85,
+      10249.84,
       3
     ],
     [
       "2024-04-09",
-      7479.37,
-      3
+      10241.36,
+      2
     ],
     [
       "2024-04-10",
-      7452.6,
-      3
+      10214.4,
+      2
     ],
     [
       "2024-04-11",
-      7535.54,
+      10204.34,
       3
     ],
     [
       "2024-04-12",
-      7384.75,
-      3
+      9942.65,
+      2
     ],
     [
       "2024-04-15",
-      7345.91,
+      9908.53,
       2
     ],
     [
       "2024-04-16",
-      7236.97,
+      9863.17,
       1
     ],
     [
       "2024-04-17",
-      7257.3,
-      1
+      9814.81,
+      3
     ],
     [
       "2024-04-18",
-      7267.56,
-      1
+      9780.87,
+      3
     ],
     [
       "2024-04-19",
-      7231.08,
+      9640.58,
       1
     ],
     [
       "2024-04-22",
-      7272.69,
+      9655.91,
       1
     ],
     [
       "2024-04-23",
-      7326.27,
-      2
+      9669.77,
+      1
     ],
     [
       "2024-04-24",
-      7352.54,
-      3
+      9675.86,
+      1
     ],
     [
       "2024-04-25",
-      7357.86,
-      3
+      9696.43,
+      2
     ],
     [
       "2024-04-26",
-      7669.81,
+      9803.31,
       3
     ],
     [
       "2024-04-29",
-      7577.42,
+      9756.86,
       0
     ],
     [
       "2024-04-30",
-      7577.42,
+      9756.86,
       0
     ],
     [
       "2024-05-01",
-      7577.42,
+      9756.86,
       0
     ],
     [
       "2024-05-02",
-      7577.42,
+      9756.86,
       0
     ],
     [
       "2024-05-03",
-      7577.42,
+      9756.86,
       0
     ],
     [
       "2024-05-06",
-      7577.42,
+      9756.86,
       0
     ],
     [
       "2024-05-07",
-      7577.42,
+      9756.86,
       0
     ],
     [
       "2024-05-08",
-      7577.42,
+      9756.86,
       0
     ],
     [
       "2024-05-09",
-      7577.42,
+      9756.86,
       0
     ],
     [
       "2024-05-10",
-      7577.42,
+      9756.86,
       0
     ],
     [
       "2024-05-13",
-      7560.92,
+      9739.81,
       1
     ],
     [
       "2024-05-14",
-      7589.35,
+      9769.18,
       1
     ],
     [
       "2024-05-15",
-      7771.31,
+      9838.12,
       2
     ],
     [
       "2024-05-16",
-      7690.22,
-      2
+      9677.09,
+      4
     ],
     [
       "2024-05-17",
-      7750.55,
-      2
+      9743.3,
+      4
     ],
     [
       "2024-05-20",
-      7772.18,
-      2
+      9729.97,
+      4
     ],
     [
       "2024-05-21",
-      7759.31,
-      2
+      9717.0,
+      4
     ],
     [
       "2024-05-22",
-      7720.54,
-      2
+      9682.17,
+      4
     ],
     [
       "2024-05-23",
-      7524.46,
-      1
-    ],
-    [
-      "2024-05-24",
-      7648.96,
-      2
-    ],
-    [
-      "2024-05-28",
-      7763.18,
-      2
-    ],
-    [
-      "2024-05-29",
-      7755.03,
+      9575.25,
       3
     ],
     [
+      "2024-05-24",
+      9820.55,
+      5
+    ],
+    [
+      "2024-05-28",
+      9918.52,
+      5
+    ],
+    [
+      "2024-05-29",
+      10103.62,
+      5
+    ],
+    [
       "2024-05-30",
-      7521.78,
+      9721.37,
       2
     ],
     [
       "2024-05-31",
-      7426.39,
+      9422.79,
       1
     ],
     [
       "2024-06-03",
-      7549.81,
+      9490.02,
       2
     ],
     [
       "2024-06-04",
-      7590.52,
-      2
+      9468.11,
+      4
     ],
     [
       "2024-06-05",
-      7744.13,
-      2
+      9930.62,
+      4
     ],
     [
       "2024-06-06",
-      7736.28,
-      2
+      9880.92,
+      4
     ],
     [
       "2024-06-07",
-      7695.38,
-      2
+      9923.94,
+      4
     ],
     [
       "2024-06-10",
-      7723.68,
-      2
+      10084.77,
+      4
     ],
     [
       "2024-06-11",
-      7791.42,
-      3
+      10096.56,
+      4
     ],
     [
       "2024-06-12",
-      7915.1,
-      3
+      10307.4,
+      4
     ],
     [
       "2024-06-13",
-      7940.2,
-      2
+      10476.94,
+      3
     ],
     [
       "2024-06-14",
-      8009.94,
-      3
+      10493.15,
+      4
     ],
     [
       "2024-06-17",
-      8098.86,
-      3
+      10717.21,
+      4
     ],
     [
       "2024-06-18",
-      8041.9,
-      3
+      10787.83,
+      4
     ],
     [
       "2024-06-20",
-      7984.85,
-      3
+      10521.4,
+      4
     ],
     [
       "2024-06-21",
-      7988.35,
+      10312.72,
       3
     ],
     [
       "2024-06-24",
-      7928.03,
+      10218.41,
       2
     ],
     [
       "2024-06-25",
-      8017.72,
+      10143.87,
       3
     ],
     [
       "2024-06-26",
-      7932.24,
-      3
+      10166.69,
+      4
     ],
     [
       "2024-06-27",
-      8110.36,
-      3
+      10325.03,
+      4
     ],
     [
       "2024-06-28",
-      8115.59,
-      3
+      10301.21,
+      4
     ],
     [
       "2024-07-01",
-      8253.6,
-      2
+      10412.41,
+      4
     ],
     [
       "2024-07-02",
-      8257.06,
-      2
+      10521.85,
+      4
     ],
     [
       "2024-07-03",
-      8324.26,
-      3
+      10637.18,
+      4
     ],
     [
       "2024-07-05",
-      8669.2,
-      2
+      10848.75,
+      3
     ],
     [
       "2024-07-08",
-      8667.23,
-      2
+      10904.55,
+      3
     ],
     [
       "2024-07-09",
-      8630.7,
-      2
+      10835.13,
+      3
     ],
     [
       "2024-07-10",
-      8793.77,
-      2
+      10979.2,
+      4
     ],
     [
       "2024-07-11",
-      8559.65,
-      2
+      10756.58,
+      3
     ],
     [
       "2024-07-12",
-      8581.03,
-      1
+      10820.99,
+      3
     ],
     [
       "2024-07-15",
-      8663.59,
+      10903.79,
       1
     ],
     [
       "2024-07-16",
-      8840.27,
+      11423.78,
       3
     ],
     [
       "2024-07-17",
-      8658.18,
-      3
+      11171.55,
+      4
     ],
     [
       "2024-07-18",
-      8471.8,
+      10848.92,
       3
     ],
     [
       "2024-07-19",
-      8658.25,
+      11099.63,
       3
     ],
     [
       "2024-07-22",
-      8663.63,
-      3
+      11094.38,
+      4
     ],
     [
       "2024-07-23",
-      8551.42,
+      10851.64,
       3
     ],
     [
       "2024-07-24",
-      8336.54,
+      10587.42,
       2
     ],
     [
       "2024-07-25",
-      8721.37,
+      10847.78,
       2
     ],
     [
       "2024-07-26",
-      8752.84,
-      2
+      11044.22,
+      4
     ],
     [
       "2024-07-29",
-      8541.0,
-      3
+      10834.44,
+      5
     ],
     [
       "2024-07-30",
-      8457.8,
-      3
+      10658.8,
+      5
     ],
     [
       "2024-07-31",
-      8557.6,
-      3
+      10925.38,
+      5
     ],
     [
       "2024-08-01",
-      8445.03,
-      2
+      10761.22,
+      3
     ],
     [
       "2024-08-02",
-      8274.6,
-      1
+      10513.96,
+      2
     ],
     [
       "2024-08-05",
-      8233.37,
-      0
+      10487.54,
+      1
     ],
     [
       "2024-08-06",
-      8233.37,
-      0
+      10551.46,
+      1
     ],
     [
       "2024-08-07",
-      8143.37,
+      10558.94,
       1
     ],
     [
       "2024-08-08",
-      8208.87,
+      10741.18,
       1
     ],
     [
       "2024-08-09",
-      8208.87,
-      1
-    ],
-    [
-      "2024-08-12",
-      8171.31,
+      10647.78,
       2
     ],
     [
+      "2024-08-12",
+      10521.6,
+      4
+    ],
+    [
       "2024-08-13",
-      8292.9,
+      10681.92,
       0
     ],
     [
       "2024-08-14",
-      8292.9,
+      10681.92,
       0
     ],
     [
       "2024-08-15",
-      8292.9,
+      10681.92,
       0
     ],
     [
       "2024-08-16",
-      8292.9,
+      10681.92,
       0
     ],
     [
       "2024-08-19",
-      8292.9,
+      10681.92,
       0
     ],
     [
       "2024-08-20",
-      8292.9,
+      10681.92,
       0
     ],
     [
       "2024-08-21",
-      8292.9,
+      10681.92,
       0
     ],
     [
       "2024-08-22",
-      8292.9,
+      10557.42,
       0
     ],
     [
       "2024-08-23",
-      8292.9,
+      10557.42,
       0
     ],
     [
       "2024-08-26",
-      8292.9,
+      10557.42,
       0
     ],
     [
       "2024-08-27",
-      8292.9,
+      10557.42,
       0
     ],
     [
       "2024-08-28",
-      8292.9,
+      10557.42,
       0
     ],
     [
       "2024-08-29",
-      8292.9,
+      10557.42,
       0
     ],
     [
       "2024-08-30",
-      8362.21,
+      10612.14,
       1
     ],
     [
       "2024-09-03",
-      8289.48,
+      10519.96,
       1
     ],
     [
       "2024-09-04",
-      8285.57,
+      10516.87,
       1
     ],
     [
       "2024-09-05",
-      8338.04,
-      2
+      10535.14,
+      3
     ],
     [
       "2024-09-06",
-      8205.93,
-      1
+      10411.49,
+      2
     ],
     [
       "2024-09-09",
-      8321.99,
-      1
+      10682.45,
+      2
     ],
     [
       "2024-09-10",
-      8336.7,
-      2
+      10717.44,
+      3
     ],
     [
       "2024-09-11",
-      8401.55,
-      2
+      10754.09,
+      3
     ],
     [
       "2024-09-12",
-      8443.38,
-      2
+      10858.16,
+      4
     ],
     [
       "2024-09-13",
-      8452.13,
-      2
+      10915.58,
+      5
     ],
     [
       "2024-09-16",
-      8541.63,
-      2
+      10959.01,
+      5
     ],
     [
       "2024-09-17",
-      8523.86,
-      2
+      10978.19,
+      5
     ],
     [
       "2024-09-18",
-      8537.47,
-      2
+      10953.24,
+      5
     ],
     [
       "2024-09-19",
-      8670.99,
-      1
+      11121.08,
+      4
     ],
     [
       "2024-09-20",
-      8705.81,
-      3
+      11131.21,
+      5
     ],
     [
       "2024-09-23",
-      8867.54,
-      3
+      11316.42,
+      5
     ],
     [
       "2024-09-24",
-      8864.65,
-      3
+      11387.56,
+      5
     ],
     [
       "2024-09-25",
-      8796.37,
-      2
+      11400.37,
+      4
     ],
     [
       "2024-09-26",
-      8756.11,
-      2
+      11347.76,
+      4
     ],
     [
       "2024-09-27",
-      8796.69,
-      3
+      11286.93,
+      5
     ],
     [
       "2024-09-30",
-      8790.46,
-      2
-    ],
-    [
-      "2024-10-01",
-      8583.16,
+      11198.85,
       3
     ],
     [
+      "2024-10-01",
+      10994.34,
+      4
+    ],
+    [
       "2024-10-02",
-      8400.76,
-      2
+      10855.87,
+      3
     ],
     [
       "2024-10-03",
-      8484.34,
+      10933.12,
       3
     ],
     [
       "2024-10-04",
-      8673.9,
+      11083.97,
       3
     ],
     [
       "2024-10-07",
-      8598.39,
-      3
+      11030.91,
+      4
     ],
     [
       "2024-10-08",
-      8739.35,
-      3
+      11164.34,
+      4
     ],
     [
       "2024-10-09",
-      8749.58,
-      3
+      11137.0,
+      4
     ],
     [
       "2024-10-10",
-      8843.19,
+      11156.6,
       3
     ],
     [
       "2024-10-11",
-      8808.93,
-      3
+      11185.54,
+      4
     ],
     [
       "2024-10-14",
-      8890.21,
-      3
+      11185.16,
+      4
     ],
     [
       "2024-10-15",
-      8742.94,
-      3
+      10963.3,
+      4
     ],
     [
       "2024-10-16",
-      8792.63,
-      3
+      11083.54,
+      4
     ],
     [
       "2024-10-17",
-      8819.89,
-      2
+      11166.73,
+      3
     ],
     [
       "2024-10-18",
-      8859.45,
-      2
+      11360.59,
+      4
     ],
     [
       "2024-10-21",
-      8826.69,
-      1
+      11656.29,
+      3
     ],
     [
       "2024-10-22",
-      8804.85,
-      2
+      11688.6,
+      4
     ],
     [
       "2024-10-23",
-      8646.52,
-      1
+      11425.69,
+      3
     ],
     [
       "2024-10-24",
-      8610.99,
-      0
+      11653.44,
+      2
     ],
     [
       "2024-10-25",
-      8380.63,
-      0
+      11816.87,
+      2
     ],
     [
       "2024-10-28",
-      8380.63,
-      0
+      12043.22,
+      2
     ],
     [
       "2024-10-29",
-      8380.63,
-      0
+      11644.16,
+      2
     ],
     [
       "2024-10-30",
-      8358.9,
-      1
+      11491.54,
+      3
     ],
     [
       "2024-10-31",
-      8362.59,
-      1
+      11346.87,
+      2
     ],
     [
       "2024-11-01",
-      8372.98,
-      1
+      11436.99,
+      2
     ],
     [
       "2024-11-04",
-      8366.14,
-      1
+      11509.59,
+      2
     ],
     [
       "2024-11-05",
-      8389.41,
-      1
+      11680.77,
+      2
     ],
     [
       "2024-11-06",
-      8474.41,
-      1
+      12037.24,
+      2
     ],
     [
       "2024-11-07",
-      8522.56,
-      2
+      12297.35,
+      3
     ],
     [
       "2024-11-08",
-      8498.84,
-      2
+      12563.53,
+      4
     ],
     [
       "2024-11-11",
-      8501.09,
-      2
+      12424.93,
+      4
     ],
     [
       "2024-11-12",
-      8510.27,
-      2
+      12383.32,
+      4
     ],
     [
       "2024-11-13",
-      8481.02,
-      2
+      12508.54,
+      4
     ],
     [
       "2024-11-14",
-      8442.38,
+      12364.76,
       3
     ],
     [
       "2024-11-15",
-      8341.82,
-      2
+      12423.22,
+      3
     ],
     [
       "2024-11-18",
-      8302.9,
-      2
+      12075.77,
+      3
     ],
     [
       "2024-11-19",
-      8319.77,
-      1
+      12366.78,
+      3
     ],
     [
       "2024-11-20",
-      8329.13,
-      1
+      12354.26,
+      4
     ],
     [
       "2024-11-21",
-      8384.57,
-      1
+      12659.19,
+      3
     ],
     [
       "2024-11-22",
-      8391.1,
-      2
+      12415.64,
+      3
     ],
     [
       "2024-11-25",
-      8360.05,
-      2
+      12179.93,
+      3
     ],
     [
       "2024-11-26",
-      8370.32,
-      2
+      12147.48,
+      4
     ],
     [
       "2024-11-27",
-      8122.35,
+      12155.66,
       2
     ],
     [
       "2024-11-29",
-      8149.77,
-      2
+      12544.51,
+      1
     ],
     [
       "2024-12-02",
-      8177.79,
+      12927.5,
       3
     ],
     [
       "2024-12-03",
-      8146.42,
-      2
+      12851.27,
+      3
     ],
     [
       "2024-12-04",
-      8334.47,
-      2
+      12982.38,
+      4
     ],
     [
       "2024-12-05",
-      8306.75,
+      12796.85,
       3
     ],
     [
       "2024-12-06",
-      8331.28,
+      12880.07,
       3
     ],
     [
       "2024-12-09",
-      8157.79,
-      3
+      12709.65,
+      4
     ],
     [
       "2024-12-10",
-      8172.91,
-      3
+      12594.61,
+      2
     ],
     [
       "2024-12-11",
-      8292.66,
+      12887.09,
       3
     ],
     [
       "2024-12-12",
-      8296.97,
-      3
+      12847.51,
+      4
     ],
     [
       "2024-12-13",
-      8260.8,
-      3
+      12625.72,
+      4
     ],
     [
       "2024-12-16",
-      8388.25,
-      3
+      12881.21,
+      4
     ],
     [
       "2024-12-17",
-      8284.15,
-      2
+      12773.38,
+      4
     ],
     [
       "2024-12-18",
-      8174.08,
-      2
+      12204.03,
+      3
     ],
     [
       "2024-12-19",
-      8212.66,
-      2
+      12236.66,
+      3
     ],
     [
       "2024-12-20",
-      8249.54,
+      12296.73,
       2
     ],
     [
       "2024-12-23",
-      8256.25,
-      2
+      12352.74,
+      4
     ],
     [
       "2024-12-24",
-      8364.34,
-      3
+      12487.67,
+      5
     ],
     [
       "2024-12-26",
-      8325.54,
-      2
+      12432.84,
+      5
     ],
     [
       "2024-12-27",
-      8156.94,
-      2
+      12216.61,
+      5
     ],
     [
       "2024-12-30",
-      8032.24,
-      1
+      12081.87,
+      4
     ],
     [
       "2024-12-31",
-      8005.5,
-      1
+      11976.84,
+      2
     ],
     [
       "2025-01-02",
-      8017.12,
+      11965.84,
       1
     ],
     [
       "2025-01-03",
-      8072.7,
+      12017.45,
       1
     ],
     [
       "2025-01-06",
-      8120.58,
-      1
+      11992.83,
+      3
     ],
     [
       "2025-01-07",
-      7924.78,
+      11590.04,
       0
     ],
     [
       "2025-01-08",
-      7924.78,
+      11590.04,
       0
     ],
     [
       "2025-01-10",
-      7924.78,
+      11590.04,
       0
     ],
     [
       "2025-01-13",
-      7924.78,
+      11590.04,
       0
     ],
     [
       "2025-01-14",
-      7924.78,
+      11590.04,
       0
     ],
     [
       "2025-01-15",
-      7924.78,
+      11590.04,
       0
     ],
     [
       "2025-01-16",
-      7924.78,
+      11590.04,
       0
     ],
     [
       "2025-01-17",
-      7924.78,
+      11590.04,
       0
     ],
     [
       "2025-01-21",
-      7924.78,
+      11590.04,
       0
     ],
     [
       "2025-01-22",
-      7924.78,
+      11590.04,
       0
     ],
     [
       "2025-01-23",
-      7924.78,
+      11590.04,
       0
     ],
     [
       "2025-01-24",
-      7924.78,
+      11590.04,
       0
     ],
     [
       "2025-01-27",
-      7924.78,
+      11590.04,
       0
     ],
     [
       "2025-01-28",
-      7941.44,
+      11606.7,
       1
     ],
     [
       "2025-01-29",
-      7923.27,
-      2
+      11569.55,
+      3
     ],
     [
       "2025-01-30",
-      7943.89,
+      11571.79,
       2
     ],
     [
       "2025-01-31",
-      7922.93,
-      3
+      11579.75,
+      2
     ],
     [
       "2025-02-03",
-      7952.89,
-      3
+      11594.81,
+      2
     ],
     [
       "2025-02-04",
-      7994.53,
-      3
+      11638.12,
+      2
     ],
     [
       "2025-02-05",
-      8073.25,
+      11665.64,
       3
     ],
     [
       "2025-02-06",
-      8091.19,
-      3
+      11759.37,
+      5
     ],
     [
       "2025-02-07",
-      8096.97,
-      3
+      11753.93,
+      5
     ],
     [
       "2025-02-10",
-      8175.71,
-      3
+      11912.62,
+      5
     ],
     [
       "2025-02-11",
-      8151.03,
-      3
+      11848.13,
+      5
     ],
     [
       "2025-02-12",
-      8215.69,
-      3
+      11968.04,
+      5
     ],
     [
       "2025-02-13",
-      8294.17,
-      3
+      12078.84,
+      5
     ],
     [
       "2025-02-14",
-      8262.77,
-      3
+      12008.95,
+      5
     ],
     [
       "2025-02-18",
-      8264.33,
-      1
+      12064.57,
+      3
     ],
     [
       "2025-02-19",
-      8215.73,
-      2
+      11985.2,
+      5
     ],
     [
       "2025-02-20",
-      8168.21,
-      0
+      11896.98,
+      4
     ],
     [
       "2025-02-21",
-      8166.2,
-      0
+      11666.57,
+      4
     ],
     [
       "2025-02-24",
-      8166.2,
-      0
+      11546.54,
+      2
     ],
     [
       "2025-02-25",
-      8166.2,
+      11485.01,
       0
     ],
     [
       "2025-02-26",
-      8166.2,
+      11485.01,
       0
     ],
     [
       "2025-02-27",
-      8107.74,
+      11459.11,
       1
     ],
     [
       "2025-02-28",
-      8081.67,
+      11447.56,
       0
     ],
     [
       "2025-03-03",
-      8062.87,
+      11428.76,
       1
     ],
     [
       "2025-03-04",
-      8052.37,
+      11418.26,
       1
     ],
     [
       "2025-03-05",
-      8051.42,
+      11417.31,
       1
     ],
     [
       "2025-03-06",
-      8049.37,
+      11415.26,
       1
     ],
     [
       "2025-03-07",
-      8068.07,
+      11433.96,
       1
     ],
     [
       "2025-03-10",
-      8009.1,
+      11375.39,
       1
     ],
     [
       "2025-03-11",
-      7931.08,
+      11307.91,
       1
     ],
     [
       "2025-03-12",
-      7929.91,
+      11306.89,
       1
     ],
     [
       "2025-03-13",
-      7925.23,
+      11302.81,
       1
     ],
     [
       "2025-03-14",
-      7965.82,
-      2
+      11342.59,
+      1
     ],
     [
       "2025-03-17",
-      8042.92,
+      11405.23,
       3
     ],
     [
       "2025-03-18",
-      8020.45,
-      3
+      11374.85,
+      4
     ],
     [
       "2025-03-19",
-      8037.28,
+      11447.71,
       0
     ],
     [
       "2025-03-20",
-      8037.28,
+      11447.71,
       0
     ],
     [
       "2025-03-21",
-      8037.28,
+      11447.71,
       0
     ],
     [
       "2025-03-24",
-      8037.28,
+      11447.71,
       0
     ],
     [
       "2025-03-25",
-      8037.28,
+      11447.71,
       0
     ],
     [
       "2025-03-26",
-      8037.28,
+      11447.71,
       0
     ],
     [
       "2025-03-27",
-      8037.28,
+      11447.71,
       0
     ],
     [
       "2025-03-28",
-      8037.28,
+      11447.71,
       0
     ],
     [
       "2025-03-31",
-      8037.28,
+      11447.71,
       0
     ],
     [
       "2025-04-01",
-      8037.28,
+      11447.71,
       0
     ],
     [
       "2025-04-02",
-      8037.28,
+      11447.71,
       0
     ],
     [
       "2025-04-03",
-      8037.28,
+      11447.71,
       0
     ],
     [
       "2025-04-04",
-      8037.28,
+      11447.71,
       0
     ],
     [
       "2025-04-07",
-      8037.28,
+      11447.71,
       0
     ],
     [
       "2025-04-08",
-      8037.28,
+      11447.71,
       0
     ],
     [
       "2025-04-09",
-      8037.28,
+      11447.71,
       0
     ],
     [
       "2025-04-10",
-      8037.28,
+      11447.71,
       0
     ],
     [
       "2025-04-11",
-      8037.28,
+      11447.71,
       0
     ],
     [
       "2025-04-14",
-      8037.28,
+      11447.71,
       0
     ],
     [
       "2025-04-15",
-      8037.28,
+      11447.71,
       0
     ],
     [
       "2025-04-16",
-      8037.28,
+      11447.71,
       0
     ],
     [
       "2025-04-17",
-      8037.28,
+      11447.71,
       0
     ],
     [
       "2025-04-21",
-      8037.28,
+      11447.71,
       0
     ],
     [
       "2025-04-22",
-      8037.28,
+      11447.71,
       0
     ],
     [
       "2025-04-23",
-      8037.28,
+      11447.71,
       0
     ],
     [
       "2025-04-24",
-      8037.28,
+      11447.71,
       0
     ],
     [
       "2025-04-25",
-      8037.28,
+      11447.71,
       0
     ],
     [
       "2025-04-28",
-      8037.28,
+      11447.71,
       0
     ],
     [
       "2025-04-29",
-      8037.28,
+      11447.71,
       0
     ],
     [
       "2025-04-30",
-      8037.28,
+      11447.71,
       0
     ],
     [
       "2025-05-01",
-      8037.28,
+      11447.71,
       0
     ],
     [
       "2025-05-02",
-      8073.76,
-      1
+      11535.85,
+      2
     ],
     [
       "2025-05-05",
-      8061.6,
-      1
+      11360.03,
+      4
     ],
     [
       "2025-05-06",
-      8069.01,
-      1
+      11144.96,
+      2
     ],
     [
       "2025-05-07",
-      7986.93,
-      1
+      10975.52,
+      3
     ],
     [
       "2025-05-08",
-      8002.51,
-      1
+      11033.06,
+      3
     ],
     [
       "2025-05-09",
-      7966.14,
-      2
+      10966.46,
+      3
     ],
     [
       "2025-05-12",
-      8207.24,
-      2
+      11500.86,
+      3
     ],
     [
       "2025-05-13",
-      8341.72,
-      2
+      11856.92,
+      3
     ],
     [
       "2025-05-14",
-      8316.26,
-      2
+      11971.26,
+      3
     ],
     [
       "2025-05-15",
-      8240.76,
-      2
+      11741.96,
+      3
     ],
     [
       "2025-05-16",
-      8222.0,
-      2
+      11840.16,
+      3
     ],
     [
       "2025-05-19",
-      8171.11,
-      2
+      11888.92,
+      3
     ],
     [
       "2025-05-20",
-      8119.97,
-      2
+      11825.66,
+      3
     ],
     [
       "2025-05-21",
-      7999.12,
-      2
+      11585.68,
+      3
     ],
     [
       "2025-05-22",
-      7997.74,
+      11651.14,
       1
     ],
     [
       "2025-05-23",
-      7961.08,
-      2
+      11711.34,
+      1
     ],
     [
       "2025-05-27",
-      7968.58,
+      11876.36,
       1
     ],
     [
       "2025-05-28",
-      7905.15,
-      2
-    ],
-    [
-      "2025-05-29",
-      7850.33,
-      0
-    ],
-    [
-      "2025-05-30",
-      7819.09,
-      0
-    ],
-    [
-      "2025-06-02",
-      7847.51,
-      2
-    ],
-    [
-      "2025-06-03",
-      7868.82,
+      11747.51,
       3
     ],
     [
+      "2025-05-29",
+      11433.17,
+      3
+    ],
+    [
+      "2025-05-30",
+      11313.43,
+      2
+    ],
+    [
+      "2025-06-02",
+      11362.0,
+      4
+    ],
+    [
+      "2025-06-03",
+      11592.3,
+      4
+    ],
+    [
       "2025-06-04",
-      7814.35,
+      11437.25,
       2
     ],
     [
       "2025-06-05",
-      7783.48,
+      11422.39,
       3
     ],
     [
       "2025-06-06",
-      7902.95,
-      3
+      11624.41,
+      5
     ],
     [
       "2025-06-09",
-      7887.66,
-      3
+      11820.18,
+      5
     ],
     [
       "2025-06-10",
-      7894.4,
-      3
+      11598.81,
+      5
     ],
     [
       "2025-06-11",
-      7851.6,
-      3
+      11817.06,
+      5
     ],
     [
       "2025-06-12",
-      7908.48,
-      3
+      11801.57,
+      5
     ],
     [
       "2025-06-13",
-      7819.95,
-      3
+      11683.92,
+      5
     ],
     [
       "2025-06-16",
-      7947.46,
-      3
+      12022.14,
+      5
     ],
     [
       "2025-06-17",
-      7959.31,
-      3
+      11553.94,
+      4
     ],
     [
       "2025-06-18",
-      8052.31,
-      3
+      11663.37,
+      5
     ],
     [
       "2025-06-20",
-      7988.03,
-      3
+      11622.32,
+      5
     ],
     [
       "2025-06-23",
-      7990.24,
-      1
+      11708.16,
+      4
     ],
     [
       "2025-06-24",
-      8143.61,
-      2
+      12082.6,
+      5
     ],
     [
       "2025-06-25",
-      8301.19,
-      1
+      12220.94,
+      4
     ],
     [
       "2025-06-26",
-      8264.14,
-      2
+      12244.36,
+      3
     ],
     [
       "2025-06-27",
-      8327.19,
-      2
+      12425.62,
+      4
     ],
     [
       "2025-06-30",
-      8288.54,
-      2
+      12284.27,
+      4
     ],
     [
       "2025-07-01",
-      8081.86,
-      1
+      12046.48,
+      2
     ],
     [
       "2025-07-02",
-      8168.76,
-      1
+      12242.44,
+      2
     ],
     [
       "2025-07-03",
-      8285.29,
-      2
+      12370.94,
+      3
     ],
     [
       "2025-07-07",
-      8210.89,
-      3
+      12239.16,
+      4
     ],
     [
       "2025-07-08",
-      8242.26,
-      3
+      12332.47,
+      4
     ],
     [
       "2025-07-09",
-      8351.48,
-      3
+      12408.46,
+      4
     ],
     [
       "2025-07-10",
-      8197.32,
-      3
+      12297.93,
+      4
     ],
     [
       "2025-07-11",
-      8164.94,
-      3
+      12191.97,
+      4
     ],
     [
       "2025-07-14",
-      8156.78,
-      2
-    ],
-    [
-      "2025-07-15",
-      8096.36,
-      2
-    ],
-    [
-      "2025-07-16",
-      8074.84,
+      12150.44,
       3
     ],
     [
+      "2025-07-15",
+      11984.38,
+      3
+    ],
+    [
+      "2025-07-16",
+      11940.24,
+      4
+    ],
+    [
       "2025-07-17",
-      8132.1,
+      12051.75,
       3
     ],
     [
       "2025-07-18",
-      8059.48,
-      2
+      12057.62,
+      3
     ],
     [
       "2025-07-21",
-      8069.04,
-      2
+      11935.67,
+      4
     ],
     [
       "2025-07-22",
-      7974.63,
+      11661.75,
       2
     ],
     [
       "2025-07-23",
-      7905.31,
+      11664.27,
       2
     ],
     [
       "2025-07-24",
-      7879.33,
-      1
+      11624.68,
+      2
     ],
     [
       "2025-07-25",
-      8048.93,
-      1
+      11669.47,
+      2
     ],
     [
       "2025-07-28",
-      7965.33,
-      1
+      11705.44,
+      2
     ],
     [
       "2025-07-29",
-      7981.0,
-      3
-    ],
-    [
-      "2025-07-30",
-      7965.71,
-      3
-    ],
-    [
-      "2025-07-31",
-      7900.67,
-      3
-    ],
-    [
-      "2025-08-01",
-      7841.5,
-      3
-    ],
-    [
-      "2025-08-04",
-      8025.86,
-      3
-    ],
-    [
-      "2025-08-05",
-      8060.91,
-      3
-    ],
-    [
-      "2025-08-06",
-      7956.27,
+      11634.01,
       1
     ],
     [
+      "2025-07-30",
+      11634.73,
+      1
+    ],
+    [
+      "2025-07-31",
+      11614.33,
+      1
+    ],
+    [
+      "2025-08-01",
+      11485.45,
+      1
+    ],
+    [
+      "2025-08-04",
+      11555.29,
+      1
+    ],
+    [
+      "2025-08-05",
+      11603.15,
+      2
+    ],
+    [
+      "2025-08-06",
+      11571.17,
+      2
+    ],
+    [
       "2025-08-07",
-      8002.27,
+      11724.43,
       1
     ],
     [
       "2025-08-08",
-      7998.67,
+      11727.55,
       1
     ],
     [
       "2025-08-11",
-      7994.27,
-      0
+      12065.97,
+      2
     ],
     [
       "2025-08-12",
-      7994.27,
-      0
+      12091.81,
+      2
     ],
     [
       "2025-08-13",
-      7994.27,
-      0
-    ],
-    [
-      "2025-08-14",
-      7994.27,
-      0
-    ],
-    [
-      "2025-08-15",
-      7994.27,
-      0
-    ],
-    [
-      "2025-08-18",
-      7994.27,
-      0
-    ],
-    [
-      "2025-08-19",
-      7839.96,
-      2
-    ],
-    [
-      "2025-08-20",
-      7782.0,
-      1
-    ],
-    [
-      "2025-08-21",
-      7759.26,
-      1
-    ],
-    [
-      "2025-08-22",
-      7937.31,
-      2
-    ],
-    [
-      "2025-08-25",
-      7972.02,
-      2
-    ],
-    [
-      "2025-08-26",
-      8030.73,
-      2
-    ],
-    [
-      "2025-08-27",
-      7995.31,
-      2
-    ],
-    [
-      "2025-08-28",
-      8041.67,
-      2
-    ],
-    [
-      "2025-08-29",
-      7981.56,
+      12071.17,
       3
     ],
     [
+      "2025-08-14",
+      12056.35,
+      3
+    ],
+    [
+      "2025-08-15",
+      11893.29,
+      3
+    ],
+    [
+      "2025-08-18",
+      11774.35,
+      3
+    ],
+    [
+      "2025-08-19",
+      11360.71,
+      3
+    ],
+    [
+      "2025-08-20",
+      11248.99,
+      2
+    ],
+    [
+      "2025-08-21",
+      11269.39,
+      3
+    ],
+    [
+      "2025-08-22",
+      11479.89,
+      4
+    ],
+    [
+      "2025-08-25",
+      11416.43,
+      3
+    ],
+    [
+      "2025-08-26",
+      11501.85,
+      4
+    ],
+    [
+      "2025-08-27",
+      11345.52,
+      4
+    ],
+    [
+      "2025-08-28",
+      11628.13,
+      4
+    ],
+    [
+      "2025-08-29",
+      11636.9,
+      4
+    ],
+    [
       "2025-09-02",
-      7923.68,
+      11737.57,
       3
     ],
     [
       "2025-09-03",
-      7973.98,
+      11363.27,
       3
     ],
     [
       "2025-09-04",
-      8065.5,
+      11372.83,
       3
     ],
     [
       "2025-09-05",
-      8189.04,
-      3
+      11454.46,
+      4
     ],
     [
       "2025-09-08",
-      8099.9,
-      2
+      11384.65,
+      5
     ],
     [
       "2025-09-09",
-      8102.32,
-      3
+      11561.89,
+      5
     ],
     [
       "2025-09-10",
-      8385.02,
+      11783.78,
       3
     ],
     [
       "2025-09-11",
-      8494.9,
-      2
+      11952.6,
+      3
     ],
     [
       "2025-09-12",
-      8709.28,
-      3
+      12187.1,
+      4
     ],
     [
       "2025-09-15",
-      8885.14,
-      3
+      12370.22,
+      4
     ],
     [
       "2025-09-16",
-      8889.76,
-      3
+      12506.03,
+      4
     ],
     [
       "2025-09-17",
-      8916.67,
-      3
+      12495.64,
+      4
     ],
     [
       "2025-09-18",
-      8802.8,
-      1
+      12494.77,
+      3
     ],
     [
       "2025-09-19",
-      8896.43,
-      2
+      12532.85,
+      3
     ],
     [
       "2025-09-22",
-      8902.72,
-      2
+      12543.99,
+      4
     ],
     [
       "2025-09-23",
-      8781.51,
+      12373.17,
       3
     ],
     [
       "2025-09-24",
-      8883.1,
-      3
-    ],
-    [
-      "2025-09-25",
-      8758.06,
-      3
-    ],
-    [
-      "2025-09-26",
-      8917.81,
-      3
-    ],
-    [
-      "2025-09-29",
-      8950.8,
-      3
-    ],
-    [
-      "2025-09-30",
-      8972.78,
-      3
-    ],
-    [
-      "2025-10-01",
-      9144.84,
-      3
-    ],
-    [
-      "2025-10-02",
-      8946.06,
+      12300.39,
       2
     ],
     [
+      "2025-09-25",
+      12128.99,
+      2
+    ],
+    [
+      "2025-09-26",
+      12314.4,
+      4
+    ],
+    [
+      "2025-09-29",
+      12369.87,
+      4
+    ],
+    [
+      "2025-09-30",
+      12457.24,
+      4
+    ],
+    [
+      "2025-10-01",
+      12680.3,
+      4
+    ],
+    [
+      "2025-10-02",
+      12550.62,
+      3
+    ],
+    [
       "2025-10-03",
-      8810.66,
+      12309.86,
       3
     ],
     [
       "2025-10-06",
-      9631.42,
-      3
+      12545.74,
+      4
     ],
     [
       "2025-10-07",
-      9758.5,
-      3
+      12610.83,
+      4
     ],
     [
       "2025-10-08",
-      10360.08,
-      3
+      13346.84,
+      4
     ],
     [
       "2025-10-09",
-      10249.29,
-      2
-    ],
-    [
-      "2025-10-10",
-      9837.83,
-      1
-    ],
-    [
-      "2025-10-13",
-      9868.9,
-      0
-    ],
-    [
-      "2025-10-14",
-      9742.09,
-      1
-    ],
-    [
-      "2025-10-15",
-      9708.43,
-      1
-    ],
-    [
-      "2025-10-16",
-      9720.63,
+      13395.96,
       3
     ],
     [
-      "2025-10-17",
-      9566.87,
+      "2025-10-10",
+      12892.4,
+      2
+    ],
+    [
+      "2025-10-13",
+      13163.12,
+      2
+    ],
+    [
+      "2025-10-14",
+      13138.98,
+      4
+    ],
+    [
+      "2025-10-15",
+      13479.32,
+      3
+    ],
+    [
+      "2025-10-16",
+      13021.24,
       1
     ],
     [
+      "2025-10-17",
+      13031.42,
+      2
+    ],
+    [
       "2025-10-20",
-      9637.08,
+      13184.68,
       3
     ],
     [
       "2025-10-21",
-      9650.6,
+      13031.75,
       3
     ],
     [
       "2025-10-22",
-      9530.01,
+      12633.49,
       3
     ],
     [
       "2025-10-23",
-      9665.15,
+      13074.76,
       3
     ],
     [
       "2025-10-24",
-      9762.03,
+      13389.53,
       3
     ],
     [
       "2025-10-27",
-      9894.87,
-      3
+      13568.44,
+      2
     ],
     [
       "2025-10-28",
-      9936.18,
-      3
+      13430.1,
+      4
     ],
     [
       "2025-10-29",
-      10044.79,
-      3
+      13746.95,
+      4
     ],
     [
       "2025-10-30",
-      10036.11,
-      3
+      13968.91,
+      4
     ],
     [
       "2025-10-31",
-      10143.57,
-      3
+      14100.69,
+      4
     ],
     [
       "2025-11-03",
-      10277.44,
-      3
+      14067.51,
+      4
     ],
     [
       "2025-11-04",
-      9932.69,
-      2
+      13369.39,
+      4
     ],
     [
       "2025-11-05",
-      9923.22,
-      2
+      13863.68,
+      4
     ],
     [
       "2025-11-06",
-      9898.35,
-      2
+      13728.97,
+      3
     ],
     [
       "2025-11-07",
-      9886.02,
+      13604.63,
       2
     ],
     [
       "2025-11-10",
-      9949.03,
-      0
+      13813.32,
+      1
     ],
     [
       "2025-11-11",
-      9837.64,
-      1
-    ],
-    [
-      "2025-11-12",
-      10072.71,
-      1
-    ],
-    [
-      "2025-11-13",
-      9952.48,
-      1
-    ],
-    [
-      "2025-11-14",
-      10048.29,
+      13732.76,
       3
     ],
     [
+      "2025-11-12",
+      13853.29,
+      3
+    ],
+    [
+      "2025-11-13",
+      13531.19,
+      2
+    ],
+    [
+      "2025-11-14",
+      13596.73,
+      4
+    ],
+    [
       "2025-11-17",
-      9846.48,
+      13496.51,
       3
     ],
     [
       "2025-11-18",
-      9676.95,
+      13300.32,
       2
     ],
     [
       "2025-11-19",
-      9628.81,
+      13233.58,
       1
     ],
     [
       "2025-11-20",
-      9516.71,
+      13106.73,
       1
     ],
     [
       "2025-11-21",
-      9541.79,
+      13135.11,
       1
     ],
     [
       "2025-11-24",
-      9547.11,
+      13141.13,
       1
     ],
     [
       "2025-11-25",
-      9550.15,
+      13144.57,
       1
     ],
     [
       "2025-11-26",
-      9540.65,
+      13133.82,
       1
     ],
     [
       "2025-11-28",
-      9573.71,
+      13171.23,
       1
     ],
     [
       "2025-12-01",
-      9539.51,
+      13132.53,
       1
     ],
     [
       "2025-12-02",
-      9570.81,
+      13167.8,
       2
     ],
     [
       "2025-12-03",
-      9633.05,
+      13256.04,
       2
     ],
     [
       "2025-12-04",
-      9631.13,
+      13191.22,
       2
     ],
     [
       "2025-12-05",
-      9756.19,
-      3
+      13306.95,
+      4
     ],
     [
       "2025-12-08",
-      9651.84,
-      2
+      13181.86,
+      3
     ],
     [
       "2025-12-09",
-      9746.87,
-      3
+      13282.97,
+      4
     ],
     [
       "2025-12-10",
-      9873.65,
-      3
+      13466.09,
+      4
     ],
     [
       "2025-12-11",
-      9686.33,
-      2
+      13449.91,
+      3
     ],
     [
       "2025-12-12",
-      9680.45,
-      2
+      13290.57,
+      3
     ],
     [
       "2025-12-15",
-      9523.4,
-      1
+      12870.17,
+      2
     ],
     [
       "2025-12-16",
-      9669.05,
-      2
+      12869.46,
+      4
     ],
     [
       "2025-12-17",
-      9530.08,
-      2
+      12564.55,
+      4
     ],
     [
       "2025-12-18",
-      9655.19,
-      2
+      12862.15,
+      4
     ],
     [
       "2025-12-19",
-      9664.61,
-      2
+      13995.49,
+      4
     ],
     [
       "2025-12-22",
-      9786.21,
-      2
+      14542.57,
+      4
     ],
     [
       "2025-12-23",
-      9745.25,
-      2
+      14457.64,
+      4
     ],
     [
       "2025-12-24",
-      9767.76,
-      2
+      14532.27,
+      4
     ],
     [
       "2025-12-26",
-      9696.74,
-      1
+      14109.27,
+      2
     ],
     [
       "2025-12-29",
-      9572.34,
-      1
+      14000.8,
+      2
     ],
     [
       "2025-12-30",
-      9562.26,
-      0
+      13977.66,
+      1
     ]
   ]
 }
