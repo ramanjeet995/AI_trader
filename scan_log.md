@@ -1,14 +1,34 @@
 # AI Trader — Daily Log
 
 What the robot saw and did each time it woke up. Newest at top.
-_Last updated: May 22, 2026 at 11:06 AM ET_
+_Last updated: May 22, 2026 at 01:01 PM ET_
 
 ### Performance since 2026-05-21
 | | Return | Value |
 |---|---|---|
-| 📈 **Our Portfolio** | **+0.61%** | $100,807.83 |
-| 📈 S&P 500 (SPY) | +0.52% | $746.80 |
-| ✅ **Alpha** | **+0.09%** | Beating the market |
+| 📈 **Our Portfolio** | **+1.41%** | $101,608.86 |
+| 📈 S&P 500 (SPY) | +0.58% | $747.24 |
+| ✅ **Alpha** | **+0.83%** | Beating the market |
+
+## May 22, 01:01 PM ET — News check | Pi: 49.7°C
+
+**Market check:**
+- Market is going **up** 📈
+- Scoreboard: Us **+1.41%** vs S&P 500 +0.58% (**beating** by 0.83%)
+
+**Result:** No trades today.
+<details><summary>Notable news today</summary>
+
+- ✓ **NVDA** — strong positive news (+3)
+- ✓ **AMD** — strong positive news (+3)
+- ✓ **MRVL** — strong positive news (+3)
+- ✗ **GOOGL** — negative news (-2)
+- ✗ **TSLA** — negative news (-2)
+- ✗ **NFLX** — negative news (-2)
+
+</details>
+
+---
 
 ## May 22, 11:06 AM ET — News check | Pi: 49.2°C
 
@@ -1436,24 +1456,5 @@ _Last updated: May 22, 2026 at 11:06 AM ET_
 - ✗ **Skipped AVGO** (gap +3.9%) — outside target window or market closed
     - Plan: buy at $0, sell-stop at $0, target $0
     - 0 shares, risking $0
-
----
-
-## May 14, 12:56 PM ET — News check
-
-**Market check:**
-- Market is going **up** 📈
-
-**Result:** No trades today.
-<details><summary>Notable news today</summary>
-
-- ✓ **AVGO** — strong positive news (+2)
-- ✓ **SHOP** — strong positive news (+2)
-- ✓ **QQQ** — strong positive news (+2)
-- ✗ **AMZN** — negative news (-2)
-- ✗ **META** — negative news (-3)
-- ✗ **SPY** — negative news (-3)
-
-</details>
 
 ---
