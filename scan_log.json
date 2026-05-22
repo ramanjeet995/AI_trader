@@ -1,218 +1,5 @@
 [
   {
-    "timestamp": "2026-05-14T12:28:00.527589-04:00",
-    "mode": "FULL",
-    "spy_regime": "BULL",
-    "posture": "MIXED",
-    "vix": 17.8700008392334,
-    "spy_atr_pct": 1.0,
-    "in_window": false,
-    "market_open": true,
-    "data_feed": "iex",
-    "yfinance_patched": "0/45",
-    "sentiment_backend": "finbert",
-    "earnings_cache_size": 54,
-    "macro_blackout": false,
-    "macro_reason": "",
-    "next_macro_event": {
-      "name": "FOMC",
-      "datetime": "2026-06-17T14:00:00-04:00",
-      "days_away": 34,
-      "hours_away": 817.5
-    },
-    "open_positions": [
-      "AMZN",
-      "GOOGL"
-    ],
-    "new_today": 0,
-    "filter_stats": {
-      "scanned": 33,
-      "no_data": 0,
-      "held": 2,
-      "market_volatile": 0,
-      "earnings_blackout": 0,
-      "failed_filters": 2,
-      "obv_distribution": 11,
-      "no_strategy_signal": 17,
-      "of_or_sent_reject": 0,
-      "sector_misalign": 0,
-      "passed_all": 1
-    },
-    "sectors_top3": [
-      {
-        "ticker": "USO",
-        "sector": "Crude Oil",
-        "ret_20d": 21.78,
-        "rs": 4.07,
-        "obv": "ACCUMULATION",
-        "above_ema": "True",
-        "score": 43.71
-      },
-      {
-        "ticker": "XLE",
-        "sector": "Energy",
-        "ret_20d": 5.36,
-        "rs": 1.0,
-        "obv": "ACCUMULATION",
-        "above_ema": "True",
-        "score": 13.03
-      },
-      {
-        "ticker": "SLV",
-        "sector": "Silver",
-        "ret_20d": 4.03,
-        "rs": 0.75,
-        "obv": "ACCUMULATION",
-        "above_ema": "True",
-        "score": 10.54
-      }
-    ],
-    "sectors_bottom3": [
-      {
-        "ticker": "XLF",
-        "sector": "Financials",
-        "ret_20d": -2.03,
-        "rs": -0.38,
-        "obv": "DISTRIBUTION",
-        "above_ema": "False",
-        "score": -6.8
-      },
-      {
-        "ticker": "XLU",
-        "sector": "Utilities",
-        "ret_20d": -3.12,
-        "rs": -0.58,
-        "obv": "DISTRIBUTION",
-        "above_ema": "False",
-        "score": -8.83
-      },
-      {
-        "ticker": "GLD",
-        "sector": "Gold",
-        "ret_20d": -3.73,
-        "rs": -0.7,
-        "obv": "DISTRIBUTION",
-        "above_ema": "False",
-        "score": -9.97
-      }
-    ],
-    "signals": [
-      {
-        "symbol": "SLB",
-        "strategy": "A",
-        "confidence": 0.89,
-        "signal": "BUY",
-        "entry": 55.74,
-        "stop": 52.23,
-        "target": 62.76,
-        "shares": 535,
-        "notional": 29820.9,
-        "risk_$": 1877.85,
-        "sentiment": "NEUTRAL",
-        "obv": "ACCUMULATION",
-        "of_score": 0,
-        "sector_score": 999.0,
-        "reason": "Pullback zone [52.89-56.17] | RSI=58.3 | bullish candle",
-        "order_status": "SKIPPED: position/daily cap",
-        "headlines": [
-          "[+] Bernstein Maintains Outperform on SLB, Raises Price Target to $71"
-        ]
-      }
-    ],
-    "top_news": [
-      {
-        "symbol": "NVDA",
-        "sentiment": "NEUTRAL",
-        "score": 1,
-        "headlines": [
-          "[-] Cerebras Opens At $185. The Market Is Already Mispricing The Real Risk.",
-          "[~] Live On CNBC, Bill Baruch Announces Trimmed Nvidia Position"
-        ]
-      },
-      {
-        "symbol": "AMD",
-        "sentiment": "POSITIVE",
-        "score": 2,
-        "headlines": [
-          "[-] Cerebras Opens At $185. The Market Is Already Mispricing The Real Risk.",
-          "[~] Arm Holdings Tech Rally Takes Breather As Investors Weigh Supply Chain Risks"
-        ]
-      },
-      {
-        "symbol": "ARM",
-        "sentiment": "NEGATIVE",
-        "score": -2,
-        "headlines": [
-          "[~] Arm Holdings Tech Rally Takes Breather As Investors Weigh Supply Chain Risks",
-          "[~] SoftBank Could Turn OpenAI Into Rocket Fuel For Stargate And Robotics"
-        ]
-      },
-      {
-        "symbol": "MU",
-        "sentiment": "NEGATIVE",
-        "score": -2,
-        "headlines": [
-          "[+] Micron Rallied 90% In A Month \u2014 These 10 Small\u2011Cap Stocks Blew Past It",
-          "[~] What's Going On With Sandisk Stock Thursday?"
-        ]
-      },
-      {
-        "symbol": "MRVL",
-        "sentiment": "POSITIVE",
-        "score": 3,
-        "headlines": [
-          "[+] RBC Capital Maintains Outperform on Marvell Technology, Raises Price Target to $",
-          "[~] What Is Going On With Marvell Tech Stock On Thursday?"
-        ]
-      },
-      {
-        "symbol": "META",
-        "sentiment": "NEGATIVE",
-        "score": -3,
-        "headlines": [
-          "[~] What Is Going On With Marvell Tech Stock On Thursday?",
-          "[-] Trump Library Land Deal Worth $300 Million In Miami Triggers Lawsuit, Allegation"
-        ]
-      },
-      {
-        "symbol": "GOOGL",
-        "sentiment": "POSITIVE",
-        "score": 3,
-        "headlines": [
-          "[~] What Is Going On With Marvell Tech Stock On Thursday?",
-          "[+] Anthropic forms $200 million partnership with the Gates Foundation"
-        ]
-      },
-      {
-        "symbol": "AMZN",
-        "sentiment": "NEUTRAL",
-        "score": 1,
-        "headlines": [
-          "[+] Anthropic forms $200 million partnership with the Gates Foundation",
-          "[~] Alibaba Is Morphing Into A Microsoft\u2011Amazon\u2011Nvidia Mashup As China's AI Wave Acc"
-        ]
-      },
-      {
-        "symbol": "NFLX",
-        "sentiment": "NEUTRAL",
-        "score": -1,
-        "headlines": [
-          "[-] What's Going On With Netflix Stock?",
-          "[~] $1000 Invested In Netflix 20 Years Ago Would Be Worth This Much Today"
-        ]
-      },
-      {
-        "symbol": "MSFT",
-        "sentiment": "NEUTRAL",
-        "score": 1,
-        "headlines": [
-          "[+] Anthropic forms $200 million partnership with the Gates Foundation",
-          "[~] Recent Report Shows That Rep. John McGuire Bought Up to $45K Worth of Apple Stoc"
-        ]
-      }
-    ]
-  },
-  {
     "timestamp": "2026-05-14T12:53:34.529646-04:00",
     "mode": "CATALYST",
     "spy_regime": "BULL",
@@ -11188,6 +10975,47 @@
       "account_now": 99879.18,
       "spy_start": 742.91,
       "spy_now": 747.19
+    }
+  },
+  {
+    "timestamp": "2026-05-22T11:01:49.061380-04:00",
+    "mode": "CATALYST",
+    "spy_regime": "BULL",
+    "vix": 16.760000228881836,
+    "signals": [
+      {
+        "symbol": "CRWD",
+        "strategy": "CATALYST",
+        "signal": "BUY",
+        "entry": 669.27,
+        "stop": 657.22,
+        "target": 699.39,
+        "shares": 7,
+        "notional": 4684.89,
+        "risk_$": 84.33,
+        "factors": [
+          "gap +3.3% in [3.0, 12.0]",
+          "news score +4",
+          "in upper 82% of day's range"
+        ],
+        "gap_pct": 3.26,
+        "news_score": 4,
+        "earn_days_ago": null,
+        "order_status": "PLACED c51dfbac-7e88-4105-86c2-5fe4e0e2c64c",
+        "client_order_id": "CAT-CRWD-20260522150148"
+      }
+    ],
+    "force_closed": [],
+    "cpu_temp": "45.8\u00b0C",
+    "benchmark": {
+      "start_date": "2026-05-21",
+      "portfolio_pct": 0.65,
+      "spy_pct": 0.48,
+      "alpha_pct": 0.17,
+      "account_start": 100196.86,
+      "account_now": 100843.19,
+      "spy_start": 742.91,
+      "spy_now": 746.47
     }
   }
 ]
