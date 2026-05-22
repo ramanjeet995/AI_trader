@@ -16,11 +16,11 @@ WATCHLIST = [
     # AI / Semiconductors (the strongest secular trend)
     "NVDA", "AVGO", "AMD", "ARM", "MU", "SMCI", "MRVL",
     # AI infrastructure / data center / cooling
-    "DELL", "HPE", "VRT", "CLS", "CEG",
+    "DELL", "HPE", "VRT", "CLS", "CEG", "APLD",
     # Mega-cap growth
     "META", "GOOGL", "AMZN", "TSLA", "NFLX", "MSFT", "AAPL",
     # Software / Cloud / Networking / Voice AI high-beta
-    "CRM", "NOW", "CRWD", "PLTR", "SHOP", "SNOW", "CSCO", "PANW", "ANET", "SOUN",
+    "CRM", "NOW", "CRWD", "PLTR", "SHOP", "SNOW", "CSCO", "PANW", "ANET", "SOUN", "NOK",
     # Energy momentum
     "XOM", "OXY", "FANG", "SLB",
     # Precious metals / commodities
@@ -141,7 +141,7 @@ TICKER_SECTOR = {
     "AVGO": "Tech", "QCOM": "Tech", "INTC": "Tech", "TSM": "Tech",
     "GOOGL": "Tech", "META": "Tech", "AMZN": "Tech", "TSLA": "Tech",
     "CRM": "Tech", "ORCL": "Tech", "ADBE": "Tech", "NOW": "Tech",
-    "CSCO": "Tech", "PANW": "Tech", "ANET": "Tech",
+    "CSCO": "Tech", "PANW": "Tech", "ANET": "Tech", "NOK": "Tech",
     "XLK": "Tech", "QQQ": "Tech",
     # Financials
     "JPM": "Financials", "GS": "Financials", "BAC": "Financials",
@@ -160,7 +160,7 @@ TICKER_SECTOR = {
     "NEM": "Metals", "GOLD": "Metals", "GLD": "Metals", "SLV": "Metals",
     "GDX": "Metals", "GDXJ": "Metals",
     # AI Infrastructure / Data Center
-    "DELL": "Tech", "HPE": "Tech", "VRT": "Tech", "CLS": "Tech", "SOUN": "Tech",
+    "DELL": "Tech", "HPE": "Tech", "VRT": "Tech", "CLS": "Tech", "SOUN": "Tech", "APLD": "Tech",
     # Nuclear / Energy
     "CEG": "Energy",
     # Quantum Computing

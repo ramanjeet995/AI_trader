@@ -1,10 +1,11 @@
 name: Catalyst Scan (11 AM ET, DST-aware)
 
 on:
-  schedule:
-    # 11 AM ET target — fire at 10:53 AM ET (7 min early, :53 less congested)
-    - cron: "53 14 * * 1-5"  # EDT: 10:53 AM ET  | EST: 9:53 AM ET (skip)
-    - cron: "53 15 * * 1-5"  # EDT: 11:53 AM (skip) | EST: 10:53 AM ET
+  # Schedule DISABLED — all scans now run on Raspberry Pi cron.
+  # Keep workflow_dispatch so we can manually trigger as backup.
+  # schedule:
+  #   - cron: "53 14 * * 1-5"  # EDT: 10:53 AM ET
+  #   - cron: "53 15 * * 1-5"  # EST: 10:53 AM ET
 
   workflow_dispatch:
     inputs:

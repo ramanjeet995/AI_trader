@@ -268,7 +268,7 @@ def _save_human_log(logs: list):
         if not signals:
             lines.append("**Result:** No trades today.")
         else:
-            placed = sum(1 for s in signals if "PLACED" in str(s.get("order_status", "")))
+            placed = sum(1 for s in signals if "PLACED" in str(s.get("order_status", "")) and "NOT_PLACED" not in str(s.get("order_status", "")))
             skipped = len(signals) - placed
             if placed > 0:
                 lines.append(f"**Result:** ✓ Bought {placed} stock(s)"
@@ -293,7 +293,7 @@ def _save_human_log(logs: list):
                 if gap is not None:     head_extras.append(f"gap {gap:+.1f}%")
                 head_str = f" ({', '.join(head_extras)})" if head_extras else ""
 
-                if "PLACED" in str(status):
+                if "PLACED" in str(status) and "NOT_PLACED" not in str(status):
                     lines.append(f"- ✓ **Bought {sym}**{head_str}")
                 elif "SKIPPED" in str(status) or "NOT_PLACED" in str(status):
                     reason = str(status).replace("SKIPPED:", "").replace("NOT_PLACED —", "").strip()
@@ -1521,9 +1521,14 @@ def run_catalyst_scan():
 
     for det in candidates:
         if not can_trade_now:
-            # Log the signal but don't trade
+            # Log the signal but don't trade — still build signal for logging
+            sig_info = catalyst_detector.build_signal(det, account_value, cfg)
             placed.append({
                 "symbol": det["symbol"], "strategy": "CATALYST", "signal": "BUY",
+                "entry": sig_info.get("entry", 0), "stop": sig_info.get("stop", 0),
+                "target": sig_info.get("target", 0),
+                "shares": sig_info.get("shares", 0),
+                "risk_$": sig_info.get("risk_dollars", 0),
                 "factors": det["factors"], "gap_pct": det["gap_pct"],
                 "news_score": det["news_score"], "earn_days_ago": det["earn_days"],
                 "order_status": "NOT_PLACED — outside target window or market closed",
