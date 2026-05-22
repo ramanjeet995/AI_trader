@@ -627,13 +627,15 @@ def run_full_scan():
     print(f"  Market status      : {mkt_reason}\n")
 
     # Hard caps — time-window check is now a trading gate, not a scan gate
-    can_open_more = (
+    # Note: position cap is checked separately so replacement logic can run
+    can_trade = (
         in_window and
         market_open and
         not macro_block and
-        len(open_positions) < cfg.MAX_CONCURRENT_POSITIONS and
         new_today_count    < cfg.MAX_NEW_PER_DAY
     )
+    can_open_more = can_trade and len(open_positions) < cfg.MAX_CONCURRENT_POSITIONS
+    at_position_cap = can_trade and len(open_positions) >= cfg.MAX_CONCURRENT_POSITIONS
     if not market_open:
         print(f"  Market closed — scanning for awareness only, no orders.\n")
     elif not in_window:
@@ -829,9 +831,14 @@ def run_full_scan():
         print(f"         Signal: {s['reason']}")
 
         # Hard caps
-        if not can_open_more:
-            print(f"         SKIPPED: position/daily cap reached")
-            s["order_status"] = "SKIPPED: position/daily cap"
+        if not can_trade:
+            print(f"         SKIPPED: market closed or daily cap reached")
+            s["order_status"] = "SKIPPED: market/daily cap"
+            print()
+            continue
+        if not can_open_more and not at_position_cap:
+            print(f"         SKIPPED: daily cap reached")
+            s["order_status"] = "SKIPPED: daily cap"
             print()
             continue
         if (len(open_positions) + new_orders_this_run) >= cfg.MAX_CONCURRENT_POSITIONS:
@@ -846,16 +853,19 @@ def run_full_scan():
                     open_positions.discard(worst["symbol"])
                     sector_counts = _count_sectors(open_positions)
                     open_heat_pct = len(open_positions) * cfg.ACCOUNT_RISK_PCT
+                    at_position_cap = False
+                    can_open_more = True
                     # Continue to place the new order below
                 else:
                     print(f"         Failed to close {worst['symbol']}: {result.get('reason')}")
-                    print(f"         SKIPPED: would exceed MAX_CONCURRENT_POSITIONS")
-                    s["order_status"] = "SKIPPED: concurrent cap (replace failed)"
+                    print(f"         SKIPPED: already holding 3 stocks (max) and couldn't sell worst loser")
+                    s["order_status"] = "SKIPPED: holding 3/3, replace failed"
                     print()
                     continue
             else:
-                print(f"         SKIPPED: would exceed MAX_CONCURRENT_POSITIONS")
-                s["order_status"] = "SKIPPED: concurrent cap"
+                reason = "already holding 3 stocks (max), none are losing" if not worst else "already holding 3 stocks (max), conviction too low to replace"
+                print(f"         SKIPPED: {reason}")
+                s["order_status"] = f"SKIPPED: holding 3/3, {reason}"
                 print()
                 continue
         if (new_today_count + new_orders_this_run) >= cfg.MAX_NEW_PER_DAY:
