@@ -1,42 +1,5 @@
 [
   {
-    "timestamp": "2026-05-14T12:53:34.529646-04:00",
-    "mode": "CATALYST",
-    "spy_regime": "BULL",
-    "vix": 17.8700008392334,
-    "signals": [
-      {
-        "symbol": "AVGO",
-        "strategy": "CATALYST",
-        "signal": "BUY",
-        "factors": [
-          "gap +4.0% in [3.0, 12.0]",
-          "news score +2",
-          "in upper 73% of day's range"
-        ],
-        "gap_pct": 3.96,
-        "news_score": 2,
-        "earn_days_ago": null,
-        "order_status": "NOT_PLACED \u2014 outside target window or market closed"
-      },
-      {
-        "symbol": "COIN",
-        "strategy": "CATALYST",
-        "signal": "BUY",
-        "factors": [
-          "gap +8.9% in [3.0, 12.0]",
-          "volume pace 2.0x normal",
-          "in upper 92% of day's range"
-        ],
-        "gap_pct": 8.92,
-        "news_score": 1,
-        "earn_days_ago": null,
-        "order_status": "NOT_PLACED \u2014 outside target window or market closed"
-      }
-    ],
-    "force_closed": []
-  },
-  {
     "timestamp": "2026-05-14T12:56:49.644433-04:00",
     "mode": "NEWS",
     "spy_regime": "BULL",
@@ -11016,6 +10979,297 @@
       "account_now": 100843.19,
       "spy_start": 742.91,
       "spy_now": 746.47
+    }
+  },
+  {
+    "timestamp": "2026-05-22T11:06:55.427499-04:00",
+    "mode": "NEWS",
+    "spy_regime": "BULL",
+    "safety_block": "",
+    "signals": [],
+    "alerts": [],
+    "news_snapshot": [
+      {
+        "symbol": "DELL",
+        "sentiment": "STRONG_POSITIVE",
+        "score": 5
+      },
+      {
+        "symbol": "CRWD",
+        "sentiment": "STRONG_POSITIVE",
+        "score": 4
+      },
+      {
+        "symbol": "PANW",
+        "sentiment": "STRONG_POSITIVE",
+        "score": 4
+      },
+      {
+        "symbol": "FCX",
+        "sentiment": "STRONG_POSITIVE",
+        "score": 4
+      },
+      {
+        "symbol": "MRVL",
+        "sentiment": "POSITIVE",
+        "score": 3
+      },
+      {
+        "symbol": "ASTS",
+        "sentiment": "POSITIVE",
+        "score": 3
+      },
+      {
+        "symbol": "RGTI",
+        "sentiment": "POSITIVE",
+        "score": 3
+      },
+      {
+        "symbol": "RIOT",
+        "sentiment": "POSITIVE",
+        "score": 3
+      },
+      {
+        "symbol": "NVDA",
+        "sentiment": "POSITIVE",
+        "score": 2
+      },
+      {
+        "symbol": "AMD",
+        "sentiment": "POSITIVE",
+        "score": 2
+      },
+      {
+        "symbol": "ARM",
+        "sentiment": "NEUTRAL",
+        "score": 1
+      },
+      {
+        "symbol": "MU",
+        "sentiment": "NEUTRAL",
+        "score": 1
+      },
+      {
+        "symbol": "APLD",
+        "sentiment": "NEUTRAL",
+        "score": 1
+      },
+      {
+        "symbol": "MSFT",
+        "sentiment": "NEUTRAL",
+        "score": 1
+      },
+      {
+        "symbol": "NEM",
+        "sentiment": "NEUTRAL",
+        "score": 1
+      },
+      {
+        "symbol": "RKLB",
+        "sentiment": "NEUTRAL",
+        "score": 1
+      },
+      {
+        "symbol": "LUNR",
+        "sentiment": "NEUTRAL",
+        "score": 1
+      },
+      {
+        "symbol": "IONQ",
+        "sentiment": "NEUTRAL",
+        "score": 1
+      },
+      {
+        "symbol": "QBTS",
+        "sentiment": "NEUTRAL",
+        "score": 1
+      },
+      {
+        "symbol": "COIN",
+        "sentiment": "NEUTRAL",
+        "score": 1
+      },
+      {
+        "symbol": "MSTR",
+        "sentiment": "NEUTRAL",
+        "score": 1
+      },
+      {
+        "symbol": "AVGO",
+        "sentiment": "NEUTRAL",
+        "score": 0
+      },
+      {
+        "symbol": "SMCI",
+        "sentiment": "NEUTRAL",
+        "score": 0
+      },
+      {
+        "symbol": "HPE",
+        "sentiment": "NEUTRAL",
+        "score": 0
+      },
+      {
+        "symbol": "VRT",
+        "sentiment": "NEUTRAL",
+        "score": 0
+      },
+      {
+        "symbol": "CLS",
+        "sentiment": "NEUTRAL",
+        "score": 0
+      },
+      {
+        "symbol": "CEG",
+        "sentiment": "NEUTRAL",
+        "score": 0
+      },
+      {
+        "symbol": "AAPL",
+        "sentiment": "NEUTRAL",
+        "score": 0
+      },
+      {
+        "symbol": "NOW",
+        "sentiment": "NEUTRAL",
+        "score": 0
+      },
+      {
+        "symbol": "PLTR",
+        "sentiment": "NEUTRAL",
+        "score": 0
+      },
+      {
+        "symbol": "SHOP",
+        "sentiment": "NEUTRAL",
+        "score": 0
+      },
+      {
+        "symbol": "SNOW",
+        "sentiment": "NEUTRAL",
+        "score": 0
+      },
+      {
+        "symbol": "ANET",
+        "sentiment": "NEUTRAL",
+        "score": 0
+      },
+      {
+        "symbol": "SOUN",
+        "sentiment": "NEUTRAL",
+        "score": 0
+      },
+      {
+        "symbol": "NOK",
+        "sentiment": "NEUTRAL",
+        "score": 0
+      },
+      {
+        "symbol": "XOM",
+        "sentiment": "NEUTRAL",
+        "score": 0
+      },
+      {
+        "symbol": "OXY",
+        "sentiment": "NEUTRAL",
+        "score": 0
+      },
+      {
+        "symbol": "FANG",
+        "sentiment": "NEUTRAL",
+        "score": 0
+      },
+      {
+        "symbol": "SLB",
+        "sentiment": "NEUTRAL",
+        "score": 0
+      },
+      {
+        "symbol": "GOLD",
+        "sentiment": "NEUTRAL",
+        "score": 0
+      },
+      {
+        "symbol": "GDX",
+        "sentiment": "NEUTRAL",
+        "score": 0
+      },
+      {
+        "symbol": "RDW",
+        "sentiment": "NEUTRAL",
+        "score": 0
+      },
+      {
+        "symbol": "PL",
+        "sentiment": "NEUTRAL",
+        "score": 0
+      },
+      {
+        "symbol": "KTOS",
+        "sentiment": "NEUTRAL",
+        "score": 0
+      },
+      {
+        "symbol": "MARA",
+        "sentiment": "NEUTRAL",
+        "score": 0
+      },
+      {
+        "symbol": "AMZN",
+        "sentiment": "NEUTRAL",
+        "score": -1
+      },
+      {
+        "symbol": "CSCO",
+        "sentiment": "NEUTRAL",
+        "score": -1
+      },
+      {
+        "symbol": "TSLA",
+        "sentiment": "NEGATIVE",
+        "score": -2
+      },
+      {
+        "symbol": "NFLX",
+        "sentiment": "NEGATIVE",
+        "score": -2
+      },
+      {
+        "symbol": "QQQ",
+        "sentiment": "NEGATIVE",
+        "score": -2
+      },
+      {
+        "symbol": "META",
+        "sentiment": "NEGATIVE",
+        "score": -3
+      },
+      {
+        "symbol": "GOOGL",
+        "sentiment": "NEGATIVE",
+        "score": -3
+      },
+      {
+        "symbol": "SPY",
+        "sentiment": "NEGATIVE",
+        "score": -3
+      },
+      {
+        "symbol": "CRM",
+        "sentiment": "STRONG_NEGATIVE",
+        "score": -4
+      }
+    ],
+    "cpu_temp": "49.2\u00b0C",
+    "benchmark": {
+      "start_date": "2026-05-21",
+      "portfolio_pct": 0.61,
+      "spy_pct": 0.52,
+      "alpha_pct": 0.09,
+      "account_start": 100196.86,
+      "account_now": 100807.83,
+      "spy_start": 742.91,
+      "spy_now": 746.8
     }
   }
 ]

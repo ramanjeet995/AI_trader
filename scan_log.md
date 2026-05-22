@@ -1,14 +1,34 @@
 # AI Trader — Daily Log
 
 What the robot saw and did each time it woke up. Newest at top.
-_Last updated: May 22, 2026 at 11:01 AM ET_
+_Last updated: May 22, 2026 at 11:06 AM ET_
 
 ### Performance since 2026-05-21
 | | Return | Value |
 |---|---|---|
-| 📈 **Our Portfolio** | **+0.65%** | $100,843.19 |
-| 📈 S&P 500 (SPY) | +0.48% | $746.47 |
-| ✅ **Alpha** | **+0.17%** | Beating the market |
+| 📈 **Our Portfolio** | **+0.61%** | $100,807.83 |
+| 📈 S&P 500 (SPY) | +0.52% | $746.80 |
+| ✅ **Alpha** | **+0.09%** | Beating the market |
+
+## May 22, 11:06 AM ET — News check | Pi: 49.2°C
+
+**Market check:**
+- Market is going **up** 📈
+- Scoreboard: Us **+0.61%** vs S&P 500 +0.52% (**beating** by 0.09%)
+
+**Result:** No trades today.
+<details><summary>Notable news today</summary>
+
+- ✓ **MRVL** — strong positive news (+3)
+- ✓ **ASTS** — strong positive news (+3)
+- ✓ **RGTI** — strong positive news (+3)
+- ✗ **TSLA** — negative news (-2)
+- ✗ **NFLX** — negative news (-2)
+- ✗ **QQQ** — negative news (-2)
+
+</details>
+
+---
 
 ## May 22, 11:01 AM ET — Big-news check | Pi: 45.8°C
 
@@ -1435,22 +1455,5 @@ _Last updated: May 22, 2026 at 11:01 AM ET_
 - ✗ **SPY** — negative news (-3)
 
 </details>
-
----
-
-## May 14, 12:53 PM ET — Big-news check
-
-**Market check:**
-- Market is going **up** 📈
-- Mood: calm (VIX 18)
-
-**Result:** Found 2 setup(s), but didn't buy any.
-
-- ✗ **Skipped AVGO** (gap +4.0%) — outside target window or market closed
-    - Plan: buy at $0, sell-stop at $0, target $0
-    - 0 shares, risking $0
-- ✗ **Skipped COIN** (gap +8.9%) — outside target window or market closed
-    - Plan: buy at $0, sell-stop at $0, target $0
-    - 0 shares, risking $0
 
 ---
