@@ -1,7 +1,56 @@
 # AI Trader — Daily Log
 
 What the robot saw and did each time it woke up. Newest at top.
-_Last updated: May 21, 2026 at 06:46 PM ET_
+_Last updated: May 22, 2026 at 09:36 AM ET_
+
+### Performance since 2026-05-21
+| | Return | Value |
+|---|---|---|
+| 📉 **Our Portfolio** | **-0.32%** | $99,879.18 |
+| 📈 S&P 500 (SPY) | +0.58% | $747.19 |
+| ❌ **Alpha** | **-0.89%** | Behind the market |
+
+## May 22, 09:36 AM ET — Main scan | Pi: 48.2°C
+
+**Market check:**
+- Market is going **up** 📈
+- Mood: calm (VIX 17)
+- Investors defensive
+- Currently holding: MU, PANW, PLTR
+- Scoreboard: Us **-0.32%** vs S&P 500 +0.58% (behind by 0.89%)
+
+**Money flowing into:** Natural Gas (+6%), Energy (+4%), Healthcare (+4%)
+**Money flowing out of:** Utilities (-2%), Materials (-3%), Gold (-3%)
+
+**Hot stocks discovered today:** AKTX
+**Full discovery list (3):** AGYS, TATT, AKTX
+
+**Looked at 56 stocks:**
+- already holding: 3
+- not enough trading volume: 6
+- smart money quietly selling: 16
+- no buy setup today: 29
+- order flow or news was negative: 1
+- ✓ **1 stocks ready to trade**
+
+**Result:** ✓ Bought 1 stock(s).
+
+- ✓ **Bought SLB**
+    - Plan: buy at $57.28, sell-stop at $53.1, target $65.64
+    - 435 shares, risking $1818
+
+<details><summary>Notable news today</summary>
+
+- ✓ **ARM** — strong positive news (+2)
+    - _[+] A New Chipmaker Just Topped Micron's 2026 Return, Thanks To Nvidia_
+- ✗ **META** — negative news (-3)
+    - [-] Google's AI Glasses Threaten Meta's 80% Market Grip, Analyst Says
+- ✗ **GOOGL** — negative news (-3)
+    - [-] Trump Backs Out Of AI Executive Order Amid Fears It Could Hurt US Tech Edge— 'Do
+
+</details>
+
+---
 
 ## May 21, 06:46 PM ET — Main scan
 
@@ -177,12 +226,12 @@ _Last updated: May 21, 2026 at 06:46 PM ET_
 - Market is going **up** 📈
 - Mood: calm (VIX 17)
 
-**Result:** ✓ Bought 2 stock(s).
+**Result:** Found 2 setup(s), but didn't buy any.
 
-- ✓ **Bought DELL** (gap +3.0%)
+- ✗ **Skipped DELL** (gap +3.0%) — outside target window or market closed
     - Plan: buy at $0, sell-stop at $0, target $0
     - 0 shares, risking $0
-- ✓ **Bought VRT** (gap +4.1%)
+- ✗ **Skipped VRT** (gap +4.1%) — outside target window or market closed
     - Plan: buy at $0, sell-stop at $0, target $0
     - 0 shares, risking $0
 
@@ -213,12 +262,12 @@ _Last updated: May 21, 2026 at 06:46 PM ET_
 - Market is going **up** 📈
 - Mood: calm (VIX 17)
 
-**Result:** ✓ Bought 2 stock(s).
+**Result:** Found 2 setup(s), but didn't buy any.
 
-- ✓ **Bought MRVL** (gap +3.3%)
+- ✗ **Skipped MRVL** (gap +3.3%) — outside target window or market closed
     - Plan: buy at $0, sell-stop at $0, target $0
     - 0 shares, risking $0
-- ✓ **Bought VRT** (gap +4.0%)
+- ✗ **Skipped VRT** (gap +4.0%) — outside target window or market closed
     - Plan: buy at $0, sell-stop at $0, target $0
     - 0 shares, risking $0
 
@@ -458,9 +507,9 @@ _Last updated: May 21, 2026 at 06:46 PM ET_
 - Market is going **up** 📈
 - Mood: a bit nervous (VIX 18)
 
-**Result:** ✓ Bought 1 stock(s).
+**Result:** Found 1 setup(s), but didn't buy any.
 
-- ✓ **Bought CRWD** (gap +4.2%)
+- ✗ **Skipped CRWD** (gap +4.2%) — outside target window or market closed
     - Plan: buy at $0, sell-stop at $0, target $0
     - 0 shares, risking $0
 
@@ -488,9 +537,9 @@ _Last updated: May 21, 2026 at 06:46 PM ET_
 - Market is going **up** 📈
 - Mood: a bit nervous (VIX 18)
 
-**Result:** ✓ Bought 1 stock(s).
+**Result:** Found 1 setup(s), but didn't buy any.
 
-- ✓ **Bought CRWD** (gap +4.2%)
+- ✗ **Skipped CRWD** (gap +4.2%) — outside target window or market closed
     - Plan: buy at $0, sell-stop at $0, target $0
     - 0 shares, risking $0
 
@@ -558,7 +607,7 @@ _Last updated: May 21, 2026 at 06:46 PM ET_
 
 ---
 
-## May 20, 10:57 AM ET — News check
+## May 20, 10:57 AM ET — News check | Pi: 82.3°C
 
 **Market check:**
 - Market is going **up** 📈
@@ -578,7 +627,7 @@ _Last updated: May 21, 2026 at 06:46 PM ET_
 
 ---
 
-## May 20, 10:56 AM ET — Big-news check
+## May 20, 10:56 AM ET — Big-news check | Pi: 81.3°C
 
 **Market check:**
 - Market is going **up** 📈
@@ -592,7 +641,7 @@ _Last updated: May 21, 2026 at 06:46 PM ET_
 
 ---
 
-## May 20, 09:36 AM ET — Main scan
+## May 20, 09:36 AM ET — Main scan | Pi: 80.8°C
 
 **Market check:**
 - Market is going **up** 📈
@@ -858,9 +907,9 @@ _Last updated: May 21, 2026 at 06:46 PM ET_
 - Market is going **up** 📈
 - Mood: a bit nervous (VIX 18)
 
-**Result:** ✓ Bought 1 stock(s).
+**Result:** Found 1 setup(s), but didn't buy any.
 
-- ✓ **Bought CRWD** (gap +3.3%)
+- ✗ **Skipped CRWD** (gap +3.3%) — outside target window or market closed
     - Plan: buy at $0, sell-stop at $0, target $0
     - 0 shares, risking $0
 
@@ -890,9 +939,9 @@ _Last updated: May 21, 2026 at 06:46 PM ET_
 - Market is going **up** 📈
 - Mood: a bit nervous (VIX 18)
 
-**Result:** ✓ Bought 1 stock(s).
+**Result:** Found 1 setup(s), but didn't buy any.
 
-- ✓ **Bought CRWD** (gap +3.1%)
+- ✗ **Skipped CRWD** (gap +3.1%) — outside target window or market closed
     - Plan: buy at $0, sell-stop at $0, target $0
     - 0 shares, risking $0
 
@@ -1344,12 +1393,12 @@ _Last updated: May 21, 2026 at 06:46 PM ET_
 - Market is going **up** 📈
 - Mood: calm (VIX 18)
 
-**Result:** ✓ Bought 2 stock(s).
+**Result:** Found 2 setup(s), but didn't buy any.
 
-- ✓ **Bought COIN** (gap +7.0%)
+- ✗ **Skipped COIN** (gap +7.0%) — outside target window or market closed
     - Plan: buy at $0, sell-stop at $0, target $0
     - 0 shares, risking $0
-- ✓ **Bought AVGO** (gap +3.9%)
+- ✗ **Skipped AVGO** (gap +3.9%) — outside target window or market closed
     - Plan: buy at $0, sell-stop at $0, target $0
     - 0 shares, risking $0
 
@@ -1380,12 +1429,12 @@ _Last updated: May 21, 2026 at 06:46 PM ET_
 - Market is going **up** 📈
 - Mood: calm (VIX 18)
 
-**Result:** ✓ Bought 2 stock(s).
+**Result:** Found 2 setup(s), but didn't buy any.
 
-- ✓ **Bought AVGO** (gap +4.0%)
+- ✗ **Skipped AVGO** (gap +4.0%) — outside target window or market closed
     - Plan: buy at $0, sell-stop at $0, target $0
     - 0 shares, risking $0
-- ✓ **Bought COIN** (gap +8.9%)
+- ✗ **Skipped COIN** (gap +8.9%) — outside target window or market closed
     - Plan: buy at $0, sell-stop at $0, target $0
     - 0 shares, risking $0
 
@@ -1422,49 +1471,6 @@ _Last updated: May 21, 2026 at 06:46 PM ET_
 - ✓ **MRVL** — strong positive news (+3)
     - _[+] RBC Capital Maintains Outperform on Marvell Technology, Raises Price Target to $_
 - ✓ **GOOGL** — strong positive news (+3)
-    - _[~] What Is Going On With Marvell Tech Stock On Thursday?_
-- ✗ **ARM** — negative news (-2)
-    - [~] Arm Holdings Tech Rally Takes Breather As Investors Weigh Supply Chain Risks
-- ✗ **MU** — negative news (-2)
-    - [+] Micron Rallied 90% In A Month — These 10 Small‑Cap Stocks Blew Past It
-- ✗ **META** — negative news (-3)
-    - [~] What Is Going On With Marvell Tech Stock On Thursday?
-
-</details>
-
----
-
-## May 14, 11:42 AM ET — Main scan
-
-**Market check:**
-- Market is going **up** 📈
-- Mood: calm (VIX 18)
-- Investors defensive
-- Currently holding: AMZN, GOOGL
-
-**Money flowing into:** Crude Oil (+22%), Energy (+5%), Silver (+5%)
-**Money flowing out of:** Financials (-2%), Gold (-4%), Utilities (-3%)
-
-**Looked at 33 stocks:**
-- already holding: 2
-- not enough trading volume: 2
-- smart money quietly selling: 11
-- no buy setup today: 17
-- ✓ **1 stocks ready to trade**
-
-**Result:** Found 1 setup(s), but didn't buy any.
-
-- ✗ **Skipped SLB** — position/daily cap
-    - Plan: buy at $55.52, sell-stop at $52.23, target $62.1
-    - 536 shares, risking $1763
-
-<details><summary>Notable news today</summary>
-
-- ✓ **NVDA** — strong positive news (+3)
-    - _[~] What Is Going On With Marvell Tech Stock On Thursday?_
-- ✓ **AMD** — strong positive news (+3)
-    - _[~] Arm Holdings Tech Rally Takes Breather As Investors Weigh Supply Chain Risks_
-- ✓ **MRVL** — strong positive news (+2)
     - _[~] What Is Going On With Marvell Tech Stock On Thursday?_
 - ✗ **ARM** — negative news (-2)
     - [~] Arm Holdings Tech Rally Takes Breather As Investors Weigh Supply Chain Risks

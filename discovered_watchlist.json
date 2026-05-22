@@ -14,5 +14,13 @@
     "price": 39.0,
     "sentiment": "NEUTRAL",
     "reason": "Up +19.3% today, sentiment NEUTRAL (+1)"
+  },
+  "AKTX": {
+    "added": "2026-05-22T09:33:18.715700-04:00",
+    "last_seen": "2026-05-22T09:33:18.715700-04:00",
+    "gain_pct": 95.82,
+    "price": 10.065,
+    "sentiment": "NEUTRAL",
+    "reason": "Up +95.8% today, sentiment NEUTRAL (+1)"
   }
 }

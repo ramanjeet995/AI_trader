@@ -1,218 +1,5 @@
 [
   {
-    "timestamp": "2026-05-14T11:42:09.842206-04:00",
-    "mode": "FULL",
-    "spy_regime": "BULL",
-    "posture": "RISK-OFF",
-    "vix": 17.8700008392334,
-    "spy_atr_pct": 0.99,
-    "in_window": false,
-    "market_open": true,
-    "data_feed": "iex",
-    "yfinance_patched": "0/45",
-    "sentiment_backend": "finbert",
-    "earnings_cache_size": 54,
-    "macro_blackout": false,
-    "macro_reason": "",
-    "next_macro_event": {
-      "name": "FOMC",
-      "datetime": "2026-06-17T14:00:00-04:00",
-      "days_away": 34,
-      "hours_away": 818.3
-    },
-    "open_positions": [
-      "AMZN",
-      "GOOGL"
-    ],
-    "new_today": 0,
-    "filter_stats": {
-      "scanned": 33,
-      "no_data": 0,
-      "held": 2,
-      "market_volatile": 0,
-      "earnings_blackout": 0,
-      "failed_filters": 2,
-      "obv_distribution": 11,
-      "no_strategy_signal": 17,
-      "of_or_sent_reject": 0,
-      "sector_misalign": 0,
-      "passed_all": 1
-    },
-    "sectors_top3": [
-      {
-        "ticker": "USO",
-        "sector": "Crude Oil",
-        "ret_20d": 21.65,
-        "rs": 4.01,
-        "obv": "ACCUMULATION",
-        "above_ema": "True",
-        "score": 43.14
-      },
-      {
-        "ticker": "XLE",
-        "sector": "Energy",
-        "ret_20d": 5.09,
-        "rs": 0.94,
-        "obv": "ACCUMULATION",
-        "above_ema": "True",
-        "score": 12.44
-      },
-      {
-        "ticker": "SLV",
-        "sector": "Silver",
-        "ret_20d": 4.62,
-        "rs": 0.86,
-        "obv": "ACCUMULATION",
-        "above_ema": "True",
-        "score": 11.58
-      }
-    ],
-    "sectors_bottom3": [
-      {
-        "ticker": "XLF",
-        "sector": "Financials",
-        "ret_20d": -2.05,
-        "rs": -0.38,
-        "obv": "DISTRIBUTION",
-        "above_ema": "False",
-        "score": -6.8
-      },
-      {
-        "ticker": "GLD",
-        "sector": "Gold",
-        "ret_20d": -3.5,
-        "rs": -0.65,
-        "obv": "DISTRIBUTION",
-        "above_ema": "True",
-        "score": -7.49
-      },
-      {
-        "ticker": "XLU",
-        "sector": "Utilities",
-        "ret_20d": -3.2,
-        "rs": -0.59,
-        "obv": "DISTRIBUTION",
-        "above_ema": "False",
-        "score": -8.93
-      }
-    ],
-    "signals": [
-      {
-        "symbol": "SLB",
-        "strategy": "A",
-        "confidence": 1.0,
-        "signal": "BUY",
-        "entry": 55.52,
-        "stop": 52.23,
-        "target": 62.1,
-        "shares": 536,
-        "notional": 29758.72,
-        "risk_$": 1763.44,
-        "sentiment": "NEUTRAL",
-        "obv": "ACCUMULATION",
-        "of_score": 0,
-        "sector_score": 999.0,
-        "reason": "Pullback zone [52.87-56.14] | RSI=57.5 | bullish candle",
-        "order_status": "SKIPPED: position/daily cap",
-        "headlines": [
-          "[+] Bernstein Maintains Outperform on SLB, Raises Price Target to $71"
-        ]
-      }
-    ],
-    "top_news": [
-      {
-        "symbol": "NVDA",
-        "sentiment": "POSITIVE",
-        "score": 3,
-        "headlines": [
-          "[~] What Is Going On With Marvell Tech Stock On Thursday?",
-          "[~] Recent Report Shows That Rep. John McGuire Bought Up to $45K Worth of Apple Stoc"
-        ]
-      },
-      {
-        "symbol": "AMD",
-        "sentiment": "POSITIVE",
-        "score": 3,
-        "headlines": [
-          "[~] Arm Holdings Tech Rally Takes Breather As Investors Weigh Supply Chain Risks",
-          "[+] Micron Rallied 90% In A Month \u2014 These 10 Small\u2011Cap Stocks Blew Past It"
-        ]
-      },
-      {
-        "symbol": "ARM",
-        "sentiment": "NEGATIVE",
-        "score": -2,
-        "headlines": [
-          "[~] Arm Holdings Tech Rally Takes Breather As Investors Weigh Supply Chain Risks",
-          "[~] SoftBank Could Turn OpenAI Into Rocket Fuel For Stargate And Robotics"
-        ]
-      },
-      {
-        "symbol": "MU",
-        "sentiment": "NEGATIVE",
-        "score": -2,
-        "headlines": [
-          "[+] Micron Rallied 90% In A Month \u2014 These 10 Small\u2011Cap Stocks Blew Past It",
-          "[~] What's Going On With Sandisk Stock Thursday?"
-        ]
-      },
-      {
-        "symbol": "MRVL",
-        "sentiment": "POSITIVE",
-        "score": 2,
-        "headlines": [
-          "[~] What Is Going On With Marvell Tech Stock On Thursday?",
-          "[~] Market-Moving News for May 14th"
-        ]
-      },
-      {
-        "symbol": "META",
-        "sentiment": "NEGATIVE",
-        "score": -3,
-        "headlines": [
-          "[~] What Is Going On With Marvell Tech Stock On Thursday?",
-          "[-] Trump Library Land Deal Worth $300 Million In Miami Triggers Lawsuit, Allegation"
-        ]
-      },
-      {
-        "symbol": "GOOGL",
-        "sentiment": "POSITIVE",
-        "score": 3,
-        "headlines": [
-          "[~] What Is Going On With Marvell Tech Stock On Thursday?",
-          "[+] Anthropic forms $200 million partnership with the Gates Foundation"
-        ]
-      },
-      {
-        "symbol": "AMZN",
-        "sentiment": "NEUTRAL",
-        "score": 1,
-        "headlines": [
-          "[+] Anthropic forms $200 million partnership with the Gates Foundation",
-          "[~] Alibaba Is Morphing Into A Microsoft\u2011Amazon\u2011Nvidia Mashup As China's AI Wave Acc"
-        ]
-      },
-      {
-        "symbol": "NFLX",
-        "sentiment": "NEGATIVE",
-        "score": -2,
-        "headlines": [
-          "[-] What's Going On With Netflix Stock?",
-          "[~] $1000 Invested In Netflix 20 Years Ago Would Be Worth This Much Today"
-        ]
-      },
-      {
-        "symbol": "MSFT",
-        "sentiment": "NEUTRAL",
-        "score": 1,
-        "headlines": [
-          "[+] Anthropic forms $200 million partnership with the Gates Foundation",
-          "[~] Recent Report Shows That Rep. John McGuire Bought Up to $45K Worth of Apple Stoc"
-        ]
-      }
-    ]
-  },
-  {
     "timestamp": "2026-05-14T12:28:00.527589-04:00",
     "mode": "FULL",
     "spy_regime": "BULL",
@@ -11169,5 +10956,238 @@
         ]
       }
     ]
+  },
+  {
+    "timestamp": "2026-05-22T09:36:41.597069-04:00",
+    "mode": "FULL",
+    "spy_regime": "BULL",
+    "posture": "RISK-OFF",
+    "vix": 16.760000228881836,
+    "spy_atr_pct": 1.0,
+    "in_window": true,
+    "market_open": true,
+    "data_feed": "iex",
+    "yfinance_patched": "0/68",
+    "sentiment_backend": "finbert",
+    "earnings_cache_size": 73,
+    "macro_blackout": false,
+    "macro_reason": "",
+    "next_macro_event": {
+      "name": "FOMC",
+      "datetime": "2026-06-17T14:00:00-04:00",
+      "days_away": 26,
+      "hours_away": 628.4
+    },
+    "open_positions": [
+      "MU",
+      "PANW",
+      "PLTR"
+    ],
+    "new_today": 0,
+    "filter_stats": {
+      "scanned": 56,
+      "no_data": 0,
+      "held": 3,
+      "market_volatile": 0,
+      "earnings_blackout": 0,
+      "failed_filters": 6,
+      "obv_distribution": 16,
+      "no_strategy_signal": 29,
+      "of_or_sent_reject": 1,
+      "sector_misalign": 0,
+      "passed_all": 1
+    },
+    "sectors_top3": [
+      {
+        "ticker": "UNG",
+        "sector": "Natural Gas",
+        "ret_20d": 6.05,
+        "rs": 1.35,
+        "obv": "ACCUMULATION",
+        "above_ema": "True",
+        "score": 16.52
+      },
+      {
+        "ticker": "XLE",
+        "sector": "Energy",
+        "ret_20d": 4.14,
+        "rs": 0.92,
+        "obv": "ACCUMULATION",
+        "above_ema": "True",
+        "score": 12.24
+      },
+      {
+        "ticker": "XLV",
+        "sector": "Healthcare",
+        "ret_20d": 4.08,
+        "rs": 0.91,
+        "obv": "ACCUMULATION",
+        "above_ema": "True",
+        "score": 12.11
+      }
+    ],
+    "sectors_bottom3": [
+      {
+        "ticker": "XLU",
+        "sector": "Utilities",
+        "ret_20d": -2.45,
+        "rs": -0.55,
+        "obv": "STEALTH_BUY",
+        "above_ema": "False",
+        "score": -4.46
+      },
+      {
+        "ticker": "XLB",
+        "sector": "Materials",
+        "ret_20d": -2.88,
+        "rs": -0.64,
+        "obv": "DISTRIBUTION",
+        "above_ema": "False",
+        "score": -9.43
+      },
+      {
+        "ticker": "GLD",
+        "sector": "Gold",
+        "ret_20d": -3.35,
+        "rs": -0.75,
+        "obv": "DISTRIBUTION",
+        "above_ema": "False",
+        "score": -10.48
+      }
+    ],
+    "discovered": [
+      "AKTX"
+    ],
+    "discovered_watchlist": [
+      "AGYS",
+      "TATT",
+      "AKTX"
+    ],
+    "signals": [
+      {
+        "symbol": "SLB",
+        "strategy": "A",
+        "confidence": 0.5,
+        "signal": "BUY",
+        "entry": 57.28,
+        "stop": 53.1,
+        "target": 65.64,
+        "shares": 435,
+        "notional": 24916.8,
+        "risk_$": 1818.3,
+        "sentiment": "NEUTRAL",
+        "obv": "ACCUMULATION",
+        "of_score": 0,
+        "sector_score": 999.0,
+        "reason": "Pullback zone [53.95-57.29] | RSI=62.5 | bullish candle",
+        "order_status": "PLACED \u2014 id=e1a6375f-8502-4ffc-8b17-8230f819ede6",
+        "headlines": [
+          "No recent news"
+        ]
+      }
+    ],
+    "top_news": [
+      {
+        "symbol": "AVGO",
+        "sentiment": "NEUTRAL",
+        "score": -1,
+        "headlines": [
+          "[~] Meta, Broadcom And Others Launch $125 Million UCLA AI Chip Hub",
+          "[~] Nvidia Says 'Demand Has Gone Parabolic' \u2014 Here's Why, Plus 5 AI Stocks To Watch"
+        ]
+      },
+      {
+        "symbol": "AMD",
+        "sentiment": "NEUTRAL",
+        "score": 1,
+        "headlines": [
+          "[~] What Is Going On With AMD Stock On Friday?",
+          "[+] Asia's AI Trade Is Expanding Beyond Taiwan Semiconductor: Analyst"
+        ]
+      },
+      {
+        "symbol": "ARM",
+        "sentiment": "POSITIVE",
+        "score": 2,
+        "headlines": [
+          "[+] A New Chipmaker Just Topped Micron's 2026 Return, Thanks To Nvidia",
+          "[+] Advance Auto Parts Posts Upbeat Q1 Earnings, Joins IBM, Ralph Lauren And Other B"
+        ]
+      },
+      {
+        "symbol": "MRVL",
+        "sentiment": "STRONG_POSITIVE",
+        "score": 5,
+        "headlines": [
+          "[+] Stifel Maintains Buy on Marvell Technology, Raises Price Target to $210",
+          "[~] Nvidia Says 'Demand Has Gone Parabolic' \u2014 Here's Why, Plus 5 AI Stocks To Watch"
+        ]
+      },
+      {
+        "symbol": "DELL",
+        "sentiment": "STRONG_POSITIVE",
+        "score": 4,
+        "headlines": [
+          "[+] Morgan Stanley Maintains Underweight on Dell Technologies, Raises Price Target t",
+          "[~] 10 Information Technology Stocks With Whale Alerts In Today's Session"
+        ]
+      },
+      {
+        "symbol": "HPE",
+        "sentiment": "STRONG_POSITIVE",
+        "score": 4,
+        "headlines": [
+          "[~] If You Invested $100 In Hewlett Packard Stock 5 Years Ago, You Would Have This M",
+          "[+] Morgan Stanley Maintains Equal-Weight on Hewlett Packard, Raises Price Target to"
+        ]
+      },
+      {
+        "symbol": "VRT",
+        "sentiment": "STRONG_POSITIVE",
+        "score": 5,
+        "headlines": [
+          "[~] A Manufacturing Boom Is Here: Is The Driver Trump's Tariffs Or AI?",
+          "[+] Oppenheimer Maintains Outperform on Vertiv Holdings, Raises Price Target to $353"
+        ]
+      },
+      {
+        "symbol": "APLD",
+        "sentiment": "STRONG_POSITIVE",
+        "score": 5,
+        "headlines": [
+          "[-] Applied Digital Shares Slump Friday Despite Landmark AI Campus Lease",
+          "[+] Lake Street Maintains Buy on Applied Digital, Raises Price Target to $70"
+        ]
+      },
+      {
+        "symbol": "META",
+        "sentiment": "NEGATIVE",
+        "score": -3,
+        "headlines": [
+          "[-] Google's AI Glasses Threaten Meta's 80% Market Grip, Analyst Says",
+          "[~] Meta, Broadcom And Others Launch $125 Million UCLA AI Chip Hub"
+        ]
+      },
+      {
+        "symbol": "GOOGL",
+        "sentiment": "NEGATIVE",
+        "score": -3,
+        "headlines": [
+          "[-] Trump Backs Out Of AI Executive Order Amid Fears It Could Hurt US Tech Edge\u2014 'Do",
+          "[+] Asia's AI Trade Is Expanding Beyond Taiwan Semiconductor: Analyst"
+        ]
+      }
+    ],
+    "cpu_temp": "48.2\u00b0C",
+    "benchmark": {
+      "start_date": "2026-05-21",
+      "portfolio_pct": -0.32,
+      "spy_pct": 0.58,
+      "alpha_pct": -0.89,
+      "account_start": 100196.86,
+      "account_now": 99879.18,
+      "spy_start": 742.91,
+      "spy_now": 747.19
+    }
   }
 ]
