@@ -1,7 +1,7 @@
 # AI Trader — Daily Log
 
 What the robot saw and did each time it woke up. Newest at top.
-_Last updated: May 25, 2026 at 09:34 AM ET_
+_Last updated: May 25, 2026 at 11:00 AM ET_
 
 ### Performance since 2026-05-21
 | | Return | Value |
@@ -9,6 +9,18 @@ _Last updated: May 25, 2026 at 09:34 AM ET_
 | 📈 **Our Portfolio** | **+0.90%** | $101,098.03 |
 | 📈 S&P 500 (SPY) | +0.37% | $745.67 |
 | ✅ **Alpha** | **+0.53%** | Beating the market |
+
+## May 25, 11:00 AM ET — Big-news check | Pi: 33.1°C
+
+**Market check:**
+- Market is going **up** 📈
+- Scoreboard: Us **+0.90%** vs S&P 500 +0.37% (**beating** by 0.53%)
+
+**Closed positions held too long:**
+- CRWD: held ? days, closed at market
+
+**Result:** No trades today.
+---
 
 ## May 25, 09:34 AM ET — Main scan | Pi: 49.2°C
 
@@ -1512,25 +1524,6 @@ _Last updated: May 25, 2026 at 09:34 AM ET_
 - ✓ **COIN** — strong positive news (+2)
 - ✓ **QQQ** — strong positive news (+2)
 - ✗ **AMD** — negative news (-2)
-- ✗ **AAPL** — negative news (-2)
-
-</details>
-
----
-
-## May 14, 04:21 PM ET — News check
-
-**Market check:**
-- Market is going **up** 📈
-
-**Result:** No trades today.
-<details><summary>Notable news today</summary>
-
-- ✓ **AVGO** — strong positive news (+2)
-- ✓ **COIN** — strong positive news (+2)
-- ✓ **QQQ** — strong positive news (+2)
-- ✗ **AMD** — negative news (-2)
-- ✗ **AMZN** — negative news (-2)
 - ✗ **AAPL** — negative news (-2)
 
 </details>
