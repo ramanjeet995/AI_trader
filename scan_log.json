@@ -1,218 +1,5 @@
 [
   {
-    "timestamp": "2026-05-15T11:37:24.079565-04:00",
-    "mode": "FULL",
-    "spy_regime": "BULL",
-    "posture": "RISK-ON",
-    "vix": 17.260000228881836,
-    "spy_atr_pct": 1.03,
-    "in_window": false,
-    "market_open": true,
-    "data_feed": "iex",
-    "yfinance_patched": "0/45",
-    "sentiment_backend": "finbert",
-    "earnings_cache_size": 54,
-    "macro_blackout": false,
-    "macro_reason": "",
-    "next_macro_event": {
-      "name": "FOMC",
-      "datetime": "2026-06-17T14:00:00-04:00",
-      "days_away": 33,
-      "hours_away": 794.4
-    },
-    "open_positions": [
-      "AMZN",
-      "GOOGL"
-    ],
-    "new_today": 0,
-    "filter_stats": {
-      "scanned": 33,
-      "no_data": 0,
-      "held": 2,
-      "market_volatile": 0,
-      "earnings_blackout": 0,
-      "failed_filters": 2,
-      "obv_distribution": 10,
-      "no_strategy_signal": 18,
-      "of_or_sent_reject": 0,
-      "sector_misalign": 0,
-      "passed_all": 1
-    },
-    "sectors_top3": [
-      {
-        "ticker": "USO",
-        "sector": "Crude Oil",
-        "ret_20d": 20.92,
-        "rs": 4.53,
-        "obv": "ACCUMULATION",
-        "above_ema": "True",
-        "score": 48.26
-      },
-      {
-        "ticker": "XLE",
-        "sector": "Energy",
-        "ret_20d": 7.07,
-        "rs": 1.53,
-        "obv": "ACCUMULATION",
-        "above_ema": "True",
-        "score": 18.3
-      },
-      {
-        "ticker": "UNG",
-        "sector": "Natural Gas",
-        "ret_20d": 4.15,
-        "rs": 0.9,
-        "obv": "ACCUMULATION",
-        "above_ema": "True",
-        "score": 11.98
-      }
-    ],
-    "sectors_bottom3": [
-      {
-        "ticker": "XLB",
-        "sector": "Materials",
-        "ret_20d": -3.44,
-        "rs": -0.74,
-        "obv": "DISTRIBUTION",
-        "above_ema": "False",
-        "score": -10.43
-      },
-      {
-        "ticker": "XLU",
-        "sector": "Utilities",
-        "ret_20d": -3.5,
-        "rs": -0.76,
-        "obv": "DISTRIBUTION",
-        "above_ema": "False",
-        "score": -10.57
-      },
-      {
-        "ticker": "GLD",
-        "sector": "Gold",
-        "ret_20d": -5.62,
-        "rs": -1.22,
-        "obv": "DISTRIBUTION",
-        "above_ema": "False",
-        "score": -15.15
-      }
-    ],
-    "signals": [
-      {
-        "symbol": "FANG",
-        "strategy": "A",
-        "confidence": 0.97,
-        "signal": "BUY",
-        "entry": 203.53,
-        "stop": 184.84,
-        "target": 240.91,
-        "shares": 132,
-        "notional": 26865.96,
-        "risk_$": 2467.08,
-        "sentiment": "NEUTRAL",
-        "obv": "ACCUMULATION",
-        "of_score": 2,
-        "sector_score": 999.0,
-        "reason": "Pullback zone [191.75-203.61] | RSI=57.8 | bullish candle",
-        "order_status": "SKIPPED: position/daily cap",
-        "headlines": [
-          "No recent news"
-        ]
-      }
-    ],
-    "top_news": [
-      {
-        "symbol": "NVDA",
-        "sentiment": "NEGATIVE",
-        "score": -3,
-        "headlines": [
-          "[-] The Great Chip Letdown: Why The Trump-Xi Summit Just Tanked NVIDIA And Intel",
-          "[-] Rising Oil And Yields Getting In The Way Of Dual Market Manias"
-        ]
-      },
-      {
-        "symbol": "AMD",
-        "sentiment": "NEUTRAL",
-        "score": -1,
-        "headlines": [
-          "[-] Chip Stocks Fall As Inflation Fears Trigger Profit-Taking",
-          "[~] Trump's Trading Disclosure Shows Activity In Nvidia, AMD, Microsoft, Oracle And "
-        ]
-      },
-      {
-        "symbol": "ARM",
-        "sentiment": "NEUTRAL",
-        "score": -1,
-        "headlines": [
-          "[~] The Bond Market Just Fired A Warning Shot At The AI Rally \u2014 Fed Rate Hike Ahead",
-          "[~] Arm Holdings Tech Rally Takes Breather As Investors Weigh Supply Chain Risks"
-        ]
-      },
-      {
-        "symbol": "SMCI",
-        "sentiment": "NEGATIVE",
-        "score": -2,
-        "headlines": [
-          "[-] Chip Stocks Fall As Inflation Fears Trigger Profit-Taking",
-          "[~] Why Is SMCI Stock Surging On Thursday?"
-        ]
-      },
-      {
-        "symbol": "MRVL",
-        "sentiment": "POSITIVE",
-        "score": 2,
-        "headlines": [
-          "[~] The Bond Market Just Fired A Warning Shot At The AI Rally \u2014 Fed Rate Hike Ahead",
-          "[-] Chip Stocks Fall As Inflation Fears Trigger Profit-Taking"
-        ]
-      },
-      {
-        "symbol": "META",
-        "sentiment": "NEGATIVE",
-        "score": -3,
-        "headlines": [
-          "[-] Rising Oil And Yields Getting In The Way Of Dual Market Manias",
-          "[~] Bill Ackman Catches Another Falling Magnificent Seven Knife \u2014 Will It Work This "
-        ]
-      },
-      {
-        "symbol": "GOOGL",
-        "sentiment": "NEGATIVE",
-        "score": -3,
-        "headlines": [
-          "[~] Bill Ackman Catches Another Falling Magnificent Seven Knife \u2014 Will It Work This ",
-          "[~] Bill Ackman Buys Microsoft Stock, Calls It Compellingly Cheap"
-        ]
-      },
-      {
-        "symbol": "AMZN",
-        "sentiment": "NEGATIVE",
-        "score": -3,
-        "headlines": [
-          "[-] Rising Oil And Yields Getting In The Way Of Dual Market Manias",
-          "[~] Bill Ackman Catches Another Falling Magnificent Seven Knife \u2014 Will It Work This "
-        ]
-      },
-      {
-        "symbol": "TSLA",
-        "sentiment": "NEGATIVE",
-        "score": -3,
-        "headlines": [
-          "[-] Rising Oil And Yields Getting In The Way Of Dual Market Manias",
-          "[-] SpaceX IPO Prospectus Could Reportedly Drop Next Week\u2014Here's A Peek Into What In"
-        ]
-      },
-      {
-        "symbol": "NFLX",
-        "sentiment": "NEUTRAL",
-        "score": -1,
-        "headlines": [
-          "[~] Guggenheim Reiterates Buy on Netflix, Maintains $120 Price Target",
-          "[~] Trump's Trading Disclosure Shows Activity In Nvidia, AMD, Microsoft, Oracle And "
-        ]
-      }
-    ]
-  },
-  {
     "timestamp": "2026-05-15T12:20:21.561665-04:00",
     "mode": "FULL",
     "spy_regime": "BULL",
@@ -12022,6 +11809,347 @@
       }
     ],
     "cpu_temp": "44.8\u00b0C",
+    "benchmark": {
+      "start_date": "2026-05-21",
+      "portfolio_pct": 0.9,
+      "spy_pct": 0.37,
+      "alpha_pct": 0.53,
+      "account_start": 100196.86,
+      "account_now": 101098.03,
+      "spy_start": 742.91,
+      "spy_now": 745.67
+    }
+  },
+  {
+    "timestamp": "2026-05-25T16:24:30.374073-04:00",
+    "mode": "FULL",
+    "spy_regime": "BULL",
+    "posture": "RISK-OFF",
+    "vix": 16.700000762939453,
+    "spy_atr_pct": 1.01,
+    "in_window": true,
+    "market_open": false,
+    "data_feed": "iex",
+    "yfinance_patched": "0/68",
+    "sentiment_backend": "finbert",
+    "earnings_cache_size": 73,
+    "macro_blackout": false,
+    "macro_reason": "",
+    "next_macro_event": {
+      "name": "FOMC",
+      "datetime": "2026-06-17T14:00:00-04:00",
+      "days_away": 22,
+      "hours_away": 549.6
+    },
+    "open_positions": [
+      "CRWD",
+      "MU",
+      "PANW",
+      "PLTR",
+      "SLB"
+    ],
+    "new_today": 0,
+    "filter_stats": {
+      "scanned": 56,
+      "no_data": 0,
+      "held": 5,
+      "market_volatile": 0,
+      "earnings_blackout": 4,
+      "failed_filters": 6,
+      "obv_distribution": 16,
+      "no_strategy_signal": 19,
+      "of_or_sent_reject": 0,
+      "sector_misalign": 0,
+      "passed_all": 6
+    },
+    "sectors_top3": [
+      {
+        "ticker": "XLE",
+        "sector": "Energy",
+        "ret_20d": 4.67,
+        "rs": 1.09,
+        "obv": "ACCUMULATION",
+        "above_ema": "True",
+        "score": 13.94
+      },
+      {
+        "ticker": "XLV",
+        "sector": "Healthcare",
+        "ret_20d": 4.49,
+        "rs": 1.05,
+        "obv": "ACCUMULATION",
+        "above_ema": "True",
+        "score": 13.52
+      },
+      {
+        "ticker": "UNG",
+        "sector": "Natural Gas",
+        "ret_20d": 4.39,
+        "rs": 1.03,
+        "obv": "ACCUMULATION",
+        "above_ema": "False",
+        "score": 11.28
+      }
+    ],
+    "sectors_bottom3": [
+      {
+        "ticker": "XLI",
+        "sector": "Industrials",
+        "ret_20d": -0.43,
+        "rs": -0.1,
+        "obv": "DISTRIBUTION",
+        "above_ema": "False",
+        "score": -4.02
+      },
+      {
+        "ticker": "XLB",
+        "sector": "Materials",
+        "ret_20d": -2.88,
+        "rs": -0.67,
+        "obv": "DISTRIBUTION",
+        "above_ema": "False",
+        "score": -9.75
+      },
+      {
+        "ticker": "GLD",
+        "sector": "Gold",
+        "ret_20d": -3.72,
+        "rs": -0.87,
+        "obv": "DISTRIBUTION",
+        "above_ema": "False",
+        "score": -11.73
+      }
+    ],
+    "discovered": [],
+    "discovered_watchlist": [
+      "AGYS",
+      "TATT",
+      "AKTX"
+    ],
+    "signals": [
+      {
+        "symbol": "RDW",
+        "strategy": "B",
+        "confidence": 0.35,
+        "signal": "BUY",
+        "entry": 17.46,
+        "stop": 15.23,
+        "target": 21.92,
+        "shares": 1133,
+        "notional": 19782.18,
+        "risk_$": 2526.59,
+        "sentiment": "NEUTRAL",
+        "obv": "ACCUMULATION",
+        "of_score": 3,
+        "sector_score": 999.0,
+        "reason": "Breakout above 15.38 | vol 1.6x prior 20d avg",
+        "order_status": "SKIPPED: market/daily cap",
+        "headlines": [
+          "No recent news"
+        ]
+      },
+      {
+        "symbol": "LUNR",
+        "strategy": "B",
+        "confidence": 0.35,
+        "signal": "BUY",
+        "entry": 38.26,
+        "stop": 34.6,
+        "target": 45.58,
+        "shares": 660,
+        "notional": 25251.6,
+        "risk_$": 2415.6,
+        "sentiment": "NEUTRAL",
+        "obv": "ACCUMULATION",
+        "of_score": 3,
+        "sector_score": 999.0,
+        "reason": "Breakout above 34.95 | vol 1.4x prior 20d avg",
+        "order_status": "SKIPPED: market/daily cap",
+        "headlines": [
+          "[~] Investors Pour Into NASA ETF Ahead of Anticipated SpaceX IPO",
+          "[~] Investors Pour Into NASA ETF Ahead of Anticipated SpaceX IPO"
+        ]
+      },
+      {
+        "symbol": "ASTS",
+        "strategy": "B",
+        "confidence": 0.35,
+        "signal": "BUY",
+        "entry": 105.88,
+        "stop": 96.57,
+        "target": 124.5,
+        "shares": 238,
+        "notional": 25199.44,
+        "risk_$": 2215.78,
+        "sentiment": "NEUTRAL",
+        "obv": "ACCUMULATION",
+        "of_score": 3,
+        "sector_score": 999.0,
+        "reason": "Breakout above 97.55 | vol 1.4x prior 20d avg",
+        "order_status": "SKIPPED: market/daily cap",
+        "headlines": [
+          "[~] D-Wave, Dell, And IonQ Are Among Top 10 Large-Cap Gainers Last Week (May 18-May ",
+          "[~] SpaceX's $2 Trillion Valuation May Be More About Starlink Than Rockets"
+        ]
+      },
+      {
+        "symbol": "HPE",
+        "strategy": "B",
+        "confidence": 0.35,
+        "signal": "BUY",
+        "entry": 37.58,
+        "stop": 33.66,
+        "target": 45.42,
+        "shares": 672,
+        "notional": 25253.76,
+        "risk_$": 2634.24,
+        "sentiment": "NEUTRAL",
+        "obv": "ACCUMULATION",
+        "of_score": 3,
+        "sector_score": 999.0,
+        "reason": "Breakout above 34.00 | vol 2.2x prior 20d avg",
+        "order_status": "SKIPPED: market/daily cap",
+        "headlines": [
+          "No recent news"
+        ]
+      },
+      {
+        "symbol": "PL",
+        "strategy": "B",
+        "confidence": 0.35,
+        "signal": "BUY",
+        "entry": 44.34,
+        "stop": 43.13,
+        "target": 46.76,
+        "shares": 570,
+        "notional": 25273.8,
+        "risk_$": 689.7,
+        "sentiment": "NEUTRAL",
+        "obv": "ACCUMULATION",
+        "of_score": 3,
+        "sector_score": 999.0,
+        "reason": "Breakout above 43.56 | vol 2.0x prior 20d avg",
+        "order_status": "SKIPPED: market/daily cap",
+        "headlines": [
+          "[~] Investors Pour Into NASA ETF Ahead of Anticipated SpaceX IPO",
+          "[~] Investors Pour Into NASA ETF Ahead of Anticipated SpaceX IPO"
+        ]
+      },
+      {
+        "symbol": "NOK",
+        "strategy": "B",
+        "confidence": 0.35,
+        "signal": "BUY",
+        "entry": 15.46,
+        "stop": 14.07,
+        "target": 18.24,
+        "shares": 1634,
+        "notional": 25261.64,
+        "risk_$": 2271.26,
+        "sentiment": "NEUTRAL",
+        "obv": "ACCUMULATION",
+        "of_score": 2,
+        "sector_score": 999.0,
+        "reason": "Breakout above 14.21 | vol 1.3x prior 20d avg",
+        "order_status": "SKIPPED: market/daily cap",
+        "headlines": [
+          "[~] Consumer Tech News (May 18-22): Meta Cuts 8,000 Jobs, Nvidia Posts Strong Earnin"
+        ]
+      }
+    ],
+    "top_news": [
+      {
+        "symbol": "NVDA",
+        "sentiment": "NEUTRAL",
+        "score": -1,
+        "headlines": [
+          "[~] Five Things Moving Markets: Records, Record Lows, And $100 Oil All In One Week",
+          "[~] 10 Information Technology Stocks Whale Activity In Today's Session"
+        ]
+      },
+      {
+        "symbol": "AMD",
+        "sentiment": "POSITIVE",
+        "score": 3,
+        "headlines": [
+          "[+] 7 Small-Cap Stocks More Than Doubled In May: Micron Did Only 46%",
+          "[~] Anthropic To Become More Valuable Than Today's AMD, Sk Hynix And Micron? Crypto "
+        ]
+      },
+      {
+        "symbol": "MU",
+        "sentiment": "POSITIVE",
+        "score": 3,
+        "headlines": [
+          "[+] 7 Small-Cap Stocks More Than Doubled In May: Micron Did Only 46%",
+          "[~] 10 Information Technology Stocks Whale Activity In Today's Session"
+        ]
+      },
+      {
+        "symbol": "MRVL",
+        "sentiment": "NEUTRAL",
+        "score": -1,
+        "headlines": [
+          "[~] Top 3 Catalysts For Nasdaq 100 And Dow Jones Indices This Week",
+          "[-] Marvell Technology Stock Gets Highly Overbought, Overvalued Ahead Of Earnings"
+        ]
+      },
+      {
+        "symbol": "VRT",
+        "sentiment": "NEUTRAL",
+        "score": 1,
+        "headlines": [
+          "[~] 10 Industrials Stocks Whale Activity In Today's Session",
+          "[+] Top Stocks To Benefit As Goldman Sachs Touts Liquid Cooling As The Next AI Trade"
+        ]
+      },
+      {
+        "symbol": "META",
+        "sentiment": "NEGATIVE",
+        "score": -2,
+        "headlines": [
+          "[-] Bernie Sanders Issues Grim Warning About AI Replacing Millions Of Jobs Across Am",
+          "[~] Bernie Sanders Waves Off Elon Musk's 'Universal High Income' Argument,' Says Tes"
+        ]
+      },
+      {
+        "symbol": "GOOGL",
+        "sentiment": "NEGATIVE",
+        "score": -2,
+        "headlines": [
+          "[-] While Big Tech Pushes AI Agents, Aaron Levie Says Many Executives Still Don't Un",
+          "[~] Anthropic To Become More Valuable Than Today's AMD, Sk Hynix And Micron? Crypto "
+        ]
+      },
+      {
+        "symbol": "AMZN",
+        "sentiment": "NEGATIVE",
+        "score": -2,
+        "headlines": [
+          "[~] Anthropic To Become More Valuable Than Today's AMD, Sk Hynix And Micron? Crypto ",
+          "[-] Marvell Technology Stock Gets Highly Overbought, Overvalued Ahead Of Earnings"
+        ]
+      },
+      {
+        "symbol": "TSLA",
+        "sentiment": "POSITIVE",
+        "score": 3,
+        "headlines": [
+          "[+] Ross Gerber Backs SpaceX IPO Following Successful Starship V3 Test Launch: 'Perf",
+          "[+] Elon Musk Hits Back At Tesla Brand Damage Critics, Reaffirms Model Y's Sales Dom"
+        ]
+      },
+      {
+        "symbol": "MSFT",
+        "sentiment": "NEGATIVE",
+        "score": -3,
+        "headlines": [
+          "[~] 10 Information Technology Stocks Whale Activity In Today's Session",
+          "[~] Nvidia's Biggest Bull Case Has A Catch: Uber And Microsoft Are Discovering AI's "
+        ]
+      }
+    ],
+    "cpu_temp": "48.7\u00b0C",
     "benchmark": {
       "start_date": "2026-05-21",
       "portfolio_pct": 0.9,

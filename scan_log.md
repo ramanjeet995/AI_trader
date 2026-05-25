@@ -1,7 +1,7 @@
 # AI Trader — Daily Log
 
 What the robot saw and did each time it woke up. Newest at top.
-_Last updated: May 25, 2026 at 03:01 PM ET_
+_Last updated: May 25, 2026 at 04:24 PM ET_
 
 ### Performance since 2026-05-21
 | | Return | Value |
@@ -9,6 +9,66 @@ _Last updated: May 25, 2026 at 03:01 PM ET_
 | 📈 **Our Portfolio** | **+0.90%** | $101,098.03 |
 | 📈 S&P 500 (SPY) | +0.37% | $745.67 |
 | ✅ **Alpha** | **+0.53%** | Beating the market |
+
+## May 25, 04:24 PM ET — Main scan | Pi: 48.7°C
+
+**Market check:**
+- Market is going **up** 📈
+- Mood: calm (VIX 17)
+- Investors defensive
+- Currently holding: CRWD, MU, PANW, PLTR, SLB
+- Scoreboard: Us **+0.90%** vs S&P 500 +0.37% (**beating** by 0.53%)
+
+**Money flowing into:** Energy (+5%), Healthcare (+4%), Natural Gas (+4%)
+**Money flowing out of:** Industrials (-0%), Materials (-3%), Gold (-4%)
+
+**Looked at 56 stocks:**
+- already holding: 5
+- earnings report too close: 4
+- not enough trading volume: 6
+- smart money quietly selling: 16
+- no buy setup today: 19
+- ✓ **6 stocks ready to trade**
+
+**Result:** Found 6 setup(s), but didn't buy any.
+
+- ✗ **Skipped RDW** — market/daily cap
+    - Plan: buy at $17.46, sell-stop at $15.23, target $21.92
+    - 1133 shares, risking $2527
+- ✗ **Skipped LUNR** — market/daily cap
+    - Plan: buy at $38.26, sell-stop at $34.6, target $45.58
+    - 660 shares, risking $2416
+- ✗ **Skipped ASTS** — market/daily cap
+    - Plan: buy at $105.88, sell-stop at $96.57, target $124.5
+    - 238 shares, risking $2216
+- ✗ **Skipped HPE** — market/daily cap
+    - Plan: buy at $37.58, sell-stop at $33.66, target $45.42
+    - 672 shares, risking $2634
+- ✗ **Skipped PL** — market/daily cap
+    - Plan: buy at $44.34, sell-stop at $43.13, target $46.76
+    - 570 shares, risking $690
+- ✗ **Skipped NOK** — market/daily cap
+    - Plan: buy at $15.46, sell-stop at $14.07, target $18.24
+    - 1634 shares, risking $2271
+
+<details><summary>Notable news today</summary>
+
+- ✓ **AMD** — strong positive news (+3)
+    - _[+] 7 Small-Cap Stocks More Than Doubled In May: Micron Did Only 46%_
+- ✓ **MU** — strong positive news (+3)
+    - _[+] 7 Small-Cap Stocks More Than Doubled In May: Micron Did Only 46%_
+- ✓ **TSLA** — strong positive news (+3)
+    - _[+] Ross Gerber Backs SpaceX IPO Following Successful Starship V3 Test Launch: 'Perf_
+- ✗ **META** — negative news (-2)
+    - [-] Bernie Sanders Issues Grim Warning About AI Replacing Millions Of Jobs Across Am
+- ✗ **GOOGL** — negative news (-2)
+    - [-] While Big Tech Pushes AI Agents, Aaron Levie Says Many Executives Still Don't Un
+- ✗ **AMZN** — negative news (-2)
+    - [~] Anthropic To Become More Valuable Than Today's AMD, Sk Hynix And Micron? Crypto 
+
+</details>
+
+---
 
 ## May 25, 03:01 PM ET — News check | Pi: 44.8°C
 
@@ -1428,45 +1488,6 @@ _Last updated: May 25, 2026 at 03:01 PM ET_
     - [-] Why Is AMD Stock Falling Friday?
 - ✗ **SMCI** — negative news (-2)
     - [-] Chip Stocks Fall As Inflation Fears Trigger Profit-Taking
-
-</details>
-
----
-
-## May 15, 11:37 AM ET — Main scan
-
-**Market check:**
-- Market is going **up** 📈
-- Mood: calm (VIX 17)
-- Investors confident
-- Currently holding: AMZN, GOOGL
-
-**Money flowing into:** Crude Oil (+21%), Energy (+7%), Natural Gas (+4%)
-**Money flowing out of:** Materials (-3%), Utilities (-4%), Gold (-6%)
-
-**Looked at 33 stocks:**
-- already holding: 2
-- not enough trading volume: 2
-- smart money quietly selling: 10
-- no buy setup today: 18
-- ✓ **1 stocks ready to trade**
-
-**Result:** Found 1 setup(s), but didn't buy any.
-
-- ✗ **Skipped FANG** — position/daily cap
-    - Plan: buy at $203.53, sell-stop at $184.84, target $240.91
-    - 132 shares, risking $2467
-
-<details><summary>Notable news today</summary>
-
-- ✓ **MRVL** — strong positive news (+2)
-    - _[~] The Bond Market Just Fired A Warning Shot At The AI Rally — Fed Rate Hike Ahead_
-- ✗ **NVDA** — negative news (-3)
-    - [-] The Great Chip Letdown: Why The Trump-Xi Summit Just Tanked NVIDIA And Intel
-- ✗ **SMCI** — negative news (-2)
-    - [-] Chip Stocks Fall As Inflation Fears Trigger Profit-Taking
-- ✗ **META** — negative news (-3)
-    - [-] Rising Oil And Yields Getting In The Way Of Dual Market Manias
 
 </details>
 
