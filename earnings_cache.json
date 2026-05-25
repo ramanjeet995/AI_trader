@@ -145,11 +145,11 @@
   },
   "SPY": {
     "next_earnings": null,
-    "fetched_at": "2026-05-22T20:23:28.668117"
+    "fetched_at": "2026-05-25T13:33:14.067850"
   },
   "QQQ": {
     "next_earnings": null,
-    "fetched_at": "2026-05-22T20:23:28.668144"
+    "fetched_at": "2026-05-25T13:33:14.067875"
   },
   "IWM": {
     "next_earnings": null,
@@ -201,7 +201,7 @@
   },
   "GDX": {
     "next_earnings": null,
-    "fetched_at": "2026-05-22T20:23:28.586621"
+    "fetched_at": "2026-05-25T13:33:13.993188"
   },
   "GDXJ": {
     "next_earnings": null,
@@ -229,7 +229,7 @@
   },
   "GOLD": {
     "next_earnings": null,
-    "fetched_at": "2026-05-22T20:23:28.586553"
+    "fetched_at": "2026-05-25T13:33:13.993125"
   },
   "CLF": {
     "next_earnings": "2026-07-20",
@@ -357,7 +357,7 @@
   },
   "RGTI": {
     "next_earnings": null,
-    "fetched_at": "2026-05-22T20:23:28.668004"
+    "fetched_at": "2026-05-25T13:33:14.067742"
   },
   "QBTS": {
     "next_earnings": "2026-08-06",

@@ -1,14 +1,70 @@
 # AI Trader — Daily Log
 
 What the robot saw and did each time it woke up. Newest at top.
-_Last updated: May 22, 2026 at 04:26 PM ET_
+_Last updated: May 25, 2026 at 09:34 AM ET_
 
 ### Performance since 2026-05-21
 | | Return | Value |
 |---|---|---|
-| 📈 **Our Portfolio** | **+0.56%** | $100,754.79 |
+| 📈 **Our Portfolio** | **+0.90%** | $101,098.03 |
 | 📈 S&P 500 (SPY) | +0.37% | $745.67 |
-| ✅ **Alpha** | **+0.19%** | Beating the market |
+| ✅ **Alpha** | **+0.53%** | Beating the market |
+
+## May 25, 09:34 AM ET — Main scan | Pi: 49.2°C
+
+**Market check:**
+- Market is going **up** 📈
+- Mood: calm (VIX 17)
+- Investors defensive
+- Currently holding: CRWD, MU, PANW, PLTR, SLB
+- Scoreboard: Us **+0.90%** vs S&P 500 +0.37% (**beating** by 0.53%)
+
+**Money flowing into:** Energy (+5%), Healthcare (+4%), Natural Gas (+4%)
+**Money flowing out of:** Industrials (-0%), Materials (-3%), Gold (-4%)
+
+**Looked at 56 stocks:**
+- already holding: 5
+- earnings report too close: 4
+- not enough trading volume: 6
+- smart money quietly selling: 16
+- no buy setup today: 19
+- ✓ **6 stocks ready to trade**
+
+**Result:** Found 6 setup(s), but didn't buy any.
+
+- ✗ **Skipped RDW** — market/daily cap
+    - Plan: buy at $17.46, sell-stop at $15.23, target $21.92
+    - 1133 shares, risking $2527
+- ✗ **Skipped LUNR** — market/daily cap
+    - Plan: buy at $38.26, sell-stop at $34.6, target $45.58
+    - 660 shares, risking $2416
+- ✗ **Skipped ASTS** — market/daily cap
+    - Plan: buy at $105.88, sell-stop at $96.57, target $124.5
+    - 238 shares, risking $2216
+- ✗ **Skipped HPE** — market/daily cap
+    - Plan: buy at $37.58, sell-stop at $33.66, target $45.42
+    - 672 shares, risking $2634
+- ✗ **Skipped PL** — market/daily cap
+    - Plan: buy at $44.34, sell-stop at $43.13, target $46.76
+    - 570 shares, risking $690
+- ✗ **Skipped NOK** — market/daily cap
+    - Plan: buy at $15.46, sell-stop at $14.07, target $18.24
+    - 1634 shares, risking $2271
+
+<details><summary>Notable news today</summary>
+
+- ✓ **AMD** — strong positive news (+3)
+    - _[~] Anthropic To Become More Valuable Than Today's AMD, Sk Hynix And Micron? Crypto _
+- ✗ **META** — negative news (-3)
+    - [-] Bernie Sanders Issues Grim Warning About AI Replacing Millions Of Jobs Across Am
+- ✗ **AMZN** — negative news (-3)
+    - [~] Anthropic To Become More Valuable Than Today's AMD, Sk Hynix And Micron? Crypto 
+- ✗ **MSFT** — negative news (-3)
+    - [~] Tom Lee Says Mag-7 Bear Market Is Over, But Trouble Is Brewing For Rest Of Wall 
+
+</details>
+
+---
 
 ## May 22, 04:26 PM ET — Main scan | Pi: 50.1°C
 
@@ -1472,25 +1528,6 @@ _Last updated: May 22, 2026 at 04:26 PM ET_
 
 - ✓ **AVGO** — strong positive news (+2)
 - ✓ **COIN** — strong positive news (+2)
-- ✓ **QQQ** — strong positive news (+2)
-- ✗ **AMD** — negative news (-2)
-- ✗ **AMZN** — negative news (-2)
-- ✗ **AAPL** — negative news (-2)
-
-</details>
-
----
-
-## May 14, 03:25 PM ET — News check
-
-**Market check:**
-- Market is going **up** 📈
-
-**Result:** No trades today.
-<details><summary>Notable news today</summary>
-
-- ✓ **AVGO** — strong positive news (+3)
-- ✓ **COIN** — strong positive news (+3)
 - ✓ **QQQ** — strong positive news (+2)
 - ✗ **AMD** — negative news (-2)
 - ✗ **AMZN** — negative news (-2)
