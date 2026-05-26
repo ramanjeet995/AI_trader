@@ -1,14 +1,33 @@
 # AI Trader — Daily Log
 
 What the robot saw and did each time it woke up. Newest at top.
-_Last updated: May 26, 2026 at 11:01 AM ET_
+_Last updated: May 26, 2026 at 11:06 AM ET_
 
 ### Performance since 2026-05-21
 | | Return | Value |
 |---|---|---|
-| 📈 **Our Portfolio** | **+3.93%** | $104,139.34 |
-| 📈 S&P 500 (SPY) | +1.14% | $751.36 |
-| ✅ **Alpha** | **+2.80%** | Beating the market |
+| 📈 **Our Portfolio** | **+4.00%** | $104,202.00 |
+| 📈 S&P 500 (SPY) | +1.06% | $750.77 |
+| ✅ **Alpha** | **+2.94%** | Beating the market |
+
+## May 26, 11:06 AM ET — News check | Pi: 50.1°C
+
+**Market check:**
+- Market is going **up** 📈
+- Scoreboard: Us **+4.00%** vs S&P 500 +1.06% (**beating** by 2.94%)
+
+**Result:** No trades today.
+<details><summary>Notable news today</summary>
+
+- ✓ **AMD** — strong positive news (+2)
+- ✓ **MU** — strong positive news (+2)
+- ✓ **CRWD** — strong positive news (+2)
+- ✗ **AAPL** — negative news (-2)
+- ✗ **SNOW** — negative news (-3)
+
+</details>
+
+---
 
 ## May 26, 11:01 AM ET — Big-news check | Pi: 46.7°C
 
@@ -1547,21 +1566,4 @@ _Last updated: May 26, 2026 at 11:01 AM ET_
 - Market is going **up** 📈
 
 **Result:** No trades today.
----
-
-## May 15, 12:47 PM ET — News check
-
-**Market check:**
-- Market is going **up** 📈
-
-**Result:** No trades today.
-<details><summary>Notable news today</summary>
-
-- ✓ **SPY** — strong positive news (+3)
-- ✗ **META** — negative news (-2)
-- ✗ **NVDA** — negative news (-3)
-- ✗ **AMD** — negative news (-3)
-
-</details>
-
 ---
