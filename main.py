@@ -57,6 +57,7 @@ from notifier import send_no_setup, send_signals, send
 import volume_source
 import discovery
 from analyst_ratings import analyst_score as get_analyst_score
+import paper_tracker
 
 load_dotenv(Path(__file__).parent / ".env")
 
@@ -393,6 +394,45 @@ def _save_human_log(logs: list):
                     for h in n.get("headlines", [])[:1]:
                         lines.append(f"    - {h}")
                 lines.append("")
+                lines.append("</details>")
+                lines.append("")
+
+        # ── Paper Tracker ("What If" picks) ──────────────────────────────
+        pt = entry.get("paper_tracker")
+        if pt:
+            new_picks = pt.get("new_picks", [])
+            active = pt.get("active", [])
+            stats = pt.get("stats", {})
+
+            if new_picks or active:
+                lines.append("<details><summary>🔮 What-If Tracker (sentiment picks we're watching)</summary>")
+                lines.append("")
+
+                if new_picks:
+                    lines.append("**New picks flagged:**")
+                    for p in new_picks:
+                        lines.append(f"- **{p['symbol']}** at ${p['entry']:.2f} — {', '.join(p['reasons'])}")
+                    lines.append("")
+
+                if active:
+                    lines.append("**Tracking:**")
+                    lines.append("| Stock | Entry | Now | Peak | Day |")
+                    lines.append("|---|---|---|---|---|")
+                    for p in active:
+                        pct = p.get("current_pct", 0)
+                        peak = p.get("peak_pct", 0)
+                        icon = "📈" if pct > 0 else "📉"
+                        lines.append(f"| {icon} {p['symbol']} | ${p['entry']:.2f} | "
+                                     f"{pct:+.1f}% | +{peak:.1f}% | {p['days']}/5 |")
+                    lines.append("")
+
+                if stats and stats.get("total_picks", 0) > 0:
+                    lines.append(f"**Track record:** {stats['total_picks']} picks, "
+                                 f"**{stats['hit_rate']:.0f}%** hit rate, "
+                                 f"avg return **{stats['avg_return']:+.1f}%**, "
+                                 f"avg peak **+{stats['avg_peak']:.1f}%**")
+                    lines.append("")
+
                 lines.append("</details>")
                 lines.append("")
 
@@ -838,6 +878,77 @@ def run_full_scan():
             "pos": pos, "signal_raw": signal,
         })
 
+    # ── Paper Tracker: detect "might blow up" stocks based on sentiment ────
+    paper_watchlist_data = []
+    for n in news_summary:
+        sym = n["symbol"]
+        raw = all_bars.get(sym)
+        close_price = 0
+        ret_5d = 0
+        if raw is not None and len(raw) >= 6:
+            close_price = float(raw["close"].iloc[-1])
+            close_5d = float(raw["close"].iloc[-6])
+            ret_5d = ((close_price / close_5d) - 1) * 100 if close_5d > 0 else 0
+        raw_hl = [h[4:] if h[:3] in ("[+]", "[-]", "[~]") else h for h in n.get("headlines", [])]
+        from sentiment import classify_news_phase as _cnp, classify_ma_role as _cmr
+        paper_watchlist_data.append({
+            "symbol": sym,
+            "sent_score": n["score"],
+            "sent_label": n["sentiment"],
+            "analyst_score": n.get("analyst_score", 0),
+            "news_phase": _cnp(raw_hl),
+            "ma_role": _cmr(sym, raw_hl),
+            "ret_5d": ret_5d,
+            "close_price": close_price,
+            "headlines": n.get("headlines", [])[:2],
+        })
+
+    paper_active_syms = paper_tracker.get_active_symbols()
+    paper_candidates = paper_tracker.detect_candidates(
+        paper_watchlist_data, open_positions, paper_active_syms)
+
+    # Update existing paper picks with current prices
+    price_lookup = {}
+    for sym, raw in all_bars.items():
+        if raw is not None and len(raw) > 0:
+            price_lookup[sym] = float(raw["close"].iloc[-1])
+    paper_update = paper_tracker.update_tracking(price_lookup)
+
+    # Add new candidates
+    paper_added = paper_tracker.add_candidates(paper_candidates)
+
+    if paper_candidates or paper_update["active_count"] > 0:
+        print(f"\n{'='*60}")
+        print(f"  PAPER TRACKER — \"What If\" Portfolio")
+        print(f"{'='*60}")
+        if paper_candidates:
+            print(f"  New picks flagged: {len(paper_candidates)}")
+            for c in paper_candidates:
+                print(f"    {c['symbol']:<6} ${c['entry_price']:<8.2f}  {', '.join(c['reasons'])}")
+        active_picks = paper_tracker.get_active()
+        if active_picks:
+            print(f"  Tracking {len(active_picks)} active pick(s):")
+            for p in active_picks:
+                pct = p.get("current_pct", 0)
+                peak = p.get("peak_pct", 0)
+                icon = "+" if pct >= 0 else ""
+                print(f"    {p['symbol']:<6} entry=${p['entry_price']:<8.2f} "
+                      f"now {icon}{pct:.1f}%  peak +{peak:.1f}%  "
+                      f"day {p['days_tracked']}/{paper_tracker.MAX_TRACK_DAYS}")
+        if paper_update["expired"]:
+            print(f"  Expired picks:")
+            for e in paper_update["expired"]:
+                icon = "WIN" if e.get("final_pct", 0) > 0 else "LOSS"
+                print(f"    [{icon}] {e['symbol']}: final {e['final_pct']:+.1f}%  "
+                      f"peak +{e['peak_pct']:.1f}%")
+        stats = paper_tracker.get_stats()
+        if stats["total_picks"] > 0:
+            print(f"  Stats: {stats['total_picks']} picks, "
+                  f"{stats['hit_rate']:.0f}% hit rate, "
+                  f"avg return {stats['avg_return']:+.1f}%, "
+                  f"avg peak +{stats['avg_peak']:.1f}%")
+        print(f"{'='*60}\n")
+
     print(f"\n{'-'*60}")
     if not signals:
         print("  No setups found. Stay in cash.")
@@ -868,6 +979,14 @@ def run_full_scan():
             "top_news": [{"symbol": n["symbol"], "sentiment": n["sentiment"],
                           "score": n["score"], "headlines": n["headlines"]}
                          for n in news_summary if n["score"] != 0][:10],
+            "paper_tracker": {
+                "new_picks": [{"symbol": c["symbol"], "entry": c["entry_price"],
+                               "reasons": c["reasons"]} for c in paper_candidates],
+                "active": [{"symbol": p["symbol"], "entry": p["entry_price"],
+                            "current_pct": p["current_pct"], "peak_pct": p["peak_pct"],
+                            "days": p["days_tracked"]} for p in paper_tracker.get_active()],
+                "stats": paper_tracker.get_stats(),
+            },
         }, account_value=account_value, spy_price=spy_price)
         return
 
@@ -1095,6 +1214,14 @@ def run_full_scan():
         "top_news": [{"symbol": n["symbol"], "sentiment": n["sentiment"],
                       "score": n["score"], "headlines": n["headlines"]}
                      for n in news_summary if n["score"] != 0][:10],
+        "paper_tracker": {
+            "new_picks": [{"symbol": c["symbol"], "entry": c["entry_price"],
+                           "reasons": c["reasons"]} for c in paper_candidates],
+            "active": [{"symbol": p["symbol"], "entry": p["entry_price"],
+                        "current_pct": p["current_pct"], "peak_pct": p["peak_pct"],
+                        "days": p["days_tracked"]} for p in paper_tracker.get_active()],
+            "stats": paper_tracker.get_stats(),
+        },
     }, account_value=account_value, spy_price=spy_price)
     _print_news_summary(news_summary)
 
