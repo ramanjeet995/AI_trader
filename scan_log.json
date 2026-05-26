@@ -1,218 +1,5 @@
 [
   {
-    "timestamp": "2026-05-15T12:20:21.561665-04:00",
-    "mode": "FULL",
-    "spy_regime": "BULL",
-    "posture": "RISK-ON",
-    "vix": 17.260000228881836,
-    "spy_atr_pct": 1.04,
-    "in_window": false,
-    "market_open": true,
-    "data_feed": "iex",
-    "yfinance_patched": "0/45",
-    "sentiment_backend": "finbert",
-    "earnings_cache_size": 54,
-    "macro_blackout": false,
-    "macro_reason": "",
-    "next_macro_event": {
-      "name": "FOMC",
-      "datetime": "2026-06-17T14:00:00-04:00",
-      "days_away": 33,
-      "hours_away": 793.7
-    },
-    "open_positions": [
-      "AMZN",
-      "GOOGL"
-    ],
-    "new_today": 0,
-    "filter_stats": {
-      "scanned": 33,
-      "no_data": 0,
-      "held": 2,
-      "market_volatile": 0,
-      "earnings_blackout": 0,
-      "failed_filters": 2,
-      "obv_distribution": 10,
-      "no_strategy_signal": 18,
-      "of_or_sent_reject": 0,
-      "sector_misalign": 0,
-      "passed_all": 1
-    },
-    "sectors_top3": [
-      {
-        "ticker": "USO",
-        "sector": "Crude Oil",
-        "ret_20d": 21.57,
-        "rs": 4.87,
-        "obv": "ACCUMULATION",
-        "above_ema": "True",
-        "score": 51.66
-      },
-      {
-        "ticker": "XLE",
-        "sector": "Energy",
-        "ret_20d": 7.24,
-        "rs": 1.63,
-        "obv": "ACCUMULATION",
-        "above_ema": "True",
-        "score": 19.33
-      },
-      {
-        "ticker": "UNG",
-        "sector": "Natural Gas",
-        "ret_20d": 4.1,
-        "rs": 0.93,
-        "obv": "ACCUMULATION",
-        "above_ema": "True",
-        "score": 12.26
-      }
-    ],
-    "sectors_bottom3": [
-      {
-        "ticker": "XLU",
-        "sector": "Utilities",
-        "ret_20d": -3.41,
-        "rs": -0.77,
-        "obv": "DISTRIBUTION",
-        "above_ema": "False",
-        "score": -10.7
-      },
-      {
-        "ticker": "XLB",
-        "sector": "Materials",
-        "ret_20d": -3.42,
-        "rs": -0.77,
-        "obv": "DISTRIBUTION",
-        "above_ema": "False",
-        "score": -10.71
-      },
-      {
-        "ticker": "GLD",
-        "sector": "Gold",
-        "ret_20d": -5.86,
-        "rs": -1.32,
-        "obv": "DISTRIBUTION",
-        "above_ema": "False",
-        "score": -16.23
-      }
-    ],
-    "signals": [
-      {
-        "symbol": "FANG",
-        "strategy": "A",
-        "confidence": 0.96,
-        "signal": "BUY",
-        "entry": 202.89,
-        "stop": 184.84,
-        "target": 238.99,
-        "shares": 136,
-        "notional": 27593.04,
-        "risk_$": 2454.8,
-        "sentiment": "NEUTRAL",
-        "obv": "ACCUMULATION",
-        "of_score": 2,
-        "sector_score": 999.0,
-        "reason": "Pullback zone [191.69-203.54] | RSI=57.2 | bullish candle",
-        "order_status": "SKIPPED: position/daily cap",
-        "headlines": [
-          "No recent news"
-        ]
-      }
-    ],
-    "top_news": [
-      {
-        "symbol": "NVDA",
-        "sentiment": "NEGATIVE",
-        "score": -3,
-        "headlines": [
-          "[~] Innovative AI-Themed ETF Arrives With New Filing By ProShares",
-          "[-] Why Is AMD Stock Falling Friday?"
-        ]
-      },
-      {
-        "symbol": "AMD",
-        "sentiment": "NEGATIVE",
-        "score": -2,
-        "headlines": [
-          "[-] Why Is AMD Stock Falling Friday?",
-          "[-] Chip Stocks Fall As Inflation Fears Trigger Profit-Taking"
-        ]
-      },
-      {
-        "symbol": "ARM",
-        "sentiment": "NEUTRAL",
-        "score": -1,
-        "headlines": [
-          "[~] The Bond Market Just Fired A Warning Shot At The AI Rally \u2014 Fed Rate Hike Ahead",
-          "[~] Arm Holdings Tech Rally Takes Breather As Investors Weigh Supply Chain Risks"
-        ]
-      },
-      {
-        "symbol": "SMCI",
-        "sentiment": "NEGATIVE",
-        "score": -2,
-        "headlines": [
-          "[-] Chip Stocks Fall As Inflation Fears Trigger Profit-Taking",
-          "[~] Why Is SMCI Stock Surging On Thursday?"
-        ]
-      },
-      {
-        "symbol": "MRVL",
-        "sentiment": "POSITIVE",
-        "score": 2,
-        "headlines": [
-          "[~] The Bond Market Just Fired A Warning Shot At The AI Rally \u2014 Fed Rate Hike Ahead",
-          "[-] Chip Stocks Fall As Inflation Fears Trigger Profit-Taking"
-        ]
-      },
-      {
-        "symbol": "META",
-        "sentiment": "NEGATIVE",
-        "score": -3,
-        "headlines": [
-          "[-] Rising Oil And Yields Getting In The Way Of Dual Market Manias",
-          "[~] Bill Ackman Catches Another Falling Magnificent Seven Knife \u2014 Will It Work This "
-        ]
-      },
-      {
-        "symbol": "GOOGL",
-        "sentiment": "NEGATIVE",
-        "score": -3,
-        "headlines": [
-          "[~] Innovative AI-Themed ETF Arrives With New Filing By ProShares",
-          "[~] Bill Ackman Posts On X \"We sold Google and bought Microsoft. ...\""
-        ]
-      },
-      {
-        "symbol": "AMZN",
-        "sentiment": "NEGATIVE",
-        "score": -3,
-        "headlines": [
-          "[~] OpenAI Announces Preview Rollout Of Personal Finance Integration In ChatGPT Usin",
-          "[-] Rising Oil And Yields Getting In The Way Of Dual Market Manias"
-        ]
-      },
-      {
-        "symbol": "TSLA",
-        "sentiment": "NEGATIVE",
-        "score": -3,
-        "headlines": [
-          "[~] Inside SpaceX's Starship V3 Before Tuesday's Debut: Three Things To Watch",
-          "[-] Rising Oil And Yields Getting In The Way Of Dual Market Manias"
-        ]
-      },
-      {
-        "symbol": "NFLX",
-        "sentiment": "NEUTRAL",
-        "score": -1,
-        "headlines": [
-          "[~] Guggenheim Reiterates Buy on Netflix, Maintains $120 Price Target",
-          "[~] Trump's Trading Disclosure Shows Activity In Nvidia, AMD, Microsoft, Oracle And "
-        ]
-      }
-    ]
-  },
-  {
     "timestamp": "2026-05-15T12:31:28.718785-04:00",
     "mode": "CATALYST",
     "spy_regime": "BULL",
@@ -12159,6 +11946,623 @@
       "account_now": 101098.03,
       "spy_start": 742.91,
       "spy_now": 745.67
+    }
+  },
+  {
+    "timestamp": "2026-05-26T09:35:28.916489-04:00",
+    "mode": "FULL",
+    "spy_regime": "BULL",
+    "posture": "RISK-OFF",
+    "vix": 16.59000015258789,
+    "spy_atr_pct": 0.98,
+    "in_window": true,
+    "market_open": true,
+    "data_feed": "iex",
+    "yfinance_patched": "0/68",
+    "sentiment_backend": "finbert",
+    "earnings_cache_size": 73,
+    "macro_blackout": false,
+    "macro_reason": "",
+    "next_macro_event": {
+      "name": "FOMC",
+      "datetime": "2026-06-17T14:00:00-04:00",
+      "days_away": 22,
+      "hours_away": 532.4
+    },
+    "open_positions": [
+      "CRWD",
+      "MU",
+      "PANW",
+      "PLTR",
+      "SLB"
+    ],
+    "new_today": 0,
+    "filter_stats": {
+      "scanned": 56,
+      "no_data": 0,
+      "held": 5,
+      "market_volatile": 0,
+      "earnings_blackout": 4,
+      "failed_filters": 6,
+      "obv_distribution": 6,
+      "no_strategy_signal": 20,
+      "of_or_sent_reject": 0,
+      "sector_misalign": 0,
+      "passed_all": 15,
+      "low_conviction": 1
+    },
+    "sectors_top3": [
+      {
+        "ticker": "UNG",
+        "sector": "Natural Gas",
+        "ret_20d": 7.94,
+        "rs": 1.49,
+        "obv": "ACCUMULATION",
+        "above_ema": "True",
+        "score": 17.85
+      },
+      {
+        "ticker": "XLV",
+        "sector": "Healthcare",
+        "ret_20d": 3.67,
+        "rs": 0.69,
+        "obv": "ACCUMULATION",
+        "above_ema": "True",
+        "score": 9.87
+      },
+      {
+        "ticker": "SLV",
+        "sector": "Silver",
+        "ret_20d": 4.39,
+        "rs": 0.82,
+        "obv": "ACCUMULATION",
+        "above_ema": "False",
+        "score": 9.21
+      }
+    ],
+    "sectors_bottom3": [
+      {
+        "ticker": "XLB",
+        "sector": "Materials",
+        "ret_20d": -1.38,
+        "rs": -0.26,
+        "obv": "DISTRIBUTION",
+        "above_ema": "False",
+        "score": -5.58
+      },
+      {
+        "ticker": "GLD",
+        "sector": "Gold",
+        "ret_20d": -1.51,
+        "rs": -0.28,
+        "obv": "DISTRIBUTION",
+        "above_ema": "False",
+        "score": -5.83
+      },
+      {
+        "ticker": "USO",
+        "sector": "Crude Oil",
+        "ret_20d": -2.53,
+        "rs": -0.47,
+        "obv": "DISTRIBUTION",
+        "above_ema": "False",
+        "score": -7.73
+      }
+    ],
+    "discovered": [],
+    "discovered_watchlist": [
+      "AGYS",
+      "TATT",
+      "AKTX"
+    ],
+    "signals": [
+      {
+        "symbol": "ARM",
+        "strategy": "D",
+        "confidence": 0.95,
+        "signal": "BUY",
+        "entry": 314.25,
+        "stop": 234.14,
+        "target": 474.47,
+        "shares": 47,
+        "notional": 14769.75,
+        "risk_$": 3765.17,
+        "sentiment": "NEUTRAL",
+        "obv": "ACCUMULATION",
+        "of_score": 2,
+        "sector_score": 999.0,
+        "reason": "Momentum continuation | RSI=77.6 | 5d +45.9% | MAs stacked",
+        "order_status": "SKIPPED: holding 3/3, replace failed",
+        "headlines": [
+          "[~] D-Wave, Dell, And IonQ Are Among Top 10 Large-Cap Gainers Last Week (May 18-May "
+        ]
+      },
+      {
+        "symbol": "HPE",
+        "strategy": "D",
+        "confidence": 0.95,
+        "signal": "BUY",
+        "entry": 37.85,
+        "stop": 31.87,
+        "target": 49.81,
+        "shares": 641,
+        "notional": 24261.85,
+        "risk_$": 3833.18,
+        "sentiment": "NEUTRAL",
+        "obv": "ACCUMULATION",
+        "of_score": 2,
+        "sector_score": 999.0,
+        "reason": "Momentum continuation | RSI=79.5 | 5d +14.7% | MAs stacked",
+        "order_status": "SKIPPED: holding 3/3, replace failed",
+        "headlines": [
+          "No recent news"
+        ]
+      },
+      {
+        "symbol": "LUNR",
+        "strategy": "D",
+        "confidence": 0.9,
+        "signal": "BUY",
+        "entry": 42.27,
+        "stop": 31.87,
+        "target": 63.07,
+        "shares": 368,
+        "notional": 15555.36,
+        "risk_$": 3827.2,
+        "sentiment": "NEUTRAL",
+        "obv": "ACCUMULATION",
+        "of_score": 2,
+        "sector_score": 999.0,
+        "reason": "Momentum continuation | RSI=74.8 | 5d +25.9% | MAs stacked",
+        "order_status": "SKIPPED: holding 3/3, replace failed",
+        "headlines": [
+          "[+] Stock Market Today: S&P 500, Dow, Nasdaq Futures Up Amid US 'Defensive Strikes' ",
+          "[~] Intuitive Machines Stock Hits 52-Week High - Here's Why"
+        ]
+      },
+      {
+        "symbol": "AMD",
+        "strategy": "D",
+        "confidence": 0.89,
+        "signal": "BUY",
+        "entry": 484.06,
+        "stop": 407.58,
+        "target": 637.02,
+        "shares": 52,
+        "notional": 25171.12,
+        "risk_$": 3976.96,
+        "sentiment": "POSITIVE",
+        "obv": "ACCUMULATION",
+        "of_score": 2,
+        "sector_score": 999.0,
+        "reason": "Momentum continuation | RSI=74.8 | 5d +15.0% | MAs stacked",
+        "order_status": "SKIPPED: holding 3/3, replace failed",
+        "headlines": [
+          "[~] What Is Going On With AMD Stock On Tuesday?",
+          "[+] NVIDIA's Jensen Huang Declares China A 'Very Important' Market"
+        ]
+      },
+      {
+        "symbol": "ASTS",
+        "strategy": "D",
+        "confidence": 0.84,
+        "signal": "BUY",
+        "entry": 114.68,
+        "stop": 86.14,
+        "target": 171.76,
+        "shares": 112,
+        "notional": 12844.16,
+        "risk_$": 3196.48,
+        "sentiment": "NEUTRAL",
+        "obv": "ACCUMULATION",
+        "of_score": 2,
+        "sector_score": 999.0,
+        "reason": "Momentum continuation | RSI=71.9 | 5d +32.0% | MAs stacked",
+        "order_status": "SKIPPED: holding 3/3, replace failed",
+        "headlines": [
+          "[~] What's Going On With AST SpaceMobile Stock Tuesday?",
+          "[~] D-Wave, Dell, And IonQ Are Among Top 10 Large-Cap Gainers Last Week (May 18-May "
+        ]
+      },
+      {
+        "symbol": "NOK",
+        "strategy": "D",
+        "confidence": 0.83,
+        "signal": "BUY",
+        "entry": 15.78,
+        "stop": 13.32,
+        "target": 20.7,
+        "shares": 1559,
+        "notional": 24601.02,
+        "risk_$": 3835.14,
+        "sentiment": "NEUTRAL",
+        "obv": "ACCUMULATION",
+        "of_score": 2,
+        "sector_score": 999.0,
+        "reason": "Momentum continuation | RSI=72.9 | 5d +15.0% | MAs stacked",
+        "order_status": "SKIPPED: holding 3/3, replace failed",
+        "headlines": [
+          "[~] Consumer Tech News (May 18-22): Meta Cuts 8,000 Jobs, Nvidia Posts Strong Earnin"
+        ]
+      },
+      {
+        "symbol": "MARA",
+        "strategy": "D",
+        "confidence": 0.78,
+        "signal": "BUY",
+        "entry": 14.43,
+        "stop": 12.52,
+        "target": 18.25,
+        "shares": 1772,
+        "notional": 25569.96,
+        "risk_$": 3384.52,
+        "sentiment": "NEUTRAL",
+        "obv": "ACCUMULATION",
+        "of_score": 2,
+        "sector_score": 999.0,
+        "reason": "Momentum continuation | RSI=68.9 | 5d +18.6% | MAs stacked",
+        "order_status": "SKIPPED: holding 3/3, replace failed",
+        "headlines": [
+          "No recent news"
+        ]
+      },
+      {
+        "symbol": "RGTI",
+        "strategy": "D",
+        "confidence": 0.74,
+        "signal": "BUY",
+        "entry": 25.16,
+        "stop": 19.3,
+        "target": 36.88,
+        "shares": 545,
+        "notional": 13712.2,
+        "risk_$": 3193.7,
+        "sentiment": "NEUTRAL",
+        "obv": "ACCUMULATION",
+        "of_score": 2,
+        "sector_score": 999.0,
+        "reason": "Momentum continuation | RSI=66.9 | 5d +51.4% | MAs stacked",
+        "order_status": "SKIPPED: holding 3/3, replace failed",
+        "headlines": [
+          "[-] Quantum Computing Stocks Short Interest Jumps Amid Valuation Concerns"
+        ]
+      },
+      {
+        "symbol": "IONQ",
+        "strategy": "D",
+        "confidence": 0.74,
+        "signal": "BUY",
+        "entry": 62.42,
+        "stop": 51.71,
+        "target": 83.84,
+        "shares": 358,
+        "notional": 22346.36,
+        "risk_$": 3834.18,
+        "sentiment": "NEUTRAL",
+        "obv": "ACCUMULATION",
+        "of_score": 2,
+        "sector_score": 999.0,
+        "reason": "Momentum continuation | RSI=67.1 | 5d +26.6% | MAs stacked",
+        "order_status": "SKIPPED: holding 3/3, replace failed",
+        "headlines": [
+          "[~] D-Wave, Dell, And IonQ Are Among Top 10 Large-Cap Gainers Last Week (May 18-May ",
+          "[-] Quantum Computing Stocks Short Interest Jumps Amid Valuation Concerns"
+        ]
+      },
+      {
+        "symbol": "QBTS",
+        "strategy": "D",
+        "confidence": 0.68,
+        "signal": "BUY",
+        "entry": 27.37,
+        "stop": 21.93,
+        "target": 38.25,
+        "shares": 587,
+        "notional": 16066.19,
+        "risk_$": 3193.28,
+        "sentiment": "NEUTRAL",
+        "obv": "ACCUMULATION",
+        "of_score": 2,
+        "sector_score": 999.0,
+        "reason": "Momentum continuation | RSI=63.8 | 5d +43.4% | MAs stacked",
+        "order_status": "SKIPPED: holding 3/3, replace failed",
+        "headlines": [
+          "[+] D-Wave Quantum Awarded Second Year Funding For The Improved Materials For Superc",
+          "[~] D-Wave, Dell, And IonQ Are Among Top 10 Large-Cap Gainers Last Week (May 18-May "
+        ]
+      },
+      {
+        "symbol": "RIOT",
+        "strategy": "D",
+        "confidence": 0.6,
+        "signal": "BUY",
+        "entry": 25.5,
+        "stop": 22.32,
+        "target": 31.86,
+        "shares": 804,
+        "notional": 20502.0,
+        "risk_$": 2556.72,
+        "sentiment": "NEUTRAL",
+        "obv": "ACCUMULATION",
+        "of_score": 2,
+        "sector_score": 999.0,
+        "reason": "Momentum continuation | RSI=69.4 | 5d +10.0% | MAs stacked",
+        "order_status": "SKIPPED: holding 3/3, replace failed",
+        "headlines": [
+          "No recent news"
+        ]
+      },
+      {
+        "symbol": "GOOGL",
+        "strategy": "A",
+        "confidence": 0.85,
+        "signal": "BUY",
+        "entry": 384.6,
+        "stop": 377.98,
+        "target": 397.84,
+        "shares": 66,
+        "notional": 25383.6,
+        "risk_$": 436.92,
+        "sentiment": "NEUTRAL",
+        "obv": "ACCUMULATION",
+        "of_score": 1,
+        "sector_score": 999.0,
+        "reason": "Pullback zone [369.41-392.26] | RSI=58.6 | bullish candle",
+        "order_status": "SKIPPED: holding 3/3, replace failed",
+        "headlines": [
+          "[+] Nvidia's Jensen Huang Says AI Has Crossed A Critical Threshold: 'Tokens Are Now ",
+          "[+] Enlight Renewable Energy's Subsidiary Strikes Power Purchase Agreement With Goog"
+        ]
+      },
+      {
+        "symbol": "APLD",
+        "strategy": "D",
+        "confidence": 0.53,
+        "signal": "BUY",
+        "entry": 46.57,
+        "stop": 40.41,
+        "target": 58.89,
+        "shares": 519,
+        "notional": 24169.83,
+        "risk_$": 3197.04,
+        "sentiment": "NEUTRAL",
+        "obv": "ACCUMULATION",
+        "of_score": 2,
+        "sector_score": 999.0,
+        "reason": "Momentum continuation | RSI=61.7 | 5d +19.0% | MAs stacked",
+        "order_status": "SKIPPED: holding 3/3, replace failed",
+        "headlines": [
+          "[~] What's Going On With IREN Stock Tuesday?",
+          "[~] Forget Nvidia: IREN CEO Says A New AI Factory Built Today May Not Go Live Until "
+        ]
+      },
+      {
+        "symbol": "PL",
+        "strategy": "D",
+        "confidence": 0.51,
+        "signal": "BUY",
+        "entry": 46.2,
+        "stop": 40.29,
+        "target": 58.02,
+        "shares": 541,
+        "notional": 24994.2,
+        "risk_$": 3197.31,
+        "sentiment": "NEUTRAL",
+        "obv": "ACCUMULATION",
+        "of_score": 2,
+        "sector_score": 999.0,
+        "reason": "Momentum continuation | RSI=67.4 | 5d +11.1% | MAs stacked",
+        "order_status": "SKIPPED: holding 3/3, replace failed",
+        "headlines": [
+          "[~] Investors Pour Into NASA ETF Ahead of Anticipated SpaceX IPO",
+          "[~] Investors Pour Into NASA ETF Ahead of Anticipated SpaceX IPO"
+        ]
+      }
+    ],
+    "top_news": [
+      {
+        "symbol": "NVDA",
+        "sentiment": "POSITIVE",
+        "score": 2,
+        "headlines": [
+          "[~] What's Going On With IREN Stock Tuesday?",
+          "[~] What's Going On With Intel Stock Tuesday?"
+        ]
+      },
+      {
+        "symbol": "AMD",
+        "sentiment": "POSITIVE",
+        "score": 3,
+        "headlines": [
+          "[~] What Is Going On With AMD Stock On Tuesday?",
+          "[+] NVIDIA's Jensen Huang Declares China A 'Very Important' Market"
+        ]
+      },
+      {
+        "symbol": "MU",
+        "sentiment": "POSITIVE",
+        "score": 2,
+        "headlines": [
+          "[~] What's Going On With Micron Stock Tuesday?",
+          "[~] Assessing Micron Technology's Performance Against Competitors In Semiconductors "
+        ]
+      },
+      {
+        "symbol": "SMCI",
+        "sentiment": "NEUTRAL",
+        "score": -1,
+        "headlines": [
+          "[-] NVIDIA CEO Presses Super Micro On Compliance After Taiwan Crackdown"
+        ]
+      },
+      {
+        "symbol": "MRVL",
+        "sentiment": "STRONG_POSITIVE",
+        "score": 5,
+        "headlines": [
+          "[+] Susquehanna Maintains Positive on Marvell Technology, Raises Price Target to $23",
+          "[+] Cantor Fitzgerald Maintains Neutral on Marvell Technology, Raises Price Target t"
+        ]
+      },
+      {
+        "symbol": "VRT",
+        "sentiment": "NEUTRAL",
+        "score": 1,
+        "headlines": [
+          "[~] 10 Industrials Stocks Whale Activity In Today's Session",
+          "[+] Top Stocks To Benefit As Goldman Sachs Touts Liquid Cooling As The Next AI Trade"
+        ]
+      },
+      {
+        "symbol": "AMZN",
+        "sentiment": "NEUTRAL",
+        "score": -1,
+        "headlines": [
+          "[+] Nvidia's Jensen Huang Says AI Has Crossed A Critical Threshold: 'Tokens Are Now ",
+          "[~] Zohran Mamdani's Rent Freeze Plan May Get A Twist\u2014 Certain NYC Landlords Could R"
+        ]
+      },
+      {
+        "symbol": "TSLA",
+        "sentiment": "POSITIVE",
+        "score": 2,
+        "headlines": [
+          "[~] 'Pentagon spars with SpaceX over Starlink price hike during Iran war' - Reuters",
+          "[~] Ro Khanna Says US Economy 'Works For Capital First And Workers Last,' Calls For "
+        ]
+      },
+      {
+        "symbol": "MSFT",
+        "sentiment": "NEGATIVE",
+        "score": -3,
+        "headlines": [
+          "[+] Nvidia's Jensen Huang Says AI Has Crossed A Critical Threshold: 'Tokens Are Now ",
+          "[-] Massive Data Leak Hits Major US Newsrooms As Thousands Of Journalists' Informati"
+        ]
+      },
+      {
+        "symbol": "AAPL",
+        "sentiment": "NEGATIVE",
+        "score": -2,
+        "headlines": [
+          "[~] What's Going On With Intel Stock Tuesday?",
+          "[-] Ferrari's First-Ever EV Is Here, But RACE Stock Declines Pre-Market As Investors"
+        ]
+      }
+    ],
+    "paper_tracker": {
+      "new_picks": [
+        {
+          "symbol": "NVDA",
+          "entry": 216.96,
+          "reasons": [
+            "strong sentiment (+2)"
+          ]
+        },
+        {
+          "symbol": "AMD",
+          "entry": 484.06,
+          "reasons": [
+            "strong sentiment (+3)",
+            "momentum surge (+15.0% in 5d)"
+          ]
+        },
+        {
+          "symbol": "MRVL",
+          "entry": 214.47,
+          "reasons": [
+            "strong sentiment (+5)",
+            "analyst upgrade (+3)",
+            "momentum surge (+26.9% in 5d)"
+          ]
+        },
+        {
+          "symbol": "TSLA",
+          "entry": 432.94,
+          "reasons": [
+            "strong sentiment (+2)"
+          ]
+        },
+        {
+          "symbol": "LUNR",
+          "entry": 42.27,
+          "reasons": [
+            "momentum surge (+25.9% in 5d)"
+          ]
+        },
+        {
+          "symbol": "PL",
+          "entry": 46.2,
+          "reasons": [
+            "hype news detected (buy-the-rumor)"
+          ]
+        }
+      ],
+      "active": [
+        {
+          "symbol": "NVDA",
+          "entry": 216.96,
+          "current_pct": 0.0,
+          "peak_pct": 0.0,
+          "days": 0
+        },
+        {
+          "symbol": "AMD",
+          "entry": 484.06,
+          "current_pct": 0.0,
+          "peak_pct": 0.0,
+          "days": 0
+        },
+        {
+          "symbol": "MRVL",
+          "entry": 214.47,
+          "current_pct": 0.0,
+          "peak_pct": 0.0,
+          "days": 0
+        },
+        {
+          "symbol": "TSLA",
+          "entry": 432.94,
+          "current_pct": 0.0,
+          "peak_pct": 0.0,
+          "days": 0
+        },
+        {
+          "symbol": "LUNR",
+          "entry": 42.27,
+          "current_pct": 0.0,
+          "peak_pct": 0.0,
+          "days": 0
+        },
+        {
+          "symbol": "PL",
+          "entry": 46.2,
+          "current_pct": 0.0,
+          "peak_pct": 0.0,
+          "days": 0
+        }
+      ],
+      "stats": {
+        "total_picks": 0,
+        "winners": 0,
+        "losers": 0,
+        "hit_rate": 0,
+        "avg_return": 0,
+        "avg_peak": 0,
+        "best_pick": null,
+        "worst_pick": null
+      }
+    },
+    "cpu_temp": "43.8\u00b0C",
+    "benchmark": {
+      "start_date": "2026-05-21",
+      "portfolio_pct": 2.12,
+      "spy_pct": 0.92,
+      "alpha_pct": 1.2,
+      "account_start": 100196.86,
+      "account_now": 102318.14,
+      "spy_start": 742.91,
+      "spy_now": 749.71
     }
   }
 ]

@@ -1,14 +1,119 @@
 # AI Trader — Daily Log
 
 What the robot saw and did each time it woke up. Newest at top.
-_Last updated: May 25, 2026 at 04:24 PM ET_
+_Last updated: May 26, 2026 at 09:35 AM ET_
 
 ### Performance since 2026-05-21
 | | Return | Value |
 |---|---|---|
-| 📈 **Our Portfolio** | **+0.90%** | $101,098.03 |
-| 📈 S&P 500 (SPY) | +0.37% | $745.67 |
-| ✅ **Alpha** | **+0.53%** | Beating the market |
+| 📈 **Our Portfolio** | **+2.12%** | $102,318.14 |
+| 📈 S&P 500 (SPY) | +0.92% | $749.71 |
+| ✅ **Alpha** | **+1.20%** | Beating the market |
+
+## May 26, 09:35 AM ET — Main scan | Pi: 43.8°C
+
+**Market check:**
+- Market is going **up** 📈
+- Mood: calm (VIX 17)
+- Investors defensive
+- Currently holding: CRWD, MU, PANW, PLTR, SLB
+- Scoreboard: Us **+2.12%** vs S&P 500 +0.92% (**beating** by 1.20%)
+
+**Money flowing into:** Natural Gas (+8%), Healthcare (+4%), Silver (+4%)
+**Money flowing out of:** Materials (-1%), Gold (-2%), Crude Oil (-3%)
+
+**Looked at 56 stocks:**
+- already holding: 5
+- earnings report too close: 4
+- not enough trading volume: 6
+- smart money quietly selling: 6
+- no buy setup today: 20
+- setup exists but not strong enough: 1
+- ✓ **14 stocks ready to trade**
+
+**Result:** Found 14 setup(s), but didn't buy any.
+
+- ✗ **Skipped ARM** — holding 3/3, replace failed
+    - Plan: buy at $314.25, sell-stop at $234.14, target $474.47
+    - 47 shares, risking $3765
+- ✗ **Skipped HPE** — holding 3/3, replace failed
+    - Plan: buy at $37.85, sell-stop at $31.87, target $49.81
+    - 641 shares, risking $3833
+- ✗ **Skipped LUNR** — holding 3/3, replace failed
+    - Plan: buy at $42.27, sell-stop at $31.87, target $63.07
+    - 368 shares, risking $3827
+- ✗ **Skipped AMD** — holding 3/3, replace failed
+    - Plan: buy at $484.06, sell-stop at $407.58, target $637.02
+    - 52 shares, risking $3977
+- ✗ **Skipped ASTS** — holding 3/3, replace failed
+    - Plan: buy at $114.68, sell-stop at $86.14, target $171.76
+    - 112 shares, risking $3196
+- ✗ **Skipped NOK** — holding 3/3, replace failed
+    - Plan: buy at $15.78, sell-stop at $13.32, target $20.7
+    - 1559 shares, risking $3835
+- ✗ **Skipped MARA** — holding 3/3, replace failed
+    - Plan: buy at $14.43, sell-stop at $12.52, target $18.25
+    - 1772 shares, risking $3385
+- ✗ **Skipped RGTI** — holding 3/3, replace failed
+    - Plan: buy at $25.16, sell-stop at $19.3, target $36.88
+    - 545 shares, risking $3194
+- ✗ **Skipped IONQ** — holding 3/3, replace failed
+    - Plan: buy at $62.42, sell-stop at $51.71, target $83.84
+    - 358 shares, risking $3834
+- ✗ **Skipped QBTS** — holding 3/3, replace failed
+    - Plan: buy at $27.37, sell-stop at $21.93, target $38.25
+    - 587 shares, risking $3193
+- ✗ **Skipped RIOT** — holding 3/3, replace failed
+    - Plan: buy at $25.5, sell-stop at $22.32, target $31.86
+    - 804 shares, risking $2557
+- ✗ **Skipped GOOGL** — holding 3/3, replace failed
+    - Plan: buy at $384.6, sell-stop at $377.98, target $397.84
+    - 66 shares, risking $437
+- ✗ **Skipped APLD** — holding 3/3, replace failed
+    - Plan: buy at $46.57, sell-stop at $40.41, target $58.89
+    - 519 shares, risking $3197
+- ✗ **Skipped PL** — holding 3/3, replace failed
+    - Plan: buy at $46.2, sell-stop at $40.29, target $58.02
+    - 541 shares, risking $3197
+
+<details><summary>Notable news today</summary>
+
+- ✓ **NVDA** — strong positive news (+2)
+    - _[~] What's Going On With IREN Stock Tuesday?_
+- ✓ **AMD** — strong positive news (+3)
+    - _[~] What Is Going On With AMD Stock On Tuesday?_
+- ✓ **MU** — strong positive news (+2)
+    - _[~] What's Going On With Micron Stock Tuesday?_
+- ✗ **MSFT** — negative news (-3)
+    - [+] Nvidia's Jensen Huang Says AI Has Crossed A Critical Threshold: 'Tokens Are Now 
+- ✗ **AAPL** — negative news (-2)
+    - [~] What's Going On With Intel Stock Tuesday?
+
+</details>
+
+<details><summary>🔮 What-If Tracker (sentiment picks we're watching)</summary>
+
+**New picks flagged:**
+- **NVDA** at $216.96 — strong sentiment (+2)
+- **AMD** at $484.06 — strong sentiment (+3), momentum surge (+15.0% in 5d)
+- **MRVL** at $214.47 — strong sentiment (+5), analyst upgrade (+3), momentum surge (+26.9% in 5d)
+- **TSLA** at $432.94 — strong sentiment (+2)
+- **LUNR** at $42.27 — momentum surge (+25.9% in 5d)
+- **PL** at $46.20 — hype news detected (buy-the-rumor)
+
+**Tracking:**
+| Stock | Entry | Now | Peak | Day |
+|---|---|---|---|---|
+| 📉 NVDA | $216.96 | +0.0% | +0.0% | 0/5 |
+| 📉 AMD | $484.06 | +0.0% | +0.0% | 0/5 |
+| 📉 MRVL | $214.47 | +0.0% | +0.0% | 0/5 |
+| 📉 TSLA | $432.94 | +0.0% | +0.0% | 0/5 |
+| 📉 LUNR | $42.27 | +0.0% | +0.0% | 0/5 |
+| 📉 PL | $46.20 | +0.0% | +0.0% | 0/5 |
+
+</details>
+
+---
 
 ## May 25, 04:24 PM ET — Main scan | Pi: 48.7°C
 
@@ -1452,43 +1557,4 @@ _Last updated: May 25, 2026 at 04:24 PM ET_
 - Market is going **up** 📈
 
 **Result:** No trades today.
----
-
-## May 15, 12:20 PM ET — Main scan
-
-**Market check:**
-- Market is going **up** 📈
-- Mood: calm (VIX 17)
-- Investors confident
-- Currently holding: AMZN, GOOGL
-
-**Money flowing into:** Crude Oil (+22%), Energy (+7%), Natural Gas (+4%)
-**Money flowing out of:** Utilities (-3%), Materials (-3%), Gold (-6%)
-
-**Looked at 33 stocks:**
-- already holding: 2
-- not enough trading volume: 2
-- smart money quietly selling: 10
-- no buy setup today: 18
-- ✓ **1 stocks ready to trade**
-
-**Result:** Found 1 setup(s), but didn't buy any.
-
-- ✗ **Skipped FANG** — position/daily cap
-    - Plan: buy at $202.89, sell-stop at $184.84, target $238.99
-    - 136 shares, risking $2455
-
-<details><summary>Notable news today</summary>
-
-- ✓ **MRVL** — strong positive news (+2)
-    - _[~] The Bond Market Just Fired A Warning Shot At The AI Rally — Fed Rate Hike Ahead_
-- ✗ **NVDA** — negative news (-3)
-    - [~] Innovative AI-Themed ETF Arrives With New Filing By ProShares
-- ✗ **AMD** — negative news (-2)
-    - [-] Why Is AMD Stock Falling Friday?
-- ✗ **SMCI** — negative news (-2)
-    - [-] Chip Stocks Fall As Inflation Fears Trigger Profit-Taking
-
-</details>
-
 ---

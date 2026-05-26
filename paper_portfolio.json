@@ -1,0 +1,140 @@
+{
+  "active": [
+    {
+      "symbol": "NVDA",
+      "entry_price": 216.96,
+      "entry_date": "2026-05-26T13:35:26.751605",
+      "reasons": [
+        "strong sentiment (+2)"
+      ],
+      "sent_score": 2,
+      "analyst_score": 0,
+      "news_phase": "neutral",
+      "ma_role": "none",
+      "ret_5d": -2.4,
+      "peak_price": 216.96,
+      "peak_pct": 0.0,
+      "current_price": 216.96,
+      "current_pct": 0.0,
+      "days_tracked": 0,
+      "headlines": [
+        "[~] What's Going On With IREN Stock Tuesday?",
+        "[~] What's Going On With Intel Stock Tuesday?"
+      ]
+    },
+    {
+      "symbol": "AMD",
+      "entry_price": 484.06,
+      "entry_date": "2026-05-26T13:35:26.751670",
+      "reasons": [
+        "strong sentiment (+3)",
+        "momentum surge (+15.0% in 5d)"
+      ],
+      "sent_score": 3,
+      "analyst_score": 0,
+      "news_phase": "neutral",
+      "ma_role": "none",
+      "ret_5d": 15.0,
+      "peak_price": 484.06,
+      "peak_pct": 0.0,
+      "current_price": 484.06,
+      "current_pct": 0.0,
+      "days_tracked": 0,
+      "headlines": [
+        "[~] What Is Going On With AMD Stock On Tuesday?",
+        "[+] NVIDIA's Jensen Huang Declares China A 'Very Important' Market"
+      ]
+    },
+    {
+      "symbol": "MRVL",
+      "entry_price": 214.47,
+      "entry_date": "2026-05-26T13:35:26.751713",
+      "reasons": [
+        "strong sentiment (+5)",
+        "analyst upgrade (+3)",
+        "momentum surge (+26.9% in 5d)"
+      ],
+      "sent_score": 5,
+      "analyst_score": 3,
+      "news_phase": "neutral",
+      "ma_role": "none",
+      "ret_5d": 26.9,
+      "peak_price": 214.47,
+      "peak_pct": 0.0,
+      "current_price": 214.47,
+      "current_pct": 0.0,
+      "days_tracked": 0,
+      "headlines": [
+        "[+] Susquehanna Maintains Positive on Marvell Technology, Raises Price Target to $23",
+        "[+] Cantor Fitzgerald Maintains Neutral on Marvell Technology, Raises Price Target t"
+      ]
+    },
+    {
+      "symbol": "TSLA",
+      "entry_price": 432.94,
+      "entry_date": "2026-05-26T13:35:26.751756",
+      "reasons": [
+        "strong sentiment (+2)"
+      ],
+      "sent_score": 2,
+      "analyst_score": 0,
+      "news_phase": "neutral",
+      "ma_role": "none",
+      "ret_5d": 5.6,
+      "peak_price": 432.94,
+      "peak_pct": 0.0,
+      "current_price": 432.94,
+      "current_pct": 0.0,
+      "days_tracked": 0,
+      "headlines": [
+        "[~] 'Pentagon spars with SpaceX over Starlink price hike during Iran war' - Reuters",
+        "[~] Ro Khanna Says US Economy 'Works For Capital First And Workers Last,' Calls For "
+      ]
+    },
+    {
+      "symbol": "LUNR",
+      "entry_price": 42.27,
+      "entry_date": "2026-05-26T13:35:26.751820",
+      "reasons": [
+        "momentum surge (+25.9% in 5d)"
+      ],
+      "sent_score": 1,
+      "analyst_score": 0,
+      "news_phase": "neutral",
+      "ma_role": "none",
+      "ret_5d": 25.9,
+      "peak_price": 42.27,
+      "peak_pct": 0.0,
+      "current_price": 42.27,
+      "current_pct": 0.0,
+      "days_tracked": 0,
+      "headlines": [
+        "[+] Stock Market Today: S&P 500, Dow, Nasdaq Futures Up Amid US 'Defensive Strikes' ",
+        "[~] Intuitive Machines Stock Hits 52-Week High - Here's Why"
+      ]
+    },
+    {
+      "symbol": "PL",
+      "entry_price": 46.2,
+      "entry_date": "2026-05-26T13:35:26.751847",
+      "reasons": [
+        "hype news detected (buy-the-rumor)"
+      ],
+      "sent_score": 0,
+      "analyst_score": 0,
+      "news_phase": "hype",
+      "ma_role": "none",
+      "ret_5d": 11.1,
+      "peak_price": 46.2,
+      "peak_pct": 0.0,
+      "current_price": 46.2,
+      "current_pct": 0.0,
+      "days_tracked": 0,
+      "headlines": [
+        "[~] Investors Pour Into NASA ETF Ahead of Anticipated SpaceX IPO",
+        "[~] Investors Pour Into NASA ETF Ahead of Anticipated SpaceX IPO"
+      ]
+    }
+  ],
+  "history": []
+}
