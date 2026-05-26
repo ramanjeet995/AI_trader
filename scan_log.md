@@ -1,14 +1,129 @@
 # AI Trader — Daily Log
 
 What the robot saw and did each time it woke up. Newest at top.
-_Last updated: May 26, 2026 at 03:02 PM ET_
+_Last updated: May 26, 2026 at 04:25 PM ET_
 
 ### Performance since 2026-05-21
 | | Return | Value |
 |---|---|---|
-| 📈 **Our Portfolio** | **+4.66%** | $104,868.41 |
-| 📈 S&P 500 (SPY) | +0.83% | $749.09 |
-| ✅ **Alpha** | **+3.83%** | Beating the market |
+| 📈 **Our Portfolio** | **+3.04%** | $103,240.23 |
+| 📈 S&P 500 (SPY) | +1.02% | $750.46 |
+| ✅ **Alpha** | **+2.02%** | Beating the market |
+
+## May 26, 04:25 PM ET — Main scan | Pi: 50.1°C
+
+**Market check:**
+- Market is going **up** 📈
+- Mood: calm (VIX 17)
+- Investors defensive
+- Currently holding: MU, OXY, PANW, PLTR, SLB
+- Scoreboard: Us **+3.04%** vs S&P 500 +1.02% (**beating** by 2.02%)
+
+**Money flowing into:** Natural Gas (+6%), Silver (+5%), Real Estate (+2%)
+**Money flowing out of:** Materials (-1%), Crude Oil (-2%), Gold (-2%)
+
+**Hot stocks discovered today:** PCLA, BRAI
+**Full discovery list (5):** AGYS, TATT, AKTX, PCLA, BRAI
+
+**Looked at 58 stocks:**
+- already holding: 5
+- earnings report too close: 4
+- not enough trading volume: 8
+- smart money quietly selling: 5
+- no buy setup today: 21
+- order flow or news was negative: 2
+- setup exists but not strong enough: 1
+- ✓ **12 stocks ready to trade**
+
+**Result:** Found 12 setup(s), but didn't buy any.
+
+- ✗ **Skipped NOK** — market/daily cap
+    - Plan: buy at $16.45, sell-stop at $13.38, target $22.59
+    - 1261 shares, risking $3871
+- ✗ **Skipped ASTS** — market/daily cap
+    - Plan: buy at $119.74, sell-stop at $86.62, target $185.98
+    - 116 shares, risking $3842
+- ✗ **Skipped ARM** — market/daily cap
+    - Plan: buy at $321.33, sell-stop at $234.81, target $494.37
+    - 44 shares, risking $3807
+- ✗ **Skipped HPE** — market/daily cap
+    - Plan: buy at $38.07, sell-stop at $31.89, target $50.43
+    - 626 shares, risking $3869
+- ✗ **Skipped AMD** — market/daily cap
+    - Plan: buy at $503.95, sell-stop at $409.45, target $692.95
+    - 51 shares, risking $4820
+- ✗ **Skipped PL** — market/daily cap
+    - Plan: buy at $48.31, sell-stop at $40.49, target $63.95
+    - 412 shares, risking $3222
+- ✗ **Skipped RIOT** — market/daily cap
+    - Plan: buy at $26.1, sell-stop at $22.38, target $33.54
+    - 867 shares, risking $3225
+- ✗ **Skipped MARA** — market/daily cap
+    - Plan: buy at $14.27, sell-stop at $12.51, target $17.79
+    - 1808 shares, risking $3182
+- ✗ **Skipped QBTS** — market/daily cap
+    - Plan: buy at $27.82, sell-stop at $21.98, target $39.5
+    - 662 shares, risking $3866
+- ✗ **Skipped RKLB** — market/daily cap
+    - Plan: buy at $143.24, sell-stop at $112.98, target $203.76
+    - 106 shares, risking $3208
+- ✗ **Skipped GOOGL** — market/daily cap
+    - Plan: buy at $388.91, sell-stop at $377.98, target $410.77
+    - 66 shares, risking $721
+- ✗ **Skipped APLD** — market/daily cap
+    - Plan: buy at $45.14, sell-stop at $40.27, target $54.88
+    - 571 shares, risking $2781
+
+<details><summary>Notable news today</summary>
+
+- ✓ **NVDA** — strong positive news (+2)
+    - _[~] Donald Trump Said 'Micron's Great'—3 Days Later MU Stock Crosses $1 Trillion In _
+- ✓ **AMD** — strong positive news (+3)
+    - _[~] Donald Trump Said 'Micron's Great'—3 Days Later MU Stock Crosses $1 Trillion In _
+- ✓ **MU** — strong positive news (+3)
+    - _[~] Donald Trump Said 'Micron's Great'—3 Days Later MU Stock Crosses $1 Trillion In _
+- ✗ **META** — negative news (-2)
+    - [~] Sam Altman Says AI Will Not Lead To A Global 'Jobs Apocalypse'
+
+</details>
+
+<details><summary>🔮 What-If Tracker (sentiment picks we're watching)</summary>
+
+**New picks flagged:**
+- **DELL** at $304.96 — strong sentiment (+2), momentum surge (+28.1% in 5d)
+- **CRM** at $179.16 — hype news detected (buy-the-rumor)
+- **CRWD** at $671.56 — strong sentiment (+2), momentum surge (+8.5% in 5d)
+- **SNOW** at $177.67 — hype news detected (buy-the-rumor)
+- **CSCO** at $118.31 — strong sentiment (+2)
+- **RDW** at $22.03 — hype news detected (buy-the-rumor), momentum surge (+58.3% in 5d)
+- **RKLB** at $143.24 — hype news detected (buy-the-rumor)
+- **ASTS** at $119.75 — strong sentiment (+2), hype news detected (buy-the-rumor), momentum surge (+37.9% in 5d)
+- **PCLA** at $11.69 — momentum surge (+473.0% in 5d)
+- **BRAI** at $12.49 — strong sentiment (+2), momentum surge (+70.2% in 5d)
+
+**Tracking:**
+| Stock | Entry | Now | Peak | Day |
+|---|---|---|---|---|
+| 📉 NVDA | $216.96 | -1.0% | +0.0% | 1/5 |
+| 📈 AMD | $484.06 | +4.1% | +4.1% | 1/5 |
+| 📉 MRVL | $214.47 | -2.9% | +0.0% | 1/5 |
+| 📈 TSLA | $432.94 | +0.1% | +0.1% | 1/5 |
+| 📉 LUNR | $42.27 | -17.5% | +0.0% | 1/5 |
+| 📈 PL | $46.20 | +4.6% | +4.6% | 1/5 |
+| 📉 DELL | $304.96 | +0.0% | +0.0% | 0/5 |
+| 📉 CRM | $179.16 | +0.0% | +0.0% | 0/5 |
+| 📉 CRWD | $671.56 | +0.0% | +0.0% | 0/5 |
+| 📉 SNOW | $177.67 | +0.0% | +0.0% | 0/5 |
+| 📉 CSCO | $118.31 | +0.0% | +0.0% | 0/5 |
+| 📉 RDW | $22.03 | +0.0% | +0.0% | 0/5 |
+| 📉 RKLB | $143.24 | +0.0% | +0.0% | 0/5 |
+| 📉 ASTS | $119.75 | +0.0% | +0.0% | 0/5 |
+| 📉 PCLA | $11.69 | +0.0% | +0.0% | 0/5 |
+| 📉 BRAI | $12.49 | +0.0% | +0.0% | 0/5 |
+
+</details>
+
+---
 
 ## May 26, 03:02 PM ET — News check | Pi: 47.7°C
 
@@ -1545,24 +1660,6 @@ _Last updated: May 26, 2026 at 03:02 PM ET_
 ---
 
 ## May 15, 04:10 PM ET — News check
-
-**Market check:**
-- Market is going **up** 📈
-
-**Result:** No trades today.
-<details><summary>Notable news today</summary>
-
-- ✓ **SPY** — strong positive news (+3)
-- ✓ **PLTR** — strong positive news (+2)
-- ✗ **AMD** — negative news (-2)
-- ✗ **MU** — negative news (-2)
-- ✗ **AAPL** — negative news (-2)
-
-</details>
-
----
-
-## May 15, 03:10 PM ET — News check
 
 **Market check:**
 - Market is going **up** 📈
