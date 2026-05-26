@@ -1,12 +1,5 @@
 [
   {
-    "timestamp": "2026-05-15T12:31:28.718785-04:00",
-    "mode": "CATALYST",
-    "spy_regime": "BULL",
-    "signals": [],
-    "force_closed": []
-  },
-  {
     "timestamp": "2026-05-15T12:47:53.003045-04:00",
     "mode": "NEWS",
     "spy_regime": "BULL",
@@ -12563,6 +12556,47 @@
       "account_now": 102318.14,
       "spy_start": 742.91,
       "spy_now": 749.71
+    }
+  },
+  {
+    "timestamp": "2026-05-26T11:01:29.401905-04:00",
+    "mode": "CATALYST",
+    "spy_regime": "BULL",
+    "vix": 16.59000015258789,
+    "signals": [
+      {
+        "symbol": "MRVL",
+        "strategy": "CATALYST",
+        "signal": "BUY",
+        "entry": 205.1,
+        "stop": 202.22,
+        "target": 214.33,
+        "shares": 25,
+        "notional": 5127.5,
+        "risk_$": 71.9,
+        "factors": [
+          "gap +4.5% in [3.0, 12.0]",
+          "news score +5",
+          "volume pace 2.5x normal"
+        ],
+        "gap_pct": 4.46,
+        "news_score": 5,
+        "earn_days_ago": null,
+        "order_status": "PLACED 8bc354dd-1da0-43f6-9e97-d695545edf6f",
+        "client_order_id": "CAT-MRVL-20260526150129"
+      }
+    ],
+    "force_closed": [],
+    "cpu_temp": "46.7\u00b0C",
+    "benchmark": {
+      "start_date": "2026-05-21",
+      "portfolio_pct": 3.93,
+      "spy_pct": 1.14,
+      "alpha_pct": 2.8,
+      "account_start": 100196.86,
+      "account_now": 104139.34,
+      "spy_start": 742.91,
+      "spy_now": 751.36
     }
   }
 ]

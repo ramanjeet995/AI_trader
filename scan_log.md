@@ -1,14 +1,29 @@
 # AI Trader — Daily Log
 
 What the robot saw and did each time it woke up. Newest at top.
-_Last updated: May 26, 2026 at 09:35 AM ET_
+_Last updated: May 26, 2026 at 11:01 AM ET_
 
 ### Performance since 2026-05-21
 | | Return | Value |
 |---|---|---|
-| 📈 **Our Portfolio** | **+2.12%** | $102,318.14 |
-| 📈 S&P 500 (SPY) | +0.92% | $749.71 |
-| ✅ **Alpha** | **+1.20%** | Beating the market |
+| 📈 **Our Portfolio** | **+3.93%** | $104,139.34 |
+| 📈 S&P 500 (SPY) | +1.14% | $751.36 |
+| ✅ **Alpha** | **+2.80%** | Beating the market |
+
+## May 26, 11:01 AM ET — Big-news check | Pi: 46.7°C
+
+**Market check:**
+- Market is going **up** 📈
+- Mood: calm (VIX 17)
+- Scoreboard: Us **+3.93%** vs S&P 500 +1.14% (**beating** by 2.80%)
+
+**Result:** ✓ Bought 1 stock(s).
+
+- ✓ **Bought MRVL** (gap +4.5%)
+    - Plan: buy at $205.1, sell-stop at $202.22, target $214.33
+    - 25 shares, risking $72
+
+---
 
 ## May 26, 09:35 AM ET — Main scan | Pi: 43.8°C
 
@@ -1549,12 +1564,4 @@ _Last updated: May 26, 2026 at 09:35 AM ET_
 
 </details>
 
----
-
-## May 15, 12:31 PM ET — Big-news check
-
-**Market check:**
-- Market is going **up** 📈
-
-**Result:** No trades today.
 ---
