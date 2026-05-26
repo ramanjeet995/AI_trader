@@ -754,7 +754,7 @@ def run_backtest(start_date=START_DATE, end_date=END_DATE):
             regime  = classify(df_slice)
             rs      = relative_strength(df_slice, bars_today[cfg.BENCHMARK])
             obv     = indicators.obv_trend(df_slice)
-            if obv in ("DISTRIBUTION", "STEALTH_SELL"):
+            if obv == "STEALTH_SELL":
                 continue
             signal = strategy_scan(df_slice, regime, cfg)
             if signal is None:

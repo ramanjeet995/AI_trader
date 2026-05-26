@@ -53,6 +53,8 @@ def score(signal: dict, context: dict, cfg) -> dict:
         missing.append(f"weak-RS ({rs:.2f})")
 
     # 3. Institutional accumulation in volume
+    #    DISTRIBUTION is no longer a hard block — profit-taking in a rally is normal.
+    #    Only STEALTH_SELL (volume dropping while price rises) is truly bearish.
     obv = context.get("obv", "")
     if obv in ("ACCUMULATION", "STEALTH_BUY"):
         factors.append(f"OBV-{obv}")

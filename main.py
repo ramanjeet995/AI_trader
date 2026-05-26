@@ -770,7 +770,7 @@ def run_full_scan():
         regime     = classify(df)
         rs         = relative_strength(df, benchmark_df)
         obv_status = indicators.obv_trend(df)
-        if obv_status in ("DISTRIBUTION", "STEALTH_SELL"):
+        if obv_status == "STEALTH_SELL":
             filter_stats["obv_distribution"] += 1
             continue
 
@@ -1293,7 +1293,7 @@ def run_news_scan():
             continue
 
         obv_status = indicators.obv_trend(df)
-        if obv_status in ("DISTRIBUTION", "STEALTH_SELL"):
+        if obv_status == "STEALTH_SELL":
             continue
 
         sector_score   = _sector_score(symbol, rotation)

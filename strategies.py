@@ -199,14 +199,94 @@ def strategy_c(df: pd.DataFrame, regime: Regime, cfg) -> dict:
     return result
 
 
+# ── Strategy D: Momentum Continuation ───────────────────────────────────────
+
+def strategy_d(df: pd.DataFrame, regime: Regime, cfg) -> dict:
+    """
+    BUY when a stock is in a strong uptrend and just keeps going.
+    Catches momentum runners that don't fit pullback/breakout/mean-reversion.
+
+    BUY when:
+      - Regime is BULL
+      - Price above EMA20 AND EMA20 above SMA50 (stacked MAs = strong trend)
+      - RSI between 55-80 (strong but not blow-off top)
+      - Price made a higher high in the last 5 bars
+      - 5-day return > ATR% (actually moving, not crawling)
+    """
+    result = {"signal": None, "strategy": "D", "confidence": 0.0,
+              "entry": None, "stop": None, "target": None, "reason": ""}
+
+    if regime == Regime.BEAR:
+        result["reason"] = "regime=BEAR, no momentum trades"
+        return result
+
+    if len(df) < 25:
+        result["reason"] = "not enough bars"
+        return result
+
+    last   = df.iloc[-1]
+    price  = last["close"]
+    ema20  = last["ema20"]
+    sma50  = last["sma50"]
+    rsi    = last["rsi"]
+    atr    = last["atr"]
+
+    # Stacked moving averages = strong trend
+    ma_stacked = price > ema20 and ema20 > sma50
+
+    # RSI in momentum zone (strong but not exhausted)
+    rsi_ok = 55 <= rsi <= 80
+
+    # Made a higher high recently (last 5 bars vs prior 5 bars)
+    recent_high  = df["high"].iloc[-5:].max()
+    prior_high   = df["high"].iloc[-10:-5].max()
+    higher_high  = recent_high > prior_high
+
+    # Actually moving: 5-day return > 1x ATR%
+    close_5d_ago = df["close"].iloc[-6] if len(df) >= 6 else df["close"].iloc[0]
+    ret_5d_pct   = ((price / close_5d_ago) - 1) * 100
+    atr_pct      = (atr / price) * 100 if price > 0 else 0
+    moving        = ret_5d_pct > atr_pct
+
+    if ma_stacked and rsi_ok and higher_high and moving:
+        # Stop below EMA20 (trend support)
+        stop_price = round(ema20 * 0.99, 2)
+        # Target: measured move = recent swing
+        target_price = round(price + (price - stop_price) * 2, 2)
+
+        # Confidence: higher RSI momentum + stronger 5d move = higher conviction
+        rsi_score = min(1.0, (rsi - 55) / 25)
+        move_score = min(1.0, ret_5d_pct / (atr_pct * 3))
+        confidence = max(0.5, min(0.95, (rsi_score + move_score) / 2))
+
+        result.update({
+            "signal"    : "BUY",
+            "confidence": round(confidence, 2),
+            "entry"     : round(price, 2),
+            "stop"      : stop_price,
+            "target"    : target_price,
+            "reason"    : (f"Momentum continuation | RSI={rsi:.1f} | "
+                           f"5d +{ret_5d_pct:.1f}% | MAs stacked"),
+        })
+    else:
+        reasons = []
+        if not ma_stacked:  reasons.append(f"MAs not stacked (P={price:.0f} EMA={ema20:.0f} SMA={sma50:.0f})")
+        if not rsi_ok:      reasons.append(f"RSI={rsi:.1f} outside [55,80]")
+        if not higher_high: reasons.append("no higher high in 5 bars")
+        if not moving:      reasons.append(f"5d return {ret_5d_pct:.1f}% < ATR% {atr_pct:.1f}%")
+        result["reason"] = " | ".join(reasons)
+
+    return result
+
+
 # ── Run all strategies and pick the highest-confidence signal ────────────────
 
 def scan(df: pd.DataFrame, regime: Regime, cfg) -> dict | None:
     """
-    Run all 3 strategies and return the highest-confidence valid signal.
+    Run all 4 strategies and return the highest-confidence valid signal.
     """
     candidates = []
-    for fn in (strategy_a, strategy_b, strategy_c):
+    for fn in (strategy_a, strategy_b, strategy_c, strategy_d):
         result = fn(df, regime, cfg)
         if result["signal"]:
             candidates.append(result)

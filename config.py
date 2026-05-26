@@ -76,10 +76,11 @@ REPLACE_WORST_LOSER       = True    # when at max positions, close worst loser f
 # Multi-factor confluence required to fire. Each factor passed = 1 point.
 # Only trade when score >= MIN_CONVICTION_TO_TRADE.
 # Position size and target scale with conviction.
-MIN_CONVICTION_TO_TRADE   = 3    # was 4 — lowered, since backtest with sentiment=0 caps at 6/7
+MIN_CONVICTION_TO_TRADE   = 2    # lowered from 3 — catch more momentum setups
 # Target R values are STRETCH targets — most trades exit earlier via trailing
 # stop (position_manager.py). These act as a hard ceiling for parabolic moves.
 CONVICTION_RISK_TIERS = {
+    2: {"risk_mult": 0.50, "target_R": 3.0},   # speculative — 1.25% risk, tight target
     3: {"risk_mult": 0.75, "target_R": 5.0},   # marginal — 1.5% risk
     4: {"risk_mult": 1.0,  "target_R": 6.0},   # base — 2% risk
     5: {"risk_mult": 1.25, "target_R": 7.0},   # solid — 2.5% risk
