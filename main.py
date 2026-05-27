@@ -539,31 +539,44 @@ def _count_sectors(symbols) -> dict[str, int]:
 def _find_worst_position(trade_client, new_conviction: int) -> dict | None:
     """
     When at max capacity, find the worst-performing held position to replace.
-    Only replaces if:
-      - The new signal has higher conviction than MIN_REPLACE_CONVICTION
-      - The worst position is losing money (unrealized P&L < 0)
-      - The worst position has been held for at least 2 days (not brand new)
+
+    Tier 1 (conviction >= 4): replace worst LOSER (P&L < 0)
+    Tier 2 (conviction >= 5): replace weakest performer even if in profit,
+            but only if it gained < 2% (dead money, better opportunity exists)
+
     Returns {symbol, pnl, pnl_pct} of the worst position, or None.
     """
-    MIN_REPLACE_CONVICTION = 4  # only replace for solid+ signals
+    MIN_REPLACE_CONVICTION = 4       # replace losers at conviction 4+
+    REPLACE_WINNER_CONVICTION = 5    # replace weak winners at conviction 5+
+    WEAK_WINNER_MAX_PCT = 2.0        # only replace winners gaining < 2%
     if new_conviction < MIN_REPLACE_CONVICTION:
         return None
     try:
         positions = trade_client.get_all_positions()
-        losers = []
+        all_positions = []
         for p in positions:
             pnl = float(p.unrealized_pl)
             pnl_pct = float(p.unrealized_plpc) * 100
-            if pnl < 0:
-                losers.append({
-                    "symbol": p.symbol,
-                    "pnl": pnl,
-                    "pnl_pct": pnl_pct,
-                })
-        if not losers:
+            all_positions.append({
+                "symbol": p.symbol,
+                "pnl": pnl,
+                "pnl_pct": pnl_pct,
+            })
+        if not all_positions:
             return None
-        # Return the biggest loser (most negative P&L%)
-        return min(losers, key=lambda x: x["pnl_pct"])
+
+        # Tier 1: look for losers first
+        losers = [p for p in all_positions if p["pnl"] < 0]
+        if losers:
+            return min(losers, key=lambda x: x["pnl_pct"])
+
+        # Tier 2: no losers — replace weakest winner if conviction is high
+        if new_conviction >= REPLACE_WINNER_CONVICTION:
+            weak_winners = [p for p in all_positions if p["pnl_pct"] < WEAK_WINNER_MAX_PCT]
+            if weak_winners:
+                return min(weak_winners, key=lambda x: x["pnl_pct"])
+
+        return None
     except Exception:
         return None
 
@@ -1047,14 +1060,16 @@ def run_full_scan():
                     # Continue to place the new order below
                 else:
                     print(f"         Failed to close {worst['symbol']}: {result.get('reason')}")
-                    print(f"         SKIPPED: already holding 3 stocks (max) and couldn't sell worst loser")
-                    s["order_status"] = "SKIPPED: holding 3/3, replace failed"
+                    max_p = cfg.MAX_CONCURRENT_POSITIONS
+                    print(f"         SKIPPED: already holding {max_p} stocks (max) and couldn't sell worst performer")
+                    s["order_status"] = f"SKIPPED: holding {len(open_positions)}/{max_p}, replace failed"
                     print()
                     continue
             else:
-                reason = "already holding 3 stocks (max), none are losing" if not worst else "already holding 3 stocks (max), conviction too low to replace"
+                max_p = cfg.MAX_CONCURRENT_POSITIONS
+                reason = f"all {max_p} positions in profit, none weak enough to replace" if not worst else f"conviction too low to replace (need {5}+)"
                 print(f"         SKIPPED: {reason}")
-                s["order_status"] = f"SKIPPED: holding 3/3, {reason}"
+                s["order_status"] = f"SKIPPED: {len(open_positions)}/{max_p} full, {reason}"
                 print()
                 continue
         if (new_today_count + new_orders_this_run) >= cfg.MAX_NEW_PER_DAY:
