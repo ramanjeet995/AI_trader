@@ -1,192 +1,5 @@
 [
   {
-    "timestamp": "2026-05-15T16:46:31.644687-04:00",
-    "mode": "NEWS",
-    "spy_regime": "BULL",
-    "safety_block": "",
-    "signals": [],
-    "alerts": [
-      "DANGER \u2014 GOOGL held position has NEGATIVE news!",
-      "  [~] Berkshire Hathaway Increases Stake In Alphabet Inc. To 57,835,013 Shares; Lennar",
-      "  [-] Appaloosa Management Decreases Stake In Advanced Micro Devices To 221,400 Shares",
-      "DANGER \u2014 AMZN held position has NEGATIVE news!",
-      "  [~] Berkshire Hathaway Sells Position In Amazon; Atlanta Braves Holdings; Charter Co",
-      "  [~] Third Point Decreases Stake In Amazon To 1,940,000 Shares; APi Group To 2,030,00"
-    ],
-    "news_snapshot": [
-      {
-        "symbol": "SPY",
-        "sentiment": "POSITIVE",
-        "score": 3
-      },
-      {
-        "symbol": "PLTR",
-        "sentiment": "POSITIVE",
-        "score": 2
-      },
-      {
-        "symbol": "NOW",
-        "sentiment": "NEUTRAL",
-        "score": 1
-      },
-      {
-        "symbol": "RIOT",
-        "sentiment": "NEUTRAL",
-        "score": 1
-      },
-      {
-        "symbol": "MSTR",
-        "sentiment": "NEUTRAL",
-        "score": 1
-      },
-      {
-        "symbol": "ARM",
-        "sentiment": "NEUTRAL",
-        "score": 0
-      },
-      {
-        "symbol": "MRVL",
-        "sentiment": "NEUTRAL",
-        "score": 0
-      },
-      {
-        "symbol": "NFLX",
-        "sentiment": "NEUTRAL",
-        "score": 0
-      },
-      {
-        "symbol": "CRM",
-        "sentiment": "NEUTRAL",
-        "score": 0
-      },
-      {
-        "symbol": "CRWD",
-        "sentiment": "NEUTRAL",
-        "score": 0
-      },
-      {
-        "symbol": "SHOP",
-        "sentiment": "NEUTRAL",
-        "score": 0
-      },
-      {
-        "symbol": "SNOW",
-        "sentiment": "NEUTRAL",
-        "score": 0
-      },
-      {
-        "symbol": "OXY",
-        "sentiment": "NEUTRAL",
-        "score": 0
-      },
-      {
-        "symbol": "FANG",
-        "sentiment": "NEUTRAL",
-        "score": 0
-      },
-      {
-        "symbol": "SLB",
-        "sentiment": "NEUTRAL",
-        "score": 0
-      },
-      {
-        "symbol": "NEM",
-        "sentiment": "NEUTRAL",
-        "score": 0
-      },
-      {
-        "symbol": "GOLD",
-        "sentiment": "NEUTRAL",
-        "score": 0
-      },
-      {
-        "symbol": "FCX",
-        "sentiment": "NEUTRAL",
-        "score": 0
-      },
-      {
-        "symbol": "MARA",
-        "sentiment": "NEUTRAL",
-        "score": 0
-      },
-      {
-        "symbol": "AVGO",
-        "sentiment": "NEUTRAL",
-        "score": -1
-      },
-      {
-        "symbol": "SMCI",
-        "sentiment": "NEUTRAL",
-        "score": -1
-      },
-      {
-        "symbol": "XOM",
-        "sentiment": "NEUTRAL",
-        "score": -1
-      },
-      {
-        "symbol": "AMZN",
-        "sentiment": "NEGATIVE",
-        "score": -2
-      },
-      {
-        "symbol": "MSFT",
-        "sentiment": "NEGATIVE",
-        "score": -2
-      },
-      {
-        "symbol": "AAPL",
-        "sentiment": "NEGATIVE",
-        "score": -2
-      },
-      {
-        "symbol": "GDX",
-        "sentiment": "NEGATIVE",
-        "score": -2
-      },
-      {
-        "symbol": "COIN",
-        "sentiment": "NEGATIVE",
-        "score": -2
-      },
-      {
-        "symbol": "NVDA",
-        "sentiment": "NEGATIVE",
-        "score": -3
-      },
-      {
-        "symbol": "AMD",
-        "sentiment": "NEGATIVE",
-        "score": -3
-      },
-      {
-        "symbol": "MU",
-        "sentiment": "NEGATIVE",
-        "score": -3
-      },
-      {
-        "symbol": "META",
-        "sentiment": "NEGATIVE",
-        "score": -3
-      },
-      {
-        "symbol": "GOOGL",
-        "sentiment": "NEGATIVE",
-        "score": -3
-      },
-      {
-        "symbol": "TSLA",
-        "sentiment": "NEGATIVE",
-        "score": -3
-      },
-      {
-        "symbol": "QQQ",
-        "sentiment": "NEGATIVE",
-        "score": -3
-      }
-    ]
-  },
-  {
     "timestamp": "2026-05-15T17:36:21.127273-04:00",
     "mode": "FULL",
     "spy_regime": "BULL",
@@ -14201,6 +14014,25 @@
       "account_now": 102062.82,
       "spy_start": 742.91,
       "spy_now": 750.74
+    }
+  },
+  {
+    "timestamp": "2026-05-27T11:02:11.167774-04:00",
+    "mode": "CATALYST",
+    "spy_regime": "BULL",
+    "vix": 17.010000228881836,
+    "signals": [],
+    "force_closed": [],
+    "cpu_temp": "47.2\u00b0C",
+    "benchmark": {
+      "start_date": "2026-05-21",
+      "portfolio_pct": 1.46,
+      "spy_pct": 0.91,
+      "alpha_pct": 0.55,
+      "account_start": 100196.86,
+      "account_now": 101659.66,
+      "spy_start": 742.91,
+      "spy_now": 749.68
     }
   }
 ]

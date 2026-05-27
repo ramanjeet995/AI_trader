@@ -1,14 +1,24 @@
 # AI Trader — Daily Log
 
 What the robot saw and did each time it woke up. Newest at top.
-_Last updated: May 27, 2026 at 09:36 AM ET_
+_Last updated: May 27, 2026 at 11:02 AM ET_
 
 ### Performance since 2026-05-21
 | | Return | Value |
 |---|---|---|
-| 📈 **Our Portfolio** | **+1.86%** | $102,062.82 |
-| 📈 S&P 500 (SPY) | +1.05% | $750.74 |
-| ✅ **Alpha** | **+0.81%** | Beating the market |
+| 📈 **Our Portfolio** | **+1.46%** | $101,659.66 |
+| 📈 S&P 500 (SPY) | +0.91% | $749.68 |
+| ✅ **Alpha** | **+0.55%** | Beating the market |
+
+## May 27, 11:02 AM ET — Big-news check | Pi: 47.2°C
+
+**Market check:**
+- Market is going **up** 📈
+- Mood: calm (VIX 17)
+- Scoreboard: Us **+1.46%** vs S&P 500 +0.91% (**beating** by 0.55%)
+
+**Result:** No trades today.
+---
 
 ## May 27, 09:36 AM ET — Main scan | Pi: 44.3°C
 
@@ -1764,24 +1774,6 @@ _Last updated: May 27, 2026 at 09:36 AM ET_
     - [-] Appaloosa Management Decreases Stake In Advanced Micro Devices To 221,400 Shares
 - ✗ **SMCI** — negative news (-2)
     - [-] Chip Stocks Fall As Inflation Fears Trigger Profit-Taking
-
-</details>
-
----
-
-## May 15, 04:46 PM ET — News check
-
-**Market check:**
-- Market is going **up** 📈
-
-**Result:** No trades today.
-<details><summary>Notable news today</summary>
-
-- ✓ **SPY** — strong positive news (+3)
-- ✓ **PLTR** — strong positive news (+2)
-- ✗ **AMZN** — negative news (-2)
-- ✗ **MSFT** — negative news (-2)
-- ✗ **AAPL** — negative news (-2)
 
 </details>
 
