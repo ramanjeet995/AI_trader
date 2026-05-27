@@ -1,240 +1,5 @@
 [
   {
-    "timestamp": "2026-05-15T17:36:21.127273-04:00",
-    "mode": "FULL",
-    "spy_regime": "BULL",
-    "posture": "RISK-ON",
-    "vix": 17.260000228881836,
-    "spy_atr_pct": 1.04,
-    "in_window": false,
-    "market_open": false,
-    "data_feed": "iex",
-    "yfinance_patched": "0/45",
-    "sentiment_backend": "finbert",
-    "earnings_cache_size": 54,
-    "macro_blackout": false,
-    "macro_reason": "",
-    "next_macro_event": {
-      "name": "FOMC",
-      "datetime": "2026-06-17T14:00:00-04:00",
-      "days_away": 32,
-      "hours_away": 788.4
-    },
-    "open_positions": [
-      "AMZN",
-      "GOOGL",
-      "PLTR"
-    ],
-    "new_today": 1,
-    "filter_stats": {
-      "scanned": 33,
-      "no_data": 0,
-      "held": 3,
-      "market_volatile": 0,
-      "earnings_blackout": 0,
-      "failed_filters": 2,
-      "obv_distribution": 11,
-      "no_strategy_signal": 14,
-      "of_or_sent_reject": 1,
-      "sector_misalign": 0,
-      "passed_all": 2
-    },
-    "sectors_top3": [
-      {
-        "ticker": "USO",
-        "sector": "Crude Oil",
-        "ret_20d": 22.15,
-        "rs": 5.18,
-        "obv": "ACCUMULATION",
-        "above_ema": "True",
-        "score": 54.79
-      },
-      {
-        "ticker": "XLE",
-        "sector": "Energy",
-        "ret_20d": 7.94,
-        "rs": 1.86,
-        "obv": "ACCUMULATION",
-        "above_ema": "True",
-        "score": 21.58
-      },
-      {
-        "ticker": "UNG",
-        "sector": "Natural Gas",
-        "ret_20d": 4.47,
-        "rs": 1.05,
-        "obv": "ACCUMULATION",
-        "above_ema": "True",
-        "score": 13.46
-      }
-    ],
-    "sectors_bottom3": [
-      {
-        "ticker": "XLB",
-        "sector": "Materials",
-        "ret_20d": -3.7,
-        "rs": -0.87,
-        "obv": "DISTRIBUTION",
-        "above_ema": "False",
-        "score": -11.66
-      },
-      {
-        "ticker": "XLU",
-        "sector": "Utilities",
-        "ret_20d": -4.08,
-        "rs": -0.95,
-        "obv": "DISTRIBUTION",
-        "above_ema": "False",
-        "score": -12.54
-      },
-      {
-        "ticker": "GLD",
-        "sector": "Gold",
-        "ret_20d": -5.59,
-        "rs": -1.31,
-        "obv": "DISTRIBUTION",
-        "above_ema": "False",
-        "score": -16.08
-      }
-    ],
-    "signals": [
-      {
-        "symbol": "FANG",
-        "strategy": "A",
-        "confidence": 0.98,
-        "signal": "BUY",
-        "entry": 203.43,
-        "stop": 184.84,
-        "target": 240.61,
-        "shares": 132,
-        "notional": 26852.76,
-        "risk_$": 2453.88,
-        "sentiment": "NEUTRAL",
-        "obv": "ACCUMULATION",
-        "of_score": 2,
-        "sector_score": 999.0,
-        "reason": "Pullback zone [191.74-203.60] | RSI=57.7 | bullish candle",
-        "order_status": "SKIPPED: position/daily cap",
-        "headlines": [
-          "No recent news"
-        ]
-      },
-      {
-        "symbol": "OXY",
-        "strategy": "B",
-        "confidence": 0.35,
-        "signal": "BUY",
-        "entry": 59.62,
-        "stop": 56.7,
-        "target": 65.46,
-        "shares": 494,
-        "notional": 29452.28,
-        "risk_$": 1442.48,
-        "sentiment": "NEUTRAL",
-        "obv": "ACCUMULATION",
-        "of_score": 3,
-        "sector_score": 999.0,
-        "reason": "Breakout above 57.27 | vol 1.3x prior 20d avg",
-        "order_status": "SKIPPED: position/daily cap",
-        "headlines": [
-          "[~] Trump's Trading Disclosure Shows Activity In Nvidia, AMD, Microsoft, Oracle And "
-        ]
-      }
-    ],
-    "top_news": [
-      {
-        "symbol": "NVDA",
-        "sentiment": "NEGATIVE",
-        "score": -3,
-        "headlines": [
-          "[~] Elliott Investment Management Sells Stake In BILL Holdings; FS KKR Capital; NVID",
-          "[~] Third Point Decreases Stake In Amazon To 1,940,000 Shares; APi Group To 2,030,00"
-        ]
-      },
-      {
-        "symbol": "AVGO",
-        "sentiment": "POSITIVE",
-        "score": 2,
-        "headlines": [
-          "[~] Third Point Takes New Stake In Alphabet Inc With 175,000 Shares; ASML With 12,00",
-          "[~] Tiger Global Management Increases Stake In Applied Materials From 897,500 To 1,6"
-        ]
-      },
-      {
-        "symbol": "AMD",
-        "sentiment": "NEGATIVE",
-        "score": -3,
-        "headlines": [
-          "[-] Appaloosa Management Decreases Stake In Advanced Micro Devices To 221,400 Shares",
-          "[~] 10 Information Technology Stocks Whale Activity In Today's Session"
-        ]
-      },
-      {
-        "symbol": "ARM",
-        "sentiment": "NEUTRAL",
-        "score": -1,
-        "headlines": [
-          "[~] The Bond Market Just Fired A Warning Shot At The AI Rally \u2014 Fed Rate Hike Ahead",
-          "[~] Arm Holdings Tech Rally Takes Breather As Investors Weigh Supply Chain Risks"
-        ]
-      },
-      {
-        "symbol": "MU",
-        "sentiment": "NEUTRAL",
-        "score": -1,
-        "headlines": [
-          "[-] Appaloosa Management Decreases Stake In Lam Research Decreases Stake To 382,500 ",
-          "[-] Nasdaq 100 Drops, Intel Crashes 7% On Rate-Hike Panic: Stock Market Today"
-        ]
-      },
-      {
-        "symbol": "SMCI",
-        "sentiment": "NEGATIVE",
-        "score": -2,
-        "headlines": [
-          "[-] Chip Stocks Fall As Inflation Fears Trigger Profit-Taking",
-          "[~] Why Is SMCI Stock Surging On Thursday?"
-        ]
-      },
-      {
-        "symbol": "MRVL",
-        "sentiment": "POSITIVE",
-        "score": 3,
-        "headlines": [
-          "[+] TD Cowen Maintains Hold on Marvell Technology, Raises Price Target to $190",
-          "[~] Watching Marvell Technology; Hearing IBD Swingtrader Sells Stock"
-        ]
-      },
-      {
-        "symbol": "META",
-        "sentiment": "NEGATIVE",
-        "score": -3,
-        "headlines": [
-          "[~] Third Point Takes New Stake In Alphabet Inc With 175,000 Shares; ASML With 12,00",
-          "[~] ValueAct Capital Decreases Stake In Amazon To 2,884,600 Shares; BlackRock To 546"
-        ]
-      },
-      {
-        "symbol": "GOOGL",
-        "sentiment": "NEGATIVE",
-        "score": -3,
-        "headlines": [
-          "[~] Third Point Takes New Stake In Alphabet Inc With 175,000 Shares; ASML With 12,00",
-          "[~] Berkshire Hathaway Increases Stake In Alphabet Inc. To 57,835,013 Shares; Lennar"
-        ]
-      },
-      {
-        "symbol": "AMZN",
-        "sentiment": "NEGATIVE",
-        "score": -2,
-        "headlines": [
-          "[~] ValueAct Capital Decreases Stake In Amazon To 2,884,600 Shares; BlackRock To 546",
-          "[~] Berkshire Hathaway Sells Position In Amazon; Atlanta Braves Holdings; Charter Co"
-        ]
-      }
-    ]
-  },
-  {
     "timestamp": "2026-05-15T18:16:33.661813-04:00",
     "mode": "FULL",
     "spy_regime": "BULL",
@@ -14033,6 +13798,297 @@
       "account_now": 101659.66,
       "spy_start": 742.91,
       "spy_now": 749.68
+    }
+  },
+  {
+    "timestamp": "2026-05-27T11:07:10.549641-04:00",
+    "mode": "NEWS",
+    "spy_regime": "BULL",
+    "safety_block": "",
+    "signals": [],
+    "alerts": [],
+    "news_snapshot": [
+      {
+        "symbol": "NVDA",
+        "sentiment": "STRONG_POSITIVE",
+        "score": 5
+      },
+      {
+        "symbol": "MU",
+        "sentiment": "STRONG_POSITIVE",
+        "score": 5
+      },
+      {
+        "symbol": "PANW",
+        "sentiment": "STRONG_POSITIVE",
+        "score": 5
+      },
+      {
+        "symbol": "OXY",
+        "sentiment": "STRONG_POSITIVE",
+        "score": 5
+      },
+      {
+        "symbol": "CRWD",
+        "sentiment": "STRONG_POSITIVE",
+        "score": 4
+      },
+      {
+        "symbol": "MRVL",
+        "sentiment": "POSITIVE",
+        "score": 3
+      },
+      {
+        "symbol": "DELL",
+        "sentiment": "POSITIVE",
+        "score": 3
+      },
+      {
+        "symbol": "XOM",
+        "sentiment": "POSITIVE",
+        "score": 3
+      },
+      {
+        "symbol": "FANG",
+        "sentiment": "POSITIVE",
+        "score": 3
+      },
+      {
+        "symbol": "CSCO",
+        "sentiment": "POSITIVE",
+        "score": 2
+      },
+      {
+        "symbol": "ASTS",
+        "sentiment": "POSITIVE",
+        "score": 2
+      },
+      {
+        "symbol": "QQQ",
+        "sentiment": "POSITIVE",
+        "score": 2
+      },
+      {
+        "symbol": "AVGO",
+        "sentiment": "NEUTRAL",
+        "score": 1
+      },
+      {
+        "symbol": "SMCI",
+        "sentiment": "NEUTRAL",
+        "score": 1
+      },
+      {
+        "symbol": "AMZN",
+        "sentiment": "NEUTRAL",
+        "score": 1
+      },
+      {
+        "symbol": "TSLA",
+        "sentiment": "NEUTRAL",
+        "score": 1
+      },
+      {
+        "symbol": "MSFT",
+        "sentiment": "NEUTRAL",
+        "score": 1
+      },
+      {
+        "symbol": "CRM",
+        "sentiment": "NEUTRAL",
+        "score": 1
+      },
+      {
+        "symbol": "SNOW",
+        "sentiment": "NEUTRAL",
+        "score": 1
+      },
+      {
+        "symbol": "RKLB",
+        "sentiment": "NEUTRAL",
+        "score": 1
+      },
+      {
+        "symbol": "MSTR",
+        "sentiment": "NEUTRAL",
+        "score": 1
+      },
+      {
+        "symbol": "AMD",
+        "sentiment": "NEUTRAL",
+        "score": 0
+      },
+      {
+        "symbol": "ARM",
+        "sentiment": "NEUTRAL",
+        "score": 0
+      },
+      {
+        "symbol": "HPE",
+        "sentiment": "NEUTRAL",
+        "score": 0
+      },
+      {
+        "symbol": "VRT",
+        "sentiment": "NEUTRAL",
+        "score": 0
+      },
+      {
+        "symbol": "CLS",
+        "sentiment": "NEUTRAL",
+        "score": 0
+      },
+      {
+        "symbol": "CEG",
+        "sentiment": "NEUTRAL",
+        "score": 0
+      },
+      {
+        "symbol": "APLD",
+        "sentiment": "NEUTRAL",
+        "score": 0
+      },
+      {
+        "symbol": "NFLX",
+        "sentiment": "NEUTRAL",
+        "score": 0
+      },
+      {
+        "symbol": "NOW",
+        "sentiment": "NEUTRAL",
+        "score": 0
+      },
+      {
+        "symbol": "PLTR",
+        "sentiment": "NEUTRAL",
+        "score": 0
+      },
+      {
+        "symbol": "SHOP",
+        "sentiment": "NEUTRAL",
+        "score": 0
+      },
+      {
+        "symbol": "ANET",
+        "sentiment": "NEUTRAL",
+        "score": 0
+      },
+      {
+        "symbol": "SOUN",
+        "sentiment": "NEUTRAL",
+        "score": 0
+      },
+      {
+        "symbol": "SLB",
+        "sentiment": "NEUTRAL",
+        "score": 0
+      },
+      {
+        "symbol": "NEM",
+        "sentiment": "NEUTRAL",
+        "score": 0
+      },
+      {
+        "symbol": "GOLD",
+        "sentiment": "NEUTRAL",
+        "score": 0
+      },
+      {
+        "symbol": "FCX",
+        "sentiment": "NEUTRAL",
+        "score": 0
+      },
+      {
+        "symbol": "GDX",
+        "sentiment": "NEUTRAL",
+        "score": 0
+      },
+      {
+        "symbol": "RDW",
+        "sentiment": "NEUTRAL",
+        "score": 0
+      },
+      {
+        "symbol": "PL",
+        "sentiment": "NEUTRAL",
+        "score": 0
+      },
+      {
+        "symbol": "IONQ",
+        "sentiment": "NEUTRAL",
+        "score": 0
+      },
+      {
+        "symbol": "RGTI",
+        "sentiment": "NEUTRAL",
+        "score": 0
+      },
+      {
+        "symbol": "KTOS",
+        "sentiment": "NEUTRAL",
+        "score": 0
+      },
+      {
+        "symbol": "COIN",
+        "sentiment": "NEUTRAL",
+        "score": 0
+      },
+      {
+        "symbol": "MARA",
+        "sentiment": "NEUTRAL",
+        "score": 0
+      },
+      {
+        "symbol": "RIOT",
+        "sentiment": "NEUTRAL",
+        "score": 0
+      },
+      {
+        "symbol": "META",
+        "sentiment": "NEUTRAL",
+        "score": -1
+      },
+      {
+        "symbol": "AAPL",
+        "sentiment": "NEUTRAL",
+        "score": -1
+      },
+      {
+        "symbol": "NOK",
+        "sentiment": "NEUTRAL",
+        "score": -1
+      },
+      {
+        "symbol": "QBTS",
+        "sentiment": "NEUTRAL",
+        "score": -1
+      },
+      {
+        "symbol": "GOOGL",
+        "sentiment": "NEGATIVE",
+        "score": -2
+      },
+      {
+        "symbol": "LUNR",
+        "sentiment": "NEGATIVE",
+        "score": -2
+      },
+      {
+        "symbol": "SPY",
+        "sentiment": "NEGATIVE",
+        "score": -2
+      }
+    ],
+    "cpu_temp": "49.7\u00b0C",
+    "benchmark": {
+      "start_date": "2026-05-21",
+      "portfolio_pct": 1.23,
+      "spy_pct": 0.93,
+      "alpha_pct": 0.3,
+      "account_start": 100196.86,
+      "account_now": 101427.88,
+      "spy_start": 742.91,
+      "spy_now": 749.79
     }
   }
 ]
