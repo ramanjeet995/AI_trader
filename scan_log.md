@@ -1,14 +1,32 @@
 # AI Trader — Daily Log
 
 What the robot saw and did each time it woke up. Newest at top.
-_Last updated: May 27, 2026 at 01:02 PM ET_
+_Last updated: May 27, 2026 at 03:02 PM ET_
 
 ### Performance since 2026-05-21
 | | Return | Value |
 |---|---|---|
-| 📈 **Our Portfolio** | **+1.80%** | $101,997.34 |
-| 📈 S&P 500 (SPY) | +0.92% | $749.78 |
-| ✅ **Alpha** | **+0.87%** | Beating the market |
+| 📈 **Our Portfolio** | **+2.07%** | $102,269.80 |
+| 📈 S&P 500 (SPY) | +1.06% | $750.81 |
+| ✅ **Alpha** | **+1.01%** | Beating the market |
+
+## May 27, 03:02 PM ET — News check | Pi: 48.7°C
+
+**Market check:**
+- Market is going **up** 📈
+- Scoreboard: Us **+2.07%** vs S&P 500 +1.06% (**beating** by 1.01%)
+
+**Result:** No trades today.
+<details><summary>Notable news today</summary>
+
+- ✓ **NVDA** — strong positive news (+3)
+- ✓ **XOM** — strong positive news (+3)
+- ✓ **OXY** — strong positive news (+3)
+- ✗ **GOOGL** — negative news (-2)
+
+</details>
+
+---
 
 ## May 27, 01:02 PM ET — News check | Pi: 49.7°C
 
@@ -1711,19 +1729,5 @@ _Last updated: May 27, 2026 at 01:02 PM ET_
 - ✗ **GOOGL** — negative news (-2)
 
 </details>
-
----
-
-## May 18, 01:21 PM ET — Big-news check
-
-**Market check:**
-- Market is going **up** 📈
-- Mood: a bit nervous (VIX 18)
-
-**Result:** Found 1 setup(s), but didn't buy any.
-
-- ✗ **Skipped CRWD** (gap +3.1%) — outside target window or market closed
-    - Plan: buy at $0, sell-stop at $0, target $0
-    - 0 shares, risking $0
 
 ---
