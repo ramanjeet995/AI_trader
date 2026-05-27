@@ -1,14 +1,162 @@
 # AI Trader — Daily Log
 
 What the robot saw and did each time it woke up. Newest at top.
-_Last updated: May 27, 2026 at 03:02 PM ET_
+_Last updated: May 27, 2026 at 03:53 PM ET_
 
 ### Performance since 2026-05-21
 | | Return | Value |
 |---|---|---|
-| 📈 **Our Portfolio** | **+2.07%** | $102,269.80 |
-| 📈 S&P 500 (SPY) | +1.06% | $750.81 |
-| ✅ **Alpha** | **+1.01%** | Beating the market |
+| 📈 **Our Portfolio** | **+1.66%** | $101,857.02 |
+| 📈 S&P 500 (SPY) | +1.00% | $750.33 |
+| ✅ **Alpha** | **+0.66%** | Beating the market |
+
+## May 27, 03:53 PM ET — Main scan | Pi: 45.8°C
+
+**Market check:**
+- Market is going **up** 📈
+- Mood: calm (VIX 17)
+- Investors defensive
+- Currently holding: MU, OXY, PANW, PLTR, SLB
+- Scoreboard: Us **+1.66%** vs S&P 500 +1.00% (**beating** by 0.66%)
+
+**Money flowing into:** Natural Gas (+10%), Healthcare (+4%), Silver (+4%)
+**Money flowing out of:** Gold (-2%), Energy (-4%), Crude Oil (-13%)
+
+**Hot stocks discovered today:** ASTC
+**Full discovery list (9):** AGYS, TATT, AKTX, PCLA, BRAI, QTTB, DY, QFIN, ASTC
+
+**Looked at 62 stocks:**
+- already holding: 5
+- earnings report too close: 1
+- not enough trading volume: 9
+- smart money quietly selling: 4
+- no buy setup today: 19
+- order flow or news was negative: 3
+- ✓ **21 stocks ready to trade**
+
+**Result:** Found 21 setup(s), but didn't buy any.
+
+- ✗ **Skipped PL** — holding 5/5, replace failed
+    - Plan: buy at $50.21, sell-stop at $41.36, target $67.91
+    - 359 shares, risking $3177
+- ✗ **Skipped ASTS** — holding 5/5, replace failed
+    - Plan: buy at $129.18, sell-stop at $90.55, target $206.44
+    - 98 shares, risking $3786
+- ✗ **Skipped APLD** — holding 5/5, replace failed
+    - Plan: buy at $48.79, sell-stop at $41.04, target $64.29
+    - 492 shares, risking $3813
+- ✗ **Skipped AMD** — holding 5/5, replace failed
+    - Plan: buy at $496.96, sell-stop at $417.31, target $656.26
+    - 51 shares, risking $4062
+- ✗ **Skipped HPE** — holding 5/5, replace failed
+    - Plan: buy at $37.23, sell-stop at $32.37, target $46.95
+    - 683 shares, risking $3319
+- ✗ **Skipped RIOT** — holding 5/5, replace failed
+    - Plan: buy at $26.83, sell-stop at $22.78, target $34.93
+    - 785 shares, risking $3179
+- ✗ **Skipped ARM** — holding 5/5, replace failed
+    - Plan: buy at $304.44, sell-stop at $241.15, target $431.02
+    - 60 shares, risking $3797
+- ✗ **Skipped IONQ** — holding 5/5, replace failed
+    - Plan: buy at $65.62, sell-stop at $53.07, target $90.72
+    - 253 shares, risking $3175
+- ✗ **Skipped RKLB** — holding 5/5, replace failed
+    - Plan: buy at $149.9, sell-stop at $116.35, target $217.0
+    - 113 shares, risking $3791
+- ✗ **Skipped LUNR** — holding 5/5, replace failed
+    - Plan: buy at $39.84, sell-stop at $31.96, target $55.6
+    - 403 shares, risking $3176
+- ✗ **Skipped SMCI** — holding 5/5, replace failed
+    - Plan: buy at $38.06, sell-stop at $32.22, target $49.74
+    - 545 shares, risking $3183
+- ✗ **Skipped RGTI** — holding 5/5, replace failed
+    - Plan: buy at $24.46, sell-stop at $19.76, target $33.86
+    - 541 shares, risking $2543
+- ✗ **Skipped QBTS** — holding 5/5, replace failed
+    - Plan: buy at $27.65, sell-stop at $22.49, target $37.97
+    - 493 shares, risking $2544
+- ✗ **Skipped NOK** — holding 5/5, replace failed
+    - Plan: buy at $15.68, sell-stop at $13.59, target $19.86
+    - 1522 shares, risking $3181
+- ✗ **Skipped MARA** — holding 5/5, replace failed
+    - Plan: buy at $14.34, sell-stop at $12.67, target $17.68
+    - 1775 shares, risking $2964
+- ✗ **Skipped ASTC** — holding 5/5, replace failed
+    - Plan: buy at $13.37, sell-stop at $2.52, target $35.07
+    - 293 shares, risking $3179
+- ✗ **Skipped CSCO** — holding 5/5, replace failed
+    - Plan: buy at $119.64, sell-stop at $106.38, target $146.16
+    - 212 shares, risking $2811
+- ✗ **Skipped CRWD** — holding 5/5, replace failed
+    - Plan: buy at $644.64, sell-stop at $569.02, target $795.88
+    - 39 shares, risking $2949
+- ✗ **Skipped AMZN** — 5/5 full, all 5 positions in profit, none weak enough to replace
+    - Plan: buy at $271.33, sell-stop at $261.36, target $291.27
+    - 93 shares, risking $927
+- ✗ **Skipped QFIN** — holding 5/5, replace failed
+    - Plan: buy at $15.78, sell-stop at $12.57, target $22.2
+    - 991 shares, risking $3181
+- ✗ **Skipped MRVL** — holding 5/5, replace failed
+    - Plan: buy at $200.68, sell-stop at $175.1, target $251.84
+    - 126 shares, risking $3223
+
+<details><summary>Notable news today</summary>
+
+- ✓ **NVDA** — strong positive news (+3)
+    - _[-] Jensen Huang Is Quietly Locking Up Infrastructure That Keeps Nvidia Untouchable_
+- ✓ **AMD** — strong positive news (+3)
+    - _[-] AMD Stock Is On A Once-In-50-Year Run — And It Looks Like Unfinished Business_
+- ✓ **DELL** — strong positive news (+3)
+    - _[~] Dell Q1 Preview: Stock At All-Time Highs, Will Trump Effect Help Earnings?_
+- ✗ **META** — negative news (-2)
+    - [~] 'Meta launches Instagram, Facebook, and WhatsApp subscriptions, with more to com
+
+</details>
+
+<details><summary>🔮 What-If Tracker (sentiment picks we're watching)</summary>
+
+**New picks flagged:**
+- **SMCI** at $38.06 — momentum surge (+24.5% in 5d)
+- **APLD** at $48.79 — strong sentiment (+2), momentum surge (+33.1% in 5d)
+- **MSFT** at $413.44 — strong sentiment (+2)
+- **ASTC** at $13.37 — strong sentiment (+2), momentum surge (+424.3% in 5d)
+
+**Tracking:**
+| Stock | Entry | Now | Peak | Day |
+|---|---|---|---|---|
+| 📉 NVDA | $216.96 | -1.9% | +0.0% | 3/5 |
+| 📈 AMD | $484.06 | +2.7% | +5.0% | 3/5 |
+| 📉 MRVL | $214.47 | -6.4% | +0.0% | 3/5 |
+| 📈 TSLA | $432.94 | +1.6% | +2.4% | 3/5 |
+| 📉 LUNR | $42.27 | -5.8% | +0.0% | 3/5 |
+| 📈 PL | $46.20 | +8.7% | +8.7% | 3/5 |
+| 📈 DELL | $304.96 | +0.7% | +0.7% | 2/5 |
+| 📉 CRM | $179.16 | -0.5% | +1.4% | 2/5 |
+| 📉 CRWD | $671.56 | -4.0% | +0.0% | 2/5 |
+| 📉 SNOW | $177.67 | -1.4% | +0.0% | 2/5 |
+| 📈 CSCO | $118.31 | +1.1% | +1.1% | 2/5 |
+| 📈 RDW | $22.03 | +9.1% | +9.1% | 2/5 |
+| 📈 RKLB | $143.24 | +4.7% | +4.7% | 2/5 |
+| 📈 ASTS | $119.75 | +7.9% | +7.9% | 2/5 |
+| 📈 PCLA | $11.69 | +4.5% | +4.5% | 2/5 |
+| 📉 BRAI | $12.49 | -15.7% | +0.0% | 2/5 |
+| 📉 AAPL | $310.64 | -0.3% | +0.0% | 1/5 |
+| 📈 XOM | $146.43 | +0.8% | +0.8% | 1/5 |
+| 📈 FANG | $191.24 | +0.5% | +0.5% | 1/5 |
+| 📈 QBTS | $27.30 | +1.3% | +1.3% | 1/5 |
+| 📉 MSTR | $155.38 | -0.9% | +0.0% | 1/5 |
+| 📉 QQQ | $731.94 | -0.3% | +0.0% | 1/5 |
+| 📈 QTTB | $11.10 | +12.7% | +12.7% | 1/5 |
+| 📉 DY | $535.00 | -2.4% | +0.0% | 1/5 |
+| 📈 QFIN | $15.65 | +0.8% | +0.8% | 1/5 |
+| 📉 SMCI | $38.06 | +0.0% | +0.0% | 0/5 |
+| 📉 APLD | $48.79 | +0.0% | +0.0% | 0/5 |
+| 📉 MSFT | $413.44 | +0.0% | +0.0% | 0/5 |
+| 📉 ASTC | $13.37 | +0.0% | +0.0% | 0/5 |
+
+</details>
+
+---
 
 ## May 27, 03:02 PM ET — News check | Pi: 48.7°C
 
@@ -1711,23 +1859,5 @@ _Last updated: May 27, 2026 at 03:02 PM ET_
 - ✗ **Skipped CRWD** (gap +3.3%) — outside target window or market closed
     - Plan: buy at $0, sell-stop at $0, target $0
     - 0 shares, risking $0
-
----
-
-## May 18, 01:25 PM ET — News check
-
-**Market check:**
-- Market is going **up** 📈
-
-**Result:** No trades today.
-<details><summary>Notable news today</summary>
-
-- ✓ **CRWD** — strong positive news (+3)
-- ✓ **NVDA** — strong positive news (+2)
-- ✗ **AMD** — negative news (-2)
-- ✗ **META** — negative news (-2)
-- ✗ **GOOGL** — negative news (-2)
-
-</details>
 
 ---

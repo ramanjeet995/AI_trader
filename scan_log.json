@@ -1,207 +1,5 @@
 [
   {
-    "timestamp": "2026-05-18T13:25:36.066960-04:00",
-    "mode": "NEWS",
-    "spy_regime": "BULL",
-    "safety_block": "",
-    "signals": [],
-    "alerts": [
-      "DANGER \u2014 GOOGL held position has NEGATIVE news!",
-      "  [-] Why Redwire Stock Is Falling On Monday?",
-      "  [~] Stanley Druckenmiller Dumps Amazon And Alphabet While Loading Up On Commodities,",
-      "DANGER \u2014 AMZN held position has NEGATIVE news!",
-      "  [-] Semi And Options Mania Collide With Bond Rout Ahead Of Earnings From Nvidia, Hom",
-      "  [-] 'Amazon Web Services CEO Pushes Back on AI Job Apocalypse Warnings' - Wall Stree"
-    ],
-    "news_snapshot": [
-      {
-        "symbol": "CRWD",
-        "sentiment": "POSITIVE",
-        "score": 3
-      },
-      {
-        "symbol": "NVDA",
-        "sentiment": "POSITIVE",
-        "score": 2
-      },
-      {
-        "symbol": "ARM",
-        "sentiment": "NEUTRAL",
-        "score": 1
-      },
-      {
-        "symbol": "NFLX",
-        "sentiment": "NEUTRAL",
-        "score": 1
-      },
-      {
-        "symbol": "CRM",
-        "sentiment": "NEUTRAL",
-        "score": 1
-      },
-      {
-        "symbol": "SHOP",
-        "sentiment": "NEUTRAL",
-        "score": 1
-      },
-      {
-        "symbol": "COIN",
-        "sentiment": "NEUTRAL",
-        "score": 1
-      },
-      {
-        "symbol": "MARA",
-        "sentiment": "NEUTRAL",
-        "score": 1
-      },
-      {
-        "symbol": "SMCI",
-        "sentiment": "NEUTRAL",
-        "score": 0
-      },
-      {
-        "symbol": "MRVL",
-        "sentiment": "NEUTRAL",
-        "score": 0
-      },
-      {
-        "symbol": "NOW",
-        "sentiment": "NEUTRAL",
-        "score": 0
-      },
-      {
-        "symbol": "SNOW",
-        "sentiment": "NEUTRAL",
-        "score": 0
-      },
-      {
-        "symbol": "PANW",
-        "sentiment": "NEUTRAL",
-        "score": 0
-      },
-      {
-        "symbol": "ANET",
-        "sentiment": "NEUTRAL",
-        "score": 0
-      },
-      {
-        "symbol": "XOM",
-        "sentiment": "NEUTRAL",
-        "score": 0
-      },
-      {
-        "symbol": "OXY",
-        "sentiment": "NEUTRAL",
-        "score": 0
-      },
-      {
-        "symbol": "FANG",
-        "sentiment": "NEUTRAL",
-        "score": 0
-      },
-      {
-        "symbol": "SLB",
-        "sentiment": "NEUTRAL",
-        "score": 0
-      },
-      {
-        "symbol": "NEM",
-        "sentiment": "NEUTRAL",
-        "score": 0
-      },
-      {
-        "symbol": "FCX",
-        "sentiment": "NEUTRAL",
-        "score": 0
-      },
-      {
-        "symbol": "GDX",
-        "sentiment": "NEUTRAL",
-        "score": 0
-      },
-      {
-        "symbol": "RIOT",
-        "sentiment": "NEUTRAL",
-        "score": 0
-      },
-      {
-        "symbol": "SPY",
-        "sentiment": "NEUTRAL",
-        "score": 0
-      },
-      {
-        "symbol": "AVGO",
-        "sentiment": "NEUTRAL",
-        "score": -1
-      },
-      {
-        "symbol": "MSFT",
-        "sentiment": "NEUTRAL",
-        "score": -1
-      },
-      {
-        "symbol": "AAPL",
-        "sentiment": "NEUTRAL",
-        "score": -1
-      },
-      {
-        "symbol": "PLTR",
-        "sentiment": "NEUTRAL",
-        "score": -1
-      },
-      {
-        "symbol": "CSCO",
-        "sentiment": "NEUTRAL",
-        "score": -1
-      },
-      {
-        "symbol": "GOLD",
-        "sentiment": "NEUTRAL",
-        "score": -1
-      },
-      {
-        "symbol": "AMD",
-        "sentiment": "NEGATIVE",
-        "score": -2
-      },
-      {
-        "symbol": "META",
-        "sentiment": "NEGATIVE",
-        "score": -2
-      },
-      {
-        "symbol": "GOOGL",
-        "sentiment": "NEGATIVE",
-        "score": -2
-      },
-      {
-        "symbol": "TSLA",
-        "sentiment": "NEGATIVE",
-        "score": -2
-      },
-      {
-        "symbol": "MSTR",
-        "sentiment": "NEGATIVE",
-        "score": -2
-      },
-      {
-        "symbol": "QQQ",
-        "sentiment": "NEGATIVE",
-        "score": -2
-      },
-      {
-        "symbol": "MU",
-        "sentiment": "NEGATIVE",
-        "score": -3
-      },
-      {
-        "symbol": "AMZN",
-        "sentiment": "NEGATIVE",
-        "score": -3
-      }
-    ]
-  },
-  {
     "timestamp": "2026-05-18T13:49:58.741290-04:00",
     "mode": "CATALYST",
     "spy_regime": "BULL",
@@ -14413,6 +14211,933 @@
       "account_now": 102269.8,
       "spy_start": 742.91,
       "spy_now": 750.81
+    }
+  },
+  {
+    "timestamp": "2026-05-27T15:53:31.903310-04:00",
+    "mode": "FULL",
+    "spy_regime": "BULL",
+    "posture": "RISK-OFF",
+    "vix": 17.010000228881836,
+    "spy_atr_pct": 0.95,
+    "in_window": true,
+    "market_open": true,
+    "data_feed": "iex",
+    "yfinance_patched": "0/74",
+    "sentiment_backend": "finbert",
+    "earnings_cache_size": 73,
+    "macro_blackout": false,
+    "macro_reason": "",
+    "next_macro_event": {
+      "name": "FOMC",
+      "datetime": "2026-06-17T14:00:00-04:00",
+      "days_away": 20,
+      "hours_away": 502.2
+    },
+    "open_positions": [
+      "MU",
+      "OXY",
+      "PANW",
+      "PLTR",
+      "SLB"
+    ],
+    "new_today": 0,
+    "filter_stats": {
+      "scanned": 62,
+      "no_data": 0,
+      "held": 5,
+      "market_volatile": 0,
+      "earnings_blackout": 1,
+      "failed_filters": 9,
+      "obv_distribution": 4,
+      "no_strategy_signal": 19,
+      "of_or_sent_reject": 3,
+      "sector_misalign": 0,
+      "passed_all": 21
+    },
+    "sectors_top3": [
+      {
+        "ticker": "UNG",
+        "sector": "Natural Gas",
+        "ret_20d": 10.14,
+        "rs": 1.86,
+        "obv": "ACCUMULATION",
+        "above_ema": "True",
+        "score": 21.62
+      },
+      {
+        "ticker": "XLV",
+        "sector": "Healthcare",
+        "ret_20d": 4.1,
+        "rs": 0.75,
+        "obv": "ACCUMULATION",
+        "above_ema": "True",
+        "score": 10.53
+      },
+      {
+        "ticker": "SLV",
+        "sector": "Silver",
+        "ret_20d": 4.18,
+        "rs": 0.77,
+        "obv": "ACCUMULATION",
+        "above_ema": "False",
+        "score": 8.68
+      }
+    ],
+    "sectors_bottom3": [
+      {
+        "ticker": "GLD",
+        "sector": "Gold",
+        "ret_20d": -2.09,
+        "rs": -0.38,
+        "obv": "DISTRIBUTION",
+        "above_ema": "False",
+        "score": -6.84
+      },
+      {
+        "ticker": "XLE",
+        "sector": "Energy",
+        "ret_20d": -3.64,
+        "rs": -0.67,
+        "obv": "DISTRIBUTION",
+        "above_ema": "False",
+        "score": -9.69
+      },
+      {
+        "ticker": "USO",
+        "sector": "Crude Oil",
+        "ret_20d": -13.05,
+        "rs": -2.4,
+        "obv": "DISTRIBUTION",
+        "above_ema": "False",
+        "score": -26.97
+      }
+    ],
+    "discovered": [
+      "ASTC"
+    ],
+    "discovered_watchlist": [
+      "AGYS",
+      "TATT",
+      "AKTX",
+      "PCLA",
+      "BRAI",
+      "QTTB",
+      "DY",
+      "QFIN",
+      "ASTC"
+    ],
+    "signals": [
+      {
+        "symbol": "PL",
+        "strategy": "D",
+        "confidence": 0.84,
+        "signal": "BUY",
+        "entry": 50.21,
+        "stop": 41.36,
+        "target": 67.91,
+        "shares": 359,
+        "notional": 18025.39,
+        "risk_$": 3177.15,
+        "sentiment": "NEUTRAL",
+        "obv": "ACCUMULATION",
+        "of_score": 3,
+        "sector_score": 999.0,
+        "reason": "Momentum continuation | RSI=72.9 | 5d +20.6% | MAs stacked",
+        "order_status": "SKIPPED: holding 5/5, replace failed",
+        "headlines": [
+          "[~] Space Stocks Are Flying Ahead Of NASA Moon Base Event, SpaceX IPO",
+          "[~] Why Is Planet Labs Stock Surging On Tuesday?"
+        ]
+      },
+      {
+        "symbol": "ASTS",
+        "strategy": "D",
+        "confidence": 0.94,
+        "signal": "BUY",
+        "entry": 129.18,
+        "stop": 90.55,
+        "target": 206.44,
+        "shares": 98,
+        "notional": 12659.64,
+        "risk_$": 3785.74,
+        "sentiment": "POSITIVE",
+        "obv": "ACCUMULATION",
+        "of_score": 2,
+        "sector_score": 999.0,
+        "reason": "Momentum continuation | RSI=76.9 | 5d +46.7% | MAs stacked",
+        "order_status": "SKIPPED: holding 5/5, replace failed",
+        "headlines": [
+          "[+] AST SpaceMobile Jumps As Space Stocks Rally Before NASA Update",
+          "[+] Nasdaq 100 Hits Record Above 30,000 On Micron's 18% Rally: Stock Market Today"
+        ]
+      },
+      {
+        "symbol": "APLD",
+        "strategy": "D",
+        "confidence": 0.68,
+        "signal": "BUY",
+        "entry": 48.79,
+        "stop": 41.04,
+        "target": 64.29,
+        "shares": 492,
+        "notional": 24004.68,
+        "risk_$": 3813.0,
+        "sentiment": "POSITIVE",
+        "obv": "ACCUMULATION",
+        "of_score": 3,
+        "sector_score": 999.0,
+        "reason": "Momentum continuation | RSI=63.8 | 5d +33.1% | MAs stacked",
+        "order_status": "SKIPPED: holding 5/5, replace failed",
+        "headlines": [
+          "[+] B. Riley Securities Maintains Buy on Applied Digital, Raises Price Target to $66",
+          "[~] Why Is Applied Digital Stock Moving Higher Tuesday?"
+        ]
+      },
+      {
+        "symbol": "AMD",
+        "strategy": "D",
+        "confidence": 0.89,
+        "signal": "BUY",
+        "entry": 496.96,
+        "stop": 417.31,
+        "target": 656.26,
+        "shares": 51,
+        "notional": 25344.96,
+        "risk_$": 4062.15,
+        "sentiment": "POSITIVE",
+        "obv": "ACCUMULATION",
+        "of_score": 2,
+        "sector_score": 999.0,
+        "reason": "Momentum continuation | RSI=74.5 | 5d +20.0% | MAs stacked",
+        "order_status": "SKIPPED: holding 5/5, replace failed",
+        "headlines": [
+          "[-] AMD Stock Is On A Once-In-50-Year Run \u2014 And It Looks Like Unfinished Business",
+          "[+] Nvidia's Taiwan Investment Highlights A New AI Supply Chain Reality"
+        ]
+      },
+      {
+        "symbol": "HPE",
+        "strategy": "D",
+        "confidence": 0.89,
+        "signal": "BUY",
+        "entry": 37.23,
+        "stop": 32.37,
+        "target": 46.95,
+        "shares": 683,
+        "notional": 25428.09,
+        "risk_$": 3319.38,
+        "sentiment": "NEUTRAL",
+        "obv": "ACCUMULATION",
+        "of_score": 2,
+        "sector_score": 999.0,
+        "reason": "Momentum continuation | RSI=74.4 | 5d +14.1% | MAs stacked",
+        "order_status": "SKIPPED: holding 5/5, replace failed",
+        "headlines": [
+          "No recent news"
+        ]
+      },
+      {
+        "symbol": "RIOT",
+        "strategy": "D",
+        "confidence": 0.86,
+        "signal": "BUY",
+        "entry": 26.83,
+        "stop": 22.78,
+        "target": 34.93,
+        "shares": 785,
+        "notional": 21061.55,
+        "risk_$": 3179.25,
+        "sentiment": "NEUTRAL",
+        "obv": "ACCUMULATION",
+        "of_score": 2,
+        "sector_score": 999.0,
+        "reason": "Momentum continuation | RSI=72.9 | 5d +18.5% | MAs stacked",
+        "order_status": "SKIPPED: holding 5/5, replace failed",
+        "headlines": [
+          "No recent news"
+        ]
+      },
+      {
+        "symbol": "ARM",
+        "strategy": "D",
+        "confidence": 0.83,
+        "signal": "BUY",
+        "entry": 304.44,
+        "stop": 241.15,
+        "target": 431.02,
+        "shares": 60,
+        "notional": 18266.4,
+        "risk_$": 3797.4,
+        "sentiment": "NEUTRAL",
+        "obv": "ACCUMULATION",
+        "of_score": 2,
+        "sector_score": 999.0,
+        "reason": "Momentum continuation | RSI=71.4 | 5d +36.4% | MAs stacked",
+        "order_status": "SKIPPED: holding 5/5, replace failed",
+        "headlines": [
+          "[~] The AI Bubble That Isn't: Why Nvidia, Micron Still Look Cheap"
+        ]
+      },
+      {
+        "symbol": "IONQ",
+        "strategy": "D",
+        "confidence": 0.82,
+        "signal": "BUY",
+        "entry": 65.62,
+        "stop": 53.07,
+        "target": 90.72,
+        "shares": 253,
+        "notional": 16601.86,
+        "risk_$": 3175.15,
+        "sentiment": "NEUTRAL",
+        "obv": "ACCUMULATION",
+        "of_score": 2,
+        "sector_score": 999.0,
+        "reason": "Momentum continuation | RSI=70.9 | 5d +35.4% | MAs stacked",
+        "order_status": "SKIPPED: holding 5/5, replace failed",
+        "headlines": [
+          "[+] QTUM ETF Crosses $5 Billion Even As IBM, Rigetti, IonQ, D-Wave Cool Off",
+          "[-] Quantum Computing Stocks' Rally Has A Warning Baked In"
+        ]
+      },
+      {
+        "symbol": "RKLB",
+        "strategy": "D",
+        "confidence": 0.8,
+        "signal": "BUY",
+        "entry": 149.9,
+        "stop": 116.35,
+        "target": 217.0,
+        "shares": 113,
+        "notional": 16938.7,
+        "risk_$": 3791.15,
+        "sentiment": "NEUTRAL",
+        "obv": "ACCUMULATION",
+        "of_score": 2,
+        "sector_score": 999.0,
+        "reason": "Momentum continuation | RSI=73.5 | 5d +17.7% | MAs stacked",
+        "order_status": "SKIPPED: holding 5/5, replace failed",
+        "headlines": [
+          "[+] Rocket Lab Hits Key SDA Milestone, Expands Defense Footprint",
+          "[-] Why Is Sidus Space Stock Plunging On Wednesday?"
+        ]
+      },
+      {
+        "symbol": "LUNR",
+        "strategy": "D",
+        "confidence": 0.6,
+        "signal": "BUY",
+        "entry": 39.84,
+        "stop": 31.96,
+        "target": 55.6,
+        "shares": 403,
+        "notional": 16055.52,
+        "risk_$": 3175.64,
+        "sentiment": "NEUTRAL",
+        "obv": "ACCUMULATION",
+        "of_score": 3,
+        "sector_score": 999.0,
+        "reason": "Momentum continuation | RSI=67.4 | 5d +22.8% | MAs stacked",
+        "order_status": "SKIPPED: holding 5/5, replace failed",
+        "headlines": [
+          "[~] 10 Industrials Stocks Whale Activity In Today's Session",
+          "[~] Space Mania Adds To Semi And Options Frenzy; Micron's Gamma Squeeze; S&P 500's N"
+        ]
+      },
+      {
+        "symbol": "SMCI",
+        "strategy": "D",
+        "confidence": 0.78,
+        "signal": "BUY",
+        "entry": 38.06,
+        "stop": 32.22,
+        "target": 49.74,
+        "shares": 545,
+        "notional": 20742.7,
+        "risk_$": 3182.8,
+        "sentiment": "NEUTRAL",
+        "obv": "ACCUMULATION",
+        "of_score": 2,
+        "sector_score": 999.0,
+        "reason": "Momentum continuation | RSI=69.1 | 5d +24.5% | MAs stacked",
+        "order_status": "SKIPPED: holding 5/5, replace failed",
+        "headlines": [
+          "[+] Supermicro Stock Rises On New AI Infrastructure Partnership In Europe",
+          "[~] Why Super Micro Computer Stock Is Surging On Wednesday?"
+        ]
+      },
+      {
+        "symbol": "RGTI",
+        "strategy": "D",
+        "confidence": 0.69,
+        "signal": "BUY",
+        "entry": 24.46,
+        "stop": 19.76,
+        "target": 33.86,
+        "shares": 541,
+        "notional": 13232.86,
+        "risk_$": 2542.7,
+        "sentiment": "NEUTRAL",
+        "obv": "ACCUMULATION",
+        "of_score": 2,
+        "sector_score": 999.0,
+        "reason": "Momentum continuation | RSI=64.5 | 5d +53.4% | MAs stacked",
+        "order_status": "SKIPPED: holding 5/5, replace failed",
+        "headlines": [
+          "[+] QTUM ETF Crosses $5 Billion Even As IBM, Rigetti, IonQ, D-Wave Cool Off",
+          "[-] Quantum Computing Stocks' Rally Has A Warning Baked In"
+        ]
+      },
+      {
+        "symbol": "QBTS",
+        "strategy": "D",
+        "confidence": 0.69,
+        "signal": "BUY",
+        "entry": 27.65,
+        "stop": 22.49,
+        "target": 37.97,
+        "shares": 493,
+        "notional": 13631.45,
+        "risk_$": 2543.88,
+        "sentiment": "NEUTRAL",
+        "obv": "ACCUMULATION",
+        "of_score": 2,
+        "sector_score": 999.0,
+        "reason": "Momentum continuation | RSI=64.6 | 5d +52.1% | MAs stacked",
+        "order_status": "SKIPPED: holding 5/5, replace failed",
+        "headlines": [
+          "[-] Why Is D-Wave Quantum Stock Falling Wednesday?",
+          "[+] QTUM ETF Crosses $5 Billion Even As IBM, Rigetti, IonQ, D-Wave Cool Off"
+        ]
+      },
+      {
+        "symbol": "NOK",
+        "strategy": "D",
+        "confidence": 0.69,
+        "signal": "BUY",
+        "entry": 15.68,
+        "stop": 13.59,
+        "target": 19.86,
+        "shares": 1522,
+        "notional": 23864.96,
+        "risk_$": 3180.98,
+        "sentiment": "NEUTRAL",
+        "obv": "ACCUMULATION",
+        "of_score": 2,
+        "sector_score": 999.0,
+        "reason": "Momentum continuation | RSI=67.7 | 5d +14.8% | MAs stacked",
+        "order_status": "SKIPPED: holding 5/5, replace failed",
+        "headlines": [
+          "[~] 10 Information Technology Stocks Whale Activity In Today's Session",
+          "[-] What's Going On With Nokia Stock Wednesday?"
+        ]
+      },
+      {
+        "symbol": "MARA",
+        "strategy": "D",
+        "confidence": 0.67,
+        "signal": "BUY",
+        "entry": 14.34,
+        "stop": 12.67,
+        "target": 17.68,
+        "shares": 1775,
+        "notional": 25453.5,
+        "risk_$": 2964.25,
+        "sentiment": "NEUTRAL",
+        "obv": "ACCUMULATION",
+        "of_score": 2,
+        "sector_score": 999.0,
+        "reason": "Momentum continuation | RSI=68.5 | 5d +15.0% | MAs stacked",
+        "order_status": "SKIPPED: holding 5/5, replace failed",
+        "headlines": [
+          "No recent news"
+        ]
+      },
+      {
+        "symbol": "ASTC",
+        "strategy": "B",
+        "confidence": 0.65,
+        "signal": "BUY",
+        "entry": 13.37,
+        "stop": 2.52,
+        "target": 35.07,
+        "shares": 293,
+        "notional": 3917.41,
+        "risk_$": 3179.05,
+        "sentiment": "POSITIVE",
+        "obv": "ACCUMULATION",
+        "of_score": 2,
+        "sector_score": 999.0,
+        "reason": "Breakout above 2.55 | vol 4394.2x prior 20d avg",
+        "order_status": "SKIPPED: holding 5/5, replace failed",
+        "headlines": [
+          "[+] Crude Oil Falls Over 5%; Dycom Industries Shares Surge Following Q1 Results",
+          "[~] 12 Information Technology Stocks Moving In Wednesday's Intraday Session"
+        ]
+      },
+      {
+        "symbol": "CSCO",
+        "strategy": "D",
+        "confidence": 0.64,
+        "signal": "BUY",
+        "entry": 119.64,
+        "stop": 106.38,
+        "target": 146.16,
+        "shares": 212,
+        "notional": 25363.68,
+        "risk_$": 2811.12,
+        "sentiment": "POSITIVE",
+        "obv": "ACCUMULATION",
+        "of_score": 2,
+        "sector_score": 999.0,
+        "reason": "Momentum continuation | RSI=76.6 | 5d +3.7% | MAs stacked",
+        "order_status": "SKIPPED: holding 5/5, replace failed",
+        "headlines": [
+          "[+] B of A Securities Maintains Buy on Cisco Systems, Raises Price Target to $135",
+          "[~] 10 Information Technology Stocks Whale Activity In Today's Session"
+        ]
+      },
+      {
+        "symbol": "CRWD",
+        "strategy": "D",
+        "confidence": 0.6,
+        "signal": "BUY",
+        "entry": 644.64,
+        "stop": 569.02,
+        "target": 795.88,
+        "shares": 39,
+        "notional": 25140.96,
+        "risk_$": 2949.18,
+        "sentiment": "STRONG_POSITIVE",
+        "obv": "ACCUMULATION",
+        "of_score": 2,
+        "sector_score": 999.0,
+        "reason": "Momentum continuation | RSI=75.5 | 5d +4.5% | MAs stacked",
+        "order_status": "SKIPPED: holding 5/5, replace failed",
+        "headlines": [
+          "[+] Benchmark Maintains Buy on CrowdStrike Holdings, Raises Price Target to $700",
+          "[-] CrowdStrike Shares Slip Wednesday: What's Driving The Move?"
+        ]
+      },
+      {
+        "symbol": "AMZN",
+        "strategy": "D",
+        "confidence": 0.5,
+        "signal": "BUY",
+        "entry": 271.33,
+        "stop": 261.36,
+        "target": 291.27,
+        "shares": 93,
+        "notional": 25233.69,
+        "risk_$": 927.21,
+        "sentiment": "NEUTRAL",
+        "obv": "ACCUMULATION",
+        "of_score": 2,
+        "sector_score": 999.0,
+        "reason": "Momentum continuation | RSI=62.3 | 5d +4.6% | MAs stacked",
+        "order_status": "SKIPPED: 5/5 full, all 5 positions in profit, none weak enough to replace",
+        "headlines": [
+          "[~] Amazon Appoints Roy Schoenberg As Head Of Amazon Health Services, Effective July",
+          "[~] 10 Consumer Discretionary Stocks With Whale Alerts In Today's Session"
+        ]
+      },
+      {
+        "symbol": "QFIN",
+        "strategy": "B",
+        "confidence": 0.35,
+        "signal": "BUY",
+        "entry": 15.78,
+        "stop": 12.57,
+        "target": 22.2,
+        "shares": 991,
+        "notional": 15637.98,
+        "risk_$": 3181.11,
+        "sentiment": "POSITIVE",
+        "obv": "ACCUMULATION",
+        "of_score": 3,
+        "sector_score": 999.0,
+        "reason": "Breakout above 12.70 | vol 6.0x prior 20d avg",
+        "order_status": "SKIPPED: holding 5/5, replace failed",
+        "headlines": [
+          "[+] Abercrombie & Fitch Upbeat Q1 Earnings, Joins Digital Turbine, Dycom Industries ",
+          "[+] Qifu Technology Q1 Adj. EPS $1.12 Beats $0.96 Estimate, Sales $566.735M Beat $53"
+        ]
+      },
+      {
+        "symbol": "MRVL",
+        "strategy": "D",
+        "confidence": 0.65,
+        "signal": "BUY",
+        "entry": 200.68,
+        "stop": 175.1,
+        "target": 251.84,
+        "shares": 126,
+        "notional": 25285.68,
+        "risk_$": 3223.08,
+        "sentiment": "STRONG_POSITIVE",
+        "obv": "ACCUMULATION",
+        "of_score": 0,
+        "sector_score": 999.0,
+        "reason": "Momentum continuation | RSI=68.8 | 5d +13.9% | MAs stacked",
+        "order_status": "SKIPPED: holding 5/5, replace failed",
+        "headlines": [
+          "[~] AI Earnings Test: Salesforce, Snowflake, Marvell, HP Report After The Bell",
+          "[~] Marvell Earnings Due After The Bell: What Analysts And Charts Are Signaling"
+        ]
+      }
+    ],
+    "top_news": [
+      {
+        "symbol": "NVDA",
+        "sentiment": "POSITIVE",
+        "score": 3,
+        "headlines": [
+          "[-] Jensen Huang Is Quietly Locking Up Infrastructure That Keeps Nvidia Untouchable",
+          "[~] 10 Information Technology Stocks Whale Activity In Today's Session"
+        ]
+      },
+      {
+        "symbol": "AVGO",
+        "sentiment": "NEUTRAL",
+        "score": 1,
+        "headlines": [
+          "[~] What's Going On With Broadcom Stock Wednesday?",
+          "[~] Donald Trump Shouted Out Intel, Then Dell, Then Micron: Look At His Own Stock Fi"
+        ]
+      },
+      {
+        "symbol": "AMD",
+        "sentiment": "POSITIVE",
+        "score": 3,
+        "headlines": [
+          "[-] AMD Stock Is On A Once-In-50-Year Run \u2014 And It Looks Like Unfinished Business",
+          "[+] Nvidia's Taiwan Investment Highlights A New AI Supply Chain Reality"
+        ]
+      },
+      {
+        "symbol": "MU",
+        "sentiment": "STRONG_POSITIVE",
+        "score": 5,
+        "headlines": [
+          "[~] 10 Information Technology Stocks Whale Activity In Today's Session",
+          "[~] Dow Jones Hit Records Above 50,600 As Oil Sinks Below $90: Stock Market Today"
+        ]
+      },
+      {
+        "symbol": "SMCI",
+        "sentiment": "NEUTRAL",
+        "score": 1,
+        "headlines": [
+          "[+] Supermicro Stock Rises On New AI Infrastructure Partnership In Europe",
+          "[~] Why Super Micro Computer Stock Is Surging On Wednesday?"
+        ]
+      },
+      {
+        "symbol": "MRVL",
+        "sentiment": "STRONG_POSITIVE",
+        "score": 5,
+        "headlines": [
+          "[~] AI Earnings Test: Salesforce, Snowflake, Marvell, HP Report After The Bell",
+          "[~] Marvell Earnings Due After The Bell: What Analysts And Charts Are Signaling"
+        ]
+      },
+      {
+        "symbol": "DELL",
+        "sentiment": "POSITIVE",
+        "score": 3,
+        "headlines": [
+          "[~] Dell Q1 Preview: Stock At All-Time Highs, Will Trump Effect Help Earnings?",
+          "[~] Donald Trump Shouted Out Intel, Then Dell, Then Micron: Look At His Own Stock Fi"
+        ]
+      },
+      {
+        "symbol": "VRT",
+        "sentiment": "NEUTRAL",
+        "score": 1,
+        "headlines": [
+          "[~] 10 Industrials Stocks Whale Activity In Today's Session",
+          "[~] 10 Industrials Stocks With Whale Alerts In Today's Session"
+        ]
+      },
+      {
+        "symbol": "APLD",
+        "sentiment": "POSITIVE",
+        "score": 2,
+        "headlines": [
+          "[+] B. Riley Securities Maintains Buy on Applied Digital, Raises Price Target to $66",
+          "[~] Why Is Applied Digital Stock Moving Higher Tuesday?"
+        ]
+      },
+      {
+        "symbol": "META",
+        "sentiment": "NEGATIVE",
+        "score": -2,
+        "headlines": [
+          "[~] 'Meta launches Instagram, Facebook, and WhatsApp subscriptions, with more to com",
+          "[~] Micron Is On Track To Crush Tesla By Nearly $500 Billion \u2014 Ask UBS"
+        ]
+      }
+    ],
+    "paper_tracker": {
+      "new_picks": [
+        {
+          "symbol": "SMCI",
+          "entry": 38.06,
+          "reasons": [
+            "momentum surge (+24.5% in 5d)"
+          ]
+        },
+        {
+          "symbol": "APLD",
+          "entry": 48.79,
+          "reasons": [
+            "strong sentiment (+2)",
+            "momentum surge (+33.1% in 5d)"
+          ]
+        },
+        {
+          "symbol": "MSFT",
+          "entry": 413.44,
+          "reasons": [
+            "strong sentiment (+2)"
+          ]
+        },
+        {
+          "symbol": "ASTC",
+          "entry": 13.37,
+          "reasons": [
+            "strong sentiment (+2)",
+            "momentum surge (+424.3% in 5d)"
+          ]
+        }
+      ],
+      "active": [
+        {
+          "symbol": "NVDA",
+          "entry": 216.96,
+          "current_pct": -1.88,
+          "peak_pct": 0.0,
+          "days": 3
+        },
+        {
+          "symbol": "AMD",
+          "entry": 484.06,
+          "current_pct": 2.66,
+          "peak_pct": 5.0,
+          "days": 3
+        },
+        {
+          "symbol": "MRVL",
+          "entry": 214.47,
+          "current_pct": -6.43,
+          "peak_pct": 0.0,
+          "days": 3
+        },
+        {
+          "symbol": "TSLA",
+          "entry": 432.94,
+          "current_pct": 1.55,
+          "peak_pct": 2.35,
+          "days": 3
+        },
+        {
+          "symbol": "LUNR",
+          "entry": 42.27,
+          "current_pct": -5.75,
+          "peak_pct": 0.0,
+          "days": 3
+        },
+        {
+          "symbol": "PL",
+          "entry": 46.2,
+          "current_pct": 8.68,
+          "peak_pct": 8.68,
+          "days": 3
+        },
+        {
+          "symbol": "DELL",
+          "entry": 304.96,
+          "current_pct": 0.71,
+          "peak_pct": 0.71,
+          "days": 2
+        },
+        {
+          "symbol": "CRM",
+          "entry": 179.16,
+          "current_pct": -0.53,
+          "peak_pct": 1.38,
+          "days": 2
+        },
+        {
+          "symbol": "CRWD",
+          "entry": 671.56,
+          "current_pct": -4.01,
+          "peak_pct": 0.0,
+          "days": 2
+        },
+        {
+          "symbol": "SNOW",
+          "entry": 177.67,
+          "current_pct": -1.39,
+          "peak_pct": 0.0,
+          "days": 2
+        },
+        {
+          "symbol": "CSCO",
+          "entry": 118.31,
+          "current_pct": 1.12,
+          "peak_pct": 1.12,
+          "days": 2
+        },
+        {
+          "symbol": "RDW",
+          "entry": 22.03,
+          "current_pct": 9.12,
+          "peak_pct": 9.12,
+          "days": 2
+        },
+        {
+          "symbol": "RKLB",
+          "entry": 143.24,
+          "current_pct": 4.65,
+          "peak_pct": 4.65,
+          "days": 2
+        },
+        {
+          "symbol": "ASTS",
+          "entry": 119.75,
+          "current_pct": 7.87,
+          "peak_pct": 7.87,
+          "days": 2
+        },
+        {
+          "symbol": "PCLA",
+          "entry": 11.69,
+          "current_pct": 4.45,
+          "peak_pct": 4.45,
+          "days": 2
+        },
+        {
+          "symbol": "BRAI",
+          "entry": 12.49,
+          "current_pct": -15.65,
+          "peak_pct": 0.0,
+          "days": 2
+        },
+        {
+          "symbol": "AAPL",
+          "entry": 310.64,
+          "current_pct": -0.26,
+          "peak_pct": 0.0,
+          "days": 1
+        },
+        {
+          "symbol": "XOM",
+          "entry": 146.43,
+          "current_pct": 0.85,
+          "peak_pct": 0.85,
+          "days": 1
+        },
+        {
+          "symbol": "FANG",
+          "entry": 191.24,
+          "current_pct": 0.49,
+          "peak_pct": 0.49,
+          "days": 1
+        },
+        {
+          "symbol": "QBTS",
+          "entry": 27.3,
+          "current_pct": 1.28,
+          "peak_pct": 1.28,
+          "days": 1
+        },
+        {
+          "symbol": "MSTR",
+          "entry": 155.38,
+          "current_pct": -0.91,
+          "peak_pct": 0.0,
+          "days": 1
+        },
+        {
+          "symbol": "QQQ",
+          "entry": 731.94,
+          "current_pct": -0.34,
+          "peak_pct": 0.0,
+          "days": 1
+        },
+        {
+          "symbol": "QTTB",
+          "entry": 11.1,
+          "current_pct": 12.7,
+          "peak_pct": 12.7,
+          "days": 1
+        },
+        {
+          "symbol": "DY",
+          "entry": 535.0,
+          "current_pct": -2.42,
+          "peak_pct": 0.0,
+          "days": 1
+        },
+        {
+          "symbol": "QFIN",
+          "entry": 15.65,
+          "current_pct": 0.83,
+          "peak_pct": 0.83,
+          "days": 1
+        },
+        {
+          "symbol": "SMCI",
+          "entry": 38.06,
+          "current_pct": 0.0,
+          "peak_pct": 0.0,
+          "days": 0
+        },
+        {
+          "symbol": "APLD",
+          "entry": 48.79,
+          "current_pct": 0.0,
+          "peak_pct": 0.0,
+          "days": 0
+        },
+        {
+          "symbol": "MSFT",
+          "entry": 413.44,
+          "current_pct": 0.0,
+          "peak_pct": 0.0,
+          "days": 0
+        },
+        {
+          "symbol": "ASTC",
+          "entry": 13.37,
+          "current_pct": 0.0,
+          "peak_pct": 0.0,
+          "days": 0
+        }
+      ],
+      "stats": {
+        "total_picks": 0,
+        "winners": 0,
+        "losers": 0,
+        "hit_rate": 0,
+        "avg_return": 0,
+        "avg_peak": 0,
+        "best_pick": null,
+        "worst_pick": null
+      }
+    },
+    "cpu_temp": "45.8\u00b0C",
+    "benchmark": {
+      "start_date": "2026-05-21",
+      "portfolio_pct": 1.66,
+      "spy_pct": 1.0,
+      "alpha_pct": 0.66,
+      "account_start": 100196.86,
+      "account_now": 101857.02,
+      "spy_start": 742.91,
+      "spy_now": 750.33
     }
   }
 ]

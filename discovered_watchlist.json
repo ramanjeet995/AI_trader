@@ -62,5 +62,13 @@
     "price": 15.71,
     "sentiment": "NEUTRAL",
     "reason": "Up +24.8% today, sentiment NEUTRAL (+1)"
+  },
+  "ASTC": {
+    "added": "2026-05-27T15:50:22.637260-04:00",
+    "last_seen": "2026-05-27T15:50:22.637260-04:00",
+    "gain_pct": 442.71,
+    "price": 13.405,
+    "sentiment": "POSITIVE",
+    "reason": "Up +442.7% today, sentiment POSITIVE (+2)"
   }
 }
