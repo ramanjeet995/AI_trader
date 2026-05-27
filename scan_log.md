@@ -1,14 +1,142 @@
 # AI Trader — Daily Log
 
 What the robot saw and did each time it woke up. Newest at top.
-_Last updated: May 26, 2026 at 04:25 PM ET_
+_Last updated: May 27, 2026 at 09:36 AM ET_
 
 ### Performance since 2026-05-21
 | | Return | Value |
 |---|---|---|
-| 📈 **Our Portfolio** | **+3.04%** | $103,240.23 |
-| 📈 S&P 500 (SPY) | +1.02% | $750.46 |
-| ✅ **Alpha** | **+2.02%** | Beating the market |
+| 📈 **Our Portfolio** | **+1.86%** | $102,062.82 |
+| 📈 S&P 500 (SPY) | +1.05% | $750.74 |
+| ✅ **Alpha** | **+0.81%** | Beating the market |
+
+## May 27, 09:36 AM ET — Main scan | Pi: 44.3°C
+
+**Market check:**
+- Market is going **up** 📈
+- Mood: calm (VIX 17)
+- Investors defensive
+- Currently holding: MU, OXY, PANW, PLTR, SLB
+- Scoreboard: Us **+1.86%** vs S&P 500 +1.05% (**beating** by 0.81%)
+
+**Money flowing into:** Natural Gas (+6%), Healthcare (+4%), Silver (+4%)
+**Money flowing out of:** Energy (-4%), Gold (-3%), Crude Oil (-13%)
+
+**Hot stocks discovered today:** QTTB, DY, QFIN
+**Full discovery list (8):** AGYS, TATT, AKTX, PCLA, BRAI, QTTB, DY, QFIN
+
+**Looked at 61 stocks:**
+- already holding: 5
+- earnings report too close: 1
+- not enough trading volume: 10
+- smart money quietly selling: 8
+- no buy setup today: 22
+- ✓ **15 stocks ready to trade**
+
+**Result:** Found 15 setup(s), but didn't buy any.
+
+- ✗ **Skipped ARM** — holding 5/5, replace failed
+    - Plan: buy at $318.64, sell-stop at $242.49, target $470.94
+    - 50 shares, risking $3808
+- ✗ **Skipped AMD** — holding 5/5, replace failed
+    - Plan: buy at $508.24, sell-stop at $418.37, target $687.98
+    - 50 shares, risking $4494
+- ✗ **Skipped HPE** — holding 5/5, replace failed
+    - Plan: buy at $37.78, sell-stop at $32.42, target $48.5
+    - 675 shares, risking $3618
+- ✗ **Skipped MRVL** — holding 5/5, replace failed
+    - Plan: buy at $212.21, sell-stop at $176.19, target $284.25
+    - 120 shares, risking $4322
+- ✗ **Skipped ASTS** — holding 5/5, replace failed
+    - Plan: buy at $121.37, sell-stop at $89.81, target $184.49
+    - 121 shares, risking $3819
+- ✗ **Skipped SMCI** — holding 5/5, replace failed
+    - Plan: buy at $38.45, sell-stop at $32.26, target $50.83
+    - 515 shares, risking $3188
+- ✗ **Skipped RIOT** — holding 5/5, replace failed
+    - Plan: buy at $25.97, sell-stop at $22.7, target $32.51
+    - 975 shares, risking $3188
+- ✗ **Skipped NOK** — holding 5/5, replace failed
+    - Plan: buy at $15.85, sell-stop at $13.6, target $20.35
+    - 1609 shares, risking $3620
+- ✗ **Skipped RKLB** — holding 5/5, replace failed
+    - Plan: buy at $147.29, sell-stop at $116.11, target $209.65
+    - 122 shares, risking $3804
+- ✗ **Skipped IONQ** — holding 5/5, replace failed
+    - Plan: buy at $62.46, sell-stop at $52.77, target $81.84
+    - 329 shares, risking $3188
+- ✗ **Skipped RGTI** — holding 5/5, replace failed
+    - Plan: buy at $24.62, sell-stop at $19.77, target $34.32
+    - 657 shares, risking $3186
+- ✗ **Skipped PL** — holding 5/5, replace failed
+    - Plan: buy at $48.28, sell-stop at $41.18, target $62.48
+    - 359 shares, risking $2549
+- ✗ **Skipped QBTS** — holding 5/5, replace failed
+    - Plan: buy at $27.3, sell-stop at $22.46, target $36.98
+    - 527 shares, risking $2551
+- ✗ **Skipped CRWD** — holding 5/5, replace failed
+    - Plan: buy at $648.76, sell-stop at $569.41, target $807.46
+    - 39 shares, risking $3095
+- ✗ **Skipped MARA** — holding 5/5, replace failed
+    - Plan: buy at $14.14, sell-stop at $12.65, target $17.12
+    - 1804 shares, risking $2688
+
+<details><summary>Notable news today</summary>
+
+- ✓ **AMD** — strong positive news (+3)
+    - _[~] What Is Going On With AMD Stock On Wednesday?_
+- ✓ **DELL** — strong positive news (+3)
+    - _[+] IREN Secures Blackwell Firepower To Feed Booming AI Cloud Demand_
+- ✗ **GOOGL** — negative news (-2)
+    - [~] Record Profits, Not Hype: Goldman Says Nvidia And Micron Take The S&P 500 To 8,0
+
+</details>
+
+<details><summary>🔮 What-If Tracker (sentiment picks we're watching)</summary>
+
+**New picks flagged:**
+- **AAPL** at $310.64 — hype news detected (buy-the-rumor)
+- **XOM** at $146.43 — strong sentiment (+3), analyst upgrade (+2)
+- **FANG** at $191.24 — strong sentiment (+3), analyst upgrade (+2)
+- **QBTS** at $27.30 — momentum surge (+50.2% in 5d)
+- **MSTR** at $155.38 — strong sentiment (+2)
+- **QQQ** at $731.94 — strong sentiment (+2)
+- **QTTB** at $11.10 — momentum surge (+84.9% in 5d)
+- **DY** at $535.00 — strong sentiment (+3), momentum surge (+29.4% in 5d)
+- **QFIN** at $15.65 — momentum surge (+22.8% in 5d)
+
+**Tracking:**
+| Stock | Entry | Now | Peak | Day |
+|---|---|---|---|---|
+| 📉 NVDA | $216.96 | -2.6% | +0.0% | 2/5 |
+| 📈 AMD | $484.06 | +5.0% | +5.0% | 2/5 |
+| 📉 MRVL | $214.47 | -1.1% | +0.0% | 2/5 |
+| 📈 TSLA | $432.94 | +2.4% | +2.4% | 2/5 |
+| 📉 LUNR | $42.27 | -15.6% | +0.0% | 2/5 |
+| 📈 PL | $46.20 | +4.5% | +4.6% | 2/5 |
+| 📉 DELL | $304.96 | -0.8% | +0.0% | 1/5 |
+| 📈 CRM | $179.16 | +1.4% | +1.4% | 1/5 |
+| 📉 CRWD | $671.56 | -3.4% | +0.0% | 1/5 |
+| 📉 SNOW | $177.67 | -1.5% | +0.0% | 1/5 |
+| 📈 CSCO | $118.31 | +0.0% | +0.0% | 1/5 |
+| 📈 RDW | $22.03 | +3.2% | +3.2% | 1/5 |
+| 📈 RKLB | $143.24 | +2.8% | +2.8% | 1/5 |
+| 📈 ASTS | $119.75 | +1.4% | +1.4% | 1/5 |
+| 📉 PCLA | $11.69 | -16.0% | +0.0% | 1/5 |
+| 📉 BRAI | $12.49 | +0.0% | +0.0% | 1/5 |
+| 📉 AAPL | $310.64 | +0.0% | +0.0% | 0/5 |
+| 📉 XOM | $146.43 | +0.0% | +0.0% | 0/5 |
+| 📉 FANG | $191.24 | +0.0% | +0.0% | 0/5 |
+| 📉 QBTS | $27.30 | +0.0% | +0.0% | 0/5 |
+| 📉 MSTR | $155.38 | +0.0% | +0.0% | 0/5 |
+| 📉 QQQ | $731.94 | +0.0% | +0.0% | 0/5 |
+| 📉 QTTB | $11.10 | +0.0% | +0.0% | 0/5 |
+| 📉 DY | $535.00 | +0.0% | +0.0% | 0/5 |
+| 📉 QFIN | $15.65 | +0.0% | +0.0% | 0/5 |
+
+</details>
+
+---
 
 ## May 26, 04:25 PM ET — Main scan | Pi: 50.1°C
 
@@ -1653,24 +1781,6 @@ _Last updated: May 26, 2026 at 04:25 PM ET_
 - ✓ **PLTR** — strong positive news (+2)
 - ✗ **AMZN** — negative news (-2)
 - ✗ **MSFT** — negative news (-2)
-- ✗ **AAPL** — negative news (-2)
-
-</details>
-
----
-
-## May 15, 04:10 PM ET — News check
-
-**Market check:**
-- Market is going **up** 📈
-
-**Result:** No trades today.
-<details><summary>Notable news today</summary>
-
-- ✓ **SPY** — strong positive news (+3)
-- ✓ **PLTR** — strong positive news (+2)
-- ✗ **AMD** — negative news (-2)
-- ✗ **MU** — negative news (-2)
 - ✗ **AAPL** — negative news (-2)
 
 </details>

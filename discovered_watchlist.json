@@ -38,5 +38,29 @@
     "price": 12.49,
     "sentiment": "POSITIVE",
     "reason": "Up +74.2% today, sentiment POSITIVE (+2)"
+  },
+  "QTTB": {
+    "added": "2026-05-27T09:33:23.909659-04:00",
+    "last_seen": "2026-05-27T09:33:23.909659-04:00",
+    "gain_pct": 56.56,
+    "price": 11.1,
+    "sentiment": "NEUTRAL",
+    "reason": "Up +56.6% today, sentiment NEUTRAL (+1)"
+  },
+  "DY": {
+    "added": "2026-05-27T09:33:23.909659-04:00",
+    "last_seen": "2026-05-27T09:33:23.909659-04:00",
+    "gain_pct": 27.24,
+    "price": 534.995,
+    "sentiment": "POSITIVE",
+    "reason": "Up +27.2% today, sentiment POSITIVE (+3)"
+  },
+  "QFIN": {
+    "added": "2026-05-27T09:33:23.909659-04:00",
+    "last_seen": "2026-05-27T09:33:23.909659-04:00",
+    "gain_pct": 24.78,
+    "price": 15.71,
+    "sentiment": "NEUTRAL",
+    "reason": "Up +24.8% today, sentiment NEUTRAL (+1)"
   }
 }

@@ -14,9 +14,9 @@
       "ret_5d": -2.4,
       "peak_price": 216.96,
       "peak_pct": 0.0,
-      "current_price": 214.78,
-      "current_pct": -1.0,
-      "days_tracked": 1,
+      "current_price": 211.36,
+      "current_pct": -2.58,
+      "days_tracked": 2,
       "headlines": [
         "[~] What's Going On With IREN Stock Tuesday?",
         "[~] What's Going On With Intel Stock Tuesday?"
@@ -35,11 +35,11 @@
       "news_phase": "neutral",
       "ma_role": "none",
       "ret_5d": 15.0,
-      "peak_price": 503.95,
-      "peak_pct": 4.11,
-      "current_price": 503.95,
-      "current_pct": 4.11,
-      "days_tracked": 1,
+      "peak_price": 508.24,
+      "peak_pct": 5.0,
+      "current_price": 508.24,
+      "current_pct": 5.0,
+      "days_tracked": 2,
       "headlines": [
         "[~] What Is Going On With AMD Stock On Tuesday?",
         "[+] NVIDIA's Jensen Huang Declares China A 'Very Important' Market"
@@ -61,9 +61,9 @@
       "ret_5d": 26.9,
       "peak_price": 214.47,
       "peak_pct": 0.0,
-      "current_price": 208.22,
-      "current_pct": -2.91,
-      "days_tracked": 1,
+      "current_price": 212.21,
+      "current_pct": -1.05,
+      "days_tracked": 2,
       "headlines": [
         "[+] Susquehanna Maintains Positive on Marvell Technology, Raises Price Target to $23",
         "[+] Cantor Fitzgerald Maintains Neutral on Marvell Technology, Raises Price Target t"
@@ -81,11 +81,11 @@
       "news_phase": "neutral",
       "ma_role": "none",
       "ret_5d": 5.6,
-      "peak_price": 433.53,
-      "peak_pct": 0.14,
-      "current_price": 433.53,
-      "current_pct": 0.14,
-      "days_tracked": 1,
+      "peak_price": 443.11,
+      "peak_pct": 2.35,
+      "current_price": 443.11,
+      "current_pct": 2.35,
+      "days_tracked": 2,
       "headlines": [
         "[~] 'Pentagon spars with SpaceX over Starlink price hike during Iran war' - Reuters",
         "[~] Ro Khanna Says US Economy 'Works For Capital First And Workers Last,' Calls For "
@@ -105,9 +105,9 @@
       "ret_5d": 25.9,
       "peak_price": 42.27,
       "peak_pct": 0.0,
-      "current_price": 34.87,
-      "current_pct": -17.52,
-      "days_tracked": 1,
+      "current_price": 35.69,
+      "current_pct": -15.57,
+      "days_tracked": 2,
       "headlines": [
         "[+] Stock Market Today: S&P 500, Dow, Nasdaq Futures Up Amid US 'Defensive Strikes' ",
         "[~] Intuitive Machines Stock Hits 52-Week High - Here's Why"
@@ -127,9 +127,9 @@
       "ret_5d": 11.1,
       "peak_price": 48.31,
       "peak_pct": 4.57,
-      "current_price": 48.31,
-      "current_pct": 4.57,
-      "days_tracked": 1,
+      "current_price": 48.28,
+      "current_pct": 4.5,
+      "days_tracked": 2,
       "headlines": [
         "[~] Investors Pour Into NASA ETF Ahead of Anticipated SpaceX IPO",
         "[~] Investors Pour Into NASA ETF Ahead of Anticipated SpaceX IPO"
@@ -150,9 +150,9 @@
       "ret_5d": 28.1,
       "peak_price": 304.96,
       "peak_pct": 0.0,
-      "current_price": 304.96,
-      "current_pct": 0.0,
-      "days_tracked": 0,
+      "current_price": 302.6,
+      "current_pct": -0.77,
+      "days_tracked": 1,
       "headlines": [
         "[~] Watching Dell Technologies; Hearing Zacks Surprise Trader Buys Stock",
         "[~] 10 Information Technology Stocks Whale Activity In Today's Session"
@@ -170,11 +170,11 @@
       "news_phase": "hype",
       "ma_role": "none",
       "ret_5d": -0.2,
-      "peak_price": 179.16,
-      "peak_pct": 0.0,
-      "current_price": 179.16,
-      "current_pct": 0.0,
-      "days_tracked": 0,
+      "peak_price": 181.64,
+      "peak_pct": 1.38,
+      "current_price": 181.64,
+      "current_pct": 1.38,
+      "days_tracked": 1,
       "headlines": [
         "[-] Salesforce Q1 Preview: Stock Near Three-Year Lows, Expert Sees Shares Going Even",
         "[~] Sam Altman Says AI Will Not Lead To A Global 'Jobs Apocalypse'"
@@ -195,9 +195,9 @@
       "ret_5d": 8.5,
       "peak_price": 671.56,
       "peak_pct": 0.0,
-      "current_price": 671.56,
-      "current_pct": 0.0,
-      "days_tracked": 0,
+      "current_price": 648.76,
+      "current_pct": -3.4,
+      "days_tracked": 1,
       "headlines": [
         "[~] CrowdStrike To Rally Over 15%? Here Are 10 Top Analyst Forecasts For Tuesday",
         "[+] BTIG Maintains Buy on CrowdStrike Holdings, Raises Price Target to $764"
@@ -217,9 +217,9 @@
       "ret_5d": 8.2,
       "peak_price": 177.67,
       "peak_pct": 0.0,
-      "current_price": 177.67,
-      "current_pct": 0.0,
-      "days_tracked": 0,
+      "current_price": 175.0,
+      "current_pct": -1.51,
+      "days_tracked": 1,
       "headlines": [
         "[+] Snowflake Q1 Preview: Stock 'Well Positioned' Ahead Of Earnings, Expert Says Wat",
         "[-] Cantor Fitzgerald Maintains Overweight on Snowflake, Lowers Price Target to $225"
@@ -237,11 +237,11 @@
       "news_phase": "neutral",
       "ma_role": "none",
       "ret_5d": -0.5,
-      "peak_price": 118.31,
-      "peak_pct": 0.0,
-      "current_price": 118.31,
-      "current_pct": 0.0,
-      "days_tracked": 0,
+      "peak_price": 118.34,
+      "peak_pct": 0.03,
+      "current_price": 118.34,
+      "current_pct": 0.03,
+      "days_tracked": 1,
       "headlines": [
         "[+] B of A Securities Maintains Buy on Cisco Systems, Raises Price Target to $135",
         "[~] 10 Information Technology Stocks Whale Activity In Today's Session"
@@ -260,11 +260,11 @@
       "news_phase": "hype",
       "ma_role": "none",
       "ret_5d": 58.3,
-      "peak_price": 22.03,
-      "peak_pct": 0.0,
-      "current_price": 22.03,
-      "current_pct": 0.0,
-      "days_tracked": 0,
+      "peak_price": 22.73,
+      "peak_pct": 3.18,
+      "current_price": 22.73,
+      "current_pct": 3.18,
+      "days_tracked": 1,
       "headlines": [
         "[~] 12 Industrials Stocks Moving In Tuesday's Intraday Session",
         "[~] Space Stocks Are Flying Ahead Of NASA Moon Base Event, SpaceX IPO"
@@ -282,11 +282,11 @@
       "news_phase": "hype",
       "ma_role": "none",
       "ret_5d": 9.2,
-      "peak_price": 143.24,
-      "peak_pct": 0.0,
-      "current_price": 143.24,
-      "current_pct": 0.0,
-      "days_tracked": 0,
+      "peak_price": 147.29,
+      "peak_pct": 2.83,
+      "current_price": 147.29,
+      "current_pct": 2.83,
+      "days_tracked": 1,
       "headlines": [
         "[~] 10 Industrials Stocks With Whale Alerts In Today's Session",
         "[~] Space Stocks Are Flying Ahead Of NASA Moon Base Event, SpaceX IPO"
@@ -306,11 +306,11 @@
       "news_phase": "hype",
       "ma_role": "none",
       "ret_5d": 37.9,
-      "peak_price": 119.75,
-      "peak_pct": 0.0,
-      "current_price": 119.75,
-      "current_pct": 0.0,
-      "days_tracked": 0,
+      "peak_price": 121.37,
+      "peak_pct": 1.35,
+      "current_price": 121.37,
+      "current_pct": 1.35,
+      "days_tracked": 1,
       "headlines": [
         "[+] Nasdaq 100 Hits Record Above 30,000 On Micron's 18% Rally: Stock Market Today",
         "[~] Space Stocks Are Flying Ahead Of NASA Moon Base Event, SpaceX IPO"
@@ -330,9 +330,9 @@
       "ret_5d": 473.0,
       "peak_price": 11.69,
       "peak_pct": 0.0,
-      "current_price": 11.69,
-      "current_pct": 0.0,
-      "days_tracked": 0,
+      "current_price": 9.82,
+      "current_pct": -16.0,
+      "days_tracked": 1,
       "headlines": [
         "[+] PicoCELA Shares Halted On Circuit Breaker To The Upside, Stock Now Up 79.46%",
         "[~] 12 Information Technology Stocks Moving In Tuesday's Pre-Market Session"
@@ -355,10 +355,210 @@
       "peak_pct": 0.0,
       "current_price": 12.49,
       "current_pct": 0.0,
-      "days_tracked": 0,
+      "days_tracked": 1,
       "headlines": [
         "[~] 11 Information Technology Stocks Moving In Tuesday's Intraday Session",
         "[+] Micron, Braiin, Redwire, Modine Manufacturing And Other Big Stocks Moving Higher"
+      ]
+    },
+    {
+      "symbol": "AAPL",
+      "entry_price": 310.64,
+      "entry_date": "2026-05-27T13:36:08.801225",
+      "reasons": [
+        "hype news detected (buy-the-rumor)"
+      ],
+      "sent_score": -2,
+      "analyst_score": 1,
+      "news_phase": "hype",
+      "ma_role": "none",
+      "ret_5d": 3.8,
+      "peak_price": 310.64,
+      "peak_pct": 0.0,
+      "current_price": 310.64,
+      "current_pct": 0.0,
+      "days_tracked": 0,
+      "headlines": [
+        "[+] 'China Smartphone Market Rebounded In April, With Apple Poised To Benefit Most; ",
+        "[~] Taiwan Semiconductor Stock Hits 52-Week High - Here's Why"
+      ]
+    },
+    {
+      "symbol": "XOM",
+      "entry_price": 146.43,
+      "entry_date": "2026-05-27T13:36:08.801294",
+      "reasons": [
+        "strong sentiment (+3)",
+        "analyst upgrade (+2)"
+      ],
+      "sent_score": 3,
+      "analyst_score": 2,
+      "news_phase": "neutral",
+      "ma_role": "none",
+      "ret_5d": -10.0,
+      "peak_price": 146.43,
+      "peak_pct": 0.0,
+      "current_price": 146.43,
+      "current_pct": 0.0,
+      "days_tracked": 0,
+      "headlines": [
+        "[+] Mizuho Maintains Neutral on Exxon Mobil, Raises Price Target to $175",
+        "[~] 'Occidental Petroleum To Acquire 10% Stake In Exxon Deepwater Block Offshore Tri"
+      ]
+    },
+    {
+      "symbol": "FANG",
+      "entry_price": 191.24,
+      "entry_date": "2026-05-27T13:36:08.801329",
+      "reasons": [
+        "strong sentiment (+3)",
+        "analyst upgrade (+2)"
+      ],
+      "sent_score": 3,
+      "analyst_score": 2,
+      "news_phase": "neutral",
+      "ma_role": "none",
+      "ret_5d": -8.0,
+      "peak_price": 191.24,
+      "peak_pct": 0.0,
+      "current_price": 191.24,
+      "current_pct": 0.0,
+      "days_tracked": 0,
+      "headlines": [
+        "[+] Mizuho Maintains Outperform on Diamondback Energy, Raises Price Target to $240",
+        "[ANALYST] Mizuho pt raise (+2) Tier-2"
+      ]
+    },
+    {
+      "symbol": "QBTS",
+      "entry_price": 27.3,
+      "entry_date": "2026-05-27T13:36:08.801380",
+      "reasons": [
+        "momentum surge (+50.2% in 5d)"
+      ],
+      "sent_score": 1,
+      "analyst_score": 0,
+      "news_phase": "neutral",
+      "ma_role": "none",
+      "ret_5d": 50.2,
+      "peak_price": 27.3,
+      "peak_pct": 0.0,
+      "current_price": 27.3,
+      "current_pct": 0.0,
+      "days_tracked": 0,
+      "headlines": [
+        "[-] Why Is D-Wave Quantum Stock Falling Wednesday?",
+        "[+] QTUM ETF Crosses $5 Billion Even As IBM, Rigetti, IonQ, D-Wave Cool Off"
+      ]
+    },
+    {
+      "symbol": "MSTR",
+      "entry_price": 155.38,
+      "entry_date": "2026-05-27T13:36:08.801414",
+      "reasons": [
+        "strong sentiment (+2)"
+      ],
+      "sent_score": 2,
+      "analyst_score": 0,
+      "news_phase": "neutral",
+      "ma_role": "none",
+      "ret_5d": -5.6,
+      "peak_price": 155.38,
+      "peak_pct": 0.0,
+      "current_price": 155.38,
+      "current_pct": 0.0,
+      "days_tracked": 0,
+      "headlines": [
+        "[~] 'What Will You Sell Next?' Peter Schiff Fires At Michael Saylor After Strategy's",
+        "[~] SpaceX To Overtake MSTR, TSLA, COIN As Largest Public Company Holding Bitcoin"
+      ]
+    },
+    {
+      "symbol": "QQQ",
+      "entry_price": 731.94,
+      "entry_date": "2026-05-27T13:36:08.801441",
+      "reasons": [
+        "strong sentiment (+2)"
+      ],
+      "sent_score": 2,
+      "analyst_score": 0,
+      "news_phase": "neutral",
+      "ma_role": "none",
+      "ret_5d": 4.3,
+      "peak_price": 731.94,
+      "peak_pct": 0.0,
+      "current_price": 731.94,
+      "current_pct": 0.0,
+      "days_tracked": 0,
+      "headlines": [
+        "[~] Stock Market Today: S&P 500, Nasdaq, Dow Futures Rise Following Tech Rally\u2014Zscal",
+        "[+] Google And Amazon Emerge As AI 'Winners' As Magnificent 7 Breaks Apart: Cash Flo"
+      ]
+    },
+    {
+      "symbol": "QTTB",
+      "entry_price": 11.1,
+      "entry_date": "2026-05-27T13:36:08.801476",
+      "reasons": [
+        "momentum surge (+84.9% in 5d)"
+      ],
+      "sent_score": 1,
+      "analyst_score": 0,
+      "news_phase": "neutral",
+      "ma_role": "none",
+      "ret_5d": 84.9,
+      "peak_price": 11.1,
+      "peak_pct": 0.0,
+      "current_price": 11.1,
+      "current_pct": 0.0,
+      "days_tracked": 0,
+      "headlines": [
+        "[+] Q32 Bio Inks Securities Purchase Agreement With New, Current Institutional Inves"
+      ]
+    },
+    {
+      "symbol": "DY",
+      "entry_price": 535.0,
+      "entry_date": "2026-05-27T13:36:08.801504",
+      "reasons": [
+        "strong sentiment (+3)",
+        "momentum surge (+29.4% in 5d)"
+      ],
+      "sent_score": 3,
+      "analyst_score": 0,
+      "news_phase": "neutral",
+      "ma_role": "none",
+      "ret_5d": 29.4,
+      "peak_price": 535.0,
+      "peak_pct": 0.0,
+      "current_price": 535.0,
+      "current_pct": 0.0,
+      "days_tracked": 0,
+      "headlines": [
+        "[+] Dycom Industries Sees Q2 Adj EPS $4.40-$4.82 vs $4.10 Est; Sees Sales $1.940B-$2",
+        "[+] Dycom Industries Raises FY2027 Sales Guidance from $6.850B-$7.150B to $7.380B-$7"
+      ]
+    },
+    {
+      "symbol": "QFIN",
+      "entry_price": 15.65,
+      "entry_date": "2026-05-27T13:36:08.801531",
+      "reasons": [
+        "momentum surge (+22.8% in 5d)"
+      ],
+      "sent_score": 1,
+      "analyst_score": 0,
+      "news_phase": "neutral",
+      "ma_role": "none",
+      "ret_5d": 22.8,
+      "peak_price": 15.65,
+      "peak_pct": 0.0,
+      "current_price": 15.65,
+      "current_pct": 0.0,
+      "days_tracked": 0,
+      "headlines": [
+        "[+] Qifu Technology Q1 Adj. EPS $1.12 Beats $0.96 Estimate, Sales $566.735M Beat $53",
+        "[~] Earnings Scheduled For May 26, 2026"
       ]
     }
   ],
