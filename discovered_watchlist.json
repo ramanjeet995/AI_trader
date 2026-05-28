@@ -65,10 +65,18 @@
   },
   "ASTC": {
     "added": "2026-05-27T15:50:22.637260-04:00",
-    "last_seen": "2026-05-27T15:50:22.637260-04:00",
-    "gain_pct": 442.71,
+    "last_seen": "2026-05-28T09:33:22.188565-04:00",
+    "gain_pct": 56.92,
     "price": 13.405,
     "sentiment": "POSITIVE",
-    "reason": "Up +442.7% today, sentiment POSITIVE (+2)"
+    "reason": "Up +56.9% today, sentiment NEUTRAL (+1)"
+  },
+  "UMAC": {
+    "added": "2026-05-28T09:33:22.188565-04:00",
+    "last_seen": "2026-05-28T09:33:22.188565-04:00",
+    "gain_pct": 45.09,
+    "price": 27.32,
+    "sentiment": "NEUTRAL",
+    "reason": "Up +45.1% today, sentiment NEUTRAL (+1)"
   }
 }

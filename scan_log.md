@@ -1,14 +1,157 @@
 # AI Trader — Daily Log
 
 What the robot saw and did each time it woke up. Newest at top.
-_Last updated: May 27, 2026 at 03:53 PM ET_
+_Last updated: May 28, 2026 at 09:36 AM ET_
 
 ### Performance since 2026-05-21
 | | Return | Value |
 |---|---|---|
-| 📈 **Our Portfolio** | **+1.66%** | $101,857.02 |
-| 📈 S&P 500 (SPY) | +1.00% | $750.33 |
-| ✅ **Alpha** | **+0.66%** | Beating the market |
+| 📈 **Our Portfolio** | **+2.66%** | $102,859.24 |
+| 📈 S&P 500 (SPY) | +0.95% | $749.96 |
+| ✅ **Alpha** | **+1.71%** | Beating the market |
+
+## May 28, 09:36 AM ET — Main scan | Pi: 51.1°C
+
+**Market check:**
+- Market is going **up** 📈
+- Mood: calm (VIX 16)
+- Investors unsure
+- ⚠ **Important economic news soon — PCE releases in 22h 56m**
+- Currently holding: MU, OXY, PANW, PLTR, SLB
+- Scoreboard: Us **+2.66%** vs S&P 500 +0.95% (**beating** by 1.71%)
+
+**Money flowing into:** Natural Gas (+7%), Healthcare (+2%), Real Estate (-0%)
+**Money flowing out of:** Utilities (-4%), Gold (-4%), Crude Oil (-9%)
+
+**Hot stocks discovered today:** ASTC, UMAC
+**Full discovery list (10):** AGYS, TATT, AKTX, PCLA, BRAI, QTTB, DY, QFIN, ASTC, UMAC
+
+**Looked at 63 stocks:**
+- already holding: 5
+- not enough trading volume: 9
+- smart money quietly selling: 5
+- no buy setup today: 25
+- order flow or news was negative: 1
+- ✓ **18 stocks ready to trade**
+
+**Result:** Found 18 setup(s), but didn't buy any.
+
+- ✗ **Skipped UMAC** — market/daily cap
+    - Plan: buy at $27.24, sell-stop at $16.4, target $48.92
+    - 296 shares, risking $3209
+- ✗ **Skipped ASTS** — market/daily cap
+    - Plan: buy at $127.65, sell-stop at $93.99, target $194.97
+    - 114 shares, risking $3837
+- ✗ **Skipped HPE** — market/daily cap
+    - Plan: buy at $37.28, sell-stop at $32.8, target $46.24
+    - 689 shares, risking $3087
+- ✗ **Skipped ARM** — market/daily cap
+    - Plan: buy at $315.46, sell-stop at $247.75, target $450.88
+    - 75 shares, risking $5078
+- ✗ **Skipped AMD** — market/daily cap
+    - Plan: buy at $505.93, sell-stop at $425.15, target $667.49
+    - 47 shares, risking $3797
+- ✗ **Skipped IONQ** — market/daily cap
+    - Plan: buy at $65.19, sell-stop at $54.14, target $87.29
+    - 349 shares, risking $3856
+- ✗ **Skipped RIOT** — market/daily cap
+    - Plan: buy at $26.84, sell-stop at $23.15, target $34.22
+    - 958 shares, risking $3535
+- ✗ **Skipped LUNR** — market/daily cap
+    - Plan: buy at $42.2, sell-stop at $32.94, target $60.72
+    - 347 shares, risking $3213
+- ✗ **Skipped CSCO** — market/daily cap
+    - Plan: buy at $119.98, sell-stop at $107.56, target $144.82
+    - 214 shares, risking $2658
+- ✗ **Skipped PL** — market/daily cap
+    - Plan: buy at $49.71, sell-stop at $42.14, target $64.85
+    - 509 shares, risking $3853
+- ✗ **Skipped APLD** — market/daily cap
+    - Plan: buy at $49.6, sell-stop at $41.82, target $65.16
+    - 495 shares, risking $3851
+- ✗ **Skipped RGTI** — market/daily cap
+    - Plan: buy at $24.48, sell-stop at $20.2, target $33.04
+    - 600 shares, risking $2568
+- ✗ **Skipped QBTS** — market/daily cap
+    - Plan: buy at $27.66, sell-stop at $22.94, target $37.1
+    - 544 shares, risking $2568
+- ✗ **Skipped SMCI** — market/daily cap
+    - Plan: buy at $37.83, sell-stop at $32.73, target $48.03
+    - 630 shares, risking $3213
+- ✗ **Skipped QFIN** — market/daily cap
+    - Plan: buy at $15.13, sell-stop at $13.22, target $18.95
+    - 1682 shares, risking $3213
+- ✗ **Skipped DY** — market/daily cap
+    - Plan: buy at $536.97, sell-stop at $436.47, target $737.97
+    - 31 shares, risking $3116
+- ✗ **Skipped RKLB** — market/daily cap
+    - Plan: buy at $148.69, sell-stop at $119.32, target $207.43
+    - 109 shares, risking $3201
+- ✗ **Skipped MRVL** — market/daily cap
+    - Plan: buy at $203.15, sell-stop at $177.41, target $254.63
+    - 126 shares, risking $3243
+
+<details><summary>Notable news today</summary>
+
+- ✓ **ARM** — strong positive news (+3)
+    - _[+] Mizuho Maintains Outperform on ARM Holdings, Raises Price Target to $360_
+- ✓ **APLD** — strong positive news (+2)
+    - _[+] B. Riley Securities Maintains Buy on Applied Digital, Raises Price Target to $66_
+- ✗ **NVDA** — negative news (-3)
+    - [-] Trump Ally Laura Loomer Questions Nvidia CEO Jensen Huang's Chinese University T
+- ✗ **META** — negative news (-2)
+    - [-] Trump Ally Laura Loomer Questions Nvidia CEO Jensen Huang's Chinese University T
+
+</details>
+
+<details><summary>🔮 What-If Tracker (sentiment picks we're watching)</summary>
+
+**New picks flagged:**
+- **AVGO** at $421.29 — strong sentiment (+5), analyst upgrade (+2)
+- **ARM** at $315.46 — strong sentiment (+3), analyst upgrade (+2), momentum surge (+22.8% in 5d)
+- **AMZN** at $270.56 — strong sentiment (+2)
+- **UMAC** at $27.24 — momentum surge (+88.9% in 5d)
+
+**Tracking:**
+| Stock | Entry | Now | Peak | Day |
+|---|---|---|---|---|
+| 📉 NVDA | $216.96 | -1.8% | +0.0% | 4/5 |
+| 📈 AMD | $484.06 | +4.5% | +5.0% | 4/5 |
+| 📉 MRVL | $214.47 | -5.3% | +0.0% | 4/5 |
+| 📈 TSLA | $432.94 | +1.2% | +2.4% | 4/5 |
+| 📉 LUNR | $42.27 | -0.2% | +0.0% | 4/5 |
+| 📈 PL | $46.20 | +7.6% | +8.7% | 4/5 |
+| 📈 DELL | $304.96 | +3.6% | +3.6% | 3/5 |
+| 📉 CRM | $179.16 | -3.4% | +1.4% | 3/5 |
+| 📉 CRWD | $671.56 | -3.7% | +0.0% | 3/5 |
+| 📈 SNOW | $177.67 | +33.3% | +33.3% | 3/5 |
+| 📈 CSCO | $118.31 | +1.4% | +1.4% | 3/5 |
+| 📈 RDW | $22.03 | +10.4% | +10.4% | 3/5 |
+| 📈 RKLB | $143.24 | +3.8% | +4.7% | 3/5 |
+| 📈 ASTS | $119.75 | +6.6% | +7.9% | 3/5 |
+| 📉 PCLA | $11.69 | -11.6% | +4.5% | 3/5 |
+| 📉 BRAI | $12.49 | -15.7% | +0.0% | 3/5 |
+| 📉 AAPL | $310.64 | -0.3% | +0.0% | 2/5 |
+| 📈 XOM | $146.43 | +2.1% | +2.1% | 2/5 |
+| 📈 FANG | $191.24 | +0.8% | +0.8% | 2/5 |
+| 📈 QBTS | $27.30 | +1.3% | +1.3% | 2/5 |
+| 📉 MSTR | $155.38 | -6.7% | +0.0% | 2/5 |
+| 📉 QQQ | $731.94 | -0.3% | +0.0% | 2/5 |
+| 📈 QTTB | $11.10 | +7.5% | +12.7% | 2/5 |
+| 📈 DY | $535.00 | +0.4% | +0.4% | 2/5 |
+| 📉 QFIN | $15.65 | -3.3% | +0.8% | 2/5 |
+| 📉 SMCI | $38.06 | -0.6% | +0.0% | 1/5 |
+| 📈 APLD | $48.79 | +1.7% | +1.7% | 1/5 |
+| 📈 MSFT | $413.44 | +0.6% | +0.6% | 1/5 |
+| 📈 ASTC | $13.37 | +59.8% | +59.8% | 1/5 |
+| 📉 AVGO | $421.29 | +0.0% | +0.0% | 0/5 |
+| 📉 ARM | $315.46 | +0.0% | +0.0% | 0/5 |
+| 📉 AMZN | $270.56 | +0.0% | +0.0% | 0/5 |
+| 📉 UMAC | $27.24 | +0.0% | +0.0% | 0/5 |
+
+</details>
+
+---
 
 ## May 27, 03:53 PM ET — Main scan | Pi: 45.8°C
 
@@ -1845,19 +1988,5 @@ _Last updated: May 27, 2026 at 03:53 PM ET_
 - ✗ **QQQ** — negative news (-2)
 
 </details>
-
----
-
-## May 18, 01:49 PM ET — Big-news check
-
-**Market check:**
-- Market is going **up** 📈
-- Mood: a bit nervous (VIX 18)
-
-**Result:** Found 1 setup(s), but didn't buy any.
-
-- ✗ **Skipped CRWD** (gap +3.3%) — outside target window or market closed
-    - Plan: buy at $0, sell-stop at $0, target $0
-    - 0 shares, risking $0
 
 ---
