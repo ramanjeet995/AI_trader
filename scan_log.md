@@ -1,14 +1,154 @@
 # AI Trader — Daily Log
 
 What the robot saw and did each time it woke up. Newest at top.
-_Last updated: May 28, 2026 at 03:02 PM ET_
+_Last updated: May 28, 2026 at 03:54 PM ET_
 
 ### Performance since 2026-05-21
 | | Return | Value |
 |---|---|---|
-| 📈 **Our Portfolio** | **+4.92%** | $105,130.79 |
-| 📈 S&P 500 (SPY) | +1.53% | $754.29 |
-| ✅ **Alpha** | **+3.39%** | Beating the market |
+| 📈 **Our Portfolio** | **+4.87%** | $105,076.62 |
+| 📈 S&P 500 (SPY) | +1.58% | $754.68 |
+| ✅ **Alpha** | **+3.29%** | Beating the market |
+
+## May 28, 03:54 PM ET — Main scan | Pi: 52.6°C
+
+**Market check:**
+- Market is going **up** 📈
+- Mood: calm (VIX 16)
+- Investors defensive
+- ⚠ **Important economic news soon — PCE releases in 16h 39m**
+- Currently holding: MU, OXY, PANW, PLTR, SLB
+- Scoreboard: Us **+4.87%** vs S&P 500 +1.58% (**beating** by 3.29%)
+
+**Money flowing into:** Natural Gas (+12%), Healthcare (+3%), Silver (+3%)
+**Money flowing out of:** Energy (-4%), Utilities (-5%), Crude Oil (-11%)
+
+**Looked at 63 stocks:**
+- already holding: 5
+- not enough trading volume: 9
+- smart money quietly selling: 4
+- no buy setup today: 22
+- order flow or news was negative: 1
+- ✓ **22 stocks ready to trade**
+
+**Result:** Found 22 setup(s), but didn't buy any.
+
+- ✗ **Skipped SMCI** — market/daily cap
+    - Plan: buy at $41.74, sell-stop at $33.1, target $59.02
+    - 456 shares, risking $3940
+- ✗ **Skipped LUNR** — market/daily cap
+    - Plan: buy at $46.48, sell-stop at $33.34, target $72.76
+    - 249 shares, risking $3272
+- ✗ **Skipped RGTI** — market/daily cap
+    - Plan: buy at $27.45, sell-stop at $20.48, target $41.39
+    - 471 shares, risking $3283
+- ✗ **Skipped ASTS** — market/daily cap
+    - Plan: buy at $133.38, sell-stop at $94.53, target $211.08
+    - 101 shares, risking $3924
+- ✗ **Skipped AMD** — market/daily cap
+    - Plan: buy at $519.71, sell-stop at $426.45, target $706.23
+    - 42 shares, risking $3917
+- ✗ **Skipped DY** — market/daily cap
+    - Plan: buy at $537.2, sell-stop at $436.49, target $738.62
+    - 48 shares, risking $4834
+- ✗ **Skipped RIOT** — market/daily cap
+    - Plan: buy at $28.14, sell-stop at $23.27, target $37.88
+    - 809 shares, risking $3940
+- ✗ **Skipped HPE** — market/daily cap
+    - Plan: buy at $38.02, sell-stop at $32.87, target $48.32
+    - 690 shares, risking $3554
+- ✗ **Skipped ARM** — market/daily cap
+    - Plan: buy at $336.04, sell-stop at $249.69, target $508.74
+    - 60 shares, risking $5181
+- ✗ **Skipped IONQ** — market/daily cap
+    - Plan: buy at $70.44, sell-stop at $54.64, target $102.04
+    - 249 shares, risking $3934
+- ✗ **Skipped PL** — market/daily cap
+    - Plan: buy at $51.56, sell-stop at $42.31, target $70.06
+    - 425 shares, risking $3931
+- ✗ **Skipped QBTS** — market/daily cap
+    - Plan: buy at $29.96, sell-stop at $23.16, target $43.56
+    - 482 shares, risking $3278
+- ✗ **Skipped APLD** — market/daily cap
+    - Plan: buy at $49.88, sell-stop at $41.85, target $65.94
+    - 526 shares, risking $4224
+- ✗ **Skipped QFIN** — market/daily cap
+    - Plan: buy at $15.36, sell-stop at $13.24, target $19.6
+    - 1548 shares, risking $3282
+- ✗ **Skipped CSCO** — market/daily cap
+    - Plan: buy at $119.34, sell-stop at $107.5, target $143.02
+    - 220 shares, risking $2605
+- ✗ **Skipped SNOW** — market/daily cap
+    - Plan: buy at $240.07, sell-stop at $179.3, target $361.61
+    - 64 shares, risking $3889
+- ✗ **Skipped RKLB** — market/daily cap
+    - Plan: buy at $148.83, sell-stop at $119.34, target $207.81
+    - 111 shares, risking $3273
+- ✗ **Skipped MRVL** — market/daily cap
+    - Plan: buy at $205.47, sell-stop at $177.63, target $261.15
+    - 127 shares, risking $3536
+- ✗ **Skipped MARA** — market/daily cap
+    - Plan: buy at $14.14, sell-stop at $12.79, target $16.84
+    - 1857 shares, risking $2507
+- ✗ **Skipped AMZN** — market/daily cap
+    - Plan: buy at $273.93, sell-stop at $262.34, target $297.11
+    - 95 shares, risking $1101
+- ✗ **Skipped UMAC** — market/daily cap
+    - Plan: buy at $30.23, sell-stop at $18.87, target $52.95
+    - 231 shares, risking $2624
+- ✗ **Skipped KTOS** — market/daily cap
+    - Plan: buy at $66.05, sell-stop at $58.71, target $80.73
+    - 268 shares, risking $1967
+
+<details><summary>Notable news today</summary>
+
+- ✓ **APLD** — strong positive news (+2)
+    - _[+] B. Riley Securities Maintains Buy on Applied Digital, Raises Price Target to $66_
+- ✗ **NVDA** — negative news (-3)
+    - [~] Triple Manias Take A Hit As US And Iran Exchange Strikes But Cooler PCE May Reig
+- ✗ **META** — negative news (-3)
+    - [~] Triple Manias Take A Hit As US And Iran Exchange Strikes But Cooler PCE May Reig
+
+</details>
+
+<details><summary>🔮 What-If Tracker (sentiment picks we're watching)</summary>
+
+**Tracking:**
+| Stock | Entry | Now | Peak | Day |
+|---|---|---|---|---|
+| 📈 DELL | $304.96 | +5.0% | +5.0% | 4/5 |
+| 📉 CRM | $179.16 | -2.0% | +1.4% | 4/5 |
+| 📉 CRWD | $671.56 | -0.2% | +0.0% | 4/5 |
+| 📈 SNOW | $177.67 | +35.1% | +35.1% | 4/5 |
+| 📈 CSCO | $118.31 | +0.9% | +1.4% | 4/5 |
+| 📈 RDW | $22.03 | +17.2% | +17.2% | 4/5 |
+| 📈 RKLB | $143.24 | +3.9% | +4.7% | 4/5 |
+| 📈 ASTS | $119.75 | +11.4% | +11.4% | 4/5 |
+| 📉 PCLA | $11.69 | -16.3% | +4.5% | 4/5 |
+| 📈 BRAI | $12.49 | +14.5% | +14.5% | 4/5 |
+| 📈 AAPL | $310.64 | +0.3% | +0.3% | 3/5 |
+| 📈 XOM | $146.43 | +0.6% | +2.1% | 3/5 |
+| 📈 FANG | $191.24 | +1.3% | +1.3% | 3/5 |
+| 📈 QBTS | $27.30 | +9.7% | +9.7% | 3/5 |
+| 📉 MSTR | $155.38 | -1.8% | +0.0% | 3/5 |
+| 📈 QQQ | $731.94 | +0.5% | +0.5% | 3/5 |
+| 📉 QTTB | $11.10 | -7.2% | +12.7% | 3/5 |
+| 📈 DY | $535.00 | +0.4% | +0.4% | 3/5 |
+| 📉 QFIN | $15.65 | -1.9% | +0.8% | 3/5 |
+| 📈 SMCI | $38.06 | +9.7% | +9.7% | 2/5 |
+| 📈 APLD | $48.79 | +2.2% | +2.2% | 2/5 |
+| 📈 MSFT | $413.44 | +3.0% | +3.0% | 2/5 |
+| 📈 ASTC | $13.37 | +118.5% | +118.5% | 2/5 |
+| 📈 AVGO | $421.29 | +1.2% | +1.2% | 1/5 |
+| 📈 ARM | $315.46 | +6.5% | +6.5% | 1/5 |
+| 📈 AMZN | $270.56 | +1.2% | +1.2% | 1/5 |
+| 📈 UMAC | $27.24 | +11.0% | +11.0% | 1/5 |
+
+**Track record:** 6 picks, **67%** hit rate, avg return **+4.3%**, avg peak **+5.2%**
+
+</details>
+
+---
 
 ## May 28, 03:02 PM ET — News check | Pi: 51.6°C
 
@@ -1965,40 +2105,5 @@ _Last updated: May 28, 2026 at 03:02 PM ET_
 - ✓ **Bought SNOW** (gap +3.6%)
     - Plan: buy at $170.23, sell-stop at $169.38, target $177.89
     - 28 shares, risking $24
-
----
-
-## May 19, 09:35 AM ET — Main scan
-
-**Market check:**
-- Market is going **up** 📈
-- Mood: calm (VIX 18)
-- Investors confident
-- Currently holding: AMZN, GOOGL, PLTR
-
-**Money flowing into:** Crude Oil (+18%), Natural Gas (+7%), Energy (+7%)
-**Money flowing out of:** Silver (-5%), Materials (-5%), Gold (-6%)
-
-**Hot stocks discovered today:** AGYS
-**Full discovery list (1):** AGYS
-
-**Looked at 37 stocks:**
-- already holding: 3
-- earnings report too close: 1
-- not enough trading volume: 4
-- smart money quietly selling: 14
-- no buy setup today: 15
-
-**Result:** No trades today.
-<details><summary>Notable news today</summary>
-
-- ✓ **MU** — strong positive news (+3)
-    - _[+] Citigroup Maintains Buy on Micron Technology, Raises Price Target to $840_
-- ✓ **AVGO** — strong positive news (+2)
-    - _[~] What's Going On With Broadcom Stock Tuesday?_
-- ✓ **MRVL** — strong positive news (+2)
-    - _[+] Evercore ISI Group Maintains Outperform on Marvell Technology, Raises Price Targ_
-
-</details>
 
 ---
