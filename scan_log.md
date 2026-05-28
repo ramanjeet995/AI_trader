@@ -1,14 +1,34 @@
 # AI Trader — Daily Log
 
 What the robot saw and did each time it woke up. Newest at top.
-_Last updated: May 28, 2026 at 01:02 PM ET_
+_Last updated: May 28, 2026 at 03:02 PM ET_
 
 ### Performance since 2026-05-21
 | | Return | Value |
 |---|---|---|
-| 📈 **Our Portfolio** | **+4.98%** | $105,186.65 |
-| 📈 S&P 500 (SPY) | +1.59% | $754.73 |
+| 📈 **Our Portfolio** | **+4.92%** | $105,130.79 |
+| 📈 S&P 500 (SPY) | +1.53% | $754.29 |
 | ✅ **Alpha** | **+3.39%** | Beating the market |
+
+## May 28, 03:02 PM ET — News check | Pi: 51.6°C
+
+**Market check:**
+- Market is going **up** 📈
+- Scoreboard: Us **+4.92%** vs S&P 500 +1.53% (**beating** by 3.39%)
+
+**Result:** No trades today.
+<details><summary>Notable news today</summary>
+
+- ✓ **AMZN** — strong positive news (+3)
+- ✓ **SPY** — strong positive news (+3)
+- ✓ **LUNR** — strong positive news (+2)
+- ✗ **AAPL** — negative news (-2)
+- ✗ **NVDA** — negative news (-3)
+- ✗ **TSLA** — negative news (-3)
+
+</details>
+
+---
 
 ## May 28, 01:02 PM ET — News check | Pi: 51.6°C
 
@@ -1978,24 +1998,6 @@ _Last updated: May 28, 2026 at 01:02 PM ET_
     - _[~] What's Going On With Broadcom Stock Tuesday?_
 - ✓ **MRVL** — strong positive news (+2)
     - _[+] Evercore ISI Group Maintains Outperform on Marvell Technology, Raises Price Targ_
-
-</details>
-
----
-
-## May 18, 04:59 PM ET — News check
-
-**Market check:**
-- Market is going **up** 📈
-
-**Result:** No trades today.
-<details><summary>Notable news today</summary>
-
-- ✓ **NFLX** — strong positive news (+2)
-- ✓ **SPY** — strong positive news (+2)
-- ✗ **NVDA** — negative news (-2)
-- ✗ **AAPL** — negative news (-2)
-- ✗ **QQQ** — negative news (-2)
 
 </details>
 
