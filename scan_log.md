@@ -1,14 +1,34 @@
 # AI Trader — Daily Log
 
 What the robot saw and did each time it woke up. Newest at top.
-_Last updated: May 28, 2026 at 11:07 AM ET_
+_Last updated: May 28, 2026 at 01:02 PM ET_
 
 ### Performance since 2026-05-21
 | | Return | Value |
 |---|---|---|
-| 📈 **Our Portfolio** | **+4.00%** | $104,209.03 |
-| 📈 S&P 500 (SPY) | +1.46% | $753.73 |
-| ✅ **Alpha** | **+2.55%** | Beating the market |
+| 📈 **Our Portfolio** | **+4.98%** | $105,186.65 |
+| 📈 S&P 500 (SPY) | +1.59% | $754.73 |
+| ✅ **Alpha** | **+3.39%** | Beating the market |
+
+## May 28, 01:02 PM ET — News check | Pi: 51.6°C
+
+**Market check:**
+- Market is going **up** 📈
+- Scoreboard: Us **+4.98%** vs S&P 500 +1.59% (**beating** by 3.39%)
+
+**Result:** No trades today.
+<details><summary>Notable news today</summary>
+
+- ✓ **APLD** — strong positive news (+2)
+- ✓ **AMZN** — strong positive news (+2)
+- ✓ **PLTR** — strong positive news (+2)
+- ✗ **GOOGL** — negative news (-2)
+- ✗ **AAPL** — negative news (-2)
+- ✗ **NVDA** — negative news (-3)
+
+</details>
+
+---
 
 ## May 28, 11:07 AM ET — News check | Pi: 52.1°C
 
@@ -1976,24 +1996,6 @@ _Last updated: May 28, 2026 at 11:07 AM ET_
 - ✗ **NVDA** — negative news (-2)
 - ✗ **AAPL** — negative news (-2)
 - ✗ **QQQ** — negative news (-2)
-
-</details>
-
----
-
-## May 18, 04:21 PM ET — News check
-
-**Market check:**
-- Market is going **up** 📈
-
-**Result:** No trades today.
-<details><summary>Notable news today</summary>
-
-- ✓ **NFLX** — strong positive news (+2)
-- ✓ **SPY** — strong positive news (+2)
-- ✗ **NVDA** — negative news (-2)
-- ✗ **QQQ** — negative news (-2)
-- ✗ **MU** — negative news (-3)
 
 </details>
 
