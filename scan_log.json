@@ -1,207 +1,5 @@
 [
   {
-    "timestamp": "2026-05-18T15:19:30.581349-04:00",
-    "mode": "NEWS",
-    "spy_regime": "BULL",
-    "safety_block": "",
-    "signals": [],
-    "alerts": [
-      "DANGER \u2014 GOOGL held position has NEGATIVE news!",
-      "  [-] Dan Loeb Dumps Microsoft, Slashes Nvidia And Rail Stocks In Sweeping Q1 Portfoli",
-      "  [-] What's Going On With Alphabet Stock Monday?",
-      "DANGER \u2014 AMZN held position has NEGATIVE news!",
-      "  [-] Dan Loeb Dumps Microsoft, Slashes Nvidia And Rail Stocks In Sweeping Q1 Portfoli",
-      "  [-] Semi And Options Mania Collide With Bond Rout Ahead Of Earnings From Nvidia, Hom"
-    ],
-    "news_snapshot": [
-      {
-        "symbol": "CRWD",
-        "sentiment": "STRONG_POSITIVE",
-        "score": 4
-      },
-      {
-        "symbol": "AVGO",
-        "sentiment": "POSITIVE",
-        "score": 2
-      },
-      {
-        "symbol": "AMD",
-        "sentiment": "POSITIVE",
-        "score": 2
-      },
-      {
-        "symbol": "NVDA",
-        "sentiment": "NEUTRAL",
-        "score": 1
-      },
-      {
-        "symbol": "ARM",
-        "sentiment": "NEUTRAL",
-        "score": 1
-      },
-      {
-        "symbol": "NFLX",
-        "sentiment": "NEUTRAL",
-        "score": 1
-      },
-      {
-        "symbol": "CRM",
-        "sentiment": "NEUTRAL",
-        "score": 1
-      },
-      {
-        "symbol": "SHOP",
-        "sentiment": "NEUTRAL",
-        "score": 1
-      },
-      {
-        "symbol": "COIN",
-        "sentiment": "NEUTRAL",
-        "score": 1
-      },
-      {
-        "symbol": "MARA",
-        "sentiment": "NEUTRAL",
-        "score": 1
-      },
-      {
-        "symbol": "SPY",
-        "sentiment": "NEUTRAL",
-        "score": 1
-      },
-      {
-        "symbol": "SMCI",
-        "sentiment": "NEUTRAL",
-        "score": 0
-      },
-      {
-        "symbol": "MRVL",
-        "sentiment": "NEUTRAL",
-        "score": 0
-      },
-      {
-        "symbol": "NOW",
-        "sentiment": "NEUTRAL",
-        "score": 0
-      },
-      {
-        "symbol": "SNOW",
-        "sentiment": "NEUTRAL",
-        "score": 0
-      },
-      {
-        "symbol": "PANW",
-        "sentiment": "NEUTRAL",
-        "score": 0
-      },
-      {
-        "symbol": "ANET",
-        "sentiment": "NEUTRAL",
-        "score": 0
-      },
-      {
-        "symbol": "XOM",
-        "sentiment": "NEUTRAL",
-        "score": 0
-      },
-      {
-        "symbol": "OXY",
-        "sentiment": "NEUTRAL",
-        "score": 0
-      },
-      {
-        "symbol": "FANG",
-        "sentiment": "NEUTRAL",
-        "score": 0
-      },
-      {
-        "symbol": "SLB",
-        "sentiment": "NEUTRAL",
-        "score": 0
-      },
-      {
-        "symbol": "NEM",
-        "sentiment": "NEUTRAL",
-        "score": 0
-      },
-      {
-        "symbol": "FCX",
-        "sentiment": "NEUTRAL",
-        "score": 0
-      },
-      {
-        "symbol": "GDX",
-        "sentiment": "NEUTRAL",
-        "score": 0
-      },
-      {
-        "symbol": "RIOT",
-        "sentiment": "NEUTRAL",
-        "score": 0
-      },
-      {
-        "symbol": "AAPL",
-        "sentiment": "NEUTRAL",
-        "score": -1
-      },
-      {
-        "symbol": "PLTR",
-        "sentiment": "NEUTRAL",
-        "score": -1
-      },
-      {
-        "symbol": "CSCO",
-        "sentiment": "NEUTRAL",
-        "score": -1
-      },
-      {
-        "symbol": "GOLD",
-        "sentiment": "NEUTRAL",
-        "score": -1
-      },
-      {
-        "symbol": "MSTR",
-        "sentiment": "NEUTRAL",
-        "score": -1
-      },
-      {
-        "symbol": "QQQ",
-        "sentiment": "NEGATIVE",
-        "score": -2
-      },
-      {
-        "symbol": "MU",
-        "sentiment": "NEGATIVE",
-        "score": -3
-      },
-      {
-        "symbol": "META",
-        "sentiment": "NEGATIVE",
-        "score": -3
-      },
-      {
-        "symbol": "GOOGL",
-        "sentiment": "NEGATIVE",
-        "score": -3
-      },
-      {
-        "symbol": "AMZN",
-        "sentiment": "NEGATIVE",
-        "score": -3
-      },
-      {
-        "symbol": "TSLA",
-        "sentiment": "NEGATIVE",
-        "score": -3
-      },
-      {
-        "symbol": "MSFT",
-        "sentiment": "NEGATIVE",
-        "score": -3
-      }
-    ]
-  },
-  {
     "timestamp": "2026-05-18T16:21:04.478907-04:00",
     "mode": "NEWS",
     "spy_regime": "BULL",
@@ -15905,6 +15703,297 @@
       "account_now": 104210.24,
       "spy_start": 742.91,
       "spy_now": 752.83
+    }
+  },
+  {
+    "timestamp": "2026-05-28T11:07:22.058763-04:00",
+    "mode": "NEWS",
+    "spy_regime": "BULL",
+    "safety_block": "macro: PCE releases in 21h 24m",
+    "signals": [],
+    "alerts": [],
+    "news_snapshot": [
+      {
+        "symbol": "MU",
+        "sentiment": "STRONG_POSITIVE",
+        "score": 5
+      },
+      {
+        "symbol": "MRVL",
+        "sentiment": "STRONG_POSITIVE",
+        "score": 5
+      },
+      {
+        "symbol": "DELL",
+        "sentiment": "STRONG_POSITIVE",
+        "score": 5
+      },
+      {
+        "symbol": "SNOW",
+        "sentiment": "STRONG_POSITIVE",
+        "score": 5
+      },
+      {
+        "symbol": "AVGO",
+        "sentiment": "STRONG_POSITIVE",
+        "score": 4
+      },
+      {
+        "symbol": "ARM",
+        "sentiment": "POSITIVE",
+        "score": 3
+      },
+      {
+        "symbol": "APLD",
+        "sentiment": "POSITIVE",
+        "score": 2
+      },
+      {
+        "symbol": "MSFT",
+        "sentiment": "POSITIVE",
+        "score": 2
+      },
+      {
+        "symbol": "SMCI",
+        "sentiment": "NEUTRAL",
+        "score": 1
+      },
+      {
+        "symbol": "AMZN",
+        "sentiment": "NEUTRAL",
+        "score": 1
+      },
+      {
+        "symbol": "CRWD",
+        "sentiment": "NEUTRAL",
+        "score": 1
+      },
+      {
+        "symbol": "PLTR",
+        "sentiment": "NEUTRAL",
+        "score": 1
+      },
+      {
+        "symbol": "SLB",
+        "sentiment": "NEUTRAL",
+        "score": 1
+      },
+      {
+        "symbol": "HPE",
+        "sentiment": "NEUTRAL",
+        "score": 0
+      },
+      {
+        "symbol": "VRT",
+        "sentiment": "NEUTRAL",
+        "score": 0
+      },
+      {
+        "symbol": "CLS",
+        "sentiment": "NEUTRAL",
+        "score": 0
+      },
+      {
+        "symbol": "CEG",
+        "sentiment": "NEUTRAL",
+        "score": 0
+      },
+      {
+        "symbol": "NFLX",
+        "sentiment": "NEUTRAL",
+        "score": 0
+      },
+      {
+        "symbol": "SHOP",
+        "sentiment": "NEUTRAL",
+        "score": 0
+      },
+      {
+        "symbol": "CSCO",
+        "sentiment": "NEUTRAL",
+        "score": 0
+      },
+      {
+        "symbol": "ANET",
+        "sentiment": "NEUTRAL",
+        "score": 0
+      },
+      {
+        "symbol": "SOUN",
+        "sentiment": "NEUTRAL",
+        "score": 0
+      },
+      {
+        "symbol": "NOK",
+        "sentiment": "NEUTRAL",
+        "score": 0
+      },
+      {
+        "symbol": "XOM",
+        "sentiment": "NEUTRAL",
+        "score": 0
+      },
+      {
+        "symbol": "OXY",
+        "sentiment": "NEUTRAL",
+        "score": 0
+      },
+      {
+        "symbol": "FANG",
+        "sentiment": "NEUTRAL",
+        "score": 0
+      },
+      {
+        "symbol": "NEM",
+        "sentiment": "NEUTRAL",
+        "score": 0
+      },
+      {
+        "symbol": "GOLD",
+        "sentiment": "NEUTRAL",
+        "score": 0
+      },
+      {
+        "symbol": "FCX",
+        "sentiment": "NEUTRAL",
+        "score": 0
+      },
+      {
+        "symbol": "GDX",
+        "sentiment": "NEUTRAL",
+        "score": 0
+      },
+      {
+        "symbol": "RDW",
+        "sentiment": "NEUTRAL",
+        "score": 0
+      },
+      {
+        "symbol": "RKLB",
+        "sentiment": "NEUTRAL",
+        "score": 0
+      },
+      {
+        "symbol": "ASTS",
+        "sentiment": "NEUTRAL",
+        "score": 0
+      },
+      {
+        "symbol": "PL",
+        "sentiment": "NEUTRAL",
+        "score": 0
+      },
+      {
+        "symbol": "IONQ",
+        "sentiment": "NEUTRAL",
+        "score": 0
+      },
+      {
+        "symbol": "RGTI",
+        "sentiment": "NEUTRAL",
+        "score": 0
+      },
+      {
+        "symbol": "QBTS",
+        "sentiment": "NEUTRAL",
+        "score": 0
+      },
+      {
+        "symbol": "KTOS",
+        "sentiment": "NEUTRAL",
+        "score": 0
+      },
+      {
+        "symbol": "COIN",
+        "sentiment": "NEUTRAL",
+        "score": 0
+      },
+      {
+        "symbol": "MARA",
+        "sentiment": "NEUTRAL",
+        "score": 0
+      },
+      {
+        "symbol": "RIOT",
+        "sentiment": "NEUTRAL",
+        "score": 0
+      },
+      {
+        "symbol": "QQQ",
+        "sentiment": "NEUTRAL",
+        "score": 0
+      },
+      {
+        "symbol": "AMD",
+        "sentiment": "NEUTRAL",
+        "score": -1
+      },
+      {
+        "symbol": "NOW",
+        "sentiment": "NEUTRAL",
+        "score": -1
+      },
+      {
+        "symbol": "PANW",
+        "sentiment": "NEUTRAL",
+        "score": -1
+      },
+      {
+        "symbol": "LUNR",
+        "sentiment": "NEUTRAL",
+        "score": -1
+      },
+      {
+        "symbol": "MSTR",
+        "sentiment": "NEUTRAL",
+        "score": -1
+      },
+      {
+        "symbol": "META",
+        "sentiment": "NEGATIVE",
+        "score": -2
+      },
+      {
+        "symbol": "TSLA",
+        "sentiment": "NEGATIVE",
+        "score": -2
+      },
+      {
+        "symbol": "AAPL",
+        "sentiment": "NEGATIVE",
+        "score": -2
+      },
+      {
+        "symbol": "NVDA",
+        "sentiment": "NEGATIVE",
+        "score": -3
+      },
+      {
+        "symbol": "GOOGL",
+        "sentiment": "NEGATIVE",
+        "score": -3
+      },
+      {
+        "symbol": "SPY",
+        "sentiment": "NEGATIVE",
+        "score": -3
+      },
+      {
+        "symbol": "CRM",
+        "sentiment": "STRONG_NEGATIVE",
+        "score": -5
+      }
+    ],
+    "cpu_temp": "52.1\u00b0C",
+    "benchmark": {
+      "start_date": "2026-05-21",
+      "portfolio_pct": 4.0,
+      "spy_pct": 1.46,
+      "alpha_pct": 2.55,
+      "account_start": 100196.86,
+      "account_now": 104209.03,
+      "spy_start": 742.91,
+      "spy_now": 753.73
     }
   }
 ]
