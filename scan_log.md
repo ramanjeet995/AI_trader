@@ -1,14 +1,38 @@
 # AI Trader — Daily Log
 
 What the robot saw and did each time it woke up. Newest at top.
-_Last updated: May 28, 2026 at 09:36 AM ET_
+_Last updated: May 28, 2026 at 11:02 AM ET_
 
 ### Performance since 2026-05-21
 | | Return | Value |
 |---|---|---|
-| 📈 **Our Portfolio** | **+2.66%** | $102,859.24 |
-| 📈 S&P 500 (SPY) | +0.95% | $749.96 |
-| ✅ **Alpha** | **+1.71%** | Beating the market |
+| 📈 **Our Portfolio** | **+4.01%** | $104,210.24 |
+| 📈 S&P 500 (SPY) | +1.34% | $752.83 |
+| ✅ **Alpha** | **+2.67%** | Beating the market |
+
+## May 28, 11:02 AM ET — Big-news check | Pi: 48.2°C
+
+**Market check:**
+- Market is going **up** 📈
+- Mood: calm (VIX 16)
+- Scoreboard: Us **+4.01%** vs S&P 500 +1.34% (**beating** by 2.67%)
+
+**Result:** Found 4 setup(s), but didn't buy any.
+
+- ✗ **Skipped DELL** (gap +3.8%) — outside target window or market closed
+    - Plan: buy at $316.89, sell-stop at $311.19, target $331.15
+    - 16 shares, risking $91
+- ✗ **Skipped SMCI** (gap +7.2%) — outside target window or market closed
+    - Plan: buy at $40.95, sell-stop at $40.21, target $42.79
+    - 127 shares, risking $94
+- ✗ **Skipped RDW** (gap +3.5%) — outside target window or market closed
+    - Plan: buy at $24.8, sell-stop at $24.35, target $25.92
+    - 210 shares, risking $94
+- ✗ **Skipped RGTI** (gap +7.0%) — outside target window or market closed
+    - Plan: buy at $26.34, sell-stop at $25.87, target $27.53
+    - 197 shares, risking $93
+
+---
 
 ## May 28, 09:36 AM ET — Main scan | Pi: 51.1°C
 
@@ -1968,24 +1992,6 @@ _Last updated: May 28, 2026 at 09:36 AM ET_
 - ✗ **QQQ** — negative news (-2)
 - ✗ **MU** — negative news (-3)
 - ✗ **META** — negative news (-3)
-
-</details>
-
----
-
-## May 18, 02:26 PM ET — News check
-
-**Market check:**
-- Market is going **up** 📈
-
-**Result:** No trades today.
-<details><summary>Notable news today</summary>
-
-- ✓ **NVDA** — strong positive news (+2)
-- ✓ **AMD** — strong positive news (+2)
-- ✗ **META** — negative news (-2)
-- ✗ **MSFT** — negative news (-2)
-- ✗ **QQQ** — negative news (-2)
 
 </details>
 

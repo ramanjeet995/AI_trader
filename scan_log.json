@@ -1,207 +1,5 @@
 [
   {
-    "timestamp": "2026-05-18T14:26:13.771826-04:00",
-    "mode": "NEWS",
-    "spy_regime": "BULL",
-    "safety_block": "",
-    "signals": [],
-    "alerts": [
-      "DANGER \u2014 GOOGL held position has NEGATIVE news!",
-      "  [-] What's Going On With Alphabet Stock Monday?",
-      "  [-] Why Redwire Stock Is Falling On Monday?",
-      "DANGER \u2014 AMZN held position has NEGATIVE news!",
-      "  [-] Semi And Options Mania Collide With Bond Rout Ahead Of Earnings From Nvidia, Hom",
-      "  [-] 'Amazon Web Services CEO Pushes Back on AI Job Apocalypse Warnings' - Wall Stree"
-    ],
-    "news_snapshot": [
-      {
-        "symbol": "CRWD",
-        "sentiment": "STRONG_POSITIVE",
-        "score": 4
-      },
-      {
-        "symbol": "NVDA",
-        "sentiment": "POSITIVE",
-        "score": 2
-      },
-      {
-        "symbol": "AMD",
-        "sentiment": "POSITIVE",
-        "score": 2
-      },
-      {
-        "symbol": "ARM",
-        "sentiment": "NEUTRAL",
-        "score": 1
-      },
-      {
-        "symbol": "NFLX",
-        "sentiment": "NEUTRAL",
-        "score": 1
-      },
-      {
-        "symbol": "CRM",
-        "sentiment": "NEUTRAL",
-        "score": 1
-      },
-      {
-        "symbol": "SHOP",
-        "sentiment": "NEUTRAL",
-        "score": 1
-      },
-      {
-        "symbol": "COIN",
-        "sentiment": "NEUTRAL",
-        "score": 1
-      },
-      {
-        "symbol": "MARA",
-        "sentiment": "NEUTRAL",
-        "score": 1
-      },
-      {
-        "symbol": "SPY",
-        "sentiment": "NEUTRAL",
-        "score": 1
-      },
-      {
-        "symbol": "SMCI",
-        "sentiment": "NEUTRAL",
-        "score": 0
-      },
-      {
-        "symbol": "MRVL",
-        "sentiment": "NEUTRAL",
-        "score": 0
-      },
-      {
-        "symbol": "NOW",
-        "sentiment": "NEUTRAL",
-        "score": 0
-      },
-      {
-        "symbol": "SNOW",
-        "sentiment": "NEUTRAL",
-        "score": 0
-      },
-      {
-        "symbol": "PANW",
-        "sentiment": "NEUTRAL",
-        "score": 0
-      },
-      {
-        "symbol": "ANET",
-        "sentiment": "NEUTRAL",
-        "score": 0
-      },
-      {
-        "symbol": "XOM",
-        "sentiment": "NEUTRAL",
-        "score": 0
-      },
-      {
-        "symbol": "OXY",
-        "sentiment": "NEUTRAL",
-        "score": 0
-      },
-      {
-        "symbol": "FANG",
-        "sentiment": "NEUTRAL",
-        "score": 0
-      },
-      {
-        "symbol": "SLB",
-        "sentiment": "NEUTRAL",
-        "score": 0
-      },
-      {
-        "symbol": "NEM",
-        "sentiment": "NEUTRAL",
-        "score": 0
-      },
-      {
-        "symbol": "FCX",
-        "sentiment": "NEUTRAL",
-        "score": 0
-      },
-      {
-        "symbol": "GDX",
-        "sentiment": "NEUTRAL",
-        "score": 0
-      },
-      {
-        "symbol": "RIOT",
-        "sentiment": "NEUTRAL",
-        "score": 0
-      },
-      {
-        "symbol": "AVGO",
-        "sentiment": "NEUTRAL",
-        "score": -1
-      },
-      {
-        "symbol": "AAPL",
-        "sentiment": "NEUTRAL",
-        "score": -1
-      },
-      {
-        "symbol": "PLTR",
-        "sentiment": "NEUTRAL",
-        "score": -1
-      },
-      {
-        "symbol": "CSCO",
-        "sentiment": "NEUTRAL",
-        "score": -1
-      },
-      {
-        "symbol": "GOLD",
-        "sentiment": "NEUTRAL",
-        "score": -1
-      },
-      {
-        "symbol": "MSTR",
-        "sentiment": "NEUTRAL",
-        "score": -1
-      },
-      {
-        "symbol": "META",
-        "sentiment": "NEGATIVE",
-        "score": -2
-      },
-      {
-        "symbol": "MSFT",
-        "sentiment": "NEGATIVE",
-        "score": -2
-      },
-      {
-        "symbol": "QQQ",
-        "sentiment": "NEGATIVE",
-        "score": -2
-      },
-      {
-        "symbol": "MU",
-        "sentiment": "NEGATIVE",
-        "score": -3
-      },
-      {
-        "symbol": "GOOGL",
-        "sentiment": "NEGATIVE",
-        "score": -3
-      },
-      {
-        "symbol": "AMZN",
-        "sentiment": "NEGATIVE",
-        "score": -3
-      },
-      {
-        "symbol": "TSLA",
-        "sentiment": "NEGATIVE",
-        "score": -3
-      }
-    ]
-  },
-  {
     "timestamp": "2026-05-18T15:19:30.581349-04:00",
     "mode": "NEWS",
     "spy_regime": "BULL",
@@ -16009,6 +15807,104 @@
       "account_now": 102859.24,
       "spy_start": 742.91,
       "spy_now": 749.96
+    }
+  },
+  {
+    "timestamp": "2026-05-28T11:02:10.309135-04:00",
+    "mode": "CATALYST",
+    "spy_regime": "BULL",
+    "vix": 16.290000915527344,
+    "signals": [
+      {
+        "symbol": "DELL",
+        "strategy": "CATALYST",
+        "signal": "BUY",
+        "entry": 316.89,
+        "stop": 311.19,
+        "target": 331.15,
+        "shares": 16,
+        "risk_$": 91.26,
+        "factors": [
+          "gap +3.8% in [3.0, 12.0]",
+          "earnings 1d ago",
+          "news score +5",
+          "volume pace 2.4x normal",
+          "in upper 57% of day's range"
+        ],
+        "gap_pct": 3.8,
+        "news_score": 5,
+        "earn_days_ago": 1,
+        "order_status": "NOT_PLACED \u2014 outside target window or market closed"
+      },
+      {
+        "symbol": "SMCI",
+        "strategy": "CATALYST",
+        "signal": "BUY",
+        "entry": 40.95,
+        "stop": 40.21,
+        "target": 42.79,
+        "shares": 127,
+        "risk_$": 93.61,
+        "factors": [
+          "gap +7.2% in [3.0, 12.0]",
+          "volume pace 2.2x normal",
+          "in upper 100% of day's range"
+        ],
+        "gap_pct": 7.24,
+        "news_score": 1,
+        "earn_days_ago": null,
+        "order_status": "NOT_PLACED \u2014 outside target window or market closed"
+      },
+      {
+        "symbol": "RDW",
+        "strategy": "CATALYST",
+        "signal": "BUY",
+        "entry": 24.8,
+        "stop": 24.35,
+        "target": 25.92,
+        "shares": 210,
+        "risk_$": 93.74,
+        "factors": [
+          "gap +3.5% in [3.0, 12.0]",
+          "volume pace 2.2x normal",
+          "in upper 51% of day's range"
+        ],
+        "gap_pct": 3.48,
+        "news_score": 0,
+        "earn_days_ago": null,
+        "order_status": "NOT_PLACED \u2014 outside target window or market closed"
+      },
+      {
+        "symbol": "RGTI",
+        "strategy": "CATALYST",
+        "signal": "BUY",
+        "entry": 26.34,
+        "stop": 25.87,
+        "target": 27.53,
+        "shares": 197,
+        "risk_$": 93.4,
+        "factors": [
+          "gap +7.0% in [3.0, 12.0]",
+          "volume pace 2.7x normal",
+          "in upper 99% of day's range"
+        ],
+        "gap_pct": 7.01,
+        "news_score": 0,
+        "earn_days_ago": null,
+        "order_status": "NOT_PLACED \u2014 outside target window or market closed"
+      }
+    ],
+    "force_closed": [],
+    "cpu_temp": "48.2\u00b0C",
+    "benchmark": {
+      "start_date": "2026-05-21",
+      "portfolio_pct": 4.01,
+      "spy_pct": 1.34,
+      "alpha_pct": 2.67,
+      "account_start": 100196.86,
+      "account_now": 104210.24,
+      "spy_start": 742.91,
+      "spy_now": 752.83
     }
   }
 ]
