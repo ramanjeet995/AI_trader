@@ -78,5 +78,13 @@
     "price": 27.32,
     "sentiment": "NEUTRAL",
     "reason": "Up +45.1% today, sentiment NEUTRAL (+1)"
+  },
+  "NTAP": {
+    "added": "2026-05-29T09:33:21.487777-04:00",
+    "last_seen": "2026-05-29T09:33:21.487777-04:00",
+    "gain_pct": 25.96,
+    "price": 179.37,
+    "sentiment": "STRONG_POSITIVE",
+    "reason": "Up +26.0% today, sentiment STRONG_POSITIVE (+5)"
   }
 }
