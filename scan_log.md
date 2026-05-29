@@ -1,14 +1,29 @@
 # AI Trader — Daily Log
 
 What the robot saw and did each time it woke up. Newest at top.
-_Last updated: May 29, 2026 at 09:37 AM ET_
+_Last updated: May 29, 2026 at 11:01 AM ET_
 
 ### Performance since 2026-05-21
 | | Return | Value |
 |---|---|---|
-| 📈 **Our Portfolio** | **+7.19%** | $107,399.20 |
-| 📈 S&P 500 (SPY) | +1.78% | $756.10 |
-| ✅ **Alpha** | **+5.41%** | Beating the market |
+| 📈 **Our Portfolio** | **+9.74%** | $109,955.46 |
+| 📈 S&P 500 (SPY) | +1.77% | $756.05 |
+| ✅ **Alpha** | **+7.97%** | Beating the market |
+
+## May 29, 11:01 AM ET — Big-news check | Pi: 46.3°C
+
+**Market check:**
+- Market is going **up** 📈
+- Mood: calm (VIX 16)
+- Scoreboard: Us **+9.74%** vs S&P 500 +1.77% (**beating** by 7.97%)
+
+**Result:** ✓ Bought 1 stock(s).
+
+- ✓ **Bought SNOW** (gap +4.5%)
+    - Plan: buy at $249.73, sell-stop at $245.23, target $260.97
+    - 22 shares, risking $99
+
+---
 
 ## May 29, 09:37 AM ET — Main scan | Pi: 52.1°C
 
@@ -2209,25 +2224,6 @@ _Last updated: May 29, 2026 at 09:37 AM ET_
 - ✗ **AMZN** — negative news (-2)
 - ✗ **QQQ** — negative news (-2)
 - ✗ **META** — negative news (-3)
-
-</details>
-
----
-
-## May 19, 10:56 AM ET — News check
-
-**Market check:**
-- Market is going **up** 📈
-
-**Result:** No trades today.
-<details><summary>Notable news today</summary>
-
-- ✓ **AVGO** — strong positive news (+3)
-- ✓ **MSTR** — strong positive news (+3)
-- ✓ **MRVL** — strong positive news (+2)
-- ✗ **GOOGL** — negative news (-3)
-- ✗ **AMZN** — negative news (-3)
-- ✗ **TSLA** — negative news (-3)
 
 </details>
 
