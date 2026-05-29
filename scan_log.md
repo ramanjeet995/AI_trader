@@ -1,14 +1,159 @@
 # AI Trader — Daily Log
 
 What the robot saw and did each time it woke up. Newest at top.
-_Last updated: May 29, 2026 at 03:01 PM ET_
+_Last updated: May 29, 2026 at 03:54 PM ET_
 
 ### Performance since 2026-05-21
 | | Return | Value |
 |---|---|---|
-| 📈 **Our Portfolio** | **+10.41%** | $110,624.00 |
-| 📈 S&P 500 (SPY) | +1.70% | $755.52 |
-| ✅ **Alpha** | **+8.71%** | Beating the market |
+| 📈 **Our Portfolio** | **+10.73%** | $110,952.56 |
+| 📈 S&P 500 (SPY) | +1.93% | $757.22 |
+| ✅ **Alpha** | **+8.81%** | Beating the market |
+
+## May 29, 03:54 PM ET — Main scan | Pi: 47.7°C
+
+**Market check:**
+- Market is going **up** 📈
+- Mood: calm (VIX 16)
+- Investors confident
+- Currently holding: MU, OXY, PANW, SLB, SNOW
+- Scoreboard: Us **+10.73%** vs S&P 500 +1.93% (**beating** by 8.81%)
+
+**Money flowing into:** Natural Gas (+11%), Healthcare (+3%), Materials (-0%)
+**Money flowing out of:** Energy (-4%), Utilities (-5%), Crude Oil (-10%)
+
+**Looked at 64 stocks:**
+- already holding: 5
+- earnings report too close: 1
+- not enough trading volume: 9
+- smart money quietly selling: 6
+- no buy setup today: 18
+- order flow or news was negative: 2
+- setup exists but not strong enough: 1
+- ✓ **22 stocks ready to trade**
+
+**Result:** Found 22 setup(s), but didn't buy any.
+
+- ✗ **Skipped SMCI** — holding 5/5, replace failed
+    - Plan: buy at $45.87, sell-stop at $34.23, target $69.15
+    - 476 shares, risking $5541
+- ✗ **Skipped NOW** — holding 5/5, replace failed
+    - Plan: buy at $123.78, sell-stop at $99.58, target $172.18
+    - 143 shares, risking $3461
+- ✗ **Skipped RDW** — holding 5/5, replace failed
+    - Plan: buy at $24.06, sell-stop at $16.2, target $39.78
+    - 529 shares, risking $4158
+- ✗ **Skipped ARM** — holding 5/5, replace failed
+    - Plan: buy at $354.86, sell-stop at $259.3, target $545.98
+    - 58 shares, risking $5542
+- ✗ **Skipped IONQ** — holding 5/5, replace failed
+    - Plan: buy at $70.82, sell-stop at $56.09, target $100.28
+    - 282 shares, risking $4154
+- ✗ **Skipped AMD** — holding 5/5, replace failed
+    - Plan: buy at $508.33, sell-stop at $433.62, target $657.75
+    - 54 shares, risking $4034
+- ✗ **Skipped QFIN** — holding 5/5, replace failed
+    - Plan: buy at $16.03, sell-stop at $13.49, target $21.11
+    - 1638 shares, risking $4161
+- ✗ **Skipped RIOT** — holding 5/5, replace failed
+    - Plan: buy at $27.24, sell-stop at $23.59, target $34.54
+    - 949 shares, risking $3464
+- ✗ **Skipped PL** — holding 5/5, replace failed
+    - Plan: buy at $50.05, sell-stop at $42.99, target $64.17
+    - 491 shares, risking $3466
+- ✗ **Skipped NTAP** — holding 5/5, replace failed
+    - Plan: buy at $176.76, sell-stop at $142.21, target $245.86
+    - 156 shares, risking $5390
+- ✗ **Skipped CLS** — 5/5 full, all 5 positions in profit, none weak enough to replace
+    - Plan: buy at $382.62, sell-stop at $364.13, target $419.6
+    - 72 shares, risking $1331
+- ✗ **Skipped LUNR** — holding 5/5, replace failed
+    - Plan: buy at $42.8, sell-stop at $34.13, target $60.14
+    - 319 shares, risking $2766
+- ✗ **Skipped QBTS** — holding 5/5, replace failed
+    - Plan: buy at $29.72, sell-stop at $23.72, target $41.72
+    - 462 shares, risking $2772
+- ✗ **Skipped DELL** — holding 5/5, replace failed
+    - Plan: buy at $418.57, sell-stop at $324.18, target $607.35
+    - 58 shares, risking $5475
+- ✗ **Skipped RKLB** — holding 5/5, replace failed
+    - Plan: buy at $140.54, sell-stop at $121.16, target $179.3
+    - 178 shares, risking $3450
+- ✗ **Skipped RGTI** — holding 5/5, replace failed
+    - Plan: buy at $25.42, sell-stop at $20.89, target $34.48
+    - 612 shares, risking $2772
+- ✗ **Skipped MARA** — holding 5/5, replace failed
+    - Plan: buy at $14.46, sell-stop at $12.93, target $17.52
+    - 1918 shares, risking $2935
+- ✗ **Skipped FCX** — holding 5/5, replace failed
+    - Plan: buy at $65.58, sell-stop at $62.35, target $72.04
+    - 422 shares, risking $1363
+- ✗ **Skipped TSLA** — holding 5/5, replace failed
+    - Plan: buy at $435.96, sell-stop at $415.87, target $476.14
+    - 63 shares, risking $1266
+- ✗ **Skipped SOUN** — 5/5 full, all 5 positions in profit, none weak enough to replace
+    - Plan: buy at $8.91, sell-stop at $8.32, target $10.09
+    - 2350 shares, risking $1386
+- ✗ **Skipped PLTR** — holding 5/5, replace failed
+    - Plan: buy at $156.66, sell-stop at $141.98, target $186.02
+    - 177 shares, risking $2598
+- ✗ **Skipped MRVL** — holding 5/5, replace failed
+    - Plan: buy at $205.72, sell-stop at $180.04, target $257.08
+    - 134 shares, risking $3441
+
+<details><summary>Notable news today</summary>
+
+- ✓ **NVDA** — strong positive news (+3)
+    - _[-] Buying On Iran Deal; Dell Earnings Support Semi Rally; Rocket Explosion Is Bad N_
+- ✓ **SMCI** — strong positive news (+2)
+    - _[~] 10 Information Technology Stocks Whale Activity In Today's Session_
+- ✓ **APLD** — strong positive news (+2)
+    - _[+] B. Riley Securities Maintains Buy on Applied Digital, Raises Price Target to $66_
+
+</details>
+
+<details><summary>🔮 What-If Tracker (sentiment picks we're watching)</summary>
+
+**New picks flagged:**
+- **NVDA** at $216.87 — strong sentiment (+3)
+- **DELL** at $418.57 — strong sentiment (+5), analyst upgrade (+5), momentum surge (+65.5% in 5d)
+- **GOOGL** at $381.67 — strong sentiment (+5), analyst upgrade (+2)
+- **NOW** at $123.78 — momentum surge (+24.2% in 5d)
+- **CRWD** at $727.57 — strong sentiment (+5), analyst upgrade (+5), momentum surge (+12.3% in 5d)
+- **PLTR** at $156.66 — strong sentiment (+2), momentum surge (+14.0% in 5d)
+- **RKLB** at $140.54 — momentum surge (+12.0% in 5d)
+- **LUNR** at $42.80 — momentum surge (+24.9% in 5d)
+
+**Tracking:**
+| Stock | Entry | Now | Peak | Day |
+|---|---|---|---|---|
+| 📈 SMCI | $38.06 | +20.5% | +20.5% | 4/5 |
+| 📉 APLD | $48.79 | -2.6% | +2.2% | 4/5 |
+| 📈 MSFT | $413.44 | +7.2% | +7.2% | 4/5 |
+| 📈 ASTC | $13.37 | +252.0% | +252.0% | 4/5 |
+| 📈 AVGO | $421.29 | +4.5% | +4.5% | 3/5 |
+| 📈 ARM | $315.46 | +12.5% | +12.5% | 3/5 |
+| 📈 AMZN | $270.56 | +0.1% | +1.2% | 3/5 |
+| 📈 UMAC | $27.24 | +14.3% | +14.3% | 3/5 |
+| 📉 AMD | $518.08 | -1.9% | +0.0% | 1/5 |
+| 📈 MRVL | $203.26 | +1.2% | +1.2% | 1/5 |
+| 📈 PL | $48.56 | +3.1% | +3.1% | 1/5 |
+| 📉 KTOS | $65.13 | -1.8% | +0.0% | 1/5 |
+| 📉 NTAP | $180.81 | -2.2% | +0.0% | 1/5 |
+| 📉 NVDA | $216.87 | +0.0% | +0.0% | 0/5 |
+| 📉 DELL | $418.57 | +0.0% | +0.0% | 0/5 |
+| 📉 GOOGL | $381.67 | +0.0% | +0.0% | 0/5 |
+| 📉 NOW | $123.78 | +0.0% | +0.0% | 0/5 |
+| 📉 CRWD | $727.57 | +0.0% | +0.0% | 0/5 |
+| 📉 PLTR | $156.66 | +0.0% | +0.0% | 0/5 |
+| 📉 RKLB | $140.54 | +0.0% | +0.0% | 0/5 |
+| 📉 LUNR | $42.80 | +0.0% | +0.0% | 0/5 |
+
+**Track record:** 25 picks, **64%** hit rate, avg return **+4.3%**, avg peak **+7.9%**
+
+</details>
+
+---
 
 ## May 29, 03:01 PM ET — News check | Pi: 51.1°C
 
@@ -2158,39 +2303,5 @@ _Last updated: May 29, 2026 at 03:01 PM ET_
 - ✓ **Bought MRVL** (gap +7.5%)
     - Plan: buy at $189.42, sell-stop at $186.01, target $197.94
     - 25 shares, risking $85
-
----
-
-## May 20, 09:36 AM ET — Main scan | Pi: 80.8°C
-
-**Market check:**
-- Market is going **up** 📈
-- Mood: a bit nervous (VIX 18)
-- Investors defensive
-- Currently holding: MU, PLTR
-
-**Money flowing into:** Natural Gas (+11%), Crude Oil (+11%), Energy (+8%)
-**Money flowing out of:** Industrials (-3%), Gold (-4%), Materials (-6%)
-
-**Hot stocks discovered today:** TATT
-**Full discovery list (2):** AGYS, TATT
-
-**Looked at 53 stocks:**
-- already holding: 2
-- not enough trading volume: 5
-- smart money quietly selling: 17
-- no buy setup today: 29
-
-**Result:** No trades today.
-<details><summary>Notable news today</summary>
-
-- ✓ **DELL** — strong positive news (+3)
-    - _[~] Ross Gerber Says 'Pay Attention' To Nvidia And Micron As Jensen Huang Predicts A_
-- ✓ **LUNR** — strong positive news (+3)
-    - _[~] 10 Industrials Stocks Whale Activity In Today's Session_
-- ✓ **NFLX** — strong positive news (+2)
-    - _[~] Netflix Expands Consumer Products Footprint With Strategic Confectionery And Toy_
-
-</details>
 
 ---

@@ -1,206 +1,6 @@
 {
   "active": [
     {
-      "symbol": "AAPL",
-      "entry_price": 310.64,
-      "entry_date": "2026-05-27T13:36:08.801225",
-      "reasons": [
-        "hype news detected (buy-the-rumor)"
-      ],
-      "sent_score": -2,
-      "analyst_score": 1,
-      "news_phase": "hype",
-      "ma_role": "none",
-      "ret_5d": 3.8,
-      "peak_price": 314.63,
-      "peak_pct": 1.28,
-      "current_price": 314.63,
-      "current_pct": 1.28,
-      "days_tracked": 4,
-      "headlines": [
-        "[+] 'China Smartphone Market Rebounded In April, With Apple Poised To Benefit Most; ",
-        "[~] Taiwan Semiconductor Stock Hits 52-Week High - Here's Why"
-      ]
-    },
-    {
-      "symbol": "XOM",
-      "entry_price": 146.43,
-      "entry_date": "2026-05-27T13:36:08.801294",
-      "reasons": [
-        "strong sentiment (+3)",
-        "analyst upgrade (+2)"
-      ],
-      "sent_score": 3,
-      "analyst_score": 2,
-      "news_phase": "neutral",
-      "ma_role": "none",
-      "ret_5d": -10.0,
-      "peak_price": 149.47,
-      "peak_pct": 2.08,
-      "current_price": 146.19,
-      "current_pct": -0.16,
-      "days_tracked": 4,
-      "headlines": [
-        "[+] Mizuho Maintains Neutral on Exxon Mobil, Raises Price Target to $175",
-        "[~] 'Occidental Petroleum To Acquire 10% Stake In Exxon Deepwater Block Offshore Tri"
-      ]
-    },
-    {
-      "symbol": "FANG",
-      "entry_price": 191.24,
-      "entry_date": "2026-05-27T13:36:08.801329",
-      "reasons": [
-        "strong sentiment (+3)",
-        "analyst upgrade (+2)"
-      ],
-      "sent_score": 3,
-      "analyst_score": 2,
-      "news_phase": "neutral",
-      "ma_role": "none",
-      "ret_5d": -8.0,
-      "peak_price": 193.74,
-      "peak_pct": 1.31,
-      "current_price": 193.22,
-      "current_pct": 1.04,
-      "days_tracked": 4,
-      "headlines": [
-        "[+] Mizuho Maintains Outperform on Diamondback Energy, Raises Price Target to $240",
-        "[ANALYST] Mizuho pt raise (+2) Tier-2"
-      ]
-    },
-    {
-      "symbol": "QBTS",
-      "entry_price": 27.3,
-      "entry_date": "2026-05-27T13:36:08.801380",
-      "reasons": [
-        "momentum surge (+50.2% in 5d)"
-      ],
-      "sent_score": 1,
-      "analyst_score": 0,
-      "news_phase": "neutral",
-      "ma_role": "none",
-      "ret_5d": 50.2,
-      "peak_price": 29.96,
-      "peak_pct": 9.74,
-      "current_price": 28.2,
-      "current_pct": 3.3,
-      "days_tracked": 4,
-      "headlines": [
-        "[-] Why Is D-Wave Quantum Stock Falling Wednesday?",
-        "[+] QTUM ETF Crosses $5 Billion Even As IBM, Rigetti, IonQ, D-Wave Cool Off"
-      ]
-    },
-    {
-      "symbol": "MSTR",
-      "entry_price": 155.38,
-      "entry_date": "2026-05-27T13:36:08.801414",
-      "reasons": [
-        "strong sentiment (+2)"
-      ],
-      "sent_score": 2,
-      "analyst_score": 0,
-      "news_phase": "neutral",
-      "ma_role": "none",
-      "ret_5d": -5.6,
-      "peak_price": 155.38,
-      "peak_pct": 0.0,
-      "current_price": 148.91,
-      "current_pct": -4.16,
-      "days_tracked": 4,
-      "headlines": [
-        "[~] 'What Will You Sell Next?' Peter Schiff Fires At Michael Saylor After Strategy's",
-        "[~] SpaceX To Overtake MSTR, TSLA, COIN As Largest Public Company Holding Bitcoin"
-      ]
-    },
-    {
-      "symbol": "QQQ",
-      "entry_price": 731.94,
-      "entry_date": "2026-05-27T13:36:08.801441",
-      "reasons": [
-        "strong sentiment (+2)"
-      ],
-      "sent_score": 2,
-      "analyst_score": 0,
-      "news_phase": "neutral",
-      "ma_role": "none",
-      "ret_5d": 4.3,
-      "peak_price": 738.39,
-      "peak_pct": 0.88,
-      "current_price": 738.39,
-      "current_pct": 0.88,
-      "days_tracked": 4,
-      "headlines": [
-        "[~] Stock Market Today: S&P 500, Nasdaq, Dow Futures Rise Following Tech Rally\u2014Zscal",
-        "[+] Google And Amazon Emerge As AI 'Winners' As Magnificent 7 Breaks Apart: Cash Flo"
-      ]
-    },
-    {
-      "symbol": "QTTB",
-      "entry_price": 11.1,
-      "entry_date": "2026-05-27T13:36:08.801476",
-      "reasons": [
-        "momentum surge (+84.9% in 5d)"
-      ],
-      "sent_score": 1,
-      "analyst_score": 0,
-      "news_phase": "neutral",
-      "ma_role": "none",
-      "ret_5d": 84.9,
-      "peak_price": 12.51,
-      "peak_pct": 12.7,
-      "current_price": 10.98,
-      "current_pct": -1.04,
-      "days_tracked": 4,
-      "headlines": [
-        "[+] Q32 Bio Inks Securities Purchase Agreement With New, Current Institutional Inves"
-      ]
-    },
-    {
-      "symbol": "DY",
-      "entry_price": 535.0,
-      "entry_date": "2026-05-27T13:36:08.801504",
-      "reasons": [
-        "strong sentiment (+3)",
-        "momentum surge (+29.4% in 5d)"
-      ],
-      "sent_score": 3,
-      "analyst_score": 0,
-      "news_phase": "neutral",
-      "ma_role": "none",
-      "ret_5d": 29.4,
-      "peak_price": 537.2,
-      "peak_pct": 0.41,
-      "current_price": 532.6,
-      "current_pct": -0.45,
-      "days_tracked": 4,
-      "headlines": [
-        "[+] Dycom Industries Sees Q2 Adj EPS $4.40-$4.82 vs $4.10 Est; Sees Sales $1.940B-$2",
-        "[+] Dycom Industries Raises FY2027 Sales Guidance from $6.850B-$7.150B to $7.380B-$7"
-      ]
-    },
-    {
-      "symbol": "QFIN",
-      "entry_price": 15.65,
-      "entry_date": "2026-05-27T13:36:08.801531",
-      "reasons": [
-        "momentum surge (+22.8% in 5d)"
-      ],
-      "sent_score": 1,
-      "analyst_score": 0,
-      "news_phase": "neutral",
-      "ma_role": "none",
-      "ret_5d": 22.8,
-      "peak_price": 15.78,
-      "peak_pct": 0.83,
-      "current_price": 15.22,
-      "current_pct": -2.75,
-      "days_tracked": 4,
-      "headlines": [
-        "[+] Qifu Technology Q1 Adj. EPS $1.12 Beats $0.96 Estimate, Sales $566.735M Beat $53",
-        "[~] Earnings Scheduled For May 26, 2026"
-      ]
-    },
-    {
       "symbol": "SMCI",
       "entry_price": 38.06,
       "entry_date": "2026-05-27T19:53:29.733047",
@@ -212,11 +12,11 @@
       "news_phase": "neutral",
       "ma_role": "none",
       "ret_5d": 24.5,
-      "peak_price": 45.59,
-      "peak_pct": 19.78,
-      "current_price": 45.59,
-      "current_pct": 19.78,
-      "days_tracked": 3,
+      "peak_price": 45.87,
+      "peak_pct": 20.52,
+      "current_price": 45.87,
+      "current_pct": 20.52,
+      "days_tracked": 4,
       "headlines": [
         "[+] Supermicro Stock Rises On New AI Infrastructure Partnership In Europe",
         "[~] Why Super Micro Computer Stock Is Surging On Wednesday?"
@@ -237,9 +37,9 @@
       "ret_5d": 33.1,
       "peak_price": 49.88,
       "peak_pct": 2.24,
-      "current_price": 48.29,
-      "current_pct": -1.02,
-      "days_tracked": 3,
+      "current_price": 47.52,
+      "current_pct": -2.6,
+      "days_tracked": 4,
       "headlines": [
         "[+] B. Riley Securities Maintains Buy on Applied Digital, Raises Price Target to $66",
         "[~] Why Is Applied Digital Stock Moving Higher Tuesday?"
@@ -257,11 +57,11 @@
       "news_phase": "neutral",
       "ma_role": "none",
       "ret_5d": -1.0,
-      "peak_price": 437.01,
-      "peak_pct": 5.7,
-      "current_price": 437.01,
-      "current_pct": 5.7,
-      "days_tracked": 3,
+      "peak_price": 443.27,
+      "peak_pct": 7.22,
+      "current_price": 443.27,
+      "current_pct": 7.22,
+      "days_tracked": 4,
       "headlines": [
         "[+] Avangrid Inks Power Purchase Agreement With Microsoft For 140 Megawatt-Dc Bluebi",
         "[+] OpenAI Says Ahead Of Global Elections, We're Helping People Access Information, "
@@ -280,11 +80,11 @@
       "news_phase": "neutral",
       "ma_role": "none",
       "ret_5d": 424.3,
-      "peak_price": 35.85,
-      "peak_pct": 168.14,
-      "current_price": 35.85,
-      "current_pct": 168.14,
-      "days_tracked": 3,
+      "peak_price": 47.06,
+      "peak_pct": 251.98,
+      "current_price": 47.06,
+      "current_pct": 251.98,
+      "days_tracked": 4,
       "headlines": [
         "[+] Crude Oil Falls Over 5%; Dycom Industries Shares Surge Following Q1 Results",
         "[~] 12 Information Technology Stocks Moving In Wednesday's Intraday Session"
@@ -303,11 +103,11 @@
       "news_phase": "neutral",
       "ma_role": "none",
       "ret_5d": 0.9,
-      "peak_price": 437.57,
-      "peak_pct": 3.86,
-      "current_price": 437.57,
-      "current_pct": 3.86,
-      "days_tracked": 2,
+      "peak_price": 440.28,
+      "peak_pct": 4.51,
+      "current_price": 440.28,
+      "current_pct": 4.51,
+      "days_tracked": 3,
       "headlines": [
         "[+] Susquehanna Maintains Positive on Broadcom, Raises Price Target to $490",
         "[~] What's Going On With Broadcom Stock Thursday?"
@@ -327,11 +127,11 @@
       "news_phase": "neutral",
       "ma_role": "none",
       "ret_5d": 22.8,
-      "peak_price": 344.71,
-      "peak_pct": 9.27,
-      "current_price": 344.71,
-      "current_pct": 9.27,
-      "days_tracked": 2,
+      "peak_price": 354.86,
+      "peak_pct": 12.49,
+      "current_price": 354.86,
+      "current_pct": 12.49,
+      "days_tracked": 3,
       "headlines": [
         "[+] Mizuho Maintains Outperform on ARM Holdings, Raises Price Target to $360",
         "[~] The AI Bubble That Isn't: Why Nvidia, Micron Still Look Cheap"
@@ -351,9 +151,9 @@
       "ret_5d": 2.1,
       "peak_price": 273.93,
       "peak_pct": 1.25,
-      "current_price": 273.5,
-      "current_pct": 1.09,
-      "days_tracked": 2,
+      "current_price": 270.96,
+      "current_pct": 0.15,
+      "days_tracked": 3,
       "headlines": [
         "[~] Tesla Rival Figure Lands Deal With JCPenney Parent After Viral Package Sorting M",
         "[-] Trade Desk Stock's Momentum Plummets As Amazon And AI Squeeze Market Share\u2014 Roth"
@@ -371,11 +171,11 @@
       "news_phase": "neutral",
       "ma_role": "none",
       "ret_5d": 88.9,
-      "peak_price": 30.23,
-      "peak_pct": 10.98,
-      "current_price": 27.03,
-      "current_pct": -0.77,
-      "days_tracked": 2,
+      "peak_price": 31.12,
+      "peak_pct": 14.26,
+      "current_price": 31.12,
+      "current_pct": 14.26,
+      "days_tracked": 3,
       "headlines": [
         "[~] 12 Information Technology Stocks Moving In Thursday's Pre-Market Session",
         "[~] Market-Moving News for May 28th"
@@ -396,9 +196,9 @@
       "ret_5d": 15.3,
       "peak_price": 518.08,
       "peak_pct": 0.0,
-      "current_price": 518.08,
-      "current_pct": 0.0,
-      "days_tracked": 0,
+      "current_price": 508.33,
+      "current_pct": -1.88,
+      "days_tracked": 1,
       "headlines": [
         "[~] What's Going On With AMD Stock Friday?",
         "[~] Intel Takes On AMD With New Chips For Portable Gaming Devices"
@@ -417,11 +217,11 @@
       "news_phase": "neutral",
       "ma_role": "none",
       "ret_5d": 6.6,
-      "peak_price": 203.26,
-      "peak_pct": 0.0,
-      "current_price": 203.26,
-      "current_pct": 0.0,
-      "days_tracked": 0,
+      "peak_price": 205.72,
+      "peak_pct": 1.21,
+      "current_price": 205.72,
+      "current_pct": 1.21,
+      "days_tracked": 1,
       "headlines": [
         "[-] Analysts Double Down On Marvell After AI Outlook Stuns Wall Street",
         "[+] UBS Maintains Buy on Marvell Technology, Raises Price Target to $230"
@@ -439,11 +239,11 @@
       "news_phase": "hype",
       "ma_role": "none",
       "ret_5d": 14.3,
-      "peak_price": 48.56,
-      "peak_pct": 0.0,
-      "current_price": 48.56,
-      "current_pct": 0.0,
-      "days_tracked": 0,
+      "peak_price": 50.05,
+      "peak_pct": 3.07,
+      "current_price": 50.05,
+      "current_pct": 3.07,
+      "days_tracked": 1,
       "headlines": [
         "[~] UFO ETF Hits $1 Billion In AUM As Wall Street Hunts For SpaceX Proxy Trades",
         "[~] Space Stocks Are Flying Ahead Of NASA Moon Base Event, SpaceX IPO"
@@ -463,9 +263,9 @@
       "ret_5d": 19.1,
       "peak_price": 65.13,
       "peak_pct": 0.0,
-      "current_price": 65.13,
-      "current_pct": 0.0,
-      "days_tracked": 0,
+      "current_price": 63.98,
+      "current_pct": -1.77,
+      "days_tracked": 1,
       "headlines": [
         "[-] Kratos Defense (KTOS) Stock Is Trending As Trump Administration Eyes Equity Stak",
         "[~] Triple Manias Take A Hit As US And Iran Exchange Strikes But Cooler PCE May Reig"
@@ -487,12 +287,194 @@
       "ret_5d": 45.8,
       "peak_price": 180.81,
       "peak_pct": 0.0,
-      "current_price": 180.81,
-      "current_pct": 0.0,
-      "days_tracked": 0,
+      "current_price": 176.76,
+      "current_pct": -2.24,
+      "days_tracked": 1,
       "headlines": [
         "[~] SentinelOne To Rally Nearly 40%? Here Are 10 Analyst Forecasts For Friday",
         "[+] Dell Technologies Posts Blockbuster Q1 Earnings, Joins NetApp and Other Big Stoc"
+      ]
+    },
+    {
+      "symbol": "NVDA",
+      "entry_price": 216.87,
+      "entry_date": "2026-05-29T19:54:17.159674",
+      "reasons": [
+        "strong sentiment (+3)"
+      ],
+      "sent_score": 3,
+      "analyst_score": 0,
+      "news_phase": "neutral",
+      "ma_role": "none",
+      "ret_5d": -1.2,
+      "peak_price": 216.87,
+      "peak_pct": 0.0,
+      "current_price": 216.87,
+      "current_pct": 0.0,
+      "days_tracked": 0,
+      "headlines": [
+        "[-] Buying On Iran Deal; Dell Earnings Support Semi Rally; Rocket Explosion Is Bad N",
+        "[~] CNBC Halftime Report Final Trades: Microsoft, NVIDIA, Alibaba Group, iShares Exp"
+      ]
+    },
+    {
+      "symbol": "DELL",
+      "entry_price": 418.57,
+      "entry_date": "2026-05-29T19:54:17.159741",
+      "reasons": [
+        "strong sentiment (+5)",
+        "analyst upgrade (+5)",
+        "momentum surge (+65.5% in 5d)"
+      ],
+      "sent_score": 5,
+      "analyst_score": 5,
+      "news_phase": "neutral",
+      "ma_role": "none",
+      "ret_5d": 65.5,
+      "peak_price": 418.57,
+      "peak_pct": 0.0,
+      "current_price": 418.57,
+      "current_pct": 0.0,
+      "days_tracked": 0,
+      "headlines": [
+        "[~] Trump Said Buy Dell Stock, DHS Director Markwayne Mullin Sold Too Early",
+        "[+] B of A Securities Maintains Buy on Dell Technologies, Raises Price Target to $50"
+      ]
+    },
+    {
+      "symbol": "GOOGL",
+      "entry_price": 381.67,
+      "entry_date": "2026-05-29T19:54:17.159783",
+      "reasons": [
+        "strong sentiment (+5)",
+        "analyst upgrade (+2)"
+      ],
+      "sent_score": 5,
+      "analyst_score": 2,
+      "news_phase": "neutral",
+      "ma_role": "none",
+      "ret_5d": -1.5,
+      "peak_price": 381.67,
+      "peak_pct": 0.0,
+      "current_price": 381.67,
+      "current_pct": 0.0,
+      "days_tracked": 0,
+      "headlines": [
+        "[+] Broadcom Stock Attracts A Billionaire Buyer As AI Momentum Accelerates",
+        "[+] Truist Securities Maintains Buy on Alphabet, Raises Price Target to $430"
+      ]
+    },
+    {
+      "symbol": "NOW",
+      "entry_price": 123.78,
+      "entry_date": "2026-05-29T19:54:17.159819",
+      "reasons": [
+        "momentum surge (+24.2% in 5d)"
+      ],
+      "sent_score": 1,
+      "analyst_score": 0,
+      "news_phase": "neutral",
+      "ma_role": "none",
+      "ret_5d": 24.2,
+      "peak_price": 123.78,
+      "peak_pct": 0.0,
+      "current_price": 123.78,
+      "current_pct": 0.0,
+      "days_tracked": 0,
+      "headlines": [
+        "[+] ServiceNow Stock Is Trending Higher After CMO Joins OpenAI",
+        "[~] ServiceNow Chief Marketing Officer Posts On LinkedIn \"Earlier today, I shared th"
+      ]
+    },
+    {
+      "symbol": "CRWD",
+      "entry_price": 727.57,
+      "entry_date": "2026-05-29T19:54:17.159849",
+      "reasons": [
+        "strong sentiment (+5)",
+        "analyst upgrade (+5)",
+        "momentum surge (+12.3% in 5d)"
+      ],
+      "sent_score": 5,
+      "analyst_score": 5,
+      "news_phase": "neutral",
+      "ma_role": "none",
+      "ret_5d": 12.3,
+      "peak_price": 727.57,
+      "peak_pct": 0.0,
+      "current_price": 727.57,
+      "current_pct": 0.0,
+      "days_tracked": 0,
+      "headlines": [
+        "[~] Jefferies Maintains Buy on CrowdStrike Holdings, Raises Price Target to $775",
+        "[~] CrowdStrike Signs AI Cyber Risk Collaboration With Insurers"
+      ]
+    },
+    {
+      "symbol": "PLTR",
+      "entry_price": 156.66,
+      "entry_date": "2026-05-29T19:54:17.159881",
+      "reasons": [
+        "strong sentiment (+2)",
+        "momentum surge (+14.0% in 5d)"
+      ],
+      "sent_score": 2,
+      "analyst_score": 0,
+      "news_phase": "neutral",
+      "ma_role": "none",
+      "ret_5d": 14.0,
+      "peak_price": 156.66,
+      "peak_pct": 0.0,
+      "current_price": 156.66,
+      "current_pct": 0.0,
+      "days_tracked": 0,
+      "headlines": [
+        "[~] Peter Thiel Decamps To Argentina: What Does It Mean For JD Vance's Chances To Wi",
+        "[~] Palantir Stock Is Either A Bargain Or A Bubble, Depending On Who You Ask"
+      ]
+    },
+    {
+      "symbol": "RKLB",
+      "entry_price": 140.54,
+      "entry_date": "2026-05-29T19:54:17.159929",
+      "reasons": [
+        "momentum surge (+12.0% in 5d)"
+      ],
+      "sent_score": 1,
+      "analyst_score": 0,
+      "news_phase": "neutral",
+      "ma_role": "none",
+      "ret_5d": 12.0,
+      "peak_price": 140.54,
+      "peak_pct": 0.0,
+      "current_price": 140.54,
+      "current_pct": 0.0,
+      "days_tracked": 0,
+      "headlines": [
+        "[~] UFO ETF Hits $1 Billion In AUM As Wall Street Hunts For SpaceX Proxy Trades",
+        "[+] Rocket Lab Hits Key SDA Milestone, Expands Defense Footprint"
+      ]
+    },
+    {
+      "symbol": "LUNR",
+      "entry_price": 42.8,
+      "entry_date": "2026-05-29T19:54:17.159959",
+      "reasons": [
+        "momentum surge (+24.9% in 5d)"
+      ],
+      "sent_score": 1,
+      "analyst_score": 1,
+      "news_phase": "neutral",
+      "ma_role": "none",
+      "ret_5d": 24.9,
+      "peak_price": 42.8,
+      "peak_pct": 0.0,
+      "current_price": 42.8,
+      "current_pct": 0.0,
+      "days_tracked": 0,
+      "headlines": [
+        "[-] Buying On Iran Deal; Dell Earnings Support Semi Rally; Rocket Explosion Is Bad N",
+        "[~] What's Going On With Intuitive Machines Stock Friday?"
       ]
     }
   ],
@@ -889,6 +871,224 @@
       ],
       "status": "expired",
       "final_pct": 9.29
+    },
+    {
+      "symbol": "AAPL",
+      "entry_price": 310.64,
+      "entry_date": "2026-05-27T13:36:08.801225",
+      "reasons": [
+        "hype news detected (buy-the-rumor)"
+      ],
+      "sent_score": -2,
+      "analyst_score": 1,
+      "news_phase": "hype",
+      "ma_role": "none",
+      "ret_5d": 3.8,
+      "peak_price": 314.63,
+      "peak_pct": 1.28,
+      "current_price": 311.7,
+      "current_pct": 0.34,
+      "days_tracked": 5,
+      "headlines": [
+        "[+] 'China Smartphone Market Rebounded In April, With Apple Poised To Benefit Most; ",
+        "[~] Taiwan Semiconductor Stock Hits 52-Week High - Here's Why"
+      ],
+      "status": "expired",
+      "final_pct": 0.34
+    },
+    {
+      "symbol": "XOM",
+      "entry_price": 146.43,
+      "entry_date": "2026-05-27T13:36:08.801294",
+      "reasons": [
+        "strong sentiment (+3)",
+        "analyst upgrade (+2)"
+      ],
+      "sent_score": 3,
+      "analyst_score": 2,
+      "news_phase": "neutral",
+      "ma_role": "none",
+      "ret_5d": -10.0,
+      "peak_price": 149.47,
+      "peak_pct": 2.08,
+      "current_price": 145.85,
+      "current_pct": -0.4,
+      "days_tracked": 5,
+      "headlines": [
+        "[+] Mizuho Maintains Neutral on Exxon Mobil, Raises Price Target to $175",
+        "[~] 'Occidental Petroleum To Acquire 10% Stake In Exxon Deepwater Block Offshore Tri"
+      ],
+      "status": "expired",
+      "final_pct": -0.4
+    },
+    {
+      "symbol": "FANG",
+      "entry_price": 191.24,
+      "entry_date": "2026-05-27T13:36:08.801329",
+      "reasons": [
+        "strong sentiment (+3)",
+        "analyst upgrade (+2)"
+      ],
+      "sent_score": 3,
+      "analyst_score": 2,
+      "news_phase": "neutral",
+      "ma_role": "none",
+      "ret_5d": -8.0,
+      "peak_price": 193.74,
+      "peak_pct": 1.31,
+      "current_price": 191.64,
+      "current_pct": 0.21,
+      "days_tracked": 5,
+      "headlines": [
+        "[+] Mizuho Maintains Outperform on Diamondback Energy, Raises Price Target to $240",
+        "[ANALYST] Mizuho pt raise (+2) Tier-2"
+      ],
+      "status": "expired",
+      "final_pct": 0.21
+    },
+    {
+      "symbol": "QBTS",
+      "entry_price": 27.3,
+      "entry_date": "2026-05-27T13:36:08.801380",
+      "reasons": [
+        "momentum surge (+50.2% in 5d)"
+      ],
+      "sent_score": 1,
+      "analyst_score": 0,
+      "news_phase": "neutral",
+      "ma_role": "none",
+      "ret_5d": 50.2,
+      "peak_price": 29.96,
+      "peak_pct": 9.74,
+      "current_price": 29.73,
+      "current_pct": 8.88,
+      "days_tracked": 5,
+      "headlines": [
+        "[-] Why Is D-Wave Quantum Stock Falling Wednesday?",
+        "[+] QTUM ETF Crosses $5 Billion Even As IBM, Rigetti, IonQ, D-Wave Cool Off"
+      ],
+      "status": "expired",
+      "final_pct": 8.88
+    },
+    {
+      "symbol": "MSTR",
+      "entry_price": 155.38,
+      "entry_date": "2026-05-27T13:36:08.801414",
+      "reasons": [
+        "strong sentiment (+2)"
+      ],
+      "sent_score": 2,
+      "analyst_score": 0,
+      "news_phase": "neutral",
+      "ma_role": "none",
+      "ret_5d": -5.6,
+      "peak_price": 159.0,
+      "peak_pct": 2.33,
+      "current_price": 159.0,
+      "current_pct": 2.33,
+      "days_tracked": 5,
+      "headlines": [
+        "[~] 'What Will You Sell Next?' Peter Schiff Fires At Michael Saylor After Strategy's",
+        "[~] SpaceX To Overtake MSTR, TSLA, COIN As Largest Public Company Holding Bitcoin"
+      ],
+      "status": "expired",
+      "final_pct": 2.33
+    },
+    {
+      "symbol": "QQQ",
+      "entry_price": 731.94,
+      "entry_date": "2026-05-27T13:36:08.801441",
+      "reasons": [
+        "strong sentiment (+2)"
+      ],
+      "sent_score": 2,
+      "analyst_score": 0,
+      "news_phase": "neutral",
+      "ma_role": "none",
+      "ret_5d": 4.3,
+      "peak_price": 739.15,
+      "peak_pct": 0.99,
+      "current_price": 739.15,
+      "current_pct": 0.99,
+      "days_tracked": 5,
+      "headlines": [
+        "[~] Stock Market Today: S&P 500, Nasdaq, Dow Futures Rise Following Tech Rally\u2014Zscal",
+        "[+] Google And Amazon Emerge As AI 'Winners' As Magnificent 7 Breaks Apart: Cash Flo"
+      ],
+      "status": "expired",
+      "final_pct": 0.99
+    },
+    {
+      "symbol": "QTTB",
+      "entry_price": 11.1,
+      "entry_date": "2026-05-27T13:36:08.801476",
+      "reasons": [
+        "momentum surge (+84.9% in 5d)"
+      ],
+      "sent_score": 1,
+      "analyst_score": 0,
+      "news_phase": "neutral",
+      "ma_role": "none",
+      "ret_5d": 84.9,
+      "peak_price": 12.51,
+      "peak_pct": 12.7,
+      "current_price": 10.85,
+      "current_pct": -2.25,
+      "days_tracked": 5,
+      "headlines": [
+        "[+] Q32 Bio Inks Securities Purchase Agreement With New, Current Institutional Inves"
+      ],
+      "status": "expired",
+      "final_pct": -2.25
+    },
+    {
+      "symbol": "DY",
+      "entry_price": 535.0,
+      "entry_date": "2026-05-27T13:36:08.801504",
+      "reasons": [
+        "strong sentiment (+3)",
+        "momentum surge (+29.4% in 5d)"
+      ],
+      "sent_score": 3,
+      "analyst_score": 0,
+      "news_phase": "neutral",
+      "ma_role": "none",
+      "ret_5d": 29.4,
+      "peak_price": 537.2,
+      "peak_pct": 0.41,
+      "current_price": 502.63,
+      "current_pct": -6.05,
+      "days_tracked": 5,
+      "headlines": [
+        "[+] Dycom Industries Sees Q2 Adj EPS $4.40-$4.82 vs $4.10 Est; Sees Sales $1.940B-$2",
+        "[+] Dycom Industries Raises FY2027 Sales Guidance from $6.850B-$7.150B to $7.380B-$7"
+      ],
+      "status": "expired",
+      "final_pct": -6.05
+    },
+    {
+      "symbol": "QFIN",
+      "entry_price": 15.65,
+      "entry_date": "2026-05-27T13:36:08.801531",
+      "reasons": [
+        "momentum surge (+22.8% in 5d)"
+      ],
+      "sent_score": 1,
+      "analyst_score": 0,
+      "news_phase": "neutral",
+      "ma_role": "none",
+      "ret_5d": 22.8,
+      "peak_price": 16.03,
+      "peak_pct": 2.43,
+      "current_price": 16.03,
+      "current_pct": 2.43,
+      "days_tracked": 5,
+      "headlines": [
+        "[+] Qifu Technology Q1 Adj. EPS $1.12 Beats $0.96 Estimate, Sales $566.735M Beat $53",
+        "[~] Earnings Scheduled For May 26, 2026"
+      ],
+      "status": "expired",
+      "final_pct": 2.43
     }
   ]
 }
