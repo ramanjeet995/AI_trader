@@ -1,14 +1,31 @@
 # AI Trader — Daily Log
 
 What the robot saw and did each time it woke up. Newest at top.
-_Last updated: May 29, 2026 at 11:07 AM ET_
+_Last updated: May 29, 2026 at 01:02 PM ET_
 
 ### Performance since 2026-05-21
 | | Return | Value |
 |---|---|---|
-| 📈 **Our Portfolio** | **+9.48%** | $109,698.14 |
-| 📈 S&P 500 (SPY) | +1.81% | $756.33 |
-| ✅ **Alpha** | **+7.68%** | Beating the market |
+| 📈 **Our Portfolio** | **+10.09%** | $110,309.25 |
+| 📈 S&P 500 (SPY) | +1.87% | $756.80 |
+| ✅ **Alpha** | **+8.22%** | Beating the market |
+
+## May 29, 01:02 PM ET — News check | Pi: 51.1°C
+
+**Market check:**
+- Market is going **up** 📈
+- Scoreboard: Us **+10.09%** vs S&P 500 +1.87% (**beating** by 8.22%)
+
+**Result:** No trades today.
+<details><summary>Notable news today</summary>
+
+- ✓ **NVDA** — strong positive news (+3)
+- ✓ **AMZN** — strong positive news (+3)
+- ✓ **SPY** — strong positive news (+3)
+
+</details>
+
+---
 
 ## May 29, 11:07 AM ET — News check | Pi: 51.6°C
 
@@ -2198,25 +2215,6 @@ _Last updated: May 29, 2026 at 11:07 AM ET_
     - [~] AI Trade Faces Make-Or-Break Moment – Only Nvidia Earnings Will Tell
 - ✗ **TSLA** — negative news (-3)
     - [+] Elon Musk Says Tesla Robotaxis Could Go Widespread This Year, But Prediction Mar
-
-</details>
-
----
-
-## May 19, 02:55 PM ET — News check
-
-**Market check:**
-- Market is going **up** 📈
-
-**Result:** No trades today.
-<details><summary>Notable news today</summary>
-
-- ✓ **NVDA** — strong positive news (+3)
-- ✓ **SNOW** — strong positive news (+3)
-- ✓ **PANW** — strong positive news (+3)
-- ✗ **META** — negative news (-3)
-- ✗ **AMZN** — negative news (-3)
-- ✗ **MSFT** — negative news (-3)
 
 </details>
 
