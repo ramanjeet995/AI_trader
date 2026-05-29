@@ -1,14 +1,31 @@
 # AI Trader — Daily Log
 
 What the robot saw and did each time it woke up. Newest at top.
-_Last updated: May 29, 2026 at 11:01 AM ET_
+_Last updated: May 29, 2026 at 11:07 AM ET_
 
 ### Performance since 2026-05-21
 | | Return | Value |
 |---|---|---|
-| 📈 **Our Portfolio** | **+9.74%** | $109,955.46 |
-| 📈 S&P 500 (SPY) | +1.77% | $756.05 |
-| ✅ **Alpha** | **+7.97%** | Beating the market |
+| 📈 **Our Portfolio** | **+9.48%** | $109,698.14 |
+| 📈 S&P 500 (SPY) | +1.81% | $756.33 |
+| ✅ **Alpha** | **+7.68%** | Beating the market |
+
+## May 29, 11:07 AM ET — News check | Pi: 51.6°C
+
+**Market check:**
+- Market is going **up** 📈
+- Scoreboard: Us **+9.48%** vs S&P 500 +1.81% (**beating** by 7.68%)
+
+**Result:** No trades today.
+<details><summary>Notable news today</summary>
+
+- ✓ **NVDA** — strong positive news (+3)
+- ✓ **AMD** — strong positive news (+3)
+- ✓ **ARM** — strong positive news (+3)
+
+</details>
+
+---
 
 ## May 29, 11:01 AM ET — Big-news check | Pi: 46.3°C
 
@@ -2200,30 +2217,6 @@ _Last updated: May 29, 2026 at 11:01 AM ET_
 - ✗ **META** — negative news (-3)
 - ✗ **AMZN** — negative news (-3)
 - ✗ **MSFT** — negative news (-3)
-
-</details>
-
----
-
-## May 19, 12:55 PM ET — News check
-
-**Market check:**
-- Market is going **up** 📈
-
-**Result:** ✓ Bought 1 stock(s).
-
-- ✓ **Bought MU**
-    - Plan: buy at $712.19, sell-stop at $637.67, target $861.23
-    - 26 shares, risking $1938
-
-<details><summary>Notable news today</summary>
-
-- ✓ **AVGO** — strong positive news (+3)
-- ✓ **SNOW** — strong positive news (+3)
-- ✓ **MSTR** — strong positive news (+3)
-- ✗ **AMZN** — negative news (-2)
-- ✗ **QQQ** — negative news (-2)
-- ✗ **META** — negative news (-3)
 
 </details>
 

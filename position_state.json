@@ -18,5 +18,10 @@
     "entry": 58.211492,
     "original_stop": 55.34,
     "first_seen": "2026-05-26T19:00:18.179153"
+  },
+  "SNOW": {
+    "entry": 250.55,
+    "original_stop": 245.23,
+    "first_seen": "2026-05-29T15:05:14.598669"
   }
 }
