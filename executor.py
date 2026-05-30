@@ -93,8 +93,46 @@ def is_market_open(trade_client: TradingClient) -> tuple[bool, str]:
 
 
 def close_position(symbol: str, trade_client: TradingClient) -> dict:
-    """Market-close a position (used for catalyst force-exit on Day 2)."""
+    """
+    Market-close a position. Cancels any open/held orders for the symbol first
+    (stop-loss orders lock shares and block close_position otherwise).
+    """
     try:
+        # Cancel all open orders for this symbol first — stop-loss orders
+        # hold shares and Alpaca returns "insufficient qty available" if
+        # we try to close without cancelling them.
+        try:
+            trade_client.cancel_orders_for_symbol(symbol)
+        except Exception:
+            # Fallback: cancel individually
+            try:
+                from alpaca.trading.requests import GetOrdersRequest
+                from alpaca.trading.enums import QueryOrderStatus
+                orders = trade_client.get_orders(GetOrdersRequest(
+                    status=QueryOrderStatus.OPEN, symbols=[symbol], limit=20))
+                for o in orders:
+                    try:
+                        trade_client.cancel_order_by_id(o.id)
+                    except Exception:
+                        pass
+                # Also cancel held bracket legs
+                orders_all = trade_client.get_orders(GetOrdersRequest(
+                    status=QueryOrderStatus.ALL, symbols=[symbol], limit=10, nested=True))
+                for o in orders_all:
+                    if hasattr(o, 'legs') and o.legs:
+                        for leg in o.legs:
+                            if 'held' in str(leg.status).lower() or 'new' in str(leg.status).lower():
+                                try:
+                                    trade_client.cancel_order_by_id(leg.id)
+                                except Exception:
+                                    pass
+            except Exception:
+                pass
+
+        # Small delay to let cancellations settle
+        import time
+        time.sleep(0.5)
+
         order = trade_client.close_position(symbol)
         return {"status": "CLOSED", "order_id": str(order.id), "symbol": symbol}
     except Exception as e:
